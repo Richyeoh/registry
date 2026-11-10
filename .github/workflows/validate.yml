@@ -18,7 +18,7 @@ jobs:
           path: registry
       - uses: actions/checkout@v4
         with:
-          repository: verx/verx
+          repository: ${{ github.repository_owner }}/verx
           path: verx
       - uses: actions/setup-go@v5
         with:
