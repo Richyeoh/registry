@@ -2,9 +2,12 @@ api: v1
 name: bat
 kind: app
 display: bat
-description: A cat(1) clone with syntax highlighting and Git integration
+description: 带高亮的 cat 替代
 homepage: https://github.com/sharkdp/bat
-license: Apache-2.0
+license: MIT
+keywords:
+    - github
+    - sharkdp
 version: 0.26.1
 channels:
     stable: 0.26.1
@@ -18,4 +21,33 @@ platforms:
       bin:
         - bat.exe
       strip: 1
-test: bat.exe --version
+    - os: darwin
+      arch: amd64
+      url: https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-apple-darwin.tar.gz
+      sha256: 830d63b0bba1fa040542ec569e3cf77f60d3356b9de75116a344b061e0894245
+      bin:
+        - bat
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-apple-darwin.tar.gz
+      sha256: e30beff26779c9bf60bb541e1d79046250cb74378f2757f8eb250afddb19e114
+      bin:
+        - bat
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz
+      sha256: 0dcd8ac79732c0d5b136f11f4ee00e581440e16a44eab5b3105b611bbf2cf191
+      bin:
+        - bat
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-unknown-linux-gnu.tar.gz
+      sha256: 422eb73e11c854fddd99f5ca8461c2f1d6e6dce0a2a8c3d5daade5ffcb6564aa
+      bin:
+        - bat
+      strip: 1
+test: bat --version
+caveats: 由 GitHub sharkdp/bat latest 自动转制

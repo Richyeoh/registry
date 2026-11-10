@@ -1,0 +1,24 @@
+api: v1
+name: powertoys
+kind: app
+display: powertoys
+description: A set of utilities for power users to tune and streamline their Windows experience for greater productivity.
+homepage: https://github.com/microsoft/PowerToys
+license: MIT
+version: 0.102.3101.0
+channels:
+    stable: 0.102.3101.0
+provides:
+    - powertoys
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/PowerToys/releases/download/v0.102.3101/PowerToysUserSetup-0.102.3101.0-x64.exe
+      sha256: 4b4c49a31e8b7e6a36647ccd3033acb0ad56c306595a9409e59865c3c27d1cf2
+      bin:
+        - powertoys.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall powertoys
+test: powertoys.exe --version
