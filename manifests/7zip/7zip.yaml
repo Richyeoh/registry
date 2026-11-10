@@ -1,0 +1,26 @@
+api: v1
+name: 7zip
+kind: app
+display: 7zip
+description: A multi-format file archiver with high compression ratios.
+homepage: https://www.7-zip.org
+license: Unknown
+version: "26.06"
+channels:
+    stable: "26.06"
+provides:
+    - 7zip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ip7z/7zip/releases/download/26.06/7z2606-x64.msi
+      sha256: 6dc822569e777d9a3ecd5ffcbc22b55600af87e6c5d9810a64e8566cf5a4af9f
+      bin:
+        - 7z.exe
+        - 7zG.exe
+        - 7zFM.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall 7zip
+test: 7z.exe --version

@@ -1,0 +1,32 @@
+api: v1
+name: lazygit
+kind: app
+display: lazygit
+description: Git 终端 UI
+homepage: https://github.com/jesseduffield/lazygit
+license: MIT
+keywords:
+    - github
+    - jesseduffield
+version: 0.66.3
+channels:
+    stable: 0.66.3
+provides:
+    - lazygit
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_darwin_arm64.tar.gz
+      sha256: 6873e6b7a538b521c4d7ff3f76ec49e6dcafa41e6053a6aae33c12f62663e163
+      bin:
+        - lazygit
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_linux_arm64.tar.gz
+      sha256: ac0b48237f3d0283813e7154ec063237e519532feb0470c0881a1793ee78fd42
+      bin:
+        - lazygit
+      strip: 1
+test: lazygit --version
+caveats: 由 GitHub jesseduffield/lazygit latest 自动转制
