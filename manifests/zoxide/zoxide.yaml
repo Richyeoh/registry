@@ -1,0 +1,21 @@
+api: v1
+name: zoxide
+kind: app
+display: zoxide
+description: A faster way to navigate your filesystem
+homepage: https://github.com/ajeetdsouza/zoxide
+license: MIT
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - zoxide
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-pc-windows-msvc.zip
+      sha256: f465ae548f8754c8e7edbc60b45fbf58c92bfe123db83d790252d6810fa5daf1
+      bin:
+        - zoxide.exe
+      strip: 1
+test: zoxide.exe --version

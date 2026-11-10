@@ -1,0 +1,22 @@
+api: v1
+name: eza
+kind: app
+display: eza
+description: A modern, maintained replacement for ls, built on exa.
+homepage: https://eza.rocks
+license: MIT
+version: 0.23.5
+channels:
+    stable: 0.23.5
+provides:
+    - eza
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip
+      sha256: c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e
+      bin:
+        - eza.exe
+        - eza.exe
+      strip: 1
+test: eza.exe --version

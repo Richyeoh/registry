@@ -1,0 +1,21 @@
+api: v1
+name: dust
+kind: app
+display: dust
+description: du(1) - File space usage analyzer
+homepage: https://github.com/bootandy/dust
+license: Apache-2.0
+version: 1.2.7
+channels:
+    stable: 1.2.7
+provides:
+    - dust
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bootandy/dust/releases/download/v1.2.7/dust-v1.2.7-x86_64-pc-windows-msvc.zip
+      sha256: d07a41521958895e701ad55f342302b7362799d6a328c843e8e2208ba0564c30
+      bin:
+        - dust.exe
+      strip: 1
+test: dust.exe --version
