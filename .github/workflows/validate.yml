@@ -1,0 +1,29 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: registry
+      - uses: actions/checkout@v4
+        with:
+          repository: verx/verx
+          path: verx
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: verx/go.mod
+      - name: validate manifests
+        run: |
+          cd verx
+          go run ./tools/importer validate --dir ../registry
