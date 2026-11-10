@@ -1,0 +1,21 @@
+api: v1
+name: git-istage
+kind: app
+display: git-istage
+description: A better git add -p
+homepage: https://github.com/terrajobst/git-istage
+license: MIT
+version: 0.3.193
+channels:
+    stable: 0.3.193
+provides:
+    - git-istage
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.nuget.org/api/v2/package/git-istage/0.3.193
+      sha256: d3fca3b6e59d0ccc84010d9b50570e0c3862c4db7540a407f9941f88e54f036f
+      bin:
+        - run.ps1.exe
+      strip: 1
+test: run.ps1 --version

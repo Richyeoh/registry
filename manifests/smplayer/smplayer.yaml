@@ -1,0 +1,21 @@
+api: v1
+name: smplayer
+kind: app
+display: smplayer
+description: A video player forked from MPV. It can also play Youtube videos, search and download subtitles, and includes other features like a thumbnail generator and audio and video filters.
+homepage: https://www.smplayer.info
+license: Unknown
+version: 26.8.29.0
+channels:
+    stable: 26.8.29.0
+provides:
+    - smplayer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/smplayer-dev/smplayer/releases/download/v26.8.29/smplayer-portable-26.8.29.0-x64.7z
+      sha256: 58cab5e245229c4ba5e28551d2b817559c51d6cb318ad0420fa2e046f1a0602f
+      bin:
+        - smplayer.exe
+      strip: 1
+test: smplayer --version

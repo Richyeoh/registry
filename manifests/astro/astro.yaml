@@ -1,0 +1,39 @@
+api: v1
+name: astro
+kind: app
+display: astro
+description: To build and run Airflow DAGs locally and interact with the Astronomer API
+homepage: https://www.astronomer.io/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.47.0
+channels:
+    stable: 1.47.0
+provides:
+    - astro
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/astro/blobs/sha256:96bee68b28ff85e5642c3bc790513f0a2bc63432e684c58558b23b9a843046ff
+      sha256: 96bee68b28ff85e5642c3bc790513f0a2bc63432e684c58558b23b9a843046ff
+      bin:
+        - astro
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/astro/blobs/sha256:b585563a1925769430cd83d230cff42dab1cabde3a91c7d05119aef588511d2a
+      sha256: b585563a1925769430cd83d230cff42dab1cabde3a91c7d05119aef588511d2a
+      bin:
+        - astro
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/astro/blobs/sha256:d9de4f9146c0532a1c87e20445309f3486c4e3b64ad42f1764bc53044f5ac29c
+      sha256: d9de4f9146c0532a1c87e20445309f3486c4e3b64ad42f1764bc53044f5ac29c
+      bin:
+        - astro
+      strip: 1
+test: astro --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: vgmstream
+kind: app
+display: vgmstream
+description: vgmstream command line interface
+homepage: https://vgmstream.org
+license: Unknown
+version: r2168
+channels:
+    stable: r2168
+provides:
+    - vgmstream
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vgmstream/vgmstream/releases/download/r2168/vgmstream-win64.zip
+      sha256: 692d45070852a35c1fa42726aa3c9de528e44eec925d37d99b1074256b99a229
+      bin:
+        - vgmstream-cli.exe
+      strip: 1
+test: vgmstream-cli --version

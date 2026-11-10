@@ -1,0 +1,39 @@
+api: v1
+name: ascii
+kind: app
+display: ascii
+description: List ASCII idiomatic names and octal/decimal code-point forms
+homepage: http://www.catb.org/~esr/ascii/
+license: BSD-2-Clause
+keywords:
+    - brew
+    - homebrew
+version: "3.33"
+channels:
+    stable: "3.33"
+provides:
+    - ascii
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ascii/blobs/sha256:83c6fc145da90e26255628385f2c71e40b984f99231535837f916bbf24771d15
+      sha256: 83c6fc145da90e26255628385f2c71e40b984f99231535837f916bbf24771d15
+      bin:
+        - ascii
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ascii/blobs/sha256:420cb39cb8aa5a9303e375a3e7e97304de06af839c23fed8075901c68afc8537
+      sha256: 420cb39cb8aa5a9303e375a3e7e97304de06af839c23fed8075901c68afc8537
+      bin:
+        - ascii
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ascii/blobs/sha256:e5e78243fbc43de8e1b3f1061d0cb5e7fc19998c04a9284380ce720d57b1f58b
+      sha256: e5e78243fbc43de8e1b3f1061d0cb5e7fc19998c04a9284380ce720d57b1f58b
+      bin:
+        - ascii
+      strip: 1
+test: ascii --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

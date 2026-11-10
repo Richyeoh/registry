@@ -1,0 +1,21 @@
+api: v1
+name: shinyproxy
+kind: app
+display: shinyproxy
+description: Open Source Enterprise Deployment for Shiny and data science apps
+homepage: https://shinyproxy.io
+license: Apache-2.0
+version: 3.2.4
+channels:
+    stable: 3.2.4
+provides:
+    - shinyproxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://shinyproxy.io/downloads/shinyproxy-3.2.4.jar#/shinyproxy.jar
+      sha256: 0bd68e3ba31b5288b5523ee250e90f316f5e0524bd11bcc18645499ede1ee57e
+      bin:
+        - shinyproxy.jar.exe
+      strip: 1
+test: shinyproxy.jar --version

@@ -1,0 +1,40 @@
+api: v1
+name: git-with-openssh
+kind: app
+display: git-with-openssh
+description: A free and open source distributed version control system.
+homepage: https://gitforwindows.org
+license: Unknown
+version: 2.56.0.4
+channels:
+    stable: 2.56.0.4
+provides:
+    - git-with-openssh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/PortableGit-2.56.0.4-64-bit.7z.exe#/dl.7z
+      sha256: b1f3e52216e2ed6882d1bebfd4d3fdf319bec40d2edbbf9fd26ec4fd3fce7ed1
+      bin:
+        - bin\sh.exe
+        - cmd\git.exe
+        - cmd\gitk.exe
+        - cmd\git-gui.exe
+        - cmd\scalar.exe
+        - git-bash.exe
+        - usr\bin\gpg.exe
+        - usr\bin\gpg-agent.exe
+        - usr\bin\gpgconf.exe
+        - usr\bin\gpg-connect-agent.exe
+        - usr\bin\pinentry.exe
+        - usr\bin\scp.exe
+        - usr\bin\sftp.exe
+        - usr\bin\ssh.exe
+        - usr\bin\ssh-add.exe
+        - usr\bin\ssh-agent.exe
+        - bin\sh.exe
+        - usr\bin\ssh-keygen.exe
+        - usr\bin\ssh-keyscan.exe
+        - usr\bin\ssh-pageant.exe
+      strip: 1
+test: bin\sh --version

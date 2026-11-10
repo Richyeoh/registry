@@ -1,0 +1,22 @@
+api: v1
+name: ghdl
+kind: app
+display: ghdl
+description: Free and open-source analyzer, compiler, simulator and (experimental) synthesizer for VHDL
+homepage: https://github.com/ghdl/ghdl/
+license: GPL-2.0-or-later
+version: 6.0.0
+channels:
+    stable: 6.0.0
+provides:
+    - ghdl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ghdl/ghdl/releases/download/v6.0.0/ghdl-mcode-6.0.0-ucrt64.zip
+      sha256: 76e160ceec35834c73ada6e4e484416d13aed4b64cbc7c74c5cca53a7ef60e41
+      bin:
+        - bin\ghdl.exe
+        - bin\ghwdump.exe
+      strip: 1
+test: bin\ghdl --version

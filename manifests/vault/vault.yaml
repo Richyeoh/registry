@@ -1,0 +1,21 @@
+api: v1
+name: vault
+kind: app
+display: vault
+description: Secure, store, and tightly control access to tokens, passwords, certificates, API keys, and other secrets in modern computing.
+homepage: https://www.vaultproject.io
+license: MPL-2.0
+version: 2.2.1
+channels:
+    stable: 2.2.1
+provides:
+    - vault
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.hashicorp.com/vault/2.2.1/vault_2.2.1_windows_amd64.zip
+      sha256: ec0544b354adf70e11db5247b9fa5e7046f70bf0c654944e0095780b5f056342
+      bin:
+        - vault.exe
+      strip: 1
+test: vault --version

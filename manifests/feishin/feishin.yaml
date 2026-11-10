@@ -1,0 +1,21 @@
+api: v1
+name: feishin
+kind: app
+display: feishin
+description: A modern self-hosted music player.
+homepage: https://github.com/jeffvli/feishin
+license: GPL-3.0-only
+version: 1.17.0
+channels:
+    stable: 1.17.0
+provides:
+    - feishin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jeffvli/feishin/releases/download/v1.17.0/Feishin-1.17.0-win-x64.zip
+      sha256: 79a56ab29985efd176834c846d35d63dcfd9f80b591210f8cb256cf65b0b4c57
+      bin:
+        - feishin.exe
+      strip: 1
+test: feishin --version

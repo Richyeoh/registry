@@ -1,0 +1,24 @@
+api: v1
+name: dngrep
+kind: app
+display: dngrep
+description: Graphical GREP tool to search across text files, Word and Excel documents, PDFs and archives
+homepage: https://dngrep.github.io/
+license: GPL-3.0-only
+version: 5.0.65.0
+channels:
+    stable: 5.0.65.0
+provides:
+    - dngrep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dnGrep/dnGrep/releases/download/v5.0.65.0/dnGREP.5.0.65.x64.msi
+      sha256: 200a100f499abc89a2a332dbb14d65728c7b851a80abfd8b13da67e6c68f836f
+      bin:
+        - dnGREP.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall dngrep
+test: dnGREP --version

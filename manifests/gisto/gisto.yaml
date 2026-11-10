@@ -1,0 +1,24 @@
+api: v1
+name: gisto
+kind: app
+display: gisto
+description: Cross-platform gist snippets management desktop application to share code snippets fast and easily
+homepage: https://gisto.org/
+license: MIT
+version: 2.15.5
+channels:
+    stable: 2.15.5
+provides:
+    - gisto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Gisto/Gisto/releases/download/v2.15.5/Gisto_2.15.5_x64_en-US.msi
+      sha256: 80f9fc91e234f1567af189ea80eb970d97c745d9c86e2d0d75347160516430e0
+      bin:
+        - gisto.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gisto
+test: gisto --version

@@ -1,0 +1,21 @@
+api: v1
+name: nvidia-profile-inspector
+kind: app
+display: nvidia-profile-inspector
+description: View detailed info about your nVidia graphics card. Features overclocking options and other nifty settings.
+homepage: https://github.com/Orbmu2k/nvidiaProfileInspector/
+license: MIT
+version: 3.0.2.1
+channels:
+    stable: 3.0.2.1
+provides:
+    - nvidia-profile-inspector
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Orbmu2k/nvidiaProfileInspector/releases/download/v3.0.2.1/nvidiaProfileInspector.zip
+      sha256: 88dcf3514111e8de630688467c03c36d8c2a8ad9ebc8073f27c069f82b75bb40
+      bin:
+        - nvidiaProfileInspector.exe
+      strip: 1
+test: nvidiaProfileInspector --version

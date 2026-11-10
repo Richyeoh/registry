@@ -1,0 +1,21 @@
+api: v1
+name: wsl-ssh-agent
+kind: app
+display: wsl-ssh-agent
+description: Helper to interface with Windows ssh-agent.exe service from Windows Subsystem for Linux (WSL)
+homepage: https://github.com/rupor-github/wsl-ssh-agent
+license: GPL-3.0
+version: 1.6.9
+channels:
+    stable: 1.6.9
+provides:
+    - wsl-ssh-agent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rupor-github/wsl-ssh-agent/releases/download/v1.6.9/wsl-ssh-agent.zip
+      sha256: e410111e0a19a29650bfebbe5e4206ff720b18abcc7835ce3114cd42aaef6830
+      bin:
+        - wsl-ssh-agent-gui.exe
+      strip: 1
+test: wsl-ssh-agent-gui --version

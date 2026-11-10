@@ -1,0 +1,39 @@
+api: v1
+name: aws-c-event-stream
+kind: app
+display: aws-c-event-stream
+description: C99 implementation of the vnd.amazon.eventstream content-type
+homepage: https://github.com/awslabs/aws-c-event-stream
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - aws-c-event-stream
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-event-stream/blobs/sha256:7f7a1f5d3435b401dadd509955225a96df462bcb40a470be2f69540fc04fbee3
+      sha256: 7f7a1f5d3435b401dadd509955225a96df462bcb40a470be2f69540fc04fbee3
+      bin:
+        - aws-c-event-stream
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-event-stream/blobs/sha256:7484d7bc56734a148d56b6ceb1b03792b5dbde78218ad94b7929a20f4c897fbb
+      sha256: 7484d7bc56734a148d56b6ceb1b03792b5dbde78218ad94b7929a20f4c897fbb
+      bin:
+        - aws-c-event-stream
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-event-stream/blobs/sha256:bd10341b5a3aae1d541bd8640db708e333bc51fbedef51b57bafcf332a5a5096
+      sha256: bd10341b5a3aae1d541bd8640db708e333bc51fbedef51b57bafcf332a5a5096
+      bin:
+        - aws-c-event-stream
+      strip: 1
+test: aws-c-event-stream --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

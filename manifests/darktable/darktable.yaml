@@ -1,0 +1,24 @@
+api: v1
+name: darktable
+kind: app
+display: darktable
+description: Photography workflow application and raw developer. A virtual lighttable and darkroom for photographers.
+homepage: https://www.darktable.org
+license: GPL-3.0-only
+version: 5.6.2
+channels:
+    stable: 5.6.2
+provides:
+    - darktable
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/darktable-org/darktable/releases/download/release-5.6.2/darktable-5.6.2-win64.exe
+      sha256: 7f7a1eabcd0a1b548dcfacac842c8203fc85a4175697fb09f90bb891c8931edd
+      bin:
+        - bin\darktable.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall darktable
+test: bin\darktable --version

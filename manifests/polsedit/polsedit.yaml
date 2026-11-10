@@ -1,0 +1,21 @@
+api: v1
+name: polsedit
+kind: app
+display: polsedit
+description: Polsedit is a utility to modify user policies such as user account rights and user privileges on a local or remote system
+homepage: https://www.southsoftware.com/polsedit.html
+license: Unknown
+version: 1.0.0.5
+channels:
+    stable: 1.0.0.5
+provides:
+    - polsedit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.southsoftware.com/polsedit.zip
+      sha256: 149c3578103f43482f013238cd4fc0db354a862d9acffdbe9c2c2f0e80a8f794
+      bin:
+        - polsedit.exe
+      strip: 1
+test: polsedit --version

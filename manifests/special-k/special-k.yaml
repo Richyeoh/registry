@@ -1,0 +1,25 @@
+api: v1
+name: special-k
+kind: app
+display: special-k
+description: Lovingly referred to as the Swiss Army Knife of PC gaming, Special K does a bit of everything.
+homepage: https://www.special-k.info
+license: GPL-3.0-only
+version: 26.11.4.1
+channels:
+    stable: 26.11.4.1
+provides:
+    - special-k
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://sk-data.special-k.info/repository/SpecialK_26.11.4.1.exe
+      sha256: 3ef2e09d653191b73bcf5bbc35cf484fe589f416064a2701650485b9882a430b
+      bin:
+        - SKIF.exe
+        - SKIV.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall special-k
+test: SKIF --version

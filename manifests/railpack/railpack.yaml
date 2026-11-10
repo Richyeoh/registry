@@ -1,0 +1,21 @@
+api: v1
+name: railpack
+kind: app
+display: railpack
+description: Zero-config application builder that automatically analyzes and turns your code into an image.
+homepage: https://railpack.com
+license: MIT
+version: 0.43.0
+channels:
+    stable: 0.43.0
+provides:
+    - railpack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/railwayapp/railpack/releases/download/v0.43.0/railpack-v0.43.0-x86_64-pc-windows-msvc.zip
+      sha256: 924d2177bf0decda4fc4960fb1a8c91b8213e4bbc8a7020e1980ad3d0fc24ffe
+      bin:
+        - railpack.exe
+      strip: 1
+test: railpack --version

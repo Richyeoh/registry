@@ -1,0 +1,46 @@
+api: v1
+name: asyncplusplus
+kind: app
+display: asyncplusplus
+description: Concurrency framework for C++11
+homepage: https://github.com/Amanieu/asyncplusplus
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: "1.2"
+channels:
+    stable: "1.2"
+provides:
+    - asyncplusplus
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asyncplusplus/blobs/sha256:251aea5c5562246a1ab1a394fa7396a4949df464c354f2007f4d671eee4a75be
+      sha256: 251aea5c5562246a1ab1a394fa7396a4949df464c354f2007f4d671eee4a75be
+      bin:
+        - asyncplusplus
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asyncplusplus/blobs/sha256:2f1f1563fd122b947f728ed73168c062ffb569adbc92f02e1bbd372edbdaf889
+      sha256: 2f1f1563fd122b947f728ed73168c062ffb569adbc92f02e1bbd372edbdaf889
+      bin:
+        - asyncplusplus
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asyncplusplus/blobs/sha256:31b9d42407804a993ea90e4e2cf04c0466ea226f4a967f1ac8b732d9bf830aec
+      sha256: 31b9d42407804a993ea90e4e2cf04c0466ea226f4a967f1ac8b732d9bf830aec
+      bin:
+        - asyncplusplus
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asyncplusplus/blobs/sha256:3fc17239cf85202f52390b6c1297bfd75db621c0dddb37d1df24366b0013538a
+      sha256: 3fc17239cf85202f52390b6c1297bfd75db621c0dddb37d1df24366b0013538a
+      bin:
+        - asyncplusplus
+      strip: 1
+test: asyncplusplus --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

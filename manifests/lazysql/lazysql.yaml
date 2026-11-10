@@ -1,0 +1,21 @@
+api: v1
+name: lazysql
+kind: app
+display: lazysql
+description: A cross-platform TUI database management tool written in Go.
+homepage: https://github.com/jorgerojas26/lazysql
+license: MIT
+version: 0.7.0
+channels:
+    stable: 0.7.0
+provides:
+    - lazysql
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jorgerojas26/lazysql/releases/download/v0.7.0/lazysql_Windows_x86_64.zip
+      sha256: f005142f0f9b4a6ee8f8752df7ef349bd5541f991d162934b242a56a487bf363
+      bin:
+        - lazysql.exe
+      strip: 1
+test: lazysql --version

@@ -1,0 +1,21 @@
+api: v1
+name: mattermost
+kind: app
+display: mattermost
+description: Team communication client
+homepage: https://mattermost.com
+license: Apache-2.0
+version: 6.3.2
+channels:
+    stable: 6.3.2
+provides:
+    - mattermost
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.mattermost.com/desktop/6.3.2/mattermost-desktop-6.3.2-win-x64.zip
+      sha256: 71742332c490901b772f67be16ce9dfc713d9ee3dde697aaa4fc9dc774080673
+      bin:
+        - Mattermost.exe
+      strip: 1
+test: Mattermost --version

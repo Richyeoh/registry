@@ -1,0 +1,21 @@
+api: v1
+name: lmstudio-bionic
+kind: app
+display: lmstudio-bionic
+description: Local-first AI agent for work and code. Runs open models on your machine (llama.cpp) or in LM Studio Cloud, with codebase, document and voice tools.
+homepage: https://lmstudio.ai
+license: Unknown
+version: 1.2.0-2
+channels:
+    stable: 1.2.0-2
+provides:
+    - lmstudio-bionic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bionic-installers.lmstudio.ai/win32/x64/1.2.0-2/Bionic-1.2.0-2-x64.exe#/dl.7z
+      sha256: 7caf3f0c152a5579d331a60ec2ca8d597edc758f20ee2a5c7f7372398338713c
+      bin:
+        - resources\app\.webpack-bionic\lms.exe
+      strip: 1
+test: resources\app\.webpack-bionic\lms --version

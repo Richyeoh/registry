@@ -1,0 +1,24 @@
+api: v1
+name: sucrose
+kind: app
+display: sucrose
+description: Sucrose is a versatile wallpaper engine that brings life to your desktop with a wide range of interactive wallpapers.
+homepage: https://github.com/Taiizor/Sucrose
+license: GPL-3.0
+version: 26.7.5.0
+channels:
+    stable: 26.7.5.0
+provides:
+    - sucrose
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Taiizor/Sucrose/releases/download/v26.7.5.0/Sucrose_Bundle_.NET_Framework_4.8_x64_26.7.5.0.exe
+      sha256: 3ee62580ded7840e68e6314b1fc47433122c913d6f0c047de7c40cad7dfd048c
+      bin:
+        - sucrose.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sucrose
+test: sucrose --version

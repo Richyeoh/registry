@@ -1,0 +1,32 @@
+api: v1
+name: 4k-video-downloader
+kind: app
+display: 4K Video Downloader Plus
+description: Free video downloader
+homepage: https://www.4kdownload.com/products/videodownloader
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 26.3.5
+channels:
+    stable: 26.3.5
+provides:
+    - 4k-video-downloader
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_arm64.dmg
+      sha256: 970e7dc50b97d54e7231e265a9aa2845a362b7ffb433cc05a2aa7c8b7395481f
+      bin:
+        - 4k-video-downloader
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_arm64.dmg
+      sha256: 970e7dc50b97d54e7231e265a9aa2845a362b7ffb433cc05a2aa7c8b7395481f
+      bin:
+        - 4k-video-downloader
+      strip: 1
+test: 4k-video-downloader --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

@@ -1,0 +1,23 @@
+api: v1
+name: go-containerregistry
+kind: app
+display: go-containerregistry
+description: CLIs for working with container registries
+homepage: https://github.com/google/go-containerregistry
+license: Apache-2.0
+version: 0.22.1
+channels:
+    stable: 0.22.1
+provides:
+    - go-containerregistry
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/go-containerregistry/releases/download/v0.22.1/go-containerregistry_Windows_x86_64.tar.gz
+      sha256: 0e073ea8192c3b8442ec8aaf44d53c1050a09084669fae3a6ceb0f2026cf8b21
+      bin:
+        - crane.exe
+        - gcrane.exe
+        - krane.exe
+      strip: 1
+test: crane --version

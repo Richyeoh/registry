@@ -1,0 +1,21 @@
+api: v1
+name: tracker
+kind: app
+display: tracker
+description: A terminal-based real-time satellite tracking and orbit prediction application.
+homepage: https://github.com/ShenMian/tracker
+license: Apache-2.0
+version: 0.2.2
+channels:
+    stable: 0.2.2
+provides:
+    - tracker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ShenMian/tracker/releases/download/v0.2.2/tracker-windows-x86_64.zip
+      sha256: 39b1b8a9f8174b30ac4bf2d112df4dc9c982e94f8c252f73ecef7ddc55938f1e
+      bin:
+        - tracker.exe
+      strip: 1
+test: tracker --version

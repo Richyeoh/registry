@@ -1,0 +1,21 @@
+api: v1
+name: vortexdm
+kind: app
+display: vortexdm
+description: Multi-connections download manager
+homepage: https://github.com/Sixline/VortexDM
+license: LGPL-3.0-only
+version: 2023.1.0
+channels:
+    stable: 2023.1.0
+provides:
+    - vortexdm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Sixline/VortexDM/releases/download/2023.1.0/VortexDM-2023.1.0-win64.zip
+      sha256: b777332d1b6000abd1056286a8115901de4428b065486f2d97ceb76571d95121
+      bin:
+        - vortexdm.exe
+      strip: 1
+test: vortexdm --version

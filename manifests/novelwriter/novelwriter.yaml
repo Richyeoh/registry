@@ -1,0 +1,24 @@
+api: v1
+name: novelwriter
+kind: app
+display: novelwriter
+description: A markdown-like editor for novels
+homepage: https://novelwriter.io/
+license: GPL-3.0
+version: 26.2.2
+channels:
+    stable: 26.2.2
+provides:
+    - novelwriter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vkbo/novelWriter/releases/download/v26.2.2/novelwriter-26.2.2-amd64-setup.exe
+      sha256: 710022c7afdd1fe958dd9f39d88be6f6816fbc10844e33df8f176a70ab32eaad
+      bin:
+        - novelwriter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall novelwriter
+test: novelwriter --version

@@ -1,0 +1,21 @@
+api: v1
+name: uniclipboard
+kind: app
+display: uniclipboard
+description: Encrypted peer-to-peer clipboard sync between your devices
+homepage: https://uniclipboard.app
+license: AGPL-3.0-only
+version: 1.6.1
+channels:
+    stable: 1.6.1
+provides:
+    - uniclipboard
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/UniClipboard/UniClipboard/releases/download/v1.6.1/UniClipboard_1.6.1_x64-portable.zip
+      sha256: f365dec05d39f295664e0a32c24ca932a4360ca4d03a7cab0d6d04b45bc9048b
+      bin:
+        - UniClipboard.exe
+      strip: 1
+test: UniClipboard --version

@@ -1,0 +1,24 @@
+api: v1
+name: litedb-studio
+kind: app
+display: litedb-studio
+description: A GUI tool for viewing and editing documents for LiteDB v5
+homepage: https://www.litedb.org
+license: MIT
+version: 1.0.3
+channels:
+    stable: 1.0.3
+provides:
+    - litedb-studio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mbdavid/LiteDB.Studio/releases/download/v1.0.3/LiteDB.Studio.exe
+      sha256: 1c7ff149dcce2787dc73ea595e6eb3e36ce7202e3455cb125efe757c6a66a6d9
+      bin:
+        - LiteDB.Studio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall litedb-studio
+test: LiteDB.Studio --version

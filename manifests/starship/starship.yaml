@@ -2,10 +2,13 @@ api: v1
 name: starship
 kind: app
 display: starship
-description: 跨 shell 极简高配提示符
+description: The minimal, blazing fast, and extremely customizable prompt for any shell!
 homepage: https://starship.rs
 license: ISC
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - starship
 version: 1.27.0
@@ -43,4 +46,3 @@ platforms:
         - starship
       strip: 1
 test: starship --version
-caveats: 由 GitHub starship/starship latest 自动转制

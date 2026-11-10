@@ -1,0 +1,24 @@
+api: v1
+name: neko
+kind: app
+display: neko
+description: A high-level dynamically typed programming language
+homepage: https://nekovm.org
+license: MIT
+version: 2.4.1
+channels:
+    stable: 2.4.1
+provides:
+    - neko
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HaxeFoundation/neko/releases/download/v2-4-1/neko-2.4.1-win64.zip
+      sha256: 3902933da42320e8bc04dbee07959ee9ff09a7848e9af48072396400cc3618c9
+      bin:
+        - neko.exe
+        - nekoc.exe
+        - nekoml.exe
+        - nekotools.exe
+      strip: 1
+test: neko --version

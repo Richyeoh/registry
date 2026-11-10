@@ -1,0 +1,21 @@
+api: v1
+name: linphone
+kind: app
+display: linphone
+description: A free VoIP and video softphone based on the SIP protocol.
+homepage: https://linphone.org/
+license: GPL-2.0-only
+version: 6.2.4
+channels:
+    stable: 6.2.4
+provides:
+    - linphone
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.linphone.org/releases/windows/app/Linphone-6.2.4-win64.exe#/dl.7z
+      sha256: 5b275f52f52e22b2180ad33c0f9b46cbc01c87fbd5afc072ef72d16895f15d54
+      bin:
+        - bin\linphone.exe
+      strip: 1
+test: bin\linphone --version

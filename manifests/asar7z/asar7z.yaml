@@ -1,0 +1,21 @@
+api: v1
+name: asar7z
+kind: app
+display: asar7z
+description: A plugin for 7-Zip that enables opening, modifying, and creating .asar archives used by Electron-based applications, while noting that encrypted .asar archives cannot be accessed without the specific encryption method defined by the developer.
+homepage: https://www.tc4shell.com/en/7zip/asar/
+license: Unknown
+version: "1.5"
+channels:
+    stable: "1.5"
+provides:
+    - asar7z
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.tc4shell.com/binary/Asar.zip
+      sha256: ea17751b2d7d607dfc11612e71d0c9d36561e643cdfb2bfb16922a9a0ec6d250
+      bin:
+        - asar7z.exe
+      strip: 1
+test: asar7z --version

@@ -1,0 +1,21 @@
+api: v1
+name: syncmlviewer
+kind: app
+display: syncmlviewer
+description: A small real time SyncML protocol Viewer
+homepage: https://github.com/okieselbach/SyncMLViewer
+license: MIT
+version: 1.4.0
+channels:
+    stable: 1.4.0
+provides:
+    - syncmlviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/okieselbach/SyncMLViewer/releases/download/v1.4.0/SyncMLViewer-v140.zip
+      sha256: 367f5e6f9ff98633b4e28d1f25ddb4fb5a6bb31faea5b86032285eff6f3f770f
+      bin:
+        - SyncMLViewer.exe
+      strip: 1
+test: SyncMLViewer --version

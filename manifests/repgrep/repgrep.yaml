@@ -1,0 +1,21 @@
+api: v1
+name: repgrep
+kind: app
+display: repgrep
+description: An interactive replacer for ripgrep that makes it easy to find and replace across files on the command line.
+homepage: https://github.com/acheronfail/repgrep
+license: Apache-2.0|MIT|Unlicense
+version: 0.17.1
+channels:
+    stable: 0.17.1
+provides:
+    - repgrep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/acheronfail/repgrep/releases/download/0.17.1/repgrep-0.17.1-x86_64-pc-windows-msvc.zip
+      sha256: 815fb21de37c0d55f4b37bd2746740484bb10a5b83bee9e22fa0ae4ec6d9e0aa
+      bin:
+        - rgr.exe
+      strip: 1
+test: rgr --version

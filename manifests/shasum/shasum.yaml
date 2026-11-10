@@ -1,0 +1,21 @@
+api: v1
+name: shasum
+kind: app
+display: shasum
+description: An approximation of the Unix shasum command.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2023.06.28
+channels:
+    stable: 0.2023.06.28
+provides:
+    - shasum
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lukesampson/psutils/1d746384cb351f2e38bdbe98120d3a9322bbd1a0/shasum.ps1
+      sha256: 569cd02dd49cff0c92c93a609e58cc902d850fe0c312ee86c3dc3fba0976e596
+      bin:
+        - shasum.ps1.exe
+      strip: 1
+test: shasum.ps1 --version

@@ -1,0 +1,21 @@
+api: v1
+name: deskflow
+kind: app
+display: deskflow
+description: Share a single keyboard and mouse between multiple computers.
+homepage: https://deskflow.org
+license: GPL-2.0
+version: 1.27.0
+channels:
+    stable: 1.27.0
+provides:
+    - deskflow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/deskflow/deskflow/releases/download/v1.27.0/deskflow-1.27.0-win-x64-portable.zip
+      sha256: 8d19004cc3625623489d96580c1b58fd13ee78185689907fd4478595f93fab9a
+      bin:
+        - deskflow-core.exe
+      strip: 1
+test: deskflow-core --version

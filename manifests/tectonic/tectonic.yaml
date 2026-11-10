@@ -1,0 +1,21 @@
+api: v1
+name: tectonic
+kind: app
+display: tectonic
+description: Tectonic is a modernized, complete, self-contained TeX/LaTeX engine, powered by XeTeX and TeXLive.
+homepage: https://tectonic-typesetting.github.io/en-US/
+license: MIT
+version: 0.17.0
+channels:
+    stable: 0.17.0
+provides:
+    - tectonic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-pc-windows-msvc.zip
+      sha256: f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f
+      bin:
+        - tectonic.exe
+      strip: 1
+test: tectonic --version

@@ -1,0 +1,24 @@
+api: v1
+name: polaris
+kind: app
+display: polaris
+description: A music streaming application
+homepage: https://github.com/agersant/polaris
+license: MIT
+version: 0.16.1
+channels:
+    stable: 0.16.1
+provides:
+    - polaris
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/agersant/polaris/releases/download/0.16.1/Polaris_0.16.1.msi
+      sha256: 6a9b51b52ec382c83974d72d7cdda6106c666b996ddd38aab782cae0a28238af
+      bin:
+        - polaris.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall polaris
+test: polaris --version

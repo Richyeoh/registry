@@ -1,0 +1,21 @@
+api: v1
+name: jdtls
+kind: app
+display: jdtls
+description: Java language server
+homepage: https://projects.eclipse.org/projects/eclipse.jdt.ls
+license: EPL-2.0
+version: 1.64.0-202611091900
+channels:
+    stable: 1.64.0-202611091900
+provides:
+    - jdtls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.eclipse.org/jdtls/snapshots/jdt-language-server-1.64.0-202611091900.tar.gz
+      sha256: 2b7525aaabc36ba79c794e3aba0d44c44e3dcbbf2b39316c49adeb7907370c38
+      bin:
+        - jdtls.exe
+      strip: 1
+test: jdtls --version

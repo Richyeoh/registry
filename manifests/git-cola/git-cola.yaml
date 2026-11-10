@@ -1,0 +1,22 @@
+api: v1
+name: git-cola
+kind: app
+display: git-cola
+description: A highly-caffeinated, powerful, and intuitive graphical user interface for Git
+homepage: https://git-cola.github.io/
+license: GPL-2.0-or-later
+version: 4.19.0
+channels:
+    stable: 4.19.0
+provides:
+    - git-cola
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-cola/git-cola/releases/download/v4.19.0/git-cola-4.19.0.windows.zip
+      sha256: b7f1e91ed246a4e00959a4146fda8822ee467a35e89e6447c81b1affa45d7d95
+      bin:
+        - bin\git-cola.exe
+        - bin\git-dag.exe
+      strip: 1
+test: bin\git-cola --version

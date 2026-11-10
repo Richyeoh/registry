@@ -1,0 +1,22 @@
+api: v1
+name: chronograf
+kind: app
+display: chronograf
+description: Open source monitoring and visualization UI for the TICK stack.
+homepage: https://www.influxdata.com/time-series-platform/chronograf/
+license: MIT
+version: 1.11.7
+channels:
+    stable: 1.11.7
+provides:
+    - chronograf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.influxdata.com/chronograf/releases/chronograf-1.11.7_windows_amd64.zip
+      sha256: 83ba0734f94a38049e3a9a8fab1cb266a8101889854f0436d13e8d1db972cde1
+      bin:
+        - chronoctl.exe
+        - chronograf.exe
+      strip: 1
+test: chronoctl --version

@@ -1,0 +1,24 @@
+api: v1
+name: explorer-suite
+kind: app
+display: explorer-suite
+description: A suite of tools including a PE editor called CFF Explorer and a process viewer.
+homepage: https://ntcore.com/?page_id=388
+license: Unknown
+version: III
+channels:
+    stable: III
+provides:
+    - explorer-suite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ntcore.com/files/ExplorerSuite.exe
+      sha256: 94f4348ec573b05990b1e19542986e46dc30a87870739f5d5430b60072d5144d
+      bin:
+        - explorer-suite.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall explorer-suite
+test: explorer-suite --version

@@ -1,0 +1,24 @@
+api: v1
+name: blobsaver
+kind: app
+display: blobsaver
+description: A GUI and CLI app for automatically saving SHSH blobs.
+homepage: https://github.com/airsquared/blobsaver
+license: GPL-3.0
+version: 3.6.0
+channels:
+    stable: 3.6.0
+provides:
+    - blobsaver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/airsquared/blobsaver/releases/download/v3.6.0/blobsaver-3.6.0.exe
+      sha256: 48d45e70d2217046eb5243973f02c5d0bd71daf6ca0ab23cb0470811b81f4c01
+      bin:
+        - blobsaver.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall blobsaver
+test: blobsaver --version

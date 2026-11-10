@@ -1,0 +1,21 @@
+api: v1
+name: show-disk-partition-style
+kind: app
+display: show-disk-partition-style
+description: A simple app for showing disk partion style.
+homepage: https://www.sordum.org/show-disk-partition-style
+license: Unknown
+version: "1.1"
+channels:
+    stable: "1.1"
+provides:
+    - show-disk-partition-style
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/show-disk-partition-style/DPStyle.zip
+      sha256: 40de4da4d8ce528e8dffced5391d0a526a8debbefd36dd335cbd5d752cb1e1f6
+      bin:
+        - show-disk-partition-style.exe
+      strip: 1
+test: show-disk-partition-style --version

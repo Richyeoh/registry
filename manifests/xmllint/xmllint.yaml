@@ -1,0 +1,21 @@
+api: v1
+name: xmllint
+kind: app
+display: xmllint
+description: The command line XML tool that parses one or more XML files and prints various types of output, depending upon the options selected.
+homepage: http://xmlsoft.org/
+license: MIT
+version: 2.9.3
+channels:
+    stable: 2.9.3
+provides:
+    - xmllint
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://xmlsoft.org/sources/win32/64bit/iconv-1.14-win32-x86_64.7z
+      sha256: 789ff211527bdeb80003b39b67c57742c23286db33c1b3d1622f52fc67612f60
+      bin:
+        - bin\xmllint.exe
+      strip: 1
+test: bin\xmllint --version

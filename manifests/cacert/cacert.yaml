@@ -1,0 +1,21 @@
+api: v1
+name: cacert
+kind: app
+display: cacert
+description: CA certificates extracted from the Mozilla CA certificate store, in PEM format
+homepage: https://curl.se/docs/caextract.html
+license: MPL-2.0
+version: "2026-11-05"
+channels:
+    stable: "2026-11-05"
+provides:
+    - cacert
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://curl.se/ca/cacert-2026-11-05.pem#/cacert.pem
+      sha256: 427c064216761a1e72a8b30f0d954d08cb6e4435a82091fb865afd20c8497285
+      bin:
+        - cacert.exe
+      strip: 1
+test: cacert --version

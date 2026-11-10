@@ -1,0 +1,21 @@
+api: v1
+name: pastebar
+kind: app
+display: pastebar
+description: Limitless, Free Clipboard Manager for Mac and Windows
+homepage: https://www.pastebar.app/
+license: CC-BY-NC-SA-4.0
+version: 0.7.0
+channels:
+    stable: 0.7.0
+provides:
+    - pastebar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PasteBar/PasteBarApp/releases/download/v0.7.0/PasteBar_0.7.0_x64-portable.zip
+      sha256: ed661b9734c4d35d7223437f026359d25d22be6bec0e567882745809005cb9a9
+      bin:
+        - PasteBar.exe
+      strip: 1
+test: PasteBar --version

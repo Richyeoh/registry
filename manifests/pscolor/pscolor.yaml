@@ -1,0 +1,21 @@
+api: v1
+name: pscolor
+kind: app
+display: pscolor
+description: Provides color highlighting for some basic PowerShell output.
+homepage: https://github.com/Davlind/PSColor
+license: MIT
+version: 1.0.0.0
+channels:
+    stable: 1.0.0.0
+provides:
+    - pscolor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/Davlind/PSColor/master/release/PSColor.zip
+      sha256: 6e2f25dca53e1c9f28557fb9dec97d50e968d3e83d3be59a4b6f9954da826ebb
+      bin:
+        - pscolor.exe
+      strip: 1
+test: pscolor --version

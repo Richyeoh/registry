@@ -1,0 +1,21 @@
+api: v1
+name: uiforetw
+kind: app
+display: uiforetw
+description: User interface for recording and managing ETW traces
+homepage: https://github.com/google/UIforETW
+license: Apache-2.0
+version: "1.59"
+channels:
+    stable: "1.59"
+provides:
+    - uiforetw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/UIforETW/releases/download/v1.59/etwpackage1.59.zip
+      sha256: af8b72385dbfb43f7296f276f1d4607e4bd0cb0a7577c4938477f93087247319
+      bin:
+        - uiforetw.exe
+      strip: 1
+test: uiforetw --version

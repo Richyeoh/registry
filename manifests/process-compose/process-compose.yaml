@@ -1,0 +1,21 @@
+api: v1
+name: process-compose
+kind: app
+display: process-compose
+description: A simple and flexible scheduler and orchestrator to manage non-containerized applications.
+homepage: https://f1bonacc1.github.io/process-compose/
+license: Apache-2.0
+version: 1.124.0
+channels:
+    stable: 1.124.0
+provides:
+    - process-compose
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/F1bonacc1/process-compose/releases/download/v1.124.0/process-compose_windows_amd64.zip
+      sha256: a77d51dcb34e3e8d2b88af372ada7ca8a62cb87f0c6af0f78834c0fd6c95e2a7
+      bin:
+        - process-compose.exe
+      strip: 1
+test: process-compose --version

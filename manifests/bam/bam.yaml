@@ -1,0 +1,46 @@
+api: v1
+name: bam
+kind: app
+display: bam
+description: Build system that uses Lua to describe the build process
+homepage: https://matricks.github.io/bam/
+license: Zlib
+keywords:
+    - brew
+    - homebrew
+version: 0.5.1
+channels:
+    stable: 0.5.1
+provides:
+    - bam
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bam/blobs/sha256:a02a2877930db310c3de63b2a8fa34892ed25ca66030f90ef5db29c0169923ca
+      sha256: a02a2877930db310c3de63b2a8fa34892ed25ca66030f90ef5db29c0169923ca
+      bin:
+        - bam
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bam/blobs/sha256:773392c0ee9db42b82ad2be097d3aab63e97e4ff05e4532f633e6cab16ae71d9
+      sha256: 773392c0ee9db42b82ad2be097d3aab63e97e4ff05e4532f633e6cab16ae71d9
+      bin:
+        - bam
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bam/blobs/sha256:1220e1a71792eacface17e8168d217ca657aeecf3b30a672a0815375536e2d1d
+      sha256: 1220e1a71792eacface17e8168d217ca657aeecf3b30a672a0815375536e2d1d
+      bin:
+        - bam
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bam/blobs/sha256:c8b66adf43d301d47e35cb5b45bf01bed4923f7eaf7496d08ded5d2bf70b2b64
+      sha256: c8b66adf43d301d47e35cb5b45bf01bed4923f7eaf7496d08ded5d2bf70b2b64
+      bin:
+        - bam
+      strip: 1
+test: bam --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

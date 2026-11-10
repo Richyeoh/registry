@@ -1,0 +1,21 @@
+api: v1
+name: winfetch
+kind: app
+display: winfetch
+description: A command-line system information utility for Windows
+homepage: https://github.com/lptstr/winfetch
+license: MIT
+version: 2.5.1
+channels:
+    stable: 2.5.1
+provides:
+    - winfetch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lptstr/winfetch/v2.5.1/winfetch.ps1
+      sha256: 37359a63285945d425e4daab97b1cbf8cc259509b49eb0171c3ab762500856d9
+      bin:
+        - winfetch.ps1.exe
+      strip: 1
+test: winfetch.ps1 --version

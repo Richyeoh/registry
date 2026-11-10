@@ -1,0 +1,21 @@
+api: v1
+name: pot
+kind: app
+display: pot
+description: A powerful text selection translation and OCR software
+homepage: https://pot-app.com
+license: GPL-3.0-only
+version: 3.0.7
+channels:
+    stable: 3.0.7
+provides:
+    - pot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pot-app/pot-desktop/releases/download/3.0.7/pot_3.0.7_x64-setup.exe#/dl.7z
+      sha256: 0a6ac5309bfc41234d58cf6615a779c66d167d3a0da5542a0de2ea118fc6bc56
+      bin:
+        - pot.exe
+      strip: 1
+test: pot --version

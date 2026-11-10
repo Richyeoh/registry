@@ -1,0 +1,21 @@
+api: v1
+name: merman-lsp
+kind: app
+display: merman-lsp
+description: Local Mermaid language intelligence for .mmd, .mermaid, Markdown, and MDX documents.
+homepage: https://frankorz.com/merman/
+license: MIT|Apache-2.0
+version: 0.9.3
+channels:
+    stable: 0.9.3
+provides:
+    - merman-lsp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Latias94/merman/releases/download/v0.9.3/merman-lsp-x86_64-pc-windows-msvc.zip
+      sha256: 18a506f07686558ba4b68036128c31b165565980237595a51382eb6b6d90c56b
+      bin:
+        - merman-lsp.exe
+      strip: 1
+test: merman-lsp --version

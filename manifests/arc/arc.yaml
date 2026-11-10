@@ -1,0 +1,24 @@
+api: v1
+name: arc
+kind: app
+display: arc
+description: Easily create & extract archives, and compress & decompress files of various formats.
+homepage: https://github.com/mholt/archiver
+license: MIT
+version: 3.5.0
+channels:
+    stable: 3.5.0
+provides:
+    - arc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mholt/archiver/releases/download/v3.5.0/arc_3.5.0_windows_amd64.exe#/arc.exe
+      sha256: bd89e2cb031f6984758cb8333925778393d25f27928efcf756e084952067b4df
+      bin:
+        - arc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall arc
+test: arc --version

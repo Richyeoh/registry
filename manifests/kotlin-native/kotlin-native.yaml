@@ -1,0 +1,26 @@
+api: v1
+name: kotlin-native
+kind: app
+display: kotlin-native
+description: An LLVM backend for the Kotlin compiler, runtime implementation, and native code generation facility using the LLVM toolchain for native binaries runnable without a virtual machine.
+homepage: https://kotlinlang.org
+license: Apache-2.0
+version: 2.4.21
+channels:
+    stable: 2.4.21
+provides:
+    - kotlin-native
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JetBrains/kotlin/releases/download/v2.4.21/kotlin-native-prebuilt-windows-x86_64-2.4.21.zip
+      sha256: 9b77b3972a05e35ddfa0dd9d50eb3ddc20618c9cc6cead1bc6f6d41d2cad24bd
+      bin:
+        - bin\cinterop.bat.exe
+        - bin\klib.bat.exe
+        - bin\konanc.bat.exe
+        - bin\generate-platform.bat.exe
+        - bin\kotlinc-native.bat.exe
+        - bin\run_konan.bat.exe
+      strip: 1
+test: bin\cinterop.bat --version

@@ -1,0 +1,21 @@
+api: v1
+name: kdenlive
+kind: app
+display: kdenlive
+description: Video editing software based on the MLT Framework, KDE and Qt
+homepage: https://kdenlive.org
+license: GPL-2.0-only
+version: 26.08.3
+channels:
+    stable: 26.08.3
+provides:
+    - kdenlive
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/kdenlive/26.08/windows/kdenlive-26.08.3_standalone.exe#/dl.7z
+      sha256: a25427b1dff2c17e3b0386e991bb1a719382bb3176d1a90e441cdaeb6e0a967d
+      bin:
+        - bin\kdenlive.exe
+      strip: 1
+test: bin\kdenlive --version

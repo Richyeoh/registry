@@ -1,0 +1,23 @@
+api: v1
+name: amule
+kind: app
+display: amule
+description: A peer-to-peer file-sharing client for the eD2k and Kademlia networks, compatible with eMule.
+homepage: https://github.com/amule-org/amule
+license: GPL-2.0-or-later
+version: 3.2.0
+channels:
+    stable: 3.2.0
+provides:
+    - amule
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/amule-org/amule/releases/download/3.2.0/aMule-3.2.0-Windows-x64.zip
+      sha256: 6826fb9c3a63394c5ba111647ab397025cc8e44034772263aab18bae50f4ab32
+      bin:
+        - bin\amulecmd.exe
+        - bin\amuled.exe
+        - bin\amuleweb.exe
+      strip: 1
+test: bin\amulecmd --version

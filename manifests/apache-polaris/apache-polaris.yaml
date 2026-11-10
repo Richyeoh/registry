@@ -1,0 +1,39 @@
+api: v1
+name: apache-polaris
+kind: app
+display: apache-polaris
+description: Interoperable, open source catalog for Apache Iceberg
+homepage: https://polaris.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.8.0
+channels:
+    stable: 1.8.0
+provides:
+    - apache-polaris
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:3cb1d9c2ef4b5849ec6f67a5000eb1de27015825433b24ec4341fc77d573e9bb
+      sha256: 3cb1d9c2ef4b5849ec6f67a5000eb1de27015825433b24ec4341fc77d573e9bb
+      bin:
+        - apache-polaris
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:7d31554514b827f1948e4c28799fe9300ac94af02a490498808673ff03cf3945
+      sha256: 7d31554514b827f1948e4c28799fe9300ac94af02a490498808673ff03cf3945
+      bin:
+        - apache-polaris
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apache-polaris/blobs/sha256:21255ccd106d2f9c5fd64e085696261267edd4d9986e6f9a27ac01ff4dedf312
+      sha256: 21255ccd106d2f9c5fd64e085696261267edd4d9986e6f9a27ac01ff4dedf312
+      bin:
+        - apache-polaris
+      strip: 1
+test: apache-polaris --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

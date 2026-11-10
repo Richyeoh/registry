@@ -1,0 +1,25 @@
+api: v1
+name: cmake-nightly
+kind: app
+display: cmake-nightly
+description: Family of tools designed to build, test and package software
+homepage: https://cmake.org
+license: BSD-3-Clause
+version: 4.5.20261109
+channels:
+    stable: 4.5.20261109
+provides:
+    - cmake-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cmake.org/files/dev/cmake-4.5.20261109-ga9558d3-windows-x86_64.zip
+      sha256: 0735491f598a10b166e8174d9272fa24e8a86cf5d215135a9dbdb77ea79405c8
+      bin:
+        - bin\cmake.exe
+        - bin\cmcldeps.exe
+        - bin\cpack.exe
+        - bin\ctest.exe
+        - bin\cmake-gui.exe
+      strip: 1
+test: bin\cmake --version

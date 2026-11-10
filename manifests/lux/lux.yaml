@@ -1,0 +1,21 @@
+api: v1
+name: lux
+kind: app
+display: lux
+description: A fast, simple and clean video downloader built with Go.
+homepage: https://github.com/iawia002/lux
+license: MIT
+version: 0.24.1
+channels:
+    stable: 0.24.1
+provides:
+    - lux
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/iawia002/lux/releases/download/v0.24.1/lux_0.24.1_Windows_x86_64.zip
+      sha256: bc487da29bac7c0d76607b8ebbe5ca43d6d94c927e551165344eeae713b02098
+      bin:
+        - lux.exe
+      strip: 1
+test: lux --version

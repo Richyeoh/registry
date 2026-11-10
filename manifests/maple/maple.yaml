@@ -1,0 +1,21 @@
+api: v1
+name: maple
+kind: app
+display: maple
+description: A lightweight Universal Windows proxy app based on Leaf.
+homepage: https://github.com/YtFlow/Maple
+license: Apache-2.0
+version: 0.9.1.0
+channels:
+    stable: 0.9.1.0
+provides:
+    - maple
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/YtFlow/Maple/releases/download/v0.9.1/Maple.App_0.9.1.0_x64_Test.zip
+      sha256: 5df4584744fcd9e267ac678554627a0c6d16ff36c749f96409e2600f5f8d2261
+      bin:
+        - maple.exe
+      strip: 1
+test: maple --version

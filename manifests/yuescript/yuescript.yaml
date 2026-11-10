@@ -1,0 +1,21 @@
+api: v1
+name: yuescript
+kind: app
+display: yuescript
+description: A moonscipt dialect that is derived from the Moonscript language and continuously adopting new features to be more up to date. Just like moonscipt, it also compiles into Lua.
+homepage: https://yuescript.org/
+license: MIT
+version: 0.34.3
+channels:
+    stable: 0.34.3
+provides:
+    - yuescript
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pigpigyyy/Yuescript/releases/download/v0.34.3/yue-windows-x64.7z
+      sha256: 548b2fe699f46080cbca6c3d5951df2bcbcbb6bbdd215744054020962e6b7075
+      bin:
+        - yue.exe
+      strip: 1
+test: yue --version

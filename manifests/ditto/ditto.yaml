@@ -1,0 +1,21 @@
+api: v1
+name: ditto
+kind: app
+display: ditto
+description: An enhanced clipboard manager
+homepage: https://ditto-cp.sourceforge.io
+license: GPL-3.0-only
+version: 3.25.113.0
+channels:
+    stable: 3.25.113.0
+provides:
+    - ditto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoPortable_3_25_113_0.zip
+      sha256: c21dc05f27f744813e0f19d2d20842546baea160ab366382548aa283e2636216
+      bin:
+        - Ditto.exe
+      strip: 1
+test: Ditto --version

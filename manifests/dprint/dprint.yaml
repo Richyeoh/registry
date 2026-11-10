@@ -1,0 +1,21 @@
+api: v1
+name: dprint
+kind: app
+display: dprint
+description: Pluggable and configurable code formatting platform written in Rust.
+homepage: https://dprint.dev
+license: MIT
+version: 0.64.3
+channels:
+    stable: 0.64.3
+provides:
+    - dprint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dprint/dprint/releases/download/0.64.3/dprint-x86_64-pc-windows-msvc.zip
+      sha256: 3beb87a2582f1e43a301efd0840565518484e53f8c7b0ad27b857eee08e0745f
+      bin:
+        - dprint.exe
+      strip: 1
+test: dprint --version

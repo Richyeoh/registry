@@ -1,0 +1,21 @@
+api: v1
+name: robo3t
+kind: app
+display: robo3t
+description: The free lightweight GUI for MongoDB enthusiasts
+homepage: https://robomongo.org
+license: GPL-3.0-only
+version: 1.4.4
+channels:
+    stable: 1.4.4
+provides:
+    - robo3t
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Studio3T/robomongo/releases/download/v1.4.4/robo3t-1.4.4-windows-x86_64-e6ac9ec5.zip
+      sha256: b3731451d76cd499674f56cce2968a7e11a15ce74622e755f03dd9462c3f013d
+      bin:
+        - robo3t.exe
+      strip: 1
+test: robo3t --version

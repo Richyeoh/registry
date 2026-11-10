@@ -1,0 +1,21 @@
+api: v1
+name: flamingo
+kind: app
+display: flamingo
+description: Flamingo enhances ArgoCD by providing Flux subsystem capabilities, enabling visualization and management of Flux workloads alongside ArgoCD while ensuring timely backporting of CVEs for a secure environment.
+homepage: https://flux-subsystem-argo.github.io/website/
+license: Apache-2.0
+version: 0.10.2
+channels:
+    stable: 0.10.2
+provides:
+    - flamingo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/flux-subsystem-argo/flamingo/releases/download/v0.10.2/flamingo_0.10.2_windows_amd64.zip
+      sha256: 8b4161422f1aae9c5adee0d5c7c3812661dc295c190b2ea056cd6ddd74c2a873
+      bin:
+        - flamingo.exe
+      strip: 1
+test: flamingo --version

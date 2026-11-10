@@ -1,0 +1,21 @@
+api: v1
+name: hex-editor-neo
+kind: app
+display: hex-editor-neo
+description: Binary file editor optimized for large files
+homepage: https://www.hhdsoftware.com/free-hex-editor
+license: Unknown
+version: 8.26.00.9614
+channels:
+    stable: 8.26.00.9614
+provides:
+    - hex-editor-neo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.hhdsoftware.com/download/free-hex-editor-neo.exe#/dl.7z_
+      sha256: 3553865aa6dacc4aed0a96c9b320fc76e6fad9cb702e8220cff8679859c7e031
+      bin:
+        - HexFrame.exe
+      strip: 1
+test: HexFrame --version

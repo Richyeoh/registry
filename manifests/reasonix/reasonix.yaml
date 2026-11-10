@@ -1,0 +1,21 @@
+api: v1
+name: reasonix
+kind: app
+display: reasonix
+description: Reasonix CLI, official CLI for Reasonix, a DeepSeek-native AI coding agent built to reduce API costs through aggressive context caching.
+homepage: https://reasonix.io
+license: MIT
+version: 2.59.0
+channels:
+    stable: 2.59.0
+provides:
+    - reasonix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/esengine/DeepSeek-Reasonix/releases/download/v2.59.0/reasonix-windows-amd64.zip
+      sha256: 50fbb411d4d4bed10e672d77078cfbe398d92d3ea565c16264383250813808b2
+      bin:
+        - reasonix.exe
+      strip: 1
+test: reasonix --version

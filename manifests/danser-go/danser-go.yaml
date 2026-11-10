@@ -1,0 +1,22 @@
+api: v1
+name: danser-go
+kind: app
+display: danser-go
+description: Dancing visualizer of osu! standard maps and custom osu! client written in Go. Also a generator for osu! videos.
+homepage: https://github.com/Wieku/danser-go
+license: MIT
+version: 0.12.1
+channels:
+    stable: 0.12.1
+provides:
+    - danser-go
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Wieku/danser-go/releases/download/0.12.1/danser-0.12.1-win.zip
+      sha256: 68b9529ac7a745283d59d26d7fa7178d8b7cccd50d070746791c397b7594da71
+      bin:
+        - danser.exe
+        - danser-cli.exe
+      strip: 1
+test: danser --version

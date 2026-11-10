@@ -1,0 +1,24 @@
+api: v1
+name: scooper
+kind: app
+display: scooper
+description: A Graphical User Interface to manage Scoop apps.
+homepage: https://github.com/windedge/Scooper
+license: MIT
+version: 1.2.5
+channels:
+    stable: 1.2.5
+provides:
+    - scooper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/windedge/Scooper/releases/download/v1.2.5/Scooper-1.2.5.msi
+      sha256: c90d4e4bc61e2cb17023a0041365e78650e96c1146e82e5b9a9e2cd11b81cfa1
+      bin:
+        - scooper.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall scooper
+test: scooper --version

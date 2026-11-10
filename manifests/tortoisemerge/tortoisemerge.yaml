@@ -1,0 +1,21 @@
+api: v1
+name: tortoisemerge
+kind: app
+display: tortoisemerge
+description: A diff / merge software tool for Windows with a tight integration for TortoiseSVN.
+homepage: https://tortoisesvn.net/TortoiseMerge.html
+license: GPL-2.0-only
+version: 1.6.7
+channels:
+    stable: 1.6.7
+provides:
+    - tortoisemerge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/tortoisesvn/OldFiles/Tools/1.6.7/TortoiseDiff-1.6.7.zip
+      sha256: f530dc5d460ca6e27912bee68a8a5dc54a2e9263ac6e932438240571f92515fa
+      bin:
+        - tortoisemerge.exe
+      strip: 1
+test: tortoisemerge --version

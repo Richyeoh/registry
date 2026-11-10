@@ -1,0 +1,21 @@
+api: v1
+name: rayburst
+kind: app
+display: rayburst
+description: A full-featured download manager — rebuilt from the ground up (Formerly known as Motrix Next).
+homepage: https://rayburst.pages.dev
+license: MIT
+version: 4.1.2
+channels:
+    stable: 4.1.2
+provides:
+    - rayburst
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AnInsomniacy/rayburst/releases/download/v4.1.2/Rayburst_4.1.2_x64-setup.exe#/dl.7z
+      sha256: 0be39ea3ef4bb66264908cecebbcd63c55db53784db333d17681af46b1843fbb
+      bin:
+        - rayburst.exe
+      strip: 1
+test: rayburst --version

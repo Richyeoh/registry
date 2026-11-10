@@ -1,0 +1,46 @@
+api: v1
+name: axel
+kind: app
+display: axel
+description: Light UNIX download accelerator
+homepage: https://github.com/axel-download-accelerator/axel
+license: GPL-2.0-or-later WITH cryptsetup-OpenSSL-exception
+keywords:
+    - brew
+    - homebrew
+version: 2.17.14
+channels:
+    stable: 2.17.14
+provides:
+    - axel
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:8926c7626c602becabb002607665fb5680aaeb113469a2be0d307ef2a84fb902
+      sha256: 8926c7626c602becabb002607665fb5680aaeb113469a2be0d307ef2a84fb902
+      bin:
+        - axel
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:a619e49c1bd49cbe599adecc5fad05208c41befee47f819ed9e7803c63181d58
+      sha256: a619e49c1bd49cbe599adecc5fad05208c41befee47f819ed9e7803c63181d58
+      bin:
+        - axel
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:5e36485c13d0c6d2d3ec965dae2d9d2e87cb8f4929d7b8a9c1cc4115eda26012
+      sha256: 5e36485c13d0c6d2d3ec965dae2d9d2e87cb8f4929d7b8a9c1cc4115eda26012
+      bin:
+        - axel
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/axel/blobs/sha256:66b10f06213d7853d329bbe6550cac344cb5c0ef2e80b9288d5104b4204df8c7
+      sha256: 66b10f06213d7853d329bbe6550cac344cb5c0ef2e80b9288d5104b4204df8c7
+      bin:
+        - axel
+      strip: 1
+test: axel --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

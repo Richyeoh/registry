@@ -1,0 +1,21 @@
+api: v1
+name: clonespy
+kind: app
+display: clonespy
+description: A free duplicate file cleanup tool for Windows© XP/Vista/7/8/8.1/10.
+homepage: https://clonespy.com/
+license: Unknown
+version: "3.43"
+channels:
+    stable: "3.43"
+provides:
+    - clonespy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://clonespy.com/english/download/cspy343.exe#/dl.7z
+      sha256: 6f1c39f521d7ccdc2c0cfb8a69d456c57b6094e95afc9d9294d85f35eb116a45
+      bin:
+        - clonespy.exe
+      strip: 1
+test: clonespy --version

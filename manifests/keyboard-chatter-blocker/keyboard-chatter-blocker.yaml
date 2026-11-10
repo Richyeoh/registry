@@ -1,0 +1,24 @@
+api: v1
+name: keyboard-chatter-blocker
+kind: app
+display: keyboard-chatter-blocker
+description: Utility for blocking keyboard chatter
+homepage: https://github.com/mcmonkeyprojects/KeyboardChatterBlocker
+license: MIT
+version: "1.21"
+channels:
+    stable: "1.21"
+provides:
+    - keyboard-chatter-blocker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mcmonkeyprojects/KeyboardChatterBlocker/releases/download/1.21/KeyboardChatterBlocker.exe
+      sha256: da47b9b418403245b5854328bdfea8fb25e38e831cc1d9f25145da39c1f6d2b0
+      bin:
+        - keyboard-chatter-blocker.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall keyboard-chatter-blocker
+test: keyboard-chatter-blocker --version

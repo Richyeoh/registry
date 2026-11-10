@@ -1,0 +1,24 @@
+api: v1
+name: fred-tv
+kind: app
+display: fred-tv
+description: Ultra-fast, simple and open-source IPTV app
+homepage: https://github.com/Fredolx/open-tv
+license: GPL-2.0-only
+version: 1.9.1
+channels:
+    stable: 1.9.1
+provides:
+    - fred-tv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Fredolx/open-tv/releases/download/v1.9.1/Fred.TV_1.9.1_x64_en-US.msi
+      sha256: 84b0372c98c1ed73bbda290e7b176bc3b303af05136a9962b1a7b10b1c11a0a7
+      bin:
+        - open_tv.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fred-tv
+test: open_tv --version

@@ -1,0 +1,31 @@
+api: v1
+name: wabt
+kind: app
+display: wabt
+description: '''wabbit'' is a suite of tools for WebAssembly'
+homepage: https://github.com/WebAssembly/wabt
+license: Apache-2.0
+version: 1.0.42
+channels:
+    stable: 1.0.42
+provides:
+    - wabt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WebAssembly/wabt/releases/download/1.0.42/wabt-1.0.42-windows-x64.tar.gz
+      sha256: 62f1eb2b51aa57cf0f0b8ba333bf2c72a049930aa9c5de01dcad271c4fe48c88
+      bin:
+        - spectest-interp.exe
+        - wasm2c.exe
+        - wasm2wat.exe
+        - wasm-interp.exe
+        - wasm-objdump.exe
+        - wasm-stats.exe
+        - wasm-strip.exe
+        - wasm-validate.exe
+        - wast2json.exe
+        - wat2wasm.exe
+        - wat-desugar.exe
+      strip: 1
+test: spectest-interp --version

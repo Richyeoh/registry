@@ -1,0 +1,32 @@
+api: v1
+name: 4k-youtube-to-mp3
+kind: app
+display: 4K YouTube to MP3
+description: Turn YouTube links into MP3 files
+homepage: https://www.4kdownload.com/products/youtubetomp3/1
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 26.3.5
+channels:
+    stable: 26.3.5
+provides:
+    - 4k-youtube-to-mp3
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://dl.4kdownload.com/app/4kyoutubetomp3_26.3.5_arm64.dmg
+      sha256: c542a0d15277e9eb3f10cef2e6fbd247682097becd7bf58c0dbebb888c76de0c
+      bin:
+        - 4k-youtube-to-mp3
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.4kdownload.com/app/4kyoutubetomp3_26.3.5_arm64.dmg
+      sha256: c542a0d15277e9eb3f10cef2e6fbd247682097becd7bf58c0dbebb888c76de0c
+      bin:
+        - 4k-youtube-to-mp3
+      strip: 1
+test: 4k-youtube-to-mp3 --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

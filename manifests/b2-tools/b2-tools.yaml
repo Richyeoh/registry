@@ -1,0 +1,39 @@
+api: v1
+name: b2-tools
+kind: app
+display: b2-tools
+description: B2 Cloud Storage Command-Line Tools
+homepage: https://github.com/Backblaze/B2_Command_Line_Tool
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 5.0.2
+channels:
+    stable: 5.0.2
+provides:
+    - b2-tools
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/b2-tools/blobs/sha256:3f68464c8f06be20ccb216d790adb30b348a0ec8c900e5f3cde439105e46812c
+      sha256: 3f68464c8f06be20ccb216d790adb30b348a0ec8c900e5f3cde439105e46812c
+      bin:
+        - b2-tools
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/b2-tools/blobs/sha256:de84761730c29754826d25e543e5888a85afa5c18ffe315570c79f0bd5a62f75
+      sha256: de84761730c29754826d25e543e5888a85afa5c18ffe315570c79f0bd5a62f75
+      bin:
+        - b2-tools
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/b2-tools/blobs/sha256:de84761730c29754826d25e543e5888a85afa5c18ffe315570c79f0bd5a62f75
+      sha256: de84761730c29754826d25e543e5888a85afa5c18ffe315570c79f0bd5a62f75
+      bin:
+        - b2-tools
+      strip: 1
+test: b2-tools --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

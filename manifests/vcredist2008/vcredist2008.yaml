@@ -1,0 +1,24 @@
+api: v1
+name: vcredist2008
+kind: app
+display: vcredist2008
+description: Microsoft Visual C++ Redistributable for Visual Studio 2008.
+homepage: https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
+license: Unknown
+version: 9.0.30729.5677
+channels:
+    stable: 9.0.30729.5677
+provides:
+    - vcredist2008
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x64.exe
+      sha256: c5e273a4a16ab4d5471e91c7477719a2f45ddadb76c7f98a38fa5074a6838654
+      bin:
+        - vcredist2008.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall vcredist2008
+test: vcredist2008 --version

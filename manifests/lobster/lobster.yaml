@@ -1,0 +1,21 @@
+api: v1
+name: lobster
+kind: app
+display: lobster
+description: The Lobster Programming Language
+homepage: https://strlen.com/lobster
+license: Apache-2.0
+version: "2026.8"
+channels:
+    stable: "2026.8"
+provides:
+    - lobster
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aardappel/lobster/releases/download/v2026.8/lobster_windows_release.zip
+      sha256: addfa697506973ff720c0b89d7e23241206f8474321659a6b971aa8aadd5ab9d
+      bin:
+        - bin\lobster.exe
+      strip: 1
+test: bin\lobster --version

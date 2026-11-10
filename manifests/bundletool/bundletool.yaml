@@ -1,0 +1,21 @@
+api: v1
+name: bundletool
+kind: app
+display: bundletool
+description: A CLI tool to manipulate Android App Bundles and Android SDK Bundles.
+homepage: https://developer.android.google.cn/tools/bundletool
+license: Apache-2.0
+version: 1.18.3
+channels:
+    stable: 1.18.3
+provides:
+    - bundletool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/bundletool/releases/download/1.18.3/bundletool-all-1.18.3.jar#/bundletool.jar
+      sha256: a099cfa1543f55593bc2ed16a70a7c67fe54b1747bb7301f37fdfd6d91028e29
+      bin:
+        - bundletool.jar.exe
+      strip: 1
+test: bundletool.jar --version

@@ -1,0 +1,21 @@
+api: v1
+name: paint-net-plugin-boltbait
+kind: app
+display: paint.net-plugin-boltbait
+description: Collection of paint.net plugins by BoltBait
+homepage: https://boltbait.com/pdn/
+license: Unknown
+version: "6.11"
+channels:
+    stable: "6.11"
+provides:
+    - paint-net-plugin-boltbait
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://boltbait.com/pdn/BoltBaitPack611.zip
+      sha256: f90abe9930b49d081e7aff602f7087ef223277b7c0a89dd576c5afabb735b3cd
+      bin:
+        - paint-net-plugin-boltbait.exe
+      strip: 1
+test: paint-net-plugin-boltbait --version

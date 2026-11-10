@@ -1,0 +1,24 @@
+api: v1
+name: awake
+kind: app
+display: awake
+description: Prevents the computer from entering the idle state.
+homepage: https://github.com/gdegeneve/Awake
+license: MIT
+version: 1.4.2
+channels:
+    stable: 1.4.2
+provides:
+    - awake
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gdegeneve/Awake/releases/download/v1.4.2/Awake.exe
+      sha256: ae993364229195427519b33cb8b4dcc53a03244e4046a06ca655cb781978d27e
+      bin:
+        - Awake.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall awake
+test: Awake --version

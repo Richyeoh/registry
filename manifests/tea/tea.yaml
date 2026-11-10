@@ -1,0 +1,21 @@
+api: v1
+name: tea
+kind: app
+display: tea
+description: Official command-line tool to interact with Gitea servers
+homepage: https://gitea.com/gitea/tea
+license: MIT
+version: 0.16.0
+channels:
+    stable: 0.16.0
+provides:
+    - tea
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitea.com/gitea/tea/releases/download/v0.16.0/tea-0.16.0-windows-amd64.exe.xz
+      sha256: caa6a2c5335547db25415160ecda4b92e5de378a96022db62c3f17cc36eccc17
+      bin:
+        - tea.exe
+      strip: 1
+test: tea --version

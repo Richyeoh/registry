@@ -1,0 +1,21 @@
+api: v1
+name: clion-eap
+kind: app
+display: clion-eap
+description: Cross-Platform IDE for C and C++ by JetBrains. (Early Access Program)
+homepage: https://www.jetbrains.com/cpp/
+license: Unknown
+version: 2026.3-263.7307.35
+channels:
+    stable: 2026.3-263.7307.35
+provides:
+    - clion-eap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/cpp/CLion-263.7307.35.win.zip
+      sha256: 65094ff8732d8d7710ef8bb851b1c8b1d77c2001b4a04f5d3000f7f0f9b709d7
+      bin:
+        - IDE\bin\clion64.exe
+      strip: 1
+test: IDE\bin\clion64 --version

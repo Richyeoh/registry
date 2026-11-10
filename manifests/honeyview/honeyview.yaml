@@ -1,0 +1,24 @@
+api: v1
+name: honeyview
+kind: app
+display: honeyview
+description: A fast image viewer
+homepage: https://www.bandisoft.com/honeyview/
+license: Unknown
+version: "5.53"
+channels:
+    stable: "5.53"
+provides:
+    - honeyview
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bandisoft.app/honeyview/HONEYVIEW-SETUP.EXE
+      sha256: 831622fcffc89f5ed28a2d796eb0b4157a7d8bd8019d4faf4ef75ddc949933ab
+      bin:
+        - Honeyview.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall honeyview
+test: Honeyview --version

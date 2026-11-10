@@ -1,0 +1,21 @@
+api: v1
+name: gopass-jsonapi
+kind: app
+display: gopass-jsonapi
+description: Gopass Browser Bindings
+homepage: https://www.gopass.pw/
+license: MIT
+version: 1.17.4
+channels:
+    stable: 1.17.4
+provides:
+    - gopass-jsonapi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gopasspw/gopass-jsonapi/releases/download/v1.17.4/gopass-jsonapi-1.17.4-windows-amd64.zip
+      sha256: 24d1ffb3fb6f790709db2e59f45f82af2dbd36ccf5417a63fe4e048e303f1d7a
+      bin:
+        - gopass-jsonapi.exe
+      strip: 1
+test: gopass-jsonapi --version

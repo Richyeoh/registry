@@ -1,0 +1,22 @@
+api: v1
+name: srlua
+kind: app
+display: srlua
+description: A tool for building self-running Lua programs
+homepage: https://github.com/LuaDist/srlua
+license: MIT
+version: 5.5.1
+channels:
+    stable: 5.5.1
+provides:
+    - srlua
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://joedf.github.io/LuaBuilds/hdata/srlua-5.5.1_Win64_bin.zip
+      sha256: 6e28523a5483548e96db5dc38f660050ac03d85f45bf87acb49dc1afeb35c20b
+      bin:
+        - srlua.exe
+        - srglue.exe
+      strip: 1
+test: srlua --version

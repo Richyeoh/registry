@@ -1,0 +1,22 @@
+api: v1
+name: sophia-script
+kind: app
+display: sophia-script
+description: Sophia Script for Windows (Windows 11, PowerShell 5.1). The most advanced PowerShell module on GitHub for fine-tuning Windows and automating routine tasks.
+homepage: https://github.com/farag2/Sophia-Script-for-Windows
+license: MIT
+version: 8.1.0
+channels:
+    stable: 8.1.0
+provides:
+    - sophia-script
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/farag2/Sophia-Script-for-Windows/releases/download/8.1.0/Sophia.Script.for.Windows.11.v8.1.0.zip
+      sha256: 13ff055baca088d394202de48a12c4448ca56b49ce496b78ddc6299462e24040
+      bin:
+        - powershell.exe
+        - powershell.exe
+      strip: 1
+test: powershell --version

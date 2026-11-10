@@ -1,0 +1,21 @@
+api: v1
+name: labplot
+kind: app
+display: labplot
+description: A free, open source, and cross-platform Data Visualization and Analysis software accessible to everyone.
+homepage: https://labplot.org/
+license: GPL-2.0-or-later
+version: 2.12.1
+channels:
+    stable: 2.12.1
+provides:
+    - labplot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/labplot/labplot-2.12.1-x86_64-setup.exe#/dl.7z
+      sha256: 122f03b8939571e3951982376c4a7b11b6080eb8770ec35fdc4257215a4981a8
+      bin:
+        - labplot.exe
+      strip: 1
+test: labplot --version

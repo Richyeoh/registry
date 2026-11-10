@@ -1,0 +1,21 @@
+api: v1
+name: caret-beta
+kind: app
+display: caret-beta
+description: 'Caret Beta: Markdown editor for Mac, Windows and Linux'
+homepage: https://caret.io/
+license: Unknown
+version: 4.0.0-rc23
+channels:
+    stable: 4.0.0-rc23
+provides:
+    - caret-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/careteditor/releases-beta/releases/download/4.0.0-rc23/caret-beta-4.0.0-rc23-full.nupkg
+      sha256: 5061ffe73b426d2d1924db53f671b16d9d6e1b3677577793b06e29c96c164cab
+      bin:
+        - caret-beta.exe
+      strip: 1
+test: caret-beta --version

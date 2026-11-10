@@ -1,0 +1,21 @@
+api: v1
+name: gauge
+kind: app
+display: gauge
+description: Test automation tool
+homepage: https://gauge.org
+license: GPL-3.0-or-later
+version: 1.6.43
+channels:
+    stable: 1.6.43
+provides:
+    - gauge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/getgauge/gauge/releases/download/v1.6.43/gauge-1.6.43-windows.x86_64.zip
+      sha256: d4f0ddbb58383b696195a42b74ac2885d11cc80bf1f25116e46781435a55b8ec
+      bin:
+        - gauge.exe
+      strip: 1
+test: gauge --version

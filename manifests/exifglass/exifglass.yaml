@@ -1,0 +1,21 @@
+api: v1
+name: exifglass
+kind: app
+display: exifglass
+description: EXIF metadata viewing tool
+homepage: https://github.com/d2phap/ExifGlass
+license: GPL-3.0-or-later
+version: 3.0.0.1105
+channels:
+    stable: 3.0.0.1105
+provides:
+    - exifglass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/d2phap/ExifGlass/releases/download/3.0.0.1105/ExifGlass_3.0.0.1105_win-x64.zip
+      sha256: b1047a62696a308c0ffa690a4a9866c354d94cb19ab7a5b70fedd7a3e2e54ce9
+      bin:
+        - exifglass.exe
+      strip: 1
+test: exifglass --version

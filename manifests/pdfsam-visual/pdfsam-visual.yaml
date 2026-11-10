@@ -1,0 +1,21 @@
+api: v1
+name: pdfsam-visual
+kind: app
+display: pdfsam-visual
+description: A visual PDF tool to compose, combine, delete pages, crop and much more
+homepage: https://pdfsam.org/pdfsam-visual/
+license: Unknown
+version: 7.2.0
+channels:
+    stable: 7.2.0
+provides:
+    - pdfsam-visual
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/torakiki/pdfsam-visual-public/releases/download/v7.2.0/pdfsam-visual-7.2.0-windows-x64.zip
+      sha256: 24c69a77219a6919e75d67b6a224a14c10f8ac12f319ef3531772e1543033321
+      bin:
+        - pdfsam-visual.exe
+      strip: 1
+test: pdfsam-visual --version

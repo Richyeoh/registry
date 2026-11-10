@@ -1,0 +1,21 @@
+api: v1
+name: clash-verge
+kind: app
+display: clash-verge
+description: A Clash GUI based on Tauri.
+homepage: https://github.com/zzzgydi/clash-verge
+license: GPL-3.0-only
+version: 1.3.8
+channels:
+    stable: 1.3.8
+provides:
+    - clash-verge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zzzgydi/clash-verge/releases/download/v1.3.8/Clash.Verge_1.3.8_x64_portable.zip
+      sha256: a7c296228e054930fabdbfd836279d0d3c413b1a08dcaa4604c540bf8905d529
+      bin:
+        - clash-verge.exe
+      strip: 1
+test: clash-verge --version

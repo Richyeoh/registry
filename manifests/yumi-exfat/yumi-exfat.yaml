@@ -1,0 +1,24 @@
+api: v1
+name: yumi-exfat
+kind: app
+display: yumi-exfat
+description: Multiboot USB Creator. Supports exFAT format, BIOS and UEFI USB boot.
+homepage: https://www.pendrivelinux.com/yumi-multiboot-usb-creator/
+license: GPL-2.0-or-later
+version: 1.0.4.2
+channels:
+    stable: 1.0.4.2
+provides:
+    - yumi-exfat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.pendrivelinux.com/downloads/YUMI/YUMI-exFAT-1.0.4.2.exe#/YUMI-exFAT.exe
+      sha256: b7a495a0dec79e729fb73dc30f15a17b4c899a9e3dcd65bac063fe7ed6ab9dbd
+      bin:
+        - yumi-exfat.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yumi-exfat
+test: yumi-exfat --version

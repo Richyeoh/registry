@@ -1,0 +1,21 @@
+api: v1
+name: museeks
+kind: app
+display: museeks
+description: A simple and clean music player
+homepage: https://museeks.io
+license: MIT
+version: 0.23.4
+channels:
+    stable: 0.23.4
+provides:
+    - museeks
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/martpie/museeks/releases/download/0.23.4/Museeks_0.23.4_x64-setup.exe#/dl.7z
+      sha256: 66d45b21f309cca2646689d06656dec1c9115a0b31da7c3a078aa6bdcabc327c
+      bin:
+        - museeks.exe
+      strip: 1
+test: museeks --version

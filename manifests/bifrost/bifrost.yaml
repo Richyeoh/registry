@@ -1,0 +1,21 @@
+api: v1
+name: bifrost
+kind: app
+display: bifrost
+description: Samsung Firmware Downloader
+homepage: https://bifrost.zwander.dev
+license: Unknown
+version: 2.1.4
+channels:
+    stable: 2.1.4
+provides:
+    - bifrost
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zacharee/Bifrost/releases/download/2.1.4/bifrost-2.1.4-windows-amd64.zip
+      sha256: 472e4fcc290d4a403f5469814624bc895fff8883b342e4fad259d402c019f59d
+      bin:
+        - Bifrost.exe
+      strip: 1
+test: Bifrost --version

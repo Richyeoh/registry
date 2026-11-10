@@ -1,0 +1,21 @@
+api: v1
+name: imgburn
+kind: app
+display: imgburn
+description: A lightweight CD / DVD / HD DVD / Blu-ray burning application.
+homepage: http://www.imgburn.com/
+license: Unknown
+version: 2.5.8.0
+channels:
+    stable: 2.5.8.0
+provides:
+    - imgburn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/imgburn/SetupImgBurn_2.5.8.0.exe#/dl.7z
+      sha256: 49aa06eaffe431f05687109fee25f66781abbe1108f3f8ca78c79bdec8753420
+      bin:
+        - ImgBurn.exe
+      strip: 1
+test: ImgBurn --version

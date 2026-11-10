@@ -1,0 +1,21 @@
+api: v1
+name: wsa-pacman
+kind: app
+display: wsa-pacman
+description: A GUI package manager and package installer for Windows Subsystem for Android (WSA)
+homepage: https://github.com/alesimula/wsa_pacman
+license: GPL-3.0-only
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - wsa-pacman
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/alesimula/wsa_pacman/releases/download/v1.5.0/WSA-pacman-v1.5.0-portable.zip
+      sha256: c853c34276c496217833a743b23c5c83b081a23c3729075cdaa252c91f70ac3c
+      bin:
+        - wsa-pacman.exe
+      strip: 1
+test: wsa-pacman --version

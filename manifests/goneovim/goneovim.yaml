@@ -1,0 +1,21 @@
+api: v1
+name: goneovim
+kind: app
+display: goneovim
+description: Neovim GUI which uses a Golang Qt backend
+homepage: https://github.com/akiyosi/goneovim
+license: Unknown
+version: 0.6.17
+channels:
+    stable: 0.6.17
+provides:
+    - goneovim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/akiyosi/goneovim/releases/download/v0.6.17/goneovim-v0.6.17-windows-x86_64.zip
+      sha256: d7401c2e33c4dffc7dccf65cfb5fc7d8537dffc4ddc35a75feb6566f2fdcfe38
+      bin:
+        - goneovim.exe
+      strip: 1
+test: goneovim --version

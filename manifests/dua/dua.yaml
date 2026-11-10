@@ -1,0 +1,21 @@
+api: v1
+name: dua
+kind: app
+display: dua
+description: Disk Usage Analyzer
+homepage: https://lib.rs/crates/dua-cli
+license: MIT
+version: 3.0.1
+channels:
+    stable: 3.0.1
+provides:
+    - dua
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Byron/dua-cli/releases/download/v3.0.1/dua-v3.0.1-x86_64-pc-windows-msvc.zip
+      sha256: ff9064f1b0af51eeacaaa63a97c3628e670117a8f336710ee54fe96f54193b9d
+      bin:
+        - dua.exe
+      strip: 1
+test: dua --version

@@ -1,0 +1,22 @@
+api: v1
+name: yara
+kind: app
+display: yara
+description: A malware samples pattern matching tool.
+homepage: https://virustotal.github.io/yara/
+license: BSD-3-Clause
+version: 4.6.0
+channels:
+    stable: 4.6.0
+provides:
+    - yara
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/VirusTotal/yara/releases/download/v4.6.0/yara-4.6.0-2443-win64.zip
+      sha256: 5e7124f173ed442458429ac0f79a4db2c024cc183c595737d477a7575d81e6dc
+      bin:
+        - yara64.exe
+        - yarac64.exe
+      strip: 1
+test: yara64 --version

@@ -1,0 +1,21 @@
+api: v1
+name: psreadline
+kind: app
+display: psreadline
+description: A bash inspired readline implementation for PowerShell
+homepage: https://github.com/PowerShell/PSReadLine
+license: BSD-2-Clause
+version: 2.4.5
+channels:
+    stable: 2.4.5
+provides:
+    - psreadline
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/psreadline.2.4.5.nupkg
+      sha256: cb9390e9733208456c234a7971d1ec4a917886c239502aab68f4b71aa4bba235
+      bin:
+        - psreadline.exe
+      strip: 1
+test: psreadline --version

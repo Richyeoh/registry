@@ -1,0 +1,32 @@
+api: v1
+name: agentsmesh
+kind: app
+display: AgentsMesh
+description: AI agent workforce platform
+homepage: https://agentsmesh.ai/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.44.7
+channels:
+    stable: 0.44.7
+provides:
+    - agentsmesh
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/AgentsMesh/AgentsMesh/releases/download/v0.44.7/AgentsMesh-0.44.7-arm64.dmg
+      sha256: 8b016def312775f24c85c325c8d48eca8edf4b830ffb355437c7127d4ccc4954
+      bin:
+        - agentsmesh
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/AgentsMesh/AgentsMesh/releases/download/v0.44.7/AgentsMesh-0.44.7-arm64.dmg
+      sha256: 8b016def312775f24c85c325c8d48eca8edf4b830ffb355437c7127d4ccc4954
+      bin:
+        - agentsmesh
+      strip: 1
+test: agentsmesh --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

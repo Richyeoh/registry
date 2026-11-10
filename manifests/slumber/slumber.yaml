@@ -1,0 +1,21 @@
+api: v1
+name: slumber
+kind: app
+display: slumber
+description: Terminal-based HTTP/REST client.
+homepage: https://slumber.lucaspickering.me
+license: MIT
+version: 5.4.4
+channels:
+    stable: 5.4.4
+provides:
+    - slumber
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LucasPickering/slumber/releases/download/v5.4.4/slumber-x86_64-pc-windows-msvc.zip
+      sha256: 554516f5b666a5fe9d79ebfee1f4d00518c78f7f3ae8a15c4f1050d54c238e17
+      bin:
+        - slumber.exe
+      strip: 1
+test: slumber --version

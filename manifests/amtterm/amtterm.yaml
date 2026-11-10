@@ -1,0 +1,46 @@
+api: v1
+name: amtterm
+kind: app
+display: amtterm
+description: Serial-over-LAN (sol) client for Intel AMT
+homepage: https://www.kraxel.org/blog/linux/amtterm/
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 1.8-1
+channels:
+    stable: 1.8-1
+provides:
+    - amtterm
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/amtterm/blobs/sha256:105ff0233f78b177721306428db8bd052984c5a78a919b3c46c58e4a6b6ee133
+      sha256: 105ff0233f78b177721306428db8bd052984c5a78a919b3c46c58e4a6b6ee133
+      bin:
+        - amtterm
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amtterm/blobs/sha256:b94eecd4b3aba2faf033d55812dc31091e7c5003e168131dbd273e680cb02b8f
+      sha256: b94eecd4b3aba2faf033d55812dc31091e7c5003e168131dbd273e680cb02b8f
+      bin:
+        - amtterm
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/amtterm/blobs/sha256:154840975aafddd9adc085ed90130611905e52d1cad8a4aa2c3bc4785a21466e
+      sha256: 154840975aafddd9adc085ed90130611905e52d1cad8a4aa2c3bc4785a21466e
+      bin:
+        - amtterm
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amtterm/blobs/sha256:0f0b74aea45b53d9b251bac798f8aa2699f42e3202527f21640d1e72a708980a
+      sha256: 0f0b74aea45b53d9b251bac798f8aa2699f42e3202527f21640d1e72a708980a
+      bin:
+        - amtterm
+      strip: 1
+test: amtterm --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

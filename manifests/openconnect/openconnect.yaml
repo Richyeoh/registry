@@ -1,0 +1,21 @@
+api: v1
+name: openconnect
+kind: app
+display: openconnect
+description: Multi-protocol SSL VPN client
+homepage: https://www.infradead.org/openconnect/
+license: LGPL-2.1-only
+version: "9.21"
+channels:
+    stable: "9.21"
+provides:
+    - openconnect
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/openconnect/openconnect/-/jobs/artifacts/v9.21/raw/openconnect-installer-MinGW64-GnuTLS.exe?job=MinGW64/GnuTLS#/dl.7z
+      sha256: 6ee9e8eb9bc59ef70bb0717df7f99703f8a2ccd11d8e45d58a61f9a2e6ef7d00
+      bin:
+        - openconnect.exe
+      strip: 1
+test: openconnect --version

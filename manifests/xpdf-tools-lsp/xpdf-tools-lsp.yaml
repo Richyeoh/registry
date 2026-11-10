@@ -1,0 +1,21 @@
+api: v1
+name: xpdf-tools-lsp
+kind: app
+display: xpdf-tools-lsp
+description: All language support packages for xpdf-tools
+homepage: https://www.xpdfreader.com/
+license: Unknown
+version: 2026-Mar-23
+channels:
+    stable: 2026-Mar-23
+provides:
+    - xpdf-tools-lsp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.xpdfreader.com/xpdf-arabic.tar.gz
+      sha256: 5ac306d5678a72b8907bb920ed4781e7c878de50a0f7043847f9ab4c02010c61
+      bin:
+        - xpdf-tools-lsp.exe
+      strip: 1
+test: xpdf-tools-lsp --version

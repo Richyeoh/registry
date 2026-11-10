@@ -1,0 +1,21 @@
+api: v1
+name: git-tfs
+kind: app
+display: git-tfs
+description: A Git/TFS bridge, similar to git-svn.
+homepage: https://git-tfs.com
+license: Apache-2.0
+version: 0.34.0
+channels:
+    stable: 0.34.0
+provides:
+    - git-tfs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-tfs/git-tfs/releases/download/v0.34.0/GitTfs-0.34.0.zip
+      sha256: a1524279ee37a9e49f9e08eeaec668fd5a7c5874838bc3aa4bf2c42065acc8d5
+      bin:
+        - git-tfs.exe
+      strip: 1
+test: git-tfs --version

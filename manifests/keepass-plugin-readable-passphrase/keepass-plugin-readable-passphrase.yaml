@@ -1,0 +1,21 @@
+api: v1
+name: keepass-plugin-readable-passphrase
+kind: app
+display: keepass-plugin-readable-passphrase
+description: KeePass 2.x plugin, that generates grammatically correct but nonsensical passphrases.
+homepage: https://github.com/ligos/readablepassphrasegenerator
+license: Apache-2.0
+version: 1.5.1
+channels:
+    stable: 1.5.1
+provides:
+    - keepass-plugin-readable-passphrase
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ligos/readablepassphrasegenerator/releases/download/release-1.5.1/ReadablePassphrase.1.5.1.plgx#/ReadablePassphrase.plgx
+      sha256: 97ef3af8c6da04ae285bc5133bc423496d9764aeb4b1cc3b2554c0808ef5d230
+      bin:
+        - keepass-plugin-readable-passphrase.exe
+      strip: 1
+test: keepass-plugin-readable-passphrase --version

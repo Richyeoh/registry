@@ -1,0 +1,21 @@
+api: v1
+name: exe-explorer
+kind: app
+display: exe-explorer
+description: Executable File Explorer for OS/2, NE, PE32, PE32+ and VxD file types
+homepage: https://www.mitec.cz/exe.html
+license: Unknown
+version: 3.7.4
+channels:
+    stable: 3.7.4
+provides:
+    - exe-explorer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.mitec.cz/Downloads/EXE.zip
+      sha256: d4e7ef836532b1997d2d7092dac62243cf62197e0194673aacf4ac898468e4e8
+      bin:
+        - exe-explorer.exe
+      strip: 1
+test: exe-explorer --version

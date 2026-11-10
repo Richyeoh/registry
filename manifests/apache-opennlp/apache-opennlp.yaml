@@ -1,0 +1,25 @@
+api: v1
+name: apache-opennlp
+kind: app
+display: apache-opennlp
+description: Machine learning toolkit for processing natural language text
+homepage: https://opennlp.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.5.12
+channels:
+    stable: 2.5.12
+provides:
+    - apache-opennlp
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-opennlp/blobs/sha256:4a8b4f9feac27d744eccbe890fb28450ed0ace066ee81759a266f235fddb961a
+      sha256: 4a8b4f9feac27d744eccbe890fb28450ed0ace066ee81759a266f235fddb961a
+      bin:
+        - apache-opennlp
+      strip: 1
+test: apache-opennlp --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

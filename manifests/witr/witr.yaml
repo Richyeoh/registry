@@ -1,0 +1,21 @@
+api: v1
+name: witr
+kind: app
+display: witr
+description: witr ('Why Is This Running') is a tool that explains the causal chain behind running processes with additional insights.
+homepage: https://pranshuparmar.github.io/witr/
+license: Apache-2.0
+version: 0.3.4
+channels:
+    stable: 0.3.4
+provides:
+    - witr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pranshuparmar/witr/releases/download/v0.3.4/witr-windows-amd64.zip
+      sha256: 34ef930e6f53c026e952f5952442281640bae551e59477137a045f9a2141188f
+      bin:
+        - witr.exe
+      strip: 1
+test: witr --version

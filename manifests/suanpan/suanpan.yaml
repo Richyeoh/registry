@@ -1,0 +1,21 @@
+api: v1
+name: suanpan
+kind: app
+display: suanpan
+description: Finite element analysis framework
+homepage: https://tlcfem.github.io/suanPan/
+license: GPL-3.0-only
+version: "4.3"
+channels:
+    stable: "4.3"
+provides:
+    - suanpan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TLCFEM/suanPan/releases/download/suanPan-v4.3/suanPan-win-mkl-vtk.zip
+      sha256: fa0a30d9a65a1c83df9b28c5029aa424845b095741dae74c55a016b92a1593f8
+      bin:
+        - suanPan.exe
+      strip: 1
+test: suanPan --version

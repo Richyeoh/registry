@@ -1,0 +1,24 @@
+api: v1
+name: m4a-to-mp3-converter
+kind: app
+display: m4a-to-mp3-converter
+description: M4a to MP3 converter
+homepage: https://www.maniactools.com/soft/m4a-to-mp3-converter/
+license: Freeware
+version: X.89
+channels:
+    stable: X.89
+provides:
+    - m4a-to-mp3-converter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.maniactools.com/soft/m4a-to-mp3-converter.exe
+      sha256: 5872d19451f7f6fdd796f846e53bc9cae5a9270a71ba12ae689f40df98727c32
+      bin:
+        - m4a-to-mp3-converter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall m4a-to-mp3-converter
+test: m4a-to-mp3-converter --version

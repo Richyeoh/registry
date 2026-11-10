@@ -1,0 +1,24 @@
+api: v1
+name: simple-http-server
+kind: app
+display: simple-http-server
+description: Simple http server
+homepage: https://github.com/TheWaWaR/simple-http-server
+license: MIT
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - simple-http-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TheWaWaR/simple-http-server/releases/download/v0.8.0/x86_64-pc-windows-msvc-simple-http-server.exe#/simple-http-server.exe
+      sha256: 6faac740df27e317125f562a4f5239fc2d95161aea995930929b1c895994aa9b
+      bin:
+        - simple-http-server.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall simple-http-server
+test: simple-http-server --version

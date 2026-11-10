@@ -1,0 +1,21 @@
+api: v1
+name: yoke
+kind: app
+display: yoke
+description: A Helm-inspired infrastructure-as-code (IaC) package deployer
+homepage: https://github.com/yokecd/yoke
+license: MIT
+version: 0.22.5
+channels:
+    stable: 0.22.5
+provides:
+    - yoke
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yokecd/yoke/releases/download/v0.22.5/yoke_v0.22.5_windows_amd64.exe.gz#/yoke.exe.gz
+      sha256: 1fe7ece6ecc3493267ffb1e18546a98b4d1b9f7b5e444449dbb9e2d4593a8e16
+      bin:
+        - yoke.exe
+      strip: 1
+test: yoke --version

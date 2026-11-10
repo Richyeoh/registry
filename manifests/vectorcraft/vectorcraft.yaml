@@ -1,0 +1,21 @@
+api: v1
+name: vectorcraft
+kind: app
+display: vectorcraft
+description: Vector illustration; an open-source, clean-room reimplementation of Adobe Illustrator, rebuilt in pure Rust
+homepage: https://getartcraft.com/apps/vectorcraft
+license: MIT|Apache-2.0
+version: 0.22.0
+channels:
+    stable: 0.22.0
+provides:
+    - vectorcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/vectorcraft/releases/download/v0.22.0/vectorcraft-0.22.0-windows-x64-portable.zip
+      sha256: 27ec6b14ea01a680b9f6758a346f06b53b0b6169b191354a362114b8b612a6e3
+      bin:
+        - vectorcraft-cli.exe
+      strip: 1
+test: vectorcraft-cli --version

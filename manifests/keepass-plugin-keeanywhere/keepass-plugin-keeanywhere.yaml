@@ -1,0 +1,21 @@
+api: v1
+name: keepass-plugin-keeanywhere
+kind: app
+display: keepass-plugin-keeanywhere
+description: KeePass plugin that provides access to cloud storage providers (cloud drives).
+homepage: https://github.com/Kyrodan/KeeAnywhere
+license: MIT
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - keepass-plugin-keeanywhere
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Kyrodan/KeeAnywhere/releases/download/v2.1.0/KeeAnywhere-2.1.0.plgx#/KeeAnywhere.plgx
+      sha256: d79f2ae151f8809632ff8586bb4b74b6defc081e843eb0ef7214e7b5cdae7ae9
+      bin:
+        - keepass-plugin-keeanywhere.exe
+      strip: 1
+test: keepass-plugin-keeanywhere --version

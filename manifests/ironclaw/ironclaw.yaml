@@ -1,0 +1,21 @@
+api: v1
+name: ironclaw
+kind: app
+display: ironclaw
+description: IronClaw is OpenClaw inspired implementation in Rust focused on privacy and security.
+homepage: https://www.ironclaw.com
+license: MIT|Apache-2.0
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - ironclaw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nearai/ironclaw/releases/download/ironclaw-v1.4.1/ironclaw-x86_64-pc-windows-msvc.tar.gz
+      sha256: 34505e045f244e7da48255ff94d43d051c90d51ec1bd024c297547c243601f0c
+      bin:
+        - ironclaw.exe
+      strip: 1
+test: ironclaw --version

@@ -1,0 +1,21 @@
+api: v1
+name: flameshot
+kind: app
+display: flameshot
+description: Powerful yet simple to use screenshot software
+homepage: https://flameshot.org
+license: GPL-3.0-only
+version: 15.0.0
+channels:
+    stable: 15.0.0
+provides:
+    - flameshot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/flameshot-org/flameshot/releases/download/v15.0.0/flameshot-15.0.0-win64.zip
+      sha256: c07506aafb5a4af6a31177b9e4d001f6d14abbb112dd43a21ff7e636f9958a95
+      bin:
+        - bin\flameshot.exe
+      strip: 1
+test: bin\flameshot --version

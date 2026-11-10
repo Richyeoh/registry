@@ -1,0 +1,24 @@
+api: v1
+name: btest
+kind: app
+display: btest
+description: Mikrotik bandwidth test client and server for Windows
+homepage: https://mikrotik.com/
+license: Unknown
+version: 7.20.4
+channels:
+    stable: 7.20.4
+provides:
+    - btest
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.mikrotik.com/routeros/7.20.4/btest.exe
+      sha256: 039239d1cdec3a898af86dd4e4b2a726e1d4d99f63ecdbea42b227ce5eecd0ef
+      bin:
+        - btest.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall btest
+test: btest --version

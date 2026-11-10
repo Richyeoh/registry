@@ -1,0 +1,24 @@
+api: v1
+name: schemacrawler
+kind: app
+display: schemacrawler
+description: Free database schema discovery and comprehension tool
+homepage: https://www.schemacrawler.com/
+license: EPL-2.0
+version: 18.0.2
+channels:
+    stable: 18.0.2
+provides:
+    - schemacrawler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/schemacrawler/SchemaCrawler-Installers/releases/download/v18.0.2/SchemaCrawler-18.0.2.msi
+      sha256: c668ae4e845553ce0fb953241dd7fac65ae36f12da00061ac35f6155ebed3554
+      bin:
+        - SchemaCrawler.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall schemacrawler
+test: SchemaCrawler --version

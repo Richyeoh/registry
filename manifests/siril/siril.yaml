@@ -1,0 +1,22 @@
+api: v1
+name: siril
+kind: app
+display: siril
+description: The Siril image processing software for amateur astronomy
+homepage: https://siril.org/
+license: Unknown
+version: 1.4.5
+channels:
+    stable: 1.4.5
+provides:
+    - siril
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://free-astro.org/download/siril-1.4.5-ucrt64_win.zip
+      sha256: 5e54c13c243e36343f0a7331998662cf349cefcd822158fc6515491c6e5528fd
+      bin:
+        - bin\siril-cli.exe
+        - bin\siril.exe
+      strip: 1
+test: bin\siril-cli --version

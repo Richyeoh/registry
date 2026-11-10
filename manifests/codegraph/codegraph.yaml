@@ -1,0 +1,21 @@
+api: v1
+name: codegraph
+kind: app
+display: codegraph
+description: A local-first code-intelligence tool that turns any codebase into a queryable knowledge graph for AI coding agents.
+homepage: https://colbymchenry.github.io/codegraph/
+license: MIT
+version: 1.6.2
+channels:
+    stable: 1.6.2
+provides:
+    - codegraph
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/colbymchenry/codegraph/releases/download/v1.6.2/codegraph-win32-x64.zip
+      sha256: 7455e817ee8032666867a1badeb799b8a884c5f4fea9b444e088a02069b6deea
+      bin:
+        - bin\codegraph.cmd.exe
+      strip: 1
+test: bin\codegraph.cmd --version

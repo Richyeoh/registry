@@ -1,0 +1,24 @@
+api: v1
+name: flashplayer-sa
+kind: app
+display: flashplayer-sa
+description: Standalone version of Adobe Flash Player
+homepage: https://get.adobe.com/flashplayer/
+license: Unknown
+version: 32.0.0.465
+channels:
+    stable: 32.0.0.465
+provides:
+    - flashplayer-sa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flashplayer_32_sa.exe#/flashplayer.exe
+      sha256: a4b333ac1da12026989549015303d82231982838bccfb544ba5fd188746066f0
+      bin:
+        - flashplayer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall flashplayer-sa
+test: flashplayer --version

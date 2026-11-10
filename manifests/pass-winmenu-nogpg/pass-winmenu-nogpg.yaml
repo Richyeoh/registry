@@ -1,0 +1,21 @@
+api: v1
+name: pass-winmenu-nogpg
+kind: app
+display: pass-winmenu-nogpg
+description: A simple, easy-to-use password manager for Windows that follows the philosophy of (and is compatible with) the Linux password manager pass.
+homepage: https://github.com/Baggykiin/pass-winmenu
+license: MIT
+version: "1.14"
+channels:
+    stable: "1.14"
+provides:
+    - pass-winmenu-nogpg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Baggykiin/pass-winmenu/releases/download/v1.14/pass-winmenu-nogpg.zip
+      sha256: f378c00bfb9861484451a8cd7e13677f77484069e7cd6878ae542a0f4e0428cf
+      bin:
+        - pass-winmenu.exe
+      strip: 1
+test: pass-winmenu --version

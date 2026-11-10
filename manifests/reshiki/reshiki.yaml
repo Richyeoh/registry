@@ -1,0 +1,21 @@
+api: v1
+name: reshiki
+kind: app
+display: reshiki
+description: Molecular drawing workspace for chemical structures, reaction schemes, and figures.
+homepage: https://reshiki.com/
+license: MIT|Apache-2.0
+version: 0.14.0
+channels:
+    stable: 0.14.0
+provides:
+    - reshiki
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Ameyanagi/ReShiki/releases/download/v0.14.0/reshiki-0.14.0-windows-x64.zip
+      sha256: 27396402effb9c78f2c5002c64988faf94b19f672831223d02e98c3fd5559076
+      bin:
+        - reshiki.exe
+      strip: 1
+test: reshiki --version

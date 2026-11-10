@@ -1,0 +1,21 @@
+api: v1
+name: switcheroo
+kind: app
+display: switcheroo
+description: The humble incremental-search task switcher for Windows
+homepage: https://github.com/kvakulo/Switcheroo
+license: GPL-3.0-only
+version: 0.10.0-beta.1
+channels:
+    stable: 0.10.0-beta.1
+provides:
+    - switcheroo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kvakulo/Switcheroo/releases/download/v0.10.0-beta.1/switcheroo-portable.zip
+      sha256: cc46b8169946bed9d162e1514a17357960679365605e36449a144eb1660d8e61
+      bin:
+        - switcheroo.exe
+      strip: 1
+test: switcheroo --version

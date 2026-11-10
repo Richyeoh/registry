@@ -1,0 +1,21 @@
+api: v1
+name: ddns-go
+kind: app
+display: ddns-go
+description: Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo, Dynadot
+homepage: https://github.com/jeessy2/ddns-go
+license: MIT
+version: 6.17.8
+channels:
+    stable: 6.17.8
+provides:
+    - ddns-go
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jeessy2/ddns-go/releases/download/v6.17.8/ddns-go_6.17.8_windows_x86_64.zip
+      sha256: f4f6320a68585ce5e82af6b20c9990a88675e89ad86a5df304964cad851f34e7
+      bin:
+        - ddns-go.exe
+      strip: 1
+test: ddns-go --version

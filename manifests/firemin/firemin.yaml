@@ -1,0 +1,24 @@
+api: v1
+name: firemin
+kind: app
+display: firemin
+description: Utility to reduce the memory usage of Firefox or other browsers
+homepage: https://www.rizonesoft.com/downloads/firemin
+license: GPL-3.0-or-later
+version: 11.8.3.8520
+channels:
+    stable: 11.8.3.8520
+provides:
+    - firemin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rizonesoft.com/?gdm_process_download=1&download_id=18327#/firemin.exe
+      sha256: 68feaa9da6a48a1c25e6661fa518c262f0609d0add215c15befbceaacf1c488b
+      bin:
+        - firemin.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall firemin
+test: firemin --version

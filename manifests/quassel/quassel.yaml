@@ -1,0 +1,23 @@
+api: v1
+name: quassel
+kind: app
+display: quassel
+description: Modern, cross-platform, distributed IRC client based on the Qt framework.
+homepage: https://quassel-irc.org
+license: GPL-3.0-or-later
+version: 0.14.0
+channels:
+    stable: 0.14.0
+provides:
+    - quassel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/quassel/quassel/releases/download/0.14.0/quassel-windows-0.14.0.7z
+      sha256: 5dbe003cd92e09aa243206ab09cc9193e49995708e275365091372b18299b2fb
+      bin:
+        - quassel.exe
+        - quasselclient.exe
+        - quasselcore.exe
+      strip: 1
+test: quassel --version

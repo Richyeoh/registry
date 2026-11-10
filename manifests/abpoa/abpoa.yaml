@@ -1,0 +1,39 @@
+api: v1
+name: abpoa
+kind: app
+display: abpoa
+description: SIMD-based C library for fast partial order alignment using adaptive band
+homepage: https://github.com/yangao07/abPOA
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.5.7
+channels:
+    stable: 1.5.7
+provides:
+    - abpoa
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abpoa/blobs/sha256:acd3292b288e7154e4db5a9c8fb02011f0b946b60424277a806f5ee2de66e8d6
+      sha256: acd3292b288e7154e4db5a9c8fb02011f0b946b60424277a806f5ee2de66e8d6
+      bin:
+        - abpoa
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abpoa/blobs/sha256:d2adc2fbf775e089aa49c78776516a8df09eac24ed849b7a5b68f8049747d07a
+      sha256: d2adc2fbf775e089aa49c78776516a8df09eac24ed849b7a5b68f8049747d07a
+      bin:
+        - abpoa
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abpoa/blobs/sha256:02d4af5c4469c0c392c37f6fafd14fb3b8f1862517b0bd0b5ade4484598e5c3a
+      sha256: 02d4af5c4469c0c392c37f6fafd14fb3b8f1862517b0bd0b5ade4484598e5c3a
+      bin:
+        - abpoa
+      strip: 1
+test: abpoa --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

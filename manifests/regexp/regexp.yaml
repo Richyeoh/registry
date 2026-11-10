@@ -1,0 +1,24 @@
+api: v1
+name: regexp
+kind: app
+display: regexp
+description: Enhanced Registry editor/explorer
+homepage: https://github.com/zodiacon/RegExp
+license: MIT
+version: "0.92"
+channels:
+    stable: "0.92"
+provides:
+    - regexp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zodiacon/RegExp/releases/download/v0.92/RegExp.exe
+      sha256: 0fec65da399172f889b67c3ec320aa30cb43ac23ce87ccf1e4f93c6302315ac3
+      bin:
+        - regexp.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall regexp
+test: regexp --version

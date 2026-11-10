@@ -1,0 +1,24 @@
+api: v1
+name: webex
+kind: app
+display: webex
+description: Video and audio conferencing
+homepage: https://www.webex.com/
+license: Unknown
+version: 46.11.0.36194
+channels:
+    stable: 46.11.0.36194
+provides:
+    - webex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://binaries.webex.com/WebexTeamsDesktop-Windows-Gold/Webex.msi
+      sha256: 50a428ae1c2b86ccc07495d1f7c9d12c97e03ecd3c67f4f4a089c43e447d4f6b
+      bin:
+        - webex.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall webex
+test: webex --version

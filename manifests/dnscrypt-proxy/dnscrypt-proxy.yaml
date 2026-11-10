@@ -1,0 +1,21 @@
+api: v1
+name: dnscrypt-proxy
+kind: app
+display: dnscrypt-proxy
+description: A flexible DNS proxy, with support for encrypted DNS protocols
+homepage: https://dnscrypt.info
+license: ISC
+version: 2.1.20
+channels:
+    stable: 2.1.20
+provides:
+    - dnscrypt-proxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.1.20/dnscrypt-proxy-win64-2.1.20.zip
+      sha256: 9e498cb9bdbae57756db19ce516362ac307e9340a6996214964cfcc7c489abc3
+      bin:
+        - dnscrypt-proxy.exe
+      strip: 1
+test: dnscrypt-proxy --version

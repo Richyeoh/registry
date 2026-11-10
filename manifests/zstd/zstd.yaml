@@ -1,0 +1,21 @@
+api: v1
+name: zstd
+kind: app
+display: zstd
+description: High compression ratios compression algorithm
+homepage: https://facebook.github.io/zstd/
+license: BSD-3-Clause
+version: 1.5.7
+channels:
+    stable: 1.5.7
+provides:
+    - zstd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-v1.5.7-win64.zip
+      sha256: acb4e8111511749dc7a3ebedca9b04190e37a17afeb73f55d4425dbf0b90fad9
+      bin:
+        - zstd.exe
+      strip: 1
+test: zstd --version

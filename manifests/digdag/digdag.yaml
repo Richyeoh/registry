@@ -1,0 +1,21 @@
+api: v1
+name: digdag
+kind: app
+display: digdag
+description: A simple, open source, multi-cloud workflow engine that helps you to build, run, schedule, and monitor complex pipelines of tasks
+homepage: https://www.digdag.io
+license: Apache-2.0
+version: 0.10.5.1
+channels:
+    stable: 0.10.5.1
+provides:
+    - digdag
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/treasure-data/digdag/releases/download/v0.10.5.1/digdag-0.10.5.1.jar#/digdag.jar
+      sha256: 4d1337d777bd334c2348e07ebc1795283aa50a2fd3b7d720cba5ee33b5486aa8
+      bin:
+        - digdag.jar.exe
+      strip: 1
+test: digdag.jar --version

@@ -1,0 +1,21 @@
+api: v1
+name: hokus
+kind: app
+display: hokus
+description: A modern CMS for Hugo
+homepage: https://www.hokuscms.com
+license: MIT
+version: 0.6.1
+channels:
+    stable: 0.6.1
+provides:
+    - hokus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/julianoappelklein/hokus/releases/download/0.6.1/hokus-cms_win.exe#/dl.7z
+      sha256: e1e6ce154619b004b7b76fae68be92dda57b5223a54ad3a66545ed6f3c92d2ff
+      bin:
+        - hokus.exe
+      strip: 1
+test: hokus --version

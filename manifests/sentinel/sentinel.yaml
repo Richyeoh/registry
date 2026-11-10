@@ -1,0 +1,21 @@
+api: v1
+name: sentinel
+kind: app
+display: sentinel
+description: An embeddable policy as code framework to enable fine-grained, logic-based policy decisions.
+homepage: https://www.hashicorp.com/sentinel
+license: Proprietary
+version: 0.41.0
+channels:
+    stable: 0.41.0
+provides:
+    - sentinel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.hashicorp.com/sentinel/0.41.0/sentinel_0.41.0_windows_amd64.zip
+      sha256: 34d4cafe6266cc968a1b5678d025d1a0a27fd266789b78d842008bb3ee9a508e
+      bin:
+        - sentinel.exe
+      strip: 1
+test: sentinel --version

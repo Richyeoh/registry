@@ -1,0 +1,32 @@
+api: v1
+name: alisma
+kind: app
+display: Alisma
+description: Command tool to create Finder aliases, and to resolve them to full paths
+homepage: https://eclecticlight.co/taccy-signet-precize-alifix-utiutility-alisma/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 4,2023.07
+channels:
+    stable: 4,2023.07
+provides:
+    - alisma
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://eclecticlight.co/wp-content/uploads/2023/07/alisma4.zip
+      sha256: 159e543e92cc8b97f2375b06834d51ef4893e9213d2c490822cf41dcbbfd930a
+      bin:
+        - alisma
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://eclecticlight.co/wp-content/uploads/2023/07/alisma4.zip
+      sha256: 159e543e92cc8b97f2375b06834d51ef4893e9213d2c490822cf41dcbbfd930a
+      bin:
+        - alisma
+      strip: 1
+test: alisma --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

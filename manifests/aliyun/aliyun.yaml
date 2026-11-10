@@ -1,0 +1,21 @@
+api: v1
+name: aliyun
+kind: app
+display: aliyun
+description: Manage and use Alibaba Cloud resources.
+homepage: https://help.aliyun.com/zh/cli/
+license: Apache-2.0
+version: 3.5.3
+channels:
+    stable: 3.5.3
+provides:
+    - aliyun
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aliyun/aliyun-cli/releases/download/v3.5.3/aliyun-cli-windows-3.5.3-amd64.zip
+      sha256: 5728fbbd3480cfcba8b77bd04773553c9c69e60487b7668c32f241a610373bab
+      bin:
+        - aliyun.exe
+      strip: 1
+test: aliyun --version

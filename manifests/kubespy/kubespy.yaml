@@ -1,0 +1,21 @@
+api: v1
+name: kubespy
+kind: app
+display: kubespy
+description: A tool for observing Kubernetes resources in real time.
+homepage: https://github.com/pulumi/kubespy
+license: Apache-2.0
+version: 0.6.3
+channels:
+    stable: 0.6.3
+provides:
+    - kubespy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pulumi/kubespy/releases/download/v0.6.3/kubespy-v0.6.3-windows-amd64.tar.gz
+      sha256: 3a3b266808b15aea79b9a71666a743d90dd976ef17ce12b9feee9e5c303d3a7f
+      bin:
+        - kubespy.exe
+      strip: 1
+test: kubespy --version

@@ -1,0 +1,32 @@
+api: v1
+name: adguardnightly
+kind: app
+display: Adguard
+description: Stand alone ad blocker
+homepage: https://adguard.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.21.0.2635
+channels:
+    stable: 2.21.0.2635
+provides:
+    - adguardnightly
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://static.adguard.com/mac/nightly/AdGuard-2.21.0.2635.dmg
+      sha256: 490fe32c8db52e50cd069e5d83293d2735d21dabe668f939ae2bc37eb2b5d03b
+      bin:
+        - adguardnightly
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://static.adguard.com/mac/nightly/AdGuard-2.21.0.2635.dmg
+      sha256: 490fe32c8db52e50cd069e5d83293d2735d21dabe668f939ae2bc37eb2b5d03b
+      bin:
+        - adguardnightly
+      strip: 1
+test: adguardnightly --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

@@ -1,0 +1,21 @@
+api: v1
+name: mendeley
+kind: app
+display: mendeley
+description: Manage and share research papers, and generate bibliographies for scholarly articles.
+homepage: https://www.mendeley.com/
+license: Unknown
+version: 2.151.0
+channels:
+    stable: 2.151.0
+provides:
+    - mendeley
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.151.0.exe#/dl.7z
+      sha256: 96d218d068c9b7e56ccfd2d99c500e1e9b8a5cc383ce0a7ca87fa38e86c46dd7
+      bin:
+        - mendeley.exe
+      strip: 1
+test: mendeley --version

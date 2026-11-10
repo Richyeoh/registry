@@ -1,0 +1,21 @@
+api: v1
+name: rustnet
+kind: app
+display: rustnet
+description: Network monitoring terminal UI with per-process connection tracking and deep packet inspection.
+homepage: https://github.com/domcyrus/rustnet
+license: Apache-2.0
+version: 1.7.0
+channels:
+    stable: 1.7.0
+provides:
+    - rustnet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/domcyrus/rustnet/releases/download/v1.7.0/rustnet-v1.7.0-x86_64-pc-windows-msvc.zip
+      sha256: 33f1814964e5f281608a9b012ac5695dfe27bce4a52e462fb1679ac8149fdd5d
+      bin:
+        - rustnet.exe
+      strip: 1
+test: rustnet --version

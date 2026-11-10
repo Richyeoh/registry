@@ -1,0 +1,46 @@
+api: v1
+name: aiac
+kind: app
+display: aiac
+description: Artificial Intelligence Infrastructure-as-Code Generator
+homepage: https://github.com/gofireflyio/aiac
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 5.3.0
+channels:
+    stable: 5.3.0
+provides:
+    - aiac
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aiac/blobs/sha256:2dbaa7b25dc9be8356f083cd11c3e5d6738b8b0545cac4f4000196bb4d2bf39a
+      sha256: 2dbaa7b25dc9be8356f083cd11c3e5d6738b8b0545cac4f4000196bb4d2bf39a
+      bin:
+        - aiac
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aiac/blobs/sha256:4db2b9d958b304727cdaa0a7147908f4f01bdbe3ee2d43ade18426b9dfb6aeaa
+      sha256: 4db2b9d958b304727cdaa0a7147908f4f01bdbe3ee2d43ade18426b9dfb6aeaa
+      bin:
+        - aiac
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aiac/blobs/sha256:9e74cfb47682506cce9ef87848aa085274b067c36139d49cdbaee1ed9259c193
+      sha256: 9e74cfb47682506cce9ef87848aa085274b067c36139d49cdbaee1ed9259c193
+      bin:
+        - aiac
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aiac/blobs/sha256:03d5c8fd027682c85c921bfa1fad5d4bb2b4ed7fa4c75f14777ec8c043ac9911
+      sha256: 03d5c8fd027682c85c921bfa1fad5d4bb2b4ed7fa4c75f14777ec8c043ac9911
+      bin:
+        - aiac
+      strip: 1
+test: aiac --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: windowtextextractor
+kind: app
+display: windowtextextractor
+description: A tool allows you to get a text from any window of an operating system including asterisk passwords.
+homepage: https://github.com/AlexanderPro/WindowTextExtractor
+license: MIT
+version: 2.2.1
+channels:
+    stable: 2.2.1
+provides:
+    - windowtextextractor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AlexanderPro/WindowTextExtractor/releases/download/v2.2.1/WindowTextExtractor_v2.2.1.zip
+      sha256: 63d509516e6c256040b532d301d993113a8f04edf92fbdbcc44f34810b375e33
+      bin:
+        - WindowTextExtractor.exe
+      strip: 1
+test: WindowTextExtractor --version

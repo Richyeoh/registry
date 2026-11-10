@@ -1,0 +1,21 @@
+api: v1
+name: yaak
+kind: app
+display: yaak
+description: A fast, privacy-first API client for REST, GraphQL, SSE, WebSocket, and gRPC.
+homepage: https://yaak.app/
+license: MIT
+version: 2026.9.1
+channels:
+    stable: 2026.9.1
+provides:
+    - yaak
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mountain-loop/yaak/releases/download/v2026.9.1/Yaak_2026.9.1_x64-setup.exe#/dl.7z
+      sha256: 823084c8833add90c5ffd35bf38f49d2b9867f054920b2f22e00662b88a05750
+      bin:
+        - yaak.exe
+      strip: 1
+test: yaak --version

@@ -1,0 +1,21 @@
+api: v1
+name: deskpins
+kind: app
+display: deskpins
+description: Make any application always on top.
+homepage: https://efotinis.neocities.org/deskpins/
+license: Freeware
+version: "1.32"
+channels:
+    stable: "1.32"
+provides:
+    - deskpins
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://efotinis.neocities.org/downloads/DeskPins-1.32-setup.exe#/dl.7z
+      sha256: 70bfd44e774837e52bc83f2c128de7d164251e513f6ebea4a70e2073e28ecd2a
+      bin:
+        - deskpins.exe
+      strip: 1
+test: deskpins --version

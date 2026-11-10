@@ -1,0 +1,22 @@
+api: v1
+name: wapm-cli
+kind: app
+display: wapm-cli
+description: WebAssembly package manager.
+homepage: https://wapm.io/
+license: MIT
+version: 0.5.9
+channels:
+    stable: 0.5.9
+provides:
+    - wapm-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wasmerio/wapm-cli/releases/download/v0.5.9/wapm-cli-windows-amd64.tar.gz
+      sha256: dad17ac4b936bfdbecec88afcdda286d1e5a13fd08f053852bda94f71df0a73d
+      bin:
+        - bin\wapm.exe
+        - bin\wax.cmd.exe
+      strip: 1
+test: bin\wapm --version

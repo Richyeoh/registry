@@ -1,0 +1,21 @@
+api: v1
+name: pixitracker-1bit
+kind: app
+display: pixitracker-1bit
+description: A simple tool to quickly create musical sketches, chiptunes and sound experiments, without requiring a lot of musical knowledge. (retro-style 1bit version)
+homepage: https://warmplace.ru/soft/pixitracker/
+license: Freeware
+version: 1.6.8
+channels:
+    stable: 1.6.8
+provides:
+    - pixitracker-1bit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://warmplace.ru/soft/pixitracker/pixitracker_1bit-1.6.8.zip
+      sha256: a6326d8b3ae5b20a95e70efcc83fd133083467a3ea1845d34908e883aa2f327e
+      bin:
+        - pixitracker-1bit.exe
+      strip: 1
+test: pixitracker-1bit --version

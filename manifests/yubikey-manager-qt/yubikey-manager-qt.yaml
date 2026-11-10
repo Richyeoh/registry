@@ -1,0 +1,21 @@
+api: v1
+name: yubikey-manager-qt
+kind: app
+display: yubikey-manager-qt
+description: Configuring any YubiKey over all USB interfaces.
+homepage: https://developers.yubico.com/yubikey-manager-qt/
+license: BSD-2-Clause
+version: 1.2.6
+channels:
+    stable: 1.2.6
+provides:
+    - yubikey-manager-qt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-1.2.6-win64.exe#/dl.7z
+      sha256: fc8f1c992c5b9f5d542549072cf58178a45af31851561b22a768e35dbfd648b7
+      bin:
+        - ykman.exe
+      strip: 1
+test: ykman --version

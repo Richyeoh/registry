@@ -1,0 +1,21 @@
+api: v1
+name: windows95
+kind: app
+display: windows95
+description: Windows 95 emulator
+homepage: https://github.com/felixrieseberg/windows95
+license: Unknown
+version: 5.0.1
+channels:
+    stable: 5.0.1
+provides:
+    - windows95
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/felixrieseberg/windows95/releases/download/v5.0.1/windows95-win32-x64-5.0.1.zip
+      sha256: 319c5a05561fe2f020540d37152be765acfc2cdcfe332b46fce7a3285956338c
+      bin:
+        - windows95.exe
+      strip: 1
+test: windows95 --version

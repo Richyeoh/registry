@@ -1,0 +1,21 @@
+api: v1
+name: quarkus-cli
+kind: app
+display: quarkus-cli
+description: A CLI for Quarkus Java framework
+homepage: https://quarkus.io/
+license: Apache-2.0
+version: 3.40.1.1
+channels:
+    stable: 3.40.1.1
+provides:
+    - quarkus-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/quarkusio/quarkus/releases/download/3.40.1.1/quarkus-cli-3.40.1.1.zip
+      sha256: cd1120ea641d7064203c1ee69361e35e870ea4e3a458aea84bfcfabdeffd4747
+      bin:
+        - bin\quarkus.bat.exe
+      strip: 1
+test: bin\quarkus.bat --version

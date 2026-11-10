@@ -1,0 +1,21 @@
+api: v1
+name: gitnuro
+kind: app
+display: gitnuro
+description: A FOSS Git multiplatform client for newbies and pros
+homepage: https://gitnuro.com/
+license: GPL-3.0-or-later
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - gitnuro
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JetpackDuba/Gitnuro/releases/download/v1.5.0/Gitnuro_Windows_Portable_v1.5.0.zip
+      sha256: 097f63f91a728dc790e0095111c94a0587f7bacfd09557e798cc4f2932dfcb1c
+      bin:
+        - Gitnuro.exe
+      strip: 1
+test: Gitnuro --version

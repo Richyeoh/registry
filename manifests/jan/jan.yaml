@@ -1,0 +1,21 @@
+api: v1
+name: jan
+kind: app
+display: jan
+description: An open source alternative to ChatGPT that runs 100% offline on your computer
+homepage: https://jan.ai
+license: AGPL-3.0-only
+version: 0.8.8
+channels:
+    stable: 0.8.8
+provides:
+    - jan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/janhq/jan/releases/download/v0.8.8/Jan_0.8.8_x64-setup.exe#/dl.7z
+      sha256: 08aca371733b76200e44e95d677cdd15e96609f86f919de57b97a5358ca21e9b
+      bin:
+        - resources\bin\jan-cli.exe
+      strip: 1
+test: resources\bin\jan-cli --version

@@ -1,0 +1,21 @@
+api: v1
+name: cuda11-6
+kind: app
+display: cuda11.6
+description: A parallel computing platform and programming model invented by NVIDIA (version 11.6)
+homepage: https://developer.nvidia.com/cuda/toolkit
+license: Unknown
+version: 11.6.2
+channels:
+    stable: 11.6.2
+provides:
+    - cuda11-6
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://developer.download.nvidia.com/compute/cuda/11.6.2/local_installers/cuda_11.6.2_511.65_windows.exe#/dl.7z
+      sha256: 07209206d11cd5a2ad9227fe0be0f145113416db619fbddee1e76d2a388a56e9
+      bin:
+        - cuda11-6.exe
+      strip: 1
+test: cuda11-6 --version

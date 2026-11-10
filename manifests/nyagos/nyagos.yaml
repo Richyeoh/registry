@@ -1,0 +1,21 @@
+api: v1
+name: nyagos
+kind: app
+display: nyagos
+description: The hybrid Commandline Shell betweeeeeeen UNIX & DOS.
+homepage: https://nyaos.org/nyagos/
+license: BSD-3-Clause
+version: 4.4.20_2
+channels:
+    stable: 4.4.20_2
+provides:
+    - nyagos
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nyaosorg/nyagos/releases/download/4.4.20_2/nyagos-4.4.20_2-windows-amd64.zip
+      sha256: 6a84079da4a3ae4f5afa80913d02df52eefb3109f312c260defc19f9b2904bae
+      bin:
+        - nyagos.exe
+      strip: 1
+test: nyagos --version

@@ -1,0 +1,24 @@
+api: v1
+name: gnucash
+kind: app
+display: gnucash
+description: Personal and small-business financial-accounting software
+homepage: https://www.gnucash.org/
+license: GPL-2.0-or-later
+version: "5.17"
+channels:
+    stable: "5.17"
+provides:
+    - gnucash
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-5.17.setup.exe
+      sha256: a3e8049755e536f647640762a483ebe1b6c79cc50cc81a746fa64a404e98d271
+      bin:
+        - bin\gnucash-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gnucash
+test: bin\gnucash-cli --version

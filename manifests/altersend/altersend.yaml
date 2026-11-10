@@ -1,0 +1,32 @@
+api: v1
+name: altersend
+kind: app
+display: AlterSend
+description: Secure, peer-to-peer file transfer app
+homepage: https://altersend.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - altersend
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/denislupookov/altersend/releases/download/v2.0.0/AlterSend-2.0.0-arm64.dmg
+      sha256: cbca1e14c05bca7d5d9d4af45f1762b5e78d0e8b8a286afd92b6e4796d537c41
+      bin:
+        - altersend
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/denislupookov/altersend/releases/download/v2.0.0/AlterSend-2.0.0-arm64.dmg
+      sha256: cbca1e14c05bca7d5d9d4af45f1762b5e78d0e8b8a286afd92b6e4796d537c41
+      bin:
+        - altersend
+      strip: 1
+test: altersend --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

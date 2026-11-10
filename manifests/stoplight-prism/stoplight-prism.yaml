@@ -1,0 +1,25 @@
+api: v1
+name: stoplight-prism
+kind: app
+display: stoplight-prism
+description: OpenAPI file based API server for mocking, transformations, validations and more
+homepage: https://stoplight.io/open-source/prism
+license: Apache-2.0
+version: 5.15.11
+channels:
+    stable: 5.15.11
+provides:
+    - stoplight-prism
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stoplightio/prism/releases/download/v5.15.11/prism-cli-win.exe#/prism-cli.exe
+      sha256: 0623beac05a1e6500f910fa5d8ec3e466b03968e448379faf568db79cfef6902
+      bin:
+        - prism-cli.exe
+        - prism-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall stoplight-prism
+test: prism-cli --version

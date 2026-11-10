@@ -1,0 +1,22 @@
+api: v1
+name: inbucket
+kind: app
+display: inbucket
+description: Inbucket is an email testing application; it will accept messages for any email address and make them available to view via a web interface.
+homepage: https://www.inbucket.org/
+license: MIT
+version: 3.2.0
+channels:
+    stable: 3.2.0
+provides:
+    - inbucket
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/inbucket/inbucket/releases/download/v3.2.0/inbucket_3.2.0_windows_amd64.zip
+      sha256: ad307e52863e9281098d4340adcb8dc677c114fbe9a3351b5cdce348792c31b3
+      bin:
+        - inbucket.exe
+        - inbucket-client.exe
+      strip: 1
+test: inbucket --version

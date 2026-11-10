@@ -1,0 +1,21 @@
+api: v1
+name: altdrag
+kind: app
+display: altdrag
+description: Easily drag windows when pressing the Alt key
+homepage: https://stefansundin.github.io/altdrag/
+license: GPL-3.0-or-later
+version: "1.1"
+channels:
+    stable: "1.1"
+provides:
+    - altdrag
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stefansundin/altdrag/releases/download/v1.1/AltDrag-1.1.zip
+      sha256: 5e1cf4fd8bfbdeca672cd53141019471b344317c81fdefe1ae9cb3f96183bdf9
+      bin:
+        - altdrag.exe
+      strip: 1
+test: altdrag --version

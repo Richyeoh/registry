@@ -1,0 +1,24 @@
+api: v1
+name: positron
+kind: app
+display: positron
+description: A next-generation data science IDE
+homepage: https://positron.posit.co
+license: Elastic-2.0
+version: 2026.11.1-4
+channels:
+    stable: 2026.11.1-4
+provides:
+    - positron
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.posit.co/positron/releases/win/x86_64/Positron-2026.11.1-4-UserSetup-x64.exe
+      sha256: 98a9ced6352000103b3779c9d74aebdee28bc2c6666a51460184185d888a1eea
+      bin:
+        - positron.cmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall positron
+test: positron.cmd --version

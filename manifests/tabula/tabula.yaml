@@ -1,0 +1,21 @@
+api: v1
+name: tabula
+kind: app
+display: tabula
+description: A tool for liberating data tables trapped inside PDF files.
+homepage: https://tabula.technology/
+license: MIT
+version: 1.2.1
+channels:
+    stable: 1.2.1
+provides:
+    - tabula
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tabulapdf/tabula/releases/download/v1.2.1/tabula-win-1.2.1.zip
+      sha256: a5bd9afd969c7488f91ea3a7a09d56a1b53fe86ee231b81d205a8c1a9d459a05
+      bin:
+        - tabula.exe
+      strip: 1
+test: tabula --version

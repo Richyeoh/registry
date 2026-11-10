@@ -1,0 +1,21 @@
+api: v1
+name: makemkv
+kind: app
+display: makemkv
+description: One-click solution to convert video that you own into a set of MKV files.
+homepage: https://www.makemkv.com/
+license: Shareware
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - makemkv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.makemkv.com/download/Setup_MakeMKV_v2.0.0.exe#/dl.7z
+      sha256: f4e609bd34042a95b82a37d036d099a96e4480ff43d2bbb0bee009757bd74b72
+      bin:
+        - makemkvcon64.exe
+      strip: 1
+test: makemkvcon64 --version

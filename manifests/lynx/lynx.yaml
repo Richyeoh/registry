@@ -1,0 +1,24 @@
+api: v1
+name: lynx
+kind: app
+display: lynx
+description: Text web browser.
+homepage: https://invisible-island.net/lynx/lynx.html
+license: GPL-2.0-only
+version: 2.9.3
+channels:
+    stable: 2.9.3
+provides:
+    - lynx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://invisible-island.net/archives/lynx/current/lynx-newssl2.9.3-setup.exe
+      sha256: 241a8732efbad6bc9c395594fd4625989217abdeadb90afb017954e4df58bda6
+      bin:
+        - lynx.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall lynx
+test: lynx --version

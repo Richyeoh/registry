@@ -1,0 +1,21 @@
+api: v1
+name: portfolio-performance
+kind: app
+display: portfolio-performance
+description: Investment portfolio performance calculator
+homepage: https://www.portfolio-performance.info/en/
+license: EPL-1.0
+version: 0.90.0
+channels:
+    stable: 0.90.0
+provides:
+    - portfolio-performance
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/buchen/portfolio/releases/download/0.90.0/PortfolioPerformance-0.90.0-win32.win32.x86_64.zip
+      sha256: da0faae70e09fd6bab8e61c2f317b98c2f01a281a24dea041cb60473df1eb65c
+      bin:
+        - portfolio-performance.exe
+      strip: 1
+test: portfolio-performance --version

@@ -1,0 +1,24 @@
+api: v1
+name: metastore
+kind: app
+display: metastore
+description: Store and restore metadata from a filesystem
+homepage: https://github.com/rasa/metastore
+license: GPL-2.0-only
+version: 1.1.2-9-gdafa727
+channels:
+    stable: 1.1.2-9-gdafa727
+provides:
+    - metastore
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rasa/metastore/releases/download/v1.1.2-9-gdafa727/metastore-x64.exe#/metastore.exe
+      sha256: 7521c6c43ebd8640674c573363b74e5c6a612ef855349eba4548e013fd4f940d
+      bin:
+        - metastore.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall metastore
+test: metastore --version

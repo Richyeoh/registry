@@ -1,0 +1,21 @@
+api: v1
+name: podman-tui
+kind: app
+display: podman-tui
+description: Podman Terminal UI
+homepage: https://github.com/containers/podman-tui
+license: Apache-2.0
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - podman-tui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/containers/podman-tui/releases/download/v2.0.0/podman-tui-release-windows_amd64.zip
+      sha256: 5ff23f19ea6acefdd5873282389fc02618acd6c28c527bf41d49b495a0dfb59d
+      bin:
+        - podman-tui.exe
+      strip: 1
+test: podman-tui --version

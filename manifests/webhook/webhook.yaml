@@ -1,0 +1,21 @@
+api: v1
+name: webhook
+kind: app
+display: webhook
+description: A lightweight incoming webhook server to run shell commands.
+homepage: https://github.com/adnanh/webhook
+license: MIT
+version: 2.8.2
+channels:
+    stable: 2.8.2
+provides:
+    - webhook
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/adnanh/webhook/releases/download/2.8.2/webhook-windows-amd64.tar.gz
+      sha256: cbba045cda61597c8876dd4a60c1c0f857d85b10cfac876e7c7eecd189eb8cd8
+      bin:
+        - webhook.exe
+      strip: 1
+test: webhook --version

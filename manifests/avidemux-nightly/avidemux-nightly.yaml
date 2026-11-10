@@ -1,0 +1,21 @@
+api: v1
+name: avidemux-nightly
+kind: app
+display: avidemux-nightly
+description: Video editor designed for simple cutting, filtering and encoding tasks
+homepage: http://fixounet.free.fr/avidemux/
+license: GPL-2.0-only
+version: "241212"
+channels:
+    stable: "241212"
+provides:
+    - avidemux-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.avidemux.org/nightly/win64/avidemux_2.8.2%20r241212_win64.exe#/dl.7z
+      sha256: a0c3e0b0f44a4400a310003fbe323052eeaab1d1ae766d04e435732bed7c7680
+      bin:
+        - avidemux_cli.exe
+      strip: 1
+test: avidemux_cli --version

@@ -1,0 +1,22 @@
+api: v1
+name: autohotkey
+kind: app
+display: autohotkey
+description: The ultimate automation scripting language for Windows.
+homepage: https://www.autohotkey.com/
+license: GPL-2.0-or-later
+version: 2.0.31
+channels:
+    stable: 2.0.31
+provides:
+    - autohotkey
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.31/AutoHotkey_2.0.31.zip
+      sha256: ca1a595aca4528755d8d4cd7fed23d497a37bd9a0b6892072612d68dee1bd00a
+      bin:
+        - UX\AutohotkeyUX.exe
+        - v2\AutoHotkey32.exe
+      strip: 1
+test: UX\AutohotkeyUX --version

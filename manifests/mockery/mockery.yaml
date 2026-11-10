@@ -1,0 +1,21 @@
+api: v1
+name: mockery
+kind: app
+display: mockery
+description: A mock code autogenerator for Golang
+homepage: https://vektra.github.io/mockery/
+license: BSD-3-Clause
+version: 3.9.1
+channels:
+    stable: 3.9.1
+provides:
+    - mockery
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vektra/mockery/releases/download/v3.9.1/mockery_3.9.1_Windows_x86_64.tar.gz
+      sha256: 6184316ca712ebc9f9657f6e33d0ac78b7a10f73ee0062414de6a883f01aed6e
+      bin:
+        - mockery.exe
+      strip: 1
+test: mockery --version

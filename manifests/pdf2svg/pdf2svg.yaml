@@ -1,0 +1,21 @@
+api: v1
+name: pdf2svg
+kind: app
+display: pdf2svg
+description: A simple PDF to SVG converter using the Poppler and Cairo libraries.
+homepage: https://github.com/dawbarton/pdf2svg
+license: GPL-2.0
+version: "1.0"
+channels:
+    stable: "1.0"
+provides:
+    - pdf2svg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jalios/pdf2svg-windows/archive/refs/tags/v1.0.zip
+      sha256: fd93fc1161076a3718b9be67104468b5baf243371756a7ecb16b551bce272b92
+      bin:
+        - pdf2svg.exe
+      strip: 1
+test: pdf2svg --version

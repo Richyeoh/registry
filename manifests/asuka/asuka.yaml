@@ -1,0 +1,39 @@
+api: v1
+name: asuka
+kind: app
+display: asuka
+description: Gemini Project client written in Rust with NCurses
+homepage: https://sr.ht/~julienxx/Asuka/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.8.5
+channels:
+    stable: 0.8.5
+provides:
+    - asuka
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asuka/blobs/sha256:32ee0da95789720132c1d861f2d3123ad212788d9146555e435a96527bf7bd3b
+      sha256: 32ee0da95789720132c1d861f2d3123ad212788d9146555e435a96527bf7bd3b
+      bin:
+        - asuka
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asuka/blobs/sha256:789d5787d195d510189eb4a4c4ba5a473a1b5e563942ed5effc8e03fb1c62937
+      sha256: 789d5787d195d510189eb4a4c4ba5a473a1b5e563942ed5effc8e03fb1c62937
+      bin:
+        - asuka
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asuka/blobs/sha256:83fd646a9af29c9d6e407133fa9613c9288980199b9e0992381107d8bd49db37
+      sha256: 83fd646a9af29c9d6e407133fa9613c9288980199b9e0992381107d8bd49db37
+      bin:
+        - asuka
+      strip: 1
+test: asuka --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

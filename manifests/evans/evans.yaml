@@ -1,0 +1,21 @@
+api: v1
+name: evans
+kind: app
+display: evans
+description: More expressive gRPC client
+homepage: https://github.com/ktr0731/evans
+license: MIT
+version: 0.10.11
+channels:
+    stable: 0.10.11
+provides:
+    - evans
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ktr0731/evans/releases/download/v0.10.11/evans_windows_amd64.tar.gz
+      sha256: 064f455ec597d359e4c00448770f5eb237e4ab029e230cc4cd64d63751447e97
+      bin:
+        - evans.exe
+      strip: 1
+test: evans --version

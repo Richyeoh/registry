@@ -1,0 +1,21 @@
+api: v1
+name: k2tf
+kind: app
+display: k2tf
+description: Converts Kubernetes API Objects (in YAML format) into HashiCorp's Terraform configuration language.
+homepage: https://github.com/sl1pm4t/k2tf
+license: MPL-2.0
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - k2tf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sl1pm4t/k2tf/releases/download/v0.8.0/k2tf_0.8.0_Windows_amd64.tar.gz
+      sha256: 850debab0a080c2317e1c0554db50cfdedd49bb28c45dac14d6de99a94b2b6c4
+      bin:
+        - k2tf.exe
+      strip: 1
+test: k2tf --version

@@ -1,0 +1,24 @@
+api: v1
+name: cloud-sql-proxy
+kind: app
+display: cloud-sql-proxy
+description: Provides secure access to Cloud SQL Second Generation instances without having to add Authorized networks or configure SSL.
+homepage: https://cloud.google.com/sql/docs/mysql/sql-proxy
+license: Apache-2.0
+version: 2.27.0
+channels:
+    stable: 2.27.0
+provides:
+    - cloud-sql-proxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.27.0/cloud-sql-proxy.x64.exe#/cloud-sql-proxy.exe
+      sha256: b8ac981379283baaadb420cdf187d832eb488b6db76dd108f833f673f4bf80a9
+      bin:
+        - cloud-sql-proxy.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cloud-sql-proxy
+test: cloud-sql-proxy --version

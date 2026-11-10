@@ -1,0 +1,52 @@
+api: v1
+name: audiowaveform
+kind: app
+display: audiowaveform
+description: Generate waveform data and render waveform images from audio files
+homepage: https://codeberg.org/chrisn/audiowaveform
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 1.11.1
+channels:
+    stable: 1.11.1
+provides:
+    - audiowaveform
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://codeberg.org/chrisn/audiowaveform/releases/download/1.11.0/audiowaveform-1.11.0-win64.zip
+      sha256: 4a86e8eecc33ad6a2a2fc06c7ae42e6e57b7bc41e747f039ef595c6f50484c4b
+      bin:
+        - audiowaveform.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:4d9d1e23e0ce06f6893579ef1bdad1281ba0105411136801ac1c3af2f09b9436
+      sha256: 4d9d1e23e0ce06f6893579ef1bdad1281ba0105411136801ac1c3af2f09b9436
+      bin:
+        - audiowaveform
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:0fa9a362eccf394c01aaa1468ad5da87e190c40b1b07c0f379fed54476ae5de2
+      sha256: 0fa9a362eccf394c01aaa1468ad5da87e190c40b1b07c0f379fed54476ae5de2
+      bin:
+        - audiowaveform
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:00f8ff508d51d82d730cde316f326bb1b0a6ecb0563d72ac2c3de2540c4cc59e
+      sha256: 00f8ff508d51d82d730cde316f326bb1b0a6ecb0563d72ac2c3de2540c4cc59e
+      bin:
+        - audiowaveform
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/audiowaveform/blobs/sha256:ca72f938578beb11f855aa227a6d240c791472c5c6b7c5fef75406ff564d8006
+      sha256: ca72f938578beb11f855aa227a6d240c791472c5c6b7c5fef75406ff564d8006
+      bin:
+        - audiowaveform
+      strip: 1
+test: audiowaveform --version

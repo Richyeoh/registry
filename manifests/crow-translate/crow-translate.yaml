@@ -1,0 +1,21 @@
+api: v1
+name: crow-translate
+kind: app
+display: crow-translate
+description: A simple and lightweight translator that allows to translate and speak text.
+homepage: https://apps.kde.org/crowtranslate
+license: GPL-3.0-or-later
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - crow-translate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/crow-translate/3.1.0/crow-translate-release_3.1-433-windows-cl-msvc2019-x86_64.7z
+      sha256: 4a7ab5ddb0a62279d1fa1aed76fcd1424c0da101a0f6166b3fc77403ef219113
+      bin:
+        - bin\crow.exe
+      strip: 1
+test: bin\crow --version

@@ -1,0 +1,21 @@
+api: v1
+name: scrawler
+kind: app
+display: scrawler
+description: A program to download photos and videos from any site (e.g. Reddit, Twitter, Instagram, TikTok, RedGifs, PornHub, XHamster, XVIDEOS, LPSG).
+homepage: https://github.com/AAndyProgram/SCrawler
+license: GPL-3.0
+version: 2026.11.8.0
+channels:
+    stable: 2026.11.8.0
+provides:
+    - scrawler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AAndyProgram/SCrawler/releases/download/2026.11.8.0/SCrawler_2026.11.8.0_x64.zip
+      sha256: e0f8bfa35ff8e3349fd7b5bacd8e4a5b111062cf0a0bb92c8536bb8741910146
+      bin:
+        - scrawler.exe
+      strip: 1
+test: scrawler --version

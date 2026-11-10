@@ -1,0 +1,21 @@
+api: v1
+name: imdone
+kind: app
+display: imdone
+description: Simple and powerful kanban board built on top of plain text markdown files or code.
+homepage: https://imdone.io/
+license: Unknown
+version: 1.54.3
+channels:
+    stable: 1.54.3
+provides:
+    - imdone
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://imdone.io/downloads/imdone-1.54.3-x64-portable.exe#/dl.7z
+      sha256: c2665cdcc378bac6ab3bd8a7a83ffa76a09793029eebad2d08c385d35346caa3
+      bin:
+        - imdone.exe
+      strip: 1
+test: imdone --version

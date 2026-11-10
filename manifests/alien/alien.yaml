@@ -1,0 +1,24 @@
+api: v1
+name: alien
+kind: app
+display: alien
+description: ALIEN is a CUDA-powered artificial life simulation program.
+homepage: https://github.com/chrxh/alien
+license: BSD-3-Clause
+version: 4.12.3
+channels:
+    stable: 4.12.3
+provides:
+    - alien
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/chrxh/alien/releases/download/v4.12.3/alien-installer.msi
+      sha256: 75e26da00b6fe8ed33c38181d1fbca63b252653606ac4626bff4bf4285d32dd3
+      bin:
+        - alien.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall alien
+test: alien --version

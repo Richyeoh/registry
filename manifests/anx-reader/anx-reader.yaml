@@ -1,0 +1,21 @@
+api: v1
+name: anx-reader
+kind: app
+display: anx-reader
+description: A thoughtfully crafted e-book reader for book lovers.
+homepage: https://github.com/Anxcye/anx-reader
+license: MIT
+version: 1.14.0
+channels:
+    stable: 1.14.0
+provides:
+    - anx-reader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Anxcye/anx-reader/releases/download/v1.14.0/Anx-Reader-windows-1.14.0.zip
+      sha256: 052bc63717f912b6962f3b98f11f86eea3337223d54ca9a18b48be7aa0051c86
+      bin:
+        - anx-reader.exe
+      strip: 1
+test: anx-reader --version

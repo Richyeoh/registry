@@ -1,0 +1,21 @@
+api: v1
+name: now-cli
+kind: app
+display: now-cli
+description: The command-line interface for Now.
+homepage: https://zeit.co/now
+license: Apache-2.0
+version: 15.8.7
+channels:
+    stable: 15.8.7
+provides:
+    - now-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zeit/now-cli/releases/download/15.8.7/now-win.exe.gz
+      sha256: 5055361334adee292e66826b1de60ea8e82ae314f5bb58df670d20e27c5c713b
+      bin:
+        - now-win.exe
+      strip: 1
+test: now-win --version

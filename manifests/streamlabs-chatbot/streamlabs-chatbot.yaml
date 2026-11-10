@@ -1,0 +1,21 @@
+api: v1
+name: streamlabs-chatbot
+kind: app
+display: streamlabs-chatbot
+description: Open Broadcaster Software for Gamers
+homepage: https://streamlabs.com/chatbot
+license: Unknown
+version: 1.0.2.73
+channels:
+    stable: 1.0.2.73
+provides:
+    - streamlabs-chatbot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.streamlabs.com/chatbot/Streamlabs+Chatbot+Installer.exe?v=1.0.2.73
+      sha256: 5a5d1db8b4c5b4208f16ad75091cc70cd93f09dd71019faa689afa32f6d94ae4
+      bin:
+        - streamlabs-chatbot.exe
+      strip: 1
+test: streamlabs-chatbot --version

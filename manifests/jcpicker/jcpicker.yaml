@@ -1,0 +1,24 @@
+api: v1
+name: jcpicker
+kind: app
+display: jcpicker
+description: Just Color Picker - Free portable offline colour picker and colour editor for web designers and digital artists.
+homepage: https://annystudio.com/software/colorpicker/
+license: Unknown
+version: "6.3"
+channels:
+    stable: "6.3"
+provides:
+    - jcpicker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://annystudio.com/jcpicker.exe
+      sha256: 7c379113bb72663515d5573ab4f5993710e10e2da55baa9fe2245ff5adfb9011
+      bin:
+        - jcpicker.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jcpicker
+test: jcpicker --version

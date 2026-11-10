@@ -1,0 +1,24 @@
+api: v1
+name: openelement
+kind: app
+display: openelement
+description: A website editor that lets you have total control. Modify any element and style the way you want.
+homepage: https://openelement.uk/
+license: Freeware
+version: 1.57.R9
+channels:
+    stable: 1.57.R9
+provides:
+    - openelement
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://openelement.uk/Files/Other/openElement.exe
+      sha256: 22f33f86128b59d3911702150eda6438c2275065c765ee550491a601ff568ae6
+      bin:
+        - openelement.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall openelement
+test: openelement --version

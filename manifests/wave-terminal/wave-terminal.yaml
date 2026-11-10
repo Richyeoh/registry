@@ -1,0 +1,21 @@
+api: v1
+name: wave-terminal
+kind: app
+display: wave-terminal
+description: An open-source, cross-platform terminal for seamless workflows
+homepage: https://www.waveterm.dev
+license: Apache-2.0
+version: 0.14.5
+channels:
+    stable: 0.14.5
+provides:
+    - wave-terminal
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wavetermdev/waveterm/releases/download/v0.14.5/Wave-win32-x64-0.14.5.zip
+      sha256: 61d132770a5b44a4ab1d6f4fe111fcb270047b97ef0e6f2d4f7d93562eea79dd
+      bin:
+        - wave-terminal.exe
+      strip: 1
+test: wave-terminal --version

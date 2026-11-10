@@ -1,0 +1,21 @@
+api: v1
+name: lemminx
+kind: app
+display: lemminx
+description: LeMMinX is a language server for XML and XSD files
+homepage: https://github.com/eclipse-lemminx/lemminx
+license: EPL-2.0
+version: 0.29.3
+channels:
+    stable: 0.29.3
+provides:
+    - lemminx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/redhat-developer/vscode-xml/releases/download/0.29.3/lemminx-win32.zip
+      sha256: 7eaefaac68253b0ec8e0ad1f1c0f2d0755423d4e99e52497428b52f80df28eb7
+      bin:
+        - lemminx.exe
+      strip: 1
+test: lemminx --version

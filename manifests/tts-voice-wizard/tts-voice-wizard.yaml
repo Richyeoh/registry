@@ -1,0 +1,21 @@
+api: v1
+name: tts-voice-wizard
+kind: app
+display: tts-voice-wizard
+description: Speech to Text to Speech
+homepage: https://ttsvoicewizard.com/
+license: MIT
+version: 1.8.0.2
+channels:
+    stable: 1.8.0.2
+provides:
+    - tts-voice-wizard
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/VRCWizard/TTS-Voice-Wizard/releases/download/v1.8.0.2/TTSVoiceWizard-v1.8.0.2-x64.zip
+      sha256: 54a39d4760f1653c1b3fac2e43b045952cc4a13c1bde246b9e4951ec2fd8f5a6
+      bin:
+        - tts-voice-wizard.exe
+      strip: 1
+test: tts-voice-wizard --version

@@ -1,0 +1,21 @@
+api: v1
+name: z3-cli
+kind: app
+display: z3
+description: Theorem prover from Microsoft Research.
+homepage: https://github.com/Z3Prover/z3
+license: MIT
+version: 5.4.0
+channels:
+    stable: 5.4.0
+provides:
+    - z3-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Z3Prover/z3/releases/download/z3-5.4.0/z3-5.4.0-x64-win.zip
+      sha256: a89a5b6f7dc9c796e1bc9460cb949bd7d4a4b9eda2fb1050331a21c4db0532a9
+      bin:
+        - bin\z3.exe
+      strip: 1
+test: bin\z3 --version

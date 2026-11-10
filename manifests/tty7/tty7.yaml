@@ -1,0 +1,22 @@
+api: v1
+name: tty7
+kind: app
+display: tty7
+description: 'A terminal workbench in pure Rust: shells, persistent sessions, SSH, coding agents. GPU-rendered on Zed''s gpui, VT core from Alacritty.'
+homepage: https://tty7.io
+license: Apache-2.0
+version: 26.10.0
+channels:
+    stable: 26.10.0
+provides:
+    - tty7
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/l0ng-ai/tty7/releases/download/v26.10.0/tty7-26.10.0-windows-x86_64.zip
+      sha256: b43bd627ef758323ec440714c9549955346a968cd8358e9137071f7bdb46e372
+      bin:
+        - tty7.exe
+        - tty7-app.exe
+      strip: 1
+test: tty7 --version

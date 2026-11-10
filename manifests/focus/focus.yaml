@@ -1,0 +1,21 @@
+api: v1
+name: focus
+kind: app
+display: focus
+description: A fully featured productivity timer for the command line, based on the Pomodoro Technique.
+homepage: https://github.com/ayoisaiah/focus
+license: MIT
+version: 1.4.3
+channels:
+    stable: 1.4.3
+provides:
+    - focus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ayoisaiah/focus/releases/download/v1.4.3/focus_1.4.3_windows_amd64.tar.gz
+      sha256: cf6da33360fffa17fc6fe17f6333036ff2cec6e5ffbf75c18d6b1abca000b35a
+      bin:
+        - focus.exe
+      strip: 1
+test: focus --version

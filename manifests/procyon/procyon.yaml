@@ -1,0 +1,21 @@
+api: v1
+name: procyon
+kind: app
+display: procyon
+description: Java decompiler
+homepage: https://bitbucket.org/mstrobel/procyon/
+license: Apache-2.0
+version: 0.5.36
+channels:
+    stable: 0.5.36
+provides:
+    - procyon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/procyon/procyon-decompiler-0.5.36.jar#/procyon.jar
+      sha256: 74f9f1537113207521a075fafe64bd8265c47a9c73574bbf9fa8854bbf7126bc
+      bin:
+        - procyon.jar.exe
+      strip: 1
+test: procyon.jar --version

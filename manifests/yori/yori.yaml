@@ -1,0 +1,21 @@
+api: v1
+name: yori
+kind: app
+display: yori
+description: CMD replacement shell that supports backquotes, job control, improves tab completion, file matching, aliases, command history, and more.
+homepage: http://www.malsmith.net/yori/
+license: MIT
+version: "2.70"
+channels:
+    stable: "2.70"
+provides:
+    - yori
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.malsmith.net/download/?obj=yori/2.70/yori-ypm-amd64.cab#/ypm.7z
+      sha256: 1abc32f67811b49566116abd7ae9fcccc03d12eb4ca5550c47e344b571710337
+      bin:
+        - yori.exe
+      strip: 1
+test: yori --version

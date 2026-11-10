@@ -1,0 +1,21 @@
+api: v1
+name: vigolium
+kind: app
+display: vigolium
+description: Web vulnerability scanner and traffic analysis CLI
+homepage: https://vigolium.com
+license: MIT
+version: 0.5.6
+channels:
+    stable: 0.5.6
+provides:
+    - vigolium
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vigolium/vigolium/releases/download/v0.5.6/vigolium_0.5.6_windows_amd64.zip
+      sha256: 2f793c3ad1ecb7e2daa80f17d76cddee303031e3427918456f937401279f74fd
+      bin:
+        - vigolium.exe
+      strip: 1
+test: vigolium --version

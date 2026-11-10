@@ -1,0 +1,21 @@
+api: v1
+name: capstone
+kind: app
+display: capstone
+description: Capstone disassembly/disassembler framework
+homepage: https://www.capstone-engine.org
+license: BSD-3-Clause-Clear
+version: 4.0.2
+channels:
+    stable: 4.0.2
+provides:
+    - capstone
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/capstone-engine/capstone/releases/download/4.0.2/capstone-4.0.2-win64.zip
+      sha256: eae21d2a5baeed5de40ff07bd4baca5195cbf63b16919bf4e0ca2e4a4eb14bbc
+      bin:
+        - cstool.exe
+      strip: 1
+test: cstool --version

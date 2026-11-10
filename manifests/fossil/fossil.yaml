@@ -1,0 +1,21 @@
+api: v1
+name: fossil
+kind: app
+display: fossil
+description: A simple, high-reliability, distributed software configuration management system.
+homepage: https://www.fossil-scm.org/
+license: BSD-2-Clause
+version: "2.28"
+channels:
+    stable: "2.28"
+provides:
+    - fossil
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.fossil-scm.org/home/uv/fossil-w64-2.28.zip
+      sha256: 51283885e86aee10c5e9a8936d852f94d7391db5daf590faf1de4bae9eac7dae
+      bin:
+        - fossil.exe
+      strip: 1
+test: fossil --version

@@ -1,0 +1,26 @@
+api: v1
+name: anaconda3-2022-05
+kind: app
+display: anaconda3-2022.05
+description: The most popular Python distribution for data science.
+homepage: https://www.anaconda.com/
+license: BSD-3-Clause
+version: "2022.05"
+channels:
+    stable: "2022.05"
+provides:
+    - anaconda3-2022-05
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe#/setup.exe
+      sha256: 2766eb102f9d65da36d262b651777358de39fbe5f1a74f9854a2e5e29caeeeec
+      bin:
+        - python.exe
+        - pythonw.exe
+        - python.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall anaconda3-2022.05
+test: python --version

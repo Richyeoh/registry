@@ -1,0 +1,21 @@
+api: v1
+name: copyq
+kind: app
+display: copyq
+description: Clipboard manager
+homepage: https://hluk.github.io/CopyQ/
+license: GPL-3.0-or-later
+version: 17.0.0
+channels:
+    stable: 17.0.0
+provides:
+    - copyq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hluk/CopyQ/releases/download/v17.0.0/copyq-17.0.0.zip
+      sha256: 1601e47339d4eda19b6f4890a00cbbe7fd00a7e5d5c3b613b9b2c8d3eeb04d19
+      bin:
+        - copyq.exe
+      strip: 1
+test: copyq --version

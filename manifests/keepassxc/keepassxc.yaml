@@ -1,0 +1,23 @@
+api: v1
+name: keepassxc
+kind: app
+display: keepassxc
+description: Community fork of KeePass
+homepage: https://keepassxc.org
+license: GPL-2.0-only
+version: 2.8.0
+channels:
+    stable: 2.8.0
+provides:
+    - keepassxc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/keepassxreboot/keepassxc/releases/download/2.8.0/KeePassXC-2.8.0-x64.zip
+      sha256: 48ff4f088e9ce70e241da1270e5081528dba77c38b17dae4aa6690ffc50fc828
+      bin:
+        - KeePassXC.exe
+        - keepassxc-cli.exe
+        - keepassxc-proxy.exe
+      strip: 1
+test: KeePassXC --version

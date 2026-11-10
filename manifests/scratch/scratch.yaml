@@ -1,0 +1,21 @@
+api: v1
+name: scratch
+kind: app
+display: scratch
+description: Educational drag-and-drop programming environment
+homepage: https://scratch.mit.edu/about
+license: Unknown
+version: 3.32.1
+channels:
+    stable: 3.32.1
+provides:
+    - scratch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.scratch.mit.edu/desktop/Scratch%203.32.1%20Setup.exe#/dl.7z
+      sha256: 7099efbcf059f880c4f48a5b2238f6f30482a8e75d0aa0c5424dda95f4a61924
+      bin:
+        - scratch.exe
+      strip: 1
+test: scratch --version

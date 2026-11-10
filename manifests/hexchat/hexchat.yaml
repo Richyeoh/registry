@@ -1,0 +1,25 @@
+api: v1
+name: hexchat
+kind: app
+display: hexchat
+description: An IRC client based on XChat
+homepage: https://hexchat.github.io
+license: GPL-2.0-only
+version: 2.16.2
+channels:
+    stable: 2.16.2
+provides:
+    - hexchat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hexchat/hexchat/releases/download/v2.16.2/HexChat.2.16.2.x64.exe
+      sha256: 39da96a323ba98583e716a7ee5af1a02a34935dbe3b0865b54c65ce7784e0828
+      bin:
+        - hexchat.exe
+        - hexchat-text.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hexchat
+test: hexchat --version

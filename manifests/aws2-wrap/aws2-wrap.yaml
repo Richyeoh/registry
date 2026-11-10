@@ -1,0 +1,46 @@
+api: v1
+name: aws2-wrap
+kind: app
+display: aws2-wrap
+description: Script to export current AWS SSO credentials or run a sub-process with them
+homepage: https://github.com/linaro-its/aws2-wrap
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 1.4.0
+channels:
+    stable: 1.4.0
+provides:
+    - aws2-wrap
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws2-wrap/blobs/sha256:b2ea3565616d3ae6d2242997f570c236bd9b0f2bc9df70c5a4963ff78f0ba027
+      sha256: b2ea3565616d3ae6d2242997f570c236bd9b0f2bc9df70c5a4963ff78f0ba027
+      bin:
+        - aws2-wrap
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws2-wrap/blobs/sha256:3268822bfc1e7e701d18bdc33ab3e1da2dbade82654349196575813f596fa2ef
+      sha256: 3268822bfc1e7e701d18bdc33ab3e1da2dbade82654349196575813f596fa2ef
+      bin:
+        - aws2-wrap
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws2-wrap/blobs/sha256:cadb8097812a3729fb1ae6d91eec08399280c4096cc4d4d79423ce3924b445b5
+      sha256: cadb8097812a3729fb1ae6d91eec08399280c4096cc4d4d79423ce3924b445b5
+      bin:
+        - aws2-wrap
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws2-wrap/blobs/sha256:bce412d5705b5db7d2bd526f20e9da030b4c4c0404bab9a9d7c3de6608ebbbb6
+      sha256: bce412d5705b5db7d2bd526f20e9da030b4c4c0404bab9a9d7c3de6608ebbbb6
+      bin:
+        - aws2-wrap
+      strip: 1
+test: aws2-wrap --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

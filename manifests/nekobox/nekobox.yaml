@@ -1,0 +1,21 @@
+api: v1
+name: nekobox
+kind: app
+display: nekobox
+description: A lightweight proxy client, empowered by sing-box and thrift.
+homepage: https://github.com/qr243vbi/nekobox
+license: GPL-3.0-only
+version: 5.11.28.3
+channels:
+    stable: 5.11.28.3
+provides:
+    - nekobox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/qr243vbi/nekobox/releases/download/5.11.28.3/nekobox-5.11.28.3-windows64.zip
+      sha256: 05fcb111ac092fd19d53de0d4c7552d09f3af9e53850b4e032c1c5a36d46a9b1
+      bin:
+        - nekobox_core.exe
+      strip: 1
+test: nekobox_core --version

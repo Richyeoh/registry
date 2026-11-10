@@ -1,0 +1,21 @@
+api: v1
+name: micronaut
+kind: app
+display: micronaut
+description: Micronaut - A modern, JVM-based (Java, Groovy, Kotlin), full-stack framework for building modular and testable microservice and serverless applications
+homepage: https://micronaut.io
+license: Apache-2.0
+version: 5.2.5
+channels:
+    stable: 5.2.5
+provides:
+    - micronaut
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/micronaut-projects/micronaut-starter/releases/download/v5.2.5/micronaut-cli-5.2.5.zip
+      sha256: b4b16fd365ccd426e3e6d0097e0f70b9d22b1c7c4946500fa53313b342445b7e
+      bin:
+        - bin\mn.bat.exe
+      strip: 1
+test: bin\mn.bat --version

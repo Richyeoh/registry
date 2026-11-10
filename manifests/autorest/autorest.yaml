@@ -1,0 +1,25 @@
+api: v1
+name: autorest
+kind: app
+display: autorest
+description: Swagger (OpenAPI) Specification code generator
+homepage: https://github.com/Azure/autorest
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 3.8.0
+channels:
+    stable: 3.8.0
+provides:
+    - autorest
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autorest/blobs/sha256:b9e9e79e98255f252a645acc787169370311c4822e30d35639cc491e8d67910f
+      sha256: b9e9e79e98255f252a645acc787169370311c4822e30d35639cc491e8d67910f
+      bin:
+        - autorest
+      strip: 1
+test: autorest --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

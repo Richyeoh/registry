@@ -1,0 +1,21 @@
+api: v1
+name: qmplay2
+kind: app
+display: qmplay2
+description: A video and audio player which can play most formats and codecs.
+homepage: https://github.com/zaps166/QMPlay2
+license: LGPL-3.0-only
+version: 26.08.02
+channels:
+    stable: 26.08.02
+provides:
+    - qmplay2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zaps166/QMPlay2/releases/download/26.08.02/QMPlay2-Win64-26.08.02.exe#/dl.7z
+      sha256: 6e781bb5d7e0dbf9fbc122f90a0e7f718c21420531589712348fb4a17e619d59
+      bin:
+        - QMPlay2.exe
+      strip: 1
+test: QMPlay2 --version

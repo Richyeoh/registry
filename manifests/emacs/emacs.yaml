@@ -1,0 +1,25 @@
+api: v1
+name: emacs
+kind: app
+display: emacs
+description: An extensible, customizable, free/libre text editor.
+homepage: https://www.gnu.org/software/emacs/
+license: GPL-3.0-or-later
+version: "31.1"
+channels:
+    stable: "31.1"
+provides:
+    - emacs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ftp.gnu.org/gnu/emacs/windows/emacs-31/emacs-31.1.zip
+      sha256: 96a1018e9de877e77768ca884007f1a9df44889e9ae81ae3ca3d904b5681b8b6
+      bin:
+        - bin\runemacs.exe
+        - bin\emacs.exe
+        - bin\emacsclient.exe
+        - bin\emacsclientw.exe
+        - bin\etags.exe
+      strip: 1
+test: bin\runemacs --version

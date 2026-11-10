@@ -1,0 +1,24 @@
+api: v1
+name: websocat
+kind: app
+display: websocat
+description: Command-line client for WebSockets, like netcat (or curl) for ws:// with advanced socat-like functions.
+homepage: https://github.com/vi/websocat
+license: MIT
+version: 1.14.1
+channels:
+    stable: 1.14.1
+provides:
+    - websocat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vi/websocat/releases/download/v1.14.1/websocat.x86_64-pc-windows-gnu.exe#/websocat.exe
+      sha256: 284339b5b86f2b11496137d97b6705bb2ef27e64f21527c1ba240bdb6177ba3b
+      bin:
+        - websocat.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall websocat
+test: websocat --version

@@ -1,0 +1,32 @@
+api: v1
+name: aks-desktop
+kind: app
+display: AKS desktop
+description: Azure Kubernetes Service desktop application
+homepage: https://github.com/Azure/aks-desktop
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - aks-desktop
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/Azure/aks-desktop/releases/download/v0.10.0/aks-desktop-0.10.0-mac-arm64.dmg
+      sha256: c8282d17404a5ac6fe4fa552d3deb3a7ee65a9107fd07436d306abf173094911
+      bin:
+        - aks-desktop
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/Azure/aks-desktop/releases/download/v0.10.0/aks-desktop-0.10.0-mac-arm64.dmg
+      sha256: c8282d17404a5ac6fe4fa552d3deb3a7ee65a9107fd07436d306abf173094911
+      bin:
+        - aks-desktop
+      strip: 1
+test: aks-desktop --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

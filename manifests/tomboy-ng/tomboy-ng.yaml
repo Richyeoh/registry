@@ -1,0 +1,24 @@
+api: v1
+name: tomboy-ng
+kind: app
+display: tomboy-ng
+description: Tomboy-ng is a desktop simple note-taking application for Windows and other platforms
+homepage: https://github.com/tomboy-notes/tomboy-ng
+license: BSD-3-Clause-Clear
+version: "0.42"
+channels:
+    stable: "0.42"
+provides:
+    - tomboy-ng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tomboy-notes/tomboy-ng/releases/download/v0.42/tomboy-ng-setup-0.42.exe
+      sha256: 7f3a6e34d4b52c57674db1fa7a51811e19613f0a53ec339ba969a794555ac2c1
+      bin:
+        - tomboy-ng.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tomboy-ng
+test: tomboy-ng --version

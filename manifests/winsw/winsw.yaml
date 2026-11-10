@@ -1,0 +1,24 @@
+api: v1
+name: winsw
+kind: app
+display: winsw
+description: A wrapper executable that can be used to host any executable as a Windows service
+homepage: https://winsw.github.io/
+license: MIT
+version: 2.12.0
+channels:
+    stable: 2.12.0
+provides:
+    - winsw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/winsw/winsw/releases/download/v2.12.0/WinSW-x64.exe#/WinSW.exe
+      sha256: 05b82d46ad331cc16bdc00de5c6332c1ef818df8ceefcd49c726553209b3a0da
+      bin:
+        - WinSW.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall winsw
+test: WinSW --version

@@ -1,0 +1,21 @@
+api: v1
+name: powershell-beautifier
+kind: app
+display: powershell-beautifier
+description: A whitespace reformatter and code cleaner for Windows PowerShell and PowerShell Core
+homepage: https://github.com/DTW-DanWard/PowerShell-Beautifier
+license: MIT
+version: 1.2.5
+channels:
+    stable: 1.2.5
+provides:
+    - powershell-beautifier
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/powershell-beautifier.1.2.5.nupkg
+      sha256: 3ec3d76a2b303136bc73f91d278f03b748cf5cc6aa6287aa3ea180adf39c6ff3
+      bin:
+        - powershell-beautifier.exe
+      strip: 1
+test: powershell-beautifier --version

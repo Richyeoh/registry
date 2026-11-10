@@ -1,0 +1,21 @@
+api: v1
+name: wasmer
+kind: app
+display: wasmer
+description: The leading WebAssembly Runtime supporting WASI and Emscripten
+homepage: https://wasmer.io/
+license: MIT
+version: 7.5.0
+channels:
+    stable: 7.5.0
+provides:
+    - wasmer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wasmerio/wasmer/releases/download/v7.5.0/wasmer-windows-amd64.tar.gz
+      sha256: 05ed663fd0db01d5a690e151c976c384d035a8acac7a7710ffb5fcc9d54c917f
+      bin:
+        - bin\wasmer.exe
+      strip: 1
+test: bin\wasmer --version

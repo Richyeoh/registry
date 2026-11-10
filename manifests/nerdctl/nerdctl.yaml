@@ -1,0 +1,21 @@
+api: v1
+name: nerdctl
+kind: app
+display: nerdctl
+description: Docker-compatible CLI for containerd
+homepage: https://github.com/containerd/nerdctl
+license: Apache-2.0
+version: 2.4.2
+channels:
+    stable: 2.4.2
+provides:
+    - nerdctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/containerd/nerdctl/releases/download/v2.4.2/nerdctl-2.4.2-windows-amd64.tar.gz
+      sha256: 03891a599848e819dee0f79f1adb6bd3022df737980df7ea5ffe0649fec9cd80
+      bin:
+        - nerdctl.exe
+      strip: 1
+test: nerdctl --version

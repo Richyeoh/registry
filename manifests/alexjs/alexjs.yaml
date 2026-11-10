@@ -1,0 +1,46 @@
+api: v1
+name: alexjs
+kind: app
+display: alexjs
+description: Catch insensitive, inconsiderate writing
+homepage: https://alexjs.com
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 11.0.1
+channels:
+    stable: 11.0.1
+provides:
+    - alexjs
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alexjs/blobs/sha256:b8eedf8b9395fadd7cc1dd2011a9a31043acda33dd864bd214fa6457edb62a5f
+      sha256: b8eedf8b9395fadd7cc1dd2011a9a31043acda33dd864bd214fa6457edb62a5f
+      bin:
+        - alexjs
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alexjs/blobs/sha256:f8e7666f1bbca1055363b542c7937cfcfdcf2ce1667f8e01a3013353a0b32ab8
+      sha256: f8e7666f1bbca1055363b542c7937cfcfdcf2ce1667f8e01a3013353a0b32ab8
+      bin:
+        - alexjs
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alexjs/blobs/sha256:02502faa257c0027e461b00a8f802c5bb60de704c3f75afbc09aa41b51763d71
+      sha256: 02502faa257c0027e461b00a8f802c5bb60de704c3f75afbc09aa41b51763d71
+      bin:
+        - alexjs
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alexjs/blobs/sha256:08e51dfcc87a621c5b02f9d4ce9e92b571bc9a7659d53f75d2f66ac55d9f84b8
+      sha256: 08e51dfcc87a621c5b02f9d4ce9e92b571bc9a7659d53f75d2f66ac55d9f84b8
+      bin:
+        - alexjs
+      strip: 1
+test: alexjs --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

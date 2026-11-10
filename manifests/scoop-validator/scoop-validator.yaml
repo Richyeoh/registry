@@ -1,0 +1,21 @@
+api: v1
+name: scoop-validator
+kind: app
+display: scoop-validator
+description: A Scoop helper program for validating JSON files against a JSON Schema
+homepage: https://github.com/ScoopInstaller/Validator/
+license: Unlicense
+version: 1.0.2
+channels:
+    stable: 1.0.2
+provides:
+    - scoop-validator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ScoopInstaller/Validator/releases/download/v1.0.2/validator.zip
+      sha256: eecc3122d4e9a73e8e5cf742e7af2e60c5a77360b64c514166c0250ed13120a9
+      bin:
+        - validator.exe
+      strip: 1
+test: validator --version

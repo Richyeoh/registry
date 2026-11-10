@@ -1,0 +1,21 @@
+api: v1
+name: lantern-client
+kind: app
+display: lantern-client
+description: HTTP/HTTPS proxy
+homepage: https://lantern.io/
+license: Apache-2.0
+version: 7.9.7
+channels:
+    stable: 7.9.7
+provides:
+    - lantern-client
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://media.githubusercontent.com/media/getlantern/lantern-binaries/main/lantern-installer-64-bit.exe#/dl.7z
+      sha256: 69480dbc2b3aab13e4ad4bc9989a39e14f0d90275206cdf9401b150ce3c85405
+      bin:
+        - lantern.exe
+      strip: 1
+test: lantern --version

@@ -1,0 +1,21 @@
+api: v1
+name: fiddler
+kind: app
+display: fiddler
+description: The free web debugging proxy for any browser, system or platform.
+homepage: https://www.telerik.com/fiddler
+license: Unknown
+version: 6.0.20262.10021
+channels:
+    stable: 6.0.20262.10021
+provides:
+    - fiddler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.getfiddler.com/fiddler-classic/FiddlerSetup.6.0.20262.10021-latest.exe#/dl.7z
+      sha256: b8c733bce208c395d94711dd0fe644b0a92fa613ca55b333f44d5dccaa196ef7
+      bin:
+        - Fiddler.exe
+      strip: 1
+test: Fiddler --version

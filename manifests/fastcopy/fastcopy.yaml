@@ -1,0 +1,26 @@
+api: v1
+name: fastcopy
+kind: app
+display: fastcopy
+description: The Fastest copy/backup software.
+homepage: https://fastcopy.jp/
+license: Unknown
+version: 5.12.0
+channels:
+    stable: 5.12.0
+provides:
+    - fastcopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fastcopy.jp/archive/FastCopy5.12.0_installer.exe
+      sha256: 14ccc9d2ebbdfbcbcf0c6e4004773d12bb98de197a572959473a2d9d3b000e3d
+      bin:
+        - FastCopy.exe
+        - FcHash.exe
+        - fcp.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fastcopy
+test: FastCopy --version

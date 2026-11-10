@@ -1,0 +1,21 @@
+api: v1
+name: dart-sass-embedded
+kind: app
+display: dart-sass-embedded
+description: A wrapper for Dart Sass that implements the compiler side of the Embedded Sass protocol
+homepage: https://github.com/sass/dart-sass-embedded
+license: MIT
+version: 1.62.1
+channels:
+    stable: 1.62.1
+provides:
+    - dart-sass-embedded
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sass/dart-sass-embedded/releases/download/1.62.1/sass_embedded-1.62.1-windows-x64.zip
+      sha256: 97336afe04e7b5ad38a3dbb6b5a9ea01d0e8652c3889bf7fdf67d1d635511feb
+      bin:
+        - sass_embedded\dart-sass-embedded.bat.exe
+      strip: 1
+test: sass_embedded\dart-sass-embedded.bat --version

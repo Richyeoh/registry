@@ -1,0 +1,21 @@
+api: v1
+name: heroku-cli
+kind: app
+display: heroku-cli
+description: An essential part of using Heroku, which can perform nearly any Heroku-related task right from your terminal.
+homepage: https://devcenter.heroku.com/articles/heroku-cli
+license: ISC
+version: 11.12.1
+channels:
+    stable: 11.12.1
+provides:
+    - heroku-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cli-assets.heroku.com/versions/11.12.1/41f59c1/heroku-v11.12.1-41f59c1-win32-x64.tar.xz#/dl.xz
+      sha256: 683bd933194072849c95a768e9a8767b4094e8c3e60a8e2a18f244a792687f68
+      bin:
+        - bin\heroku.cmd.exe
+      strip: 1
+test: bin\heroku.cmd --version

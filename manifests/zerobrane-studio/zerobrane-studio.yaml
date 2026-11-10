@@ -1,0 +1,21 @@
+api: v1
+name: zerobrane-studio
+kind: app
+display: zerobrane-studio
+description: Lightweight Lua IDE with code completion, syntax highlighting, live coding, code analyzer and debugging support
+homepage: https://studio.zerobrane.com
+license: MIT
+version: "2.01"
+channels:
+    stable: "2.01"
+provides:
+    - zerobrane-studio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.zerobrane.com/ZeroBraneStudioEduPack-2.01-win32.zip
+      sha256: 3e200bb0c3ef6201d50cd34e5a7c9712a63600168dabe1ea6003ef01032affa4
+      bin:
+        - zbstudio.exe
+      strip: 1
+test: zbstudio --version

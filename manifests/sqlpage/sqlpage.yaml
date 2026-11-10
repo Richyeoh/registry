@@ -1,0 +1,21 @@
+api: v1
+name: sqlpage
+kind: app
+display: sqlpage
+description: SQL-only webapp builder, empowering data analysts to build websites and applications quickly
+homepage: https://sql-page.com
+license: MIT
+version: 0.47.0
+channels:
+    stable: 0.47.0
+provides:
+    - sqlpage
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sqlpage/SQLPage/releases/download/v0.47.0/sqlpage-windows.zip
+      sha256: ea01ff6f8bdfcb8150811542f6afdb587b20a4febf510b550539f6cb384279a5
+      bin:
+        - sqlpage.exe
+      strip: 1
+test: sqlpage --version

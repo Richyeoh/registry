@@ -1,0 +1,21 @@
+api: v1
+name: mockoon
+kind: app
+display: mockoon
+description: Easiest and quickest way to run mock APIs locally.
+homepage: https://mockoon.com
+license: Apache-2.0
+version: 9.10.0
+channels:
+    stable: 9.10.0
+provides:
+    - mockoon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mockoon/mockoon/releases/download/v9.10.0/mockoon.setup.9.10.0.exe#/dl.7z
+      sha256: 9fa6497c83b7873c36cf9d4aa169cc31edc52c56db685bae1f868051db54ce7d
+      bin:
+        - Mockoon.exe
+      strip: 1
+test: Mockoon --version

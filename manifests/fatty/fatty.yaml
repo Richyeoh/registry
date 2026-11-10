@@ -1,0 +1,21 @@
+api: v1
+name: fatty
+kind: app
+display: fatty
+description: Cygwin Terminal emulator with tabs
+homepage: https://github.com/juho-p/fatty
+license: GPL-3.0-or-later
+version: "20210122"
+channels:
+    stable: "20210122"
+provides:
+    - fatty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/fatty/fatty-20210122.7z
+      sha256: f734895ac27ae482b03c5e17c662ba459a1b5906c5f8a062273cf85c48360a1f
+      bin:
+        - fatty.bat.exe
+      strip: 1
+test: fatty.bat --version

@@ -1,0 +1,32 @@
+api: v1
+name: aldente
+kind: app
+display: AlDente
+description: Menu bar tool to limit maximum charging percentage
+homepage: https://apphousekitchen.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.40.1
+channels:
+    stable: 1.40.1
+provides:
+    - aldente
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://apphousekitchen.com/aldente/AlDente1.40.1.dmg
+      sha256: cbe3f47f1b08b9de5760caf46b4965a6ec80b1ff8b5f043a7e83b952b006ca23
+      bin:
+        - aldente
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://apphousekitchen.com/aldente/AlDente1.40.1.dmg
+      sha256: cbe3f47f1b08b9de5760caf46b4965a6ec80b1ff8b5f043a7e83b952b006ca23
+      bin:
+        - aldente
+      strip: 1
+test: aldente --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

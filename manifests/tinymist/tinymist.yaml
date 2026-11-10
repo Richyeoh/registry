@@ -1,0 +1,21 @@
+api: v1
+name: tinymist
+kind: app
+display: tinymist
+description: A brand-new language server for Typst
+homepage: https://myriad-dreamin.github.io/tinymist
+license: Apache-2.0
+version: 0.15.12
+channels:
+    stable: 0.15.12
+provides:
+    - tinymist
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Myriad-Dreamin/tinymist/releases/download/v0.15.12/tinymist-x86_64-pc-windows-msvc.zip
+      sha256: 7dfa68a764363bf825871c7d0ea302b6590a33b5b3ae43585e34d04296e987b1
+      bin:
+        - tinymist.exe
+      strip: 1
+test: tinymist --version

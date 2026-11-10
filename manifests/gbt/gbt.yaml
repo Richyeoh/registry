@@ -1,0 +1,21 @@
+api: v1
+name: gbt
+kind: app
+display: gbt
+description: Highly configurable prompt builder for Bash, ZSH and PowerShell written in Go.
+homepage: https://github.com/jtyr/gbt
+license: MIT
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - gbt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jtyr/gbt/releases/download/v2.0.0/gbt-2.0.0-windows-amd64.zip
+      sha256: cb777db5299da8187f1e94cc5389c980e92f56c1030d6c850724410b87b983d9
+      bin:
+        - gbt.exe
+      strip: 1
+test: gbt --version

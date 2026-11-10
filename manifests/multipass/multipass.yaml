@@ -1,0 +1,25 @@
+api: v1
+name: multipass
+kind: app
+display: multipass
+description: A lightweight VM manager, designed for developers who want a fresh Ubuntu environment with a single command.
+homepage: https://multipass.run
+license: Unknown
+version: 1.17.0
+channels:
+    stable: 1.17.0
+provides:
+    - multipass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/canonical/multipass/releases/download/v1.17.0/multipass-1.17.0%2Bwin-win64.msi
+      sha256: 0efd5c9accb876a7dfbaf01669ab40ed0d95435e6cbea8f78cc5bde351d481e5
+      bin:
+        - bin\multipass.exe
+        - bin\multipassd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall multipass
+test: bin\multipass --version

@@ -1,0 +1,21 @@
+api: v1
+name: mpv-easy-player
+kind: app
+display: mpv-easy-player
+description: A modern video player based on mpv
+homepage: http://www.rjno1.com/mpv-easy-player/
+license: GPL-3.0-only
+version: 0.41.0.6
+channels:
+    stable: 0.41.0.6
+provides:
+    - mpv-easy-player
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/422658476/MPV-EASY-Player/releases/download/0.41.0.6/MPV-EASY.Player.V0.41.0.6.exe#/dl.7z
+      sha256: ef84b78f95aec0a0450375ef4c1c2276fa0f64cf1ce169b921c6a9897c09de2b
+      bin:
+        - mpv-easy-player.exe
+      strip: 1
+test: mpv-easy-player --version

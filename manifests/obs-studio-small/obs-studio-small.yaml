@@ -1,0 +1,21 @@
+api: v1
+name: obs-studio-small
+kind: app
+display: obs-studio-small
+description: Video recording and live streaming without the browser source plugin
+homepage: https://obsproject.com
+license: GPL-2.0-only
+version: 21.1.2
+channels:
+    stable: 21.1.2
+provides:
+    - obs-studio-small
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/obsproject/obs-studio/releases/download/21.1.2/OBS-Studio-21.1.2-Small.zip
+      sha256: 5c2b106d4af24aee91c3541743328aea3ecca0df0ae8fb4d94f65877cdd371ae
+      bin:
+        - obs-studio-small.exe
+      strip: 1
+test: obs-studio-small --version

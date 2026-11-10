@@ -1,0 +1,21 @@
+api: v1
+name: mongodb-atlas-cli
+kind: app
+display: mongodb-atlas-cli
+description: Command line interface for MongoDB Atlas
+homepage: https://www.mongodb.com/docs/atlas/cli/stable/
+license: Apache-2.0
+version: 1.59.4
+channels:
+    stable: 1.59.4
+provides:
+    - mongodb-atlas-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fastdl.mongodb.org/mongocli/mongodb-atlas-cli_1.59.4_windows_x86_64.zip
+      sha256: 573e9440e7143401937d4fdb47eed633539b8396efe607159dddb1faa3972a5c
+      bin:
+        - atlas.exe
+      strip: 1
+test: atlas --version

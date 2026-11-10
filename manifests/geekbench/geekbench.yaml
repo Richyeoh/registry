@@ -1,0 +1,24 @@
+api: v1
+name: geekbench
+kind: app
+display: geekbench
+description: CPU/GPU benchmark software
+homepage: https://www.geekbench.com/
+license: Unknown
+version: 7.1.0
+channels:
+    stable: 7.1.0
+provides:
+    - geekbench
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.geekbench.com/Geekbench-7.1.0-WindowsSetup.exe
+      sha256: 0a388e786de3978d57e28561fee4e1703c312853faaf79dcc8690cc225885669
+      bin:
+        - geekbench.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall geekbench
+test: geekbench --version

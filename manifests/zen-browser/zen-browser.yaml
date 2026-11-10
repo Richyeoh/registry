@@ -1,0 +1,21 @@
+api: v1
+name: zen-browser
+kind: app
+display: zen-browser
+description: A open-source browser based on the Firefox engine
+homepage: https://www.zen-browser.app/
+license: MPL-2.0
+version: 1.24.1b
+channels:
+    stable: 1.24.1b
+provides:
+    - zen-browser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zen-browser/desktop/releases/download/1.24.1b/zen.installer.exe#/dl.7z
+      sha256: ce649f801579fb40a02499bfceeb66f2c049f87988b4c2cef73046540c46e8a3
+      bin:
+        - zen.exe
+      strip: 1
+test: zen --version

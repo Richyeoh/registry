@@ -1,0 +1,21 @@
+api: v1
+name: marktext
+kind: app
+display: marktext
+description: A simple and elegant markdown editor
+homepage: https://github.com/marktext/marktext
+license: MIT
+version: 0.23.0
+channels:
+    stable: 0.23.0
+provides:
+    - marktext
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-win-x64-0.23.0.zip
+      sha256: 10ff69f91303f1009e7bdb1f490a4b30d716804ebc95b9e98c12b0c84cffa16f
+      bin:
+        - marktext.exe
+      strip: 1
+test: marktext --version

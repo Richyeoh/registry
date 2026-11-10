@@ -1,0 +1,21 @@
+api: v1
+name: wcurl
+kind: app
+display: wcurl
+description: A simple wrapper around curl to easily download files
+homepage: https://curl.se/wcurl/
+license: MIT
+version: 2026.10.12
+channels:
+    stable: 2026.10.12
+provides:
+    - wcurl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/curl/wcurl/releases/download/v2026.10.12/wcurl
+      sha256: 7aa2b82925e314578fff272bf6775a6e56f891182b42e11a3ecfd2cac5ea3927
+      bin:
+        - sh.exe
+      strip: 1
+test: sh --version

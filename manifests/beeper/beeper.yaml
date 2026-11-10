@@ -1,0 +1,21 @@
+api: v1
+name: beeper
+kind: app
+display: beeper
+description: Universal chat app powered by Matrix
+homepage: https://www.beeper.com/
+license: Unknown
+version: 4.3.284
+channels:
+    stable: 4.3.284
+provides:
+    - beeper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%204.3.284.exe#/dl.7z
+      sha256: baad489f34e1d7d50e36effdb4846ab0704cb77c119e267c190807e2780d01c0
+      bin:
+        - beeper.exe
+      strip: 1
+test: beeper --version

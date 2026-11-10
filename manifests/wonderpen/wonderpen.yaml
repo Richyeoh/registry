@@ -1,0 +1,21 @@
+api: v1
+name: wonderpen
+kind: app
+display: wonderpen
+description: Professional writing app with a focused and fluid writing experience.
+homepage: https://www.tominlab.com/en/wonderpen
+license: Unknown
+version: 3.0.7
+channels:
+    stable: 3.0.7
+provides:
+    - wonderpen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://file.tominlab.com/WonderPen/desktop/3.0/WonderPen_win_installer_x64_3.0.7(8252).exe#/dl.7z
+      sha256: eb6c5319b513ac5cdd289cef3487249ce0f844ed0fdf0f2329a9da16528bbc84
+      bin:
+        - wonderpen.exe
+      strip: 1
+test: wonderpen --version

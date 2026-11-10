@@ -1,0 +1,21 @@
+api: v1
+name: ansicon
+kind: app
+display: ansicon
+description: Process ANSI escape sequences for Windows console programs.
+homepage: http://adoxa.altervista.org/ansicon/index.html
+license: Zlib
+version: "1.89"
+channels:
+    stable: "1.89"
+provides:
+    - ansicon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/adoxa/ansicon/releases/download/v1.89/ansi189-bin.zip
+      sha256: 646c34073df5dcaf81e6b74a5d05074f32d25ed190a8a9009abea00c3dd9184c
+      bin:
+        - ansicon.exe
+      strip: 1
+test: ansicon --version

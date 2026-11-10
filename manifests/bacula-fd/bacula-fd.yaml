@@ -1,0 +1,39 @@
+api: v1
+name: bacula-fd
+kind: app
+display: bacula-fd
+description: Network backup solution
+homepage: https://www.bacula.org/
+license: AGPL-3.0-only WITH openvpn-openssl-exception
+keywords:
+    - brew
+    - homebrew
+version: 15.0.3
+channels:
+    stable: 15.0.3
+provides:
+    - bacula-fd
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:5688de1c1f3e7c7b1efc8e82286760a82e302f920d98f156a904d98d642396ed
+      sha256: 5688de1c1f3e7c7b1efc8e82286760a82e302f920d98f156a904d98d642396ed
+      bin:
+        - bacula-fd
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:bdc741dd0a0b94175a12fd623ba9e88fa8ac508cc03dd4803d89927753ad2109
+      sha256: bdc741dd0a0b94175a12fd623ba9e88fa8ac508cc03dd4803d89927753ad2109
+      bin:
+        - bacula-fd
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bacula-fd/blobs/sha256:cd2207345e5e6999c3658f03b0847294d82cd7d1c9efe8cafc36b472c5ec3783
+      sha256: cd2207345e5e6999c3658f03b0847294d82cd7d1c9efe8cafc36b472c5ec3783
+      bin:
+        - bacula-fd
+      strip: 1
+test: bacula-fd --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: openclosedriveeject
+kind: app
+display: openclosedriveeject
+description: 'Eject, open, or close any drive: USB, DVD/CD, SSD, etc.'
+homepage: http://www.softwareok.com/?seite=Microsoft/OpenCloseDriveEject
+license: Unknown
+version: "3.61"
+channels:
+    stable: "3.61"
+provides:
+    - openclosedriveeject
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.softwareok.com/Download/OpenCloseDriveEject_x64.zip
+      sha256: a6a4e3893eb5ef598750c0fbc44975be4af116da6616fbca8d58ec3c9250cfd0
+      bin:
+        - OpenCloseDriveEject_x64.exe
+      strip: 1
+test: OpenCloseDriveEject_x64 --version

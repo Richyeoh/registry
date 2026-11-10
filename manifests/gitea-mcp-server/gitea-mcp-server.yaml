@@ -1,0 +1,22 @@
+api: v1
+name: gitea-mcp-server
+kind: app
+display: gitea-mcp-server
+description: Gitea Model Context Protocol (MCP) Server.
+homepage: https://gitea.com/gitea/gitea-mcp
+license: MIT
+version: 1.13.0
+channels:
+    stable: 1.13.0
+provides:
+    - gitea-mcp-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitea.com/gitea/gitea-mcp/releases/download/v1.13.0/gitea-mcp_Windows_x86_64.zip
+      sha256: 95d2aa4ab82b7a10855111498ca57229bf6bbdf0853dc7a0bbb7b27561399363
+      bin:
+        - gitea-mcp.exe
+        - gitea-mcp.exe
+      strip: 1
+test: gitea-mcp --version

@@ -1,0 +1,21 @@
+api: v1
+name: multidrive
+kind: app
+display: multidrive
+description: Free disk backup, clone, and wipe utility with CLI support
+homepage: https://multidrive.io
+license: Unknown
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - multidrive
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/atola-technology/multidrive/releases/download/v1.5.0/MultiDrive_1.5.zip
+      sha256: 62dfbf7937c40b4bdfb67875e1008100ffd264eca983d886e6b8a5dd97eda661
+      bin:
+        - mdcli.exe
+      strip: 1
+test: mdcli --version

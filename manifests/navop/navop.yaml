@@ -1,0 +1,21 @@
+api: v1
+name: navop
+kind: app
+display: navop
+description: A native, all-in-one workspace for databases, SSH, SFTP, terminals, remote desktop, monitoring, and AI.
+homepage: https://navop.dev
+license: Unknown
+version: 0.23.0
+channels:
+    stable: 0.23.0
+provides:
+    - navop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/feigeCode/navop/releases/download/v0.23.0/navop-0.23.0-windows-x64-portable.zip
+      sha256: 5c15127502f04444d1ca4621231e30900d1a8ec6cf8a6870c93754f09dafa111
+      bin:
+        - navop.exe
+      strip: 1
+test: navop --version

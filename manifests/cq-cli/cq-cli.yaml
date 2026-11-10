@@ -1,0 +1,21 @@
+api: v1
+name: cq-cli
+kind: app
+display: cq
+description: An open standard for shared agent learning that lets AI agents persist, share, and query collective knowledge so they stop rediscovering the same failures.
+homepage: https://docs.mozilla.ai/cq
+license: Apache-2.0
+version: 0.19.2
+channels:
+    stable: 0.19.2
+provides:
+    - cq-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mozilla-ai/cq/releases/download/cli/v0.19.2/cq_Windows_x86_64.zip
+      sha256: 122970d1a54d8c5d6497c80e4c42a87734965a700baa048dc401ee915dc81ec7
+      bin:
+        - cq.exe
+      strip: 1
+test: cq --version

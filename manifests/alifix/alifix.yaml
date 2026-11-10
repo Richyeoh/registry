@@ -1,0 +1,32 @@
+api: v1
+name: alifix
+kind: app
+display: Alifix
+description: Refreshes aliases and identifies broken aliases
+homepage: https://eclecticlight.co/taccy-signet-precize-alifix-utiutility-alisma/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.4,2025.07
+channels:
+    stable: 1.4,2025.07
+provides:
+    - alifix
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://eclecticlight.co/wp-content/uploads/2025/07/alifix14.zip
+      sha256: 8bce6e676c5e50aa0644c5794112ca45e14dd4f38af460417ce83f1a32f8cb34
+      bin:
+        - alifix
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://eclecticlight.co/wp-content/uploads/2025/07/alifix14.zip
+      sha256: 8bce6e676c5e50aa0644c5794112ca45e14dd4f38af460417ce83f1a32f8cb34
+      bin:
+        - alifix
+      strip: 1
+test: alifix --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

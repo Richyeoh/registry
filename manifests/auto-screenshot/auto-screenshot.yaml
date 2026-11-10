@@ -1,0 +1,21 @@
+api: v1
+name: auto-screenshot
+kind: app
+display: auto-screenshot
+description: Automatic screenshots at fixed time intervals
+homepage: https://github.com/artem78/AutoScreenshot
+license: GPL-3.0-only
+version: 1.23.3.1
+channels:
+    stable: 1.23.3.1
+provides:
+    - auto-screenshot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/artem78/AutoScreenshot/releases/download/v1.23.3.1/AutoScreenshot_v1.23.3.1_Windows_x64_portable.zip
+      sha256: 3897be75039b729d0041f92adef995b64426512f701f3f834ca112c13bc0c916
+      bin:
+        - auto-screenshot.exe
+      strip: 1
+test: auto-screenshot --version

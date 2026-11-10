@@ -1,0 +1,27 @@
+api: v1
+name: 7zip-zstd
+kind: app
+display: 7zip-zstd
+description: 7-Zip Zstandard is a multi-format file archiver based on 7-Zip that adds support for modern compression codecs including Zstandard, Brotli, LZ4, LZ5, Lizard, and Fast-LZMA2 while maintaining high compression ratios.
+homepage: https://mcmilk.de/projects/7-Zip-zstd/
+license: Unknown
+version: 26.05-1.5.7-r1
+channels:
+    stable: 26.05-1.5.7-r1
+provides:
+    - 7zip-zstd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mcmilk/7-Zip-zstd/releases/download/v26.05-v1.5.7-R1/7z26.05-zstd-x64.exe
+      sha256: 430e398037520a52a35dedf45472eb3ea62073b7bf53bfdd37d2b663f50f5530
+      bin:
+        - 7z.exe
+        - 7za.exe
+        - 7zG.exe
+        - 7zFM.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall 7zip-zstd
+test: 7z --version

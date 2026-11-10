@@ -1,0 +1,46 @@
+api: v1
+name: aravis
+kind: app
+display: aravis
+description: Vision library for genicam based cameras
+homepage: https://github.com/AravisProject/aravis
+license: LGPL-2.1-or-later
+keywords:
+    - brew
+    - homebrew
+version: 0.8.36
+channels:
+    stable: 0.8.36
+provides:
+    - aravis
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aravis/blobs/sha256:2a070b911bdbc1533cfb68d00720a42244e64db5c2b41020766265b3077a55ca
+      sha256: 2a070b911bdbc1533cfb68d00720a42244e64db5c2b41020766265b3077a55ca
+      bin:
+        - aravis
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aravis/blobs/sha256:400d547af062c952574b486a527d3786426c2eb3b47565127c403ff34398835f
+      sha256: 400d547af062c952574b486a527d3786426c2eb3b47565127c403ff34398835f
+      bin:
+        - aravis
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aravis/blobs/sha256:75d4c78de8f32363d240b1d556b2da2c137173cf1ce02f9b99ead801dd352f7d
+      sha256: 75d4c78de8f32363d240b1d556b2da2c137173cf1ce02f9b99ead801dd352f7d
+      bin:
+        - aravis
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aravis/blobs/sha256:567ebd2a64d8f9e4510cde9d566d90a3fbe5d2838763f8ae20c2acae4932291e
+      sha256: 567ebd2a64d8f9e4510cde9d566d90a3fbe5d2838763f8ae20c2acae4932291e
+      bin:
+        - aravis
+      strip: 1
+test: aravis --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

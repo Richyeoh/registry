@@ -1,0 +1,21 @@
+api: v1
+name: stackit
+kind: app
+display: stackit
+description: STACKIT Command Line Interface (CLI) to manage STACKIT resources.
+homepage: https://stackit.com/en
+license: Apache-2.0
+version: 0.77.2
+channels:
+    stable: 0.77.2
+provides:
+    - stackit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stackitcloud/stackit-cli/releases/download/v0.77.2/stackit-cli_0.77.2_windows_amd64.zip
+      sha256: dacfddb025b2c8946cba671d706810bfcb02d427dd2f9cbe6931b2a407802e1e
+      bin:
+        - stackit.exe
+      strip: 1
+test: stackit --version

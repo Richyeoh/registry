@@ -1,0 +1,21 @@
+api: v1
+name: metabase
+kind: app
+display: metabase
+description: The simplest, fastest way to get business intelligence and analytics to everyone in your company
+homepage: https://www.metabase.com
+license: AGPL-3.0-or-later
+version: 0.65.3
+channels:
+    stable: 0.65.3
+provides:
+    - metabase
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.metabase.com/v0.65.3/metabase.jar
+      sha256: 5230dea520f341bf60250f59e882e2cf69c958f7bed42eec05cb4b7c61cf6bf5
+      bin:
+        - metabase.jar.exe
+      strip: 1
+test: metabase.jar --version

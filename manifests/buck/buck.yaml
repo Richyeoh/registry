@@ -1,0 +1,21 @@
+api: v1
+name: buck
+kind: app
+display: buck
+description: A high-performance build tool.
+homepage: https://buck.build/
+license: Apache-2.0
+version: 2021.01.12.01
+channels:
+    stable: 2021.01.12.01
+provides:
+    - buck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/buck.2021.01.12.01.nupkg
+      sha256: 6623ab85184b7f0e0afad2e504423f33c803ada6ce1606886e78ae0565777dd4
+      bin:
+        - buck.bat.exe
+      strip: 1
+test: buck.bat --version

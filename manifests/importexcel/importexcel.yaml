@@ -1,0 +1,21 @@
+api: v1
+name: importexcel
+kind: app
+display: importexcel
+description: PowerShell module to import/export Excel spreadsheets, without Excel
+homepage: https://www.powershellgallery.com/packages/ImportExcel/
+license: Apache-2.0
+version: 7.8.10
+channels:
+    stable: 7.8.10
+provides:
+    - importexcel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/importexcel.7.8.10.nupkg
+      sha256: d8a1d79dc8cf10c0eea30b68b70459b3fb4cac0042fb756fcb23890671857e4c
+      bin:
+        - importexcel.exe
+      strip: 1
+test: importexcel --version

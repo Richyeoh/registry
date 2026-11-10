@@ -1,0 +1,21 @@
+api: v1
+name: rune
+kind: app
+display: rune
+description: Rune is a music player that offers audio analysis and recommendation features
+homepage: https://github.com/Losses/rune
+license: MPL-2.0|Shareware
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - rune
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Losses/rune/releases/download/v1.1.0/Rune-v1.1.0-windows-amd64.zip
+      sha256: 0ce2d7f52cf695fbdc245096048505cd64b9092689067a10bd7d78c0dc1fead8
+      bin:
+        - rune.exe
+      strip: 1
+test: rune --version

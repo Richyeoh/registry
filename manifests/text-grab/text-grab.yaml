@@ -1,0 +1,24 @@
+api: v1
+name: text-grab
+kind: app
+display: text-grab
+description: Minimal Windows utility for copying and pasting any visible text, without internet access.
+homepage: https://github.com/TheJoeFin/Text-Grab
+license: MIT
+version: 4.16.0
+channels:
+    stable: 4.16.0
+provides:
+    - text-grab
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TheJoeFin/Text-Grab/releases/download/v4.16.0/Text-Grab.exe
+      sha256: 2c44b48f2836036a2a833825389ef12c4ac3e7e6df1e5bb0bea88516b55b4ccc
+      bin:
+        - Text-Grab.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall text-grab
+test: Text-Grab --version

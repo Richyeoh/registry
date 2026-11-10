@@ -1,0 +1,21 @@
+api: v1
+name: gitu
+kind: app
+display: gitu
+description: A TUI Git client inspired by Magit
+homepage: https://github.com/altsem/gitu
+license: MIT
+version: 0.44.0
+channels:
+    stable: 0.44.0
+provides:
+    - gitu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/altsem/gitu/releases/download/v0.44.0/gitu-v0.44.0-x86_64-pc-windows-msvc.zip
+      sha256: d732619d850a07f6ed65ee3f901b879fff5f8a4585f196a0dfcd1b15c7cfc16c
+      bin:
+        - gitu.exe
+      strip: 1
+test: gitu --version

@@ -1,0 +1,21 @@
+api: v1
+name: clever-ffmpeg
+kind: app
+display: clever-ffmpeg
+description: A small, but powerful GUI for FFmpeg that processes audio and video streams separately.
+homepage: https://www.videohelp.com/software/clever-FFmpeg-GUI
+license: Freeware
+version: 3.6.0
+channels:
+    stable: 3.6.0
+provides:
+    - clever-ffmpeg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.videohelp.com/download/clever_ffmpeg_gui_360.zip
+      sha256: 81c988c1d87f674afe33ff9cd6a15954d142741c0026c7d2d8489aab5f438d11
+      bin:
+        - clever-ffmpeg.exe
+      strip: 1
+test: clever-ffmpeg --version

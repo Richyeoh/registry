@@ -1,0 +1,21 @@
+api: v1
+name: kafkio
+kind: app
+display: kafkio
+description: KafkIO - A Fast, Easy and Free Kafka Client for Mac, Windows and Linux
+homepage: https://www.kafkio.com/
+license: Unknown
+version: 2.1.19
+channels:
+    stable: 2.1.19
+provides:
+    - kafkio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.kafkio.com/download/kafkio/2.1.19/KafkIO-win-2.1.19-x64.zip
+      sha256: 364fa063a6534a558eb49e0c6be1117b22bbd2db05e60c47da480ae371dc612f
+      bin:
+        - KafkIO.exe
+      strip: 1
+test: KafkIO --version

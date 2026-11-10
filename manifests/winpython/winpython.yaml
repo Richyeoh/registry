@@ -1,0 +1,36 @@
+api: v1
+name: winpython
+kind: app
+display: winpython
+description: Free, open-source and portable Python distribution for Windows
+homepage: https://winpython.github.io
+license: MIT
+version: 3.13.18.0
+channels:
+    stable: 3.13.18.0
+provides:
+    - winpython
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://sourceforge.net/projects/winpython/WinPython_3.13/3.13.18.0/WinPython64-3.13.18.0slim.7z
+      sha256: 41708849c273cb053ec676294aaed39fd385cff6c100164b6226f55e38b011b9
+      bin:
+        - scripts\python.bat.exe
+        - scripts\python.bat.exe
+        - Spyder.exe
+        - scripts\spyder_reset.bat.exe
+        - scripts\upgrade_pip.bat.exe
+        - scripts\winidle.bat.exe
+        - scripts\winidle.bat.exe
+        - scripts\winipython_notebook.bat.exe
+        - scripts\winipython_notebook.bat.exe
+        - scripts\winjupyter_lab.bat.exe
+        - scripts\winjupyter_lab.bat.exe
+        - scripts\winpython.bat.exe
+        - scripts\winspyder.bat.exe
+        - scripts\winvscode.bat.exe
+        - scripts\winvscode.bat.exe
+        - scripts\wpcp.bat.exe
+      strip: 1
+test: scripts\python.bat --version

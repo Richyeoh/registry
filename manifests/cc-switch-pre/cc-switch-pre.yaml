@@ -1,0 +1,21 @@
+api: v1
+name: cc-switch-pre
+kind: app
+display: cc-switch-pre
+description: A desktop all-in-one assistant tool for AI coding agents (Pre-release).
+homepage: https://ccswitch.io
+license: MIT
+version: 4.0.28
+channels:
+    stable: 4.0.28
+provides:
+    - cc-switch-pre
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/farion1231/cc-switch/releases/download/v4.0.28/CC-Switch-v4.0.28-Windows-Portable.zip
+      sha256: c690bc6ef1bc0bce62db50d8d089abf50eaa0c98f18765016b920f3c14b0c770
+      bin:
+        - cc-switch-pre.exe
+      strip: 1
+test: cc-switch-pre --version

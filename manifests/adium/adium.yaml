@@ -1,0 +1,32 @@
+api: v1
+name: adium
+kind: app
+display: Adium
+description: Instant messaging application
+homepage: https://www.adium.im/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.5.10.4
+channels:
+    stable: 1.5.10.4
+provides:
+    - adium
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://adiumx.cachefly.net/Adium_1.5.10.4.dmg
+      sha256: 31fa3fd32b86dd3381b60e0d5aafbc2a9452036f0fb4963bffbc2a6c64a9458b
+      bin:
+        - adium
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://adiumx.cachefly.net/Adium_1.5.10.4.dmg
+      sha256: 31fa3fd32b86dd3381b60e0d5aafbc2a9452036f0fb4963bffbc2a6c64a9458b
+      bin:
+        - adium
+      strip: 1
+test: adium --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

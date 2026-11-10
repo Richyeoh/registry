@@ -1,0 +1,24 @@
+api: v1
+name: persepolis
+kind: app
+display: persepolis
+description: Download manager & GUI for aria2.
+homepage: https://persepolisdm.github.io
+license: GPL-3.0-only
+version: 5.2.0.0
+channels:
+    stable: 5.2.0.0
+provides:
+    - persepolis
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/persepolisdm/persepolis/releases/download/5.2.0/persepolis_5.2.0.0_windows_64bit.exe
+      sha256: b3abf88579e72626367c87bb3168ad2129783764c1671b594257fa1c7ccc47dd
+      bin:
+        - Persepolis Download Manager.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall persepolis
+test: Persepolis Download Manager.exe --version

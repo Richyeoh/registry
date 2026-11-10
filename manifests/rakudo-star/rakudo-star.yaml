@@ -1,0 +1,27 @@
+api: v1
+name: rakudo-star
+kind: app
+display: rakudo-star
+description: The Rakudo Star Bundle contains the Rakudo Compiler, a collection of modules from the Raku ecosystem, and the language documentation.
+homepage: https://rakudo.org/star
+license: Artistic-2.0
+version: 2026.09-01
+channels:
+    stable: 2026.09-01
+provides:
+    - rakudo-star
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rakudo.org/dl/star/rakudo-star-2026.09-01-win-x86_64-msvc.msi
+      sha256: 9a4ae833d8820a05b7aa3675101927b690121acee003f65986eaa6d7dec2c176
+      bin:
+        - bin\perl6.exe
+        - bin\raku.exe
+        - bin\rakudo.exe
+        - share\perl6\site\bin\zef.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rakudo-star
+test: bin\perl6 --version

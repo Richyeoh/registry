@@ -1,0 +1,25 @@
+api: v1
+name: renderdoc
+kind: app
+display: renderdoc
+description: A stand-alone graphics debugging tool
+homepage: https://renderdoc.org
+license: MIT
+version: "1.47"
+channels:
+    stable: "1.47"
+provides:
+    - renderdoc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://renderdoc.org/stable/1.47/RenderDoc_1.47_64.msi
+      sha256: 240e12535dd52c44e05bc134526bbb7e06390ae8e1fba8104e881c9998397725
+      bin:
+        - qrenderdoc.exe
+        - renderdoccmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall renderdoc
+test: qrenderdoc --version

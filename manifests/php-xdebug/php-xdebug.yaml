@@ -1,0 +1,21 @@
+api: v1
+name: php-xdebug
+kind: app
+display: php-xdebug
+description: An extension for PHP to assist with debugging and development. (Thread Safe)
+homepage: https://xdebug.org/
+license: Unknown
+version: 3.5.3-85
+channels:
+    stable: 3.5.3-85
+provides:
+    - php-xdebug
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://xdebug.org/files/php_xdebug-3.5.3-8.5-ts-vs17-x86_64.dll#/php_xdebug.dll
+      sha256: c75623ba050ddef734ba28a957e92df9ce5b8dfdb1a0569e5071bd6b68a12292
+      bin:
+        - php-xdebug.exe
+      strip: 1
+test: php-xdebug --version

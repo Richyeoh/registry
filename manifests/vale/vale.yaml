@@ -1,0 +1,21 @@
+api: v1
+name: vale
+kind: app
+display: vale
+description: A syntax-aware linter for prose
+homepage: https://vale.sh
+license: MIT
+version: 3.26.0
+channels:
+    stable: 3.26.0
+provides:
+    - vale
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vale-cli/vale/releases/download/v3.26.0/vale_3.26.0_Windows_64-bit.zip
+      sha256: c42f4b413aa29b6b36fa4e3ac0c18322588a54ac860db4c84b8255997f7d1ec2
+      bin:
+        - vale.exe
+      strip: 1
+test: vale --version

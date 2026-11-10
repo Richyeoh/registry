@@ -1,0 +1,21 @@
+api: v1
+name: terminal-parrot
+kind: app
+display: terminal-parrot
+description: A parrot for your terminal
+homepage: https://cultofthepartyparrot.com/
+license: MIT
+version: 1.2.1
+channels:
+    stable: 1.2.1
+provides:
+    - terminal-parrot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jmhobbs/terminal-parrot/releases/download/1.2.1/terminal-parrot_Windows_x86_64.zip
+      sha256: bbd042ae5432fd53c8910d21e9fad0aabfdb3a501c4899e3ebb12ca89ec19b30
+      bin:
+        - terminal-parrot.exe
+      strip: 1
+test: terminal-parrot --version

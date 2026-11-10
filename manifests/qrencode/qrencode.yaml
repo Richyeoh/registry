@@ -1,0 +1,21 @@
+api: v1
+name: qrencode
+kind: app
+display: qrencode
+description: Encode input data in a QR Code symbol
+homepage: https://fukuchi.org/works/qrencode/
+license: LGPL-2.1-only
+version: 4.1.1-4
+channels:
+    stable: 4.1.1-4
+provides:
+    - qrencode
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-qrencode-4.1.1-4-any.pkg.tar.zst
+      sha256: d91ac6591af8ba43f3e3b1481b855f79b918f87d013fde143e3ed3a3e8a265ca
+      bin:
+        - bin\qrencode.exe
+      strip: 1
+test: bin\qrencode --version

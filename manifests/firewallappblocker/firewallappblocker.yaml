@@ -1,0 +1,22 @@
+api: v1
+name: firewallappblocker
+kind: app
+display: firewallappblocker
+description: Use Windows Firewall to block or unblock certain applications.
+homepage: https://www.sordum.org/firewall-app-blocker
+license: Unknown
+version: "1.9"
+channels:
+    stable: "1.9"
+provides:
+    - firewallappblocker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/firewall-app-blocker/fab.zip
+      sha256: 278baecab6ce9d729425e5cd0aec0294f2ce5803342afc8328e4c7ae69a8dbfd
+      bin:
+        - Fab_x64.exe
+        - Fab_x64.exe
+      strip: 1
+test: Fab_x64 --version

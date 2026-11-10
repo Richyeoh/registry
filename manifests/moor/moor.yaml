@@ -1,0 +1,24 @@
+api: v1
+name: moor
+kind: app
+display: moor
+description: A pager designed to work without any configuration
+homepage: https://github.com/walles/moar/
+license: BSD-2-Clause-Views
+version: 2.19.6
+channels:
+    stable: 2.19.6
+provides:
+    - moor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/walles/moor/releases/download/v2.19.6/moor-v2.19.6-windows-amd64.exe#/moor.exe
+      sha256: f4eb394b10f6f882465b82eb299d393d09fe3d9c0efeb5758d62bb78bb1eba99
+      bin:
+        - moor.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall moor
+test: moor --version

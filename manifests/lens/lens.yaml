@@ -1,0 +1,21 @@
+api: v1
+name: lens
+kind: app
+display: lens
+description: IDE for Kubernetes clusters
+homepage: https://k8slens.dev
+license: Unknown
+version: 2026.11.91422-latest
+channels:
+    stable: 2026.11.91422-latest
+provides:
+    - lens
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://api.k8slens.dev/binaries/Lens%20Setup%202026.11.91422-latest.exe#/dl.7z
+      sha256: 948a47b3977cd0ba5415ccab7324875ebb7c169cde32e3da3c19595bb268d1c4
+      bin:
+        - lens.exe
+      strip: 1
+test: lens --version

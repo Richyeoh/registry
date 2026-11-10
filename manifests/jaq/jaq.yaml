@@ -1,0 +1,24 @@
+api: v1
+name: jaq
+kind: app
+display: jaq
+description: A jq clone focussed on correctness, speed, and simplicity
+homepage: https://github.com/01mf02/jaq/
+license: MIT
+version: 3.1.2
+channels:
+    stable: 3.1.2
+provides:
+    - jaq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/01mf02/jaq/releases/download/v3.1.2/jaq-x86_64-pc-windows-msvc.exe#/jaq.exe
+      sha256: 8159fcd68008e0dbaeca5c48afcf89acbbf15ccec36d1de9b1bd8658d07143ed
+      bin:
+        - jaq.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jaq
+test: jaq --version

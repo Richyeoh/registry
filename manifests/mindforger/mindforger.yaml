@@ -1,0 +1,24 @@
+api: v1
+name: mindforger
+kind: app
+display: mindforger
+description: Personal knowledge manager
+homepage: https://mindforger.com
+license: GPL-2.0-or-later
+version: 2.6.0
+channels:
+    stable: 2.6.0
+provides:
+    - mindforger
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dvorka/mindforger/releases/download/2.6.0/windows-installer-mindforger-2.6.0.exe
+      sha256: 6f63e1d57f5bb946417c1a65191cbabfa1f77a95420ce258b768fc17dd9ed96b
+      bin:
+        - bin\mindforger.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mindforger
+test: bin\mindforger --version

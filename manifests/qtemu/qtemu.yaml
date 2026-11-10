@@ -1,0 +1,21 @@
+api: v1
+name: qtemu
+kind: app
+display: qtemu
+description: Graphical User Interface for QEMU written in Qt
+homepage: https://gitlab.com/qtemu/gui
+license: GPL-2.0-or-later
+version: 3.0-beta1
+channels:
+    stable: 3.0-beta1
+provides:
+    - qtemu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/qtemu/releases/-/raw/main/3.0-beta1/qtemu_3.0-beta1-portable.zip
+      sha256: 8a321287ff7a40a9d2084f0de868d967576c594efb9f889ee985eba6cb16b0d3
+      bin:
+        - qtemu.exe
+      strip: 1
+test: qtemu --version

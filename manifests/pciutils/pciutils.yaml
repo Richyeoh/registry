@@ -1,0 +1,22 @@
+api: v1
+name: pciutils
+kind: app
+display: pciutils
+description: Inspect and manipulate configuration of PCI devices
+homepage: https://eternallybored.org/misc/pciutils/
+license: GPL-2.0-only
+version: 3.5.5
+channels:
+    stable: 3.5.5
+provides:
+    - pciutils
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://eternallybored.org/misc/pciutils/releases/pciutils-3.5.5-win64.zip
+      sha256: af239235f674b2ba1b76e52d4625d94b7fba1a3c004f0e29579439da624785d0
+      bin:
+        - lspci.exe
+        - setpci.exe
+      strip: 1
+test: lspci --version

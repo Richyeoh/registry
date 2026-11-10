@@ -1,0 +1,21 @@
+api: v1
+name: smartcontextmenu
+kind: app
+display: smartcontextmenu
+description: Smart context menu for all windows in the system.
+homepage: https://github.com/AlexanderPro/SmartContextMenu
+license: MIT
+version: 1.10.0
+channels:
+    stable: 1.10.0
+provides:
+    - smartcontextmenu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AlexanderPro/SmartContextMenu/releases/download/v1.10.0/SmartContextMenu_v1.10.0.zip
+      sha256: 74f764aa2632a4242877a8ccc16cc659777b52c45ea7f1f466085a0a186076dd
+      bin:
+        - SmartContextMenu.exe
+      strip: 1
+test: SmartContextMenu --version

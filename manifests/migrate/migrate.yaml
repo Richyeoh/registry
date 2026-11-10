@@ -1,0 +1,21 @@
+api: v1
+name: migrate
+kind: app
+display: migrate
+description: Reads and applies migrations in correct order to a database.
+homepage: https://github.com/golang-migrate/migrate
+license: MIT
+version: 4.20.1
+channels:
+    stable: 4.20.1
+provides:
+    - migrate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/golang-migrate/migrate/releases/download/v4.20.1/migrate.windows-amd64.zip
+      sha256: bf68e2fdd1c8efd3cac59c6cb4cddca51546c402e3fc616172329d7686875ce8
+      bin:
+        - migrate.exe
+      strip: 1
+test: migrate --version

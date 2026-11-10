@@ -21,4 +21,4 @@ platforms:
 installer:
     silent: /S
     uninstall: scoop uninstall powertoys
-test: powertoys.exe --version
+test: powertoys --version

@@ -1,0 +1,24 @@
+api: v1
+name: lutgen
+kind: app
+display: lutgen
+description: Blazingly fast interpolated LUT generator and applicator for arbitrary and popular color palettes. (CLI version)
+homepage: https://lut.sh
+license: MIT
+version: 1.1.1
+channels:
+    stable: 1.1.1
+provides:
+    - lutgen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ozwaldorf/lutgen-rs/releases/download/lutgen-v1.1.1/lutgen-cli-v-x86_64-pc-windows-msvc.exe#/lutgen.exe
+      sha256: 2eecd30d587b8e62ea48fc0f9ddf542e5bafbb0aa29408cdbb649164ba0cc22c
+      bin:
+        - lutgen.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall lutgen
+test: lutgen --version

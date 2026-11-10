@@ -1,0 +1,39 @@
+api: v1
+name: arcade-learning-environment
+kind: app
+display: arcade-learning-environment
+description: Platform for AI research
+homepage: https://github.com/Farama-Foundation/Arcade-Learning-Environment
+license: GPL-2.0-only
+keywords:
+    - brew
+    - homebrew
+version: 0.12.1
+channels:
+    stable: 0.12.1
+provides:
+    - arcade-learning-environment
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:c259e8b4017e598eae705b27b51775028f2503d46337fd07611559d9edd0fae8
+      sha256: c259e8b4017e598eae705b27b51775028f2503d46337fd07611559d9edd0fae8
+      bin:
+        - arcade-learning-environment
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:b36db8db921a8d64b70ca3756b68e304eb2d7b3a4bbfcfdf6b29450c6ae946fd
+      sha256: b36db8db921a8d64b70ca3756b68e304eb2d7b3a4bbfcfdf6b29450c6ae946fd
+      bin:
+        - arcade-learning-environment
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arcade-learning-environment/blobs/sha256:61b52908b8f89c9d04c9b4d2eb03f9b9b78b8d6a46e6e7131a2155b85ce9aff3
+      sha256: 61b52908b8f89c9d04c9b4d2eb03f9b9b78b8d6a46e6e7131a2155b85ce9aff3
+      bin:
+        - arcade-learning-environment
+      strip: 1
+test: arcade-learning-environment --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

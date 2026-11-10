@@ -1,0 +1,24 @@
+api: v1
+name: wingetcreate
+kind: app
+display: wingetcreate
+description: The Windows Package Manager Manifest Creator command-line tool
+homepage: https://github.com/microsoft/winget-create
+license: MIT
+version: 1.12.13.0
+channels:
+    stable: 1.12.13.0
+provides:
+    - wingetcreate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/winget-create/releases/download/v1.12.13.0/wingetcreate.exe
+      sha256: 24042bd37915805615e6cf969ac57c6439124c3fe85823327f5f3fb24bd9ffea
+      bin:
+        - wingetcreate.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wingetcreate
+test: wingetcreate --version

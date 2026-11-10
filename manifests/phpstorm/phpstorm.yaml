@@ -1,0 +1,21 @@
+api: v1
+name: phpstorm
+kind: app
+display: phpstorm
+description: Cross-Platform IDE for PHP by JetBrains.
+homepage: https://www.jetbrains.com/phpstorm/
+license: Unknown
+version: 2026.3-263.7307.215
+channels:
+    stable: 2026.3-263.7307.215
+provides:
+    - phpstorm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/webide/PhpStorm-2026.3.win.zip
+      sha256: 234aaa00dd79310a413a1a1c7dbca2ce73809a994eeb29f771492c8fa227ffa9
+      bin:
+        - IDE\bin\phpstorm64.exe
+      strip: 1
+test: IDE\bin\phpstorm64 --version

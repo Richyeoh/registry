@@ -1,0 +1,22 @@
+api: v1
+name: dbvis
+kind: app
+display: dbvis
+description: A universal database tool for developers, DBAs and analysts.
+homepage: https://www.dbvis.com/
+license: Unknown
+version: 26.2.5
+channels:
+    stable: 26.2.5
+provides:
+    - dbvis
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dbvis.com/product_download/dbvis-26.2.5/media/dbvis_windows-x64_26_2_5.zip
+      sha256: 49fab94753cff42a0f374547298aa81c9f1d4147d6329f42fd00c6582316ace3
+      bin:
+        - dbviscmd.bat.exe
+        - dbviscmd.bat.exe
+      strip: 1
+test: dbviscmd.bat --version

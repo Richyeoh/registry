@@ -1,0 +1,24 @@
+api: v1
+name: pgstream
+kind: app
+display: pgstream
+description: An open source CDC command-line tool and library that offers Postgres replication support with DDL changes to any provided target.
+homepage: https://xata.io/documentation/opensource/pgstream/overview
+license: Apache-2.0
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - pgstream
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xataio/pgstream/releases/download/v1.6.0/pgstream.win.amd64.exe#/pgstream.exe
+      sha256: fc00b0fc1168c6800f23c8a301cb829db887faf42ce61f74b08fa99da80a91ab
+      bin:
+        - pgstream.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pgstream
+test: pgstream --version

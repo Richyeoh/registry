@@ -1,0 +1,24 @@
+api: v1
+name: k3sup
+kind: app
+display: k3sup
+description: Utility to get from zero to KUBECONFIG with k3s on any local or remote VM
+homepage: https://k3sup.dev
+license: MIT
+version: 0.13.14
+channels:
+    stable: 0.13.14
+provides:
+    - k3sup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/alexellis/k3sup/releases/download/0.13.14/k3sup.exe
+      sha256: 13be55f63be59f579df89a5df070b1d1be07292aae2612ccbb97318ade9c6018
+      bin:
+        - k3sup.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall k3sup
+test: k3sup --version

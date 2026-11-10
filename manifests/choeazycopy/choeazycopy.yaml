@@ -1,0 +1,21 @@
+api: v1
+name: choeazycopy
+kind: app
+display: choeazycopy
+description: Simple and powerful GUI to Microsoft's RoboCopy tool.
+homepage: https://github.com/Cinchoo/ChoEazyCopy
+license: MIT
+version: 2.0.0.4
+channels:
+    stable: 2.0.0.4
+provides:
+    - choeazycopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Cinchoo/ChoEazyCopy/releases/download/v2.0.0.4/ChoEazyCopy.zip
+      sha256: 4f2312012f8474a2449a23eb4f4ac68f6f4218695b8777e0ae6cfd77b53f11b4
+      bin:
+        - ChoEazyCopy.exe
+      strip: 1
+test: ChoEazyCopy --version

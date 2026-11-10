@@ -1,0 +1,21 @@
+api: v1
+name: netwatch
+kind: app
+display: netwatch
+description: Real-time network diagnostics TUI — like htop for your network. Built with Rust + ratatui.
+homepage: https://netwatchlabs.com
+license: MIT
+version: 0.40.0
+channels:
+    stable: 0.40.0
+provides:
+    - netwatch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/matthart1983/netwatch/releases/download/v0.40.0/netwatch-windows-x86_64.exe.zip
+      sha256: 17c111c06aa6217a132cf2e24b7418b420f5902cc34d3c12ac88f7e00a99c97b
+      bin:
+        - netwatch-windows-x86_64.exe
+      strip: 1
+test: netwatch-windows-x86_64 --version

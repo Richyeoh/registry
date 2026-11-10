@@ -1,0 +1,39 @@
+api: v1
+name: akku
+kind: app
+display: akku
+description: Package manager for Scheme
+homepage: https://akkuscm.org/
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - akku
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/akku/blobs/sha256:37e126f095dc67e5b18a65b47b7a355469bc342162cfe3ef887d127483033326
+      sha256: 37e126f095dc67e5b18a65b47b7a355469bc342162cfe3ef887d127483033326
+      bin:
+        - akku
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/akku/blobs/sha256:5ecb9b8fb57b0a716f77474c94ac92c4bebcdee9647e8a91db5bc5a5169cf4d5
+      sha256: 5ecb9b8fb57b0a716f77474c94ac92c4bebcdee9647e8a91db5bc5a5169cf4d5
+      bin:
+        - akku
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/akku/blobs/sha256:63236c2d35f1582bc778671f52cd94bee6a6877b4271d41c84416fb958f1086d
+      sha256: 63236c2d35f1582bc778671f52cd94bee6a6877b4271d41c84416fb958f1086d
+      bin:
+        - akku
+      strip: 1
+test: akku --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

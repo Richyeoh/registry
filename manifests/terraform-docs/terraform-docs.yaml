@@ -1,0 +1,21 @@
+api: v1
+name: terraform-docs
+kind: app
+display: terraform-docs
+description: Generate documentation from Terraform modules in various output formats
+homepage: https://terraform-docs.io
+license: 'MIT License '
+version: 0.24.0
+channels:
+    stable: 0.24.0
+provides:
+    - terraform-docs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/terraform-docs/terraform-docs/releases/download/v0.24.0/terraform-docs-v0.24.0-windows-amd64.zip
+      sha256: afc02cbdf63726d3e5fb26a077ca1f24acd4820d7e44c21b03a3e030f9266490
+      bin:
+        - terraform-docs.exe
+      strip: 1
+test: terraform-docs --version

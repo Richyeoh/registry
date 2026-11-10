@@ -1,0 +1,21 @@
+api: v1
+name: microsip
+kind: app
+display: microsip
+description: SIP softphone for Windows based on PJSIP stack
+homepage: https://www.microsip.org
+license: GPL-2.0-only
+version: 3.22.23
+channels:
+    stable: 3.22.23
+provides:
+    - microsip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.microsip.org/download/MicroSIP-3.22.23.zip
+      sha256: 0784f095a10ae3218b3dbc93ec4a6e7bcef6121447b5463be37d52d2133c6492
+      bin:
+        - MicroSIP.exe
+      strip: 1
+test: MicroSIP --version

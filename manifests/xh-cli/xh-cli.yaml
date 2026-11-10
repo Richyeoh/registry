@@ -1,0 +1,22 @@
+api: v1
+name: xh-cli
+kind: app
+display: xh
+description: Friendly and fast tool for sending HTTP requests
+homepage: https://github.com/ducaale/xh/
+license: MIT
+version: 0.26.3
+channels:
+    stable: 0.26.3
+provides:
+    - xh-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ducaale/xh/releases/download/v0.26.3/xh-v0.26.3-x86_64-pc-windows-msvc.zip
+      sha256: 23d92fd78ff6a93c4e1c4de3a6b614bb8a31999acb441793630bcc37f9cd6c45
+      bin:
+        - xh.exe
+        - xhs.exe
+      strip: 1
+test: xh --version

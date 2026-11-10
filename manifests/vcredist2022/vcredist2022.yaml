@@ -1,0 +1,24 @@
+api: v1
+name: vcredist2022
+kind: app
+display: vcredist2022
+description: Microsoft Visual C++ Redistributable for Visual Studio 2015-2022
+homepage: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
+license: Unknown
+version: 14.51.36247.0
+channels:
+    stable: 14.51.36247.0
+provides:
+    - vcredist2022
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://aka.ms/vc14/vc_redist.x86.exe
+      sha256: 7b0117e6e20e9e349029c000a8a2715a52cf37c15b6bb697b2908e8bc7066cdf
+      bin:
+        - vcredist2022.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall vcredist2022
+test: vcredist2022 --version

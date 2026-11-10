@@ -1,0 +1,25 @@
+api: v1
+name: zsh
+kind: app
+display: zsh
+description: zsh
+homepage: https://www.zsh.org/
+license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 5.9.2
+channels:
+    stable: 5.9.2
+provides:
+    - zsh
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/zsh/download/
+      sha256: 92982239da698cd541ed2f8c366b6d152c06d0aad22c78f7313f364edab15433
+      bin:
+        - zsh
+test: zsh --version
+caveats: 由 Arch 官方仓自动转制（pacman/paru 源）

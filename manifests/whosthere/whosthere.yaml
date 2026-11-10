@@ -1,0 +1,21 @@
+api: v1
+name: whosthere
+kind: app
+display: whosthere
+description: Local Area Network discovery tool with an interactive Terminal User Interface (TUI) written in Go.
+homepage: https://github.com/ramonvermeulen/whosthere
+license: Apache-2.0
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - whosthere
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ramonvermeulen/whosthere/releases/download/v0.9.0/whosthere_0.9.0_windows_amd64.tar.gz
+      sha256: daf406b9833c1884fc6b5eccecfd70441a35a220b6ca887988faaa091392a2c2
+      bin:
+        - whosthere.exe
+      strip: 1
+test: whosthere --version

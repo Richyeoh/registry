@@ -1,0 +1,82 @@
+api: v1
+name: megacmd
+kind: app
+display: megacmd
+description: Manage MEGA.nz account and files from command line.
+homepage: https://mega.nz/cmd
+license: Unknown
+version: 2.7.0
+channels:
+    stable: 2.7.0
+provides:
+    - megacmd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mega.nz/MEGAcmdSetup.exe#/dl.7z
+      sha256: 56fab8ea266ac04bbe9ae04882ce0c5be8dca74dc9893f1f0ebe04e1dda4fb3b
+      bin:
+        - MEGAclient.exe
+        - MEGAcmdServer.exe
+        - MEGAcmdShell.exe
+        - MEGAclient.exe
+        - MEGAclient.exe
+        - mega-attr.bat.exe
+        - mega-backup.bat.exe
+        - mega-cancel.bat.exe
+        - mega-cat.bat.exe
+        - mega-cd.bat.exe
+        - mega-confirm.bat.exe
+        - mega-confirmcancel.bat.exe
+        - mega-cp.bat.exe
+        - mega-debug.bat.exe
+        - mega-deleteversions.bat.exe
+        - mega-df.bat.exe
+        - mega-du.bat.exe
+        - mega-errorcode.bat.exe
+        - mega-exclude.bat.exe
+        - mega-export.bat.exe
+        - mega-find.bat.exe
+        - mega-ftp.bat.exe
+        - mega-get.bat.exe
+        - mega-graphics.bat.exe
+        - mega-help.bat.exe
+        - mega-https.bat.exe
+        - mega-import.bat.exe
+        - mega-invite.bat.exe
+        - mega-ipc.bat.exe
+        - mega-killsession.bat.exe
+        - mega-lcd.bat.exe
+        - mega-log.bat.exe
+        - mega-login.bat.exe
+        - mega-logout.bat.exe
+        - mega-lpwd.bat.exe
+        - mega-ls.bat.exe
+        - mega-mediainfo.bat.exe
+        - mega-mkdir.bat.exe
+        - mega-mount.bat.exe
+        - mega-mv.bat.exe
+        - mega-passwd.bat.exe
+        - mega-preview.bat.exe
+        - mega-proxy.bat.exe
+        - mega-put.bat.exe
+        - mega-pwd.bat.exe
+        - mega-quit.bat.exe
+        - mega-reload.bat.exe
+        - mega-rm.bat.exe
+        - mega-session.bat.exe
+        - mega-share.bat.exe
+        - mega-showpcr.bat.exe
+        - mega-signup.bat.exe
+        - mega-speedlimit.bat.exe
+        - mega-sync.bat.exe
+        - mega-thumbnail.bat.exe
+        - mega-transfers.bat.exe
+        - mega-tree.bat.exe
+        - mega-userattr.bat.exe
+        - mega-users.bat.exe
+        - mega-version.bat.exe
+        - mega-webdav.bat.exe
+        - mega-whoami.bat.exe
+      strip: 1
+test: MEGAclient --version

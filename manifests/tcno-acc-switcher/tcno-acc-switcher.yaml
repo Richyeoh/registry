@@ -1,0 +1,21 @@
+api: v1
+name: tcno-acc-switcher
+kind: app
+display: tcno-acc-switcher
+description: A Super-fast account switcher for Steam, Battle.net, Epic Games, Origin, Riot, Ubisoft and many others!
+homepage: https://github.com/TcNobo/TcNo-Acc-Switcher
+license: GPL-3.0-only,LGPL-2.1-only,...
+version: 2025-11-20_03
+channels:
+    stable: 2025-11-20_03
+provides:
+    - tcno-acc-switcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TCNOco/TcNo-Acc-Switcher/releases/download/2025-11-20_03/TcNo-Acc-Switcher_2025-11-20_03.7z
+      sha256: f913135639584a8b4850ed8e1ece5a3fdbc32624deebf8ec804cb6b1884e5341
+      bin:
+        - tcno-acc-switcher.exe
+      strip: 1
+test: tcno-acc-switcher --version

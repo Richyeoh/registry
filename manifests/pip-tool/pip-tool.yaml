@@ -1,0 +1,24 @@
+api: v1
+name: pip-tool
+kind: app
+display: pip-tool
+description: Use the Picture in Picture mode on Windows.
+homepage: https://github.com/LionelJouin/PiP-Tool
+license: MIT
+version: 1.1.2
+channels:
+    stable: 1.1.2
+provides:
+    - pip-tool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LionelJouin/PiP-Tool/releases/download/1.1.2/PiP-Tool.msi
+      sha256: 1ab3c5eae280d57bada02a12bf0f8a6e23871a0d9671da89b4614af2b8a2cef3
+      bin:
+        - pip-tool.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pip-tool
+test: pip-tool --version

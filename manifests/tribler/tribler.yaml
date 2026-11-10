@@ -1,0 +1,21 @@
+api: v1
+name: tribler
+kind: app
+display: tribler
+description: Privacy enhanced BitTorrent client with P2P content discovery
+homepage: https://www.tribler.org
+license: LGPL-3.0-only
+version: 8.4.3
+channels:
+    stable: 8.4.3
+provides:
+    - tribler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Tribler/tribler/releases/download/v8.4.3/Tribler_8.4.3_x64.exe#/dl.7z
+      sha256: af007ac7e77d823ea7beba1e4762fcf112a50e710b668f2ba923feceeac038dd
+      bin:
+        - tribler.exe
+      strip: 1
+test: tribler --version

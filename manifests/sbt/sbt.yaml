@@ -1,0 +1,21 @@
+api: v1
+name: sbt
+kind: app
+display: sbt
+description: A build tool for Scala, Java, and more
+homepage: https://www.scala-sbt.org
+license: BSD-3-Clause
+version: 2.0.12
+channels:
+    stable: 2.0.12
+provides:
+    - sbt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sbt/sbt/releases/download/v2.0.12/sbt-2.0.12.zip
+      sha256: 73f9c4a10584cde3d37d773e2b38d2fc4348c6cef8d88da8b7dd41e7d5f614d7
+      bin:
+        - bin\sbt.bat.exe
+      strip: 1
+test: bin\sbt.bat --version

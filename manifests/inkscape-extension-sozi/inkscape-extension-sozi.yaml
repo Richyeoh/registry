@@ -1,0 +1,21 @@
+api: v1
+name: inkscape-extension-sozi
+kind: app
+display: inkscape-extension-sozi
+description: Inkscape extension to insert video or audio to SVG document.
+homepage: https://sozi.baierouge.fr/
+license: MPL-2.0
+version: 23.07.25
+channels:
+    stable: 23.07.25
+provides:
+    - inkscape-extension-sozi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sozi-projects/Sozi/releases/download/v23.07/sozi-extras-media-23.07.25-1690311612-inkscape-1.0.zip
+      sha256: 467035bb09ac25f976c80cb6e0ed2a95343c47b11478e53ace797df887b9ea49
+      bin:
+        - inkscape-extension-sozi.exe
+      strip: 1
+test: inkscape-extension-sozi --version

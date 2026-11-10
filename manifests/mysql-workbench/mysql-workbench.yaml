@@ -1,0 +1,24 @@
+api: v1
+name: mysql-workbench
+kind: app
+display: mysql-workbench
+description: Integrated tools environment for database design, modeling, development, administration, and migration.
+homepage: https://dev.mysql.com/downloads/workbench/
+license: GPL-2.0-only
+version: 26.10.0
+channels:
+    stable: 26.10.0
+provides:
+    - mysql-workbench
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-26.10.0-winx64.msi
+      sha256: 399e325b2492827eba3772fc5f0535a618503630d89864bbc265869c2557def9
+      bin:
+        - mysql-workbench.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mysql-workbench
+test: mysql-workbench --version

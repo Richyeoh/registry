@@ -1,0 +1,21 @@
+api: v1
+name: kotlin-lsp
+kind: app
+display: kotlin-lsp
+description: Official Kotlin language server based on IntelliJ IDEA.
+homepage: https://github.com/Kotlin/kotlin-lsp
+license: Apache-2.0
+version: 263.7084.0
+channels:
+    stable: 263.7084.0
+provides:
+    - kotlin-lsp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/language-server/kotlin-server/263.7084.0/kotlin-server-263.7084.0.win.zip
+      sha256: be3bc4ef430cde315e6a83900ffb5d9cc454a36aabe9dd3ba7d4141b2d628164
+      bin:
+        - bin\intellij-server.exe
+      strip: 1
+test: bin\intellij-server --version

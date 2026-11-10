@@ -1,0 +1,21 @@
+api: v1
+name: aria2-134
+kind: app
+display: aria2-134
+description: Lightweight multi-protocol & multi-source command-line download utility, LAST version with SSLv3.0 and TLSv1.0 support
+homepage: https://aria2.github.io/
+license: GPL-2.0-or-later
+version: 1.34.0-1
+channels:
+    stable: 1.34.0-1
+provides:
+    - aria2-134
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aria2/aria2/releases/download/release-1.34.0/aria2-1.34.0-win-64bit-build1.zip
+      sha256: 2452e15b638be11c2919a5d1c15c0405a83eb8260c0f3853e8d195774dbdde61
+      bin:
+        - aria2c.exe
+      strip: 1
+test: aria2c --version

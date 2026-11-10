@@ -1,0 +1,21 @@
+api: v1
+name: soundcraft
+kind: app
+display: soundcraft
+description: Recording, editing and mixing audio; an open-source, clean-room reimplementation of Avid Pro Tools, rebuilt in pure Rust
+homepage: https://github.com/storytold/soundcraft
+license: MIT|Apache-2.0
+version: 0.18.0
+channels:
+    stable: 0.18.0
+provides:
+    - soundcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/soundcraft/releases/download/v0.18.0/soundcraft-0.18.0-windows-x64-portable.zip
+      sha256: 7c15def775cbaf61a9e663f055c97c0bf6a3c262ad71269dec8f9c897b4624b2
+      bin:
+        - soundcraft-cli.exe
+      strip: 1
+test: soundcraft-cli --version

@@ -1,0 +1,21 @@
+api: v1
+name: vector
+kind: app
+display: vector
+description: Collect, transform, & route all observability data.
+homepage: https://vector.dev
+license: Apache-2.0
+version: 0.61.0
+channels:
+    stable: 0.61.0
+provides:
+    - vector
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vectordotdev/vector/releases/download/v0.61.0/vector-0.61.0-x86_64-pc-windows-msvc.zip
+      sha256: 6a04e833f9a91f874688e8087d768f5cb35d40e3271c87df6258e271915d0f49
+      bin:
+        - bin\vector.exe
+      strip: 1
+test: bin\vector --version

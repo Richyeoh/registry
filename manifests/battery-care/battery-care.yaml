@@ -1,0 +1,21 @@
+api: v1
+name: battery-care
+kind: app
+display: battery-care
+description: 'Tool to optimize the usage and performance of the modern laptop''s battery. '
+homepage: https://batterycare.net/
+license: Freeware
+version: 0.9.40
+channels:
+    stable: 0.9.40
+provides:
+    - battery-care
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://batterycare.net/files/BatteryCarePortable.zip
+      sha256: 9df29fe5f21f0a82a219fc1cd5fd1ef9d978007fe8be78913cbdc898a80a6f3f
+      bin:
+        - battery-care.exe
+      strip: 1
+test: battery-care --version

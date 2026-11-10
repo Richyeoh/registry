@@ -1,0 +1,24 @@
+api: v1
+name: jjazzlab
+kind: app
+display: jjazzlab
+description: Make your own dynamic backing tracks in just a few minutes.
+homepage: https://www.jjazzlab.org/en/
+license: LGPL-2.1-or-later
+version: 5.2.1
+channels:
+    stable: 5.2.1
+provides:
+    - jjazzlab
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jjazzboss/JJazzLab/releases/download/5.2.1/JJazzLab-5.2.1-Win64-Setup.exe
+      sha256: 11221bd071d836c93efbf998ec3aec225e6206e25ec1528ecd0ce6329331d3c3
+      bin:
+        - jjazzlab.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jjazzlab
+test: jjazzlab --version

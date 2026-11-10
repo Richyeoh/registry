@@ -1,0 +1,21 @@
+api: v1
+name: screenoff
+kind: app
+display: screenoff
+description: '[Archived] Turn off Windows laptop monitor screen in a click, without putting it to Sleep.'
+homepage: https://www.thewindowsclub.com/screenoff-turn-off-windows-laptop-screen
+license: Freeware
+version: "2.1"
+channels:
+    stable: "2.1"
+provides:
+    - screenoff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://web.archive.org/web/20220519202920if_/https://www.thewindowsclub.com/downloads/Scrof.zip
+      sha256: 3c459278dd005b0e334d66a794b7904e73789d4720b13109c1dadbe1e2156fce
+      bin:
+        - ScreenOff.exe
+      strip: 1
+test: ScreenOff --version

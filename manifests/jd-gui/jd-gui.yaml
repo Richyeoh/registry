@@ -1,0 +1,21 @@
+api: v1
+name: jd-gui
+kind: app
+display: jd-gui
+description: A standalone Java Decompiler GUI
+homepage: https://github.com/java-decompiler/jd-gui
+license: GPL-3.0-only
+version: 1.6.6
+channels:
+    stable: 1.6.6
+provides:
+    - jd-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar#/jd-gui.jar
+      sha256: 2c9d3efa8b06438a7284139f68f6efcbfb2a11e0b9d20a3370d50189685afc0b
+      bin:
+        - jd-gui.jar.exe
+      strip: 1
+test: jd-gui.jar --version

@@ -1,0 +1,24 @@
+api: v1
+name: envsubst
+kind: app
+display: envsubst
+description: Environment variables substitution
+homepage: https://github.com/a8m/envsubst
+license: MIT
+version: 1.4.3
+channels:
+    stable: 1.4.3
+provides:
+    - envsubst
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/a8m/envsubst/releases/download/v1.4.3/envsubst.exe
+      sha256: 0087f228aca9f308dcc9e97ba3c8ffd0ea343cfc9451364840479a5bf41164be
+      bin:
+        - envsubst.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall envsubst
+test: envsubst --version

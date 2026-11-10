@@ -1,0 +1,21 @@
+api: v1
+name: notepad
+kind: app
+display: notepad--
+description: A cross-platform text editor aiming to replace Notepad++.
+homepage: https://github.com/cxasm/notepad--
+license: GPL-3.0-or-later
+version: 3.9.2
+channels:
+    stable: 3.9.2
+provides:
+    - notepad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cxasm/notepad--/releases/download/notepad-v3.9.2/Notepad--v3.9.2-win10-portable.zip
+      sha256: 68e95ba7b5f97e98e60ef571ecd8a1e99f7a88052e99cabc4bf25eb7b1eae910
+      bin:
+        - Notepad--.exe
+      strip: 1
+test: Notepad-- --version

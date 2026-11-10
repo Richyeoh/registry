@@ -1,0 +1,21 @@
+api: v1
+name: buildcache
+kind: app
+display: buildcache
+description: An advanced compiler accelerator that caches and reuses build results to avoid unnecessary re-compilations, and thereby speeding up the build process.
+homepage: https://gitlab.com/bits-n-bites/buildcache
+license: Zlib
+version: 0.33.2
+channels:
+    stable: 0.33.2
+provides:
+    - buildcache
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/bits-n-bites/buildcache/-/releases/v0.33.2/downloads/buildcache-windows.zip
+      sha256: 8418ccb80ca3a11bdce6ef4bcd2015fca49afcf2d953829f0e48afa42a0059bf
+      bin:
+        - buildcache.exe
+      strip: 1
+test: buildcache --version

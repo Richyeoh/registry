@@ -1,0 +1,21 @@
+api: v1
+name: ssh3
+kind: app
+display: ssh3
+description: 'SSH3: faster and rich secure shell using HTTP/3'
+homepage: https://arxiv.org/abs/2312.08396
+license: Apache-2.0
+version: 0.1.7
+channels:
+    stable: 0.1.7
+provides:
+    - ssh3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/francoismichel/ssh3/releases/download/v0.1.7/ssh3_0.1.7_clientonly_windows_x86_64.zip
+      sha256: 81b2166fea113b4978b51d5d6fa4d9e23dd0b18c8409d16a5dcb6a97c5bef3bb
+      bin:
+        - ssh3.exe
+      strip: 1
+test: ssh3 --version

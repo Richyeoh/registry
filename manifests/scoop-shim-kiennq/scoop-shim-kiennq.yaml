@@ -1,0 +1,21 @@
+api: v1
+name: scoop-shim-kiennq
+kind: app
+display: scoop-shim-kiennq
+description: A better shim.exe file for Scoop
+homepage: https://github.com/kiennq/scoop-better-shimexe
+license: MIT|Unlicense
+version: 3.2.2
+channels:
+    stable: 3.2.2
+provides:
+    - scoop-shim-kiennq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kiennq/scoop-better-shimexe/releases/download/v3.2.2/shimexe-x86_64.zip
+      sha256: 27ee2cffa9d6f5f72f39a4f60d23b6ac3390db843a3b2eefb52d64daa80a8440
+      bin:
+        - scoop-shim-kiennq.exe
+      strip: 1
+test: scoop-shim-kiennq --version

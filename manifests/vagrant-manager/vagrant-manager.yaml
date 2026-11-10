@@ -1,0 +1,21 @@
+api: v1
+name: vagrant-manager
+kind: app
+display: vagrant-manager
+description: Status bar menu for managing all Vagrant machines from one central location
+homepage: https://github.com/absalomedia/vagrant-manager
+license: MIT
+version: 2.3.2
+channels:
+    stable: 2.3.2
+provides:
+    - vagrant-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/absalomedia/vagrant-manager/releases/download/2.3.2/vagrant-manager.exe#/dl.7z
+      sha256: c6a99b2e5b18f384ac5b25abc539c319efe9b3cd472c9b73a01130826b1f6240
+      bin:
+        - vagrant-manager.exe
+      strip: 1
+test: vagrant-manager --version

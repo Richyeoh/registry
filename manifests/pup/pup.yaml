@@ -1,0 +1,21 @@
+api: v1
+name: pup
+kind: app
+display: pup
+description: Parsing HTML at the command line
+homepage: https://github.com/ericchiang/pup
+license: MIT
+version: 0.4.0
+channels:
+    stable: 0.4.0
+provides:
+    - pup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_windows_amd64.zip
+      sha256: 6755cbd43e94eaf173689e93e914c7056a2249c2977e5b90024fb397f9b45ba4
+      bin:
+        - pup.exe
+      strip: 1
+test: pup --version

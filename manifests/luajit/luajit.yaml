@@ -1,0 +1,21 @@
+api: v1
+name: luajit
+kind: app
+display: luajit
+description: Just-In-Time Compiler (JIT) for the Lua programming language.
+homepage: https://luajit.org/luajit.html
+license: MIT
+version: 2.1.1793275035-1
+channels:
+    stable: 2.1.1793275035-1
+provides:
+    - luajit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-luajit-2.1.1793275035-1-any.pkg.tar.zst
+      sha256: fb9240d58ba413e3e6066618b7e797adb65c1b02ebb02b226e8bee4a5a03eba0
+      bin:
+        - bin\luajit.exe
+      strip: 1
+test: bin\luajit --version

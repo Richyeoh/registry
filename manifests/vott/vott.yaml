@@ -1,0 +1,21 @@
+api: v1
+name: vott
+kind: app
+display: vott
+description: End to end Object Detection Models builder from Images and Videos
+homepage: https://github.com/Microsoft/VoTT
+license: MIT
+version: 2.2.0
+channels:
+    stable: 2.2.0
+provides:
+    - vott
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/VoTT/releases/download/v2.2.0/vott-2.2.0-win32.exe#/dl.7z
+      sha256: 5ddd7cc2cbcfdd670a6503f74e3fa741051f25d358b513718190edbc10f5b9f2
+      bin:
+        - vott.exe
+      strip: 1
+test: vott --version

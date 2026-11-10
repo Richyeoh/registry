@@ -1,0 +1,21 @@
+api: v1
+name: revanced-cli
+kind: app
+display: revanced-cli
+description: Command-line application to use ReVanced Patcher to patch Android apps.
+homepage: https://revanced.app
+license: GPL-3.0-only
+version: 6.0.0
+channels:
+    stable: 6.0.0
+provides:
+    - revanced-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ReVanced/revanced-cli/releases/download/v6.0.0/revanced-cli-6.0.0-all.jar#/revanced-cli.jar
+      sha256: c25549bc17d59d2eb94fa5f86e60e9b77a02772ca88f7050f8f1276f923a9958
+      bin:
+        - revanced-cli.jar.exe
+      strip: 1
+test: revanced-cli.jar --version

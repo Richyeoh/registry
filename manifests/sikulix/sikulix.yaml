@@ -1,0 +1,21 @@
+api: v1
+name: sikulix
+kind: app
+display: sikulix
+description: Visual Automation and Testing
+homepage: https://sikulix.github.io/
+license: MIT
+version: 2.0.5
+channels:
+    stable: 2.0.5
+provides:
+    - sikulix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://launchpad.net/sikuli/sikulix/2.0.5/+download/sikulixide-2.0.5.jar#/sikulix.jar
+      sha256: f4b0b50c8e413094e78cd1d8fed02ae65f62f8c53ed00da0562fdedf4acff729
+      bin:
+        - sikulix.jar.exe
+      strip: 1
+test: sikulix.jar --version

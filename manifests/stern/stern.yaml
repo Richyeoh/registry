@@ -1,0 +1,21 @@
+api: v1
+name: stern
+kind: app
+display: stern
+description: Multi pod and container log tailing for Kubernetes
+homepage: https://github.com/stern/stern
+license: Apache-2.0
+version: 1.35.0
+channels:
+    stable: 1.35.0
+provides:
+    - stern
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stern/stern/releases/download/v1.35.0/stern_1.35.0_windows_amd64.tar.gz
+      sha256: 86944902f0f6e0b97a5e487cd77a216c34795df45fc8d753f61b765689f6e24f
+      bin:
+        - stern.exe
+      strip: 1
+test: stern --version

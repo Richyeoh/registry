@@ -1,0 +1,21 @@
+api: v1
+name: emscripten
+kind: app
+display: emscripten
+description: LLVM to WebAssembly compiler. Compiles C/C++ to WebAssembly that can be run on most web browsers.
+homepage: https://emscripten.org/
+license: MIT|NCSA
+version: 7.0.0
+channels:
+    stable: 7.0.0
+provides:
+    - emscripten
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/emscripten-core/emsdk/archive/refs/tags/7.0.0.zip
+      sha256: 3cf141a315960187ee9f28efe19e68fa1b851aa9d7037bb034cfa946c5fd17f7
+      bin:
+        - emscripten.exe
+      strip: 1
+test: emscripten --version

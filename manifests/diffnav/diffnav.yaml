@@ -1,0 +1,21 @@
+api: v1
+name: diffnav
+kind: app
+display: diffnav
+description: A git diff pager based on delta but with a file tree.
+homepage: https://github.com/dlvhdr/diffnav
+license: MIT
+version: 0.13.1
+channels:
+    stable: 0.13.1
+provides:
+    - diffnav
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dlvhdr/diffnav/releases/download/v0.13.1/diffnav_Windows_x86_64.zip
+      sha256: 96dbddae953871e6503d36170178f730dfe4532d60aa3aa24a21fe38489b0b14
+      bin:
+        - diffnav.exe
+      strip: 1
+test: diffnav --version

@@ -1,0 +1,21 @@
+api: v1
+name: ludusavi
+kind: app
+display: ludusavi
+description: PC video game save data backup tool
+homepage: https://github.com/mtkennerly/ludusavi
+license: MIT
+version: 0.31.0
+channels:
+    stable: 0.31.0
+provides:
+    - ludusavi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mtkennerly/ludusavi/releases/download/v0.31.0/ludusavi-v0.31.0-win64.zip
+      sha256: f47a8ad8c708f01d2eb124704973beffab205e292f5287a10fc4a101f8d68706
+      bin:
+        - ludusavi.exe
+      strip: 1
+test: ludusavi --version

@@ -1,0 +1,24 @@
+api: v1
+name: ldplayer
+kind: app
+display: ldplayer
+description: An Android emulator optimized for mobile gaming with lower resource consumption
+homepage: https://www.ldplayer.net
+license: Unknown
+version: 14.0.34.1
+channels:
+    stable: 14.0.34.1
+provides:
+    - ldplayer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static.ldrescdn.com/download/package/LDPlayer_14.0.34.1.exe
+      sha256: cbf33f4b6ece4d36d3eca84d0e3cbf6526c07b21cc1718554f99c06582d06ba3
+      bin:
+        - ldplayer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ldplayer
+test: ldplayer --version

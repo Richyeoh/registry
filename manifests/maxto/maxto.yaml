@@ -1,0 +1,21 @@
+api: v1
+name: maxto
+kind: app
+display: maxto
+description: Window manager that snaps windows into custom per-monitor grids via global hotkeys.
+homepage: https://maxto.net
+license: Shareware
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - maxto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/domino-as/maxto/releases/download/v3.1.0/MaxTo-3.1.0-win-x64.zip
+      sha256: 4a5ca8d11ed7a60f3c8cd095c18274211cd46e5c77e542ffd65bc75008c2916e
+      bin:
+        - MaxTo.exe
+      strip: 1
+test: MaxTo --version

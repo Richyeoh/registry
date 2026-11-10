@@ -1,0 +1,24 @@
+api: v1
+name: trillian
+kind: app
+display: trillian
+description: Modern and secure instant messaging
+homepage: https://www.trillian.im
+license: Unknown
+version: 6.6.0.19
+channels:
+    stable: 6.6.0.19
+provides:
+    - trillian
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://trillian.im/get/windows/6.6/trillian-v6.6.0.19.msi
+      sha256: f67474374ee3495ab14299abd7cfc7779dd24f96a3f45585c7d6d550aa2df653
+      bin:
+        - trillian.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall trillian
+test: trillian --version

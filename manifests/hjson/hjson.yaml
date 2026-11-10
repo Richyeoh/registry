@@ -1,0 +1,22 @@
+api: v1
+name: hjson
+kind: app
+display: hjson
+description: A user interface for JSON
+homepage: https://hjson.github.io/
+license: MIT
+version: 4.7.1
+channels:
+    stable: 4.7.1
+provides:
+    - hjson
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hjson/hjson-go/releases/download/v4.7.1/hjson_v4.7.1_windows_amd64.zip
+      sha256: 14b504f68284c192bf8a5dd6efbefa41fbda6c845062674eee8ae018a4046dd2
+      bin:
+        - hjson.exe
+        - hjson.exe
+      strip: 1
+test: hjson --version

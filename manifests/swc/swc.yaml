@@ -1,0 +1,24 @@
+api: v1
+name: swc
+kind: app
+display: swc
+description: A super-fast TypeScript / JavaScript compiler written in Rust
+homepage: https://swc.rs
+license: Apache-2.0
+version: 1.16.22
+channels:
+    stable: 1.16.22
+provides:
+    - swc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/swc-project/swc/releases/download/v1.16.22/swc-win32-x64-msvc.exe#/swc.exe
+      sha256: a976214b54e7bb108adb83954ba0ce0535f82563add5ff5a28b0e05f888825b1
+      bin:
+        - swc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall swc
+test: swc --version

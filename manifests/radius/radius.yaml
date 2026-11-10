@@ -1,0 +1,24 @@
+api: v1
+name: radius
+kind: app
+display: radius
+description: Radius is a cloud-native, portable application platform that makes app development easier for teams building cloud-native apps.
+homepage: https://radapp.io/
+license: Apache-2.0
+version: 0.62.0
+channels:
+    stable: 0.62.0
+provides:
+    - radius
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/radius-project/radius/releases/download/v0.62.0/rad_windows_amd64.exe#/rad.exe
+      sha256: 431e5d16a6cda68d2eef3344734c4c6e0a5d6281f09face4f505149dc62d73fe
+      bin:
+        - rad.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall radius
+test: rad --version

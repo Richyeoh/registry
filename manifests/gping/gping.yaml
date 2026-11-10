@@ -1,0 +1,21 @@
+api: v1
+name: gping
+kind: app
+display: gping
+description: Ping, but with a graph
+homepage: https://github.com/orf/gping
+license: MIT
+version: 1.21.0
+channels:
+    stable: 1.21.0
+provides:
+    - gping
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/orf/gping/releases/download/gping-v1.21.0/gping-Windows-msvc-x86_64.zip
+      sha256: 0de92fab46f4de8ac63f6d3247e9426bf430fae08d231bb513987dc7ea5b331d
+      bin:
+        - gping.exe
+      strip: 1
+test: gping --version

@@ -1,0 +1,21 @@
+api: v1
+name: taskt
+kind: app
+display: taskt
+description: A robotic process automation (rpa) client allows to build and design process automation without needing to write application code
+homepage: https://github.com/saucepleez/taskt
+license: Unknown
+version: 3.5.0.0
+channels:
+    stable: 3.5.0.0
+provides:
+    - taskt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/saucepleez/taskt/releases/download/v3.5.0.0/taskt.v3.5.0.0.zip
+      sha256: 926018699aefc8ce09e6e9b49c3c6bd96801c9ee315fbc41f537a8a91b9f86bd
+      bin:
+        - taskt.exe
+      strip: 1
+test: taskt --version

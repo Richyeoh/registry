@@ -1,0 +1,21 @@
+api: v1
+name: spotify-tui
+kind: app
+display: spotify-tui
+description: Spotify client for the terminal.
+homepage: https://github.com/Rigellute/spotify-tui
+license: MIT
+version: 0.25.0
+channels:
+    stable: 0.25.0
+provides:
+    - spotify-tui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Rigellute/spotify-tui/releases/download/v0.25.0/spotify-tui-windows.tar.gz
+      sha256: 423b7c1a842bb4cd847b492cad2d1c724e00f92ed913226e9ac1ab0925b0b639
+      bin:
+        - spt.exe
+      strip: 1
+test: spt --version

@@ -1,0 +1,21 @@
+api: v1
+name: tura
+kind: app
+display: tura
+description: A local, open-source coding agent designed to reduce token waste and model round trips.
+homepage: https://turaai.net
+license: AGPL-3.0-or-later
+version: 0.1.37
+channels:
+    stable: 0.1.37
+provides:
+    - tura
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Tura-AI/tura/releases/download/v0.1.37/tura-v0.1.37-windows-x64.zip
+      sha256: 64852dab231abd9a659fb614967d651b947d696761837d0fb73acd5d8704325d
+      bin:
+        - tura_exec.exe
+      strip: 1
+test: tura_exec --version

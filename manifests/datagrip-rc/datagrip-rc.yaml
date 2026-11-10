@@ -1,0 +1,21 @@
+api: v1
+name: datagrip-rc
+kind: app
+display: datagrip-rc
+description: Cross-Platform IDE for Databases & SQL by JetBrains. (Release Candidate)
+homepage: https://www.jetbrains.com/datagrip/
+license: Unknown
+version: 2026.3-263.7307.115
+channels:
+    stable: 2026.3-263.7307.115
+provides:
+    - datagrip-rc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/datagrip/datagrip-263.7307.115.exe#/dl.7z
+      sha256: 0d1a771254637de26c0425339f610dc810615281ed7b59ddeb945a5894999296
+      bin:
+        - IDE\bin\datagrip64.exe
+      strip: 1
+test: IDE\bin\datagrip64 --version

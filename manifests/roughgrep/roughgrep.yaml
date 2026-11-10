@@ -1,0 +1,21 @@
+api: v1
+name: roughgrep
+kind: app
+display: roughgrep
+description: Fast, brutalist UI on top of ripgrep.
+homepage: https://github.com/vivainio/RoughGrep/
+license: MIT
+version: 3.16.2
+channels:
+    stable: 3.16.2
+provides:
+    - roughgrep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vivainio/RoughGrep/releases/download/v3.16.2/RoughGrep-3.16.2.zip
+      sha256: 379e1cc0faf8a5bcb892e48cf9d7019ef35670dfdc97db77f4ba3f3eeefe2110
+      bin:
+        - rgg.exe
+      strip: 1
+test: rgg --version

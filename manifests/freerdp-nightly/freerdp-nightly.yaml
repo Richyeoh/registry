@@ -1,0 +1,25 @@
+api: v1
+name: freerdp-nightly
+kind: app
+display: freerdp-nightly
+description: A free implementation of the Remote Desktop Protocol (RDP).
+homepage: https://www.freerdp.com/
+license: Apache-2.0
+version: 3.33.1-dev0-2121.6f9229d55
+channels:
+    stable: 3.33.1-dev0-2121.6f9229d55
+provides:
+    - freerdp-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ci.freerdp.com/job/freerdp-nightly-windows/2121/arch=win64,label=vs2017/artifact/*zip*/archive.zip
+      sha256: 691f90e919f141c1bbc6fd86122eae69b442887aef712143d5e736cb45cb8b69
+      bin:
+        - freerdp-proxy.exe
+        - sdl-freerdp.exe
+        - sfreerdp-server.exe
+        - winpr-hash.exe
+        - winpr-makecert.exe
+      strip: 1
+test: freerdp-proxy --version

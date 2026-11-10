@@ -1,0 +1,24 @@
+api: v1
+name: netradio
+kind: app
+display: netradio
+description: Plays internet radio streams and manages your favorite stations.
+homepage: https://www.netradio.info/app/
+license: Freeware
+version: 2.6.1
+channels:
+    stable: 2.6.1
+provides:
+    - netradio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.netradio.info/?sdm_process_download=1&download_id=212#/NetRadioSetup.exe
+      sha256: 536220e6d469566992badb853d1858c4d6b206cf14c173d8ca78b55f56c69e22
+      bin:
+        - netradio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall netradio
+test: netradio --version

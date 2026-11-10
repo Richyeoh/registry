@@ -1,0 +1,21 @@
+api: v1
+name: godot-alpha
+kind: app
+display: godot-alpha
+description: A feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface.
+homepage: https://godotengine.org/
+license: MIT
+version: 4.0-alpha17
+channels:
+    stable: 4.0-alpha17
+provides:
+    - godot-alpha
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/godotengine/godot-builds/releases/download/4.0-alpha17/Godot_v4.0-alpha17_win64.exe.zip
+      sha256: f9e0f32a72107bd8f2640cd38379aff62f72da35701802f3c0609965cfe12369
+      bin:
+        - godot.exe
+      strip: 1
+test: godot --version

@@ -1,0 +1,21 @@
+api: v1
+name: texteditoranywhere
+kind: app
+display: texteditoranywhere
+description: Text Editor Anywhere allows you to use your favourite text editor anywhere you can enter text.
+homepage: https://www.listary.com/text-editor-anywhere
+license: Unknown
+version: "2.01"
+channels:
+    stable: "2.01"
+provides:
+    - texteditoranywhere
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.listary.com/download/TEAPortable.zip
+      sha256: 18122737baed04bcd13e1d00f1ee8124420b02a312803209b695248a26320fae
+      bin:
+        - texteditoranywhere.exe
+      strip: 1
+test: texteditoranywhere --version

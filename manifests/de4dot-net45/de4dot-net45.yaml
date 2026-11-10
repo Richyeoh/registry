@@ -1,0 +1,21 @@
+api: v1
+name: de4dot-net45
+kind: app
+display: de4dot-net45
+description: .NET deobfuscator and unpacker. (for .NET 4.5 applications)
+homepage: https://github.com/de4dot/de4dot
+license: GPL-3.0-or-later
+version: 3.1.41592.3405
+channels:
+    stable: 3.1.41592.3405
+provides:
+    - de4dot-net45
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/de4dot/de4dot-net45.zip
+      sha256: 2d8942d0a63fab2d8e78827488c5cb7e2b6a8108ab2e5c3194359779a611f5ba
+      bin:
+        - de4dot-x64.exe
+      strip: 1
+test: de4dot-x64 --version

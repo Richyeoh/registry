@@ -1,0 +1,24 @@
+api: v1
+name: cppcheck
+kind: app
+display: cppcheck
+description: Static analysis tool for C/C++ code
+homepage: https://cppcheck.sourceforge.io/
+license: GPL-3.0-only
+version: 2.22.0
+channels:
+    stable: 2.22.0
+provides:
+    - cppcheck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cppcheck-opensource/cppcheck/releases/download/2.22.0/cppcheck-2.22.0-x64-Setup.msi
+      sha256: 3929162bab7e71d1b9b18708ec054fb0188bfc8ea1660979ed95837f5a9f547b
+      bin:
+        - cppcheck.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cppcheck
+test: cppcheck --version

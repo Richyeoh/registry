@@ -1,0 +1,31 @@
+api: v1
+name: apktool
+kind: app
+display: apktool
+description: A tool for reverse engineering Android apk files
+homepage: https://apktool.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 3.0.3
+channels:
+    stable: 3.0.3
+provides:
+    - apktool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar#/apktool.jar
+      sha256: dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423
+      bin:
+        - apktool.cmd.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apktool/blobs/sha256:9a376927a5c810db5be63363485bfe4fb51cd0d6774a617b5ae37522a4d55300
+      sha256: 9a376927a5c810db5be63363485bfe4fb51cd0d6774a617b5ae37522a4d55300
+      bin:
+        - apktool
+      strip: 1
+test: apktool.cmd --version

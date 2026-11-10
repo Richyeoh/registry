@@ -1,0 +1,21 @@
+api: v1
+name: diffsitter
+kind: app
+display: diffsitter
+description: A tree-sitter based AST difftool to get meaningful semantic diffs
+homepage: https://github.com/afnanenayet/diffsitter
+license: MIT
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - diffsitter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/afnanenayet/diffsitter/releases/download/v0.9.0/diffsitter-x86_64-pc-windows-msvc.zip
+      sha256: 782662a3a668a80a30a11789403c0647365213a7723b4fac59896592afa4223f
+      bin:
+        - diffsitter.exe
+      strip: 1
+test: diffsitter --version

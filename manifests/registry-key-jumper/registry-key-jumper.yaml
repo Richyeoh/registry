@@ -1,0 +1,21 @@
+api: v1
+name: registry-key-jumper
+kind: app
+display: registry-key-jumper
+description: A tool that helps the user navigate to a user-defined registry key with minimal effort.
+homepage: https://www.sordum.org/registry-key-jumper
+license: Unknown
+version: "1.3"
+channels:
+    stable: "1.3"
+provides:
+    - registry-key-jumper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/registry-key-jumper/RegJump.zip
+      sha256: 0926c5511423645d594f7d0a6f299096408c9a615073ca37814b12d52a21965d
+      bin:
+        - RegJump.exe
+      strip: 1
+test: RegJump --version

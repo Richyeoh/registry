@@ -1,0 +1,21 @@
+api: v1
+name: logisim-evolution
+kind: app
+display: logisim-evolution
+description: Digital logic design tool and simulator
+homepage: https://github.com/logisim-evolution/logisim-evolution
+license: GPL-3.0-only
+version: 5.0.0
+channels:
+    stable: 5.0.0
+provides:
+    - logisim-evolution
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/logisim-evolution/logisim-evolution/releases/download/v5.0.0/logisim-evolution-5.0.0-all.jar#/logisim-evolution.jar
+      sha256: 6b368e894742c04cc83aa9830f869bcab0190ede4df43ad6fecdb89b3a23a41c
+      bin:
+        - logisim-evolution.exe
+      strip: 1
+test: logisim-evolution --version

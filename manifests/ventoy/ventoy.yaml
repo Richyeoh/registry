@@ -1,0 +1,21 @@
+api: v1
+name: ventoy
+kind: app
+display: ventoy
+description: Bootable USB drive creator
+homepage: https://www.ventoy.net/en/index.html
+license: GPL-3.0-or-later
+version: 1.1.18
+channels:
+    stable: 1.1.18
+provides:
+    - ventoy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-windows.zip
+      sha256: 082c478e8c432e1ac653899fcf50e3a4077a2851bc6112b5ddd30545962164a9
+      bin:
+        - altexe\Ventoy2Disk_x64.exe
+      strip: 1
+test: altexe\Ventoy2Disk_x64 --version

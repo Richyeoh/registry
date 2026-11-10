@@ -1,0 +1,21 @@
+api: v1
+name: cyberchef
+kind: app
+display: cyberchef
+description: A web app for encryption, encoding, compression and data analysis
+homepage: https://gchq.github.io/CyberChef/
+license: Apache-2.0
+version: 11.5.0
+channels:
+    stable: 11.5.0
+provides:
+    - cyberchef
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gchq/CyberChef/releases/download/v11.5.0/CyberChef_8cd426dd4f40f1423912d5fad91b578a86a65112.zip#/CyberChef_v11.5.0.7z
+      sha256: f6478925d3eaa16ec08626a85f5b85eed10d531a5e18700615fed7ecb024cccf
+      bin:
+        - cyberchef.exe
+      strip: 1
+test: cyberchef --version

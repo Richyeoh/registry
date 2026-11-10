@@ -1,0 +1,23 @@
+api: v1
+name: mitmproxy
+kind: app
+display: mitmproxy
+description: A free and open source interactive HTTPS proxy
+homepage: https://mitmproxy.org/
+license: MIT
+version: 12.3.1
+channels:
+    stable: 12.3.1
+provides:
+    - mitmproxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://snapshots.mitmproxy.org/12.3.1/mitmproxy-12.3.1-windows-x86_64.zip
+      sha256: 336c03e7215876af329f57c44b1b738cfb22cd29dc7cd4c0714f15c7648af829
+      bin:
+        - mitmproxy.exe
+        - mitmweb.exe
+        - mitmdump.exe
+      strip: 1
+test: mitmproxy --version

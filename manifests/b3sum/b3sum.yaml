@@ -1,0 +1,55 @@
+api: v1
+name: b3sum
+kind: app
+display: b3sum
+description: Command line utility prints the BLAKE3 hashes of files or of standard input
+homepage: https://github.com/BLAKE3-team/BLAKE3
+license: CC0-1.0|Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.8.7
+channels:
+    stable: 1.8.7
+provides:
+    - b3sum
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BLAKE3-team/BLAKE3/releases/download/1.8.7/b3sum_windows_x64_bin.exe#/b3sum.exe
+      sha256: fce0c2406a1e92b49fedd02a48a67dc5ba71c3a85eb80a2f950ed985f90e76e2
+      bin:
+        - b3sum.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/b3sum/blobs/sha256:48ea5fc1c0ae2eceb806c28b380b4f4481ea85d020b63125d3385207032c4620
+      sha256: 48ea5fc1c0ae2eceb806c28b380b4f4481ea85d020b63125d3385207032c4620
+      bin:
+        - b3sum
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/b3sum/blobs/sha256:48ca239fc5c01bacec5a17b8e3e8e90c06535afd5295752f3c74ef0c89058057
+      sha256: 48ca239fc5c01bacec5a17b8e3e8e90c06535afd5295752f3c74ef0c89058057
+      bin:
+        - b3sum
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/b3sum/blobs/sha256:f7b6cb77ad29adf5a7463fc83e5e984a362aba096095b237a72472740a165ed8
+      sha256: f7b6cb77ad29adf5a7463fc83e5e984a362aba096095b237a72472740a165ed8
+      bin:
+        - b3sum
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/b3sum/blobs/sha256:95fdb3c4514bc2f7d352f323a4d20c8befd7c3794c41accb148d0379afb834bd
+      sha256: 95fdb3c4514bc2f7d352f323a4d20c8befd7c3794c41accb148d0379afb834bd
+      bin:
+        - b3sum
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall b3sum
+test: b3sum --version

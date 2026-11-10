@@ -1,0 +1,23 @@
+api: v1
+name: oidn
+kind: app
+display: oidn
+description: Intel Open Image Denoise library
+homepage: https://www.openimagedenoise.org/
+license: Apache-2.0
+version: 2.5.1
+channels:
+    stable: 2.5.1
+provides:
+    - oidn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RenderKit/oidn/releases/download/v2.5.1/oidn-2.5.1.x64.windows.zip
+      sha256: f11f91bc072a5e3a564515724cb72ab8fcfbc445c84a84c197ff9b16cc01396f
+      bin:
+        - oidnBenchmark.exe
+        - oidnDenoise.exe
+        - oidnTest.exe
+      strip: 1
+test: oidnBenchmark --version

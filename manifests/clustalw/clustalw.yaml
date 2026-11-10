@@ -1,0 +1,25 @@
+api: v1
+name: clustalw
+kind: app
+display: clustalw
+description: Clustal W. Tool for multiple alignment of nucleic acid and protein sequences. Developed by University College Dublin (command-line version)
+homepage: http://www.clustal.org/clustal2
+license: LGPL-2.0-or-later
+version: "2.1"
+channels:
+    stable: "2.1"
+provides:
+    - clustalw
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.clustal.org/download/current/clustalw-2.1-win.msi
+      sha256: 16237e44b520a52c7a1c39f1c839821366ec6d69b0e339d78cc51a3d1f6b8a74
+      bin:
+        - clustalw2.exe
+        - clustalw2.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall clustalw
+test: clustalw2 --version

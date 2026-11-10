@@ -1,0 +1,21 @@
+api: v1
+name: rife-ncnn-vulkan
+kind: app
+display: rife-ncnn-vulkan
+description: RIFE, Real-Time Intermediate Flow Estimation for Video Frame Interpolation implemented with ncnn library
+homepage: https://github.com/nihui/rife-ncnn-vulkan
+license: MIT
+version: "20221029"
+channels:
+    stable: "20221029"
+provides:
+    - rife-ncnn-vulkan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nihui/rife-ncnn-vulkan/releases/download/20221029/rife-ncnn-vulkan-20221029-windows.zip
+      sha256: d8e4d772d26cd8006ef0ad0bc82eb191b53c68677d1ae2f42506d74cbbbea606
+      bin:
+        - rife-ncnn-vulkan.exe
+      strip: 1
+test: rife-ncnn-vulkan --version

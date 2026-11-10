@@ -1,0 +1,21 @@
+api: v1
+name: gof
+kind: app
+display: gof
+description: Fuzzy search tool written in Go
+homepage: https://github.com/mattn/gof
+license: MIT
+version: 0.0.13
+channels:
+    stable: 0.0.13
+provides:
+    - gof
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mattn/gof/releases/download/v0.0.13/gof_v0.0.13_windows_amd64.zip
+      sha256: b3b27a935abd925764a3005cccb3c379347956c279c6019a7e4c3728db4413db
+      bin:
+        - gof.exe
+      strip: 1
+test: gof --version

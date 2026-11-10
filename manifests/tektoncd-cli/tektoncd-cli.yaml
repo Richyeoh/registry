@@ -1,0 +1,21 @@
+api: v1
+name: tektoncd-cli
+kind: app
+display: tektoncd-cli
+description: A CLI for interacting with Tekton - a cloud native CI/CD solution
+homepage: https://github.com/tektoncd/cli
+license: Apache-2.0
+version: 0.46.2
+channels:
+    stable: 0.46.2
+provides:
+    - tektoncd-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tektoncd/cli/releases/download/v0.46.2/tkn_0.46.2_Windows_x86_64.zip
+      sha256: 26d43bd6ca140831899c7ea909f364f6c5f1e67c9d818a8b088e79ce93012940
+      bin:
+        - tkn.exe
+      strip: 1
+test: tkn --version

@@ -1,0 +1,21 @@
+api: v1
+name: curlie
+kind: app
+display: curlie
+description: The power of curl, the ease of use of httpie
+homepage: https://rs.github.io/curlie
+license: MIT
+version: 1.8.2
+channels:
+    stable: 1.8.2
+provides:
+    - curlie
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rs/curlie/releases/download/v1.8.2/curlie_1.8.2_windows_amd64.zip
+      sha256: c9c722de200518bdde66ac1211fc10633fc21448dea90cb1f16e4f485a47fb56
+      bin:
+        - curlie.exe
+      strip: 1
+test: curlie --version

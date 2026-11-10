@@ -1,0 +1,21 @@
+api: v1
+name: chafa
+kind: app
+display: chafa
+description: Terminal graphics for the 21st century.
+homepage: https://hpjansson.org/chafa/
+license: LGPL-3.0-or-later
+version: 1.18.3
+channels:
+    stable: 1.18.3
+provides:
+    - chafa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://hpjansson.org/chafa/releases/static/chafa-1.18.3-1-x86_64-windows.zip
+      sha256: 3d7b43cab1c9d9116024ab48664db8910e3eabf0912720828d5e7ad1b80194fa
+      bin:
+        - chafa.exe
+      strip: 1
+test: chafa --version

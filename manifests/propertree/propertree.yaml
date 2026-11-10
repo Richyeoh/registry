@@ -1,0 +1,21 @@
+api: v1
+name: propertree
+kind: app
+display: propertree
+description: Cross platform GUI plist editor written in python.
+homepage: https://github.com/corpnewt/ProperTree
+license: BSD-3-Clause
+version: 0.2026.06.20
+channels:
+    stable: 0.2026.06.20
+provides:
+    - propertree
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/corpnewt/ProperTree/archive/51ed53dbe3c96a81686ae1fc47f6d2a92f668159.zip
+      sha256: 964273c86006f750785e810cfdf79bdc93ec0c93650daf54121d3712b734c9ac
+      bin:
+        - ProperTree.bat.exe
+      strip: 1
+test: ProperTree.bat --version

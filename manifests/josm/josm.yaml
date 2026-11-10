@@ -1,0 +1,21 @@
+api: v1
+name: josm
+kind: app
+display: josm
+description: An extensible editor for OpenStreetMap (OSM)
+homepage: https://josm.openstreetmap.de
+license: GPL-2.0-or-later
+version: "19678"
+channels:
+    stable: "19678"
+provides:
+    - josm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://josm.openstreetmap.de/download/josm-snapshot-19678.jar#/josm.jar
+      sha256: 9bae2b2b105002e4a948441a7e8a5fa4c184f7cfddd031d9a64d18a8d6d645fd
+      bin:
+        - josm.exe
+      strip: 1
+test: josm --version

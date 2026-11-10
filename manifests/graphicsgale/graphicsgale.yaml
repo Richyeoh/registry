@@ -1,0 +1,21 @@
+api: v1
+name: graphicsgale
+kind: app
+display: graphicsgale
+description: Animation graphic editor easy to use, powerful tool for spriting and pixel art.
+homepage: https://graphicsgale.com/us/
+license: Unknown
+version: 2.09.00
+channels:
+    stable: 2.09.00
+provides:
+    - graphicsgale
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://graphicsgale.com/files/GalePortable20900.zip
+      sha256: a89d7dc96d560534dd44247e29a5db8a8bcf435983885fabda9c2626f3e0f9bc
+      bin:
+        - graphicsgale.exe
+      strip: 1
+test: graphicsgale --version

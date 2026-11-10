@@ -1,0 +1,22 @@
+api: v1
+name: pulsar
+kind: app
+display: pulsar
+description: A community-led hyper-hackable text editor
+homepage: https://pulsar-edit.dev
+license: MIT
+version: 1.133.1
+channels:
+    stable: 1.133.1
+provides:
+    - pulsar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pulsar-edit/pulsar/releases/download/v1.133.1/Windows.Pulsar-1.133.1-win.zip
+      sha256: 040a75db0252378816c39582543336af869253a2df0b51422f09899dded766d2
+      bin:
+        - pulsar\resources\pulsar.cmd.exe
+        - pulsar\resources\app\ppm\bin\ppm.cmd.exe
+      strip: 1
+test: pulsar\resources\pulsar.cmd --version

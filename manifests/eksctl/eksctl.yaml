@@ -1,0 +1,21 @@
+api: v1
+name: eksctl
+kind: app
+display: eksctl
+description: A simple CLI tool for creating clusters on EKS - Amazon’s new managed Kubernetes service for EC2.
+homepage: https://eksctl.io
+license: Apache-2.0
+version: 0.231.0
+channels:
+    stable: 0.231.0
+provides:
+    - eksctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/eksctl-io/eksctl/releases/download/v0.231.0/eksctl_Windows_amd64.zip
+      sha256: ab46806ecab964e1b383c411cea51199cec07fbe28074bf1f099a2e1a24c99e3
+      bin:
+        - eksctl.exe
+      strip: 1
+test: eksctl --version

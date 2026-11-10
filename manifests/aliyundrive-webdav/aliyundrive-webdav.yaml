@@ -1,0 +1,21 @@
+api: v1
+name: aliyundrive-webdav
+kind: app
+display: aliyundrive-webdav
+description: Aliyundrive WebDav Service
+homepage: https://github.com/messense/aliyundrive-webdav
+license: MIT
+version: 2.3.3
+channels:
+    stable: 2.3.3
+provides:
+    - aliyundrive-webdav
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.3/aliyundrive-webdav-v2.3.3.x86_64-pc-windows-msvc.zip
+      sha256: 6582ce142faba27bb8b3ee0295dda209a675653f84fd69403cf54be2eacb9e13
+      bin:
+        - aliyundrive-webdav.exe
+      strip: 1
+test: aliyundrive-webdav --version

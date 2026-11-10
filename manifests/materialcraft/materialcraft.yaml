@@ -1,0 +1,21 @@
+api: v1
+name: materialcraft
+kind: app
+display: materialcraft
+description: An open-source, node-based material designer written from scratch in pure Rust.
+homepage: https://getartcraft.com/apps/materialcraft
+license: MIT|Apache-2.0
+version: 0.2.0
+channels:
+    stable: 0.2.0
+provides:
+    - materialcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/materialcraft/releases/download/v0.2.0/materialcraft-0.2.0-windows-x64-portable.zip
+      sha256: 3fb4729f66fc211dda028e4e00fddc8ed42402402eddd1bf67c2716b8a8734c6
+      bin:
+        - materialcraft-cli.exe
+      strip: 1
+test: materialcraft-cli --version

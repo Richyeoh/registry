@@ -1,0 +1,21 @@
+api: v1
+name: raylib
+kind: app
+display: raylib
+description: A simple and easy-to-use library to enjoy videogames programming (this version is for the Microsoft Visual C++ compiler)
+homepage: https://www.raylib.com/
+license: Zlib
+version: "6.2"
+channels:
+    stable: "6.2"
+provides:
+    - raylib
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/raysan5/raylib/releases/download/6.2/raylib-6.2_win64_msvc16.zip
+      sha256: 8467b5dd6db4d7ab942f3148a3d30d93be6ed9b2fab88069d177e59604268ebd
+      bin:
+        - raylib.exe
+      strip: 1
+test: raylib --version

@@ -1,0 +1,21 @@
+api: v1
+name: abc
+kind: app
+display: abc
+description: Command-line tool to interact with appbase.io
+homepage: https://github.com/appbaseio/abc
+license: Apache-2.0
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - abc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/appbaseio/abc/releases/download/1.0.0/abc-windows-1.0.0.zip
+      sha256: 4f8500a7a8d6e4b924f9bf719f0f623d66141ef89c57353787511c262ce04745
+      bin:
+        - abc.exe
+      strip: 1
+test: abc --version

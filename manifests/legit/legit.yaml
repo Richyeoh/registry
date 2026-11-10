@@ -1,0 +1,24 @@
+api: v1
+name: legit
+kind: app
+display: legit
+description: Complementary command-line interface for Git.
+homepage: https://frostming.github.io/legit/
+license: Unknown
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - legit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/frostming/legit/releases/download/1.2.0/legit.exe
+      sha256: 2c4aa8a777141cad9171a7aec9b91d6570443644f7ca040903773620074d361b
+      bin:
+        - legit.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall legit
+test: legit --version

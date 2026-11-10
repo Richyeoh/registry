@@ -1,0 +1,24 @@
+api: v1
+name: tb-vol-scroll
+kind: app
+display: tb-vol-scroll
+description: Control audio by scrolling in taskbar area.
+homepage: https://github.com/dvingerh/tb-vol-scroll
+license: MIT
+version: 4.1.2
+channels:
+    stable: 4.1.2
+provides:
+    - tb-vol-scroll
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dvingerh/tb-vol-scroll/releases/download/4.1.2/tb-vol-scroll.exe
+      sha256: 80c1025314a976b71e4122288cacb5344f6ea3b02ab4c0fbb68b8bda8192995d
+      bin:
+        - tb-vol-scroll.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tb-vol-scroll
+test: tb-vol-scroll --version

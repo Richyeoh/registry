@@ -1,0 +1,21 @@
+api: v1
+name: clementine
+kind: app
+display: clementine
+description: A modern music player and library organizer.
+homepage: https://www.clementine-player.org/
+license: GPL-3.0-only
+version: 1.4.2-55
+channels:
+    stable: 1.4.2-55
+provides:
+    - clementine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/clementine-player/Clementine/releases/download/1.4.2-55-g4c062729d/ClementineSetup-1.4.2-55-g4c062729d.exe#/dl.7z
+      sha256: 6d3511d11184d2c72ea4127c3e4fc5c746ffe21ebe3c2a0726cc548a276745e8
+      bin:
+        - clementine.exe
+      strip: 1
+test: clementine --version

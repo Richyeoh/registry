@@ -1,0 +1,21 @@
+api: v1
+name: kustomize
+kind: app
+display: kustomize
+description: Customize raw, template-free YAML files for multiple purposes, leaving the original YAML untouched and usable as is.
+homepage: https://github.com/kubernetes-sigs/kustomize
+license: Apache-2.0
+version: 5.8.3
+channels:
+    stable: 5.8.3
+provides:
+    - kustomize
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v5.8.3/kustomize_v5.8.3_windows_amd64.zip
+      sha256: 763c4040ff01435bfce39661072452ebdf1cf2808bb91f5708ab4420834fbd42
+      bin:
+        - kustomize.exe
+      strip: 1
+test: kustomize --version

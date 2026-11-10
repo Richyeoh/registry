@@ -1,0 +1,21 @@
+api: v1
+name: numa
+kind: app
+display: numa
+description: A portable DNS resolver in a single binary.
+homepage: https://numa.rs
+license: MIT
+version: 0.25.0
+channels:
+    stable: 0.25.0
+provides:
+    - numa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/razvandimescu/numa/releases/download/v0.25.0/numa-windows-x86_64.zip
+      sha256: 09a6d77bac27c9131d72a47a5d283d8aa71928f10d8df228a1ea57b30ebbc44c
+      bin:
+        - numa.exe
+      strip: 1
+test: numa --version

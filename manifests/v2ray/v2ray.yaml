@@ -1,0 +1,21 @@
+api: v1
+name: v2ray
+kind: app
+display: v2ray
+description: A platform for building proxies to bypass network restrictions.
+homepage: https://www.v2fly.org/en_US/
+license: MIT
+version: 5.53.0
+channels:
+    stable: 5.53.0
+provides:
+    - v2ray
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/v2fly/v2ray-core/releases/download/v5.53.0/v2ray-windows-64.zip
+      sha256: 46ee170d031ea3be79cc583e61e6335a612e4c87925deed2a7179b0a5fb79f60
+      bin:
+        - v2ray.exe
+      strip: 1
+test: v2ray --version

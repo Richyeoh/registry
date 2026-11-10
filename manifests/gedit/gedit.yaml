@@ -1,0 +1,24 @@
+api: v1
+name: gedit
+kind: app
+display: gedit
+description: A powerful general purpose text editor
+homepage: https://wiki.gnome.org/Apps/Gedit
+license: GPL-2.0-only
+version: 3.20.1
+channels:
+    stable: 3.20.1
+provides:
+    - gedit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.gnome.org/binaries/win64/gedit/gedit-x86_64-3.20.1.msi
+      sha256: 6f5be888c1128c302181d75fdece6085d4eb94391dc92d25df48946b2dd0a630
+      bin:
+        - bin\gedit.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gedit
+test: bin\gedit --version

@@ -1,0 +1,21 @@
+api: v1
+name: portqry
+kind: app
+display: portqry
+description: A command-line utility that you can use to help troubleshoot TCP/IP connectivity issues.
+homepage: https://www.microsoft.com/en-us/download/details.aspx?id=17148
+license: Unknown
+version: "2.0"
+channels:
+    stable: "2.0"
+provides:
+    - portqry
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/0/d/9/0d9d81cf-4ef2-4aa5-8cea-95a935ee09c9/PortQryV2.exe#/dl.7z
+      sha256: 6471c5190a99e3d1f337fcfef1fc410e8d487b66e093f924700e186cbd398dc0
+      bin:
+        - PortQry.exe
+      strip: 1
+test: PortQry --version

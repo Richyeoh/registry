@@ -1,0 +1,21 @@
+api: v1
+name: xpipe
+kind: app
+display: xpipe
+description: A connection hub and remote file manager to access your entire server infrastructure from your local desktop
+homepage: https://xpipe.io/
+license: Apache-2.0
+version: "24.10"
+channels:
+    stable: "24.10"
+provides:
+    - xpipe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xpipe-io/xpipe/releases/download/24.10/xpipe-portable-windows-x86_64.zip
+      sha256: 16991b0553a6821ce275087721e1ed4b1ace948dfeeb95974342029c6b97f86f
+      bin:
+        - xpipe.exe
+      strip: 1
+test: xpipe --version

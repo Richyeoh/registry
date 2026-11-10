@@ -1,0 +1,21 @@
+api: v1
+name: rider
+kind: app
+display: rider
+description: Cross-Platform IDE for .NET by JetBrains.
+homepage: https://www.jetbrains.com/rider/
+license: Unknown
+version: 2026.3-263.7307.258
+channels:
+    stable: 2026.3-263.7307.258
+provides:
+    - rider
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.win.zip
+      sha256: cf865415a2d83d3aad9ace02cddbb11f1285d4e0a28b03cbdaa46338a0097196
+      bin:
+        - IDE\bin\rider64.exe
+      strip: 1
+test: IDE\bin\rider64 --version

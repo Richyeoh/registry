@@ -1,0 +1,21 @@
+api: v1
+name: synology-surveillance-station
+kind: app
+display: synology-surveillance-station
+description: Desktop client for Synology Surveillance Station
+homepage: https://www.synology.com/en-global/surveillance
+license: Unknown
+version: 2.2.3-2598
+channels:
+    stable: 2.2.3-2598
+provides:
+    - synology-surveillance-station
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://global.download.synology.com/download/Utility/SurveillanceStationClient/2.2.3-2598/Windows/x86_64/Synology%20Surveillance%20Station%20Client-2.2.3-2598_x64.zip
+      sha256: 96e085734a46748a6f9756e7bb928af1581dc117cf25ff8bc96a833a9d7afee8
+      bin:
+        - synology-surveillance-station.exe
+      strip: 1
+test: synology-surveillance-station --version

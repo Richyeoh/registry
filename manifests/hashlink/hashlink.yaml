@@ -1,0 +1,21 @@
+api: v1
+name: hashlink
+kind: app
+display: hashlink
+description: HashLink is a virtual machine for Haxe
+homepage: https://hashlink.haxe.org/
+license: MIT
+version: 1.16.0
+channels:
+    stable: 1.16.0
+provides:
+    - hashlink
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HaxeFoundation/hashlink/releases/download/1.16/hashlink-1.16.0-win.zip
+      sha256: ec80b5bfbe93ae497ff43cd72d5bb4d906de3c6398839ba692fa28c47b54aa0f
+      bin:
+        - hl.exe
+      strip: 1
+test: hl --version

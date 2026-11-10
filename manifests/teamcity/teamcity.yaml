@@ -1,0 +1,21 @@
+api: v1
+name: teamcity
+kind: app
+display: teamcity
+description: Continuous Integration server by JetBrains.
+homepage: https://www.jetbrains.com/teamcity/
+license: Unknown
+version: 2026.2.2.239308
+channels:
+    stable: 2026.2.2.239308
+provides:
+    - teamcity
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/teamcity/TeamCity-2026.2.exe#/dl.7z
+      sha256: 30a822365d1dbf7d50dbfeb1142be428a70866b8132c67d40d67cbe6cc623f5c
+      bin:
+        - teamcity.ps1.exe
+      strip: 1
+test: teamcity.ps1 --version

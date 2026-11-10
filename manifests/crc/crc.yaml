@@ -1,0 +1,21 @@
+api: v1
+name: crc
+kind: app
+display: crc
+description: Manages a local OpenShift 4.x cluster optimized for testing and development purposes.
+homepage: https://crc.dev/blog/
+license: Apache-2.0
+version: 2.64.0
+channels:
+    stable: 2.64.0
+provides:
+    - crc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://developers.redhat.com/content-gateway/file/pub/cgw/crc/2.64.0/crc-windows-installer.zip
+      sha256: 2f3ffed8e72a9b8b8363d664eed54db6bee3154a24dd28ca4802ff1a34c2ec01
+      bin:
+        - crc.exe
+      strip: 1
+test: crc --version

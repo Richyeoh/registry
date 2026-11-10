@@ -1,0 +1,21 @@
+api: v1
+name: hcloud
+kind: app
+display: hcloud
+description: Command-line interface for Hetzner Cloud
+homepage: https://github.com/hetznercloud/cli
+license: MIT
+version: 1.70.2
+channels:
+    stable: 1.70.2
+provides:
+    - hcloud
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hetznercloud/cli/releases/download/v1.70.2/hcloud-windows-amd64.zip
+      sha256: b513ff648f690f34183a085a9c40fa1908f083733835ceaead4162a9533d9c9b
+      bin:
+        - hcloud.exe
+      strip: 1
+test: hcloud --version

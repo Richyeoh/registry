@@ -1,0 +1,21 @@
+api: v1
+name: dmde
+kind: app
+display: dmde
+description: Data searching, editing, and recovery on disks.
+homepage: https://dmde.com/
+license: Proprietary
+version: 4.4.4.842
+channels:
+    stable: 4.4.4.842
+provides:
+    - dmde
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dmde.com/download/dmde-4-4-4-842-win64-gui.zip
+      sha256: 205b2cb4c6531070df921af786350b53389e375d0fe00f1e344d87540c48a481
+      bin:
+        - dmde.exe
+      strip: 1
+test: dmde --version

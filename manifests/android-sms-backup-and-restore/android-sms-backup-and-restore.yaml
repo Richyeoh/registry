@@ -1,0 +1,21 @@
+api: v1
+name: android-sms-backup-and-restore
+kind: app
+display: android-sms-backup-and-restore
+description: Backup & Restore Android SMS on computer with ease.
+homepage: https://www.backuptrans.com/android-sms-backup-restore.html
+license: Unknown
+version: 2.14.44
+channels:
+    stable: 2.14.44
+provides:
+    - android-sms-backup-and-restore
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.backuptrans.com/download/exe/android-sms-backup-and-restore_x64.exe#/dl.7z
+      sha256: d656ecd70fd2e677b30190466aea6191cf6cc6d6723166c6533ecc8b1141524f
+      bin:
+        - android-sms-backup-and-restore.exe
+      strip: 1
+test: android-sms-backup-and-restore --version

@@ -1,0 +1,21 @@
+api: v1
+name: noti
+kind: app
+display: noti
+description: Monitor a process and trigger a notification.
+homepage: https://codeberg.org/roble/noti
+license: MIT
+version: 3.9.0
+channels:
+    stable: 3.9.0
+provides:
+    - noti
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://codeberg.org/roble/noti/releases/download/3.9.0/noti3.9.0.windows-amd64.tar.gz
+      sha256: 64a852e64b8ff474f7e26466ba04aa57a3a3600259d0875bfa79556f2fa9c7c2
+      bin:
+        - noti.exe
+      strip: 1
+test: noti --version

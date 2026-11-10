@@ -1,0 +1,21 @@
+api: v1
+name: ayugram
+kind: app
+display: ayugram
+description: AyuGram is a Telegram client with ghost mode and message history.
+homepage: https://github.com/AyuGram/AyuGramDesktop
+license: Unknown
+version: 7.2.9
+channels:
+    stable: 7.2.9
+provides:
+    - ayugram
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AyuGram/AyuGramDesktop/releases/download/v7.2.9/AyuGram.zip
+      sha256: 69aab831164169a6713314bb06792314d4e3af8fba6f1cfbdf2cdcbf44364684
+      bin:
+        - ayugram.exe
+      strip: 1
+test: ayugram --version

@@ -1,0 +1,24 @@
+api: v1
+name: chainctl
+kind: app
+display: chainctl
+description: Chainguard's command-line interface for managing container images, identity, and security configurations.
+homepage: https://edu.chainguard.dev/chainguard/chainctl-usage/
+license: Apache-2.0
+version: 0.2.399
+channels:
+    stable: 0.2.399
+provides:
+    - chainctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.enforce.dev/chainctl/0.2.399/chainctl_windows_x86_64.exe#/chainctl.exe
+      sha256: 3456783b93c64c015ef37ef49ee3c054eeddec2b065881ddc23be9673ca79061
+      bin:
+        - chainctl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall chainctl
+test: chainctl --version

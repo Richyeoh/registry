@@ -1,0 +1,24 @@
+api: v1
+name: prs
+kind: app
+display: prs
+description: Secure, fast & convenient password manager CLI with GPG & git sync
+homepage: https://github.com/timvisee/prs
+license: GPL-3.0-only
+version: 0.5.1
+channels:
+    stable: 0.5.1
+provides:
+    - prs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/timvisee/prs/releases/download/v0.5.1/prs-v0.5.1-windows.exe#/prs.exe
+      sha256: 145843fafaed55c24e01844a176803cb1ed41605c12b7e4fb4f539dff240beb3
+      bin:
+        - prs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall prs
+test: prs --version

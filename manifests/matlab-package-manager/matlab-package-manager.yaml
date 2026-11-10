@@ -1,0 +1,24 @@
+api: v1
+name: matlab-package-manager
+kind: app
+display: matlab-package-manager
+description: Official command line package manager for MathWorks products.
+homepage: https://www.mathworks.com/products/mpm.html
+license: Unknown
+version: "2026.8"
+channels:
+    stable: "2026.8"
+provides:
+    - matlab-package-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ssd.mathworks.com/supportfiles/downloads/mpm/2026.8/win64/mpm.exe
+      sha256: 10a7265efd1660d39ee27c24629fd7826aea6eeb7f6ad721f5e00ff7f0037939
+      bin:
+        - mpm.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall matlab-package-manager
+test: mpm --version

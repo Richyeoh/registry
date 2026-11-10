@@ -1,0 +1,21 @@
+api: v1
+name: github
+kind: app
+display: github
+description: Extend your GitHub workflow beyond your browser.
+homepage: https://desktop.github.com/
+license: MIT
+version: 3.6.10
+channels:
+    stable: 3.6.10
+provides:
+    - github
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/desktop/desktop/releases/download/release-3.6.10/GitHubDesktop-3.6.10-x64-full.nupkg
+      sha256: 0b6c599f45cf675208abd68459b3c8e99a533cc0a03e0d1544868a06d64e05fc
+      bin:
+        - GitHubDesktop.exe
+      strip: 1
+test: GitHubDesktop --version

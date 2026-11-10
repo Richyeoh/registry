@@ -1,0 +1,46 @@
+api: v1
+name: antlr4-cpp-runtime
+kind: app
+display: antlr4-cpp-runtime
+description: ANother Tool for Language Recognition C++ Runtime Library
+homepage: https://www.antlr.org/
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 4.13.2
+channels:
+    stable: 4.13.2
+provides:
+    - antlr4-cpp-runtime
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/antlr4-cpp-runtime/blobs/sha256:9976b623aca8022951150dabf94113fe87853c7c85c4d7bf8c9d7ed46beae583
+      sha256: 9976b623aca8022951150dabf94113fe87853c7c85c4d7bf8c9d7ed46beae583
+      bin:
+        - antlr4-cpp-runtime
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/antlr4-cpp-runtime/blobs/sha256:d57585d540e9bd85a3c4897c9504615b4e64b4f2c64f520f6ac8272488e2786a
+      sha256: d57585d540e9bd85a3c4897c9504615b4e64b4f2c64f520f6ac8272488e2786a
+      bin:
+        - antlr4-cpp-runtime
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/antlr4-cpp-runtime/blobs/sha256:01e069c449950cb7b6ce81e20a6e91dba6de3150f057337a12bb6a283ce96c06
+      sha256: 01e069c449950cb7b6ce81e20a6e91dba6de3150f057337a12bb6a283ce96c06
+      bin:
+        - antlr4-cpp-runtime
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/antlr4-cpp-runtime/blobs/sha256:996e85cb2900cd345d7750aab49167b89fe9eb9a098172a99ab8ff825278e5a6
+      sha256: 996e85cb2900cd345d7750aab49167b89fe9eb9a098172a99ab8ff825278e5a6
+      bin:
+        - antlr4-cpp-runtime
+      strip: 1
+test: antlr4-cpp-runtime --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

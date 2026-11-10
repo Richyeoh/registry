@@ -1,0 +1,21 @@
+api: v1
+name: brows3
+kind: app
+display: brows3
+description: A high-performance, open-source Amazon S3 browser and desktop client built with Rust and Tauri
+homepage: https://brows3.app
+license: MIT
+version: 0.2.46
+channels:
+    stable: 0.2.46
+provides:
+    - brows3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rgcsekaraa/brows3/releases/download/app-v0.2.46/Brows3_0.2.46_x64-portable.zip
+      sha256: ad39da62f02b230ac128225216bcee78d5875e5cc57e027806fe95aa1349136b
+      bin:
+        - brows3.exe
+      strip: 1
+test: brows3 --version

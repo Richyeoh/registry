@@ -1,0 +1,21 @@
+api: v1
+name: git-lfs
+kind: app
+display: git-lfs
+description: Git extension for versioning large files.
+homepage: https://git-lfs.com
+license: MIT
+version: 3.8.1
+channels:
+    stable: 3.8.1
+provides:
+    - git-lfs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-lfs/git-lfs/releases/download/v3.8.1/git-lfs-windows-amd64-v3.8.1.zip
+      sha256: 5bb771c12b3dacc535e912d0270a010c209d4da2e63819c5918e3547c2defed9
+      bin:
+        - git-lfs.exe
+      strip: 1
+test: git-lfs --version

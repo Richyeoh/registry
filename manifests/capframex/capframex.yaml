@@ -1,0 +1,21 @@
+api: v1
+name: capframex
+kind: app
+display: capframex
+description: Frametimes analysis tool compatible with OCAT
+homepage: https://github.com/CXWorld/CapFrameX
+license: MIT
+version: 1.9.1
+channels:
+    stable: 1.9.1
+provides:
+    - capframex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CXWorld/CapFrameX/releases/download/v1.9.1/release_1.9.1_portable.zip
+      sha256: 9153020eb74d716e2d00b98e259fc3414abc1c1e04a8272ce22194eb6e01a8d0
+      bin:
+        - CapFrameX.exe
+      strip: 1
+test: CapFrameX --version

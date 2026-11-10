@@ -1,0 +1,21 @@
+api: v1
+name: peerbanhelper
+kind: app
+display: peerbanhelper
+description: Automatically block unwanted, leeches and abnormal BT peers with support for customized and cloud rules.
+homepage: https://docs.pbh-btn.com/en/
+license: GPL-3.0-only
+version: 9.5.4
+channels:
+    stable: 9.5.4
+provides:
+    - peerbanhelper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PBH-BTN/PeerBanHelper/releases/download/v9.5.4/PeerBanHelper_Windows_9.5.4_Portable.zip
+      sha256: 238458c24b101c2090fcaed756e4d60bde14043a2e884779bd638cff8fa8633b
+      bin:
+        - peerbanhelper.exe
+      strip: 1
+test: peerbanhelper --version

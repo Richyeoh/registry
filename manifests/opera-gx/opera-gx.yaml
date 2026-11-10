@@ -1,0 +1,24 @@
+api: v1
+name: opera-gx
+kind: app
+display: opera-gx
+description: Opera GX is a special version of the Opera browser built specifically for gamers.
+homepage: https://www.opera.com/gx
+license: Unknown
+version: 139.0.6053.42
+channels:
+    stable: 139.0.6053.42
+provides:
+    - opera-gx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://get.opera.com/pub/opera_gx/139.0.6053.42/win/Opera_GX_139.0.6053.42_Setup_x64.exe
+      sha256: 99259b7b58ae7a2959419458bf26abeac9f943a8fa51cf5305fd5c711b8720a0
+      bin:
+        - opera-gx.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall opera-gx
+test: opera-gx --version

@@ -1,0 +1,46 @@
+api: v1
+name: ares
+kind: app
+display: ares
+description: Automated decoding of encrypted text
+homepage: https://github.com/bee-san/Ares
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.11.0
+channels:
+    stable: 0.11.0
+provides:
+    - ares
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ares/blobs/sha256:038f0c1740c55673f92e9eda04f45e2d1af79ec0c75a19d0495d0286c0fc1821
+      sha256: 038f0c1740c55673f92e9eda04f45e2d1af79ec0c75a19d0495d0286c0fc1821
+      bin:
+        - ares
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ares/blobs/sha256:15494a124fc43a9a9df91029e65a22c2309b88f96e2e861f3dd8e6b170e8ea9a
+      sha256: 15494a124fc43a9a9df91029e65a22c2309b88f96e2e861f3dd8e6b170e8ea9a
+      bin:
+        - ares
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ares/blobs/sha256:9bdeab88f015b3d9e745c63a71c680c2a53b17f9a81146ddfc1d67233d332ed5
+      sha256: 9bdeab88f015b3d9e745c63a71c680c2a53b17f9a81146ddfc1d67233d332ed5
+      bin:
+        - ares
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ares/blobs/sha256:18bca98bf45a77d9f7358342a4196720b37d59ea4f77f26c9c8a36abe3a70c8c
+      sha256: 18bca98bf45a77d9f7358342a4196720b37d59ea4f77f26c9c8a36abe3a70c8c
+      bin:
+        - ares
+      strip: 1
+test: ares --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: sfsu
+kind: app
+display: sfsu
+description: Stupid Fast Scoop Utilities. Incredibly fast replacements for commonly used Scoop commands, written in Rust.
+homepage: https://github.com/winpax/sfsu
+license: Apache-2.0
+version: 1.18.1
+channels:
+    stable: 1.18.1
+provides:
+    - sfsu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/winpax/sfsu/releases/download/v1.18.1/sfsu-x86_64.exe#/sfsu.exe
+      sha256: a779d29af306176b32ce5743abf0045e4932b5d07467e0ea6737ec5d9ef392aa
+      bin:
+        - sfsu.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sfsu
+test: sfsu --version

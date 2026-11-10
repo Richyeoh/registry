@@ -1,0 +1,21 @@
+api: v1
+name: feem
+kind: app
+display: feem
+description: An application that allows for sharing files offline.
+homepage: https://feem.io/
+license: Proprietary
+version: 4.3.0
+channels:
+    stable: 4.3.0
+provides:
+    - feem
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://f000.backblazeb2.com/file/feemdownloads/Feem_v4.3.0_beta_Windows_Installer.exe.zip
+      sha256: ff79a85a2949447a73103f0d2dfcac6d94cf9bc9ee8e30940d2eb7e49ff7e076
+      bin:
+        - feem.exe
+      strip: 1
+test: feem --version

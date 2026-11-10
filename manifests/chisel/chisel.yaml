@@ -1,0 +1,21 @@
+api: v1
+name: chisel
+kind: app
+display: chisel
+description: A fast TCP tunnel over HTTP
+homepage: https://github.com/jpillora/chisel
+license: MIT
+version: 1.12.0
+channels:
+    stable: 1.12.0
+provides:
+    - chisel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jpillora/chisel/releases/download/v1.12.0/chisel_1.12.0_windows_amd64.zip
+      sha256: 600a8ad6f03bc7f6d285fd01ab6a3f8a657204adaafa5666ade9451d18df1ebc
+      bin:
+        - chisel.exe
+      strip: 1
+test: chisel --version

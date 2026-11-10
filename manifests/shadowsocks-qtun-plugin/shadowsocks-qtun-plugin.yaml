@@ -1,0 +1,22 @@
+api: v1
+name: shadowsocks-qtun-plugin
+kind: app
+display: shadowsocks-qtun-plugin
+description: Yet another SIP003 plugin based on IETF-QUIC.
+homepage: https://github.com/shadowsocks/qtun
+license: MIT
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - shadowsocks-qtun-plugin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shadowsocks/qtun/releases/download/v0.3.0/qtun-windows-native-v0.3.0.zip
+      sha256: 3f4fd3857a2c09be776a080398f5b5162487e3b3293407f2d45fefe55b2e94fe
+      bin:
+        - qtun-client.exe
+        - qtun-server.exe
+      strip: 1
+test: qtun-client --version

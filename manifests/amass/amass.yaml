@@ -1,0 +1,45 @@
+api: v1
+name: amass
+kind: app
+display: amass
+description: The OWASP Amass Project performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques.
+homepage: https://owasp.org/www-project-amass/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 5.1.3
+channels:
+    stable: 5.1.3
+provides:
+    - amass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/owasp-amass/amass/releases/download/v5.1.3/amass_windows_amd64.tar.gz
+      sha256: 1ddc3fd322ea52f0d3f4e59bf3535f8c53e68ccd79ab0566168a66d6c54bc602
+      bin:
+        - amass.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amass/blobs/sha256:48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388
+      sha256: 48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388
+      bin:
+        - amass
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/amass/blobs/sha256:ab4312afc237c520b92785e0c28136cf056eb0aaad1b8f6b143b9cf6e1459f6c
+      sha256: ab4312afc237c520b92785e0c28136cf056eb0aaad1b8f6b143b9cf6e1459f6c
+      bin:
+        - amass
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amass/blobs/sha256:1aa38aaf84268c4f6a611738f2de94502c6a8359475e73660e6b007062bda12e
+      sha256: 1aa38aaf84268c4f6a611738f2de94502c6a8359475e73660e6b007062bda12e
+      bin:
+        - amass
+      strip: 1
+test: amass --version

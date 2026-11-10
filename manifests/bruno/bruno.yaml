@@ -1,0 +1,21 @@
+api: v1
+name: bruno
+kind: app
+display: bruno
+description: Open source IDE for exploring and testing APIs (lightweight alternative to Postman/Insomnia)
+homepage: https://www.usebruno.com/
+license: MIT
+version: 4.3.0
+channels:
+    stable: 4.3.0
+provides:
+    - bruno
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/usebruno/bruno/releases/download/v4.3.0/bruno_4.3.0_x64_win.zip
+      sha256: d00a649e0120168f26b630aa3253c36f2fdc9a84b1a13ff6fd96abc48f7be3f0
+      bin:
+        - bruno.exe
+      strip: 1
+test: bruno --version

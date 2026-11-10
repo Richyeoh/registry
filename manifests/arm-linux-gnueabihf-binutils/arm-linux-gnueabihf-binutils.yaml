@@ -1,0 +1,46 @@
+api: v1
+name: arm-linux-gnueabihf-binutils
+kind: app
+display: arm-linux-gnueabihf-binutils
+description: FSF/GNU binutils for cross-compiling to arm-linux
+homepage: https://www.gnu.org/software/binutils/binutils.html
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "2.47"
+channels:
+    stable: "2.47"
+provides:
+    - arm-linux-gnueabihf-binutils
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arm-linux-gnueabihf-binutils/blobs/sha256:383da8b87381b3540d0dcf4aa373ba1afe403ee1dfe4eab8dc38d626a3aaddb9
+      sha256: 383da8b87381b3540d0dcf4aa373ba1afe403ee1dfe4eab8dc38d626a3aaddb9
+      bin:
+        - arm-linux-gnueabihf-binutils
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-linux-gnueabihf-binutils/blobs/sha256:59c53820f1b11299f177c3ce831bc0e37c47c019f2ff645863e7a3e55e01be48
+      sha256: 59c53820f1b11299f177c3ce831bc0e37c47c019f2ff645863e7a3e55e01be48
+      bin:
+        - arm-linux-gnueabihf-binutils
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arm-linux-gnueabihf-binutils/blobs/sha256:69aa4791d3fb0b900de1f0e7cfccd0427b2cb3e3b7ddba27bacf67937bd28dba
+      sha256: 69aa4791d3fb0b900de1f0e7cfccd0427b2cb3e3b7ddba27bacf67937bd28dba
+      bin:
+        - arm-linux-gnueabihf-binutils
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-linux-gnueabihf-binutils/blobs/sha256:c985f45b7b788c587a9f275626c5d3fe75ca53bd2f4b4368dec88ef1b78147a2
+      sha256: c985f45b7b788c587a9f275626c5d3fe75ca53bd2f4b4368dec88ef1b78147a2
+      bin:
+        - arm-linux-gnueabihf-binutils
+      strip: 1
+test: arm-linux-gnueabihf-binutils --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

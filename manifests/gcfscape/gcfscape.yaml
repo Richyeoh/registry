@@ -1,0 +1,21 @@
+api: v1
+name: gcfscape
+kind: app
+display: gcfscape
+description: An archive viewer and extractor for BSP, GCF, NCF, PAK, SGA, VPK, WAD, and XZP files
+homepage: https://developer.valvesoftware.com/wiki/GCFScape
+license: Freeware
+version: 1.8.6
+channels:
+    stable: 1.8.6
+provides:
+    - gcfscape
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://valvedev.info/tools/gcfscape/gcfscape.zip
+      sha256: 5b61408a83b61afc9c775534cf02749edfde8e570bf17604bc191f6dc57055b0
+      bin:
+        - GCFScape.exe
+      strip: 1
+test: GCFScape --version

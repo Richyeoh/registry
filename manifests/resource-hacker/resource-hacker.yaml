@@ -1,0 +1,21 @@
+api: v1
+name: resource-hacker
+kind: app
+display: resource-hacker
+description: Resource compiler & decompiler for Windows applications
+homepage: https://www.angusj.com/resourcehacker/
+license: Unknown
+version: 5.2.8
+channels:
+    stable: 5.2.8
+provides:
+    - resource-hacker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.angusj.com/resourcehacker/resource_hacker.zip
+      sha256: 52f81ee4778070d6aa72d8719a1a68fea2f288005deb02667542754f747776f8
+      bin:
+        - ResourceHacker.exe
+      strip: 1
+test: ResourceHacker --version

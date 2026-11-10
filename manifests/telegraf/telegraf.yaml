@@ -1,0 +1,21 @@
+api: v1
+name: telegraf
+kind: app
+display: telegraf
+description: The plugin-driven server agent for collecting & reporting metrics.
+homepage: https://www.influxdata.com/time-series-platform/telegraf/
+license: MIT
+version: 1.40.3
+channels:
+    stable: 1.40.3
+provides:
+    - telegraf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.influxdata.com/telegraf/releases/telegraf-1.40.3_windows_amd64.zip
+      sha256: 273867d9bb070625b8fc8627f3189899b1221c2c6540dd98f6e526108a89c9c3
+      bin:
+        - telegraf.exe
+      strip: 1
+test: telegraf --version

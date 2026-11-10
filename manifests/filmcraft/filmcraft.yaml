@@ -1,0 +1,21 @@
+api: v1
+name: filmcraft
+kind: app
+display: filmcraft
+description: Video editing, color and sound; an open-source, clean-room reimplementation of Adobe Premiere Pro, rebuilt in pure Rust
+homepage: https://getartcraft.com/apps/filmcraft
+license: MIT|Apache-2.0
+version: 0.18.0
+channels:
+    stable: 0.18.0
+provides:
+    - filmcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/filmcraft/releases/download/v0.18.0/filmcraft-0.18.0-windows-x64-portable.zip
+      sha256: 82847cf49087e95fd3f72dde80955d1c63af2821ad677e34e3de7a0e873e95bf
+      bin:
+        - filmcraft-cli.exe
+      strip: 1
+test: filmcraft-cli --version

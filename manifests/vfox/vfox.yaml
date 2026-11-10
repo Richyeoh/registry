@@ -1,0 +1,21 @@
+api: v1
+name: vfox
+kind: app
+display: vfox
+description: Manage multiple SDK versions with a single CLI tool, extendable via plugins
+homepage: https://vfox.dev/
+license: Apache-2.0
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - vfox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/version-fox/vfox/releases/download/v1.1.0/vfox_1.1.0_windows_x86_64.zip
+      sha256: 1bbec8fffddbb62de0d93030c3f6203c69680662bc65257ca4a5e611cb607d0a
+      bin:
+        - vfox.exe
+      strip: 1
+test: vfox --version

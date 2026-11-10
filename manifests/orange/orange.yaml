@@ -1,0 +1,21 @@
+api: v1
+name: orange
+kind: app
+display: orange
+description: Interactive data analysis
+homepage: https://orangedatamining.com/
+license: GPL-3.0
+version: 3.40.0
+channels:
+    stable: 3.40.0
+provides:
+    - orange
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.biolab.si/download/files/Orange3-3.40.0.zip
+      sha256: 27905f65321459eb2f0de067a0af097ba4138e17f483de67a8b3e577b7382393
+      bin:
+        - orange.exe
+      strip: 1
+test: orange --version

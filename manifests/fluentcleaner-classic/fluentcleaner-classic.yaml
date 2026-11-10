@@ -1,0 +1,22 @@
+api: v1
+name: fluentcleaner-classic
+kind: app
+display: fluentcleaner-classic
+description: Transparent, community-powered CCleaner alternative for Windows (Classic Edition).
+homepage: https://github.com/builtbybel/FluentCleaner
+license: Freeware
+version: 1.18.250
+channels:
+    stable: 1.18.250
+provides:
+    - fluentcleaner-classic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/builtbybel/FluentCleaner/releases/download/26.09.01/FluentCleaner-Classic-net48.zip
+      sha256: 42703e673cff81eb9d2ec7f8eacaaf93fa009915ffca40e54b63ba789d80fe85
+      bin:
+        - FluentCleaner.Classic.exe
+        - FluentCleaner.Classic.exe
+      strip: 1
+test: FluentCleaner.Classic --version

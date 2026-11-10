@@ -1,0 +1,24 @@
+api: v1
+name: ocat
+kind: app
+display: ocat
+description: Provides an FPS overlay and performance measurement for D3D11, D3D12, and Vulkan
+homepage: https://github.com/GPUOpen-Tools/OCAT
+license: Unknown
+version: 1.6.3
+channels:
+    stable: 1.6.3
+provides:
+    - ocat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GPUOpen-Tools/OCAT/releases/download/v1.6.3/OCAT_v1.6.3.exe
+      sha256: a6d036bec963bb38f77b72d4591f3d172aac122d8e441bd9dbb54223ee6b6695
+      bin:
+        - OCAT.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ocat
+test: OCAT --version

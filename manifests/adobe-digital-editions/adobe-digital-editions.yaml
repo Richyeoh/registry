@@ -1,0 +1,32 @@
+api: v1
+name: adobe-digital-editions
+kind: app
+display: Adobe Digital Editions
+description: E-book reader
+homepage: https://www.adobe.com/solutions/ebook/digital-editions.html
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 4.5.12
+channels:
+    stable: 4.5.12
+provides:
+    - adobe-digital-editions
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_4.5_Installer.dmg
+      sha256: 6d4f365dd04cf76c7303ac5682f99b37fe5962a1f327789fb2a77f019ff978e2
+      bin:
+        - adobe-digital-editions
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_4.5_Installer.dmg
+      sha256: 6d4f365dd04cf76c7303ac5682f99b37fe5962a1f327789fb2a77f019ff978e2
+      bin:
+        - adobe-digital-editions
+      strip: 1
+test: adobe-digital-editions --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

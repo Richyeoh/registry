@@ -1,0 +1,24 @@
+api: v1
+name: kim
+kind: app
+display: kim
+description: Enables building images locally, natively on your k3s cluster
+homepage: https://github.com/rancher/kim
+license: MIT
+version: 0.1.0-beta.7
+channels:
+    stable: 0.1.0-beta.7
+provides:
+    - kim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rancher/kim/releases/download/v0.1.0-beta.7/kim-windows-amd64.exe#/kim.exe
+      sha256: f0414968cc41b4c2276dd7a3a6e369e268742b5594e5f4a2e228882d5b6cbfe2
+      bin:
+        - kim.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kim
+test: kim --version

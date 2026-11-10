@@ -1,0 +1,21 @@
+api: v1
+name: trojan
+kind: app
+display: trojan
+description: An unidentifiable mechanism for bypassing GFW
+homepage: https://trojan-gfw.github.io/trojan/
+license: GPL-3.0-only
+version: 1.16.0
+channels:
+    stable: 1.16.0
+provides:
+    - trojan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trojan-gfw/trojan/releases/download/v1.16.0/trojan-1.16.0-win.zip
+      sha256: 0e6107a73e113b30893d66844ed8d619a125c5f5e54c559727e87a33f1add423
+      bin:
+        - trojan.exe
+      strip: 1
+test: trojan --version

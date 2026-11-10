@@ -1,0 +1,21 @@
+api: v1
+name: vieb
+kind: app
+display: vieb
+description: Vim Inspired Electron Browser
+homepage: https://vieb.dev
+license: GPL-3.0-or-later
+version: 12.11.0
+channels:
+    stable: 12.11.0
+provides:
+    - vieb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Jelmerro/Vieb/releases/download/12.11.0/Vieb-12.11.0-win.zip
+      sha256: 8cbc712ef25dce14be752771c85dbb7b9cea4a8e115ccec528452024c0fbe7a0
+      bin:
+        - Vieb.exe
+      strip: 1
+test: Vieb --version

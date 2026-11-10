@@ -1,0 +1,29 @@
+api: v1
+name: nim
+kind: app
+display: nim
+description: A statically typed compiled systems programming language, which combines successful concepts from mature languages like Python, Ada and Modula.
+homepage: https://nim-lang.org/
+license: MIT
+version: 2.4.0
+channels:
+    stable: 2.4.0
+provides:
+    - nim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://nim-lang.org/download/nim-2.4.0_x64.zip
+      sha256: 511f862085e161613bfea3aa1950123ff509b7c948b400f75527464201b3ca20
+      bin:
+        - bin\atlas.exe
+        - bin\nim.exe
+        - bin\nimble.exe
+        - bin\nimgrab.exe
+        - bin\nimgrep.exe
+        - bin\nimpretty.exe
+        - bin\nimsuggest.exe
+        - bin\vccexe.exe
+        - bin\testament.exe
+      strip: 1
+test: bin\atlas --version

@@ -1,0 +1,21 @@
+api: v1
+name: freetube
+kind: app
+display: freetube
+description: The private YouTube client
+homepage: https://freetubeapp.io
+license: AGPL-3.0-only
+version: 0.26.0-beta
+channels:
+    stable: 0.26.0-beta
+provides:
+    - freetube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/FreeTubeApp/FreeTube/releases/download/v0.26.0-beta/freetube-0.26.0-beta-win-x64-portable.7z
+      sha256: cb46a01035004670ec7028424dcdfaeb3497417e5c0943895e1d13efa19a7eea
+      bin:
+        - freetube.exe
+      strip: 1
+test: freetube --version

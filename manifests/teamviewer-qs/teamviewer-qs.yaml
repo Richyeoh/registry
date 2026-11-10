@@ -1,0 +1,24 @@
+api: v1
+name: teamviewer-qs
+kind: app
+display: teamviewer-qs
+description: A light version of Teamviewer, which enables a support technician to remotely access, remotely control, and remotely view your computer or mobile device for fast troubleshooting.
+homepage: https://www.teamviewer.com
+license: Unknown
+version: 15.83.3
+channels:
+    stable: 15.83.3
+provides:
+    - teamviewer-qs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.teamviewer.com/download/version_15x/TeamViewerQS.exe
+      sha256: 632a62ed7c6be7b172b16b8e5b420b877cb673f09f5fcb5b5e88b6bc51ab9854
+      bin:
+        - teamviewer-qs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall teamviewer-qs
+test: teamviewer-qs --version

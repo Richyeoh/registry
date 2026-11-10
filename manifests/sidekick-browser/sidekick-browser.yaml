@@ -1,0 +1,21 @@
+api: v1
+name: sidekick-browser
+kind: app
+display: sidekick-browser
+description: A work browser that is focused on productivity, speed, and security.
+homepage: https://www.meetsidekick.com/
+license: Unknown
+version: 124.61.1.50294-646391b
+channels:
+    stable: 124.61.1.50294-646391b
+provides:
+    - sidekick-browser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.meetsidekick.com/browser-builds/sidekick-win-release-x64-124.61.1.50294-646391b-df.exe#/dl.7z
+      sha256: cc45c2781e18a905e556bec770c99d2a636d55e07075224d562fb2c96bf1476e
+      bin:
+        - sidekick-browser.exe
+      strip: 1
+test: sidekick-browser --version

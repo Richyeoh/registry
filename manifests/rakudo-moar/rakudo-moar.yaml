@@ -1,0 +1,31 @@
+api: v1
+name: rakudo-moar
+kind: app
+display: rakudo-moar
+description: The most mature, production-ready implementation of the Raku language
+homepage: https://rakudo.org
+license: Artistic-2.0
+version: 2026.09-01
+channels:
+    stable: 2026.09-01
+provides:
+    - rakudo-moar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rakudo.org/dl/rakudo/rakudo-moar-2026.09-01-win-x86_64-msvc.zip
+      sha256: bb09665f1cc5442e31ac611f78b2db54b34d4eb904fa6b685569b43240529099
+      bin:
+        - bin\nqp.exe
+        - bin\perl6.exe
+        - bin\perl6w.exe
+        - bin\raku.exe
+        - bin\rakuw.exe
+        - bin\rakudo.exe
+        - bin\rakudow.exe
+        - bin\perl6-debug.exe
+        - bin\raku-debug.exe
+        - bin\rakudo-debug.exe
+        - share\perl6\site\bin\zef.exe
+      strip: 1
+test: bin\nqp --version

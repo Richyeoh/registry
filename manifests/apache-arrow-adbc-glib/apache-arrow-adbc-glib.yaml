@@ -1,0 +1,39 @@
+api: v1
+name: apache-arrow-adbc-glib
+kind: app
+display: apache-arrow-adbc-glib
+description: GLib bindings for Apache Arrow ADBC
+homepage: https://arrow.apache.org/adbc
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: "25"
+channels:
+    stable: "25"
+provides:
+    - apache-arrow-adbc-glib
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc-glib/blobs/sha256:3f6a7b829577c7f5a814971190bad4dbf806c4bb38ac9f007ae3134f06de0fe0
+      sha256: 3f6a7b829577c7f5a814971190bad4dbf806c4bb38ac9f007ae3134f06de0fe0
+      bin:
+        - apache-arrow-adbc-glib
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc-glib/blobs/sha256:9d47877852c9a603cc0bcaa8b8459da9c5571fbea9ac6980f601d159cdb76a02
+      sha256: 9d47877852c9a603cc0bcaa8b8459da9c5571fbea9ac6980f601d159cdb76a02
+      bin:
+        - apache-arrow-adbc-glib
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apache-arrow-adbc-glib/blobs/sha256:acd88f4875d03bf090a232e0b489e6110d0e0520bc4a8d676cfc1f1068dc8c81
+      sha256: acd88f4875d03bf090a232e0b489e6110d0e0520bc4a8d676cfc1f1068dc8c81
+      bin:
+        - apache-arrow-adbc-glib
+      strip: 1
+test: apache-arrow-adbc-glib --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

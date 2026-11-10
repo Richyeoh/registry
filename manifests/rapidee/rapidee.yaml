@@ -1,0 +1,21 @@
+api: v1
+name: rapidee
+kind: app
+display: rapidee
+description: Environment variables editor.
+homepage: https://www.rapidee.com/en/about
+license: Unknown
+version: 10.0.5
+channels:
+    stable: 10.0.5
+provides:
+    - rapidee
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/olegd/rapidee/-/releases/v10.0.5/downloads/RapidEE.zip
+      sha256: 063ba3f73dbe5d149d64d04841b0ac296e30bd854da96578b9baf9353fe5dc7d
+      bin:
+        - rapidee.exe
+      strip: 1
+test: rapidee --version

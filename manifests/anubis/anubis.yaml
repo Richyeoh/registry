@@ -1,0 +1,39 @@
+api: v1
+name: anubis
+kind: app
+display: anubis
+description: Protect resources from scraper bots
+homepage: https://anubis.techaro.lol
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.28.2
+channels:
+    stable: 1.28.2
+provides:
+    - anubis
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/anubis/blobs/sha256:befcb52ce0812d942de5b755e43194e34ca88463e3dc825465fc8bac8544a5ea
+      sha256: befcb52ce0812d942de5b755e43194e34ca88463e3dc825465fc8bac8544a5ea
+      bin:
+        - anubis
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/anubis/blobs/sha256:3d38fcda6809f576a33239a43a7a61e6c56348414e7c827986b775249b9d8410
+      sha256: 3d38fcda6809f576a33239a43a7a61e6c56348414e7c827986b775249b9d8410
+      bin:
+        - anubis
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/anubis/blobs/sha256:30aeb352cdaf7627fc4726383e99b283c9045fc979c53443a19fad5ea2526fe8
+      sha256: 30aeb352cdaf7627fc4726383e99b283c9045fc979c53443a19fad5ea2526fe8
+      bin:
+        - anubis
+      strip: 1
+test: anubis --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

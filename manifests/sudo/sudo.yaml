@@ -1,0 +1,21 @@
+api: v1
+name: sudo
+kind: app
+display: sudo
+description: An approximation of the Unix sudo command. Shows a UAC popup window unfortunately.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2020.01.26
+channels:
+    stable: 0.2020.01.26
+provides:
+    - sudo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lukesampson/psutils/c7116ac143ca81f223e6091d0974f45ac241eb1d/sudo.ps1
+      sha256: 0d3cf564dc584ea98b213b4763228dee523c32388b1293e77eff70344d294aa8
+      bin:
+        - sudo.ps1.exe
+      strip: 1
+test: sudo.ps1 --version

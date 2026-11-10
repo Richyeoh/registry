@@ -1,0 +1,21 @@
+api: v1
+name: go-size-analyzer
+kind: app
+display: go-size-analyzer
+description: A tool for analyzing the dependencies in compiled Golang binaries.
+homepage: https://gsa.zxilly.dev/
+license: AGPL-3.0-only
+version: 1.14.1
+channels:
+    stable: 1.14.1
+provides:
+    - go-size-analyzer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Zxilly/go-size-analyzer/releases/download/v1.14.1/go-size-analyzer_1.14.1_windows_amd64.zip
+      sha256: 879ec5684e9984fda77a0a7717c2b221ccb4667a59b1dfd7a0d280d49c35533f
+      bin:
+        - gsa.exe
+      strip: 1
+test: gsa --version

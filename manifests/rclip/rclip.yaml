@@ -1,0 +1,21 @@
+api: v1
+name: rclip
+kind: app
+display: rclip
+description: AI-Powered Semantic Photo Search for the Command Line.
+homepage: https://github.com/yurijmikhalevich/rclip
+license: MIT
+version: 4.1.2
+channels:
+    stable: 4.1.2
+provides:
+    - rclip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yurijmikhalevich/rclip/releases/download/v4.1.2/rclip-4.1.2.msi#/dl.msi_
+      sha256: 81cb95a5e14f9941464276f9c2bd540f94b33903cce205950cb2d8f20908db1e
+      bin:
+        - rclip.exe
+      strip: 1
+test: rclip --version

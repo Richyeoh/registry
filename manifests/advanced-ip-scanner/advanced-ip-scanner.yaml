@@ -1,0 +1,22 @@
+api: v1
+name: advanced-ip-scanner
+kind: app
+display: advanced-ip-scanner
+description: Network scanner that can analyse LAN, show network devices, and provide remote control via RDP and Radmin.
+homepage: https://www.advanced-ip-scanner.com/
+license: Freeware
+version: 2.5.4594.1
+channels:
+    stable: 2.5.4594.1
+provides:
+    - advanced-ip-scanner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.advanced-ip-scanner.com/download/files/Advanced_IP_Scanner_2.5.4594.1.exe#/dl.7z
+      sha256: 26d5748ffe6bd95e3fee6ce184d388a1a681006dc23a0f08d53c083c593c193b
+      bin:
+        - advanced_ip_scanner_console.exe
+        - advanced_ip_scanner_console.exe
+      strip: 1
+test: advanced_ip_scanner_console --version

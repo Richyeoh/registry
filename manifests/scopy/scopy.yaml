@@ -1,0 +1,21 @@
+api: v1
+name: scopy
+kind: app
+display: scopy
+description: A software oscilloscope and signal analysis toolset
+homepage: https://wiki.analog.com/university/tools/m2k/scopy
+license: GPL-3.0-only
+version: 2.2.1
+channels:
+    stable: 2.2.1
+provides:
+    - scopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/analogdevicesinc/scopy/releases/download/v2.2.1/Scopy-v2.2.1-Windows-x86_64-portable.zip
+      sha256: 42f2ee0af94271743a6387f919f8aebda497b9f71aadc35d7b37786eea2145a2
+      bin:
+        - Scopy-console.exe
+      strip: 1
+test: Scopy-console --version

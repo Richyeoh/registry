@@ -1,0 +1,24 @@
+api: v1
+name: emitter
+kind: app
+display: emitter
+description: Real-time communication service for connecting online devices.
+homepage: https://emitter.io
+license: AGPL-3.0-or-later
+version: "2.7"
+channels:
+    stable: "2.7"
+provides:
+    - emitter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/emitter-io/emitter/releases/download/v2.7/emitter-windows-amd64.exe#/emitter.exe
+      sha256: 0717f99949c916202c900c96dbf3983eabfe403365e51d0208cd07d6ab774d22
+      bin:
+        - emitter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall emitter
+test: emitter --version

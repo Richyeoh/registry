@@ -1,0 +1,21 @@
+api: v1
+name: resizer
+kind: app
+display: resizer
+description: A batch image resizer with an easy to use drag-n-drop interface
+homepage: https://www.den4b.com/products/resizer
+license: CC-BY-NC-ND-3.0
+version: "2.2"
+channels:
+    stable: "2.2"
+provides:
+    - resizer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.den4b.com/download/resizer/portable/2.2?token=scoop#/dl.zip
+      sha256: 05b62403f98c853be125a55ffe552338e6100578b5371e0768b68c0e72492239
+      bin:
+        - Resizer.exe
+      strip: 1
+test: Resizer --version

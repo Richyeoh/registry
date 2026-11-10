@@ -1,0 +1,21 @@
+api: v1
+name: dotmemoryunit
+kind: app
+display: dotmemoryunit
+description: JetBrains dotMemory unit testing framework for testing .NET memory issues.
+homepage: https://www.jetbrains.com/dotmemory/unit
+license: Unknown
+version: 3.2.20220510
+channels:
+    stable: 3.2.20220510
+provides:
+    - dotmemoryunit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/resharper/JetBrains.dotMemoryUnit.3.2.20220510.zip
+      sha256: 6f85246c8828b7d874d21befa403b866fd87a4a51f1bff19ec5f3d559b55c1ab
+      bin:
+        - dotMemoryUnit.exe
+      strip: 1
+test: dotMemoryUnit --version

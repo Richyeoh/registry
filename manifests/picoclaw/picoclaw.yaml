@@ -1,0 +1,22 @@
+api: v1
+name: picoclaw
+kind: app
+display: picoclaw
+description: Tiny, fast, and deployable AI assistant and agent framework in Go.
+homepage: https://picoclaw.io
+license: MIT
+version: 0.3.1
+channels:
+    stable: 0.3.1
+provides:
+    - picoclaw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sipeed/picoclaw/releases/download/v0.3.1/picoclaw_Windows_x86_64.zip
+      sha256: c76e4b9f3f95137b8cb58229e756538b12ed0fee0e4301a01b531626bf740af1
+      bin:
+        - picoclaw.exe
+        - picoclaw-launcher.exe
+      strip: 1
+test: picoclaw --version

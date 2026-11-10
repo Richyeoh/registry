@@ -1,0 +1,21 @@
+api: v1
+name: soapui
+kind: app
+display: soapui
+description: A functional testing solution for APIs and web services.
+homepage: https://www.soapui.org/
+license: EUPL-1.1
+version: 5.10.0
+channels:
+    stable: 5.10.0
+provides:
+    - soapui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.eviware.com/soapuios/5.10.0/SoapUI-5.10.0-windows-bin.zip
+      sha256: efdd5684eeecd942ceff297a7771db23a66f94cc13d33e83a039d51fe787aade
+      bin:
+        - bin\soapui.bat.exe
+      strip: 1
+test: bin\soapui.bat --version

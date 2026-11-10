@@ -1,0 +1,21 @@
+api: v1
+name: quicktextpaste
+kind: app
+display: quicktextpaste
+description: Insert pre-defined text in any Windows applications via keyboard shortcut.
+homepage: https://www.softwareok.com/?Download=QuickTextPaste
+license: Unknown
+version: "9.61"
+channels:
+    stable: "9.61"
+provides:
+    - quicktextpaste
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.softwareok.com/Download/QuickTextPaste_x64_Portable.zip
+      sha256: 14d3dfd2092eb5b62cb0fdc25260f568506fdd3aacaa29f75e5b5b3d87ce440d
+      bin:
+        - QuickTextPaste_x64_p.exe
+      strip: 1
+test: QuickTextPaste_x64_p --version

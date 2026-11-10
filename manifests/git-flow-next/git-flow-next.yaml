@@ -1,0 +1,21 @@
+api: v1
+name: git-flow-next
+kind: app
+display: git-flow-next
+description: A modern reimplementation of git-flow in Go that offers greater flexibility while maintaining backward compatibility with the original git-flow and git-flow-avh.
+homepage: https://git-flow.sh
+license: BSD-2-Clause
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - git-flow-next
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gittower/git-flow-next/releases/download/v2.1.0/git-flow-next-v2.1.0-windows-amd64.zip
+      sha256: 9bfbc2746ea647fe664e0a5be375f7d7e144412d5031064f60efb1f8fbe1b656
+      bin:
+        - git-flow.exe
+      strip: 1
+test: git-flow --version

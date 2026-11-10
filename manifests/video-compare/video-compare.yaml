@@ -1,0 +1,21 @@
+api: v1
+name: video-compare
+kind: app
+display: video-compare
+description: Split screen video comparison tool using FFmpeg and SDL2.
+homepage: https://github.com/pixop/video-compare
+license: GPL-2.0-only
+version: "20261004"
+channels:
+    stable: "20261004"
+provides:
+    - video-compare
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pixop/video-compare/releases/download/20261004/video-compare-20261004-win10-x86_64.zip
+      sha256: 3d757f9db6d367f92a330f325d476f0284bdea709a8a700bbc2487861ce65c50
+      bin:
+        - video-compare.exe
+      strip: 1
+test: video-compare --version

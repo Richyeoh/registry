@@ -1,0 +1,21 @@
+api: v1
+name: bencode-editor
+kind: app
+display: bencode-editor
+description: BEncoded files editor
+homepage: https://sites.google.com/site/ultimasites/bencode-editor
+license: Unknown
+version: 0.7.1.0
+channels:
+    stable: 0.7.1.0
+provides:
+    - bencode-editor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://drive.google.com/uc?id=1Ngp66elk8TLX-Cwyn9DcNYk-_VQi-hxE&export=download#/bencode-editor.0710x.zip
+      sha256: 02c4e36834236021a0dbbbf4145355ea307843e8e5cc0c0e0b713da991ed6433
+      bin:
+        - BEncode Editor.exe
+      strip: 1
+test: BEncode Editor.exe --version

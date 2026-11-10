@@ -1,0 +1,21 @@
+api: v1
+name: imagemagick-lean
+kind: app
+display: imagemagick-lean
+description: Create, edit, compose, and convert 200+ of bitmap images formats.
+homepage: https://imagemagick.org/
+license: ImageMagick
+version: 7.1.2-35
+channels:
+    stable: 7.1.2-35
+provides:
+    - imagemagick-lean
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-35/ImageMagick-7.1.2-35-portable-Q16-HDRI-x64.7z
+      sha256: 34db4364da26c88d6b8cc5bbc1fff22b85d00d3b399c82fe85ee4790efacbbf1
+      bin:
+        - magick.exe
+      strip: 1
+test: magick --version

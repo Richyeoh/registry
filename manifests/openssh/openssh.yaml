@@ -1,0 +1,30 @@
+api: v1
+name: openssh
+kind: app
+display: openssh
+description: The premier connectivity tool for remote login with the SSH protocol. (Microsoft build)
+homepage: https://www.openssh.com
+license: SSH-OpenSSH
+version: 10.4.0.0p1
+channels:
+    stable: 10.4.0.0p1
+provides:
+    - openssh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.4.0.0p1-Preview/OpenSSH-Win64.zip
+      sha256: b67ff8becd203502190ec42ac7787c24c2cd3325ed7700485fe7a1c83d2a7957
+      bin:
+        - scp.exe
+        - sftp.exe
+        - sftp-server.exe
+        - ssh.exe
+        - ssh-add.exe
+        - ssh-agent.exe
+        - ssh-keygen.exe
+        - ssh-keyscan.exe
+        - ssh-shellhost.exe
+        - sshd.exe
+      strip: 1
+test: scp --version

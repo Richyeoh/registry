@@ -1,0 +1,32 @@
+api: v1
+name: android-commandlinetools
+kind: app
+display: Android SDK Command-line Tools
+description: Command-line tools for building and debugging Android apps
+homepage: https://developer.android.com/studio
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: "15859902"
+channels:
+    stable: "15859902"
+provides:
+    - android-commandlinetools
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://dl.google.com/android/repository/commandlinetools-mac_arm64-15859902_latest.zip
+      sha256: 835b62a26162b229b441d1f6d4680383815a270809eb33522c0d480fa5002c4e
+      bin:
+        - android-commandlinetools
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.google.com/android/repository/commandlinetools-mac_arm64-15859902_latest.zip
+      sha256: 835b62a26162b229b441d1f6d4680383815a270809eb33522c0d480fa5002c4e
+      bin:
+        - android-commandlinetools
+      strip: 1
+test: android-commandlinetools --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

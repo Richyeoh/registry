@@ -1,0 +1,21 @@
+api: v1
+name: questdb
+kind: app
+display: questdb
+description: An open source SQL database designed to process time series data, faster.
+homepage: https://questdb.io
+license: Apache-2.0
+version: 10.2.0
+channels:
+    stable: 10.2.0
+provides:
+    - questdb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/questdb/questdb/releases/download/10.2.0/questdb-10.2.0-no-jre-bin.tar.gz
+      sha256: 04998781fbdf3fb96f1112e3fbe8fd22843f490bca46ab6ce2b351c482235498
+      bin:
+        - questdb.exe
+      strip: 1
+test: questdb --version

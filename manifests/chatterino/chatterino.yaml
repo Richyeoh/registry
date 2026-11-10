@@ -1,0 +1,21 @@
+api: v1
+name: chatterino
+kind: app
+display: chatterino
+description: Twitch chat client
+homepage: https://chatterino.com
+license: MIT
+version: 2.5.6
+channels:
+    stable: 2.5.6
+provides:
+    - chatterino
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Chatterino/chatterino2/releases/download/v2.5.6/Chatterino.Portable.zip
+      sha256: 7256ef095959a1e56ffee9573260d79878d87d24dff8486025b7da241b99bc3d
+      bin:
+        - chatterino.exe
+      strip: 1
+test: chatterino --version

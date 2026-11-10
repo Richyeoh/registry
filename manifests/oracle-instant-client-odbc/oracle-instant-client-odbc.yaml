@@ -1,0 +1,21 @@
+api: v1
+name: oracle-instant-client-odbc
+kind: app
+display: oracle-instant-client-odbc
+description: Additional libraries for enabling ODBC applications with Oracle Instant Client.
+homepage: https://www.oracle.com/database/technologies/instant-client.html
+license: Unknown
+version: 23.26.4.0.0
+channels:
+    stable: 23.26.4.0.0
+provides:
+    - oracle-instant-client-odbc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.oracle.com/otn_software/nt/instantclient/2326400/instantclient-odbc-windows.x64-23.26.4.0.0.zip
+      sha256: 621ed172606c2c1e6af9b5d13f0567e536d0960ea47aadbef8208a0e86d81548
+      bin:
+        - oracle-instant-client-odbc.exe
+      strip: 1
+test: oracle-instant-client-odbc --version

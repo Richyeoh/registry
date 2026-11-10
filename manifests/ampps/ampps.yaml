@@ -1,0 +1,32 @@
+api: v1
+name: ampps
+kind: app
+display: AMPPS
+description: Software stack for website development
+homepage: https://www.ampps.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: "4.4"
+channels:
+    stable: "4.4"
+provides:
+    - ampps
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://s1.softaculous.com/a/ampps/files/versions/AMPPS-4.4-x86_64.dmg
+      sha256: 77b1107c02b7ca33cefa785432867f9706ac3eeaa3ab3723c8b63a1f30cfb28c
+      bin:
+        - ampps
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://s1.softaculous.com/a/ampps/files/versions/AMPPS-4.4-x86_64.dmg
+      sha256: 77b1107c02b7ca33cefa785432867f9706ac3eeaa3ab3723c8b63a1f30cfb28c
+      bin:
+        - ampps
+      strip: 1
+test: ampps --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

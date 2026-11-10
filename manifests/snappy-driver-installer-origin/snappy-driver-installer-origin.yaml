@@ -1,0 +1,22 @@
+api: v1
+name: snappy-driver-installer-origin
+kind: app
+display: snappy-driver-installer-origin
+description: Device drivers installer and updater
+homepage: https://www.glenn.delahoy.com/snappy-driver-installer-origin/
+license: GPL-3.0-or-later
+version: 2.0.7.890
+channels:
+    stable: 2.0.7.890
+provides:
+    - snappy-driver-installer-origin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.7.890.zip
+      sha256: 6e4986a81816ff6d2a84ccfdd49b8556b527fb47d8ad7660a1476daccfa7a1ce
+      bin:
+        - SDIO.exe
+        - del_old_driverpacks.bat.exe
+      strip: 1
+test: SDIO --version

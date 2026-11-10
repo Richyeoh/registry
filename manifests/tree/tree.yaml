@@ -1,0 +1,25 @@
+api: v1
+name: tree
+kind: app
+display: tree
+description: tree
+homepage: https://gitlab.com/OldManProgrammer/unix-tree
+license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 2.3.2
+channels:
+    stable: 2.3.2
+provides:
+    - tree
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/tree/download/
+      sha256: 8a6230468cc31a2c984a41c092035dd16bf97e737ec3241490724a5419903739
+      bin:
+        - tree
+test: tree --version
+caveats: 由 Arch 官方仓自动转制（pacman/paru 源）

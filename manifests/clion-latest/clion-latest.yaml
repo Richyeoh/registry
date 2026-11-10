@@ -1,0 +1,21 @@
+api: v1
+name: clion-latest
+kind: app
+display: clion-latest
+description: Cross-Platform IDE for C and C++ by JetBrains. (Latest)
+homepage: https://www.jetbrains.com/clion/
+license: Unknown
+version: 2026.3-263.7307.209
+channels:
+    stable: 2026.3-263.7307.209
+provides:
+    - clion-latest
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/cpp/CLion-2026.3.exe#/dl.7z
+      sha256: d047a54baefb0d6c8c018c41b16bdf00c2dcaa179c7a0edbdb51ebbbc13649f8
+      bin:
+        - IDE\bin\clion64.exe
+      strip: 1
+test: IDE\bin\clion64 --version

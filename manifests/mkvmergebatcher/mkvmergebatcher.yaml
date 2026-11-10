@@ -1,0 +1,21 @@
+api: v1
+name: mkvmergebatcher
+kind: app
+display: mkvmergebatcher
+description: A GUI for mkvmerge to create/execute custom created MKV models
+homepage: https://github.com/Bazzu85/MKVmergeBatcher
+license: MIT
+version: 2.0.46
+channels:
+    stable: 2.0.46
+provides:
+    - mkvmergebatcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Bazzu85/MKVmergeBatcher/releases/download/2.0.46/MKVmergeBatcher.2.0.46.zip
+      sha256: 3ccd20177db206eb80a62df212325e0c93ebef0ea9052076c6758428274fc40b
+      bin:
+        - mkvmergebatcher.exe
+      strip: 1
+test: mkvmergebatcher --version

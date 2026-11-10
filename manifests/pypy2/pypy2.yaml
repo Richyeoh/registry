@@ -1,0 +1,22 @@
+api: v1
+name: pypy2
+kind: app
+display: pypy2
+description: A fast, compliant alternative implementation of the Python language.
+homepage: https://www.pypy.org
+license: MIT
+version: 8.0.1
+channels:
+    stable: 8.0.1
+provides:
+    - pypy2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.python.org/pypy/pypy2.7-v8.0.1-win64.zip
+      sha256: d06e1002da1c6c7be4c69593fe359045bffd74590b265f7442217693832ecd93
+      bin:
+        - pypy.exe
+        - pypyw.exe
+      strip: 1
+test: pypy --version

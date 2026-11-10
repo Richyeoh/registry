@@ -1,0 +1,24 @@
+api: v1
+name: phoenix-protector
+kind: app
+display: phoenix-protector
+description: Code obfuscator for .NET assemblies
+homepage: https://ntcore.com/?page_id=384
+license: Unknown
+version: 1.8.0.1
+channels:
+    stable: 1.8.0.1
+provides:
+    - phoenix-protector
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ntcore.com/files/Phoenix_Protector.msi
+      sha256: 15a7dbbf90ce66fb302a322c6809fafd897808096069dfecededf78e51b16369
+      bin:
+        - phoenix-protector.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall phoenix-protector
+test: phoenix-protector --version

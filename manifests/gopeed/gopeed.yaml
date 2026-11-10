@@ -1,0 +1,21 @@
+api: v1
+name: gopeed
+kind: app
+display: gopeed
+description: A modern download manager that supports all platforms.
+homepage: https://gopeed.com
+license: Unknown
+version: 1.9.3
+channels:
+    stable: 1.9.3
+provides:
+    - gopeed
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GopeedLab/gopeed/releases/download/v1.9.3/Gopeed-v1.9.3-windows-amd64-portable.zip
+      sha256: 02b3b2f0ce4b0e0008edc835802ad6f4b241eb863f312b0bdd77b2b2afc9e012
+      bin:
+        - gopeed.exe
+      strip: 1
+test: gopeed --version

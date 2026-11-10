@@ -1,0 +1,21 @@
+api: v1
+name: audacity
+kind: app
+display: audacity
+description: An easy-to-use, multi-track audio editor and recorder
+homepage: https://www.audacityteam.org
+license: Unknown
+version: 4.0.2
+channels:
+    stable: 4.0.2
+provides:
+    - audacity
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/audacity/audacity/releases/download/Audacity-4.0.2/audacity-win-4.0.2-x86_64.7z
+      sha256: 6f375602254672b4f0db959e8b1e6fd46a97462aeab85b7ff21e1e9d9a54c5b3
+      bin:
+        - bin\Audacity4.exe
+      strip: 1
+test: bin\Audacity4 --version

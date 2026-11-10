@@ -1,0 +1,21 @@
+api: v1
+name: solomd
+kind: app
+display: solomd
+description: Free, open-source Markdown editor with live preview, math, diagrams and export.
+homepage: https://solomd.app
+license: MIT
+version: 5.0.17
+channels:
+    stable: 5.0.17
+provides:
+    - solomd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zhitongblog/solomd/releases/download/v5.0.17/SoloMD_5.0.17_x64-portable.zip
+      sha256: 2d3c25d2e6c3e3972d2d71793a8bc016a086e069fe0d3b03c77665760149d767
+      bin:
+        - solomd-mcp.exe
+      strip: 1
+test: solomd-mcp --version

@@ -1,0 +1,21 @@
+api: v1
+name: prometheus-pushgateway
+kind: app
+display: prometheus-pushgateway
+description: Prometheus push acceptor for ephemeral and batch jobs.
+homepage: https://github.com/prometheus/pushgateway
+license: Apache-2.0
+version: 1.11.4
+channels:
+    stable: 1.11.4
+provides:
+    - prometheus-pushgateway
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/prometheus/pushgateway/releases/download/v1.11.4/pushgateway-1.11.4.windows-amd64.tar.gz
+      sha256: 65760946d07b8df3e256f3e2b6e15295a90ad8dad95f2966d118a1ac7046d33e
+      bin:
+        - pushgateway.exe
+      strip: 1
+test: pushgateway --version

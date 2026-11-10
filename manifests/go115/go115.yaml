@@ -1,0 +1,22 @@
+api: v1
+name: go115
+kind: app
+display: go115
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.15.15
+channels:
+    stable: 1.15.15
+provides:
+    - go115
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.15.15.windows-amd64.zip
+      sha256: 7df7bf948dcc8ec0a3902e3301d17cbb5c2ebb01297d686ee2302e41f4ac6e10
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

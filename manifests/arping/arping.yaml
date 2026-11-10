@@ -1,0 +1,46 @@
+api: v1
+name: arping
+kind: app
+display: arping
+description: Utility to check whether MAC addresses are already taken on a LAN
+homepage: https://github.com/ThomasHabets/arping
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "2.29"
+channels:
+    stable: "2.29"
+provides:
+    - arping
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arping/blobs/sha256:8f3fa85c579d98901338b021a7bf319c001dfd368d4c0ab581813a1312d59077
+      sha256: 8f3fa85c579d98901338b021a7bf319c001dfd368d4c0ab581813a1312d59077
+      bin:
+        - arping
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arping/blobs/sha256:f6f0c3408796f3286ebf8084df8e9a82a50c002e8234f5a23756eb89385af345
+      sha256: f6f0c3408796f3286ebf8084df8e9a82a50c002e8234f5a23756eb89385af345
+      bin:
+        - arping
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arping/blobs/sha256:e171219ab884938ae1b3885e31464246cd3b6058ad865d9fcd3278740c91b5f8
+      sha256: e171219ab884938ae1b3885e31464246cd3b6058ad865d9fcd3278740c91b5f8
+      bin:
+        - arping
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arping/blobs/sha256:9a1e907a064c6ee8591c3a16cfb724159931e40d39c57d068a7bbb33bf840b62
+      sha256: 9a1e907a064c6ee8591c3a16cfb724159931e40d39c57d068a7bbb33bf840b62
+      bin:
+        - arping
+      strip: 1
+test: arping --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

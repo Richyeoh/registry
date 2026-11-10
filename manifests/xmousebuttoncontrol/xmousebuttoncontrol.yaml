@@ -1,0 +1,21 @@
+api: v1
+name: xmousebuttoncontrol
+kind: app
+display: xmousebuttoncontrol
+description: Windows tool that allows re-configuration and expand the capabilities of mouse.
+homepage: https://www.highrez.co.uk/downloads/xmousebuttoncontrol.htm
+license: Freeware
+version: 2.20.5
+channels:
+    stable: 2.20.5
+provides:
+    - xmousebuttoncontrol
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://vps2.highrez.co.uk/downloads/XMouseButtonControl%202.20.5%20Portable.zip
+      sha256: 383079c809a50d1c375c5751e085efa871905adc775817c27d75eb471d70f4e3
+      bin:
+        - XMouseButtonControl.exe
+      strip: 1
+test: XMouseButtonControl --version

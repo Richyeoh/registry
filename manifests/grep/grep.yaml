@@ -1,0 +1,26 @@
+api: v1
+name: grep
+kind: app
+display: grep
+description: Print lines matching a pattern.
+homepage: https://www.gnu.org/software/grep
+license: GPL-3.0-or-later
+version: "3.11"
+channels:
+    stable: "3.11"
+provides:
+    - grep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/mbuilov/grep-windows/3.11/grep-3.11-x64.exe#/grep.exe
+      sha256: ef730408456d620399fab0c639d53d0ec0c619a708e2191d220aa0ad9546e77f
+      bin:
+        - grep.exe
+        - grep.exe
+        - grep.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall grep
+test: grep --version

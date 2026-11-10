@@ -1,0 +1,25 @@
+api: v1
+name: apache-geode
+kind: app
+display: apache-geode
+description: In-memory Data Grid for fast transactional data processing
+homepage: https://geode.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.0.4
+channels:
+    stable: 2.0.4
+provides:
+    - apache-geode
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-geode/blobs/sha256:94faa093cb161701dc0f8f4d8f22f5a7fcbd351e8109c9d82a1ac9040744aa69
+      sha256: 94faa093cb161701dc0f8f4d8f22f5a7fcbd351e8109c9d82a1ac9040744aa69
+      bin:
+        - apache-geode
+      strip: 1
+test: apache-geode --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

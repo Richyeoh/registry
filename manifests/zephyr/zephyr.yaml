@@ -1,0 +1,21 @@
+api: v1
+name: zephyr
+kind: app
+display: zephyr
+description: A modern, lightweight Mihomo GUI client built with Rust and Tauri v2
+homepage: https://github.com/Juwan-Hwang/Zephyr
+license: MIT
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - zephyr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Juwan-Hwang/Zephyr/releases/download/v2.5.0/Zephyr_x64-portable.zip
+      sha256: f623326fdd4ad803f4ef352408edd96719221ca2f531407f6134c45132e28b07
+      bin:
+        - Zephyr.exe
+      strip: 1
+test: Zephyr --version

@@ -1,0 +1,21 @@
+api: v1
+name: vesktop
+kind: app
+display: vesktop
+description: A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed
+homepage: https://github.com/Vencord/Vesktop
+license: GPL-3.0-only
+version: 1.6.9
+channels:
+    stable: 1.6.9
+provides:
+    - vesktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Vencord/Vesktop/releases/download/v1.6.9/Vesktop-1.6.9-win.zip
+      sha256: a437592ccaf0511a1dd2388bc651cff93bb38abeff57b88a975f82dc5127531c
+      bin:
+        - Vesktop.exe
+      strip: 1
+test: Vesktop --version

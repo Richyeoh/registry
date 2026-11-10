@@ -1,0 +1,21 @@
+api: v1
+name: vapoursyntheditor
+kind: app
+display: vapoursyntheditor
+description: An editor for editing and previewing VapourSynth scripts
+homepage: https://bitbucket.org/mystery_keeper/vapoursynth-editor/
+license: MIT
+version: "19"
+channels:
+    stable: "19"
+provides:
+    - vapoursyntheditor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bitbucket.org/mystery_keeper/vapoursynth-editor/downloads/VapourSynthEditor-r19-64bit.7z
+      sha256: 43bc782772bc4f3a717ef6d9622b24ca905919bfd0423b1760e76f9bd34b91c2
+      bin:
+        - vapoursyntheditor.exe
+      strip: 1
+test: vapoursyntheditor --version

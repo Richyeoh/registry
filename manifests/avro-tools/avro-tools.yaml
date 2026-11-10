@@ -1,0 +1,25 @@
+api: v1
+name: avro-tools
+kind: app
+display: avro-tools
+description: Avro command-line tools and utilities
+homepage: https://avro.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.12.2
+channels:
+    stable: 1.12.2
+provides:
+    - avro-tools
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/avro-tools/blobs/sha256:ccab8ac30df1af76bdf80f62a09325e9990da5d1e39dd6b8e44c318fdec7b045
+      sha256: ccab8ac30df1af76bdf80f62a09325e9990da5d1e39dd6b8e44c318fdec7b045
+      bin:
+        - avro-tools
+      strip: 1
+test: avro-tools --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

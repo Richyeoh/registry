@@ -1,0 +1,25 @@
+api: v1
+name: arttime
+kind: app
+display: arttime
+description: Clock, timer, time manager and ASCII+ text-art viewer for the terminal
+homepage: https://github.com/poetaman/arttime
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - arttime
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arttime/blobs/sha256:ef556d2933044dbc7906a0761f63045d1c9f7b0d7e0bddf11d5967034e194aef
+      sha256: ef556d2933044dbc7906a0761f63045d1c9f7b0d7e0bddf11d5967034e194aef
+      bin:
+        - arttime
+      strip: 1
+test: arttime --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

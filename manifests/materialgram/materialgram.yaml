@@ -1,0 +1,21 @@
+api: v1
+name: materialgram
+kind: app
+display: materialgram
+description: Telegram Desktop fork with material icons and some improvements.
+homepage: https://github.com/kukuruzka165/materialgram
+license: Unknown
+version: 7.3.1.1
+channels:
+    stable: 7.3.1.1
+provides:
+    - materialgram
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kukuruzka165/materialgram/releases/download/v7.3.1.1/win64_materialgram_v7.3.1.1.zip
+      sha256: 820a0ea3593cf66309520f67b0248e3deac784d5d5a405e093866a0aa49f16ff
+      bin:
+        - materialgram.exe
+      strip: 1
+test: materialgram --version

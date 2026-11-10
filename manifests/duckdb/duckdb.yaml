@@ -1,0 +1,21 @@
+api: v1
+name: duckdb
+kind: app
+display: duckdb
+description: A high-performance embeddable SQL OLAP database management system
+homepage: https://duckdb.org
+license: MIT
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - duckdb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/duckdb/duckdb/releases/download/v2.0.0/duckdb-cli-windows-amd64.tar.gz
+      sha256: 91663c2f36c2a334b0e5e639006d8c29c29e013af0c477d80bb931df68870312
+      bin:
+        - duckdb.exe
+      strip: 1
+test: duckdb --version

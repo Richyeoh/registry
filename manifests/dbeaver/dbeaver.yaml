@@ -1,0 +1,22 @@
+api: v1
+name: dbeaver
+kind: app
+display: dbeaver
+description: Database tool for developers, SQL programmers, database administrators and analysts
+homepage: https://dbeaver.io
+license: Apache-2.0
+version: 26.2.4
+channels:
+    stable: 26.2.4
+provides:
+    - dbeaver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dbeaver.io/files/26.2.4/dbeaver-ce-26.2.4-windows-x86_64.zip
+      sha256: e667f516d64f29b87e3571203fc3eb02f0a419b9ff66865043bf9954ebc230c6
+      bin:
+        - dbeaver.exe
+        - dbeaverc.exe
+      strip: 1
+test: dbeaver --version

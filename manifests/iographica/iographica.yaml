@@ -1,0 +1,21 @@
+api: v1
+name: iographica
+kind: app
+display: iographica
+description: An application that turns mouse movements into modern art.
+homepage: https://www.iographica.com
+license: Unknown
+version: 2.0.2
+channels:
+    stable: 2.0.2
+provides:
+    - iographica
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/anatolyzenkov/IOGraph/releases/download/v2.0.2/IOGraph-windows-v2.0.2.zip
+      sha256: 01e96c39bdf7ac53b72db8f1e25b7a567e99ad8d60d2f32d2a44df206b73bc5b
+      bin:
+        - iographica.exe
+      strip: 1
+test: iographica --version

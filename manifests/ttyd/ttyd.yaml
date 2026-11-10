@@ -1,0 +1,24 @@
+api: v1
+name: ttyd
+kind: app
+display: ttyd
+description: A cli appication for sharing your terminal all over the web.
+homepage: https://tsl0922.github.io/ttyd
+license: MIT
+version: 1.7.7
+channels:
+    stable: 1.7.7
+provides:
+    - ttyd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.win32.exe#/ttyd.exe
+      sha256: e33a27501b10b96981335bcba938b1145c7f52551a343e72160f00ab71832b37
+      bin:
+        - ttyd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ttyd
+test: ttyd --version

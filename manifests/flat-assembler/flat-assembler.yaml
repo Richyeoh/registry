@@ -1,0 +1,22 @@
+api: v1
+name: flat-assembler
+kind: app
+display: flat-assembler
+description: Open source assembly language compiler
+homepage: https://flatassembler.net/
+license: Unknown
+version: 1.73.35
+channels:
+    stable: 1.73.35
+provides:
+    - flat-assembler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://flatassembler.net/fasmw17335.zip
+      sha256: 8ef871b369638f63d2df475a64e9f574da06b601db5a3fcb8c12654b7bcf5e81
+      bin:
+        - FASM.EXE
+        - FASMW.EXE
+      strip: 1
+test: FASM.EXE --version

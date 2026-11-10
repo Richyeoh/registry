@@ -2,10 +2,13 @@ api: v1
 name: bat
 kind: app
 display: bat
-description: 带高亮的 cat 替代
+description: A cat(1) clone with syntax highlighting and Git integration
 homepage: https://github.com/sharkdp/bat
-license: MIT
+license: Apache-2.0
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - sharkdp
 version: 0.26.1
@@ -50,4 +53,3 @@ platforms:
         - bat
       strip: 1
 test: bat --version
-caveats: 由 GitHub sharkdp/bat latest 自动转制

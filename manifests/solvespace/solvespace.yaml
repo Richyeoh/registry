@@ -1,0 +1,24 @@
+api: v1
+name: solvespace
+kind: app
+display: solvespace
+description: Parametric 2D/3D CAD tool
+homepage: https://github.com/solvespace/solvespace
+license: GPL-3.0
+version: "3.3"
+channels:
+    stable: "3.3"
+provides:
+    - solvespace
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/solvespace/solvespace/releases/download/v3.3/solvespace_x64.exe#/solvespace.exe
+      sha256: b41fbc1d68ee289ae5ba6f064890ac9becca67bb42a1360aa2d6cda9d82befad
+      bin:
+        - solvespace.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall solvespace
+test: solvespace --version

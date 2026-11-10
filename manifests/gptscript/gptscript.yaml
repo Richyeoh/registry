@@ -1,0 +1,21 @@
+api: v1
+name: gptscript
+kind: app
+display: gptscript
+description: GPTScript is a new scripting language to automate your interaction with a Large Language Model (LLM), namely OpenAI
+homepage: https://github.com/gptscript-ai/gptscript
+license: Apache 2.0
+version: 0.9.9
+channels:
+    stable: 0.9.9
+provides:
+    - gptscript
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gptscript-ai/gptscript/releases/download/v0.9.9/gptscript-v0.9.9-windows-amd64.zip
+      sha256: c177435d00152df1e6c52bf3909a7ced78a7bb2eebecadfe79ac93fd816e066f
+      bin:
+        - gptscript.exe
+      strip: 1
+test: gptscript --version

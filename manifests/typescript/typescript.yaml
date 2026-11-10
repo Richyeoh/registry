@@ -1,0 +1,21 @@
+api: v1
+name: typescript
+kind: app
+display: typescript
+description: A language for application scale JavaScript development
+homepage: https://www.typescriptlang.org/
+license: Apache-2.0
+version: 7.0.2
+channels:
+    stable: 7.0.2
+provides:
+    - typescript
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/TypeScript/releases/download/v7.0.2/typescript-win32-x64.tgz
+      sha256: 61fc4e141d2bc687db580e71bbfa63b9c209f0310645d82ca1b457eb3a24fd19
+      bin:
+        - tsc.exe
+      strip: 1
+test: tsc --version

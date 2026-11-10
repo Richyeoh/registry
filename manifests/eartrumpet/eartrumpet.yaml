@@ -1,0 +1,21 @@
+api: v1
+name: eartrumpet
+kind: app
+display: eartrumpet
+description: Volume control for Windows
+homepage: https://github.com/File-New-Project/EarTrumpet
+license: MIT
+version: 2.3.0
+channels:
+    stable: 2.3.0
+provides:
+    - eartrumpet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/eartrumpet.2.3.0.nupkg
+      sha256: 63cd29450fc6356ca104cd1650b71a99aed5292feff37d35e88914868f69068f
+      bin:
+        - EarTrumpet.exe
+      strip: 1
+test: EarTrumpet --version

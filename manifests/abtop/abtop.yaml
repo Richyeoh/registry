@@ -1,0 +1,39 @@
+api: v1
+name: abtop
+kind: app
+display: abtop
+description: Terminal monitor for AI coding agent sessions
+homepage: https://github.com/graykode/abtop
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.5.5
+channels:
+    stable: 0.5.5
+provides:
+    - abtop
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abtop/blobs/sha256:5e2f6e40a84305c167bc3fed7b5b96d9ccd239c475ed4e38d29857fcde07e36c
+      sha256: 5e2f6e40a84305c167bc3fed7b5b96d9ccd239c475ed4e38d29857fcde07e36c
+      bin:
+        - abtop
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abtop/blobs/sha256:d692bd8f243224237948254ee2861f49949713f55976a18af7a45f20b47ae581
+      sha256: d692bd8f243224237948254ee2861f49949713f55976a18af7a45f20b47ae581
+      bin:
+        - abtop
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abtop/blobs/sha256:a9b47f063bd1db0eb5e7df82ae404f6441de5c63c7918f093011db9d5415799d
+      sha256: a9b47f063bd1db0eb5e7df82ae404f6441de5c63c7918f093011db9d5415799d
+      bin:
+        - abtop
+      strip: 1
+test: abtop --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

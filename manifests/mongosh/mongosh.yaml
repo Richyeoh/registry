@@ -1,0 +1,21 @@
+api: v1
+name: mongosh
+kind: app
+display: mongosh
+description: JavaScript and Node.js 14.x REPL environment for interacting with MongoDB
+homepage: https://docs.mongodb.com/mongodb-shell
+license: Apache-2.0
+version: 2.14.1
+channels:
+    stable: 2.14.1
+provides:
+    - mongosh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.mongodb.com/compass/mongosh-2.14.1-win32-x64.zip
+      sha256: be58d3c67a2bca990c790b359c99fa9b5da1b12bb5b01e8442bea5998b1a38e2
+      bin:
+        - bin\mongosh.exe
+      strip: 1
+test: bin\mongosh --version

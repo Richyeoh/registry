@@ -1,0 +1,21 @@
+api: v1
+name: umbrello
+kind: app
+display: umbrello
+description: UML (Unified Modelling Language) diagram program based on KDE Technology
+homepage: https://apps.kde.org/umbrello/
+license: GPL-2.0-or-later
+version: 2.32.0
+channels:
+    stable: 2.32.0
+provides:
+    - umbrello
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/umbrello/2.32.0/win64/umbrello-mingw64-2.32.0-126.1-portable.7z#/dl.7z_
+      sha256: 32432219de0fe3f9c6aac4d86959d3701f1df2239b888fa1f8f191ef2f232563
+      bin:
+        - bin\umbrello.exe
+      strip: 1
+test: bin\umbrello --version

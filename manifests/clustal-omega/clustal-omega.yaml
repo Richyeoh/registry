@@ -1,0 +1,21 @@
+api: v1
+name: clustal-omega
+kind: app
+display: clustal-omega
+description: Clustal Omega. Tool for multiple alignment of nucleic acid and protein sequences. Developed by University College Dublin.
+homepage: http://www.clustal.org/omega/
+license: Unknown
+version: 1.2.2
+channels:
+    stable: 1.2.2
+provides:
+    - clustal-omega
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.clustal.org/omega/clustal-omega-1.2.2-win64.zip
+      sha256: ad347f21b9445686d32f61a9aae12b280d16fccd01449fedfba8f2586ef8dd4a
+      bin:
+        - clustalo.exe
+      strip: 1
+test: clustalo --version

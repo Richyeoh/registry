@@ -1,0 +1,21 @@
+api: v1
+name: bttf
+kind: app
+display: bttf
+description: A command line tool for datetime arithmetic, parsing, formatting and more.
+homepage: https://github.com/BurntSushi/bttf
+license: Unlicense|MIT
+version: 0.1.4
+channels:
+    stable: 0.1.4
+provides:
+    - bttf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BurntSushi/bttf/releases/download/0.1.4/bttf-0.1.4-x86_64-pc-windows-msvc.zip
+      sha256: 9614043c7701fb523cd222e932cd7bb4faf22eb0334b8248fb4a6158a61a43ed
+      bin:
+        - bttf.exe
+      strip: 1
+test: bttf --version

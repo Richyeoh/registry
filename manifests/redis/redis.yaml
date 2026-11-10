@@ -1,0 +1,23 @@
+api: v1
+name: redis
+kind: app
+display: redis
+description: In-memory data structure store, used as a database, cache and message broker
+homepage: https://redis.io
+license: BSD-3-Clause
+version: 8.10.3
+channels:
+    stable: 8.10.3
+provides:
+    - redis
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/redis-windows/redis-windows/releases/download/8.10.3/Redis-8.10.3-Windows-x64-msys2.zip
+      sha256: af16df340525b431e9ec8dabfd625d5e7a233f82805b5418819904ea909c447f
+      bin:
+        - redis-benchmark.exe
+        - redis-cli.exe
+        - redis-server.exe
+      strip: 1
+test: redis-benchmark --version

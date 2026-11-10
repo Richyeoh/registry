@@ -1,0 +1,24 @@
+api: v1
+name: hadolint
+kind: app
+display: hadolint
+description: Dockerfile linter
+homepage: https://github.com/hadolint/hadolint
+license: GPL-3.0-or-later
+version: 2.15.1
+channels:
+    stable: 2.15.1
+provides:
+    - hadolint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-Windows-x86_64.exe#/hadolint.exe
+      sha256: 01d927294962b5387f9ead4f18679158452be4f17c765ad0bdffe5264b9c7b0a
+      bin:
+        - hadolint.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hadolint
+test: hadolint --version

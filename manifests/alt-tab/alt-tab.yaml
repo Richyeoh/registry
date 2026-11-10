@@ -1,0 +1,32 @@
+api: v1
+name: alt-tab
+kind: app
+display: AltTab
+description: Enable Windows-like alt-tab
+homepage: https://alt-tab.app/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 11.10.1
+channels:
+    stable: 11.10.1
+provides:
+    - alt-tab
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/lwouis/alt-tab-macos/releases/download/v11.10.1/AltTab-11.10.1.zip
+      sha256: aa353197537ccfd378dd4a7ff43030561ce7c62267dd0b31b385691b0e7f594c
+      bin:
+        - alt-tab
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/lwouis/alt-tab-macos/releases/download/v11.10.1/AltTab-11.10.1.zip
+      sha256: aa353197537ccfd378dd4a7ff43030561ce7c62267dd0b31b385691b0e7f594c
+      bin:
+        - alt-tab
+      strip: 1
+test: alt-tab --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

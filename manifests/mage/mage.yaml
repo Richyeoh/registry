@@ -1,0 +1,21 @@
+api: v1
+name: mage
+kind: app
+display: mage
+description: A make/rake-like build tool for Go
+homepage: https://magefile.org
+license: Apache-2.0
+version: 1.17.2
+channels:
+    stable: 1.17.2
+provides:
+    - mage
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/magefile/mage/releases/download/v1.17.2/mage_1.17.2_Windows-64bit.zip
+      sha256: 970bc6efa76d6dc7285098a7033f4e6c83c18dc02f80548ae8de8dc5586e0445
+      bin:
+        - mage.exe
+      strip: 1
+test: mage --version

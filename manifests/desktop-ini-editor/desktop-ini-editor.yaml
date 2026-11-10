@@ -1,0 +1,21 @@
+api: v1
+name: desktop-ini-editor
+kind: app
+display: desktop-ini-editor
+description: A simple app that allows users to edit the desktop.ini file in thier folders.
+homepage: https://www.sordum.org/desktop-ini-editor
+license: Unknown
+version: "1.2"
+channels:
+    stable: "1.2"
+provides:
+    - desktop-ini-editor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/desktop-ini-editor/DeskEdit.zip
+      sha256: f778d0e3b14b7e1481c54e9af4d60979ac67303344bf6319fcabeae58620eefa
+      bin:
+        - DeskEdit.exe
+      strip: 1
+test: DeskEdit --version

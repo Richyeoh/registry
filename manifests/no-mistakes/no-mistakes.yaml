@@ -1,0 +1,21 @@
+api: v1
+name: no-mistakes
+kind: app
+display: no-mistakes
+description: A local Git proxy that AI-validates your code before push, forwarding only clean commits upstream.
+homepage: https://kunchenguid.github.io/no-mistakes
+license: MIT
+version: 1.106.1
+channels:
+    stable: 1.106.1
+provides:
+    - no-mistakes
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kunchenguid/no-mistakes/releases/download/v1.106.1/no-mistakes-v1.106.1-windows-amd64.zip
+      sha256: 78e17f98e9d9448368ce126f34101f01ca43f55d5797e3f55f5e11aadd175bef
+      bin:
+        - no-mistakes.exe
+      strip: 1
+test: no-mistakes --version

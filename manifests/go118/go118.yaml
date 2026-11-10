@@ -1,0 +1,22 @@
+api: v1
+name: go118
+kind: app
+display: go118
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.18.10
+channels:
+    stable: 1.18.10
+provides:
+    - go118
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.18.10.windows-amd64.zip
+      sha256: caf3fcc9d39371fc45ad46afad7f6d12b42433c7d7ac593ada6351cd39ee217d
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

@@ -1,0 +1,23 @@
+api: v1
+name: opus-tools
+kind: app
+display: opus-tools
+description: Command-line utilities to encode, inspect, and decode .opus files.
+homepage: https://www.opus-codec.org/
+license: BSD-2-Clause|GPL-2.0-only
+version: 0.2-opus-1.3
+channels:
+    stable: 0.2-opus-1.3
+provides:
+    - opus-tools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://archive.mozilla.org/pub/opus/win64/opus-tools-0.2-opus-1.3-win64.zip
+      sha256: a892bd29358e142fa756da6bfcaea2faadc0f82ee1947d9eb2cecd208f1b873f
+      bin:
+        - opusenc.exe
+        - opusdec.exe
+        - opusinfo.exe
+      strip: 1
+test: opusenc --version

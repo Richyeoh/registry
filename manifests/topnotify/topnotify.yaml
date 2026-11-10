@@ -1,0 +1,21 @@
+api: v1
+name: topnotify
+kind: app
+display: topnotify
+description: The Ultimate Notification Customization Tool For Windows.
+homepage: https://samsidparty.com/software/topnotify
+license: GPL-3.0-or-later
+version: 3.1.1
+channels:
+    stable: 3.1.1
+provides:
+    - topnotify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SamsidParty/TopNotify/releases/download/3.1.1/TopNotify.Msix#/dl.7z
+      sha256: fa1adff5d6bd094f7cdbcbecad70beb92f8575c65347fe4619a8c4f9ceaa33c9
+      bin:
+        - topnotify.exe
+      strip: 1
+test: topnotify --version

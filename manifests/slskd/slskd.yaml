@@ -1,0 +1,21 @@
+api: v1
+name: slskd
+kind: app
+display: slskd
+description: A modern client-server application for the Soulseek file sharing network.
+homepage: https://github.com/slskd/slskd
+license: AGPL-3.0-only
+version: 0.26.2
+channels:
+    stable: 0.26.2
+provides:
+    - slskd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/slskd/slskd/releases/download/0.26.2/slskd-0.26.2-win-x64.zip
+      sha256: ffe186ecbedce15bf19b6a690c6213c669f34acc793ef53aa92390a5cd9c48f0
+      bin:
+        - slskd.exe
+      strip: 1
+test: slskd --version

@@ -1,0 +1,21 @@
+api: v1
+name: effekseer
+kind: app
+display: effekseer
+description: 'An open source tool that allows easy creation of beautiful particle effects for games and movies. '
+homepage: https://effekseer.github.io/en/index.html
+license: MIT
+version: 1.80.8
+channels:
+    stable: 1.80.8
+provides:
+    - effekseer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/effekseer/Effekseer/releases/download/1808/Effekseer1.80.8Win.zip
+      sha256: 99a61cd6dae02a63a2025e615e73f0c8f63683e9c141539bc0ab25b6f0b64c45
+      bin:
+        - effekseer.exe
+      strip: 1
+test: effekseer --version

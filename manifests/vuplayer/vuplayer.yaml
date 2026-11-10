@@ -1,0 +1,21 @@
+api: v1
+name: vuplayer
+kind: app
+display: vuplayer
+description: An open-source multi-format audio player.
+homepage: https://github.com/jfchapman/VUPlayer
+license: MIT
+version: "4.25"
+channels:
+    stable: "4.25"
+provides:
+    - vuplayer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jfchapman/VUPlayer/releases/download/v4.25/VUPlayer4_64bit.zip
+      sha256: 2717e610f5b03880d45a5de4137c5e06979b2a714735e1bf3d8cdab0eb5d19f3
+      bin:
+        - VUPlayer.exe
+      strip: 1
+test: VUPlayer --version

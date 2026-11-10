@@ -1,0 +1,21 @@
+api: v1
+name: stone-soup-tiles
+kind: app
+display: stone-soup-tiles
+description: A roguelike adventure through dungeons filled with dangerous monsters in a quest to find the mystifyingly fabulous Orb of Zot.
+homepage: https://crawl.develz.org
+license: GPL-2.0-only
+version: 0.34.1
+channels:
+    stable: 0.34.1
+provides:
+    - stone-soup-tiles
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/crawl/crawl/releases/download/0.34.1/dcss-0.34.1-win32-tiles.zip
+      sha256: a772f22db9dde5dfa85bcc1652dbf16e3d62ecd1173f27c39387403532507979
+      bin:
+        - crawl.exe
+      strip: 1
+test: crawl --version

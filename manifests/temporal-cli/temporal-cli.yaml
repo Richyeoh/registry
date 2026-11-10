@@ -1,0 +1,21 @@
+api: v1
+name: temporal-cli
+kind: app
+display: temporal-cli
+description: Command-line interface for running Temporal Server and interacting with Workflows, Activities, Namespaces, and other parts of Temporal
+homepage: https://docs.temporal.io/cli
+license: MIT
+version: 1.10.0
+channels:
+    stable: 1.10.0
+provides:
+    - temporal-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/temporalio/cli/releases/download/v1.10.0/temporal_cli_1.10.0_windows_amd64.zip
+      sha256: b95695d08a564621b02322592bbb525a924f76cc892084fc3dd7d2e90f42b8bd
+      bin:
+        - temporal.exe
+      strip: 1
+test: temporal --version

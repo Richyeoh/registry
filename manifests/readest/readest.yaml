@@ -1,0 +1,24 @@
+api: v1
+name: readest
+kind: app
+display: readest
+description: An open-source ebook reader designed for immersive and deep reading experiences
+homepage: https://readest.com/
+license: Unknown
+version: 0.12.20
+channels:
+    stable: 0.12.20
+provides:
+    - readest
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/readest/readest/releases/download/v0.12.20/Readest_0.12.20_x64-portable.exe#/Readest.exe
+      sha256: aef79804bcbb629e880f3ea2b6b32c6cc033e9dfd27304423523d09999325c36
+      bin:
+        - readest.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall readest
+test: readest --version

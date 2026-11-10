@@ -1,0 +1,22 @@
+api: v1
+name: wizfile
+kind: app
+display: wizfile
+description: An extremely fast file finder
+homepage: https://antibody-software.com/wizfile/
+license: Unknown
+version: "3.15"
+channels:
+    stable: "3.15"
+provides:
+    - wizfile
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://antibody-software.com/files/wizfile_3_15_portable.zip
+      sha256: d7a1fd121a7182219dcc74d467314b8a764830118321a07410951b66a8b40824
+      bin:
+        - WizFile64.exe
+        - WizFile64.exe
+      strip: 1
+test: WizFile64 --version

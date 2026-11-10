@@ -1,0 +1,22 @@
+api: v1
+name: smartgit
+kind: app
+display: smartgit
+description: A graphical Git client with support for SVN and Pull Requests for GitHub and Bitbucket.
+homepage: https://www.smartgit.dev/
+license: Unknown
+version: 26.1.057
+channels:
+    stable: 26.1.057
+provides:
+    - smartgit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.smartgit.dev/smartgit/smartgit-26_1_057-win-portable.7z
+      sha256: a9da90baa7bab43a4f132f1f3832206bb109eb0547f36e555162d0f7d746ad2f
+      bin:
+        - bin\smartgitc.exe
+        - bin\smartgitc.exe
+      strip: 1
+test: bin\smartgitc --version

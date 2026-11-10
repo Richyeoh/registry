@@ -1,0 +1,21 @@
+api: v1
+name: opentofu
+kind: app
+display: opentofu
+description: An OSS tool for building, changing, and versioning infrastructure safely and efficiently. OpenTofu can manage existing and popular service providers as well as custom in-house solutions.
+homepage: https://opentofu.org/
+license: MPL-2.0
+version: 1.13.9
+channels:
+    stable: 1.13.9
+provides:
+    - opentofu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/opentofu/opentofu/releases/download/v1.13.9/tofu_1.13.9_windows_amd64.zip
+      sha256: b23a811741911baa829aa7d3d3718626c549e8934546822b0e9b99b9fba75e4e
+      bin:
+        - tofu.exe
+      strip: 1
+test: tofu --version

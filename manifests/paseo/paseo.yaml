@@ -1,0 +1,21 @@
+api: v1
+name: paseo
+kind: app
+display: paseo
+description: Orchestrate multiple coding agents from desktop and mobile
+homepage: https://paseo.sh
+license: Apache-2.0
+version: 0.15.4
+channels:
+    stable: 0.15.4
+provides:
+    - paseo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/getpaseo/paseo/releases/download/v0.15.4/Paseo-Setup-0.15.4-x64.exe#/dl.7z
+      sha256: 6c32e2612392dfd1d00270c4ec29485c906404687f0226858b938da694c63c9d
+      bin:
+        - paseo.exe
+      strip: 1
+test: paseo --version

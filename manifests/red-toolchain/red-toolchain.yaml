@@ -1,0 +1,24 @@
+api: v1
+name: red-toolchain
+kind: app
+display: red-toolchain
+description: Programming language inspired by Rebol. Encapper for Red + Red/System compiler
+homepage: https://www.red-lang.org
+license: Unknown
+version: 10nov26
+channels:
+    stable: 10nov26
+provides:
+    - red-toolchain
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static.red-lang.org/dl/auto/win/red-toolchain-10nov26-de388d6cc.exe#/red-toolchain.exe
+      sha256: 199a6bc193dee5596c09e5f90bd969e6d5ed4723ec4761bed8a430b3dd7d926f
+      bin:
+        - red-toolchain.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall red-toolchain
+test: red-toolchain --version

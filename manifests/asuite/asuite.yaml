@@ -1,0 +1,22 @@
+api: v1
+name: asuite
+kind: app
+display: asuite
+description: Portable applications launcher
+homepage: http://www.salvadorsoftware.com/asuite
+license: GPL-3.0-only
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - asuite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/asuite/ASuite/2.0.0/asuite_x64-v2.0.0.7z
+      sha256: 1366d2325e48d775f772959abd2014bd47b1fdc780033dcffe7b0d5e6712c23a
+      bin:
+        - asuite_x64.exe
+        - asuite_x64.exe
+      strip: 1
+test: asuite_x64 --version

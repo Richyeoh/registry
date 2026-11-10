@@ -1,0 +1,21 @@
+api: v1
+name: lazyssh
+kind: app
+display: lazyssh
+description: A terminal-based SSH manager.
+homepage: https://github.com/Adembc/lazyssh
+license: Apache-2.0
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - lazyssh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Adembc/lazyssh/releases/download/v0.3.0/lazyssh_Windows_x86_64.zip
+      sha256: ca4353a910e453deb5de68c95d83aa8738ff0e52c4bff919f6d74dc27560a1df
+      bin:
+        - lazyssh.exe
+      strip: 1
+test: lazyssh --version

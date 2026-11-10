@@ -1,0 +1,24 @@
+api: v1
+name: bom
+kind: app
+display: bom
+description: A utility that lets you create, view and transform Software Bills of Materials (SBOMs).
+homepage: https://kubernetes-sigs.github.io/bom/
+license: Apache-2.0
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - bom
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubernetes-sigs/bom/releases/download/v0.8.0/bom-amd64-windows.exe#/bom.exe
+      sha256: 2347f27aa2f37bc5abc5d67a3c973820376aa6953f5ac18a32bb537447dc1288
+      bin:
+        - bom.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bom
+test: bom --version

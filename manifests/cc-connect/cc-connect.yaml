@@ -1,0 +1,21 @@
+api: v1
+name: cc-connect
+kind: app
+display: cc-connect
+description: Bridge local AI coding agents to messaging platforms.
+homepage: https://github.com/chenhg5/cc-connect
+license: MIT
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - cc-connect
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/chenhg5/cc-connect/releases/download/v1.5.0/cc-connect-v1.5.0-windows-amd64.zip
+      sha256: 1d0fdeffa6118ab0a942a3c3918930685bd7d4caef5d7311b0d8f605fad95763
+      bin:
+        - cc-connect.exe
+      strip: 1
+test: cc-connect --version

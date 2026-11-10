@@ -1,0 +1,21 @@
+api: v1
+name: streamwriter
+kind: app
+display: streamwriter
+description: Records music broadcasted by Internet radio stations.
+homepage: https://streamwriter.org/en/
+license: GPL-3.0-or-later
+version: 6.0.1.1157
+channels:
+    stable: 6.0.1.1157
+provides:
+    - streamwriter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://streamwriter.org/en/downloads/streamwriter-x86_64.zip
+      sha256: dd7decdff9c6e2105dfcf08464fcfe20fd17c4d4a726e3830b8295b7a4c359f2
+      bin:
+        - streamwriter.exe
+      strip: 1
+test: streamwriter --version

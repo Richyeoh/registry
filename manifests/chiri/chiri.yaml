@@ -1,0 +1,21 @@
+api: v1
+name: chiri
+kind: app
+display: chiri
+description: Cross-platform CalDAV task management app
+homepage: https://github.com/chiriapp/chiri
+license: Zlib
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - chiri
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/chiriapp/chiri/releases/download/app-v1.0.0/Chiri_1.0.0_x64-setup.exe#/dl.7z
+      sha256: ed767a37a86d1299a24cd6869336138507f2a84393e7b6495b4d7678e744c9d7
+      bin:
+        - chiri.exe
+      strip: 1
+test: chiri --version

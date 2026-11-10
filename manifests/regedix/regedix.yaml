@@ -1,0 +1,24 @@
+api: v1
+name: regedix
+kind: app
+display: regedix
+description: Windows Registry editor. Breadcrumb navigation, favorites, dark theme...
+homepage: https://regedix.webrox.fr/
+license: GPL-3.0
+version: 2.0.0.0
+channels:
+    stable: 2.0.0.0
+provides:
+    - regedix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://regedix.webrox.fr/download.php?v=2.0.0.0&file=2.0.0.0/Regedix-2.0.0-x64.exe#/regedix.exe
+      sha256: 25711db7e9b7396ac535894439ab9c2517a713e65d5cf56204f717d94039c74c
+      bin:
+        - regedix.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall regedix
+test: regedix --version

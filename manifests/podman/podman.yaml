@@ -1,0 +1,24 @@
+api: v1
+name: podman
+kind: app
+display: podman
+description: A tool for managing OCI containers and pods.
+homepage: https://podman.io/
+license: Apache-2.0
+version: 6.1.4
+channels:
+    stable: 6.1.4
+provides:
+    - podman
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/podman-container-tools/podman/releases/download/v6.1.4/podman-installer-windows-amd64.msi
+      sha256: 4a05240054cb990629cbe098db090c5c7848c44162c11910cabb45ca75a40d53
+      bin:
+        - podman.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall podman
+test: podman --version

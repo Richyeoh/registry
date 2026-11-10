@@ -1,0 +1,21 @@
+api: v1
+name: poetry
+kind: app
+display: poetry
+description: Dependency Management for Python
+homepage: https://python-poetry.org/
+license: MIT
+version: 2.5.1
+channels:
+    stable: 2.5.1
+provides:
+    - poetry
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://install.python-poetry.org#/install-poetry.py
+      sha256: 75745ca71373a7b22fa150953543f03d826a52f8e4bc4350328a33bddd668026
+      bin:
+        - venv\Scripts\poetry.exe
+      strip: 1
+test: venv\Scripts\poetry --version

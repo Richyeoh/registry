@@ -1,0 +1,22 @@
+api: v1
+name: dosbox-staging
+kind: app
+display: dosbox-staging
+description: A DOS/x86 emulator based on DOSBox which focuses on ease of use.
+homepage: https://dosbox-staging.github.io/
+license: GPL-2.0-or-later
+version: 0.83.0
+channels:
+    stable: 0.83.0
+provides:
+    - dosbox-staging
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dosbox-staging/dosbox-staging/releases/download/v0.83.0/dosbox-staging-windows-x64-v0.83.0.zip
+      sha256: 725b915e325a6d410ce30a10989fd492fdad07f6611fff40ff77f160478810f4
+      bin:
+        - dosbox.exe
+        - dosbox_with_debugger.exe
+      strip: 1
+test: dosbox --version

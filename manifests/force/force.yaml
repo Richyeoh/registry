@@ -1,0 +1,21 @@
+api: v1
+name: force
+kind: app
+display: force
+description: Force.com CLI tool
+homepage: https://force-cli.herokuapp.com/
+license: MIT
+version: 1.16.0
+channels:
+    stable: 1.16.0
+provides:
+    - force
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ForceCLI/force/releases/download/v1.16.0/force_windows_amd64_v1.16.0.zip
+      sha256: 620dc6ec83e45dc4385e097786dfa59a0f9c4780f71c4cf896487d6c1ca1be6c
+      bin:
+        - force.exe
+      strip: 1
+test: force --version

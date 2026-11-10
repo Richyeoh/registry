@@ -1,0 +1,24 @@
+api: v1
+name: surrealdb
+kind: app
+display: surrealdb
+description: A scalable, distributed, collaborative, document-graph database, for the realtime web.
+homepage: https://surrealdb.com/
+license: BUSL-1.1|Apache-2.0
+version: 4.0.1
+channels:
+    stable: 4.0.1
+provides:
+    - surrealdb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.surrealdb.com/v4.0.1/surreal-v4.0.1.windows-amd64.exe#/surreal.exe
+      sha256: 150cf2138b0064dc85825b443e5a87d3bf9338a0e085d01fe09a00466576d595
+      bin:
+        - surreal.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall surrealdb
+test: surreal --version

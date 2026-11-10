@@ -1,0 +1,22 @@
+api: v1
+name: winscp
+kind: app
+display: winscp
+description: Copy files between a local computer and remote servers using FTP, FTPS, SCP, SFTP, WebDAV or S3 file transfer protocols.
+homepage: https://winscp.net
+license: GPL-3.0-or-later
+version: "6.7"
+channels:
+    stable: "6.7"
+provides:
+    - winscp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/winscp/WinSCP/6.7/WinSCP-6.7-Portable.zip
+      sha256: fef88545873aca4b353ac322b1e2702f2feadf30758b713f5fc7e2bed60f7662
+      bin:
+        - WinSCP.exe
+        - WinSCP.com.exe
+      strip: 1
+test: WinSCP --version

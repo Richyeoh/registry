@@ -1,0 +1,21 @@
+api: v1
+name: git-machete
+kind: app
+display: git-machete
+description: Probably the sharpest git repository organizer & rebase/merge workflow automation tool you've ever seen
+homepage: https://github.com/VirtusLab/git-machete
+license: MIT
+version: 3.46.1
+channels:
+    stable: 3.46.1
+provides:
+    - git-machete
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://files.pythonhosted.org/packages/py3/g/git-machete/git_machete-3.46.1-py3-none-any.whl
+      sha256: 38e82387d244834b769b28195932aa661c2057f6d01a40b1c28cdf8ec79a7e0c
+      bin:
+        - git-machete\Scripts\git-machete.exe
+      strip: 1
+test: git-machete\Scripts\git-machete --version

@@ -1,0 +1,24 @@
+api: v1
+name: bat2exe
+kind: app
+display: bat2exe
+description: A simple application which converts any windows batch file to a fully working executable .exe with an icon of your choice.
+homepage: https://bat2exe.net
+license: Freeware
+version: "2.3"
+channels:
+    stable: "2.3"
+provides:
+    - bat2exe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/islamadel/bat2exe/releases/download/2.3/bat2exe.exe
+      sha256: 5c33850ef8dc4e91adcd4f3a717d176e4922ac3e7ec9f9a47548c5a946dbcfb2
+      bin:
+        - bat2exe.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bat2exe
+test: bat2exe --version

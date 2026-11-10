@@ -1,0 +1,22 @@
+api: v1
+name: unison
+kind: app
+display: unison
+description: A file-synchronization tool.
+homepage: https://www.cis.upenn.edu/~bcpierce/unison
+license: GPL-3.0-only
+version: 2.54.0
+channels:
+    stable: 2.54.0
+provides:
+    - unison
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bcpierce00/unison/releases/download/v2.54.0/unison-2.54.0-windows-x86_64.zip
+      sha256: 8e0c9070824dc7e3f207d54c8afdec1af55ac26af2740d0d5d7b6e00c44d5fab
+      bin:
+        - bin\unison.exe
+        - bin\unison-fsmonitor.exe
+      strip: 1
+test: bin\unison --version

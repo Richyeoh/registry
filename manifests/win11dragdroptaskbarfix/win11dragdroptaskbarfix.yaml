@@ -1,0 +1,24 @@
+api: v1
+name: win11dragdroptaskbarfix
+kind: app
+display: win11dragdroptaskbarfix
+description: Fixes the missing 'Drag & Drop to the Taskbar' support in Windows 11.
+homepage: https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix
+license: GPL-3.0-only
+version: 2.4.0.0
+channels:
+    stable: 2.4.0.0
+provides:
+    - win11dragdroptaskbarfix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/releases/download/v.2.4.0.0-release/Windows11DragAndDropToTaskbarFix.exe
+      sha256: e228647ceaaa3f72ca263a014a5bdc9f2f9be350495bcd6822c1b3bd844a15a7
+      bin:
+        - win11dragdroptaskbarfix.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall win11dragdroptaskbarfix
+test: win11dragdroptaskbarfix --version

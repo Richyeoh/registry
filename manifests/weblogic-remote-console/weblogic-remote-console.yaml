@@ -1,0 +1,21 @@
+api: v1
+name: weblogic-remote-console
+kind: app
+display: weblogic-remote-console
+description: A WebLogic Console that connects remotely using the WebLogic Management REST API
+homepage: https://oracle.github.io/weblogic-remote-console/
+license: UPL-1.0
+version: 3.0.6
+channels:
+    stable: 3.0.6
+provides:
+    - weblogic-remote-console
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oracle/weblogic-remote-console/releases/download/v3.0.6/WebLogic-Remote-Console-3.0.6-win.zip
+      sha256: 376835a018d95a5413f19ef5a278adc248ac06d73f489fac53703849e4fe2569
+      bin:
+        - weblogic-remote-console.exe
+      strip: 1
+test: weblogic-remote-console --version

@@ -1,0 +1,21 @@
+api: v1
+name: git-aliases
+kind: app
+display: git-aliases
+description: A PowerShell module that provides partial Git aliases from Oh My Zsh's git plugin.
+homepage: https://github.com/gluons/powershell-git-aliases
+license: MIT
+version: 0.4.1
+channels:
+    stable: 0.4.1
+provides:
+    - git-aliases
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/git-aliases.0.4.1.nupkg
+      sha256: 986eeabfe29d053c062d49e9a82014b042dfcab0fa61511053fc11cbc62a4463
+      bin:
+        - git-aliases.exe
+      strip: 1
+test: git-aliases --version

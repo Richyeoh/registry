@@ -1,0 +1,21 @@
+api: v1
+name: dcmtk
+kind: app
+display: dcmtk
+description: DCMTK is a collection of libraries and applications implementing large parts the DICOM standard.
+homepage: https://dcmtk.org/en/dcmtk/
+license: BSD-3-Clause
+version: 3.7.1
+channels:
+    stable: 3.7.1
+provides:
+    - dcmtk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dicom.offis.de/download/dcmtk/dcmtk371/bin/dcmtk-3.7.1-win64-dynamic.zip
+      sha256: 575fd8d4432792c1b58f9d3616c9e4d6ad6c17b75a6df7a8927c33f76fdb067e
+      bin:
+        - dcmtk.exe
+      strip: 1
+test: dcmtk --version

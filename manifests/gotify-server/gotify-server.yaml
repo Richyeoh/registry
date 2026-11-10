@@ -1,0 +1,21 @@
+api: v1
+name: gotify-server
+kind: app
+display: gotify-server
+description: A simple server for sending and receiving messages in real-time per WebSocket, with a sleek web UI
+homepage: https://gotify.net/
+license: MIT
+version: 3.1.1
+channels:
+    stable: 3.1.1
+provides:
+    - gotify-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gotify/server/releases/download/v3.1.1/gotify-windows-amd64.exe.zip
+      sha256: dea4183870bff3fecbc158aebb12a4a9ed69be9da18d1ba6a5d3490ae530bbb1
+      bin:
+        - gotify.exe
+      strip: 1
+test: gotify --version

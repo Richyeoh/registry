@@ -1,0 +1,24 @@
+api: v1
+name: psysonic
+kind: app
+display: psysonic
+description: A lean desktop music player for Subsonic-compatible servers.
+homepage: https://www.psysonic.de/
+license: Unknown
+version: 1.56.0
+channels:
+    stable: 1.56.0
+provides:
+    - psysonic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Psysonic/psysonic/releases/download/app-v1.56.0/Psysonic_1.56.0_x64-setup.exe
+      sha256: 070233b0d0224a7454271906a2a73774e427be68f1da444d6b46a4c52713f33d
+      bin:
+        - psysonic.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall psysonic
+test: psysonic --version

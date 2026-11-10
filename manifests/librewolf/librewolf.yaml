@@ -1,0 +1,21 @@
+api: v1
+name: librewolf
+kind: app
+display: librewolf
+description: A fork of Firefox, focused on privacy, security and freedom.
+homepage: https://librewolf.net/
+license: MPL-2.0
+version: 159.0.1-1
+channels:
+    stable: 159.0.1-1
+provides:
+    - librewolf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://librewolf.dev/api/packages/librewolf/generic/librewolf/159.0.1-1/librewolf-159.0.1-1-windows-x86_64-portable.zip
+      sha256: 6b1f029a758ec03e124c879823f55f852486454cd3bc7cbc2461938f8ab60319
+      bin:
+        - LibreWolf-Portable.exe
+      strip: 1
+test: LibreWolf-Portable --version

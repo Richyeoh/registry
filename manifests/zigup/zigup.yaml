@@ -1,0 +1,21 @@
+api: v1
+name: zigup
+kind: app
+display: zigup
+description: Download and manage Zig compilers
+homepage: https://github.com/marler8997/zigup
+license: MIT-0
+version: "2025_05_24"
+channels:
+    stable: "2025_05_24"
+provides:
+    - zigup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/marler8997/zigup/releases/download/v2025_05_24/zigup-x86_64-windows.zip
+      sha256: ad09da2f4b6fdfc0dccebd480f93f6b55c0bb1a02d47889cdb2cdcd35562e791
+      bin:
+        - zigup.exe
+      strip: 1
+test: zigup --version

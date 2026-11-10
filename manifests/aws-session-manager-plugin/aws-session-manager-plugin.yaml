@@ -1,0 +1,24 @@
+api: v1
+name: aws-session-manager-plugin
+kind: app
+display: aws-session-manager-plugin
+description: This plugin helps you to use the AWS Command Line Interface (AWS CLI) to start and end sessions to your managed instances
+homepage: https://github.com/aws/session-manager-plugin
+license: Apache-2.0
+version: 1.2.896.0
+channels:
+    stable: 1.2.896.0
+provides:
+    - aws-session-manager-plugin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://s3.amazonaws.com/session-manager-downloads/plugin/1.2.896.0/windows/SessionManagerPluginSetup.exe
+      sha256: 116a121ca6a781b7985d0c9fa3c5c9143440acde7822de2e32733665eed30347
+      bin:
+        - bin\session-manager-plugin.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall aws-session-manager-plugin
+test: bin\session-manager-plugin --version

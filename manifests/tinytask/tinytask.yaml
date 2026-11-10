@@ -1,0 +1,24 @@
+api: v1
+name: tinytask
+kind: app
+display: tinytask
+description: Windows automation app for recording and repeating actions.
+homepage: https://www.tinytask.net
+license: Unknown
+version: "1.77"
+channels:
+    stable: "1.77"
+provides:
+    - tinytask
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/tinytask/tinytask_177.exe#/TinyTask.exe
+      sha256: 75e06ac5b7c1adb01ab994633466685e3dcef31d635eba1734fe16c7893ffe12
+      bin:
+        - TinyTask.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tinytask
+test: TinyTask --version

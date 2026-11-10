@@ -1,0 +1,21 @@
+api: v1
+name: nextai-translator
+kind: app
+display: nextai-translator
+description: Browser extension and cross-platform desktop application for translation based on ChatGPT API.
+homepage: https://github.com/nextai-translator/nextai-translator
+license: AGPL-3.0
+version: 0.6.55
+channels:
+    stable: 0.6.55
+provides:
+    - nextai-translator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nextai-translator/nextai-translator/releases/download/v0.6.55/NextAI.Translator_0.6.55_x64-setup.exe#/dl.7z
+      sha256: 7b3132822af721334193dae96ea1fdbdc8c7c5b3d1f177b6f47a449a8e0c72a8
+      bin:
+        - nextai-translator.exe
+      strip: 1
+test: nextai-translator --version

@@ -1,0 +1,21 @@
+api: v1
+name: f2-cli
+kind: app
+display: f2
+description: Batch renaming files and directories quickly and safely.
+homepage: https://f2.freshman.tech
+license: MIT
+version: 2.2.2
+channels:
+    stable: 2.2.2
+provides:
+    - f2-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ayoisaiah/f2/releases/download/v2.2.2/f2_2.2.2_windows_amd64.zip
+      sha256: 64eba7ddbadeca9cd5657b344058311f3c42d342c5e88f93a68d8f07fb8d0a53
+      bin:
+        - f2.exe
+      strip: 1
+test: f2 --version

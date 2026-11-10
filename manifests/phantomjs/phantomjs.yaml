@@ -1,0 +1,21 @@
+api: v1
+name: phantomjs
+kind: app
+display: phantomjs
+description: A headless web browser scriptable with JavaScript.
+homepage: https://phantomjs.org/
+license: BSD-3-Clause
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - phantomjs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-windows.zip
+      sha256: d9fb05623d6b26d3654d008eab3adafd1f6350433dfd16138c46161f42c7dcc8
+      bin:
+        - bin\phantomjs.exe
+      strip: 1
+test: bin\phantomjs --version

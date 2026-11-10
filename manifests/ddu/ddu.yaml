@@ -1,0 +1,21 @@
+api: v1
+name: ddu
+kind: app
+display: ddu
+description: Driver removal utility that can help you completely uninstall AMD/NVIDIA graphics card drivers and packages from your system, without leaving leftovers behind (including registry keys, folders and files, driver store)
+homepage: https://github.com/Wagnard/display-drivers-uninstaller
+license: Unknown
+version: 18.1.6.2
+channels:
+    stable: 18.1.6.2
+provides:
+    - ddu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.wagnardsoft.com/DDU/DDU%20v18.1.6.2.exe#/dl.7z
+      sha256: 932dc1423a077616f4cae5a8ad973eb7f16f2a09b749a0c78eed0e8e0f8ccebd
+      bin:
+        - ddu.exe
+      strip: 1
+test: ddu --version

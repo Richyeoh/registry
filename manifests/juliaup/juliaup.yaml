@@ -1,0 +1,25 @@
+api: v1
+name: juliaup
+kind: app
+display: juliaup
+description: Julia installer and version multiplexer
+homepage: https://github.com/JuliaLang/juliaup
+license: MIT
+version: 1.24.0
+channels:
+    stable: 1.24.0
+provides:
+    - juliaup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://julialang-s3.julialang.org/juliaup/winmsi/Julia-v1.24.0-x64.msi
+      sha256: 01c35266d3a3679b0529dc68ca0cb03dcfe25821ca0c60fddbfc666a0fe0a72b
+      bin:
+        - juliaup.exe
+        - julia.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall juliaup
+test: juliaup --version

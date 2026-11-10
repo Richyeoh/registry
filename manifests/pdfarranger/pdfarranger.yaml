@@ -1,0 +1,21 @@
+api: v1
+name: pdfarranger
+kind: app
+display: pdfarranger
+description: PDF files editor
+homepage: https://github.com/pdfarranger/pdfarranger
+license: GPL-3.0-only
+version: 1.14.0
+channels:
+    stable: 1.14.0
+provides:
+    - pdfarranger
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pdfarranger/pdfarranger/releases/download/1.14.0/pdfarranger-1.14.0-windows-portable.zip
+      sha256: 71bb8c7d3e9bd1713424ec546681f4cf4d50961020607e1c154ade67ea532615
+      bin:
+        - pdfarranger.exe
+      strip: 1
+test: pdfarranger --version

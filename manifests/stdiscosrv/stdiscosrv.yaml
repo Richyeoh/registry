@@ -1,0 +1,21 @@
+api: v1
+name: stdiscosrv
+kind: app
+display: stdiscosrv
+description: The Syncthing global discovery server
+homepage: https://syncthing.net/
+license: MPL-2.0
+version: 2.1.7
+channels:
+    stable: 2.1.7
+provides:
+    - stdiscosrv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/syncthing/discosrv/releases/download/v2.1.7/stdiscosrv-windows-amd64-v2.1.7.zip
+      sha256: 138ce1ff3eddd5dd4d73e7b9f9789100a62e8bf07356dc7366298cad479c3183
+      bin:
+        - stdiscosrv.exe
+      strip: 1
+test: stdiscosrv --version

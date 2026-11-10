@@ -1,0 +1,24 @@
+api: v1
+name: onthespot
+kind: app
+display: onthespot
+description: OnTheSpot is an open-source user-friendly music downloader built with Qt and Python.
+homepage: https://github.com/justin025/onthespot
+license: GPL-2.0
+version: 1.1.4
+channels:
+    stable: 1.1.4
+provides:
+    - onthespot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/justin025/onthespot/releases/download/v1.1.4/OnTheSpot-1.1.4-x86_64.exe#/OnTheSpot.exe
+      sha256: a424653a38a2beef95f5f88bfaf9c2e12974a61e8de3e441d13e22334fd30cdb
+      bin:
+        - OnTheSpot.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall onthespot
+test: OnTheSpot --version

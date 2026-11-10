@@ -1,0 +1,24 @@
+api: v1
+name: ntlite
+kind: app
+display: ntlite
+description: Cutting-edge Windows configuration tool
+homepage: https://www.ntlite.com
+license: Proprietary
+version: 2026.10.12522
+channels:
+    stable: 2026.10.12522
+provides:
+    - ntlite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.ntlite.com/files/NTLite_setup_x64.exe
+      sha256: 579e61e0cffdd69272173e3d23f1e55a215015697e210f22e57442bfb377b94d
+      bin:
+        - ntlite.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ntlite
+test: ntlite --version

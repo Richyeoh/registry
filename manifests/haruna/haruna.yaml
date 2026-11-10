@@ -1,0 +1,21 @@
+api: v1
+name: haruna
+kind: app
+display: haruna
+description: An open source media player built with Qt/QML and libmpv.
+homepage: https://haruna.kde.org
+license: GPL-3.0-or-later
+version: 1.8.1
+channels:
+    stable: 1.8.1
+provides:
+    - haruna
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/haruna/1.8.1/haruna-1.8.1-windows-gcc-x86_64.7z
+      sha256: 53e42bac6fc8b75c8fe5486c13e5cd0d565ac09d838d860cdf3db42069fd9ecc
+      bin:
+        - bin\haruna.exe
+      strip: 1
+test: bin\haruna --version

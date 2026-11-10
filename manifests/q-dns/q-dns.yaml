@@ -1,0 +1,21 @@
+api: v1
+name: q-dns
+kind: app
+display: q-dns
+description: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH.
+homepage: https://github.com/natesales/q
+license: GPL-3.0-or-later
+version: 0.19.12
+channels:
+    stable: 0.19.12
+provides:
+    - q-dns
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/natesales/q/releases/download/v0.19.12/q_0.19.12_windows_amd64.zip
+      sha256: 35238a11b4b2623064dbb7e61207a53e1b55619f3249f2e9b3acd26f8de18d14
+      bin:
+        - q.exe
+      strip: 1
+test: q --version

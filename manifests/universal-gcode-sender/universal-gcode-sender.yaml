@@ -1,0 +1,21 @@
+api: v1
+name: universal-gcode-sender
+kind: app
+display: universal-gcode-sender
+description: Full featured gcode platform used for interfacing with advanced CNC controllers.
+homepage: https://winder.github.io/ugs_website/
+license: GPL-3.0-only
+version: 2.1.30
+channels:
+    stable: 2.1.30
+provides:
+    - universal-gcode-sender
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.30/win64-ugs-platform-app-2.1.30.zip
+      sha256: 640685852f621a67b300103aea877dbffeca12fb7529f97a5da36ef222e6b8bb
+      bin:
+        - bin\ugsplatform64.exe
+      strip: 1
+test: bin\ugsplatform64 --version

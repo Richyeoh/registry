@@ -1,0 +1,22 @@
+api: v1
+name: nsudo
+kind: app
+display: nsudo
+description: Powerful System Administration Tool
+homepage: https://github.com/M2Team/NSudo
+license: MIT
+version: "8.2"
+channels:
+    stable: "8.2"
+provides:
+    - nsudo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/M2Team/NSudo/releases/download/8.2/NSudo_8.2_All_Components.zip
+      sha256: 346e38030cc9eeef48223804ba27631db96691d68bfc5d1728140d468f555204
+      bin:
+        - Nsudo Launcher\x64\NSudoLC.exe
+        - Nsudo Launcher\x64\NSudoLC.exe
+      strip: 1
+test: Nsudo Launcher\x64\NSudoLC.exe --version

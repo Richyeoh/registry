@@ -1,0 +1,21 @@
+api: v1
+name: gifcam
+kind: app
+display: gifcam
+description: Easy and fun animated gif making app.
+homepage: https://blog.bahraniapps.com/gifcam/
+license: Unknown
+version: "7.7"
+channels:
+    stable: "7.7"
+provides:
+    - gifcam
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.bahraniapps.com/apps/gifcam/GifCam.zip
+      sha256: 819f152b87f9cf919623fd4de8bdac6ec11a836e8d38ea15e60b5aa2e2b78ee9
+      bin:
+        - GifCam.exe
+      strip: 1
+test: GifCam --version

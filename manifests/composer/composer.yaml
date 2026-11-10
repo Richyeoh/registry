@@ -1,0 +1,21 @@
+api: v1
+name: composer
+kind: app
+display: composer
+description: Dependency Manager for PHP
+homepage: https://getcomposer.org/
+license: MIT
+version: 2.11.2
+channels:
+    stable: 2.11.2
+provides:
+    - composer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://getcomposer.org/download/2.11.2/composer.phar
+      sha256: dd158c0afd41d15fac89e1b4e47b5d42911fe316c3687cd5edac98319b25d028
+      bin:
+        - composer.ps1.exe
+      strip: 1
+test: composer.ps1 --version

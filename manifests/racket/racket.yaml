@@ -1,0 +1,22 @@
+api: v1
+name: racket
+kind: app
+display: racket
+description: A general-purpose, feature-rich programming language developed from Scheme Lisp, also the family of the core language and its dialects. It includes an extensive macro system for creating and implementing language constructs and dialects; eventspaces and custodians for resource management; units, modules and classes for programming in the large; paritial continuation; the first contract system for higher-order functions, and more.
+homepage: https://racket-lang.org
+license: LGPL-3.0-or-later
+version: "9.3"
+channels:
+    stable: "9.3"
+provides:
+    - racket
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirror.racket-lang.org/installers/9.3/racket-9.3-x86_64-win32.exe#/dl.7z
+      sha256: 5bea9560f8bc6c9d31d55b52a2f83fb5947e57cf625e1865e6091a428c13fe60
+      bin:
+        - racket.exe
+        - raco.exe
+      strip: 1
+test: racket --version

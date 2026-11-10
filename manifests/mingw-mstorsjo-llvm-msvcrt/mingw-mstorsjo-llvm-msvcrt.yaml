@@ -1,0 +1,21 @@
+api: v1
+name: mingw-mstorsjo-llvm-msvcrt
+kind: app
+display: mingw-mstorsjo-llvm-msvcrt
+description: LLVM toolchain based on mingw-w64. (MSVCRT, mstorsjo build)
+homepage: https://github.com/mstorsjo/llvm-mingw/
+license: GPL-3.0-or-later,ZPL-2.1,Apache-2.0 WITH LLVM-exception,ISC
+version: 23.1.5-20261104
+channels:
+    stable: 23.1.5-20261104
+provides:
+    - mingw-mstorsjo-llvm-msvcrt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mstorsjo/llvm-mingw/releases/download/20261104/llvm-mingw-20261104-msvcrt-x86_64.zip
+      sha256: 6f9c316699759f088de26f5ca0e1df35c1d4e8ee3600f31229821c5717fd0d2b
+      bin:
+        - mingw-mstorsjo-llvm-msvcrt.exe
+      strip: 1
+test: mingw-mstorsjo-llvm-msvcrt --version

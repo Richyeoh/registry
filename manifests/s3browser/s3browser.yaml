@@ -1,0 +1,21 @@
+api: v1
+name: s3browser
+kind: app
+display: s3browser
+description: S3 Browser is a freeware Windows client for Amazon S3 and Amazon CloudFront.
+homepage: https://s3browser.com/
+license: Freeware
+version: 13.6.5
+channels:
+    stable: 13.6.5
+provides:
+    - s3browser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://s3browser.com/download/s3browser-13-6-5.zip
+      sha256: f708c19759b55d3528f039182dea85a923d1ecce8982f99df18c7a2e88363c7c
+      bin:
+        - s3browser-cli.exe
+      strip: 1
+test: s3browser-cli --version

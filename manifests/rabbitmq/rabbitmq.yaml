@@ -1,0 +1,29 @@
+api: v1
+name: rabbitmq
+kind: app
+display: rabbitmq
+description: Message-broker
+homepage: https://www.rabbitmq.com
+license: MPL-2.0
+version: 4.4.0
+channels:
+    stable: 4.4.0
+provides:
+    - rabbitmq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.4.0/rabbitmq-server-windows-4.4.0.zip
+      sha256: c077a084890e57e1498e479913d4d5bda77e88647e153b433e97f72a31431542
+      bin:
+        - sbin\rabbitmqctl.bat.exe
+        - sbin\rabbitmq-defaults.bat.exe
+        - sbin\rabbitmq-diagnostics.bat.exe
+        - sbin\rabbitmq-env.bat.exe
+        - sbin\rabbitmq-plugins.bat.exe
+        - sbin\rabbitmq-queues.bat.exe
+        - sbin\rabbitmq-server.bat.exe
+        - sbin\rabbitmq-service.bat.exe
+        - sbin\rabbitmq-upgrade.bat.exe
+      strip: 1
+test: sbin\rabbitmqctl.bat --version

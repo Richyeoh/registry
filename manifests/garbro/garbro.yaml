@@ -1,0 +1,21 @@
+api: v1
+name: garbro
+kind: app
+display: garbro
+description: Browsing a wide range of Visual Novel resources through a GUI interface.
+homepage: https://github.com/morkt/GARbro
+license: MIT
+version: 1.5.44.2904
+channels:
+    stable: 1.5.44.2904
+provides:
+    - garbro
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/morkt/GARbro/releases/download/v1.5.44/GARbro-v1.5.44.2904.rar
+      sha256: c0e64b881f967e0a1473127b1d181c0808068a47e99d8b5f1fbe2d99a6b2ed53
+      bin:
+        - garbro.exe
+      strip: 1
+test: garbro --version

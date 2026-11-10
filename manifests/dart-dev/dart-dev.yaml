@@ -1,0 +1,21 @@
+api: v1
+name: dart-dev
+kind: app
+display: dart-dev
+description: The libraries and command-line tools that you need to develop Dart web, command-line, and server apps
+homepage: https://www.dartlang.org/
+license: BSD-3-Clause
+version: 3.15.0-106.0.dev
+channels:
+    stable: 3.15.0-106.0.dev
+provides:
+    - dart-dev
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/dart-archive/channels/dev/release/3.15.0-106.0.dev/sdk/dartsdk-windows-x64-release.zip
+      sha256: 49c4a461cc03c2562910d7cbe4bc78ad6aa56ad8b3aa8aea2668a46e6c99a314
+      bin:
+        - dart-dev.exe
+      strip: 1
+test: dart-dev --version

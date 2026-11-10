@@ -1,0 +1,24 @@
+api: v1
+name: latex
+kind: app
+display: latex
+description: An up-to-date implementation of TeX/LaTeX and related programs [Deprecated. Use 'miktex'].
+homepage: https://miktex.org
+license: Unknown
+version: "25.12"
+channels:
+    stable: "25.12"
+provides:
+    - latex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirrors.mit.edu/CTAN/systems/win32/miktex/setup/windows-x64/basic-miktex-25.12-x64.exe
+      sha256: 14b42dd9f4b4a7813a8bfd69c8f99316c2888cc4ee26f631f397e163d85d6c62
+      bin:
+        - texmfs\install\miktex\bin\x64\miktex-console.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall latex
+test: texmfs\install\miktex\bin\x64\miktex-console --version

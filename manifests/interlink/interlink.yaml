@@ -1,0 +1,21 @@
+api: v1
+name: interlink
+kind: app
+display: interlink
+description: E-mail client
+homepage: https://binaryoutcast.com/projects/interlink/
+license: MPL-2.0
+version: 52.9.8194
+channels:
+    stable: 52.9.8194
+provides:
+    - interlink
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://projects.binaryoutcast.com/interlink/releases/latest/interlink-52.9.8194.WINNT_x86_64-msvc.7z
+      sha256: 1bd8824c335c6d72269cba016b96e5543b5eeba2e12ec58b6847f34670642c6d
+      bin:
+        - interlink.exe
+      strip: 1
+test: interlink --version

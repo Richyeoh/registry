@@ -1,0 +1,24 @@
+api: v1
+name: kubelet
+kind: app
+display: kubelet
+description: Kubernetes node agent
+homepage: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
+license: Apache-2.0
+version: 1.37.2
+channels:
+    stable: 1.37.2
+provides:
+    - kubelet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.k8s.io/v1.37.2/bin/windows/amd64/kubelet.exe
+      sha256: 97619490fcda53a7cdc33e410f68a82aa658ba6229690d7feee8d1707d55ff5d
+      bin:
+        - kubelet.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kubelet
+test: kubelet --version

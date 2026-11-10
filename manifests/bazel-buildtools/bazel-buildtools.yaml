@@ -1,0 +1,26 @@
+api: v1
+name: bazel-buildtools
+kind: app
+display: bazel-buildtools
+description: Developer tools for working with Google's bazel buildtool.
+homepage: https://github.com/bazel-contrib/buildtools
+license: Apache-2.0
+version: 10.2.0
+channels:
+    stable: 10.2.0
+provides:
+    - bazel-buildtools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bazel-contrib/buildtools/releases/download/v10.2.0/buildifier-windows-amd64.exe#/buildifier.exe
+      sha256: ae9b0632ff4bc56607b9c8512716b7fd63371387136005d25e94ec668f89361d
+      bin:
+        - buildifier.exe
+        - buildozer.exe
+        - unused-deps.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bazel-buildtools
+test: buildifier --version

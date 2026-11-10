@@ -1,0 +1,32 @@
+api: v1
+name: affinity-designer1
+kind: app
+display: Affinity Designer
+description: Professional graphic design software
+homepage: https://affinity.serif.com/en-us/designer/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.10.8
+channels:
+    stable: 1.10.8
+provides:
+    - affinity-designer1
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://affinity-update.s3.amazonaws.com/mac/retail/Affinity%20Designer-1.10.8.app.zip
+      sha256: 7c3d9ce7e42dd8f3b3cf7f37aaffde3a59f33087007b9a2c81d86baceaa39ef6
+      bin:
+        - affinity-designer1
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://affinity-update.s3.amazonaws.com/mac/retail/Affinity%20Designer-1.10.8.app.zip
+      sha256: 7c3d9ce7e42dd8f3b3cf7f37aaffde3a59f33087007b9a2c81d86baceaa39ef6
+      bin:
+        - affinity-designer1
+      strip: 1
+test: affinity-designer1 --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

@@ -1,0 +1,21 @@
+api: v1
+name: craft-anything
+kind: app
+display: craft-anything
+description: Understand how software works, then craft your own
+homepage: https://getartcraft.com/apps/craft-anything
+license: MIT|Apache-2.0
+version: 0.5.0
+channels:
+    stable: 0.5.0
+provides:
+    - craft-anything
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/craft-anything/releases/download/v0.5.0/craft-anything-0.5.0-windows-x64-portable.zip
+      sha256: 45dbe3420d6254aa39ab8e15160a09539dd241ac1d1cc20fec9e7b175654a1fc
+      bin:
+        - craft-anything-cli.exe
+      strip: 1
+test: craft-anything-cli --version

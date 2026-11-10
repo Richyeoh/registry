@@ -1,0 +1,21 @@
+api: v1
+name: jsonschema
+kind: app
+display: jsonschema
+description: JSON Schema formatting, linting, testing, bundling and more for local development and CI/CD pipelines.
+homepage: https://github.com/sourcemeta/jsonschema
+license: AGPL-3.0-or-later
+version: 17.3.3
+channels:
+    stable: 17.3.3
+provides:
+    - jsonschema
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sourcemeta/jsonschema/releases/download/v17.3.3/jsonschema-17.3.3-windows-x86_64.zip
+      sha256: 0811b2a09bd1eae6260d1f3e9b2427c8115c04e32a274ebe311ae899d786b535
+      bin:
+        - bin\jsonschema.exe
+      strip: 1
+test: bin\jsonschema --version

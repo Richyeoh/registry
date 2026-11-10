@@ -1,0 +1,24 @@
+api: v1
+name: quicksfv
+kind: app
+display: quicksfv
+description: QuickSFV is a small Windows program that checks file integrity using checksum files such as SFV.
+homepage: https://www.quicksfv.org/overview.html
+license: Freeware
+version: "3.00"
+channels:
+    stable: "3.00"
+provides:
+    - quicksfv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.quicksfv.org/quicksfv-setup64.msi
+      sha256: 7b4ced15746973773882579b2740b3f2c6a76e739511f1fa352babc96b08e79f
+      bin:
+        - quicksfv.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall quicksfv
+test: quicksfv --version

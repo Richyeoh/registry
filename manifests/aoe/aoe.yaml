@@ -1,0 +1,39 @@
+api: v1
+name: aoe
+kind: app
+display: aoe
+description: Terminal session manager for AI coding agents
+homepage: https://github.com/agent-of-empires/agent-of-empires
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.22.3
+channels:
+    stable: 1.22.3
+provides:
+    - aoe
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aoe/blobs/sha256:fa1ae5742a7dc62fc7a625149165421b6d4d2ba778479794ea707f54285d5d3c
+      sha256: fa1ae5742a7dc62fc7a625149165421b6d4d2ba778479794ea707f54285d5d3c
+      bin:
+        - aoe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aoe/blobs/sha256:9713411d5d27b8d0402123b2d7b3e9bbeb005a99191d48bc75ccb45b7f2712d8
+      sha256: 9713411d5d27b8d0402123b2d7b3e9bbeb005a99191d48bc75ccb45b7f2712d8
+      bin:
+        - aoe
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aoe/blobs/sha256:2707fcceba5dcf1c5ecc71475aff7beeb01d4006e6402b40f979bf02c4e05693
+      sha256: 2707fcceba5dcf1c5ecc71475aff7beeb01d4006e6402b40f979bf02c4e05693
+      bin:
+        - aoe
+      strip: 1
+test: aoe --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

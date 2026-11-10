@@ -1,0 +1,21 @@
+api: v1
+name: lazydocker
+kind: app
+display: lazydocker
+description: Terminal UI for both docker and docker-compose
+homepage: https://github.com/jesseduffield/lazydocker
+license: MIT
+version: 0.25.2
+channels:
+    stable: 0.25.2
+provides:
+    - lazydocker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jesseduffield/lazydocker/releases/download/v0.25.2/lazydocker_0.25.2_Windows_x86_64.zip
+      sha256: facae8869c1bf144468191c563002162273a2c2761f052659170530cae3fa8a9
+      bin:
+        - lazydocker.exe
+      strip: 1
+test: lazydocker --version

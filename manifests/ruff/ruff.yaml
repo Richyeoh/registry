@@ -1,0 +1,21 @@
+api: v1
+name: ruff
+kind: app
+display: ruff
+description: An extremely fast Python linter and code formatter, written in Rust.
+homepage: https://docs.astral.sh/ruff
+license: MIT
+version: 0.17.4
+channels:
+    stable: 0.17.4
+provides:
+    - ruff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/astral-sh/ruff/releases/download/0.17.4/ruff-x86_64-pc-windows-msvc.zip
+      sha256: d37f57c7a0cfb8ed5a39adc96f7a0a63767b3c5abe4629c4c84e33c06da46885
+      bin:
+        - ruff.exe
+      strip: 1
+test: ruff --version

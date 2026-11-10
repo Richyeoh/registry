@@ -1,0 +1,24 @@
+api: v1
+name: imo-messenger
+kind: app
+display: imo-messenger
+description: Video calls and chat software
+homepage: https://imo.im/
+license: Unknown
+version: 1.5.7.1
+channels:
+    stable: 1.5.7.1
+provides:
+    - imo-messenger
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static-web.imoim.net/as/indigo-static/winapp/1.5.7.1/ImoSetup_1.5.7.1_Release.exe
+      sha256: 385baa7dbcb6dee748e42b31e50b769602055ec57b1519638b82e2adc037d09b
+      bin:
+        - imo-messenger.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall imo-messenger
+test: imo-messenger --version

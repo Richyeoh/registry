@@ -1,0 +1,21 @@
+api: v1
+name: goland
+kind: app
+display: goland
+description: Cross-Platform IDE for Go by JetBrains.
+homepage: https://www.jetbrains.com/goland/
+license: Unknown
+version: 2026.3-263.7307.211
+channels:
+    stable: 2026.3-263.7307.211
+provides:
+    - goland
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/go/goland-2026.3.win.zip
+      sha256: 75566e71d1d1f1f2f9cc1801e2f1eccb0e8e5a00b60ca89a85222f1a117321de
+      bin:
+        - IDE\bin\goland64.exe
+      strip: 1
+test: IDE\bin\goland64 --version

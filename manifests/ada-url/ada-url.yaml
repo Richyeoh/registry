@@ -1,0 +1,39 @@
+api: v1
+name: ada-url
+kind: app
+display: ada-url
+description: WHATWG-compliant and fast URL parser written in modern C++
+homepage: https://ada-url.com
+license: Apache-2.0 OR MIT
+keywords:
+    - brew
+    - homebrew
+version: 4.0.0
+channels:
+    stable: 4.0.0
+provides:
+    - ada-url
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ada-url/blobs/sha256:c47d62dbcf1d8a254f88fab01691998b85fcfa8eb37331dcc672447fa76275cc
+      sha256: c47d62dbcf1d8a254f88fab01691998b85fcfa8eb37331dcc672447fa76275cc
+      bin:
+        - ada-url
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ada-url/blobs/sha256:07042596fb78754997f38d3f802818a5917018de3922e75c389748a257e19d58
+      sha256: 07042596fb78754997f38d3f802818a5917018de3922e75c389748a257e19d58
+      bin:
+        - ada-url
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ada-url/blobs/sha256:cb222e1daef4716eba8d1bfeb93113e94bc89833357911d2233819c205d1c087
+      sha256: cb222e1daef4716eba8d1bfeb93113e94bc89833357911d2233819c205d1c087
+      bin:
+        - ada-url
+      strip: 1
+test: ada-url --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

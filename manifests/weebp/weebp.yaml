@@ -1,0 +1,22 @@
+api: v1
+name: weebp
+kind: app
+display: weebp
+description: A wallpaper engine, set any window as your wallpaper.
+homepage: https://github.com/Francesco149/weebp
+license: Unlicense
+version: 0.6.1
+channels:
+    stable: 0.6.1
+provides:
+    - weebp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Francesco149/weebp/releases/download/0.6.1/weebp-0.6.1-windows-x64.zip
+      sha256: 753e6c4e0a9227f7c80141c495e422723f6c799eebacc106665aff07cc2b3cbb
+      bin:
+        - wp.exe
+        - wp-headless.exe
+      strip: 1
+test: wp --version

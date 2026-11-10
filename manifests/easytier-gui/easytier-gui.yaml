@@ -1,0 +1,21 @@
+api: v1
+name: easytier-gui
+kind: app
+display: easytier-gui
+description: A simple, decentralized mesh VPN with WireGuard support. (GUI version)
+homepage: https://github.com/EasyTier/EasyTier
+license: LGPL-3.0-only
+version: 2.6.4
+channels:
+    stable: 2.6.4
+provides:
+    - easytier-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/EasyTier/EasyTier/releases/download/v2.6.4/easytier-gui_2.6.4_x64-setup.exe#/dl.7z
+      sha256: 0f92d378658fe5b5b150f6dbd06c0069b7e9c10e2dc127bcac6149f5185b5678
+      bin:
+        - easytier-gui.exe
+      strip: 1
+test: easytier-gui --version

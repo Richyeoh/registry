@@ -1,0 +1,26 @@
+api: v1
+name: lua-for-windows
+kind: app
+display: lua-for-windows
+description: A 'batteries included environment' for the Lua scripting language on Windows.
+homepage: https://github.com/rjpcomputing/luaforwindows
+license: MIT,Unknown
+version: 5.1.5-52
+channels:
+    stable: 5.1.5-52
+provides:
+    - lua-for-windows
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rjpcomputing/luaforwindows/releases/download/v5.1.5-52/LuaForWindows_v5.1.5-52.exe
+      sha256: c5f96e5183adea82a0f0d25ad0940c7ae50d40c542d2d7331cc887d5fddb4191
+      bin:
+        - lua.exe
+        - luac.exe
+        - luarocks.bat.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall lua-for-windows
+test: lua --version

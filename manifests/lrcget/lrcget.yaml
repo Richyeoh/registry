@@ -1,0 +1,24 @@
+api: v1
+name: lrcget
+kind: app
+display: lrcget
+description: Utility for mass-downloading LRC synced lyrics for your offline music library.
+homepage: https://github.com/tranxuanthang/lrcget
+license: MIT
+version: 2.2.2
+channels:
+    stable: 2.2.2
+provides:
+    - lrcget
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tranxuanthang/lrcget/releases/download/2.2.2/LRCGET_2.2.2_x64_en-US.msi
+      sha256: 67dcea83ea0cecf20172839d4a1a95cab00867ad53c017870e3c95fec6292f77
+      bin:
+        - lrcget.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall lrcget
+test: lrcget --version

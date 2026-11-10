@@ -1,0 +1,32 @@
+api: v1
+name: apt
+kind: app
+display: apt
+description: Advanced Package Tool
+homepage: https://wiki.debian.org/Apt
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 3.3.7
+channels:
+    stable: 3.3.7
+provides:
+    - apt
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:1762f7a63e11de1111414d8b4c575cdb298bc37c9e66e2fcf3068d685888ed9d
+      sha256: 1762f7a63e11de1111414d8b4c575cdb298bc37c9e66e2fcf3068d685888ed9d
+      bin:
+        - apt
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apt/blobs/sha256:5de3cb1698d4b015b313444a450e35202925f4c9cbe84729da289bf20c8bd406
+      sha256: 5de3cb1698d4b015b313444a450e35202925f4c9cbe84729da289bf20c8bd406
+      bin:
+        - apt
+      strip: 1
+test: apt --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

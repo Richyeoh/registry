@@ -1,0 +1,21 @@
+api: v1
+name: gcc-arm-none-eabi
+kind: app
+display: gcc-arm-none-eabi
+description: Pre-built GNU Toolchain for the Arm Architecture
+homepage: https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain
+license: GPL-3.0-only
+version: 15.2.rel1
+channels:
+    stable: 15.2.rel1
+provides:
+    - gcc-arm-none-eabi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi.zip
+      sha256: b40db54536d2fdf0ff21f4316b56c1fc4d3b782b792c5b298bcbeaf5eccedb96
+      bin:
+        - gcc-arm-none-eabi.exe
+      strip: 1
+test: gcc-arm-none-eabi --version

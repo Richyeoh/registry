@@ -1,0 +1,21 @@
+api: v1
+name: grepwin
+kind: app
+display: grepwin
+description: Regular expression search and replace tool for Windows.
+homepage: https://tools.stefankueng.com/grepWin.html
+license: GPL-3.0-only
+version: 2.1.12
+channels:
+    stable: 2.1.12
+provides:
+    - grepwin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stefankueng/grepWin/releases/download/2.1.12/grepWin-x64-2.1.12_portable.zip
+      sha256: 55f0352144d67ae03c6f24db642d080c895833593b25b900339bc92a5b4d7234
+      bin:
+        - grepWin_portable.exe
+      strip: 1
+test: grepWin_portable --version

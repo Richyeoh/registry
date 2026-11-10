@@ -1,0 +1,21 @@
+api: v1
+name: flowgorithm
+kind: app
+display: flowgorithm
+description: A free beginner's programming language that is based on simple graphical flowcharts.
+homepage: http://www.flowgorithm.org
+license: Unknown
+version: "4.5"
+channels:
+    stable: "4.5"
+provides:
+    - flowgorithm
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.flowgorithm.org/download/files/Flowgorithm-exe-only.zip
+      sha256: 50a845f5723d011ac606a2235d914ec05c927497191c7993ff44eccef524f147
+      bin:
+        - Flowgorithm.exe
+      strip: 1
+test: Flowgorithm --version

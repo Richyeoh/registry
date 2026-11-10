@@ -1,0 +1,21 @@
+api: v1
+name: packer
+kind: app
+display: packer
+description: Automates the creation of any type of virtual machine image.
+homepage: https://www.packer.io
+license: MPL-2.0
+version: 1.16.2
+channels:
+    stable: 1.16.2
+provides:
+    - packer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.hashicorp.com/packer/1.16.2/packer_1.16.2_windows_amd64.zip
+      sha256: 1b3984ae7f5954cc3ae416b527ae5c5a747ea7bb7977366038609199be4a2710
+      bin:
+        - packer.exe
+      strip: 1
+test: packer --version

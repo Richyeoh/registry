@@ -1,0 +1,21 @@
+api: v1
+name: pine64-updater
+kind: app
+display: pine64-updater
+description: Application for updating PINE64 devices, such as Pinecil.
+homepage: https://github.com/pine64/pine64_updater
+license: MIT
+version: 1.0.3
+channels:
+    stable: 1.0.3
+provides:
+    - pine64-updater
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pine64/pine64_updater/releases/download/1.0.3/pine64_updater_win64_1.0.3.zip
+      sha256: 47bbced528e9219b70c22fa0d32a80c7fdb4a443edf06d8cc1396f04cc132a93
+      bin:
+        - pine64-updater.exe
+      strip: 1
+test: pine64-updater --version

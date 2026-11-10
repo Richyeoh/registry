@@ -1,0 +1,46 @@
+api: v1
+name: angle-grinder
+kind: app
+display: angle-grinder
+description: Slice and dice log files on the command-line
+homepage: https://github.com/rcoh/angle-grinder
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.19.6
+channels:
+    stable: 0.19.6
+provides:
+    - angle-grinder
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/angle-grinder/blobs/sha256:558f1dcc5e0109898a9e49511cfda872245e9c4cdf42d0785214c197f8b04e2f
+      sha256: 558f1dcc5e0109898a9e49511cfda872245e9c4cdf42d0785214c197f8b04e2f
+      bin:
+        - angle-grinder
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/angle-grinder/blobs/sha256:e55db13cb3f5ab49becce7b640ea2522303317b1a47f686ce83717040dda3bea
+      sha256: e55db13cb3f5ab49becce7b640ea2522303317b1a47f686ce83717040dda3bea
+      bin:
+        - angle-grinder
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/angle-grinder/blobs/sha256:881ad5857fabe8dc722b466099b20ce47b582f7508612419425af047e73c2ba5
+      sha256: 881ad5857fabe8dc722b466099b20ce47b582f7508612419425af047e73c2ba5
+      bin:
+        - angle-grinder
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/angle-grinder/blobs/sha256:e0ee850784501fcc08b3a8e5b04b0ed884d15cd5563d5fade0e1bfcbcdbc1cc8
+      sha256: e0ee850784501fcc08b3a8e5b04b0ed884d15cd5563d5fade0e1bfcbcdbc1cc8
+      bin:
+        - angle-grinder
+      strip: 1
+test: angle-grinder --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

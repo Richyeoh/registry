@@ -1,0 +1,22 @@
+api: v1
+name: textadept
+kind: app
+display: textadept
+description: A fast, minimalist, and remarkably extensible cross-platform text editor
+homepage: https://orbitalquark.github.io/textadept/
+license: MIT
+version: "13.1"
+channels:
+    stable: "13.1"
+provides:
+    - textadept
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/orbitalquark/textadept/releases/download/textadept_13.1/textadept_13.1.win.zip
+      sha256: e0d516ad21499650cc967cbfa253c01560a709571983d42ca7c8f07d3be99a08
+      bin:
+        - textadept.exe
+        - textadept-curses.exe
+      strip: 1
+test: textadept --version

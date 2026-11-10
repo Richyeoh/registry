@@ -1,0 +1,24 @@
+api: v1
+name: homebank
+kind: app
+display: homebank
+description: Personal accounting
+homepage: https://www.gethomebank.org
+license: GPL-2.0-or-later
+version: 5.10.3
+channels:
+    stable: 5.10.3
+provides:
+    - homebank
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.gethomebank.org/public/binaries/HomeBank-5.10.3-setup.exe
+      sha256: 43c7983e04f0e862c6864a486ff7c3563c1959147ce8adf9ade74ffa8bd3d7b2
+      bin:
+        - homebank.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall homebank
+test: homebank --version

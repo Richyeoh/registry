@@ -1,0 +1,24 @@
+api: v1
+name: skaffold
+kind: app
+display: skaffold
+description: A command line tool that facilitates continuous development for Kubernetes applications.
+homepage: https://skaffold.dev
+license: Apache-2.0
+version: 2.25.0
+channels:
+    stable: 2.25.0
+provides:
+    - skaffold
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GoogleCloudPlatform/skaffold/releases/download/v2.25.0/skaffold-windows-amd64.exe#/skaffold.exe
+      sha256: 4ca20b716f4756b0f5e2a06b13bf9cb189ebc8e6978665f274f8fd23fbcf47d6
+      bin:
+        - skaffold.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall skaffold
+test: skaffold --version

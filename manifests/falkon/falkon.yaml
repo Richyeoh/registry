@@ -1,0 +1,21 @@
+api: v1
+name: falkon
+kind: app
+display: falkon
+description: KDE web browser using QtWebEngine rendering engine, previously known as QupZilla.
+homepage: https://www.falkon.org
+license: GPL-3.0-or-later
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - falkon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/falkon/3.1/Falkon.Installer.3.1.0.x64.exe#/dl.7z
+      sha256: 5ab4c139dee19c21114f7acbe38c40babb392bfb875cb977db11fd390b7aa7ee
+      bin:
+        - falkon.exe
+      strip: 1
+test: falkon --version

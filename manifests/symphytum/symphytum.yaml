@@ -1,0 +1,21 @@
+api: v1
+name: symphytum
+kind: app
+display: symphytum
+description: Personal database software to manage and organize data in an easy and intuitive way.
+homepage: https://github.com/giowck/symphytum
+license: BSD-2-Clause
+version: "2.6"
+channels:
+    stable: "2.6"
+provides:
+    - symphytum
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/giowck/symphytum/releases/download/v2.6/Symphytum-windows-portable.zip
+      sha256: 0a5ca2264c0edf32efd388a6b60a186c6a13bd1e81fa837416abc8a9cb6260ae
+      bin:
+        - symphytum.exe
+      strip: 1
+test: symphytum --version

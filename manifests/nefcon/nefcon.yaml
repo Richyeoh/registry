@@ -1,0 +1,22 @@
+api: v1
+name: nefcon
+kind: app
+display: nefcon
+description: Windows device driver installation and management tool
+homepage: https://github.com/nefarius/nefcon
+license: MIT
+version: 1.21.1
+channels:
+    stable: 1.21.1
+provides:
+    - nefcon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nefarius/nefcon/releases/download/v1.21.1/nefcon_v1.21.1.zip
+      sha256: 28292f4b1417484db6ad23c47ffc18ea99d3de3bdb3bbbe60c8ed11703a3780a
+      bin:
+        - nefconw.exe
+        - nefconc.exe
+      strip: 1
+test: nefconw --version

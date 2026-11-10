@@ -1,0 +1,24 @@
+api: v1
+name: picocrypt
+kind: app
+display: picocrypt
+description: A small encryption tool with a focus on security, simplicity, and reliability.
+homepage: https://github.com/Picocrypt/Picocrypt
+license: GPL-3.0-only
+version: "1.49"
+channels:
+    stable: "1.49"
+provides:
+    - picocrypt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Picocrypt/Picocrypt/releases/download/1.49/Picocrypt.exe
+      sha256: 81bbdffb92181a11692ec6651cc1831483ec6041266eb12eba9c71200248a8c4
+      bin:
+        - picocrypt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall picocrypt
+test: picocrypt --version

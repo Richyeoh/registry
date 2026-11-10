@@ -1,0 +1,24 @@
+api: v1
+name: streamdeck
+kind: app
+display: streamdeck
+description: 'Stream Deck lets you take control of your content and focus on what''s important: your audience.'
+homepage: https://www.elgato.com/en/gaming/downloads#sd-win
+license: Freeware
+version: 7.6.1.23033
+channels:
+    stable: 7.6.1.23033
+provides:
+    - streamdeck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://edge.elgato.com/egc/windows/sd/Stream_Deck_7.6.1.23033.msi
+      sha256: a42157fa5a44f1bc0426e7aa0fa25856206bfc811f5162d3f283704172b7b3cf
+      bin:
+        - StreamDeck.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall streamdeck
+test: StreamDeck --version

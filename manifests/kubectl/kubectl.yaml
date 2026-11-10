@@ -1,0 +1,22 @@
+api: v1
+name: kubectl
+kind: app
+display: kubectl
+description: Control the Kubernetes cluster manager.
+homepage: https://kubernetes.io/docs/reference/kubectl/
+license: Apache-2.0
+version: 1.37.2
+channels:
+    stable: 1.37.2
+provides:
+    - kubectl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.k8s.io/release/v1.37.2/kubernetes-client-windows-amd64.tar.gz
+      sha256: dddc47dcdd49df404be80dbaaa9a9036460bf8b213c29941aaba780a44b6b6fb
+      bin:
+        - bin\kubectl.exe
+        - bin\kubectl-convert.exe
+      strip: 1
+test: bin\kubectl --version

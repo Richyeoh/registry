@@ -1,0 +1,32 @@
+api: v1
+name: airparrot
+kind: app
+display: AirParrot
+description: Tool to wirelessly mirror the screen or stream media files
+homepage: https://www.airsquirrels.com/airparrot/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 3.1.10
+channels:
+    stable: 3.1.10
+provides:
+    - airparrot
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://download.airsquirrels.com/AirParrot3/Mac/AirParrot-3.1.10.dmg
+      sha256: 0422517b786f7666f145762fa2cb16a51f104594eb4b2fae13578b265cde5523
+      bin:
+        - airparrot
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://download.airsquirrels.com/AirParrot3/Mac/AirParrot-3.1.10.dmg
+      sha256: 0422517b786f7666f145762fa2cb16a51f104594eb4b2fae13578b265cde5523
+      bin:
+        - airparrot
+      strip: 1
+test: airparrot --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

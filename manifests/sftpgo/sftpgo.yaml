@@ -1,0 +1,21 @@
+api: v1
+name: sftpgo
+kind: app
+display: sftpgo
+description: Fully featured and highly configurable SFTP server with optional HTTP, FTP/S and WebDAV support
+homepage: https://sftpgo.com
+license: AGPL-3.0-only
+version: 2.7.6
+channels:
+    stable: 2.7.6
+provides:
+    - sftpgo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/drakkan/sftpgo/releases/download/v2.7.6/sftpgo_v2.7.6_windows_portable.zip
+      sha256: af3994bb690962c7575858aee368a4c1d6fd4748b35770bb0773eb06408d504d
+      bin:
+        - sftpgo.exe
+      strip: 1
+test: sftpgo --version

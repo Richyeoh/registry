@@ -1,0 +1,24 @@
+api: v1
+name: bin
+kind: app
+display: bin
+description: Effortless binary manager
+homepage: https://github.com/marcosnils/bin
+license: MIT
+version: 0.29.4
+channels:
+    stable: 0.29.4
+provides:
+    - bin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/marcosnils/bin/releases/download/v0.29.4/bin_0.29.4_windows_amd64.exe#/bin.exe
+      sha256: d4606c4b310d222ae222286d98a305f2ac0678f80a91ffe695d4be9260689c76
+      bin:
+        - bin.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bin
+test: bin --version

@@ -1,0 +1,21 @@
+api: v1
+name: github-mcp-server
+kind: app
+display: github-mcp-server
+description: GitHub's official MCP Server
+homepage: https://github.com/github/github-mcp-server
+license: MIT
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - github-mcp-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/github/github-mcp-server/releases/download/v2.1.0/github-mcp-server_Windows_x86_64.zip
+      sha256: ddce274916ebf31346dee71a0ed3345e80cd36b060a0bfb8160db0afc411e9d3
+      bin:
+        - github-mcp-server.exe
+      strip: 1
+test: github-mcp-server --version

@@ -1,0 +1,21 @@
+api: v1
+name: flatc
+kind: app
+display: flatc
+description: An efficient serialization library for multiple languages
+homepage: https://google.github.io/flatbuffers/index.html
+license: Apache-2.0
+version: 25.12.19-2026-02-06-03fffb2
+channels:
+    stable: 25.12.19-2026-02-06-03fffb2
+provides:
+    - flatc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/flatbuffers/releases/download/v25.12.19-2026-02-06-03fffb2/Windows.flatc.binary.zip
+      sha256: 68d51916873a3dbdaf7997ddfbbbfd6472b5907ffc62ccc9a88d146bbc0db87d
+      bin:
+        - flatc.exe
+      strip: 1
+test: flatc --version

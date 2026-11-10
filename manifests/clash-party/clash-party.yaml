@@ -1,0 +1,21 @@
+api: v1
+name: clash-party
+kind: app
+display: clash-party
+description: Another Mihomo GUI.
+homepage: https://clashparty.org/
+license: GPL-3.0
+version: 2.0.4
+channels:
+    stable: 2.0.4
+provides:
+    - clash-party
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.4/clash-party-windows-2.0.4-x64-portable.7z
+      sha256: 182063a60b9a06535d176742d627f8b8c95a99aae85fc8752c880efee7da5157
+      bin:
+        - clash-party.exe
+      strip: 1
+test: clash-party --version

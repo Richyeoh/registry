@@ -1,0 +1,21 @@
+api: v1
+name: catalyst
+kind: app
+display: catalyst
+description: A minimal, functional, and customizable user-focused FOSS web browser
+homepage: https://getcatalyst.eu.org/
+license: MIT
+version: 3.9.8
+channels:
+    stable: 3.9.8
+provides:
+    - catalyst
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CatalystDevOrg/Catalyst/releases/download/v3.9.8/catalyst-3.9.8-full.nupkg
+      sha256: 1fdb7c7ceedae2e97aba68ec7eeb262b8229b1b7a0096e315806981f2e6dacf4
+      bin:
+        - catalyst.exe
+      strip: 1
+test: catalyst --version

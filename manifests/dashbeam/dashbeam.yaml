@@ -1,0 +1,21 @@
+api: v1
+name: dashbeam
+kind: app
+display: dashbeam
+description: A peer-to-peer file transfer tool that sends files directly without using cloud storage (Formerly known as Altsendme).
+homepage: https://dashbeam.net
+license: Unknown
+version: 0.7.2
+channels:
+    stable: 0.7.2
+provides:
+    - dashbeam
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tonyantony300/dashbeam/releases/download/v0.7.2/DashBeam_0.7.2_x64-portable.zip
+      sha256: 3e3e24fa5e49b4ddf24b4ad826689e09aa51c9701a2d421697bee600c4e4fc9b
+      bin:
+        - dashbeam.exe
+      strip: 1
+test: dashbeam --version

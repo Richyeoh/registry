@@ -1,0 +1,21 @@
+api: v1
+name: spyder-lite
+kind: app
+display: spyder-lite
+description: The Scientific Python Development Environment, Lite version (lacks a number of optional but recommended dependencies).
+homepage: https://www.spyder-ide.org/
+license: MIT
+version: 5.5.6
+channels:
+    stable: 5.5.6
+provides:
+    - spyder-lite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/spyder-ide/spyder/releases/download/v5.5.6/Spyder_64bit_lite.exe#/dl.7z
+      sha256: a6fda82ecf3841e94a6f5a744ff676493a98f2e33485c364033fa7fe742a7b98
+      bin:
+        - spyder-lite.exe
+      strip: 1
+test: spyder-lite --version

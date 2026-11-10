@@ -1,0 +1,21 @@
+api: v1
+name: mps
+kind: app
+display: mps
+description: Domain-Specific language creator by JetBrains.
+homepage: https://www.jetbrains.com/mps/
+license: Unknown
+version: 2026.2-262.11879.701
+channels:
+    stable: 2026.2-262.11879.701
+provides:
+    - mps
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/mps/2026.2/MPS-2026.2.exe#/dl.7z
+      sha256: 64d87b06779d8ed8433e17a345b48fab6ebfd8e0d03a6a246cb162150bf67b26
+      bin:
+        - IDE\bin\mps.bat.exe
+      strip: 1
+test: IDE\bin\mps.bat --version

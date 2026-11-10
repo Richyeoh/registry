@@ -1,0 +1,21 @@
+api: v1
+name: prince
+kind: app
+display: prince
+description: Convert HTML to PDF with CSS
+homepage: https://www.princexml.com
+license: Unknown
+version: "17"
+channels:
+    stable: "17"
+provides:
+    - prince
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.princexml.com/download/prince-17-win64.zip
+      sha256: db01cd5c4906ac3fc7ab873639bc63b7963c2946835b2321652fa509ccdc8851
+      bin:
+        - bin\prince.exe
+      strip: 1
+test: bin\prince --version

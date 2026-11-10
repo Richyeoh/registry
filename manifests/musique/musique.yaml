@@ -1,0 +1,21 @@
+api: v1
+name: musique
+kind: app
+display: musique
+description: A music player built for speed, simplicity and style.
+homepage: https://flavio.tordini.org/musique
+license: GPL-3.0-only
+version: "1.12"
+channels:
+    stable: "1.12"
+provides:
+    - musique
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://flavio.tordini.org/files/musique/musique.exe#/dl.7z
+      sha256: 7116c1c9285f5eff154b2e00b862b0efec99be84a18a96db3a8d4ce69428a2c9
+      bin:
+        - musique.exe
+      strip: 1
+test: musique --version

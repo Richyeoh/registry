@@ -1,0 +1,39 @@
+api: v1
+name: adb-enhanced
+kind: app
+display: adb-enhanced
+description: Swiss-army knife for Android testing and development
+homepage: https://ashishb.net/tech/introducing-adb-enhanced-a-swiss-army-knife-for-android-development/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.12.0
+channels:
+    stable: 2.12.0
+provides:
+    - adb-enhanced
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adb-enhanced/blobs/sha256:5411a417913761684367ee2ab03c8b9c71d5286cb29c4c7581246cd0f6e81b08
+      sha256: 5411a417913761684367ee2ab03c8b9c71d5286cb29c4c7581246cd0f6e81b08
+      bin:
+        - adb-enhanced
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adb-enhanced/blobs/sha256:11ddbadaf4cfb6db7a8a4e760dec0f0facea60f8a7f9451c9e1d2a4473f0a8fe
+      sha256: 11ddbadaf4cfb6db7a8a4e760dec0f0facea60f8a7f9451c9e1d2a4473f0a8fe
+      bin:
+        - adb-enhanced
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adb-enhanced/blobs/sha256:57d61f392815522628dab768f27ef72e56e02db926124bcae1ad7e00e405a5e4
+      sha256: 57d61f392815522628dab768f27ef72e56e02db926124bcae1ad7e00e405a5e4
+      bin:
+        - adb-enhanced
+      strip: 1
+test: adb-enhanced --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: rclone-ui
+kind: app
+display: rclone-ui
+description: GUI for rclone & S3
+homepage: https://rcloneui.com
+license: Apache-2.0
+version: 3.7.5
+channels:
+    stable: 3.7.5
+provides:
+    - rclone-ui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rclone-ui/rclone-ui/releases/download/v3.7.5/Rclone.UI_x64.exe#/dl.7z
+      sha256: c0b09b6c82ba5138224e98a1cda9e21f7cd94906066a4a53ec2c578cd8382ebf
+      bin:
+        - Rclone UI.exe
+      strip: 1
+test: Rclone UI.exe --version

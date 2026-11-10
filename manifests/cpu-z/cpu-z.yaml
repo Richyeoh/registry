@@ -1,0 +1,21 @@
+api: v1
+name: cpu-z
+kind: app
+display: cpu-z
+description: System information software
+homepage: https://www.cpuid.com/softwares/cpu-z.html
+license: Freeware
+version: "3.02"
+channels:
+    stable: "3.02"
+provides:
+    - cpu-z
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.cpuid.com/cpu-z/cpu-z_3.02-en.zip
+      sha256: faf62f6e883056a40f291bf9f3f348f51a2ab339d0a512f4724fdae964f35d8b
+      bin:
+        - cpuz_x64.exe
+      strip: 1
+test: cpuz_x64 --version

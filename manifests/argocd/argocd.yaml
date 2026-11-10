@@ -1,0 +1,48 @@
+api: v1
+name: argocd
+kind: app
+display: argocd
+description: CLI for ArgoCD - declarative, GitOps continuous delivery tool for Kubernetes
+homepage: https://argo-cd.readthedocs.io
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 3.6.1
+channels:
+    stable: 3.6.1
+provides:
+    - argocd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/argoproj/argo-cd/releases/download/v3.6.1/argocd-windows-amd64.exe#/argocd.exe
+      sha256: 1f7927f52bc634e6593b1b0aaf38c4ca06ac2ead4e72cebb8111292f6f2e9378
+      bin:
+        - argocd.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/argocd/blobs/sha256:002eeae846baaf6d943b038f439e057376552ff611b122e891bc9b44c95bc047
+      sha256: 002eeae846baaf6d943b038f439e057376552ff611b122e891bc9b44c95bc047
+      bin:
+        - argocd
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/argocd/blobs/sha256:4843be417ea5c1e3d03529870ed2a4988e65ff3e7351ab9e771880834ab3f43f
+      sha256: 4843be417ea5c1e3d03529870ed2a4988e65ff3e7351ab9e771880834ab3f43f
+      bin:
+        - argocd
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/argocd/blobs/sha256:b9949386a7fb7e3d3ffd539f2bb6e80e9bb3cec389da75c224da2f3068f148f8
+      sha256: b9949386a7fb7e3d3ffd539f2bb6e80e9bb3cec389da75c224da2f3068f148f8
+      bin:
+        - argocd
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall argocd
+test: argocd --version

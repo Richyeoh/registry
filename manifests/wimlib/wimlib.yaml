@@ -1,0 +1,21 @@
+api: v1
+name: wimlib
+kind: app
+display: wimlib
+description: An open source, cross-platform library for creating, extracting, and modifying Windows Imaging (WIM) archives.
+homepage: https://wimlib.net
+license: LGPL-2.1-or-later|GPL-3.0-or-later
+version: 1.14.5
+channels:
+    stable: 1.14.5
+provides:
+    - wimlib
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://wimlib.net/downloads/wimlib-1.14.5-windows-x86_64-bin.zip
+      sha256: 2f446d6fa3866582175f1a22a7be198eeee0aec7aba5b4e04ad25c99eae2d265
+      bin:
+        - wimlib.exe
+      strip: 1
+test: wimlib --version

@@ -1,0 +1,24 @@
+api: v1
+name: draft
+kind: app
+display: draft
+description: Create cloud-native applications on Kubernetes.
+homepage: https://github.com/Azure/draft
+license: MIT
+version: 0.17.17
+channels:
+    stable: 0.17.17
+provides:
+    - draft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/draft/releases/download/v0.17.17/draft-windows-amd64.exe#/draft.exe
+      sha256: c819dbd6b4aa6537f763c587468056c8be4eec4812f792a46bf03860b9c30501
+      bin:
+        - draft.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall draft
+test: draft --version

@@ -1,0 +1,21 @@
+api: v1
+name: networkminer
+kind: app
+display: networkminer
+description: Network Forensic Analysis Tool
+homepage: https://www.netresec.com/?page=NetworkMiner
+license: GPL-2.0-or-later
+version: "3.2"
+channels:
+    stable: "3.2"
+provides:
+    - networkminer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.netresec.com/?download=NetworkMiner#/dl.zip
+      sha256: daceec649fb4fe59b11e4a9e4ecd5f51c1dd37824280dfbeac67bec27b6b6d60
+      bin:
+        - NetworkMiner.exe
+      strip: 1
+test: NetworkMiner --version

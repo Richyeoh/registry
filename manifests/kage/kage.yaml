@@ -1,0 +1,21 @@
+api: v1
+name: kage
+kind: app
+display: kage
+description: Clones a website into a folder you can browse offline, with every script stripped out
+homepage: https://kage.tamnd.com
+license: MIT
+version: 0.3.12
+channels:
+    stable: 0.3.12
+provides:
+    - kage
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tamnd/kage/releases/download/v0.3.12/kage_0.3.12_windows_amd64.zip
+      sha256: f65317d51f6b4df6ac8724f8c9dccacdd1ca3e46bcd324f1c749457dda9700c5
+      bin:
+        - kage.exe
+      strip: 1
+test: kage --version

@@ -1,0 +1,21 @@
+api: v1
+name: pwsh
+kind: app
+display: pwsh
+description: Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.
+homepage: https://microsoft.com/PowerShell
+license: MIT
+version: 7.6.9
+channels:
+    stable: 7.6.9
+provides:
+    - pwsh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PowerShell/PowerShell/releases/download/v7.6.9/PowerShell-7.6.9-win-x64.zip
+      sha256: ce7484804c0f0ad4dda10c958e71acdaf7eebfb22505c1b480f89e0e9f1da94d
+      bin:
+        - pwsh.exe
+      strip: 1
+test: pwsh --version

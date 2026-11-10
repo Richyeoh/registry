@@ -1,0 +1,26 @@
+api: v1
+name: anaconda3
+kind: app
+display: anaconda3
+description: The most popular Python distribution for data science.
+homepage: https://www.anaconda.com/
+license: BSD-3-Clause
+version: 2026.07-1
+channels:
+    stable: 2026.07-1
+provides:
+    - anaconda3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Windows-x86_64.exe
+      sha256: b545f4bd8ab3bf32d99002a0779a887668ebfe479ee32ecbf060375670d5ee09
+      bin:
+        - App\python.exe
+        - App\pythonw.exe
+        - App\python.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall anaconda3
+test: App\python --version

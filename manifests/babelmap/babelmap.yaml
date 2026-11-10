@@ -1,0 +1,21 @@
+api: v1
+name: babelmap
+kind: app
+display: babelmap
+description: Unicode Character Map for Windows
+homepage: https://www.babelstone.co.uk/Software/BabelMap.html
+license: Freeware
+version: 16.0.0.6
+channels:
+    stable: 16.0.0.6
+provides:
+    - babelmap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.babelstone.co.uk/Software/Download/BabelMap.zip
+      sha256: 9a604dd61529751e1d715e214c1f6ed4fdfe77d1b4d54545c0401fc51d35bfcd
+      bin:
+        - BabelMap.exe
+      strip: 1
+test: BabelMap --version

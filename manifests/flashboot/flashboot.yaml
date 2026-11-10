@@ -1,0 +1,22 @@
+api: v1
+name: flashboot
+kind: app
+display: flashboot
+description: Create an installable clone of Windows 7/8.x/10 (including all apps and data) on the USB thumbdrive/HDD and instantly transfer entire OS to another computer, even with dissimilar hardware.
+homepage: https://www.prime-expert.com/flashboot/
+license: Unknown
+version: 3.4b
+channels:
+    stable: 3.4b
+provides:
+    - flashboot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.prime-expert.com/flashboot/downloads/flashboot-latest-portable.zip
+      sha256: 5eb5f4d073bfb0953084623b632b5d496415df97f0c58404bdf28aebbad96202
+      bin:
+        - fb-cli.exe
+        - fb-cli.exe
+      strip: 1
+test: fb-cli --version

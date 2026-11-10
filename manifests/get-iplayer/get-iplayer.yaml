@@ -1,0 +1,26 @@
+api: v1
+name: get-iplayer
+kind: app
+display: get-iplayer
+description: Utility for downloading TV and radio programmes from BBC iPlayer and BBC Sounds
+homepage: https://github.com/get-iplayer/get_iplayer
+license: GPL-3.0-only
+version: 3.36.0
+channels:
+    stable: 3.36.0
+provides:
+    - get-iplayer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/get-iplayer/get_iplayer_win32/releases/download/3.36.0/get_iplayer-3.36.0-windows-x64-setup.exe
+      sha256: 1b34166ede43c9b54fae3d06b3f72a521e72caa06352ba20551324f7f56f03d1
+      bin:
+        - scoop_get_iplayer.cmd.exe
+        - scoop_get_iplayer_pvr.cmd.exe
+        - scoop_get_iplayer_web_pvr.cmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall get-iplayer
+test: scoop_get_iplayer.cmd --version

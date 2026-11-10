@@ -1,0 +1,21 @@
+api: v1
+name: twine
+kind: app
+display: twine
+description: Interactive, nonlinear story creator
+homepage: https://twinery.org
+license: GPL-3.0-only
+version: 2.12.1
+channels:
+    stable: 2.12.1
+provides:
+    - twine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/klembot/twinejs/releases/download/2.12.1/Twine-2.12.1-Windows.exe#/dl.7z
+      sha256: 0e6f772064f40af5514db78b0384d317491bf068291769252566c3dfda8094f5
+      bin:
+        - twine.exe
+      strip: 1
+test: twine --version

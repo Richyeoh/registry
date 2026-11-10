@@ -1,0 +1,22 @@
+api: v1
+name: ultravnc
+kind: app
+display: ultravnc
+description: UltraVNC Server and Viewer can display the screen of one computer (Server) on the screen of another (Viewer).
+homepage: https://uvnc.com
+license: GPL-3.0-or-later
+version: 1.8.2.4
+channels:
+    stable: 1.8.2.4
+provides:
+    - ultravnc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://uvnc.eu/download/1800/UltraVNC_1824.zip
+      sha256: 8af948089626008f02edd1254afc15c814e454ec5fc9e3eaa860356f19d4f113
+      bin:
+        - vncviewer.exe
+        - winvnc.exe
+      strip: 1
+test: vncviewer --version

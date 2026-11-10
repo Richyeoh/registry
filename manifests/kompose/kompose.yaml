@@ -1,0 +1,24 @@
+api: v1
+name: kompose
+kind: app
+display: kompose
+description: Conversion tool for Docker Compose to container orchestrators such as Kubernetes (or OpenShift).
+homepage: https://kompose.io/
+license: Apache-2.0
+version: 1.38.0
+channels:
+    stable: 1.38.0
+provides:
+    - kompose
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubernetes/kompose/releases/download/v1.38.0/kompose-windows-amd64.exe#/kompose.exe
+      sha256: 6fb08b4d73590b1467aa60b9af8d4bd308829aba2b147cc184b94738a2a736ed
+      bin:
+        - kompose.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kompose
+test: kompose --version

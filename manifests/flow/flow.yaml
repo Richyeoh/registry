@@ -1,0 +1,21 @@
+api: v1
+name: flow
+kind: app
+display: flow
+description: A static type checker for JavaScript code
+homepage: https://flow.org/
+license: MIT
+version: 0.339.0
+channels:
+    stable: 0.339.0
+provides:
+    - flow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/flow/releases/download/v0.339.0/flow-win64-v0.339.0.zip
+      sha256: 31bade62ae44de3d0c75d21f1bfe887ebdb71c687a0aad62626fe2d93d6b47b8
+      bin:
+        - flow.exe
+      strip: 1
+test: flow --version

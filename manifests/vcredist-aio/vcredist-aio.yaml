@@ -1,0 +1,24 @@
+api: v1
+name: vcredist-aio
+kind: app
+display: vcredist-aio
+description: All-in-one repack for latest Microsoft Visual C++ Redistributable Runtimes, without the original setup bloat payload.
+homepage: https://github.com/abbodi1406/vcredist
+license: Unknown
+version: 0.107.0
+channels:
+    stable: 0.107.0
+provides:
+    - vcredist-aio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/abbodi1406/vcredist/releases/download/v0.107.0/VisualCppRedist_AIO_x86_x64.exe#/vcredist-aio.exe
+      sha256: 1990ebb978d80b7a2abdd76fa6562f5969e39b775dc4a846ca9398a354d27b6b
+      bin:
+        - vcredist-aio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall vcredist-aio
+test: vcredist-aio --version

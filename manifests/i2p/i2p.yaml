@@ -1,0 +1,22 @@
+api: v1
+name: i2p
+kind: app
+display: i2p
+description: An anonymizing network.
+homepage: https://geti2p.net
+license: Unknown
+version: 0.9.50
+channels:
+    stable: 0.9.50
+provides:
+    - i2p
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://launchpad.net/i2p/trunk/0.9.50/%2Bdownload/i2pinstall_0.9.50_windows.exe#/dl.7z
+      sha256: 92e38abf0650671e08460dd25711afa67f7933a0b6fa655cbd2746662f06fb30
+      bin:
+        - I2P.exe
+        - I2Psvc.exe
+      strip: 1
+test: I2P --version

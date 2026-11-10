@@ -1,0 +1,24 @@
+api: v1
+name: espeak-ng
+kind: app
+display: espeak-ng
+description: An open source speech synthesizer that supports more than hundred languages and accents.
+homepage: https://github.com/espeak-ng/espeak-ng
+license: GPL-3.0-or-later|Apache-2.0|BSD-2-Clause|Unicode-DFS-2016
+version: 1.52.0
+channels:
+    stable: 1.52.0
+provides:
+    - espeak-ng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/espeak-ng/espeak-ng/releases/download/1.52.0/espeak-ng.msi
+      sha256: 7f673c709ea5dd579d3b5ebb98688cc575328a6ab7438d2bc405b88cedaeafb9
+      bin:
+        - espeak-ng.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall espeak-ng
+test: espeak-ng --version

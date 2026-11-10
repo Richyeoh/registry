@@ -1,0 +1,21 @@
+api: v1
+name: ffdec
+kind: app
+display: ffdec
+description: Open Source Flash SWF decompiler and editor.
+homepage: https://github.com/jindrapetrik/jpexs-decompiler
+license: GPL-3.0-or-later
+version: 26.4.0
+channels:
+    stable: 26.4.0
+provides:
+    - ffdec
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.4.0/ffdec_26.4.0.zip
+      sha256: 56ce960aeafc7caf034e2052ba49f878a883f7c7ca690da6eeffca9587b5e4b9
+      bin:
+        - ffdec.jar.exe
+      strip: 1
+test: ffdec.jar --version

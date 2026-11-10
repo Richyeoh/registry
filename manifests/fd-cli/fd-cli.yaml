@@ -2,10 +2,13 @@ api: v1
 name: fd-cli
 kind: app
 display: fd
-description: 简单快速的 find 替代
+description: A simple, fast and user-friendly alternative to 'find'.
 homepage: https://github.com/sharkdp/fd
 license: MIT
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - sharkdp
 version: 10.5.2
@@ -50,4 +53,3 @@ platforms:
         - fd
       strip: 1
 test: fd --version
-caveats: 由 GitHub sharkdp/fd latest 自动转制

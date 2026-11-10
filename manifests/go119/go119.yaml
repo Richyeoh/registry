@@ -1,0 +1,22 @@
+api: v1
+name: go119
+kind: app
+display: go119
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.19.13
+channels:
+    stable: 1.19.13
+provides:
+    - go119
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.19.13.windows-amd64.zip
+      sha256: 908cba438f6f34fdf5ec8572f5f8759cb85b87f5c0b4fc4a389249bf92b86736
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

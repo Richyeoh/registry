@@ -1,0 +1,39 @@
+api: v1
+name: archi-steam-farm
+kind: app
+display: archi-steam-farm
+description: Application for idling Steam cards from multiple accounts simultaneously
+homepage: https://github.com/JustArchiNET/ArchiSteamFarm
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 6.3.11.7
+channels:
+    stable: 6.3.11.7
+provides:
+    - archi-steam-farm
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/archi-steam-farm/blobs/sha256:d6ea7d56b5af0b0fce8d6f2fb46e5de15d59ab70c71328ccc1e3e2d061c40644
+      sha256: d6ea7d56b5af0b0fce8d6f2fb46e5de15d59ab70c71328ccc1e3e2d061c40644
+      bin:
+        - archi-steam-farm
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/archi-steam-farm/blobs/sha256:a299313ba33d333ced3c031c7382f9fd2b6f64a44b8a57dccc6145f86e4c9811
+      sha256: a299313ba33d333ced3c031c7382f9fd2b6f64a44b8a57dccc6145f86e4c9811
+      bin:
+        - archi-steam-farm
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/archi-steam-farm/blobs/sha256:986ea66238248fde511c81468606f976499247ba57f640d2db2082ef30c33f45
+      sha256: 986ea66238248fde511c81468606f976499247ba57f640d2db2082ef30c33f45
+      bin:
+        - archi-steam-farm
+      strip: 1
+test: archi-steam-farm --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

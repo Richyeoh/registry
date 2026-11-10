@@ -1,0 +1,39 @@
+api: v1
+name: bandit
+kind: app
+display: bandit
+description: Security-oriented static analyser for Python code
+homepage: https://github.com/PyCQA/bandit
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.9.4
+channels:
+    stable: 1.9.4
+provides:
+    - bandit
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bandit/blobs/sha256:84dadd0f1b4908e7d570e0e9c85cccdcf6eba696b171e2e7111fa9a1e503dfce
+      sha256: 84dadd0f1b4908e7d570e0e9c85cccdcf6eba696b171e2e7111fa9a1e503dfce
+      bin:
+        - bandit
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bandit/blobs/sha256:a6a0d8217cb5949023f91ae4fa0d4dbae96a36068f93612256bdebac3507b1af
+      sha256: a6a0d8217cb5949023f91ae4fa0d4dbae96a36068f93612256bdebac3507b1af
+      bin:
+        - bandit
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bandit/blobs/sha256:1d0aa9c16fa45750c353feda2663b65b3a674f337050e51137ca58a4f4651f59
+      sha256: 1d0aa9c16fa45750c353feda2663b65b3a674f337050e51137ca58a4f4651f59
+      bin:
+        - bandit
+      strip: 1
+test: bandit --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

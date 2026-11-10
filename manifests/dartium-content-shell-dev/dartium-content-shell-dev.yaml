@@ -1,0 +1,21 @@
+api: v1
+name: dartium-content-shell-dev
+kind: app
+display: dartium-content-shell-dev
+description: A headless version of Dartium
+homepage: https://dart.dev
+license: BSD-3-Clause
+version: 1.25.0-dev.6.0
+channels:
+    stable: 1.25.0-dev.6.0
+provides:
+    - dartium-content-shell-dev
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.6.0/dartium/content_shell-windows-ia32-release.zip
+      sha256: c3c53bfadc6cdc8e1c84d7219e76b569bd24f0d8673e66232199f3161af69ed6
+      bin:
+        - content_shell.exe
+      strip: 1
+test: content_shell --version

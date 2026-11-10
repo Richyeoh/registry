@@ -1,0 +1,24 @@
+api: v1
+name: sam
+kind: app
+display: sam
+description: Steam Account Manager / Switcher
+homepage: https://github.com/rex706/SAM
+license: Unlicense
+version: 1.5.9331.26720
+channels:
+    stable: 1.5.9331.26720
+provides:
+    - sam
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rex706/SAM/releases/download/v1.5.9331.26720/SAM.exe
+      sha256: 8144f3ee314de14a028a816280b66f1ce6e4b4ca0e38a1767032273649ceaf08
+      bin:
+        - sam.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sam
+test: sam --version

@@ -1,0 +1,39 @@
+api: v1
+name: ansible
+kind: app
+display: ansible
+description: Automate deployment, configuration, and upgrading
+homepage: https://www.ansible.com/
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 14.6.0
+channels:
+    stable: 14.6.0
+provides:
+    - ansible
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:17f432a0931aa1c4e824d47edeff582a44f125be0ad3e6882b129149be1b5e15
+      sha256: 17f432a0931aa1c4e824d47edeff582a44f125be0ad3e6882b129149be1b5e15
+      bin:
+        - ansible
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:b6b152c03de61d1cd115b2e00e5f36cdd61b42cfbc1eb20c0b01ca4397ec6d76
+      sha256: b6b152c03de61d1cd115b2e00e5f36cdd61b42cfbc1eb20c0b01ca4397ec6d76
+      bin:
+        - ansible
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansible/blobs/sha256:fc8756deda5a06a301e27f6ba9167542e49fa76dd8c320c0dd557e43d06231d8
+      sha256: fc8756deda5a06a301e27f6ba9167542e49fa76dd8c320c0dd557e43d06231d8
+      bin:
+        - ansible
+      strip: 1
+test: ansible --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

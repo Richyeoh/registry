@@ -1,0 +1,21 @@
+api: v1
+name: tree-sitter
+kind: app
+display: tree-sitter
+description: An incremental parsing system for programming tools
+homepage: https://tree-sitter.github.io/tree-sitter/
+license: MIT
+version: 0.27.2
+channels:
+    stable: 0.27.2
+provides:
+    - tree-sitter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.2/tree-sitter-windows-x64.gz
+      sha256: 230779ee4a729e3044d4a8ed57490b776ea1bac0671d12afbd6f5b4d1878f1d0
+      bin:
+        - tree-sitter.exe
+      strip: 1
+test: tree-sitter --version

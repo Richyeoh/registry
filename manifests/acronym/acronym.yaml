@@ -1,0 +1,39 @@
+api: v1
+name: acronym
+kind: app
+display: acronym
+description: Python-based tool for creating English-ish acronyms from your fancy project
+homepage: https://github.com/bacook17/acronym
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - acronym
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:c4a6f34070c58dd94f8878cc09af9b731cfa727c1877860da2b80a45a963d242
+      sha256: c4a6f34070c58dd94f8878cc09af9b731cfa727c1877860da2b80a45a963d242
+      bin:
+        - acronym
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:eb807b9ec4a9424876563e3e9cbfa56b1e89f0a44ed6ee5f50059cd00a8dfb69
+      sha256: eb807b9ec4a9424876563e3e9cbfa56b1e89f0a44ed6ee5f50059cd00a8dfb69
+      bin:
+        - acronym
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/acronym/blobs/sha256:2419cb78742501e7c0dc8cc38f136366cf91c28101abd68c581115771188ffe4
+      sha256: 2419cb78742501e7c0dc8cc38f136366cf91c28101abd68c581115771188ffe4
+      bin:
+        - acronym
+      strip: 1
+test: acronym --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: upx
+kind: app
+display: upx
+description: UPX is a free, portable, extendable, high-performance executable packer for several executable formats
+homepage: https://upx.github.io/
+license: GPL-2.0-or-later
+version: 5.3.0
+channels:
+    stable: 5.3.0
+provides:
+    - upx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/upx/upx/releases/download/v5.3.0/upx-5.3.0-win64.zip
+      sha256: d127996c76615e431be810e9c8d2910dbe3dd400600c5c0c50276fc5a17a9705
+      bin:
+        - upx.exe
+      strip: 1
+test: upx --version

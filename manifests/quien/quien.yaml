@@ -1,0 +1,21 @@
+api: v1
+name: quien
+kind: app
+display: quien
+description: A better whois and domain intelligence toolkit.
+homepage: https://benword.com/quien-a-better-whois-and-domain-intelligence-toolkit
+license: MIT
+version: 0.12.0
+channels:
+    stable: 0.12.0
+provides:
+    - quien
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/retlehs/quien/releases/download/v0.12.0/quien_windows_amd64.zip
+      sha256: 8697585fdd1c8e59b82787311ed202749fde7f5253752c417a76be0299ac07ce
+      bin:
+        - quien.exe
+      strip: 1
+test: quien --version

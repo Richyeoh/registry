@@ -1,0 +1,32 @@
+api: v1
+name: aide-app
+kind: app
+display: Aide
+description: Open-source AI-native IDE
+homepage: https://github.com/codestoryai/aide
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.96.4.25031
+channels:
+    stable: 1.96.4.25031
+provides:
+    - aide-app
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/codestoryai/binaries/releases/download/1.96.4.25031/Aide.arm64.1.96.4.25031.dmg
+      sha256: 987443a703edfa35ddacde38b454c60729dea6a64bdfdb94e7e5f2a3d2a27476
+      bin:
+        - aide-app
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/codestoryai/binaries/releases/download/1.96.4.25031/Aide.arm64.1.96.4.25031.dmg
+      sha256: 987443a703edfa35ddacde38b454c60729dea6a64bdfdb94e7e5f2a3d2a27476
+      bin:
+        - aide-app
+      strip: 1
+test: aide-app --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

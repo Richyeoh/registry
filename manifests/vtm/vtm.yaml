@@ -1,0 +1,21 @@
+api: v1
+name: vtm
+kind: app
+display: vtm
+description: Text-based desktop environment
+homepage: https://github.com/directvt/vtm
+license: MIT
+version: 2026.10.12
+channels:
+    stable: 2026.10.12
+provides:
+    - vtm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/directvt/vtm/releases/download/v2026.10.12/vtm_windows_x86_64.7z
+      sha256: 553753933d0a0f7e4b5310db6bd178fe4343acd0280ea149f2fab103a630fa77
+      bin:
+        - vtm.exe
+      strip: 1
+test: vtm --version

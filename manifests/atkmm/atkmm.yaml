@@ -1,0 +1,46 @@
+api: v1
+name: atkmm
+kind: app
+display: atkmm
+description: Official C++ interface for the ATK accessibility toolkit library
+homepage: https://www.gtkmm.org/
+license: LGPL-2.1-or-later
+keywords:
+    - brew
+    - homebrew
+version: 2.36.4
+channels:
+    stable: 2.36.4
+provides:
+    - atkmm
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:bae2a1c6ab7b9741edcd6e7f18477fadfcd20a171edf229206eeccc8485b1947
+      sha256: bae2a1c6ab7b9741edcd6e7f18477fadfcd20a171edf229206eeccc8485b1947
+      bin:
+        - atkmm
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:3c105e610e6f30c0dad33b46a30db3f97896f9d140c79d78925d3c5214f95fba
+      sha256: 3c105e610e6f30c0dad33b46a30db3f97896f9d140c79d78925d3c5214f95fba
+      bin:
+        - atkmm
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:ec7b0fe0825b753c73c3864de6df4e7dc4b0107e2a5c193eeb4e601f258b918c
+      sha256: ec7b0fe0825b753c73c3864de6df4e7dc4b0107e2a5c193eeb4e601f258b918c
+      bin:
+        - atkmm
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atkmm/blobs/sha256:84c62a27f52f7204fad25e2abbbe448d02b676fd1d328bb4ffe813afffd5e307
+      sha256: 84c62a27f52f7204fad25e2abbbe448d02b676fd1d328bb4ffe813afffd5e307
+      bin:
+        - atkmm
+      strip: 1
+test: atkmm --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

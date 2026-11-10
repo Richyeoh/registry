@@ -1,0 +1,23 @@
+api: v1
+name: ffmpeg-nightly
+kind: app
+display: ffmpeg-nightly
+description: A complete, cross-platform solution to record, convert and stream audio and video.
+homepage: https://ffmpeg.org
+license: GPL-3.0-or-later
+version: 20261110-128728-g49a3b1f259
+channels:
+    stable: 20261110-128728-g49a3b1f259
+provides:
+    - ffmpeg-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-11-10-12-39/ffmpeg-N-128728-g49a3b1f259-win64-gpl.zip
+      sha256: 86435ab4f0caca848a36b3d4ce15a032983b8fa2514b37fab392fc658d21470f
+      bin:
+        - bin\ffmpeg.exe
+        - bin\ffplay.exe
+        - bin\ffprobe.exe
+      strip: 1
+test: bin\ffmpeg --version

@@ -1,0 +1,21 @@
+api: v1
+name: vacuum
+kind: app
+display: vacuum
+description: The worlds fastest OpenAPI 3, OpenAPI 2 / Swagger linter and quality analysis tool.
+homepage: https://quobix.com/vacuum/
+license: MIT
+version: 0.39.3
+channels:
+    stable: 0.39.3
+provides:
+    - vacuum
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/daveshanley/vacuum/releases/download/v0.39.3/vacuum_0.39.3_windows_x86_64.tar.gz
+      sha256: f7807a0dc54acd62a3a8c787aaad813ab415fa9c1e716097367782e188c90b88
+      bin:
+        - vacuum.exe
+      strip: 1
+test: vacuum --version

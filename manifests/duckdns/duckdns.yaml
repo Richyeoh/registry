@@ -1,0 +1,21 @@
+api: v1
+name: duckdns
+kind: app
+display: duckdns
+description: A simple C# DuckDNS updater.
+homepage: https://github.com/XWolfOverride/DuckDNS
+license: MIT
+version: 2.2b
+channels:
+    stable: 2.2b
+provides:
+    - duckdns
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/XWolfOverride/DuckDNS/releases/download/2.2b/DuckDNS.7z
+      sha256: dd961749a5eb6f9d1b94707969b409b3db199608e1b7a843d73ffd44195836c6
+      bin:
+        - duckdns.exe
+      strip: 1
+test: duckdns --version

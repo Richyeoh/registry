@@ -1,0 +1,21 @@
+api: v1
+name: mdbook
+kind: app
+display: mdbook
+description: Create a book from markdown files.
+homepage: https://rust-lang.github.io/mdBook/
+license: MPL-2.0
+version: 0.5.4
+channels:
+    stable: 0.5.4
+provides:
+    - mdbook
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rust-lang/mdBook/releases/download/v0.5.4/mdbook-v0.5.4-x86_64-pc-windows-msvc.zip
+      sha256: 8a6b2421aa522de06d746871d2b8fff9c8d71773467e310a4516d2566e7f2de4
+      bin:
+        - mdbook.exe
+      strip: 1
+test: mdbook --version

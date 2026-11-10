@@ -1,0 +1,24 @@
+api: v1
+name: dotter
+kind: app
+display: dotter
+description: Dotfile manager and templater
+homepage: https://github.com/SuperCuber/dotter
+license: Unlicense
+version: 0.13.5
+channels:
+    stable: 0.13.5
+provides:
+    - dotter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SuperCuber/dotter/releases/download/v0.13.5/dotter-windows-x64-msvc.exe#/dotter.exe
+      sha256: db2008898f2b81972a86f77f340f2ef44c4b3dffd01c61bba52d0bd804510c37
+      bin:
+        - dotter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall dotter
+test: dotter --version

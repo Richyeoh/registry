@@ -1,0 +1,21 @@
+api: v1
+name: dapr-cli
+kind: app
+display: dapr-cli
+description: Command-line tools for Dapr
+homepage: https://github.com/dapr/cli
+license: Apache-2.0
+version: 1.19.1
+channels:
+    stable: 1.19.1
+provides:
+    - dapr-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dapr/cli/releases/download/v1.19.1/dapr_windows_amd64.zip
+      sha256: fd9c01b339802e361f21deafef91c08d39fa883b3de4d04ef69116b84cb3f1d9
+      bin:
+        - dapr.exe
+      strip: 1
+test: dapr --version

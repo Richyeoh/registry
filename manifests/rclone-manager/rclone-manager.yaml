@@ -1,0 +1,21 @@
+api: v1
+name: rclone-manager
+kind: app
+display: rclone-manager
+description: A powerful, cross-platform GUI for managing Rclone remotes with style and ease.
+homepage: https://zarestia-dev.github.io/rclone-manager/
+license: GPL-3.0-or-later
+version: 0.3.5
+channels:
+    stable: 0.3.5
+provides:
+    - rclone-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.3.5/RClone.Manager_0.3.5_x64-setup.exe#/dl.7z
+      sha256: 267a513e9ef81d38caf9f91f1f702afd7be88aefac2eeb11a8f1a79111754dcc
+      bin:
+        - rclone-manager.exe
+      strip: 1
+test: rclone-manager --version

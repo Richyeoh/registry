@@ -1,0 +1,21 @@
+api: v1
+name: keepass-plugin-keepassnatmsg
+kind: app
+display: keepass-plugin-keepassnatmsg
+description: A plugin for KeePass 2.x and provides a secure means of exposing KeePass credentials to a browser using Native Messaging. Successor of KeePassHttp / Works with KeePassXC-Browser
+homepage: https://github.com/smorks/keepassnatmsg
+license: GPL-3.0-or-later
+version: 2.0.17
+channels:
+    stable: 2.0.17
+provides:
+    - keepass-plugin-keepassnatmsg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/smorks/keepassnatmsg/releases/download/v2.0.17/KeePassNatMsg-v2.0.17-binaries.zip
+      sha256: 4ae61924d286d0072412aba93521d7c98f6455e89d718f4377c2855c35e49d26
+      bin:
+        - keepass-plugin-keepassnatmsg.exe
+      strip: 1
+test: keepass-plugin-keepassnatmsg --version

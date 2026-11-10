@@ -1,0 +1,21 @@
+api: v1
+name: staticcheck
+kind: app
+display: staticcheck
+description: An advanced Go linter
+homepage: https://staticcheck.io
+license: MIT
+version: 2026.2.2
+channels:
+    stable: 2026.2.2
+provides:
+    - staticcheck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dominikh/go-tools/releases/download/2026.2.2/staticcheck_windows_amd64.tar.gz
+      sha256: 5f4f9491b41301e6a9d4de6f7542bd2efc1bfaf39e7cc52802d4db9e4a54e677
+      bin:
+        - staticcheck.exe
+      strip: 1
+test: staticcheck --version

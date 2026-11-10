@@ -1,0 +1,22 @@
+api: v1
+name: steam-desktop-authenticator
+kind: app
+display: steam-desktop-authenticator
+description: A desktop implementation of Steam's mobile authenticator
+homepage: https://github.com/Jessecar96/SteamDesktopAuthenticator
+license: MIT
+version: 1.0.15
+channels:
+    stable: 1.0.15
+provides:
+    - steam-desktop-authenticator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Jessecar96/SteamDesktopAuthenticator/releases/download/1.0.15/SDA.1.0.15.zip
+      sha256: 05a8ee140080c51b4b51ba4ee46b27efbfc82f75dc94eb5c78bbbb7250cc9102
+      bin:
+        - Steam Desktop Authenticator.exe
+        - Steam Desktop Authenticator.exe
+      strip: 1
+test: Steam Desktop Authenticator.exe --version

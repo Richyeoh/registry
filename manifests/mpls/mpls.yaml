@@ -1,0 +1,21 @@
+api: v1
+name: mpls
+kind: app
+display: mpls
+description: Markdown Preview Language Server
+homepage: https://github.com/mhersson/mpls
+license: Apache-2.0
+version: 0.23.0
+channels:
+    stable: 0.23.0
+provides:
+    - mpls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mhersson/mpls/releases/download/v0.23.0/mpls_0.23.0_windows_amd64.zip
+      sha256: 522292b04773a8141e4ad533df3a8a83ed0eaa528ab944110a1f72732443ef91
+      bin:
+        - mpls.exe
+      strip: 1
+test: mpls --version

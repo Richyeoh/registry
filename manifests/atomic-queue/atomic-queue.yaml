@@ -1,0 +1,39 @@
+api: v1
+name: atomic-queue
+kind: app
+display: atomic_queue
+description: C++14 lock-free queues
+homepage: https://max0x7ba.github.io/atomic_queue/html/benchmarks.html
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.9.4
+channels:
+    stable: 1.9.4
+provides:
+    - atomic-queue
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atomic_queue/blobs/sha256:7f0efd983f44e6bde5d7aa18466b0883b764edfe8e5b764493152be3f806d1ac
+      sha256: 7f0efd983f44e6bde5d7aa18466b0883b764edfe8e5b764493152be3f806d1ac
+      bin:
+        - atomic-queue
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atomic_queue/blobs/sha256:ebf77bfb6c05e1f69cbd142920e8a491831f2044ad0728554ba3382b64179825
+      sha256: ebf77bfb6c05e1f69cbd142920e8a491831f2044ad0728554ba3382b64179825
+      bin:
+        - atomic-queue
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atomic_queue/blobs/sha256:ebf77bfb6c05e1f69cbd142920e8a491831f2044ad0728554ba3382b64179825
+      sha256: ebf77bfb6c05e1f69cbd142920e8a491831f2044ad0728554ba3382b64179825
+      bin:
+        - atomic-queue
+      strip: 1
+test: atomic-queue --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

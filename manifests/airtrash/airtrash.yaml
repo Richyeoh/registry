@@ -1,0 +1,32 @@
+api: v1
+name: airtrash
+kind: app
+display: airtrash
+description: Clone of Apple's Airdrop - easy P2P file transfer
+homepage: https://github.com/maciejczyzewski/airtrash/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - airtrash
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/maciejczyzewski/airtrash/releases/download/1.0.0/airtrash-1.0.0.dmg
+      sha256: 9ce83fef421654b4ca39550255dd09e0b2281da5fe3dbd9e8e23e58640912606
+      bin:
+        - airtrash
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/maciejczyzewski/airtrash/releases/download/1.0.0/airtrash-1.0.0.dmg
+      sha256: 9ce83fef421654b4ca39550255dd09e0b2281da5fe3dbd9e8e23e58640912606
+      bin:
+        - airtrash
+      strip: 1
+test: airtrash --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

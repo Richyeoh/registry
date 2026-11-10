@@ -1,0 +1,32 @@
+api: v1
+name: avfs
+kind: app
+display: avfs
+description: Virtual file system that facilitates looking inside archives
+homepage: https://avf.sourceforge.net/
+license: GPL-2.0-only AND LGPL-2.0-only AND GPL-2.0-or-later AND Zlib
+keywords:
+    - brew
+    - homebrew
+version: 1.4.0
+channels:
+    stable: 1.4.0
+provides:
+    - avfs
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/avfs/blobs/sha256:895ffb92e873e6275a5fa024d535d469679f0931cdac2841b4604eb54bb4c45b
+      sha256: 895ffb92e873e6275a5fa024d535d469679f0931cdac2841b4604eb54bb4c45b
+      bin:
+        - avfs
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/avfs/blobs/sha256:ac51b01c84fbfef1e9c0772ff4461db668ef7eb1e7afe73440bb8ec77ea7ac6b
+      sha256: ac51b01c84fbfef1e9c0772ff4461db668ef7eb1e7afe73440bb8ec77ea7ac6b
+      bin:
+        - avfs
+      strip: 1
+test: avfs --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: nvcleanstall
+kind: app
+display: nvcleanstall
+description: Extends customization of NVIDIA GeForce Driver packages; can also decouple automatic updates from NVIDIA's servers.
+homepage: https://www.techpowerup.com/nvcleanstall/
+license: Freeware
+version: 1.19.0
+channels:
+    stable: 1.19.0
+provides:
+    - nvcleanstall
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://us1-dl.techpowerup.com/files/NVCleanstall_1.19.0.exe#/NVCleanstall.exe
+      sha256: 9dd36ef956af927cf41fa441f91b329a7973e13965e4e7d70e6fa9c1df1cade6
+      bin:
+        - NVCleanstall.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nvcleanstall
+test: NVCleanstall --version

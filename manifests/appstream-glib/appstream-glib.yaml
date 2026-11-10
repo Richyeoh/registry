@@ -1,0 +1,46 @@
+api: v1
+name: appstream-glib
+kind: app
+display: appstream-glib
+description: Helper library for reading and writing AppStream metadata
+homepage: https://github.com/hughsie/appstream-glib
+license: LGPL-2.1-or-later
+keywords:
+    - brew
+    - homebrew
+version: 0.8.4
+channels:
+    stable: 0.8.4
+provides:
+    - appstream-glib
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:efef49ed2c2effbfb95714a002f0e15a9c3fe93fe0ba97e96ca59409f289cb98
+      sha256: efef49ed2c2effbfb95714a002f0e15a9c3fe93fe0ba97e96ca59409f289cb98
+      bin:
+        - appstream-glib
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:b9b94b63c21e90bfef27625b98fba4e0c1deb438b2fc872978b0f1bb66a16a41
+      sha256: b9b94b63c21e90bfef27625b98fba4e0c1deb438b2fc872978b0f1bb66a16a41
+      bin:
+        - appstream-glib
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:6373eab42c9461038aa174ac4b6f52914d08a6f602e405cdecd640c7227521e3
+      sha256: 6373eab42c9461038aa174ac4b6f52914d08a6f602e405cdecd640c7227521e3
+      bin:
+        - appstream-glib
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/appstream-glib/blobs/sha256:894398250155525e2a6ca37a0b4702d82592d9e20701738f79cdce239e5192c5
+      sha256: 894398250155525e2a6ca37a0b4702d82592d9e20701738f79cdce239e5192c5
+      bin:
+        - appstream-glib
+      strip: 1
+test: appstream-glib --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

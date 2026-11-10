@@ -1,0 +1,21 @@
+api: v1
+name: sozi
+kind: app
+display: sozi
+description: Zooming presentation editor and player.
+homepage: https://sozi.baierouge.fr/
+license: MPL-2.0
+version: 23.7.25
+channels:
+    stable: 23.7.25
+provides:
+    - sozi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sozi-projects/Sozi/releases/download/v23.07/Sozi.Setup.23.7.25-1690311612.exe#/dl.7z
+      sha256: d38d2f7a36d784d2b515f887dc31fde408cdf390397d23987294cb25a1ce0367
+      bin:
+        - sozi.exe
+      strip: 1
+test: sozi --version

@@ -1,0 +1,21 @@
+api: v1
+name: ibmcloud-cli
+kind: app
+display: ibmcloud-cli
+description: The command line client for IBM Cloud
+homepage: https://cloud.ibm.com/docs/cli
+license: Unknown
+version: 2.49.0
+channels:
+    stable: 2.49.0
+provides:
+    - ibmcloud-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/2.49.0/binaries/IBM_Cloud_CLI_2.49.0_windows_amd64.zip
+      sha256: aad0b9328d36cafab5d3068a84c8854e4ba508d1775d79153c952033c4ce14f1
+      bin:
+        - ibmcloud.exe
+      strip: 1
+test: ibmcloud --version

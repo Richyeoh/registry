@@ -1,0 +1,21 @@
+api: v1
+name: treesize-free
+kind: app
+display: treesize-free
+description: Capture directory sizes and memory guzzlers.
+homepage: https://www.jam-software.com/treesize_free
+license: Unknown
+version: 4.8.1
+channels:
+    stable: 4.8.1
+provides:
+    - treesize-free
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.jam-software.de/treesize_free/TreeSizeFree-Portable.zip
+      sha256: 6d85b1902186ea057a5d12511dce7a3b09788c321a66356e5dd8f32e4eeccb6a
+      bin:
+        - TreeSizeFree.exe
+      strip: 1
+test: TreeSizeFree --version

@@ -1,0 +1,21 @@
+api: v1
+name: kingfisher
+kind: app
+display: kingfisher
+description: A blazingly fast secret scanner that detects leaked secrets, validates which credentials are live, maps their blast radius, and revokes exposed secrets.
+homepage: https://mongodb.github.io/kingfisher/
+license: Apache-2.0
+version: 2.18.1
+channels:
+    stable: 2.18.1
+provides:
+    - kingfisher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mongodb/kingfisher/releases/download/v2.18.1/kingfisher-windows-x64.zip
+      sha256: 2fefde1cf03070323a539f01b2be5e2ae3e8399328dc6de5f8eae629f1eb9557
+      bin:
+        - kingfisher.exe
+      strip: 1
+test: kingfisher --version

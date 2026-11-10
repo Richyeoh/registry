@@ -1,0 +1,21 @@
+api: v1
+name: brave-nightly
+kind: app
+display: brave-nightly
+description: Secure, Fast & Private Web Browser with Adblocker (nightly release)
+homepage: https://brave.com
+license: Unknown
+version: 1.101.39
+channels:
+    stable: 1.101.39
+provides:
+    - brave-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/brave/brave-browser/releases/download/v1.101.39/brave-v1.101.39-win32-x64.zip
+      sha256: a09040b81e62a24aec44d0fd09b85bedb30472a1e4a09ea1a7226f426a2f5574
+      bin:
+        - brave.exe
+      strip: 1
+test: brave --version

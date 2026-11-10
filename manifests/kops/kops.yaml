@@ -1,0 +1,24 @@
+api: v1
+name: kops
+kind: app
+display: kops
+description: Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management.
+homepage: https://kops.sigs.k8s.io
+license: Apache-2.0
+version: 1.37.0
+channels:
+    stable: 1.37.0
+provides:
+    - kops
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubernetes/kops/releases/download/v1.37.0/kops-windows-amd64#/kops.exe
+      sha256: 0e8ffb18be138fb720d6b9eb414547c3e1d33cbe38e47d8b62ac3b80d0f12d04
+      bin:
+        - kops.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kops
+test: kops --version

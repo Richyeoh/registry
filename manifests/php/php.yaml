@@ -1,0 +1,23 @@
+api: v1
+name: php
+kind: app
+display: php
+description: A popular general-purpose scripting language that is especially suited to web development. (thread safe)
+homepage: https://www.php.net/
+license: PHP-3.01
+version: 8.5.12-1
+channels:
+    stable: 8.5.12-1
+provides:
+    - php
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.php.net/~windows/releases/archives/php-8.5.12-1-Win32-vs17-x64.zip
+      sha256: 0dacd6484b092b5e9ae9fa3d7f96a937caf9d874eee2d980b68ed3129741144a
+      bin:
+        - php.exe
+        - php-cgi.exe
+        - phpdbg.exe
+      strip: 1
+test: php --version

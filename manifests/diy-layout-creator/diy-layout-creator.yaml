@@ -1,0 +1,21 @@
+api: v1
+name: diy-layout-creator
+kind: app
+display: diy-layout-creator
+description: Multi platform circuit layout and schematic drawing tool.
+homepage: https://bancika.github.io/diy-layout-creator/
+license: GPL-3.0-or-later
+version: 6.10.0
+channels:
+    stable: 6.10.0
+provides:
+    - diy-layout-creator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bancika/diy-layout-creator/releases/download/v6.10.0/diylc-6.10.0-win64.zip
+      sha256: 6d69697b0ea07f68b3497bfbfe4565dd3eee747fb6566e334c1a9584b8b9345b
+      bin:
+        - diy-layout-creator.exe
+      strip: 1
+test: diy-layout-creator --version

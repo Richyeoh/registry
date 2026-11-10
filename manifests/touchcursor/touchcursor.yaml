@@ -1,0 +1,21 @@
+api: v1
+name: touchcursor
+kind: app
+display: touchcursor
+description: Lets you use the home keys as cursor keys.
+homepage: https://martin-stone.github.io/touchcursor/
+license: GPL-3.0-only
+version: 1.7.1
+channels:
+    stable: 1.7.1
+provides:
+    - touchcursor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/martin-stone/touchcursor/releases/download/v1.7.1/TouchCursor-1.7.1.zip
+      sha256: 3c4a4361d8f32f3b594a3021c5159d1efe670310126ce99ed8d07d4e8b9c4e77
+      bin:
+        - touchcursor.exe
+      strip: 1
+test: touchcursor --version

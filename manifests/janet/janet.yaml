@@ -1,0 +1,24 @@
+api: v1
+name: janet
+kind: app
+display: janet
+description: Lisp-like, embeddable, functional and imperative programming language and bytecode interpreter
+homepage: https://janet-lang.org
+license: MIT
+version: 1.43.0
+channels:
+    stable: 1.43.0
+provides:
+    - janet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/janet-lang/janet/releases/download/v1.43.0/janet-1.43.0-windows-x64-installer.msi
+      sha256: 4a3a3db648a389b1d63761bc8e7b598b14d673814ec5cdb0a2d56ff41a7b8471
+      bin:
+        - bin\janet.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall janet
+test: bin\janet --version

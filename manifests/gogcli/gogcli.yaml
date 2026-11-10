@@ -1,0 +1,21 @@
+api: v1
+name: gogcli
+kind: app
+display: gogcli
+description: Fast, script-friendly CLI for Gmail, Drive, Calendar, and other Google Workspace apps.
+homepage: https://gogcli.sh
+license: MIT
+version: 0.48.0
+channels:
+    stable: 0.48.0
+provides:
+    - gogcli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/openclaw/gogcli/releases/download/v0.48.0/gogcli_0.48.0_windows_amd64.zip
+      sha256: 8c506b4350543545b47f528c1c35fa288b49e37292cf7d694660cf93c79703ba
+      bin:
+        - gog.exe
+      strip: 1
+test: gog --version

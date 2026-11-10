@@ -1,0 +1,21 @@
+api: v1
+name: rabbitmqadmin
+kind: app
+display: rabbitmqadmin
+description: A command line tool shipped with the management plugin of RabbitMQ, which can perform some of the same actions as the Web-based UI.
+homepage: https://www.rabbitmq.com/management-cli.html
+license: MPL-1.1
+version: 3.8.9
+channels:
+    stable: 3.8.9
+provides:
+    - rabbitmqadmin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/rabbitmq/rabbitmq-management/v3.8.9/bin/rabbitmqadmin
+      sha256: c18706fda8de9e547cc882c14ddefe61f32835f7ca219229f7078fca3d17f459
+      bin:
+        - rabbitmqadmin.ps1.exe
+      strip: 1
+test: rabbitmqadmin.ps1 --version

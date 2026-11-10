@@ -1,0 +1,21 @@
+api: v1
+name: etcher-cli
+kind: app
+display: etcher-cli
+description: CLI for balena Etcher (no longer updated)
+homepage: https://www.balena.io/etcher/
+license: Apache-2.0
+version: 1.4.9
+channels:
+    stable: 1.4.9
+provides:
+    - etcher-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/balena-io/etcher/releases/download/v1.4.9/balena-etcher-cli-1.4.9-windows-x64.zip
+      sha256: a3efeab1ee775dab6d07405e0c7f6f0fdd36a544fd5cba80cd387ffc1e305afc
+      bin:
+        - balena-etcher.exe
+      strip: 1
+test: balena-etcher --version

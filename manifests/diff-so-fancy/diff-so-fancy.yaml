@@ -1,0 +1,21 @@
+api: v1
+name: diff-so-fancy
+kind: app
+display: diff-so-fancy
+description: Make diffs human readable instead of machine readable to improve code quality and spot defects faster.
+homepage: https://github.com/so-fancy/diff-so-fancy
+license: MIT
+version: 1.4.14
+channels:
+    stable: 1.4.14
+provides:
+    - diff-so-fancy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/so-fancy/diff-so-fancy/releases/download/v1.4.14/diff-so-fancy
+      sha256: 98b2eb61c132f411d6005962ca14c3b5c537770bb283eef2c92dfef196f70983
+      bin:
+        - diff-so-fancy.bat.exe
+      strip: 1
+test: diff-so-fancy.bat --version

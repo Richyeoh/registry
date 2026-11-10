@@ -1,0 +1,21 @@
+api: v1
+name: cloak
+kind: app
+display: cloak
+description: a Command Line OTP Authenticator application
+homepage: https://github.com/evansmurithi/cloak
+license: MIT
+version: 0.2.0
+channels:
+    stable: 0.2.0
+provides:
+    - cloak
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/evansmurithi/cloak/releases/download/v0.2.0/cloak-v0.2.0-x86_64-pc-windows-msvc.zip
+      sha256: a0354613f17bb1dacd2d41a29650296bb96ee81cd5038388ec6f2c7389d71933
+      bin:
+        - cloak.exe
+      strip: 1
+test: cloak --version

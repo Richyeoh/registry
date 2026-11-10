@@ -1,0 +1,25 @@
+api: v1
+name: cppcryptfsctl
+kind: app
+display: cppcryptfsctl
+description: cppcryptfs is an implementation of the gocryptfs encrypted overlay filesystem in C++ for Windows.
+homepage: https://github.com/bailey27/cppcryptfs
+license: Unknown
+version: 1.4.5.2
+channels:
+    stable: 1.4.5.2
+provides:
+    - cppcryptfsctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bailey27/cppcryptfs/releases/download/v1.4.5.2/cppcryptfsctl.exe
+      sha256: 587be2317a762ba8bc0f374cff97530d38bafa9db033ad7690a9dc521d2651f5
+      bin:
+        - cppcryptfsctl.exe
+        - cppcryptfs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cppcryptfsctl
+test: cppcryptfsctl --version

@@ -1,0 +1,21 @@
+api: v1
+name: kando
+kind: app
+display: kando
+description: The Cross-Platform Pie Menu.
+homepage: https://github.com/kando-menu/kando
+license: MIT
+version: 3.0.1
+channels:
+    stable: 3.0.1
+provides:
+    - kando
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kando-menu/kando/releases/download/v3.0.1/Kando-win32-x64-3.0.1.zip
+      sha256: 395b46c1a06453df754041197e8fd03a8fe926d9fcfad85dcaf0b738571bea23
+      bin:
+        - kando.exe
+      strip: 1
+test: kando --version

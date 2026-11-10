@@ -1,0 +1,21 @@
+api: v1
+name: windows-virtualdesktop-helper
+kind: app
+display: windows-virtualdesktop-helper
+description: Simple and lightweight app to help with Virtual Desktops for Windows 10 and Windows 11.
+homepage: https://github.com/dankrusi/WindowsVirtualDesktopHelper
+license: AGPL-3.0-only
+version: "2.1"
+channels:
+    stable: "2.1"
+provides:
+    - windows-virtualdesktop-helper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dankrusi/WindowsVirtualDesktopHelper/releases/download/v2.1/WindowsVirtualDesktopHelper.Executable.v2.1.zip
+      sha256: 83009b54786fbff11390c59ab17cd84013cb3cb10c00e25cf4157f27004e9830
+      bin:
+        - windows-virtualdesktop-helper.exe
+      strip: 1
+test: windows-virtualdesktop-helper --version

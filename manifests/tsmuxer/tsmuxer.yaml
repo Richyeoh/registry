@@ -1,0 +1,21 @@
+api: v1
+name: tsmuxer
+kind: app
+display: tsmuxer
+description: Transport stream muxer for remuxing/muxing elementary streams into MPEG-TS format
+homepage: https://github.com/justdan96/tsMuxer
+license: Unknown
+version: 2.7.0
+channels:
+    stable: 2.7.0
+provides:
+    - tsmuxer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/justdan96/tsMuxer/releases/download/2.7.0/tsMuxer-2.7.0-win64.zip
+      sha256: e3cf117d2c6f01332188123641c63fe38ab9731ae7aa23645f6f9a261a7a301c
+      bin:
+        - tsMuxeR.exe
+      strip: 1
+test: tsMuxeR --version

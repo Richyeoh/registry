@@ -1,0 +1,32 @@
+api: v1
+name: alma
+kind: app
+display: Alma
+description: AI chat application
+homepage: https://alma.now/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.4.563
+channels:
+    stable: 0.4.563
+provides:
+    - alma
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://updates.alma.now/alma-0.4.563-mac-arm64.dmg
+      sha256: 28a104532592315779d5627d41805d296b25535dd5776d0cc06adda04bfbbe95
+      bin:
+        - alma
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://updates.alma.now/alma-0.4.563-mac-arm64.dmg
+      sha256: 28a104532592315779d5627d41805d296b25535dd5776d0cc06adda04bfbbe95
+      bin:
+        - alma
+      strip: 1
+test: alma --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

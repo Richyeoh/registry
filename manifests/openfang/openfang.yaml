@@ -1,0 +1,21 @@
+api: v1
+name: openfang
+kind: app
+display: openfang
+description: Open-source Agent Operating System.
+homepage: https://openfang.sh
+license: MIT|Apache-2.0
+version: 0.6.9
+channels:
+    stable: 0.6.9
+provides:
+    - openfang
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RightNow-AI/openfang/releases/download/v0.6.9/openfang-x86_64-pc-windows-msvc.zip
+      sha256: 18f5a8f6b563304749ce07444de8ca901fccb45e06a2e5a074fbbfbec037dc9f
+      bin:
+        - openfang.exe
+      strip: 1
+test: openfang --version

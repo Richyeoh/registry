@@ -1,0 +1,32 @@
+api: v1
+name: arcadedb
+kind: app
+display: arcadedb
+description: Multi-model database, one DBMS that supports SQL, Cypher, Gremlin, HTTP/JSON, MongoDB and Redis
+homepage: https://arcadedb.com
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 26.11.1
+channels:
+    stable: 26.11.1
+provides:
+    - arcadedb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ArcadeData/arcadedb/releases/download/26.11.1/arcadedb-26.11.1.tar.gz
+      sha256: a9dceafa61c1863aca16486b40cc866be212167dd555edc8a420f43d84598cf5
+      bin:
+        - bin\console.bat.exe
+        - bin\server.bat.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:7bc58c5b9be8de908be7d71b58e42a6f3024228d575cc9ad0e75795ca974d24d
+      sha256: 7bc58c5b9be8de908be7d71b58e42a6f3024228d575cc9ad0e75795ca974d24d
+      bin:
+        - arcadedb
+      strip: 1
+test: bin\console.bat --version

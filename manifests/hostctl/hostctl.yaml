@@ -1,0 +1,21 @@
+api: v1
+name: hostctl
+kind: app
+display: hostctl
+description: Hosts file manager
+homepage: https://guumaster.github.io/hostctl
+license: MIT
+version: 1.1.4
+channels:
+    stable: 1.1.4
+provides:
+    - hostctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/guumaster/hostctl/releases/download/v1.1.4/hostctl_1.1.4_windows_64-bit.zip
+      sha256: 81a1f26f70ee7c60a3e1c6d50f745b538086168a591bef5d8e330d21cedc32aa
+      bin:
+        - hostctl.exe
+      strip: 1
+test: hostctl --version

@@ -1,0 +1,22 @@
+api: v1
+name: czkawka-gui
+kind: app
+display: czkawka-gui
+description: Find duplicates, empty folders, similar images, unnecessary files, etc.
+homepage: https://github.com/qarmin/czkawka
+license: MIT|CC-BY-4.0
+version: 12.0.2
+channels:
+    stable: 12.0.2
+provides:
+    - czkawka-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/qarmin/czkawka/releases/download/12.0.2/windows_czkawka_gui_gtk_412.zip
+      sha256: de7e8a01cf16caf742a2da350f5c9a49477cdc75a63d05d0ea18fd1c50737285
+      bin:
+        - czkawka_cli.exe
+        - czkawka_gui.exe
+      strip: 1
+test: czkawka_cli --version

@@ -1,0 +1,21 @@
+api: v1
+name: syncthingctl
+kind: app
+display: syncthingctl
+description: Command line app to control Syncthing
+homepage: https://github.com/Martchus/syncthingtray
+license: Unknown
+version: 2.1.9
+channels:
+    stable: 2.1.9
+provides:
+    - syncthingctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Martchus/syncthingtray/releases/download/v2.1.9/syncthingctl-2.1.9-x86_64-w64-mingw32.exe.zip
+      sha256: c5bdd7e284d91642d61e0b4b3022759dfc63e33f5737eb7cbddcc40e334aa201
+      bin:
+        - syncthingctl.exe
+      strip: 1
+test: syncthingctl --version

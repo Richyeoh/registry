@@ -1,0 +1,23 @@
+api: v1
+name: ffmpeg-essentials
+kind: app
+display: ffmpeg-essentials
+description: A complete, cross-platform solution to record, convert and stream audio and video.
+homepage: https://ffmpeg.org
+license: GPL-3.0-or-later
+version: 9.0.2
+channels:
+    stable: 9.0.2
+provides:
+    - ffmpeg-essentials
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.7z
+      sha256: 4705843ccaaf54257c16ad90f3e952ece33c17df964ecf7bfdbb0f49c7171077
+      bin:
+        - bin\ffmpeg.exe
+        - bin\ffplay.exe
+        - bin\ffprobe.exe
+      strip: 1
+test: bin\ffmpeg --version

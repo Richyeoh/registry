@@ -1,0 +1,23 @@
+api: v1
+name: ffmpeg-gyan-nightly
+kind: app
+display: ffmpeg-gyan-nightly
+description: A complete, cross-platform solution to record, convert and stream audio and video.
+homepage: https://ffmpeg.org
+license: GPL-3.0-or-later
+version: "2026-11-09"
+channels:
+    stable: "2026-11-09"
+provides:
+    - ffmpeg-gyan-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-2026-11-09-git-16a345b022-full_build.7z
+      sha256: 1473e1e38139240aaf8255a8d490eb0b44f39526e3f36b22fd7a339c6acd5520
+      bin:
+        - bin\ffmpeg.exe
+        - bin\ffplay.exe
+        - bin\ffprobe.exe
+      strip: 1
+test: bin\ffmpeg --version

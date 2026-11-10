@@ -1,0 +1,24 @@
+api: v1
+name: fvie
+kind: app
+display: fvie
+description: Edit File VersionInfo metadata from Windows executables.
+homepage: https://www.carifred.com/fvie/
+license: Unknown
+version: 1.5.0.0
+channels:
+    stable: 1.5.0.0
+provides:
+    - fvie
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.carifred.com/fvie/FVIE.exe
+      sha256: cf4d0442b0a324358eb0b420c34a62ee41e1a39339e2842ed92cf5eee1aa9641
+      bin:
+        - FVIE.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fvie
+test: FVIE --version

@@ -1,0 +1,21 @@
+api: v1
+name: deja-vu
+kind: app
+display: deja-vu
+description: Persistent memory for coding agents
+homepage: https://vshulcz.github.io/deja-vu/
+license: MIT
+version: 0.24.1
+channels:
+    stable: 0.24.1
+provides:
+    - deja-vu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vshulcz/deja-vu/releases/download/v0.24.1/deja-vu_0.24.1_windows_amd64.zip
+      sha256: cc894a64fefb8ca78419ab85ec6b0e7d26415878a5428aef68d7948cb6aa029e
+      bin:
+        - deja.exe
+      strip: 1
+test: deja --version

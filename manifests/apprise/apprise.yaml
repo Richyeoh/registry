@@ -1,0 +1,39 @@
+api: v1
+name: apprise
+kind: app
+display: apprise
+description: Send notifications from the command-line to popular notification services
+homepage: https://pypi.org/project/apprise/
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 2.2.0
+channels:
+    stable: 2.2.0
+provides:
+    - apprise
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:4635ca46b2af2881b5e6ea9d46837f6d09943b8033324130a34e1cb20b443270
+      sha256: 4635ca46b2af2881b5e6ea9d46837f6d09943b8033324130a34e1cb20b443270
+      bin:
+        - apprise
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:9ce94bfb4526f3ee9f0782f47c75e61535dbd5efd318d2518146b7f40a086cbc
+      sha256: 9ce94bfb4526f3ee9f0782f47c75e61535dbd5efd318d2518146b7f40a086cbc
+      bin:
+        - apprise
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apprise/blobs/sha256:c1efbe8683d37f057a7a4081a1941fd03db770eb864887907251c9e8026635c0
+      sha256: c1efbe8683d37f057a7a4081a1941fd03db770eb864887907251c9e8026635c0
+      bin:
+        - apprise
+      strip: 1
+test: apprise --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

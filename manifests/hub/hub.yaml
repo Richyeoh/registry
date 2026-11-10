@@ -1,0 +1,21 @@
+api: v1
+name: hub
+kind: app
+display: hub
+description: An extension to command-line git that helps with everyday GitHub tasks without ever leaving the terminal.
+homepage: https://hub.github.com/
+license: MIT
+version: 2.14.2
+channels:
+    stable: 2.14.2
+provides:
+    - hub
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mislav/hub/releases/download/v2.14.2/hub-windows-amd64-2.14.2.zip
+      sha256: 2ad771ff5e5e47c8d48aa22f6852ebef87e1fe0f53a1194ddcbe615a9ddbc59e
+      bin:
+        - bin\hub.exe
+      strip: 1
+test: bin\hub --version

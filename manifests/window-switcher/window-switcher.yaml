@@ -1,0 +1,21 @@
+api: v1
+name: window-switcher
+kind: app
+display: window-switcher
+description: Easily switch between windows of the same app with Alt+` (Backtick), also switch between apps with Alt+Tab.
+homepage: https://github.com/sigoden/window-switcher
+license: MIT
+version: 1.19.0
+channels:
+    stable: 1.19.0
+provides:
+    - window-switcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sigoden/window-switcher/releases/download/v1.19.0/window-switcher-v1.19.0-windows-64.zip
+      sha256: e9c122b14ac0f81c557c9866e9913439cda245e4410901e0cfe04c85a0119ce7
+      bin:
+        - window-switcher.exe
+      strip: 1
+test: window-switcher --version

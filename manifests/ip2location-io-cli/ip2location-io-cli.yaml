@@ -1,0 +1,21 @@
+api: v1
+name: ip2location-io-cli
+kind: app
+display: ip2location-io-cli
+description: This is the official CLI for the IP2Location.io IP geolocation API
+homepage: https://github.com/ip2location/ip2location-io-cli
+license: MIT
+version: 1.2.1
+channels:
+    stable: 1.2.1
+provides:
+    - ip2location-io-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.1/ip2locationio_1.2.1_windows_amd64.zip
+      sha256: e5d31353aa4a0b28ebbb3f52a2a698a8fbe638e482d61a03bc00292864e4eb41
+      bin:
+        - ip2locationio.exe
+      strip: 1
+test: ip2locationio --version

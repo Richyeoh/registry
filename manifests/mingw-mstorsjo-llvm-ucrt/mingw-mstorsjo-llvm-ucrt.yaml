@@ -1,0 +1,21 @@
+api: v1
+name: mingw-mstorsjo-llvm-ucrt
+kind: app
+display: mingw-mstorsjo-llvm-ucrt
+description: LLVM toolchain based on mingw-w64. (UCRT, mstorsjo build)
+homepage: https://github.com/mstorsjo/llvm-mingw/
+license: GPL-3.0-or-later,ZPL-2.1,Apache-2.0 WITH LLVM-exception,ISC
+version: 23.1.5-20261104
+channels:
+    stable: 23.1.5-20261104
+provides:
+    - mingw-mstorsjo-llvm-ucrt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mstorsjo/llvm-mingw/releases/download/20261104/llvm-mingw-20261104-ucrt-x86_64.zip
+      sha256: 552191b5754c49a5a20723276a6fc56541ea1922c4c50b7b669022333fc1b40f
+      bin:
+        - mingw-mstorsjo-llvm-ucrt.exe
+      strip: 1
+test: mingw-mstorsjo-llvm-ucrt --version

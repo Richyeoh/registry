@@ -1,0 +1,21 @@
+api: v1
+name: ubports-installer
+kind: app
+display: ubports-installer
+description: A friendly cross-platform Installer for Ubuntu Touch.
+homepage: https://ubuntu-touch.io//ubuntu-touch.io
+license: GPL-3.0-only
+version: 0.11.2
+channels:
+    stable: 0.11.2
+provides:
+    - ubports-installer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ubports/ubports-installer/releases/download/0.11.2/ubports-installer_0.11.2_win_x64.exe#/dl.7z
+      sha256: e8cb3b8835a88cad08eebb3bd567f97d16cbefc4bf1ac5cfb2123905cea4b225
+      bin:
+        - ubports-installer.exe
+      strip: 1
+test: ubports-installer --version

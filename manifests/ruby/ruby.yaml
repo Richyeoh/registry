@@ -1,0 +1,21 @@
+api: v1
+name: ruby
+kind: app
+display: ruby
+description: A dynamic programming language with a focus on simplicity and productivity.
+homepage: https://rubyinstaller.org
+license: BSD-3-Clause
+version: 4.0.9-1
+channels:
+    stable: 4.0.9-1
+provides:
+    - ruby
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-4.0.9-1/rubyinstaller-4.0.9-1-x64.7z
+      sha256: 1dc0715916251a13c4f6a550a3da1f2c726bff869371fd573a65234c008f47b4
+      bin:
+        - ruby.exe
+      strip: 1
+test: ruby --version

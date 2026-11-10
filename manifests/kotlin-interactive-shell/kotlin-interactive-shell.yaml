@@ -1,0 +1,21 @@
+api: v1
+name: kotlin-interactive-shell
+kind: app
+display: kotlin-interactive-shell
+description: This shell is an extensible implementation of Kotlin REPL.
+homepage: https://github.com/Kotlin/kotlin-interactive-shell
+license: Apache-2.0
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - kotlin-interactive-shell
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Kotlin/kotlin-interactive-shell/releases/download/v0.6.0/ki-archive.zip
+      sha256: e0ad3b249277e88d37955088bb37395a1d4ad6b17c00ecaf7e1701605cc0c351
+      bin:
+        - bin\ki.bat.exe
+      strip: 1
+test: bin\ki.bat --version

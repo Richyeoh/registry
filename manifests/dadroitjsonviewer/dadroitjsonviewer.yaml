@@ -1,0 +1,24 @@
+api: v1
+name: dadroitjsonviewer
+kind: app
+display: dadroitjsonviewer
+description: A JSON viewer that gives a new approach to process JSON Data files.
+homepage: https://dadroit.com/
+license: Unknown
+version: 3.4.0.374
+channels:
+    stable: 3.4.0.374
+provides:
+    - dadroitjsonviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dadroit.com/releases/win/DadroitJSONViewerSetup.exe
+      sha256: f289d7cfae91af75a4771dbd182b684168c2b9febeecf0b3713cfee15de5f239
+      bin:
+        - dadroitjsonviewer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall dadroitjsonviewer
+test: dadroitjsonviewer --version

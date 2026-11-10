@@ -1,0 +1,32 @@
+api: v1
+name: anarlog
+kind: app
+display: Anarlog
+description: AI notepad for meetings
+homepage: https://anarlog.so/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.4.34
+channels:
+    stable: 1.4.34
+provides:
+    - anarlog
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/fastrepl/anarlog/releases/download/desktop_v1.4.34/anarlog-macos-aarch64.dmg
+      sha256: 9ddfbdc9388d17239804f877f4deb86bd7f0fc93fba34baba02fdec716ce851c
+      bin:
+        - anarlog
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/fastrepl/anarlog/releases/download/desktop_v1.4.34/anarlog-macos-aarch64.dmg
+      sha256: 9ddfbdc9388d17239804f877f4deb86bd7f0fc93fba34baba02fdec716ce851c
+      bin:
+        - anarlog
+      strip: 1
+test: anarlog --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

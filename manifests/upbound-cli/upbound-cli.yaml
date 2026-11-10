@@ -1,0 +1,24 @@
+api: v1
+name: upbound-cli
+kind: app
+display: upbound-cli
+description: Official CLI for interacting with Upbound Cloud, Upbound Enterprise, and Universal Crossplane (UXP).
+homepage: https://docs.upbound.io/manuals/cli/overview/
+license: Apache-2.0
+version: 0.56.0
+channels:
+    stable: 0.56.0
+provides:
+    - upbound-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cli.upbound.io/stable/v0.56.0/bin/windows_amd64/up.exe
+      sha256: 2872ce3aa2b05eb4b1d9fdd7f212c9737437745611cbbd4d07ba17422de03574
+      bin:
+        - up.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall upbound-cli
+test: up --version

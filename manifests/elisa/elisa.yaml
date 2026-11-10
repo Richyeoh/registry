@@ -1,0 +1,21 @@
+api: v1
+name: elisa
+kind: app
+display: elisa
+description: Simple and easy-to-use music player
+homepage: https://apps.kde.org/elisa
+license: LGPL-3.0-only
+version: 26.08-4713
+channels:
+    stable: 26.08-4713
+provides:
+    - elisa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.kde.org/ci-builds/multimedia/elisa/release-26.08/windows/elisa-release_26.08-4713-windows-cl-msvc2022-x86_64.7z
+      sha256: 1b813afafa6640aa35f8dcaa8d5000c831c9c9a897b2086ce16b9d8f763c2cd8
+      bin:
+        - bin\elisa.exe
+      strip: 1
+test: bin\elisa --version

@@ -1,0 +1,24 @@
+api: v1
+name: accesser
+kind: app
+display: accesser
+description: A tool which can help you bypass SNI RST
+homepage: https://urenko.github.io/Accesser/
+license: GPL-3.0-only
+version: 0.11.1
+channels:
+    stable: 0.11.1
+provides:
+    - accesser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/URenko/Accesser/releases/download/v0.11.1/Accesser.exe
+      sha256: 89713832aba137502943b13c9b3396ed932ef0bcdd8c754aa32101ffd347b9f3
+      bin:
+        - Accesser.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall accesser
+test: Accesser --version

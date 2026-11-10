@@ -1,0 +1,46 @@
+api: v1
+name: aftman
+kind: app
+display: aftman
+description: Toolchain manager for Roblox, the prodigal sequel to Foreman
+homepage: https://github.com/LPGhatguy/aftman
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - aftman
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aftman/blobs/sha256:fdf56dee4a49f7c3e0038b48b7dc2520dc94882bc7a2e5ce554bc4cc89ce2c7e
+      sha256: fdf56dee4a49f7c3e0038b48b7dc2520dc94882bc7a2e5ce554bc4cc89ce2c7e
+      bin:
+        - aftman
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aftman/blobs/sha256:e2b825b23c892fdf2a0067b011ccbfd4157006d27a5d5c115499331c0345c7a9
+      sha256: e2b825b23c892fdf2a0067b011ccbfd4157006d27a5d5c115499331c0345c7a9
+      bin:
+        - aftman
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aftman/blobs/sha256:1e8943e04ce29ca295996d3acacb141d87504a59374aa2da2e7e15a453bbe5a9
+      sha256: 1e8943e04ce29ca295996d3acacb141d87504a59374aa2da2e7e15a453bbe5a9
+      bin:
+        - aftman
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aftman/blobs/sha256:d9457a79cb80b1423563f8d54ffcf84e2b765189b526f029437841c2f2abe335
+      sha256: d9457a79cb80b1423563f8d54ffcf84e2b765189b526f029437841c2f2abe335
+      bin:
+        - aftman
+      strip: 1
+test: aftman --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

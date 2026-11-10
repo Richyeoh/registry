@@ -1,0 +1,24 @@
+api: v1
+name: terraformer
+kind: app
+display: terraformer
+description: Tool to generate terraform files from existing infrastructure (reverse Terraform), i.e. infrastructure to code.
+homepage: https://github.com/GoogleCloudPlatform/terraformer
+license: Apache-2.0
+version: 0.8.24
+channels:
+    stable: 0.8.24
+provides:
+    - terraformer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GoogleCloudPlatform/terraformer/releases/download/0.8.24/terraformer-all-windows-amd64#/terraformer.exe
+      sha256: f69c09f7045a6010b892bf2f32229f3b5ae3f20f54ff975f2cbdedcee5cb0241
+      bin:
+        - terraformer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall terraformer
+test: terraformer --version

@@ -1,0 +1,21 @@
+api: v1
+name: commandbox
+kind: app
+display: commandbox
+description: A standalone, native tool for Windows, Mac, and Linux that will provide you with a Command Line Interface (CLI) for developer productivity, tool interaction, package management, embedded CFML server, application scaffolding, and some sweet ASCII art
+homepage: https://www.ortussolutions.com/products/commandbox
+license: LGPL-3.0-or-later
+version: 6.3.5
+channels:
+    stable: 6.3.5
+provides:
+    - commandbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.ortussolutions.com/ortussolutions/commandbox/6.3.5/commandbox-jre-win64-6.3.5.zip
+      sha256: 98679ecd9f0ecc7b101bcc372079e7323d7919f3d0f18bfd73a9bf6c85b23cde
+      bin:
+        - box.exe
+      strip: 1
+test: box --version

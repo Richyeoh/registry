@@ -1,0 +1,21 @@
+api: v1
+name: otadump
+kind: app
+display: otadump
+description: Extract partitions from Android OTA files.
+homepage: https://github.com/crazystylus/otadump
+license: MIT
+version: 0.1.2
+channels:
+    stable: 0.1.2
+provides:
+    - otadump
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/crazystylus/otadump/releases/download/0.1.2/otadump-0.1.2-x86_64-pc-windows-msvc.zip
+      sha256: 2aad2d2f657cde497fb550b0bcee77dd1df5a334a5170f66c930ffcfa0fd9156
+      bin:
+        - otadump.exe
+      strip: 1
+test: otadump --version

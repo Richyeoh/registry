@@ -1,0 +1,21 @@
+api: v1
+name: bugn
+kind: app
+display: bugn
+description: Tiling window manager add-on for the Explorer shell of Microsoft Windows
+homepage: https://github.com/fuhsjr00/bug.n
+license: GPL-3.0-or-later
+version: 9.0.2
+channels:
+    stable: 9.0.2
+provides:
+    - bugn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fuhsjr00/bug.n/archive/v9.0.2.zip
+      sha256: 27cc1ce069f7947b543306d4b1ec28f31fdf71fd0941650a9a39bb6a24880a5b
+      bin:
+        - bugn.exe
+      strip: 1
+test: bugn --version

@@ -1,0 +1,21 @@
+api: v1
+name: lazy-posh-git
+kind: app
+display: lazy-posh-git
+description: PowerShell proxy command around Set-Location to defer import of posh-git module until one changes working directory to the root of a git directory.
+homepage: https://github.com/bergmeister/lazy-posh-git
+license: MIT
+version: 0.2.0
+channels:
+    stable: 0.2.0
+provides:
+    - lazy-posh-git
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bergmeister/lazy-posh-git/releases/download/0.2.0/lazy-posh-git.zip
+      sha256: 33b78789a46e694ff701d5f897a78a98c8c93447a208ffea92e7a9e7c58c2d10
+      bin:
+        - lazy-posh-git.exe
+      strip: 1
+test: lazy-posh-git --version

@@ -1,0 +1,22 @@
+api: v1
+name: worktrunk
+kind: app
+display: worktrunk
+description: A CLI for Git worktree management, designed for parallel AI agent workflows.
+homepage: https://worktrunk.dev
+license: MIT|Apache-2.0
+version: 0.81.0
+channels:
+    stable: 0.81.0
+provides:
+    - worktrunk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/max-sixty/worktrunk/releases/download/v0.81.0/worktrunk-x86_64-pc-windows-msvc.zip
+      sha256: 389b595cb67482085419968939e329d61901cca9e959e4b6c288f01387b768b8
+      bin:
+        - git-wt.exe
+        - wt.exe
+      strip: 1
+test: git-wt --version

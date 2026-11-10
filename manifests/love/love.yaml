@@ -1,0 +1,22 @@
+api: v1
+name: love
+kind: app
+display: love
+description: A framework you can use to make 2D games in Lua.
+homepage: https://love2d.org
+license: Zlib
+version: "11.5"
+channels:
+    stable: "11.5"
+provides:
+    - love
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/love2d/love/releases/download/11.5/love-11.5-win64.zip
+      sha256: ba6e56be2685e53c817749c4a5007f51137136fe5a3ab64920508babc2e74369
+      bin:
+        - love.exe
+        - lovec.exe
+      strip: 1
+test: love --version

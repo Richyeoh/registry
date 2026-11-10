@@ -1,0 +1,21 @@
+api: v1
+name: claws-mail
+kind: app
+display: claws-mail
+description: The user-friendly, lightweight, and fast email client
+homepage: https://www.claws-mail.org
+license: GPL-3.0-or-later
+version: 4.4.0-1
+channels:
+    stable: 4.4.0-1
+provides:
+    - claws-mail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.claws-mail.org/win32/claws-mail-4.4.0-1-64bit.exe#/dl.7z
+      sha256: 0fad3f06f7a758535f08a13d992450555d57a10726fc11c52407c3fcdda57ef8
+      bin:
+        - claws-mail.exe
+      strip: 1
+test: claws-mail --version

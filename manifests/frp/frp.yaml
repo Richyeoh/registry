@@ -1,0 +1,22 @@
+api: v1
+name: frp
+kind: app
+display: frp
+description: A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
+homepage: https://github.com/fatedier/frp
+license: Apache-2.0
+version: 0.72.0
+channels:
+    stable: 0.72.0
+provides:
+    - frp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fatedier/frp/releases/download/v0.72.0/frp_0.72.0_windows_amd64.zip
+      sha256: 5197c1b69564089cdc229fc1260a0e25db1e722b1b7db45fe1542c3c43edf9ae
+      bin:
+        - frpc.exe
+        - frps.exe
+      strip: 1
+test: frpc --version

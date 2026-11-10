@@ -1,0 +1,46 @@
+api: v1
+name: abduco
+kind: app
+display: abduco
+description: 'Provides session management: i.e. separate programs from terminals'
+homepage: https://www.brain-dump.org/projects/abduco/
+license: ISC
+keywords:
+    - brew
+    - homebrew
+version: "0.6"
+channels:
+    stable: "0.6"
+provides:
+    - abduco
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abduco/blobs/sha256:e4fe0b940ecf7445830a525f829bc2f2b3bf358947117ca93642336a21ff2090
+      sha256: e4fe0b940ecf7445830a525f829bc2f2b3bf358947117ca93642336a21ff2090
+      bin:
+        - abduco
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abduco/blobs/sha256:f3e01e687a45b2458311702b5b48b8d3bb8d681388cacc85e7fb26d0be6b7720
+      sha256: f3e01e687a45b2458311702b5b48b8d3bb8d681388cacc85e7fb26d0be6b7720
+      bin:
+        - abduco
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abduco/blobs/sha256:2129c6039968a818f71997e800575b581128b56f8783eeb32c990f8a5e8b81ad
+      sha256: 2129c6039968a818f71997e800575b581128b56f8783eeb32c990f8a5e8b81ad
+      bin:
+        - abduco
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abduco/blobs/sha256:4e84ed7e82b55ae643f46c6b81488e55535269cb37a95e7eec87a06b60f66427
+      sha256: 4e84ed7e82b55ae643f46c6b81488e55535269cb37a95e7eec87a06b60f66427
+      bin:
+        - abduco
+      strip: 1
+test: abduco --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

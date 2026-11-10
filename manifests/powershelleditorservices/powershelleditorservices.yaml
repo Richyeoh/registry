@@ -1,0 +1,21 @@
+api: v1
+name: powershelleditorservices
+kind: app
+display: powershelleditorservices
+description: A common platform for PowerShell development support in any editor or application
+homepage: https://github.com/PowerShell/PowerShellEditorServices
+license: MIT
+version: 4.7.0
+channels:
+    stable: 4.7.0
+provides:
+    - powershelleditorservices
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PowerShell/PowerShellEditorServices/releases/download/v4.7.0/PowerShellEditorServices.zip
+      sha256: 5084f0326cc88539e9d880b08f6c52ce5be4672bb8ecee8921e35f8895a6b9d7
+      bin:
+        - Start-EditorServices.ps1.exe
+      strip: 1
+test: Start-EditorServices.ps1 --version

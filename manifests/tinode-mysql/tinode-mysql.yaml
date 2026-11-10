@@ -1,0 +1,21 @@
+api: v1
+name: tinode-mysql
+kind: app
+display: tinode-mysql
+description: Instant messaging server
+homepage: https://github.com/tinode/chat
+license: GPL-3.0-only
+version: 0.25.3
+channels:
+    stable: 0.25.3
+provides:
+    - tinode-mysql
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tinode/chat/releases/download/v0.25.3/tinode-mysql.windows-amd64.zip
+      sha256: 6865727e9bd8e4dd26077c75604ee8ae8f221634338c8cee6b9d07280ae14c26
+      bin:
+        - tinode.exe
+      strip: 1
+test: tinode --version

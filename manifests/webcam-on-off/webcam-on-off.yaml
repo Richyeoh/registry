@@ -1,0 +1,21 @@
+api: v1
+name: webcam-on-off
+kind: app
+display: webcam-on-off
+description: A simple app that allows you to turn your webcam on or off.
+homepage: https://www.sordum.org/webcam-on-off
+license: Unknown
+version: "1.4"
+channels:
+    stable: "1.4"
+provides:
+    - webcam-on-off
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/webcam-on-off/WebcamOnOff.zip
+      sha256: 16d5a6442afa885dc59a23ed973b323c63f04ba0660c5ac88b68c2c4736a2392
+      bin:
+        - WebCam.exe
+      strip: 1
+test: WebCam --version

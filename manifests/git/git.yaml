@@ -5,6 +5,10 @@ display: git
 description: A free and open source distributed version control system.
 homepage: https://gitforwindows.org
 license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
 version: 2.56.0.4
 channels:
     stable: 2.56.0.4
@@ -28,4 +32,10 @@ platforms:
         - usr\bin\gpg-connect-agent.exe
         - usr\bin\pinentry.exe
       strip: 1
-test: bin\sh.exe --version
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/git/download/
+      sha256: 084a0a28c237b96e4d36cb87f16643a705b0bbc6073fcfa547b531ef33846011
+      bin:
+        - git
+test: bin\sh --version

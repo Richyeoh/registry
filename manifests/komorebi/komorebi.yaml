@@ -1,0 +1,26 @@
+api: v1
+name: komorebi
+kind: app
+display: komorebi
+description: A tiling window manager for Windows
+homepage: https://github.com/LGUG2Z/komorebi
+license: Unknown
+version: 0.1.41
+channels:
+    stable: 0.1.41
+provides:
+    - komorebi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LGUG2Z/komorebi/releases/download/v0.1.41/komorebi-0.1.41-x86_64-pc-windows-msvc.zip
+      sha256: 838b1cbe551dbfada306a91e23fd536f8cea059ff619ad98495379e5228055b9
+      bin:
+        - komorebi.exe
+        - komorebic.exe
+        - komorebic-no-console.exe
+        - komorebi-gui.exe
+        - komorebi-bar.exe
+        - komorebi-shortcuts.exe
+      strip: 1
+test: komorebi --version

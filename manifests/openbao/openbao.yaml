@@ -1,0 +1,21 @@
+api: v1
+name: openbao
+kind: app
+display: openbao
+description: An open source, community-driven secrets manager and fork of Vault managed by the Linux Foundation's OpenSSF.
+homepage: https://openbao.org
+license: MPL-2.0
+version: 2.7.2
+channels:
+    stable: 2.7.2
+provides:
+    - openbao
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/openbao/openbao/releases/download/v2.7.2/openbao_2.7.2_windows_amd64.zip
+      sha256: b058d30eac461e78e56305d3aa7371c061405a060f364aa20999dc3a309264f4
+      bin:
+        - bao.exe
+      strip: 1
+test: bao --version

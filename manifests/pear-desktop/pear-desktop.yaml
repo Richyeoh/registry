@@ -1,0 +1,21 @@
+api: v1
+name: pear-desktop
+kind: app
+display: pear-desktop
+description: Unofficial YouTube Music Desktop App bundled with custom plugins.
+homepage: https://github.com/pear-devs/pear-desktop
+license: MIT
+version: 3.12.0
+channels:
+    stable: 3.12.0
+provides:
+    - pear-desktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pear-devs/pear-desktop/releases/download/v3.12.0/YouTube-Music-3.12.0.exe#/dl.7z
+      sha256: 877841bdda4457d4f9d5c3d051c724c2aa363e15229bdf8b2dc955971b8cd24e
+      bin:
+        - pear-desktop.exe
+      strip: 1
+test: pear-desktop --version

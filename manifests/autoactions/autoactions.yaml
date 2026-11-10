@@ -1,0 +1,21 @@
+api: v1
+name: autoactions
+kind: app
+display: autoactions
+description: Create profiles for your displays and apps to automatically switch the resolution, refresh rate and HDR state according to the app you're using
+homepage: https://github.com/Codectory/AutoActions
+license: GPL-3.0-only
+version: 1.9.27
+channels:
+    stable: 1.9.27
+provides:
+    - autoactions
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Codectory/AutoActions/releases/download/1.9.27/Release_AutoActions_1.9.27_x64.zip
+      sha256: 98aebefea038fc2aa4e4f56bb1de1af56e89a045f8b656a934684838e8f371ae
+      bin:
+        - autoactions.exe
+      strip: 1
+test: autoactions --version

@@ -1,0 +1,21 @@
+api: v1
+name: lightbulb
+kind: app
+display: lightbulb
+description: Computer screen gamma adjuster based on the current time
+homepage: https://github.com/Tyrrrz/LightBulb
+license: MIT
+version: 2.7.3
+channels:
+    stable: 2.7.3
+provides:
+    - lightbulb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Tyrrrz/LightBulb/releases/download/2.7.3/LightBulb.win-x64.zip
+      sha256: 18714f54376dc8d608c11709d8e62f858a3662888ef1c2ec98a894223dc6eac9
+      bin:
+        - LightBulb.exe
+      strip: 1
+test: LightBulb --version

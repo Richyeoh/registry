@@ -1,0 +1,21 @@
+api: v1
+name: papercut
+kind: app
+display: papercut
+description: The Simple SMTP Desktop Email Receiver
+homepage: https://github.com/ChangemakerStudios/Papercut-SMTP
+license: Apache-2.0
+version: 8.0.2
+channels:
+    stable: 8.0.2
+provides:
+    - papercut
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ChangemakerStudios/Papercut-SMTP/releases/download/8.0.2/PapercutSMTP-win-x64-stable-Portable.zip
+      sha256: 7cf62d16a73418c47c2cf2c3b645ec16191e4a6e12be3b42073f0755fb970b4b
+      bin:
+        - papercut.exe
+      strip: 1
+test: papercut --version

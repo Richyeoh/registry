@@ -1,0 +1,21 @@
+api: v1
+name: usvg
+kind: app
+display: usvg
+description: An SVG parser that tries to solve most of SVG complexity.
+homepage: https://github.com/linebender/resvg/tree/main/crates/usvg
+license: Apache-2.0|MIT
+version: 0.49.0
+channels:
+    stable: 0.49.0
+provides:
+    - usvg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/linebender/resvg/releases/download/v0.49.0/usvg-win-x86_64.zip
+      sha256: f2db05f416e42844e67086808f515e4cb20566cc5ab813ab1dddf9eef8578956
+      bin:
+        - usvg.exe
+      strip: 1
+test: usvg --version

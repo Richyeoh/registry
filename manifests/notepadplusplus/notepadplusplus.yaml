@@ -1,0 +1,21 @@
+api: v1
+name: notepadplusplus
+kind: app
+display: notepadplusplus
+description: A free source code editor and Notepad replacement that supports several languages.
+homepage: https://notepad-plus-plus.org
+license: GPL-3.0-or-later
+version: 8.9.9
+channels:
+    stable: 8.9.9
+provides:
+    - notepadplusplus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9/npp.8.9.9.portable.x64.zip
+      sha256: 96a8216930f5316ed5961663b2cc92a62ec7d303b6c3077b92a7cfc38a8761b7
+      bin:
+        - notepad++.exe
+      strip: 1
+test: notepad++ --version

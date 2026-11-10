@@ -1,0 +1,39 @@
+api: v1
+name: adrs
+kind: app
+display: adrs
+description: Architectural Decision Record tool in Rust
+homepage: https://joshrotenberg.com/adrs/
+license: MIT OR Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 0.13.0
+channels:
+    stable: 0.13.0
+provides:
+    - adrs
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adrs/blobs/sha256:70961f29588ff096b94de221c6f75c5e226e5bab5c0c53c7792022522edb778e
+      sha256: 70961f29588ff096b94de221c6f75c5e226e5bab5c0c53c7792022522edb778e
+      bin:
+        - adrs
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adrs/blobs/sha256:a051d5b9003ae0a33dfd9166584f58f8d9b6b1d0a50ca65c306108283d3d0c7c
+      sha256: a051d5b9003ae0a33dfd9166584f58f8d9b6b1d0a50ca65c306108283d3d0c7c
+      bin:
+        - adrs
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adrs/blobs/sha256:bde4c1165336591332d41050e8e204c2c8637bd0d47107615721d177167a5157
+      sha256: bde4c1165336591332d41050e8e204c2c8637bd0d47107615721d177167a5157
+      bin:
+        - adrs
+      strip: 1
+test: adrs --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

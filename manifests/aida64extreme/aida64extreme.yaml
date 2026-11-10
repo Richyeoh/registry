@@ -1,0 +1,21 @@
+api: v1
+name: aida64extreme
+kind: app
+display: aida64extreme
+description: System information, diagnostics, and auditing application
+homepage: https://www.aida64.com
+license: Unknown
+version: 8.40.5000
+channels:
+    stable: 8.40.5000
+provides:
+    - aida64extreme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.aida64.com/aida64extreme840.zip
+      sha256: e895d0a4a6a74f8feff6ea231aa98249400c63fedd64124c1aec97d5909076f2
+      bin:
+        - aida64extreme.exe
+      strip: 1
+test: aida64extreme --version

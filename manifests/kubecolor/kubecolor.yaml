@@ -1,0 +1,21 @@
+api: v1
+name: kubecolor
+kind: app
+display: kubecolor
+description: Wraps kubectl with colorful output
+homepage: https://kubecolor.github.io
+license: MIT
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - kubecolor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubecolor/kubecolor/releases/download/v0.8.0/kubecolor_0.8.0_windows_amd64.zip
+      sha256: 64e1b12fc56662bf4bb67a760a396b0d7306c30774a52714e26c9ac075cef20b
+      bin:
+        - kubecolor.exe
+      strip: 1
+test: kubecolor --version

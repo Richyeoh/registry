@@ -1,0 +1,24 @@
+api: v1
+name: rtmpdump
+kind: app
+display: rtmpdump
+description: A toolkit for RTMP streams with support for all forms of RTMP (rtmp, rtmpt, rtmpe, rtmpte, and rtmps).
+homepage: https://rtmpdump.mplayerhq.hu/
+license: GPL-2.0-only
+version: "2.3"
+channels:
+    stable: "2.3"
+provides:
+    - rtmpdump
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rtmpdump.mplayerhq.hu/download/rtmpdump-2.3-windows.zip
+      sha256: 6948aa372f04952d5675917c6ca2c7c0bf6b109de21a4323adc93247fff0189f
+      bin:
+        - rtmpdump.exe
+        - rtmpgw.exe
+        - rtmpsrv.exe
+        - rtmpsuck.exe
+      strip: 1
+test: rtmpdump --version

@@ -1,0 +1,21 @@
+api: v1
+name: cvc5
+kind: app
+display: cvc5
+description: An open-source automatic theorem prover for Satisfiability Modulo Theories (SMT) problems.
+homepage: https://cvc5.github.io
+license: BSD-3-Clause
+version: 1.4.2
+channels:
+    stable: 1.4.2
+provides:
+    - cvc5
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cvc5/cvc5/releases/download/cvc5-1.4.2/cvc5-Win64-x86_64-static.zip
+      sha256: 9055de9b724724890ba5a19cfdc98f68a8c0653284afa843096dec432a0f88c3
+      bin:
+        - bin\cvc5.exe
+      strip: 1
+test: bin\cvc5 --version

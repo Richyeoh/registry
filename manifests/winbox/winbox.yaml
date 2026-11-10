@@ -1,0 +1,21 @@
+api: v1
+name: winbox
+kind: app
+display: winbox
+description: A small utility that allows administration of MikroTik RouterOS using a fast and simple GUI.
+homepage: https://mikrotik.com/winbox
+license: Unknown
+version: "4.5"
+channels:
+    stable: "4.5"
+provides:
+    - winbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.mikrotik.com/routeros/winbox/4.5/WinBox_Windows.zip
+      sha256: c98c23f4d7e9e3c68264a79967e59ede8defc86e4c7af3c7eae05d071ea867fd
+      bin:
+        - WinBox.exe
+      strip: 1
+test: WinBox --version

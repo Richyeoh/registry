@@ -1,0 +1,21 @@
+api: v1
+name: userbenchmark
+kind: app
+display: userbenchmark
+description: Speed test PC in less than a minute.
+homepage: https://www.userbenchmark.com/
+license: Freeware
+version: 5.4.0.0
+channels:
+    stable: 5.4.0.0
+provides:
+    - userbenchmark
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.userbenchmark.com/resources/download/UserBenchmark.zip
+      sha256: 83c827c1caa52c4dda69f92b42f397315a2ebbd51ce7f1637a3d2b4f46735ad2
+      bin:
+        - userbenchmark.exe
+      strip: 1
+test: userbenchmark --version

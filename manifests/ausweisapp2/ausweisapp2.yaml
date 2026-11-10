@@ -1,0 +1,24 @@
+api: v1
+name: ausweisapp2
+kind: app
+display: ausweisapp2
+description: Authenticate to websites with german ID.
+homepage: https://www.ausweisapp.bund.de/
+license: EUPL-1.2
+version: 2.6.2
+channels:
+    stable: 2.6.2
+provides:
+    - ausweisapp2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Governikus/AusweisApp/releases/download/2.6.2/AusweisApp-2.6.2.msi
+      sha256: f106595577516164f6c6cc339839cb314cd53d93b36f78067ee3c135a78f4e53
+      bin:
+        - ausweisapp2.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ausweisapp2
+test: ausweisapp2 --version

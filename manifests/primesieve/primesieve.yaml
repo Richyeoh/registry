@@ -1,0 +1,21 @@
+api: v1
+name: primesieve
+kind: app
+display: primesieve
+description: A command-line program and C/C++ library for quickly generating prime numbers.
+homepage: https://github.com/kimwalisch/primesieve
+license: BSD-2-Clause
+version: "12.17"
+channels:
+    stable: "12.17"
+provides:
+    - primesieve
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kimwalisch/primesieve/releases/download/v12.17/primesieve-12.17-win-x64.zip
+      sha256: 197d5f2080b67ccd135871c15362b5b5f400257bfd0c1fb7c57ea33ba91fcd05
+      bin:
+        - primesieve.exe
+      strip: 1
+test: primesieve --version

@@ -1,0 +1,21 @@
+api: v1
+name: iii
+kind: app
+display: iii
+description: Effortlessly compose, extend, and observe every service in real-time.
+homepage: https://iii.dev
+license: Unknown
+version: 0.26.0
+channels:
+    stable: 0.26.0
+provides:
+    - iii
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/iii-hq/iii/releases/download/iii/v0.26.0/iii-x86_64-pc-windows-msvc.zip
+      sha256: 3df9e089826f26ddc157d2e504a8e3aa11b9bc5fe21b3faeece85599b21c7081
+      bin:
+        - iii.exe
+      strip: 1
+test: iii --version

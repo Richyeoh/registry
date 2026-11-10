@@ -1,0 +1,24 @@
+api: v1
+name: pdftk
+kind: app
+display: pdftk
+description: A command-line tool for working with PDFs.
+homepage: https://www.pdflabs.com/tools/pdftk-server/
+license: GPL-2.0-only
+version: "2.02"
+channels:
+    stable: "2.02"
+provides:
+    - pdftk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-win-setup.exe
+      sha256: cc8f6a43fc91026bb739ad0ad9a124c24750d6127662fb3638ec1d44403aabd2
+      bin:
+        - bin\pdftk.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pdftk
+test: bin\pdftk --version

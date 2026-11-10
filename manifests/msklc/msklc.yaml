@@ -1,0 +1,24 @@
+api: v1
+name: msklc
+kind: app
+display: msklc
+description: Create or modify keyboard layouts
+homepage: https://www.microsoft.com/en-us/download/details.aspx?id=102134
+license: Freeware
+version: "1.4"
+channels:
+    stable: "1.4"
+provides:
+    - msklc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/6/f/5/6f5ce43a-e892-4fd1-b9a6-1a0cbb64e6e2/MSKLC.exe
+      sha256: cd12a6b08066133dc4ad71bdcaccf1492e3d9a1de93cf84b7b2824309f0d7255
+      bin:
+        - bin\i386\kbdutool.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall msklc
+test: bin\i386\kbdutool --version

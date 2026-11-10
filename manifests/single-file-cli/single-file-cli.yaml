@@ -1,0 +1,24 @@
+api: v1
+name: single-file-cli
+kind: app
+display: single-file-cli
+description: A command-line tool that allows you to save a web page with all its resources in a single HTML file.
+homepage: https://github.com/gildas-lormeau/single-file-cli
+license: AGPL-3.0-or-later
+version: 2.25.0
+channels:
+    stable: 2.25.0
+provides:
+    - single-file-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gildas-lormeau/single-file-cli/releases/download/v2.25.0/single-file.exe
+      sha256: 0011f948c69e2aa5d53ca37feb1d3a2bf536c7723af5e48115ae22b8506e2ab9
+      bin:
+        - single-file.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall single-file-cli
+test: single-file --version

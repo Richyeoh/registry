@@ -1,0 +1,21 @@
+api: v1
+name: butterflow
+kind: app
+display: butterflow
+description: Video manipulation tool
+homepage: https://github.com/dthpham/sminterpolate
+license: MIT
+version: 0.2.4a4
+channels:
+    stable: 0.2.4a4
+provides:
+    - butterflow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dthpham/sminterpolate/releases/download/0.2.4.alpha4/butterflow-0.2.4a4-win64.zip
+      sha256: 856ad05bafaeb9d084d6b1cbf0bdec17defeef438e610f6a3a772087acea301b
+      bin:
+        - butterflow.exe
+      strip: 1
+test: butterflow --version

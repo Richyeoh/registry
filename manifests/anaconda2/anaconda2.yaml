@@ -1,0 +1,26 @@
+api: v1
+name: anaconda2
+kind: app
+display: anaconda2
+description: The most popular Python distribution for data science. (for Python 2 only)
+homepage: https://www.anaconda.com/
+license: BSD-3-Clause
+version: "2019.10"
+channels:
+    stable: "2019.10"
+provides:
+    - anaconda2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_64.exe#/setup.exe
+      sha256: 3e09c8e95e10f077be1e1d26f26df8d6a13356449e06d7d47ddc066fbaf435f5
+      bin:
+        - python.exe
+        - pythonw.exe
+        - python.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall anaconda2
+test: python --version

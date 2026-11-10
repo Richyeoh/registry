@@ -1,0 +1,21 @@
+api: v1
+name: kapow-punch-clock
+kind: app
+display: kapow-punch-clock
+description: A punch clock program to help in tracking spent time
+homepage: https://gottcode.org/kapow/
+license: GPL-3.0-or-later
+version: 1.7.1
+channels:
+    stable: 1.7.1
+provides:
+    - kapow-punch-clock
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gottcode.org/kapow/download/?os=windowsportable#/kapow-portable.zip
+      sha256: 7ede6e03ff4e5f72b48784fbdda76b20b685d7956a2c0f11de4ad20f9f176f02
+      bin:
+        - kapow-punch-clock.exe
+      strip: 1
+test: kapow-punch-clock --version

@@ -1,0 +1,21 @@
+api: v1
+name: f3d
+kind: app
+display: f3d
+description: A fast and minimalist 3D viewer
+homepage: https://f3d.app
+license: BSD-3-Clause
+version: 4.0.1
+channels:
+    stable: 4.0.1
+provides:
+    - f3d
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Windows-x86_64-raytracing.zip
+      sha256: 8df790b42a67904d887f728f974b10fb1a9329967f9467019000c06172e99daf
+      bin:
+        - bin\f3d.exe
+      strip: 1
+test: bin\f3d --version

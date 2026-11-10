@@ -1,0 +1,21 @@
+api: v1
+name: schismtracker
+kind: app
+display: schismtracker
+description: An oldschool sample-based music composition tool
+homepage: http://schismtracker.org
+license: GPL-2.0
+version: "20261102"
+channels:
+    stable: "20261102"
+provides:
+    - schismtracker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/schismtracker/schismtracker/releases/download/20261102/schismtracker-20261102-windows-x86_64.zip
+      sha256: 9ed481c2cc144b4cbf429d10bb9010d56910b31cb719b620c195382b99142661
+      bin:
+        - schismtracker.exe
+      strip: 1
+test: schismtracker --version

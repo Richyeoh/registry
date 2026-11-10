@@ -1,0 +1,22 @@
+api: v1
+name: freac-continuous
+kind: app
+display: freac-continuous
+description: Audio converter and CD ripper with support for various popular formats and encoders
+homepage: https://www.freac.org
+license: GPL-2.0-only
+version: "40213524201"
+channels:
+    stable: "40213524201"
+provides:
+    - freac-continuous
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows-x64.zip
+      sha256: 47f12b84eda5ee9959c26fff27854f950fa47230e617bb09d2d7d745604594f3
+      bin:
+        - freaccmd.exe
+        - freaccmd.exe
+      strip: 1
+test: freaccmd --version

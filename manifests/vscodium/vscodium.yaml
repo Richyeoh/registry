@@ -1,0 +1,21 @@
+api: v1
+name: vscodium
+kind: app
+display: vscodium
+description: A community-driven, freely-licensed binary distribution of Microsoft's editor VS Code.
+homepage: https://vscodium.com/
+license: MIT
+version: 1.143.17232
+channels:
+    stable: 1.143.17232
+provides:
+    - vscodium
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/VSCodium/vscodium/releases/download/1.143.17232/VSCodium-win32-x64-1.143.17232.zip
+      sha256: a1090868af8ac0ac04c22d79fdd02246fa115a78daf38a741d8db06df1753c1d
+      bin:
+        - codium.cmd.exe
+      strip: 1
+test: codium.cmd --version

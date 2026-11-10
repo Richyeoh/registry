@@ -1,0 +1,25 @@
+api: v1
+name: musescore
+kind: app
+display: musescore
+description: Music notation editor with easy to use WYSIWYG interface
+homepage: https://musescore.org/
+license: GPL-3.0-only
+version: 4.7.6.261022093
+channels:
+    stable: 4.7.6.261022093
+provides:
+    - musescore
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/musescore/MuseScore/releases/download/v4.7.6/MuseScore-Studio-4.7.6.261022093-x86_64.msi
+      sha256: 41c9ca34fbf0b720f229ed3b0c4ff923b5d41a8c24ad9262e1fce390cd5c34e5
+      bin:
+        - bin\MuseScore.exe
+        - bin\MuseScore.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall musescore
+test: bin\MuseScore --version

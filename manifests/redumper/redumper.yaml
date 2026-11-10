@@ -1,0 +1,21 @@
+api: v1
+name: redumper
+kind: app
+display: redumper
+description: Command-line tool for creating accurate optical disc dumps.
+homepage: https://github.com/superg/redumper
+license: GPL-3.0-or-later
+version: b772
+channels:
+    stable: b772
+provides:
+    - redumper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/superg/redumper/releases/download/b772/redumper-b772-windows-x64.zip
+      sha256: 10b835c14727ef867fb5398d34cda7161dcd7fae927df88b55dabb0ca28251aa
+      bin:
+        - redumper.exe
+      strip: 1
+test: redumper --version

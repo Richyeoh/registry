@@ -1,0 +1,21 @@
+api: v1
+name: vt-uploader
+kind: app
+display: vt-uploader
+description: A simple application written in C# that allows for file uploading to the VirusTotal website. (Requires a VirusTotal API Key)
+homepage: https://github.com/SamuelTulach/VirusTotalUploader
+license: GPL-3.0
+version: 0.2.1
+channels:
+    stable: 0.2.1
+provides:
+    - vt-uploader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SamuelTulach/VirusTotalUploader/releases/download/0.2.1/vt_portable.zip
+      sha256: 77574fd3a16c1ec695a8b85fef05f813edfa8277e5f39cee38b286fc8c261419
+      bin:
+        - uploader.exe
+      strip: 1
+test: uploader --version

@@ -1,0 +1,22 @@
+api: v1
+name: go-jsonnet
+kind: app
+display: go-jsonnet
+description: A data templating language for app and tool developers
+homepage: https://jsonnet.org/
+license: Apache-2.0
+version: 0.22.0
+channels:
+    stable: 0.22.0
+provides:
+    - go-jsonnet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/go-jsonnet/releases/download/v0.22.0/go-jsonnet_0.22.0_windows_amd64.tar.gz
+      sha256: 277b83ddbe836a627dcde0655720aa42b02277fdf3a9cdaebeef2a53e98599b1
+      bin:
+        - jsonnet.exe
+        - jsonnetfmt.exe
+      strip: 1
+test: jsonnet --version

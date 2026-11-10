@@ -1,0 +1,21 @@
+api: v1
+name: exeinfo-pe
+kind: app
+display: exeinfo-pe
+description: EXE analyzer inspired by PEiD. Designed to detect exe signatures, compressor format and dump internal information.
+homepage: http://www.exeinfo.xn.pl/
+license: Unknown
+version: 0.1.0.0
+channels:
+    stable: 0.1.0.0
+provides:
+    - exeinfo-pe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ExeinfoASL/ASL/master/exeinfope.zip
+      sha256: 26cbdf8ff9e172018668c71c6884294a1a9619c48a64148b11db385779b13194
+      bin:
+        - exeinfope.exe
+      strip: 1
+test: exeinfope --version

@@ -1,0 +1,21 @@
+api: v1
+name: gyroflow
+kind: app
+display: gyroflow
+description: Gyro-assisted video stabilization software.
+homepage: https://gyroflow.xyz/
+license: GPL-3.0-only
+version: 1.7.0
+channels:
+    stable: 1.7.0
+provides:
+    - gyroflow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gyroflow/gyroflow/releases/download/v1.7.0/Gyroflow-windows64.zip
+      sha256: 04c044c17bf3f5b20172fd12a709ac95ce99aa1e01c247687c12d158677df916
+      bin:
+        - gyroflow.exe
+      strip: 1
+test: gyroflow --version

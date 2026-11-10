@@ -1,0 +1,24 @@
+api: v1
+name: magpie-ai-cli
+kind: app
+display: magpie-ai-cli
+description: Unified model, provider, and gateway manager for AI coding agents (CLI version).
+homepage: https://usemagpie.ai
+license: MIT
+version: 0.1.3078
+channels:
+    stable: 0.1.3078
+provides:
+    - magpie-ai-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yetone/magpie-releases/releases/download/v0.1.3078/magpie-cli-windows-amd64.exe#/magpie-cli.exe
+      sha256: 73939df16235412e39b7c1e543b905f917050a984abfe9eef2fdbb487170765e
+      bin:
+        - magpie-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall magpie-ai-cli
+test: magpie-cli --version

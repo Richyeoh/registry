@@ -1,0 +1,22 @@
+api: v1
+name: gpac
+kind: app
+display: gpac
+description: Multimedia framework developed for research and academic purposes
+homepage: https://gpac.wp.imt.fr/
+license: LGPL-2.1-or-later
+version: 26.07-rev0
+channels:
+    stable: 26.07-rev0
+provides:
+    - gpac
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.tsi.telecom-paristech.fr/gpac/release/26.07/gpac-26.07-rev0-ga07cbfff-master-x64.exe#/dl.7z
+      sha256: f4503b9b11453fde2908a2ea2a096d673b3a3037b15508986d45ddbf24b50cfb
+      bin:
+        - gpac.exe
+        - mp4box.exe
+      strip: 1
+test: gpac --version

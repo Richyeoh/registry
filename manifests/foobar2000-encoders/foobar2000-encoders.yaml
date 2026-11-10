@@ -1,0 +1,21 @@
+api: v1
+name: foobar2000-encoders
+kind: app
+display: foobar2000-encoders
+description: Natively supported free encoder binary for use with the Converter foobar2000 component
+homepage: https://www.foobar2000.org/encoderpack
+license: Unknown
+version: "2026-03-13"
+channels:
+    stable: "2026-03-13"
+provides:
+    - foobar2000-encoders
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.foobar2000.org/files/Free_Encoder_Pack-2026-03-13.exe#/dl.7z
+      sha256: 2510d5706889c19ebf6e26d400b18c3b0962b1289b55bfbbea52fcefb6768627
+      bin:
+        - foobar2000-encoders.exe
+      strip: 1
+test: foobar2000-encoders --version

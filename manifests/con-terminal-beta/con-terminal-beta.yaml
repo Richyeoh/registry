@@ -1,0 +1,22 @@
+api: v1
+name: con-terminal-beta
+kind: app
+display: con-terminal-beta
+description: The Native Terminal Emulator with a builtin AI Harness (beta version).
+homepage: https://con.nowledge.co/
+license: MIT
+version: 0.1.0-beta.176
+channels:
+    stable: 0.1.0-beta.176
+provides:
+    - con-terminal-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nowledge-co/con-terminal/releases/download/v0.1.0-beta.176/con-0.1.0-beta.176-windows-x86_64.zip
+      sha256: 56a29b16f8e010b74620988d33409b2d78979816841ab44b73a4ce01eb221bdf
+      bin:
+        - con-app.exe
+        - con-cli.exe
+      strip: 1
+test: con-app --version

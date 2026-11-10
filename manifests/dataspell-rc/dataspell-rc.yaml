@@ -1,0 +1,21 @@
+api: v1
+name: dataspell-rc
+kind: app
+display: dataspell-rc
+description: Cross-Platform IDE for Data Scientists by JetBrains. (Release Candidate)
+homepage: https://www.jetbrains.com/dataspell/
+license: Unknown
+version: 2026.1-261.22158.223
+channels:
+    stable: 2026.1-261.22158.223
+provides:
+    - dataspell-rc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/python/dataspell-261.22158.223.exe#/dl.7z
+      sha256: 3f64cd0f7ba5e7a45cec442ac266b5fe6c2554614273dd7058490dab924a51ff
+      bin:
+        - dataspell-rc.exe
+      strip: 1
+test: dataspell-rc --version

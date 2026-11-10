@@ -1,0 +1,21 @@
+api: v1
+name: nyaterm
+kind: app
+display: nyaterm
+description: A modern remote terminal workspace
+homepage: https://nyaterm.app
+license: MIT
+version: 2.0.4
+channels:
+    stable: 2.0.4
+provides:
+    - nyaterm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nyakang/nyaterm/releases/download/v2.0.4/NyaTerm_2.0.4_windows_x64_portable.zip
+      sha256: 6a73ac2cf4a35eb01820835e1e74a9d22be855c5978e9e70bb3f3228619f1a09
+      bin:
+        - nyaterm.exe
+      strip: 1
+test: nyaterm --version

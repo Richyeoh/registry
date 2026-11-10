@@ -1,0 +1,21 @@
+api: v1
+name: speedcrunch
+kind: app
+display: speedcrunch
+description: A free, open-source high-precision scientific calculator. Built for STEM professionals, students and teachers.
+homepage: https://speedcrunch.org
+license: GPL-2.0-or-later
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - speedcrunch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/heldercorreia/speedcrunch/releases/download/v1.1.0/SpeedCrunch-1.1-windows-x64.zip
+      sha256: 39eb01472c41c10aa4fa660bff4e06a895a3b6b47a25d156bf0c642fecd4e0b9
+      bin:
+        - speedcrunch.exe
+      strip: 1
+test: speedcrunch --version

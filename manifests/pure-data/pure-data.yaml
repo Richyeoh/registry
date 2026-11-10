@@ -1,0 +1,23 @@
+api: v1
+name: pure-data
+kind: app
+display: pure-data
+description: The "vanilla" distribution of Pure Data (aka Pd Vanilla) is an open source visual programming language for multimedia.
+homepage: https://puredata.info/
+license: Unknown
+version: 0.57-0
+channels:
+    stable: 0.57-0
+provides:
+    - pure-data
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://msp.ucsd.edu/Software/pd-0.57-0.msw.zip
+      sha256: 1c128583e9bb78c42c88af72e02951d3808af6598a0a68abf0eda61e8d2bc4a3
+      bin:
+        - bin\pd.com.exe
+        - bin\pdsend.exe
+        - bin\pdreceive.exe
+      strip: 1
+test: bin\pd.com --version

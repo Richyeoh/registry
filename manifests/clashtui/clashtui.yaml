@@ -1,0 +1,21 @@
+api: v1
+name: clashtui
+kind: app
+display: clashtui
+description: A Mihomo (Clash.Meta)/sing-box TUI application
+homepage: https://github.com/JohanChane/clashtui
+license: MIT
+version: 0.3.1
+channels:
+    stable: 0.3.1
+provides:
+    - clashtui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JohanChane/clashtui/releases/download/v0.3.1/clashtui-windows-amd64-v0.3.1.zip
+      sha256: 1e107cfb8c3823e8931acfcc5171e1c288b2fd912b4e4915ab30f570bbd29ef2
+      bin:
+        - clashtui.exe
+      strip: 1
+test: clashtui --version

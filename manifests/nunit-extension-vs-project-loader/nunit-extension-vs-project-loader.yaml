@@ -1,0 +1,21 @@
+api: v1
+name: nunit-extension-vs-project-loader
+kind: app
+display: nunit-extension-vs-project-loader
+description: NUnit Visual Studio Project Loader Extension
+homepage: https://nunit.org/
+license: MIT
+version: 3.9.0
+channels:
+    stable: 3.9.0
+provides:
+    - nunit-extension-vs-project-loader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/nunit-extension-vs-project-loader.3.9.0.nupkg
+      sha256: be31d6a59125c592d1f990444fc43dc3bf9816b8832a86c419c748b259475480
+      bin:
+        - nunit-extension-vs-project-loader.exe
+      strip: 1
+test: nunit-extension-vs-project-loader --version

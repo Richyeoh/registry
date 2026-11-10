@@ -1,0 +1,21 @@
+api: v1
+name: vibrance-gui
+kind: app
+display: vibrance-gui
+description: Automating NVIDIAs Digitial Vibrance Control and AMDs Saturation for any game
+homepage: https://vibrancegui.com/
+license: Unknown
+version: "2.3"
+channels:
+    stable: "2.3"
+provides:
+    - vibrance-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://vibrancegui.com/files/vibranceGUI.zip
+      sha256: fd3d994a8df5d39bc52913d67378da483e638cf2655630de616a6ab35d08c21c
+      bin:
+        - vibranceGUI.exe
+      strip: 1
+test: vibranceGUI --version

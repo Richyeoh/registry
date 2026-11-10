@@ -1,0 +1,21 @@
+api: v1
+name: mutagen-compose
+kind: app
+display: mutagen-compose
+description: Compose with Mutagen integration
+homepage: https://mutagen.io/documentation/orchestration/compose
+license: MIT
+version: 0.18.1
+channels:
+    stable: 0.18.1
+provides:
+    - mutagen-compose
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mutagen-io/mutagen-compose/releases/download/v0.18.1/mutagen-compose_windows_amd64_v0.18.1.zip
+      sha256: ce266f8798b74d2040fd01a0513832f2501974f707aa99b61374d901cca2437d
+      bin:
+        - mutagen-compose.exe
+      strip: 1
+test: mutagen-compose --version

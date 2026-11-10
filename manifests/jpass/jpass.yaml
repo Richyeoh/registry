@@ -1,0 +1,21 @@
+api: v1
+name: jpass
+kind: app
+display: jpass
+description: Password manager application with strong encryption (AES-256)
+homepage: https://github.com/gaborbata/jpass
+license: Unknown
+version: 1.0.6
+channels:
+    stable: 1.0.6
+provides:
+    - jpass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gaborbata/jpass/releases/download/v1.0.6/jpass-1.0.6-RELEASE.zip
+      sha256: ba390f0cc63aa88c5b667c3fe6d2c69d15aad2afa5f196beca110a331309173b
+      bin:
+        - jpass.bat.exe
+      strip: 1
+test: jpass.bat --version

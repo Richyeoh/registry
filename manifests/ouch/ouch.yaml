@@ -1,0 +1,21 @@
+api: v1
+name: ouch
+kind: app
+display: ouch
+description: Painless compression and decompression for your terminal.
+homepage: https://github.com/ouch-org/ouch
+license: MIT
+version: 0.8.3
+channels:
+    stable: 0.8.3
+provides:
+    - ouch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ouch-org/ouch/releases/download/0.8.3/ouch-x86_64-pc-windows-msvc.zip
+      sha256: 6383a95987894412d5c9c4172e3d1d87c86aa322acb2b7ffcad42f492abc5dfe
+      bin:
+        - ouch.exe
+      strip: 1
+test: ouch --version

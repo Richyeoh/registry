@@ -1,0 +1,24 @@
+api: v1
+name: marksman
+kind: app
+display: marksman
+description: Write Markdown with code assist and intelligence in the comfort of your favourite editor.
+homepage: https://github.com/artempyanykh/marksman
+license: MIT
+version: "2026-02-08"
+channels:
+    stable: "2026-02-08"
+provides:
+    - marksman
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman.exe
+      sha256: a6d05beb08ebe41b0a9f09c98a438540421436fa5531424c22e0bb1d22529705
+      bin:
+        - marksman.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall marksman
+test: marksman --version

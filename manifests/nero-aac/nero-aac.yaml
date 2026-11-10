@@ -1,0 +1,23 @@
+api: v1
+name: nero-aac
+kind: app
+display: nero-aac
+description: Nero Digital AAC Encoder (Command Line Tools)
+homepage: https://www.videohelp.com/software/Nero-AAC-Codec
+license: Unknown
+version: 1.5.4.0
+channels:
+    stable: 1.5.4.0
+provides:
+    - nero-aac
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.videohelp.com/download/NeroAACCodec-1.5.4.zip
+      sha256: e0496ad856e2803001a59985368d21b22f4fbdd55589c7f313d6040cefff648b
+      bin:
+        - win32\neroAacEnc.exe
+        - win32\neroAacDec.exe
+        - win32\neroAacTag.exe
+      strip: 1
+test: win32\neroAacEnc --version

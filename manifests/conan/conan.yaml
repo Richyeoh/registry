@@ -1,0 +1,21 @@
+api: v1
+name: conan
+kind: app
+display: conan
+description: The open-source, decentralized C/C++ package manager
+homepage: https://conan.io
+license: MIT
+version: 2.34.0
+channels:
+    stable: 2.34.0
+provides:
+    - conan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/conan-io/conan/releases/download/2.34.0/conan-2.34.0-windows-x86_64.zip
+      sha256: 4e8c75dfb5f9913fe3eec6c0c982986f13041eae6e8c3b116268489b21951232
+      bin:
+        - conan.exe
+      strip: 1
+test: conan --version

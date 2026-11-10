@@ -1,0 +1,25 @@
+api: v1
+name: autopep8
+kind: app
+display: autopep8
+description: Automatically formats Python code to conform to the PEP 8 style guide
+homepage: https://github.com/hhatto/autopep8
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 2.3.2
+channels:
+    stable: 2.3.2
+provides:
+    - autopep8
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autopep8/blobs/sha256:6e70822190aa64df84e0f9da826f5953719d5aba27a906a6d8b07461fa179fd8
+      sha256: 6e70822190aa64df84e0f9da826f5953719d5aba27a906a6d8b07461fa179fd8
+      bin:
+        - autopep8
+      strip: 1
+test: autopep8 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

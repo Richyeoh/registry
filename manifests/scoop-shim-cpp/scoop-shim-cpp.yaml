@@ -1,0 +1,21 @@
+api: v1
+name: scoop-shim-cpp
+kind: app
+display: scoop-shim-cpp
+description: A Scoop helper program for shimming executables (C++)
+homepage: https://github.com/ScoopInstaller/Shim/
+license: Unlicense|MIT
+version: 0.5.1
+channels:
+    stable: 0.5.1
+provides:
+    - scoop-shim-cpp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ScoopInstaller/Shim/releases/download/cpp/v0.5.1/shim-x64.zip
+      sha256: b96c27013acc010eaa3b00c6ec4a6a28b33fe1f72f452605a42404ca11e168df
+      bin:
+        - scoop-shim-cpp.exe
+      strip: 1
+test: scoop-shim-cpp --version

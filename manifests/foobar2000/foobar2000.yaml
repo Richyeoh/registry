@@ -1,0 +1,21 @@
+api: v1
+name: foobar2000
+kind: app
+display: foobar2000
+description: An advanced freeware audio player for the Windows platform.
+homepage: https://www.foobar2000.org/
+license: Unknown
+version: 2.26.2
+channels:
+    stable: 2.26.2
+provides:
+    - foobar2000
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.foobar2000.org/files/foobar2000-x64_v2.26.2.exe#/dl.7z
+      sha256: ffa739f87d9c374cb030426a2ab4bfb37959d0dbb892fdc742654c14d127f795
+      bin:
+        - foobar2000.exe
+      strip: 1
+test: foobar2000 --version

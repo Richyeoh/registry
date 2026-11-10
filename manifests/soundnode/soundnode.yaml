@@ -1,0 +1,21 @@
+api: v1
+name: soundnode
+kind: app
+display: soundnode
+description: SoundCloud desktop application
+homepage: https://soundnode.github.io/soundnode-website/
+license: GPL-3.0-only
+version: 7.0.0
+channels:
+    stable: 7.0.0
+provides:
+    - soundnode
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Soundnode/soundnode-app/releases/download/7.0.0/Soundnode-win32-x64.zip
+      sha256: c8632328243c612ccb5d5751699db29cc054064c9d168ebea9a5e28aaa9f994d
+      bin:
+        - Soundnode.exe
+      strip: 1
+test: Soundnode --version

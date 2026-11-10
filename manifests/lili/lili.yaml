@@ -1,0 +1,21 @@
+api: v1
+name: lili
+kind: app
+display: lili
+description: LiLi creates portable, bootable and virtualized USB stick running Linux.
+homepage: https://www.linuxliveusb.com
+license: GPL-3.0-only
+version: 2.9.4
+channels:
+    stable: 2.9.4
+provides:
+    - lili
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://download.tuxfamily.org/lilicreator/stable-portable/LinuxLive%20USB%20Creator%202.9.4.zip#/dl.7z
+      sha256: d6259681b8006c6dd9635b8709f890c82ea13a14a33da6563b44edc37fcd93a5
+      bin:
+        - LiLi USB Creator.exe
+      strip: 1
+test: LiLi USB Creator.exe --version

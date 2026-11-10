@@ -1,0 +1,21 @@
+api: v1
+name: zine
+kind: app
+display: zine
+description: Fast, Scalable, Flexible Static Site Generator (SSG).
+homepage: https://zine-ssg.io
+license: MIT
+version: 0.14.1
+channels:
+    stable: 0.14.1
+provides:
+    - zine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kristoff-it/zine/releases/download/v0.14.1/x86_64-windows.zip
+      sha256: 9a386b0796daf7a07b8e46abb26760d60402c96fe4dd786ae99b5c34e3c68c1e
+      bin:
+        - zine.exe
+      strip: 1
+test: zine --version

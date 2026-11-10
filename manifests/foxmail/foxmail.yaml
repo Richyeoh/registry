@@ -1,0 +1,21 @@
+api: v1
+name: foxmail
+kind: app
+display: foxmail
+description: Foxmail like you've never seen it before.
+homepage: https://www.foxmail.com/
+license: Unknown
+version: 7.2.25.587
+channels:
+    stable: 7.2.25.587
+provides:
+    - foxmail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.foxmail.com/win/download#/dl.7z
+      sha256: 7f4344027903a5b9d149f6b5cc978c5df91457d16593de6c6f8975fe1209534f
+      bin:
+        - foxmail.exe
+      strip: 1
+test: foxmail --version

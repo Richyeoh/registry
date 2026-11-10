@@ -1,0 +1,21 @@
+api: v1
+name: openlens
+kind: app
+display: openlens
+description: build of the open source portion of Lens
+homepage: https://github.com/MuhammedKalkan/OpenLens
+license: Freeware
+version: 6.5.2
+channels:
+    stable: 6.5.2
+provides:
+    - openlens
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/MuhammedKalkan/OpenLens/releases/download/v6.5.2/OpenLens-6.5.2.exe#/dl.7z
+      sha256: e5942551ae410a504d2a70f9cdf696158c4adaa8f18b4fb1489c4548f6e9e9dd
+      bin:
+        - openlens.exe
+      strip: 1
+test: openlens --version

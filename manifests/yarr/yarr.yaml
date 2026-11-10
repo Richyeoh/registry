@@ -1,0 +1,21 @@
+api: v1
+name: yarr
+kind: app
+display: yarr
+description: Yet Another RSS Reader, a web-based feed aggregator
+homepage: https://github.com/nkanaev/yarr
+license: MIT
+version: "2.9"
+channels:
+    stable: "2.9"
+provides:
+    - yarr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nkanaev/yarr/releases/download/v2.9/yarr_windows_amd64_gui.zip
+      sha256: 095677575a57f85eaa1b1934e798fc8f6a908177d1661665c933f4ad48f29481
+      bin:
+        - yarr.exe
+      strip: 1
+test: yarr --version

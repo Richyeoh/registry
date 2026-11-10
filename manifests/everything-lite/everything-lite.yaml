@@ -1,0 +1,22 @@
+api: v1
+name: everything-lite
+kind: app
+display: everything-lite
+description: Locate files and folders by name instantly. (lite version, does not contain IPC and ETP/FTP/HTTP servers)
+homepage: https://www.voidtools.com
+license: MIT
+version: 1.4.1.1032
+channels:
+    stable: 1.4.1.1032
+provides:
+    - everything-lite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.voidtools.com/Everything-1.4.1.1032.x64.Lite.zip
+      sha256: bee05d4f64721fce51b026f52fb2420725c964c7b7be235c7042a58d4408ee24
+      bin:
+        - Everything.exe
+        - Everything.exe
+      strip: 1
+test: Everything --version

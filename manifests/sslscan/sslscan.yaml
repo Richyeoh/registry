@@ -1,0 +1,21 @@
+api: v1
+name: sslscan
+kind: app
+display: sslscan
+description: Tests SSL/TLS enabled services to discover supported cipher suites
+homepage: https://github.com/rbsec/sslscan
+license: GPL-3.0-only
+version: 2.2.3
+channels:
+    stable: 2.2.3
+provides:
+    - sslscan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rbsec/sslscan/releases/download/2.2.3/sslscan-2.2.3.zip
+      sha256: f7430e0d73146e6f5416a36044485ed559a348912e37cdc04bc3a91b3737ee9c
+      bin:
+        - sslscan.exe
+      strip: 1
+test: sslscan --version

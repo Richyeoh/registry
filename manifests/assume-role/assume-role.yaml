@@ -1,0 +1,24 @@
+api: v1
+name: assume-role
+kind: app
+display: assume-role
+description: Easily assume AWS roles in your terminal.
+homepage: https://github.com/remind101/assume-role
+license: BSD-2-Clause
+version: 0.3.2
+channels:
+    stable: 0.3.2
+provides:
+    - assume-role
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/remind101/assume-role/releases/download/0.3.2/assume-role-Windows.exe#/assume-role.exe
+      sha256: 540699e259fc02a27b6f2b944f7bb3d3e282f2ce9bd7f8d6d33277be1603e8d5
+      bin:
+        - assume-role.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall assume-role
+test: assume-role --version

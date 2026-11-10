@@ -1,0 +1,46 @@
+api: v1
+name: allureofthestars
+kind: app
+display: allureofthestars
+description: Near-future Sci-Fi roguelike and tactical squad combat game
+homepage: https://allureofthestars.com/
+license: AGPL-3.0-or-later AND GPL-2.0-or-later AND OFL-1.1 AND MIT AND Bitstream-Vera
+keywords:
+    - brew
+    - homebrew
+version: 0.11.0.0
+channels:
+    stable: 0.11.0.0
+provides:
+    - allureofthestars
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/allureofthestars/blobs/sha256:9cd14d1633fa5dca71ca93c3a31160e42f6ad83288eed2180884890e79a69c1c
+      sha256: 9cd14d1633fa5dca71ca93c3a31160e42f6ad83288eed2180884890e79a69c1c
+      bin:
+        - allureofthestars
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/allureofthestars/blobs/sha256:101722f507a8660102607a4ecdde9707ff1fe9334190b8e83d1d45909a2e943a
+      sha256: 101722f507a8660102607a4ecdde9707ff1fe9334190b8e83d1d45909a2e943a
+      bin:
+        - allureofthestars
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/allureofthestars/blobs/sha256:2b9650506f70289e5bc2f9b2b0167a2f7cfc66365134e0c6ed088bdb9ee75d7a
+      sha256: 2b9650506f70289e5bc2f9b2b0167a2f7cfc66365134e0c6ed088bdb9ee75d7a
+      bin:
+        - allureofthestars
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/allureofthestars/blobs/sha256:8695e01b93d5c370de9d547cfe4ec8f66f75fe984b650f413ee1f49ff64fc143
+      sha256: 8695e01b93d5c370de9d547cfe4ec8f66f75fe984b650f413ee1f49ff64fc143
+      bin:
+        - allureofthestars
+      strip: 1
+test: allureofthestars --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

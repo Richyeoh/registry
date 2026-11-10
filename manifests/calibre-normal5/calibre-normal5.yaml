@@ -1,0 +1,43 @@
+api: v1
+name: calibre-normal5
+kind: app
+display: calibre-normal5
+description: Powerful and easy to use e-book manager
+homepage: https://calibre-ebook.com
+license: GPL-3.0-only
+version: 5.44.0
+channels:
+    stable: 5.44.0
+provides:
+    - calibre-normal5
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.calibre-ebook.com/5.44.0/calibre-64bit-5.44.0.msi
+      sha256: 708ba7db84ae9db684b643f81a4fb6b1c65f5e6dac0adc4721e6ed7d20677798
+      bin:
+        - calibre.exe
+        - calibre-complete.exe
+        - calibre-customize.exe
+        - calibredb.exe
+        - calibre-debug.exe
+        - calibre-parallel.exe
+        - calibre-server.exe
+        - calibre-smtp.exe
+        - ebook-convert.exe
+        - ebook-device.exe
+        - ebook-edit.exe
+        - ebook-meta.exe
+        - ebook-polish.exe
+        - ebook-viewer.exe
+        - fetch-ebook-metadata.exe
+        - lrf2lrs.exe
+        - lrs2lrf.exe
+        - lrfviewer.exe
+        - markdown-calibre.exe
+        - web2disk.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall calibre-normal5
+test: calibre --version

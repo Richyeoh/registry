@@ -1,0 +1,32 @@
+api: v1
+name: amiberry
+kind: app
+display: Amiberry
+description: Amiga emulator
+homepage: https://amiberry.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 8.5.0
+channels:
+    stable: 8.5.0
+provides:
+    - amiberry
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/BlitterStudio/amiberry/releases/download/v8.5.0/Amiberry-8.5.0-macOS-universal.dmg
+      sha256: 002bb71af68a86a23c2779258248af71683c6a56caf74cf716e40081b5df9e7a
+      bin:
+        - amiberry
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/BlitterStudio/amiberry/releases/download/v8.5.0/Amiberry-8.5.0-macOS-universal.dmg
+      sha256: 002bb71af68a86a23c2779258248af71683c6a56caf74cf716e40081b5df9e7a
+      bin:
+        - amiberry
+      strip: 1
+test: amiberry --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

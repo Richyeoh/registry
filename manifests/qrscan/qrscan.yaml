@@ -1,0 +1,21 @@
+api: v1
+name: qrscan
+kind: app
+display: qrscan
+description: Scan a QR code in the terminal using the system camera or a given image
+homepage: https://github.com/sayanarijit/qrscan
+license: MIT
+version: 0.1.9
+channels:
+    stable: 0.1.9
+provides:
+    - qrscan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sayanarijit/qrscan/releases/download/v0.1.9/qrscan-0.1.9-x86_64-pc-windows-msvc.zip
+      sha256: 92c6f42490aa8b18d006dd40e76ce086bb335a8745ab13f824e0907cc01830f1
+      bin:
+        - qrscan.exe
+      strip: 1
+test: qrscan --version

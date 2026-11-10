@@ -1,0 +1,24 @@
+api: v1
+name: git-crypt
+kind: app
+display: git-crypt
+description: Store encrypted data in git repository
+homepage: https://www.agwa.name/projects/git-crypt/
+license: GPL-3.0-only
+version: 0.7.0
+channels:
+    stable: 0.7.0
+provides:
+    - git-crypt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AGWA/git-crypt/releases/download/0.7.0/git-crypt-0.7.0-x86_64.exe#/git-crypt.exe
+      sha256: 8c54a3b583cd4fc1483c952480116a9c86f771b02d4403fc6d3627b26cf146e2
+      bin:
+        - git-crypt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall git-crypt
+test: git-crypt --version

@@ -1,0 +1,21 @@
+api: v1
+name: gnutls
+kind: app
+display: gnutls
+description: GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them.
+homepage: https://www.gnutls.org
+license: LGPL-2.1-or-later,GPL-3.0-or-later
+version: 3.8.13
+channels:
+    stable: 3.8.13
+provides:
+    - gnutls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.13-w64.zip
+      sha256: 68a42ce15737a3c640a719b0323e426dc36a51eed3906bf89dda7965390cd969
+      bin:
+        - gnutls.exe
+      strip: 1
+test: gnutls --version

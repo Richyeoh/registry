@@ -1,0 +1,24 @@
+api: v1
+name: nimbleset
+kind: app
+display: nimbleset
+description: Simple tool for quickly comparing lists.
+homepage: https://nimbletext.com/SET/About
+license: Unknown
+version: 2.2.0.41590
+channels:
+    stable: 2.2.0.41590
+provides:
+    - nimbleset
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://nimbletext.com/Download/NimbleSET.exe
+      sha256: 9a150c2d193ab6a7e83e44279ce6f005ebdc8efffeec0e25b39298f4a23439e5
+      bin:
+        - NimbleSET.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nimbleset
+test: NimbleSET --version

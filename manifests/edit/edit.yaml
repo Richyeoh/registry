@@ -1,0 +1,21 @@
+api: v1
+name: edit
+kind: app
+display: edit
+description: Microsoft Edit is an accessible editor that even users largely unfamiliar with terminals can easily use or simple needs.
+homepage: https://github.com/microsoft/edit/
+license: MIT
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - edit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/edit/releases/download/v2.0.0/edit-2.0.0-x86_64-windows.zip
+      sha256: 97b8f2c667faea8f211af5f9c879602949164911d74d16f540bbe31ad46c14cb
+      bin:
+        - edit.exe
+      strip: 1
+test: edit --version

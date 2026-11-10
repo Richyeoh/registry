@@ -1,0 +1,21 @@
+api: v1
+name: mp3rgain-gui
+kind: app
+display: mp3rgain-gui
+description: Lossless MP3 volume adjustment - a modern mp3gain replacement written in Rust
+homepage: https://mp3rgain.tyna.ninja
+license: MIT
+version: 3.16.1
+channels:
+    stable: 3.16.1
+provides:
+    - mp3rgain-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/M-Igashi/mp3rgain/releases/download/v3.16.1/mp3rgui-v3.16.1-windows-x86_64.zip
+      sha256: 7245d8636b9cf2963de9175e8ce6d1ac173b20162a421600889e537ad44fd477
+      bin:
+        - mp3rgain-gui.exe
+      strip: 1
+test: mp3rgain-gui --version

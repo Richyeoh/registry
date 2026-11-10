@@ -1,0 +1,24 @@
+api: v1
+name: dfu-util
+kind: app
+display: dfu-util
+description: DFU is intended to download and upload firmware to/from devices connected over USB
+homepage: https://dfu-util.sourceforge.net/
+license: GPL-2.0-only
+version: "0.11"
+channels:
+    stable: "0.11"
+provides:
+    - dfu-util
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dfu-util.sourceforge.net/releases/dfu-util-0.11-binaries.tar.xz
+      sha256: 6450de30a7dcd8d8c1273f43f0b153f054fd24d85f7f38296b1ad8edbd2ddb25
+      bin:
+        - bin\dfu-prefix.exe
+        - bin\dfu-suffix.exe
+        - bin\dfu-util.exe
+        - bin\lsusb.exe
+      strip: 1
+test: bin\dfu-prefix --version

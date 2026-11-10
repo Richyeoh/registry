@@ -1,0 +1,24 @@
+api: v1
+name: quickcpu
+kind: app
+display: quickcpu
+description: Fine-tune and monitor important CPU and System parameters such as CPU Temperature (Package and Core Temp), CPU Performance, Power, Voltage, Current, Core Parking, Frequency Scaling, System Memory, Turbo Boost, C-States, Speed Shift FIVR Control as well as making other adjustments.
+homepage: https://coderbag.com/product/quickcpu
+license: Public Domain
+version: 6.8.0.0
+channels:
+    stable: 6.8.0.0
+provides:
+    - quickcpu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://coderbag.com/assets/downloads/cpm/currentversion/QuickCpuSetup.msi
+      sha256: 9668d980f36087b56849d207a5abeb709686d9167f621ab2076f8bebe52aed6a
+      bin:
+        - quickcpu.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall quickcpu
+test: quickcpu --version

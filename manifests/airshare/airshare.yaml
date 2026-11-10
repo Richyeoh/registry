@@ -1,0 +1,39 @@
+api: v1
+name: airshare
+kind: app
+display: airshare
+description: Cross-platform content sharing in a local network
+homepage: https://airshare.readthedocs.io/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.1.6
+channels:
+    stable: 0.1.6
+provides:
+    - airshare
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/airshare/blobs/sha256:20de8b7ca9c85acae70de29d9b2b017e7d7b5d10533fc800de305a6007381885
+      sha256: 20de8b7ca9c85acae70de29d9b2b017e7d7b5d10533fc800de305a6007381885
+      bin:
+        - airshare
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/airshare/blobs/sha256:17a8a05ca6cc75e627954430b83762668fa7791ba75d7cf5595f4718b47b3cf2
+      sha256: 17a8a05ca6cc75e627954430b83762668fa7791ba75d7cf5595f4718b47b3cf2
+      bin:
+        - airshare
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/airshare/blobs/sha256:c385599762eea140b8c6cc3b51e03e2b530757de3933d3eb6727c9fd314e40af
+      sha256: c385599762eea140b8c6cc3b51e03e2b530757de3933d3eb6727c9fd314e40af
+      bin:
+        - airshare
+      strip: 1
+test: airshare --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

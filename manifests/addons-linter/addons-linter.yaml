@@ -1,0 +1,25 @@
+api: v1
+name: addons-linter
+kind: app
+display: addons-linter
+description: Firefox Add-ons linter, written in JavaScript
+homepage: https://github.com/mozilla/addons-linter
+license: MPL-2.0
+keywords:
+    - brew
+    - homebrew
+version: 10.15.0
+channels:
+    stable: 10.15.0
+provides:
+    - addons-linter
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/addons-linter/blobs/sha256:52b57a844e9f473526f76d5472573d515dd3f262b68a411564aa0f9812aa8a6a
+      sha256: 52b57a844e9f473526f76d5472573d515dd3f262b68a411564aa0f9812aa8a6a
+      bin:
+        - addons-linter
+      strip: 1
+test: addons-linter --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

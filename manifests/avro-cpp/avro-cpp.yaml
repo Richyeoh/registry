@@ -1,0 +1,46 @@
+api: v1
+name: avro-cpp
+kind: app
+display: avro-cpp
+description: Data serialization system
+homepage: https://avro.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.12.2
+channels:
+    stable: 1.12.2
+provides:
+    - avro-cpp
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/avro-cpp/blobs/sha256:a91303d45f45aa816eee305e8a93dc24098eb98e97cdc03ff6e148d6bf6d575c
+      sha256: a91303d45f45aa816eee305e8a93dc24098eb98e97cdc03ff6e148d6bf6d575c
+      bin:
+        - avro-cpp
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/avro-cpp/blobs/sha256:21142b405460be24f275d5e3f2eaebb501b5dcaf1b7d70dc8665e1d3e8fa5c3b
+      sha256: 21142b405460be24f275d5e3f2eaebb501b5dcaf1b7d70dc8665e1d3e8fa5c3b
+      bin:
+        - avro-cpp
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/avro-cpp/blobs/sha256:b7528636985c4d1c8ec42f4f7c75d8082dd173d5e89eb407674f5d2b9e1802ca
+      sha256: b7528636985c4d1c8ec42f4f7c75d8082dd173d5e89eb407674f5d2b9e1802ca
+      bin:
+        - avro-cpp
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/avro-cpp/blobs/sha256:9efb3fe4f8fd6ce010daf86042f45c191d8aa1040f4011df89fa9620fcb37d77
+      sha256: 9efb3fe4f8fd6ce010daf86042f45c191d8aa1040f4011df89fa9620fcb37d77
+      bin:
+        - avro-cpp
+      strip: 1
+test: avro-cpp --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

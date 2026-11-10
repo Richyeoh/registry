@@ -1,0 +1,24 @@
+api: v1
+name: azure-ps
+kind: app
+display: azure-ps
+description: PowerShell cmdlets for developers and administrators to develop, deploy and manage Microsoft Azure applications.
+homepage: https://aka.ms/azpsdocs
+license: Apache-2.0
+version: 16.5.0.41350
+channels:
+    stable: 16.5.0.41350
+provides:
+    - azure-ps
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/azure-powershell/releases/download/v16.5.0-November2026/Az-Cmdlets-16.5.0.41350-x64.msi
+      sha256: 51e3330780e64eb8725c00e47d7718d88e94f0771219cf411a7f3da9db1c1fc7
+      bin:
+        - azure-ps.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall azure-ps
+test: azure-ps --version

@@ -1,0 +1,21 @@
+api: v1
+name: oracle-instant-client
+kind: app
+display: oracle-instant-client
+description: Connect to a local or remote Oracle Database for development and production deployment.
+homepage: https://www.oracle.com/database/technologies/instant-client.html
+license: Unknown
+version: 23.26.4.0.0
+channels:
+    stable: 23.26.4.0.0
+provides:
+    - oracle-instant-client
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.oracle.com/otn_software/nt/instantclient/2326400/instantclient-basic-windows.x64-23.26.4.0.0.zip
+      sha256: 09e9b81cd492f5ce6f671317c23a0e1f5dee5e786258149d216321c3dad3023f
+      bin:
+        - oracle-instant-client.exe
+      strip: 1
+test: oracle-instant-client --version

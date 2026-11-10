@@ -1,0 +1,21 @@
+api: v1
+name: sonar
+kind: app
+display: sonar
+description: A CLI tool for inspecting and managing services listening on localhost ports.
+homepage: https://github.com/raskrebs/sonar
+license: MIT
+version: 0.10.1
+channels:
+    stable: 0.10.1
+provides:
+    - sonar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/raskrebs/sonar/releases/download/v0.10.1/sonar_windows_amd64.zip
+      sha256: 6a7fb703db967122f463281ae45368da2e71e1cfc5764b7764130c2ec9ec18db
+      bin:
+        - sonar.exe
+      strip: 1
+test: sonar --version

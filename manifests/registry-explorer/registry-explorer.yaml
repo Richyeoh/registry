@@ -1,0 +1,21 @@
+api: v1
+name: registry-explorer
+kind: app
+display: registry-explorer
+description: A registry viewer with advanced search capabilities, multi-hive support, and the ability to access locked registry files.
+homepage: https://ericzimmerman.github.io
+license: MIT
+version: 2026.10.2
+channels:
+    stable: 2026.10.2
+provides:
+    - registry-explorer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.ericzimmermanstools.com/net/RegistryExplorer.zip
+      sha256: 444fcb97bc12fcef499347c4ee9706b1de00da6d64be8cf1120671358d0a2523
+      bin:
+        - registry-explorer.exe
+      strip: 1
+test: registry-explorer --version

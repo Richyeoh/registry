@@ -1,0 +1,21 @@
+api: v1
+name: azure-kubelogin
+kind: app
+display: azure-kubelogin
+description: A client-go credential (exec) plugin implementing Azure authentication.
+homepage: https://azure.github.io/kubelogin/
+license: MIT
+version: 0.2.22
+channels:
+    stable: 0.2.22
+provides:
+    - azure-kubelogin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/kubelogin/releases/download/v0.2.22/kubelogin-win-amd64.zip
+      sha256: 62839abfdaddc35dc460bfe1d40f2c569c168b7aa090e2c831776e84f95402b9
+      bin:
+        - bin\windows_amd64\kubelogin.exe
+      strip: 1
+test: bin\windows_amd64\kubelogin --version

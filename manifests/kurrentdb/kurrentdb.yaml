@@ -1,0 +1,21 @@
+api: v1
+name: kurrentdb
+kind: app
+display: kurrentdb
+description: A database that's engineered for modern software applications and event-driven architectures (Formerly known as EventStoreDB).
+homepage: https://kurrentdb.kurrent.io/kurrentdb/
+license: Unknown
+version: 26.2.3
+channels:
+    stable: 26.2.3
+provides:
+    - kurrentdb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kurrent-io/KurrentDB/releases/download/v26.2.3/kurrentdb-26.2.3-windows-x64.tar.gz
+      sha256: 52ff9694fe2610c7c5937a81f95f10eeaecd40402bf7f3ca17031c00dc22590f
+      bin:
+        - KurrentDB.exe
+      strip: 1
+test: KurrentDB --version

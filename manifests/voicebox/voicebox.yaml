@@ -1,0 +1,24 @@
+api: v1
+name: voicebox
+kind: app
+display: voicebox
+description: A free and local alternative to ElevenLabs and WisprFlow, running entirely on your machine.
+homepage: https://voicebox.sh
+license: MIT
+version: 0.5.0
+channels:
+    stable: 0.5.0
+provides:
+    - voicebox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jamiepine/voicebox/releases/download/v0.5.0/Voicebox_0.5.0_x64_en-US.msi
+      sha256: 6242007dcee2c7127b687873c0d97d02958d6d5b3bb304dca70439ecf595cdd0
+      bin:
+        - voicebox.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall voicebox
+test: voicebox --version

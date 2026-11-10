@@ -1,0 +1,21 @@
+api: v1
+name: regula
+kind: app
+display: regula
+description: A tool to evaluate infrastructure as code files for potential AWS, Azure, Google Cloud, and Kubernetes security and compliance violations prior to deployment.
+homepage: https://github.com/fugue/regula
+license: Apache-2.0
+version: 3.2.1
+channels:
+    stable: 3.2.1
+provides:
+    - regula
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fugue/regula/releases/download/v3.2.1/regula_3.2.1_Windows_x86_64.zip
+      sha256: 2f828d996891ab6d106af72048b0625e853a8f374ba6cc6592c11a400fafc109
+      bin:
+        - regula.exe
+      strip: 1
+test: regula --version

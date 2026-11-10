@@ -1,0 +1,24 @@
+api: v1
+name: luacheck
+kind: app
+display: luacheck
+description: A tool for linting and static analysis of Lua code
+homepage: https://luacheck.readthedocs.io
+license: MIT
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - luacheck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lunarmodules/luacheck/releases/download/v1.2.0/luacheck.exe
+      sha256: 0f1c69c4d09f1ebb4d8df14c215e4553e2e639bd4cb7bf3c639b0daa6198317b
+      bin:
+        - luacheck.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall luacheck
+test: luacheck --version

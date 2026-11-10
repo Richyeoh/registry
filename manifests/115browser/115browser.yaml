@@ -1,0 +1,32 @@
+api: v1
+name: 115browser
+kind: app
+display: 115Browser
+description: Web browser
+homepage: https://pc.115.com/browser.html#mac
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 36.0.1
+channels:
+    stable: 36.0.1
+provides:
+    - 115browser
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://down.115.com/client/mac/115br_v36.0.1_arm64.dmg
+      sha256: 3f44fb753709f950e61196f7df2195bb19b2f13f1758a777accaabeb041bf94f
+      bin:
+        - 115browser
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://down.115.com/client/mac/115br_v36.0.1_arm64.dmg
+      sha256: 3f44fb753709f950e61196f7df2195bb19b2f13f1758a777accaabeb041bf94f
+      bin:
+        - 115browser
+      strip: 1
+test: 115browser --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

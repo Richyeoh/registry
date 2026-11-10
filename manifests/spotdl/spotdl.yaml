@@ -1,0 +1,24 @@
+api: v1
+name: spotdl
+kind: app
+display: spotdl
+description: Download your Spotify playlists and songs along with album art and metadata (from YouTube if a match is found).
+homepage: https://spotdl.readthedocs.io/en/latest/
+license: MIT
+version: 4.6.0
+channels:
+    stable: 4.6.0
+provides:
+    - spotdl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/spotDL/spotify-downloader/releases/download/v4.6.0/spotdl-4.6.0-win32.exe#/spotdl.exe
+      sha256: e674030c3337cd74120a3a086887ce1a5195765cfc17e1971a2807e0a398b505
+      bin:
+        - spotdl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall spotdl
+test: spotdl --version

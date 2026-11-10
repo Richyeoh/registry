@@ -1,0 +1,21 @@
+api: v1
+name: harmony
+kind: app
+display: harmony
+description: Music player with a sleek UI
+homepage: https://getharmony.xyz/
+license: Unknown
+version: 0.9.1
+channels:
+    stable: 0.9.1
+provides:
+    - harmony
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vincelwt/harmony/releases/download/v0.9.1/harmony-0.9.1-setup.exe#/dl.7z
+      sha256: 5583d9963e8425a9f47c7023465ad959610e2183a39ccc04a423a61f5b6bc7d6
+      bin:
+        - harmony.exe
+      strip: 1
+test: harmony --version

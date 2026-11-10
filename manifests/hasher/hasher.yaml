@@ -1,0 +1,21 @@
+api: v1
+name: hasher
+kind: app
+display: hasher
+description: A hashing utility for verifying integrity of files using a wide range of supported algorithms.
+homepage: https://www.den4b.com/products/hasher
+license: CC-BY-NC-ND-3.0
+version: "4.2"
+channels:
+    stable: "4.2"
+provides:
+    - hasher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.den4b.com/download/hasher/portable/4.2?token=scoop#/dl.zip
+      sha256: 05eb094105d670f8e3dba454277da2868985f89026009c64282ae77a00565f88
+      bin:
+        - Hasher.exe
+      strip: 1
+test: Hasher --version

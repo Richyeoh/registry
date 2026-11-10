@@ -1,0 +1,21 @@
+api: v1
+name: deepgit
+kind: app
+display: deepgit
+description: Git Archaeology Tool.
+homepage: https://www.syntevo.com/deepgit/
+license: Unknown
+version: 26.1.003
+channels:
+    stable: 26.1.003
+provides:
+    - deepgit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.syntevo.com/downloads/deepgit/deepgit-26_1_003-win-portable.7z
+      sha256: 1f443fbd12ba3e27b77502bc6274faa8e43cd874dd44141cc02fa3bbf7d2779e
+      bin:
+        - bin\deepgitc.exe
+      strip: 1
+test: bin\deepgitc --version

@@ -1,0 +1,21 @@
+api: v1
+name: recordly
+kind: app
+display: recordly
+description: Open-source screen recorder and editor for walkthroughs, demos, product videos, and more.
+homepage: https://recordly.dev
+license: AGPL-3.0-only
+version: 1.4.0
+channels:
+    stable: 1.4.0
+provides:
+    - recordly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/webadderallorg/Recordly/releases/download/v1.4.0/Recordly-windows-x64.exe#/dl.7z
+      sha256: 08f20bafb0d6cf82399b6e4d8d12f58cbf1821a1d93abdd1e944bb9727b66b20
+      bin:
+        - Recordly.exe
+      strip: 1
+test: Recordly --version

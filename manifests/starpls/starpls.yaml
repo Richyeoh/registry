@@ -1,0 +1,24 @@
+api: v1
+name: starpls
+kind: app
+display: starpls
+description: An LSP implementation for Starlark, the configuration language used by Bazel and Buck2.
+homepage: https://github.com/withered-magic/starpls
+license: Apache-2.0|MIT
+version: 0.1.22
+channels:
+    stable: 0.1.22
+provides:
+    - starpls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/withered-magic/starpls/releases/download/v0.1.22/starpls-windows-amd64.exe#/starpls.exe
+      sha256: 87626a4226ed2f3f0f9e573501731bbe225a53cf009df845ec547ee984a1857e
+      bin:
+        - starpls.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall starpls
+test: starpls --version

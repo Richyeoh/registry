@@ -1,0 +1,21 @@
+api: v1
+name: phraseexpress
+kind: app
+display: phraseexpress
+description: Autotext and Text Autocompletion in any application.
+homepage: https://www.phraseexpress.com
+license: Unknown
+version: 18.0.84
+channels:
+    stable: 18.0.84
+provides:
+    - phraseexpress
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.phraseexpress.com/PhraseExpress_USB.zip
+      sha256: 502b1318f7a2b67dc46f32ec6a9e63ec9628dd4e0e14de3c9aad19b2c40792ec
+      bin:
+        - PhraseExpress.exe
+      strip: 1
+test: PhraseExpress --version

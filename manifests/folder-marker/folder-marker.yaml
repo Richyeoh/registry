@@ -1,0 +1,24 @@
+api: v1
+name: folder-marker
+kind: app
+display: folder-marker
+description: A tool to label folders with color-coded / image-coded icon
+homepage: https://foldermarker.com/en/
+license: Freeware
+version: 4.9.1
+channels:
+    stable: 4.9.1
+provides:
+    - folder-marker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://foldermarker.com/FolderMarker_Free.exe
+      sha256: 0f7b09301c72aa9dacd233eb8321f9f4fc3c9fc27b9b40ec406a2c7b188caf87
+      bin:
+        - folder-marker.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall folder-marker
+test: folder-marker --version

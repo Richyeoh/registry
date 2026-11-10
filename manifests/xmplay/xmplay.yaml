@@ -1,0 +1,21 @@
+api: v1
+name: xmplay
+kind: app
+display: xmplay
+description: Win32 audio player with support for Winamp plugins
+homepage: https://www.un4seen.com/xmplay.html
+license: Freeware
+version: "4.1"
+channels:
+    stable: "4.1"
+provides:
+    - xmplay
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.un4seen.com/files/xmplay41.zip
+      sha256: f364d9490d722d1ff21b9a027d803cbf4d5489422b39b782580085bbc463dd5e
+      bin:
+        - xmplay.exe
+      strip: 1
+test: xmplay --version

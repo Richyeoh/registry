@@ -1,0 +1,24 @@
+api: v1
+name: logbert
+kind: app
+display: logbert
+description: Advanced log message viewer for log4net, log4j and others
+homepage: https://github.com/couchcoding/Logbert
+license: MIT
+version: 1.6.3.2
+channels:
+    stable: 1.6.3.2
+provides:
+    - logbert
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/couchcoding/Logbert/releases/download/1.6.3.2/Logbert.1.6.3.2.-.Setup.-.x64.msi
+      sha256: 998b65cd2b0384854a19f08f07c99d64e453fe923895be5f1df7f5f446405669
+      bin:
+        - Logbert.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall logbert
+test: Logbert --version

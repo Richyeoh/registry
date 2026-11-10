@@ -1,0 +1,21 @@
+api: v1
+name: plow
+kind: app
+display: plow
+description: A high-performance HTTP benchmarking tool that includes a real-time web UI and terminal display.
+homepage: https://deepwiki.com/six-ddc/plow
+license: Apache-2.0
+version: 1.4.0
+channels:
+    stable: 1.4.0
+provides:
+    - plow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/six-ddc/plow/releases/download/v1.4.0/plow_1.4.0_windows_amd64.tar.gz
+      sha256: b617dc04c8aef6039fa249119c668a207145a8350b99b45a6257c7769ce19967
+      bin:
+        - plow.exe
+      strip: 1
+test: plow --version

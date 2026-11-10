@@ -1,0 +1,21 @@
+api: v1
+name: walksnail-osd-tool
+kind: app
+display: walksnail-osd-tool
+description: Cross-platform tool for rendering the flight controller OSD and SRT data from the Walksnail Avatar HD FPV system on top of the goggle or VRX recording.
+homepage: https://github.com/avsaase/walksnail-osd-tool
+license: GPL-3.0-only
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - walksnail-osd-tool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/avsaase/walksnail-osd-tool/releases/download/v0.3.0/walksnail-osd-tool-windows.zip
+      sha256: 4159566b1f9e4f00202f16912e5a0eb51a351af3e95fe7e589f8dff167f96dcf
+      bin:
+        - walksnail-osd-tool.exe
+      strip: 1
+test: walksnail-osd-tool --version

@@ -1,0 +1,21 @@
+api: v1
+name: duality
+kind: app
+display: duality
+description: A modular 2D game engine that provides its own visual editor. It's highly extensible, written entirely in C# and backed by OpenGL.
+homepage: https://adamslair.github.io/duality/
+license: MIT
+version: "3.0"
+channels:
+    stable: "3.0"
+provides:
+    - duality
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AdamsLair/duality/releases/download/v3.0/Duality.zip
+      sha256: fb313cfe45cbdf5fafa22885ae1ba226324687b780cfae6c26310214a3edf2da
+      bin:
+        - DualityEditor.exe
+      strip: 1
+test: DualityEditor --version

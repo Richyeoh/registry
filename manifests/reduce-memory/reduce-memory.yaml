@@ -1,0 +1,21 @@
+api: v1
+name: reduce-memory
+kind: app
+display: reduce-memory
+description: A small tool for freeing up RAM memory.
+homepage: https://www.sordum.org/reduce-memory/
+license: Unknown
+version: "1.7"
+channels:
+    stable: "1.7"
+provides:
+    - reduce-memory
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/reduce-memory/ReduceMemory.zip
+      sha256: a27dd1bd45b5065fc5dd4abd5e4ccae6a25848e1725d738a9ba82fffee691f80
+      bin:
+        - ReduceMemory.exe
+      strip: 1
+test: ReduceMemory --version

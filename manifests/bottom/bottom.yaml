@@ -2,10 +2,13 @@ api: v1
 name: bottom
 kind: app
 display: bottom
-description: 图形化 top 替代
-homepage: https://github.com/ClementTsang/bottom
+description: Graphical process/system monitor
+homepage: https://clementtsang.github.io/bottom/
 license: MIT
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - clementtsang
 version: 0.15.0
@@ -50,4 +53,3 @@ platforms:
         - btm
       strip: 1
 test: btm --version
-caveats: 由 GitHub ClementTsang/bottom latest 自动转制

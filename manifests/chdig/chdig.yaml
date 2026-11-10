@@ -1,0 +1,24 @@
+api: v1
+name: chdig
+kind: app
+display: chdig
+description: Dig into ClickHouse with TUI interface.
+homepage: https://github.com/azat/chdig
+license: MIT
+version: 26.10.1
+channels:
+    stable: 26.10.1
+provides:
+    - chdig
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/azat/chdig/releases/download/v26.10.1/chdig-windows-x86_64.exe#/chdig.exe
+      sha256: 15fd50cf062f3de350477732e469740948829130fd3f581f4a7dc368ddbe3ee3
+      bin:
+        - chdig.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall chdig
+test: chdig --version

@@ -1,0 +1,22 @@
+api: v1
+name: cowsay
+kind: app
+display: cowsay
+description: Cowsay/think in Powershell
+homepage: https://github.com/lukesampson/cowsay-psh
+license: Unknown
+version: 0.2013.07.19
+channels:
+    stable: 0.2013.07.19
+provides:
+    - cowsay
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lukesampson/cowsay-psh/archive/master.zip
+      sha256: c65cdfbf43b15f65742831f812003a92abeaa5d416374d5d75a53388d0b59148
+      bin:
+        - cowsay.ps1.exe
+        - cowthink.ps1.exe
+      strip: 1
+test: cowsay.ps1 --version

@@ -1,0 +1,21 @@
+api: v1
+name: enso
+kind: app
+display: enso
+description: A feature-rich descendant of Enso Community Edition
+homepage: https://github.com/GChristensen/enso-portable
+license: Unknown
+version: "1.4"
+channels:
+    stable: "1.4"
+provides:
+    - enso
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GChristensen/enso-portable/releases/download/v1.4/enso-open-source-1.4-x86_64.exe#/dl.7z
+      sha256: 7d29b0f893122e3ee416ff432d585849f5cb5dc93537b4f5ad305a68eabd8a47
+      bin:
+        - run-enso.exe
+      strip: 1
+test: run-enso --version

@@ -1,0 +1,21 @@
+api: v1
+name: bili23-downloader
+kind: app
+display: bili23-downloader
+description: Open source, cross-platform Bilibili video downloader.
+homepage: https://bili23.scott-sloan.cn
+license: GPL-3.0-only
+version: 2.21.0
+channels:
+    stable: 2.21.0
+provides:
+    - bili23-downloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ScottSloan/Bili23-Downloader/releases/download/v2.21.0/Bili23-Downloader_2.21.0_windows_x64_portable.zip
+      sha256: d5622116cf14c0c63e7d70a3be09636225ecd6831743780f2644a2f4bd725d7e
+      bin:
+        - Bili23.exe
+      strip: 1
+test: Bili23 --version

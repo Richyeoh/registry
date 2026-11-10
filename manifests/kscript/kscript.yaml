@@ -1,0 +1,21 @@
+api: v1
+name: kscript
+kind: app
+display: kscript
+description: Enhanced scripting support for Kotlin.
+homepage: https://github.com/kscripting/kscript
+license: MIT
+version: 4.2.3
+channels:
+    stable: 4.2.3
+provides:
+    - kscript
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kscripting/kscript/releases/download/v4.2.3/kscript-4.2.3-bin.zip
+      sha256: 1dda3b041bc9af41bb0e3b78818ef5c99df845ee0e06a258d117ce70f1ec5941
+      bin:
+        - bin\kscript.bat.exe
+      strip: 1
+test: bin\kscript.bat --version

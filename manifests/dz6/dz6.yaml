@@ -1,0 +1,21 @@
+api: v1
+name: dz6
+kind: app
+display: dz6
+description: Fast Vim-inspired TUI hex editor
+homepage: https://dz6.dev.br
+license: GPL-3.0-or-later
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - dz6
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mentebinaria/dz6/releases/download/v0.8.0/dz6-x86_64-pc-windows-msvc.zip
+      sha256: 4c5d3d2d41a3c4c60cf6a7d04cc7362a359096f68366973885e7f458ccd59bd4
+      bin:
+        - dz6.exe
+      strip: 1
+test: dz6 --version

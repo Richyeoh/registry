@@ -1,0 +1,21 @@
+api: v1
+name: appflowy
+kind: app
+display: appflowy
+description: An open-source alternative to Notion. You are in charge of your data and customizations.
+homepage: https://www.appflowy.io/
+license: AGPL-3.0
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - appflowy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.15.0/AppFlowy-0.15.0-windows-x86_64.zip
+      sha256: a8acbcb249c31c5b76654b9570e784730ec76e903ee49536dca1b1aa68240b48
+      bin:
+        - appflowy.exe
+      strip: 1
+test: appflowy --version

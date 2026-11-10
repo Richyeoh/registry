@@ -1,0 +1,24 @@
+api: v1
+name: x-anylabeling
+kind: app
+display: x-anylabeling
+description: AI-assisted desktop annotation tool for image, video, text and 3D point cloud data, with built-in YOLO, SAM and other models (CPU build)
+homepage: https://xanylabeling.com/
+license: GPL-3.0-only
+version: 4.3.2
+channels:
+    stable: 4.3.2
+provides:
+    - x-anylabeling
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CVHub520/X-AnyLabeling/releases/download/v4.3.2/X-AnyLabeling-v4.3.2-Windows-CPU-Setup.exe
+      sha256: b4b070ff2027e1dd06ae96aa677b593b4a1c1450b8eced9d019f927600d681ec
+      bin:
+        - X-AnyLabeling.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall x-anylabeling
+test: X-AnyLabeling --version

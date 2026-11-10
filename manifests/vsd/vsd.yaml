@@ -1,0 +1,21 @@
+api: v1
+name: vsd
+kind: app
+display: vsd
+description: A command-line utility for downloading streams from DASH .mpd manifests and HLS .m3u8 playlists.
+homepage: https://clitic.github.io/vsd/
+license: Apache-2.0|MIT
+version: 0.5.0
+channels:
+    stable: 0.5.0
+provides:
+    - vsd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/clitic/vsd/releases/download/vsd-0.5.0/vsd-0.5.0-x86_64-pc-windows-msvc.zip
+      sha256: a76cf2ee65615af3e96c43e23dc573b9dd68451167a6fd43456455c630e419f8
+      bin:
+        - vsd.exe
+      strip: 1
+test: vsd --version

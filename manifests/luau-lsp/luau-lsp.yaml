@@ -1,0 +1,21 @@
+api: v1
+name: luau-lsp
+kind: app
+display: luau-lsp
+description: Language Server Implementation for Luau
+homepage: https://github.com/JohnnyMorganz/luau-lsp
+license: MIT
+version: 1.70.1
+channels:
+    stable: 1.70.1
+provides:
+    - luau-lsp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JohnnyMorganz/luau-lsp/releases/download/1.70.1/luau-lsp-win64.zip
+      sha256: 64225b9738102a30de6ee09fb28e5a3827edc402ecf2a6364af570312468159f
+      bin:
+        - luau-lsp.exe
+      strip: 1
+test: luau-lsp --version

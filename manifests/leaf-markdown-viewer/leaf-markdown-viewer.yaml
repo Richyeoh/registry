@@ -1,0 +1,24 @@
+api: v1
+name: leaf-markdown-viewer
+kind: app
+display: leaf-markdown-viewer
+description: Terminal Markdown previewer
+homepage: https://leaf.rivolink.mg
+license: MIT
+version: 1.29.2
+channels:
+    stable: 1.29.2
+provides:
+    - leaf-markdown-viewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RivoLink/leaf/releases/download/1.29.2/leaf-windows-x86_64.exe#/leaf.exe
+      sha256: 744b16f9aa74d6c086b4bd9620eb6d22d3837e217b47b79a59d16b9b42b7e73e
+      bin:
+        - leaf.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall leaf-markdown-viewer
+test: leaf --version

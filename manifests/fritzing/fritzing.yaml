@@ -1,0 +1,21 @@
+api: v1
+name: fritzing
+kind: app
+display: fritzing
+description: Document hardware prototypes and layout PCBs.
+homepage: https://fritzing.org/home/
+license: GPL-3.0-only
+version: 0.9.3b
+channels:
+    stable: 0.9.3b
+provides:
+    - fritzing
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/fritzing/fritzing_0.9.3b_64bit.7z.001
+      sha256: 9f4ae8a316e1c70d0212e7304ea212740ccd0bbddbc56cd5a10799cbfc7c4c97
+      bin:
+        - Fritzing.exe
+      strip: 1
+test: Fritzing --version

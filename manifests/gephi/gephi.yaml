@@ -1,0 +1,24 @@
+api: v1
+name: gephi
+kind: app
+display: gephi
+description: Visualization and exploration software for all kinds of graphs and networks
+homepage: https://github.com/gephi/gephi
+license: GPL-3.0-only
+version: 0.11.4
+channels:
+    stable: 0.11.4
+provides:
+    - gephi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gephi/gephi/releases/download/v0.11.4/gephi-0.11.4-windows-x64.exe
+      sha256: b9390960d137ece08bbe62ab7d85abaf7aa43d1e2a2b92f7c18987577b952162
+      bin:
+        - gephi.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gephi
+test: gephi --version

@@ -1,0 +1,21 @@
+api: v1
+name: goneovim-nightly
+kind: app
+display: goneovim-nightly
+description: Neovim GUI which uses a Golang Qt backend
+homepage: https://github.com/akiyosi/goneovim
+license: MIT
+version: 20260203-4c89b49
+channels:
+    stable: 20260203-4c89b49
+provides:
+    - goneovim-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-x86_64.zip
+      sha256: 6fe899314e80a273232882663229b1ef3be3ce4e404525850c63fe7a92400b4c
+      bin:
+        - goneovim.exe
+      strip: 1
+test: goneovim --version

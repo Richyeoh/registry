@@ -1,0 +1,24 @@
+api: v1
+name: localsend-cli
+kind: app
+display: localsend-cli
+description: Share files to nearby devices. An open source cross-platform alternative to AirDrop. (CLI)
+homepage: https://localsend.org/
+license: Apache-2.0
+version: 1.18.2
+channels:
+    stable: 1.18.2
+provides:
+    - localsend-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-CLI-1.18.2-windows-x86-64.exe#/localsend-cli.exe
+      sha256: ca0b267e7457324b3664a935de4e4956da701a7fa1045f6f99c72602f7f8dc38
+      bin:
+        - localsend-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall localsend-cli
+test: localsend-cli --version

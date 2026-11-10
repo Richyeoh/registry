@@ -1,0 +1,21 @@
+api: v1
+name: kodi
+kind: app
+display: kodi
+description: Open source home theater/media center software and entertainment hub for digital media
+homepage: https://kodi.tv/
+license: GPL-2.0-or-later
+version: "21.3"
+channels:
+    stable: "21.3"
+provides:
+    - kodi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirrors.kodi.tv/releases/windows/win64/kodi-21.3-Omega-x64.exe#/dl.7z
+      sha256: 2c46c2bd60b38bb60eb0a5e3468bfd43e9235521eae2910b8c81455e46335c5c
+      bin:
+        - kodi.exe
+      strip: 1
+test: kodi --version

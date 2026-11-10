@@ -1,0 +1,21 @@
+api: v1
+name: wtq
+kind: app
+display: wtq
+description: Turn any app into a Quake-style toggleable app.
+homepage: https://github.com/flyingpie/windows-terminal-quake
+license: MIT
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - wtq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/flyingpie/windows-terminal-quake/releases/download/v2.1.0/win-x64_self-contained.zip
+      sha256: c00ccd0f243169ce716d33c2e8227d41ec50fbb109d8d49b6274d74eb8e47d25
+      bin:
+        - wtq.exe
+      strip: 1
+test: wtq --version

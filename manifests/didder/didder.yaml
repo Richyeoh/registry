@@ -1,0 +1,24 @@
+api: v1
+name: didder
+kind: app
+display: didder
+description: An extensive, fast, and accurate command-line image dithering tool.
+homepage: https://github.com/makew0rld/didder
+license: GPL-3.0
+version: 1.3.0
+channels:
+    stable: 1.3.0
+provides:
+    - didder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/makew0rld/didder/releases/download/v1.3.0/didder_1.3.0_windows_64-bit.exe#/didder.exe
+      sha256: 57366bfb4e8affd965e365ab9d9b78e95e79680a7c513b89c359ba409f4a204c
+      bin:
+        - didder.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall didder
+test: didder --version

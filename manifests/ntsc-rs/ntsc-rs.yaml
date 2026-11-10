@@ -1,0 +1,21 @@
+api: v1
+name: ntsc-rs
+kind: app
+display: ntsc-rs
+description: Video effect tool which emulates NTSC and VHS video artifacts
+homepage: https://ntsc.rs/
+license: MIT,ISC,Apache-2.0,GPL-3.0-only
+version: 0.9.7
+channels:
+    stable: 0.9.7
+provides:
+    - ntsc-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/valadaptive/ntsc-rs/releases/download/v0.9.7/ntsc-rs-windows-standalone.zip
+      sha256: 4f19c6f424058e8c516687126e5b63fcc44d07daa89e75911adb494c9e8874e6
+      bin:
+        - ntsc-rs.exe
+      strip: 1
+test: ntsc-rs --version

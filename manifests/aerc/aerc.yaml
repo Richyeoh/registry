@@ -1,0 +1,46 @@
+api: v1
+name: aerc
+kind: app
+display: aerc
+description: Email client that runs in your terminal
+homepage: https://aerc-mail.org/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.22.0
+channels:
+    stable: 0.22.0
+provides:
+    - aerc
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aerc/blobs/sha256:0b40acf275466e94b9269185b969d5a4d165c3358f12f2f8fb6b0b2235cabc2e
+      sha256: 0b40acf275466e94b9269185b969d5a4d165c3358f12f2f8fb6b0b2235cabc2e
+      bin:
+        - aerc
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aerc/blobs/sha256:f7580e08063ddbe38615b13b791a08a88bcc43c40b0ead8a195f2fa853e64828
+      sha256: f7580e08063ddbe38615b13b791a08a88bcc43c40b0ead8a195f2fa853e64828
+      bin:
+        - aerc
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aerc/blobs/sha256:e01cd254230d1a37e95c8ed6bf12500d69901f787d248a47e1e197b51a10bfb8
+      sha256: e01cd254230d1a37e95c8ed6bf12500d69901f787d248a47e1e197b51a10bfb8
+      bin:
+        - aerc
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aerc/blobs/sha256:7561a5e920b8956729f1ae4923351dc44d7837c5029f93e3cd168041ff9b7640
+      sha256: 7561a5e920b8956729f1ae4923351dc44d7837c5029f93e3cd168041ff9b7640
+      bin:
+        - aerc
+      strip: 1
+test: aerc --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

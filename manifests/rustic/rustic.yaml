@@ -1,0 +1,21 @@
+api: v1
+name: rustic
+kind: app
+display: rustic
+description: fast, encrypted, and deduplicated backups powered by Rust
+homepage: https://rustic.cli.rs
+license: MIT|Apache-2.0
+version: 0.11.4
+channels:
+    stable: 0.11.4
+provides:
+    - rustic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rustic-rs/rustic/releases/download/v0.11.4/rustic-v0.11.4-x86_64-pc-windows-msvc.tar.gz
+      sha256: aa3586c2646da30965e099393c739a32526c27314cfaaf97af7f65aab1ec230a
+      bin:
+        - rustic.exe
+      strip: 1
+test: rustic --version

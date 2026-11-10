@@ -1,0 +1,22 @@
+api: v1
+name: innounpacker
+kind: app
+display: innounpacker
+description: GUI for Inno Setup Unpacker (innounp)
+homepage: https://www.rathlev-home.de/tools/prog-e.html#unpack
+license: Freeware
+version: 2.2.13
+channels:
+    stable: 2.2.13
+provides:
+    - innounpacker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.rathlev-home.de/tools/download/innounpacker.zip
+      sha256: 4f83dc55e33b9019734b1ff1c1148503215dcaeb1c40d61da42062069f7b35e4
+      bin:
+        - innounp.exe
+        - InnoUnpack.exe
+      strip: 1
+test: innounp --version

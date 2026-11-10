@@ -1,0 +1,21 @@
+api: v1
+name: win-vind
+kind: app
+display: win-vind
+description: A Vim-oriented toy box that allows the user to operate Windows with key bindings like Vim. The app consists of various useful features inspired by Vim and its plugins.
+homepage: https://github.com/pit-ray/win-vind
+license: MIT
+version: 5.13.2
+channels:
+    stable: 5.13.2
+provides:
+    - win-vind
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pit-ray/win-vind/releases/download/v5.13.2/win-vind_5.13.2_64bit_portable.zip
+      sha256: ad52fe93c289945d15636a96b2c16ecd5ec55a317f6e2f97b2ed2ee15f4b84d5
+      bin:
+        - win-vind.exe
+      strip: 1
+test: win-vind --version

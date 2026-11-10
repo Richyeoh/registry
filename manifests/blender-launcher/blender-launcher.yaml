@@ -1,0 +1,21 @@
+api: v1
+name: blender-launcher
+kind: app
+display: blender-launcher
+description: Standalone client for managing official builds of Blender 3D
+homepage: https://github.com/Victor-IX/Blender-Launcher
+license: GPL-3.0-or-later
+version: 2.8.2
+channels:
+    stable: 2.8.2
+provides:
+    - blender-launcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Victor-IX/Blender-Launcher/releases/download/v2.8.2/Blender_Launcher_v2.8.2_Windows_x64.zip
+      sha256: c47cad471fdc4bf688e814bc87cf3b96d1b62a7cd12cc99b8fd1b8da82b1acd6
+      bin:
+        - Blender Launcher.exe
+      strip: 1
+test: Blender Launcher.exe --version

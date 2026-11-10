@@ -1,0 +1,39 @@
+api: v1
+name: badkeys
+kind: app
+display: badkeys
+description: Tool to find common vulnerabilities in cryptographic public keys
+homepage: https://badkeys.info
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.0.22
+channels:
+    stable: 0.0.22
+provides:
+    - badkeys
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:57222ae23f419feb7615f04ebccb0d0d3366cab46e1064746a901ca098065b95
+      sha256: 57222ae23f419feb7615f04ebccb0d0d3366cab46e1064746a901ca098065b95
+      bin:
+        - badkeys
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:8933edca489a921c6991f2e0b0d601518b0c6750ac1aa6134d6e702a30840d28
+      sha256: 8933edca489a921c6991f2e0b0d601518b0c6750ac1aa6134d6e702a30840d28
+      bin:
+        - badkeys
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/badkeys/blobs/sha256:13117f68cb655993392c453416f1368769a96822b92652d5c2079f2587ff2455
+      sha256: 13117f68cb655993392c453416f1368769a96822b92652d5c2079f2587ff2455
+      bin:
+        - badkeys
+      strip: 1
+test: badkeys --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

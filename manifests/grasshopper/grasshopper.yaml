@@ -1,0 +1,21 @@
+api: v1
+name: grasshopper
+kind: app
+display: grasshopper
+description: SSH client
+homepage: https://grasshopper.coding.kiwi
+license: Unknown
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - grasshopper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://grasshopper.coding.kiwi/download/2-0-0-grasshopper-Setup-2-0-0-exe#/dl.7z
+      sha256: f646b35f541fc76c42f31e34aaa733ef4b2b25f5416abdeb9843755891d3a5f5
+      bin:
+        - grasshopper.exe
+      strip: 1
+test: grasshopper --version

@@ -1,0 +1,22 @@
+api: v1
+name: luarocks
+kind: app
+display: luarocks
+description: The package manager for Lua modules
+homepage: https://luarocks.org
+license: MIT
+version: 3.13.0
+channels:
+    stable: 3.13.0
+provides:
+    - luarocks
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://luarocks.github.io/luarocks/releases/luarocks-3.13.0-windows-64.zip
+      sha256: 0897ade5d459d55cd1962a948153745a6749feb345403c68aaa9207388557ab9
+      bin:
+        - luarocks.exe
+        - luarocks-admin.exe
+      strip: 1
+test: luarocks --version

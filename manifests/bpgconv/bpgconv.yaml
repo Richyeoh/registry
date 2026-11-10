@@ -1,0 +1,21 @@
+api: v1
+name: bpgconv
+kind: app
+display: bpgconv
+description: Batch conversion tool for BPG images
+homepage: http://www.romeolight.com/products/bpgconv/
+license: BSD-2-Clause
+version: "2.5"
+channels:
+    stable: "2.5"
+provides:
+    - bpgconv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/bpgconv/BPGconvPortable.zip
+      sha256: 94528b44368bbe1e02f7bac37d0f433bca5e3701465b63c6f3eb892ee72cbe90
+      bin:
+        - BPGconv.exe
+      strip: 1
+test: BPGconv --version

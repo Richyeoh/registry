@@ -1,0 +1,21 @@
+api: v1
+name: wasmtime
+kind: app
+display: wasmtime
+description: Standalone JIT-style runtime for WebAssembly, using Cranelift
+homepage: https://wasmtime.dev
+license: Apache-2.0
+version: 50.0.1
+channels:
+    stable: 50.0.1
+provides:
+    - wasmtime
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bytecodealliance/wasmtime/releases/download/v50.0.1/wasmtime-v50.0.1-x86_64-windows.zip
+      sha256: c3646ee2de8cfcefe532e75852e1fd2728d78c3fcc43251794803a698d1c30ca
+      bin:
+        - wasmtime.exe
+      strip: 1
+test: wasmtime --version

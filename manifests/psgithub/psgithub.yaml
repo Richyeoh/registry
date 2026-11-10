@@ -1,0 +1,21 @@
+api: v1
+name: psgithub
+kind: app
+display: psgithub
+description: PowerShell module to manage GitHub through its REST API.
+homepage: https://github.com/pcgeek86/PSGitHub
+license: MIT
+version: 0.15.240
+channels:
+    stable: 0.15.240
+provides:
+    - psgithub
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/psgithub.0.15.240.nupkg
+      sha256: 8a9f1b059808f432b1f3431b2047c4702c7b562e21ef7031ee79a56c876969fa
+      bin:
+        - psgithub.exe
+      strip: 1
+test: psgithub --version

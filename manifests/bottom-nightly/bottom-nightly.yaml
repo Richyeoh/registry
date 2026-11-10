@@ -1,0 +1,21 @@
+api: v1
+name: bottom-nightly
+kind: app
+display: bottom-nightly
+description: Graphical process/system monitor
+homepage: https://github.com/ClementTsang/bottom
+license: MIT
+version: 20261109-9e6df79f-1794208160
+channels:
+    stable: 20261109-9e6df79f-1794208160
+provides:
+    - bottom-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ClementTsang/bottom/releases/download/nightly-9e6df79f-1794208160/bottom_x86_64-pc-windows-msvc.zip
+      sha256: e6869e79433b39fd4e8c8ff955a6725fdd602db9ec182e7cc48194dedcebdb83
+      bin:
+        - btm.exe
+      strip: 1
+test: btm --version

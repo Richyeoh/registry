@@ -1,0 +1,34 @@
+api: v1
+name: direnv
+kind: app
+display: direnv
+description: load or unload environment variables depending on the current directory
+homepage: https://direnv.net
+license: MIT
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 2.38.2
+channels:
+    stable: 2.38.2
+provides:
+    - direnv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/direnv/direnv/releases/download/v2.38.2/direnv.windows-amd64.exe#/direnv.exe
+      sha256: 62a6a16a3473b8e03c2cdc4e2099655bd4284f6da92122b96d78cdce724d4064
+      bin:
+        - direnv.exe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/direnv/download/
+      sha256: 7bccf10692e0c678c02a5be8500e3872ec215c44eefed1537dc7118681834426
+      bin:
+        - direnv
+installer:
+    silent: /S
+    uninstall: scoop uninstall direnv
+test: direnv --version

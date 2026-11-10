@@ -1,0 +1,21 @@
+api: v1
+name: pidgin
+kind: app
+display: pidgin
+description: Universal instant messaging program supporting AIM, ICQ, Google Talk, Jabber/XMPP, MSN Messenger, Yahoo!, Bonjour, Gadu-Gadu, IRC, MXit, Novell GroupWise Messenger, Lotus Sametime, SILC, SIMPLE, MySpaceIM, and Zephyr
+homepage: https://pidgin.im/
+license: GPL-2.0-or-later
+version: 2.14.14
+channels:
+    stable: 2.14.14
+provides:
+    - pidgin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/pidgin/Pidgin/2.14.14/pidgin-2.14.14-offline.exe#/dl.7z
+      sha256: 7551389982bd9a85991df7436ca1776e68bdc057374c03e8018173e95162bc84
+      bin:
+        - pidgin.exe
+      strip: 1
+test: pidgin --version

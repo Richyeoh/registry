@@ -1,0 +1,46 @@
+api: v1
+name: abcde
+kind: app
+display: abcde
+description: Better CD Encoder
+homepage: https://abcde.einval.com
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 2.9.3
+channels:
+    stable: 2.9.3
+provides:
+    - abcde
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abcde/blobs/sha256:c9668232e677e92b51210a0563c2156f030837b1fb221de60d16c83c466620b2
+      sha256: c9668232e677e92b51210a0563c2156f030837b1fb221de60d16c83c466620b2
+      bin:
+        - abcde
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abcde/blobs/sha256:da1bf98477f1e966635166d493c23e14eb812b0b529856acd653341537ba8f29
+      sha256: da1bf98477f1e966635166d493c23e14eb812b0b529856acd653341537ba8f29
+      bin:
+        - abcde
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abcde/blobs/sha256:93e3d734fe73f1ca3edeab8e4f25794a28acbdde6df9f3ffd7d01b2e16ce31a2
+      sha256: 93e3d734fe73f1ca3edeab8e4f25794a28acbdde6df9f3ffd7d01b2e16ce31a2
+      bin:
+        - abcde
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abcde/blobs/sha256:16b246ffcc1d24acb0aba75e1ba6995535470fc90b0992746bd38e3f2aa10243
+      sha256: 16b246ffcc1d24acb0aba75e1ba6995535470fc90b0992746bd38e3f2aa10243
+      bin:
+        - abcde
+      strip: 1
+test: abcde --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

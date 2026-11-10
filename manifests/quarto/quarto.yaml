@@ -1,0 +1,21 @@
+api: v1
+name: quarto
+kind: app
+display: quarto
+description: Open-source scientific and technical publishing system built on Pandoc
+homepage: https://quarto.org
+license: GPL-2.0-only
+version: 1.11.9
+channels:
+    stable: 1.11.9
+provides:
+    - quarto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-win.zip
+      sha256: eda220a2f39c392f622049de013ddf7b4dfdf019ba877f251be14ce43e5734d1
+      bin:
+        - bin\quarto.exe
+      strip: 1
+test: bin\quarto --version

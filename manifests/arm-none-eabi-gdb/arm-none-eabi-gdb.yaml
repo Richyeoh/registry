@@ -1,0 +1,39 @@
+api: v1
+name: arm-none-eabi-gdb
+kind: app
+display: arm-none-eabi-gdb
+description: GNU debugger for arm-none-eabi cross development
+homepage: https://www.gnu.org/software/gdb/
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "18.1"
+channels:
+    stable: "18.1"
+provides:
+    - arm-none-eabi-gdb
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:2320ab678e7e144c1a6044ce875f201fad9d09e3178446d72435094f77f1d9de
+      sha256: 2320ab678e7e144c1a6044ce875f201fad9d09e3178446d72435094f77f1d9de
+      bin:
+        - arm-none-eabi-gdb
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:2e8768e1e1120420dacd79c8d2b143418e785a4ee1c2164f75448065136cf23e
+      sha256: 2e8768e1e1120420dacd79c8d2b143418e785a4ee1c2164f75448065136cf23e
+      bin:
+        - arm-none-eabi-gdb
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gdb/blobs/sha256:f2735f9c9b6e491e9fda17607e6c7a6355a512085d6b19e05b117760a0d9ed0e
+      sha256: f2735f9c9b6e491e9fda17607e6c7a6355a512085d6b19e05b117760a0d9ed0e
+      bin:
+        - arm-none-eabi-gdb
+      strip: 1
+test: arm-none-eabi-gdb --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

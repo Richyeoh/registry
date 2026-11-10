@@ -1,0 +1,21 @@
+api: v1
+name: slack
+kind: app
+display: slack
+description: Collaboration software
+homepage: https://slack.com
+license: Unknown
+version: 4.53.283
+channels:
+    stable: 4.53.283
+provides:
+    - slack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.slack-edge.com/desktop-releases/windows/x64/4.53.283/Slack.msix#/dl.zip
+      sha256: 7d337f08f92970fd7443ca6b1515a95509e74456addaf9b287d38028f9151c76
+      bin:
+        - slack.exe
+      strip: 1
+test: slack --version

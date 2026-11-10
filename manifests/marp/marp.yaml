@@ -1,0 +1,21 @@
+api: v1
+name: marp
+kind: app
+display: marp
+description: A CLI interface for Marp and Marpit based converters
+homepage: https://github.com/marp-team/marp-cli
+license: MIT
+version: 4.5.1
+channels:
+    stable: 4.5.1
+provides:
+    - marp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/marp-team/marp-cli/releases/download/v4.5.1/marp-cli-v4.5.1-win.zip
+      sha256: 34f3eac66899c5d715bcd82248c6ceb063fa60c523931f15c4aa1e03e909cafa
+      bin:
+        - marp.exe
+      strip: 1
+test: marp --version

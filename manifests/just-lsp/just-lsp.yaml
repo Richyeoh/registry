@@ -1,0 +1,21 @@
+api: v1
+name: just-lsp
+kind: app
+display: just-lsp
+description: A language server for just.
+homepage: https://terror.github.io/just-lsp/
+license: CC0-1.0
+version: 0.11.1
+channels:
+    stable: 0.11.1
+provides:
+    - just-lsp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/terror/just-lsp/releases/download/0.11.1/just-lsp-0.11.1-x86_64-pc-windows-msvc.zip
+      sha256: 1a2b7761075373defe5857acb5e779a5f146f579d910c69644a574805c26e116
+      bin:
+        - just-lsp.exe
+      strip: 1
+test: just-lsp --version

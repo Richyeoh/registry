@@ -1,0 +1,45 @@
+api: v1
+name: azcopy
+kind: app
+display: azcopy
+description: Command-line utility to download/upload blobs and files from Microsoft Azure storage accounts
+homepage: https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10
+license: Unknown
+keywords:
+    - brew
+    - homebrew
+version: 10.34.1
+channels:
+    stable: 10.34.1
+provides:
+    - azcopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/azure-storage-azcopy/releases/download/v10.34.1/azcopy_windows_amd64_10.34.1.zip#/dl.zip
+      sha256: 6d299fdf2dbf466167e9806576d15cb0de3c4ce8769caf5d1c1110877e5f66ff
+      bin:
+        - azcopy.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/azcopy/blobs/sha256:782c4683bc1addbca6a8289d3c5901255298691e195041e48adffce9b734fb7a
+      sha256: 782c4683bc1addbca6a8289d3c5901255298691e195041e48adffce9b734fb7a
+      bin:
+        - azcopy
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/azcopy/blobs/sha256:479ff686a324841b3fd4e947f36bb64ae8da231fb5a0bd533ccdbc2fd5c26746
+      sha256: 479ff686a324841b3fd4e947f36bb64ae8da231fb5a0bd533ccdbc2fd5c26746
+      bin:
+        - azcopy
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/azcopy/blobs/sha256:85774c164000bffad92cdde6360c50f0679e871de61f5176b36e8ad49fdf8a0a
+      sha256: 85774c164000bffad92cdde6360c50f0679e871de61f5176b36e8ad49fdf8a0a
+      bin:
+        - azcopy
+      strip: 1
+test: azcopy --version

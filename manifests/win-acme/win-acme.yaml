@@ -1,0 +1,21 @@
+api: v1
+name: win-acme
+kind: app
+display: win-acme
+description: A Simple ACME Client
+homepage: https://www.win-acme.com
+license: Apache-2.0
+version: 2.2.9.1701
+channels:
+    stable: 2.2.9.1701
+provides:
+    - win-acme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/win-acme/win-acme/releases/download/v2.2.9.1701/win-acme.v2.2.9.1701.x64.trimmed.zip
+      sha256: f4dc3b144841ffdba391ce168c273d7a686d45a359075e30ee4bf4ee186857d6
+      bin:
+        - wacs.exe
+      strip: 1
+test: wacs --version

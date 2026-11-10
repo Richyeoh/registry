@@ -1,0 +1,24 @@
+api: v1
+name: erdtree
+kind: app
+display: erdtree
+description: A multi-threaded file-tree visualizer and disk usage analyzer.
+homepage: https://github.com/solidiquis/erdtree
+license: MIT
+version: 3.1.2
+channels:
+    stable: 3.1.2
+provides:
+    - erdtree
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/solidiquis/erdtree/releases/download/v3.1.2/erd-v3.1.2-x86_64-pc-windows-msvc.exe#/erd.exe
+      sha256: df359e20e5a38384c27b98667d780c5bd5ab1ce4bac739a5fa9c5ed25511a0a1
+      bin:
+        - erd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall erdtree
+test: erd --version

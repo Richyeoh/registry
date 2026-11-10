@@ -1,0 +1,21 @@
+api: v1
+name: fabric-ai
+kind: app
+display: fabric-ai
+description: An open-source framework for augmenting humans using AI.
+homepage: https://danielmiessler.com/p/fabric-origin-story
+license: MIT
+version: 1.4.568
+channels:
+    stable: 1.4.568
+provides:
+    - fabric-ai
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/danielmiessler/Fabric/releases/download/v1.4.568/fabric_Windows_x86_64.zip
+      sha256: 2c9568eb7dee3a1df51ed084a4c97975bbbb277b20a9a2ef3ea711a95510256c
+      bin:
+        - fabric.exe
+      strip: 1
+test: fabric --version

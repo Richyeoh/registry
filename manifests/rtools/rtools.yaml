@@ -1,0 +1,24 @@
+api: v1
+name: rtools
+kind: app
+display: rtools
+description: Tools for building packages for R under Microsoft Windows, or for building R itself.
+homepage: https://cloud.r-project.org/bin/windows/Rtools
+license: BSD-3-Clause
+version: 4.5.6768.6492
+channels:
+    stable: 4.5.6768.6492
+provides:
+    - rtools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cloud.r-project.org/bin/windows/Rtools/rtools45/files/rtools45-6768-6492.exe
+      sha256: 614c7378150a012e70b16edcfe5236dcead47f491f1f54203ea8d451c7743a75
+      bin:
+        - rtools.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rtools
+test: rtools --version

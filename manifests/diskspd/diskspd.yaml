@@ -1,0 +1,21 @@
+api: v1
+name: diskspd
+kind: app
+display: diskspd
+description: A storage performance tool.
+homepage: https://github.com/microsoft/diskspd
+license: MIT
+version: "2.3"
+channels:
+    stable: "2.3"
+provides:
+    - diskspd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/diskspd/releases/download/v2.3/DiskSpd.ZIP
+      sha256: 18609981e8b04b4f645f1fd182ad0541615fe71722de36a9a933c54f747218a3
+      bin:
+        - diskspd.exe
+      strip: 1
+test: diskspd --version

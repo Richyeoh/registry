@@ -1,0 +1,21 @@
+api: v1
+name: vals
+kind: app
+display: vals
+description: Helm-like configuration values loader with support for various sources
+homepage: https://github.com/helmfile/vals
+license: Apache-2.0
+version: 0.51.0
+channels:
+    stable: 0.51.0
+provides:
+    - vals
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/helmfile/vals/releases/download/v0.51.0/vals_0.51.0_windows_amd64.tar.gz
+      sha256: 44eaf6568ec2b0a78ba9989d0861c2b0597992e5e56cfc789d1bf51a3edaca3c
+      bin:
+        - vals.exe
+      strip: 1
+test: vals --version

@@ -1,0 +1,21 @@
+api: v1
+name: codeql
+kind: app
+display: codeql
+description: Source code security analyzer from GitHub
+homepage: https://github.com/github/codeql-cli-binaries
+license: Unknown
+version: 2.27.4
+channels:
+    stable: 2.27.4
+provides:
+    - codeql
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/github/codeql-cli-binaries/releases/download/v2.27.4/codeql-win64.zip
+      sha256: a7ab5f73a8f440c3269f6660deb1d34f76005e756ccdf58c84c5ff88355453db
+      bin:
+        - codeql.exe
+      strip: 1
+test: codeql --version

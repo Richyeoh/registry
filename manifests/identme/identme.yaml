@@ -1,0 +1,24 @@
+api: v1
+name: identme
+kind: app
+display: identme
+description: Public IP address lookup
+homepage: https://www.ident.me
+license: 0BSD
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - identme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pcarrier/ident.me/releases/download/v0.6.0/identme.x64.exe#/identme.exe
+      sha256: d84e3c28532245568267b6ca0aed0c7f6c233902da31573e6ae40dadc4aff752
+      bin:
+        - identme.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall identme
+test: identme --version

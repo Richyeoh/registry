@@ -1,0 +1,21 @@
+api: v1
+name: zvm
+kind: app
+display: zvm
+description: Zig Version Manager (zvm) is a tool for managing your Zig installs
+homepage: https://www.zvm.app
+license: MIT
+version: 0.9.5
+channels:
+    stable: 0.9.5
+provides:
+    - zvm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tristanisham/zvm/releases/download/v0.9.5/zvm-windows-amd64.zip
+      sha256: dfe97cd7ded99c5538ff4b3fac175f8eaccadb3fbf2004ad41e408cf758ff827
+      bin:
+        - zvm.exe
+      strip: 1
+test: zvm --version

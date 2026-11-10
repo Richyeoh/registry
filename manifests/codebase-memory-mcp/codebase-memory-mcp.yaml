@@ -1,0 +1,21 @@
+api: v1
+name: codebase-memory-mcp
+kind: app
+display: codebase-memory-mcp
+description: Code intelligence knowledge graph MCP server for AI coding agents
+homepage: https://deusdata.github.io/codebase-memory-mcp/
+license: MIT
+version: 0.12.1
+channels:
+    stable: 0.12.1
+provides:
+    - codebase-memory-mcp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DeusData/codebase-memory-mcp/releases/download/v0.12.1/codebase-memory-mcp-windows-amd64.zip
+      sha256: 4e4e0f16b45233af5c757a1fcbe3c3b16e9056375b1fbe2ce020b6de75dedcc0
+      bin:
+        - codebase-memory-mcp.exe
+      strip: 1
+test: codebase-memory-mcp --version

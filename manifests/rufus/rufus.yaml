@@ -1,0 +1,24 @@
+api: v1
+name: rufus
+kind: app
+display: rufus
+description: A utility that helps format and create bootable USB flash drives.
+homepage: https://rufus.ie/
+license: GPL-3.0-only
+version: "4.15"
+channels:
+    stable: "4.15"
+provides:
+    - rufus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe#/rufus.exe
+      sha256: 84c8a437f8af89257524478489e5c85f1edf25f761d299e2bcde46ac0afbe106
+      bin:
+        - rufus.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rufus
+test: rufus --version

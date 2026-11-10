@@ -1,0 +1,21 @@
+api: v1
+name: treesheets
+kind: app
+display: treesheets
+description: A free form data organizer and a replacement for spreadsheets, mind mappers, outliners, PIMs, text editors and small databases.
+homepage: https://strlen.com/treesheets
+license: ZLIB
+version: 2.23.10
+channels:
+    stable: 2.23.10
+provides:
+    - treesheets
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aardappel/treesheets/releases/download/v2.23.10/TreeSheets-2.23.10-winx64.zip
+      sha256: e16dfb29d9816f6426d7a5933e9f411c52c4ba472f8aa5938b646d21d213e98e
+      bin:
+        - treesheets.exe
+      strip: 1
+test: treesheets --version

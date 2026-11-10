@@ -1,0 +1,24 @@
+api: v1
+name: swyh
+kind: app
+display: swyh
+description: Stream the sound from your PC to an UPnP/DLNA device.
+homepage: https://www.streamwhatyouhear.com/
+license: GPL-2.0
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - swyh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/StreamWhatYouHear/SWYH/releases/download/1.5.0/SWYH_1.5.0.exe
+      sha256: 267f72ff5ccb056855574a1eb9b52d7916a3057b79f687cd5e1cc0c113bbe9ca
+      bin:
+        - swyh.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall swyh
+test: swyh --version

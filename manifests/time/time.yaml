@@ -1,0 +1,22 @@
+api: v1
+name: time
+kind: app
+display: time
+description: An approximation of the Unix time command.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2018.07.25
+channels:
+    stable: 0.2018.07.25
+provides:
+    - time
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lukesampson/psutils/3290c04d7653ea8183a5e11d3d5a4e46716035d1/time.ps1
+      sha256: 250413758eb4845973cfd0778b58e40ec52b881f17cbe13b22afac440fb26d93
+      bin:
+        - time.ps1.exe
+        - time.ps1.exe
+      strip: 1
+test: time.ps1 --version

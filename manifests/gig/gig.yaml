@@ -1,0 +1,21 @@
+api: v1
+name: gig
+kind: app
+display: gig
+description: Generate .gitignore files from your terminal (mostly) offline!
+homepage: https://dev.to/shihanng/gig-a-gitignore-generator-opc
+license: MIT
+version: 0.8.3
+channels:
+    stable: 0.8.3
+provides:
+    - gig
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shihanng/gig/releases/download/v0.8.3/gig_0.8.3_Windows_x86_64.tar.gz
+      sha256: e2dfa2759b87c503f509e9468704803893b41d56fb04127460ee9607f2eabf23
+      bin:
+        - gig.exe
+      strip: 1
+test: gig --version

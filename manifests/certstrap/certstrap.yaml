@@ -1,0 +1,24 @@
+api: v1
+name: certstrap
+kind: app
+display: certstrap
+description: Tools to bootstrap CAs, certificate requests, and signed certificates
+homepage: https://github.com/square/certstrap
+license: Apache-2.0
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - certstrap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/square/certstrap/releases/download/v1.4.1/certstrap-windows-amd64#/certstrap.exe
+      sha256: 1cc5e68cfa638c19c9370550d95c06ec198fd4016dd9975448a37d3425ce01d7
+      bin:
+        - certstrap.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall certstrap
+test: certstrap --version

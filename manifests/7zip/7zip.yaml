@@ -23,4 +23,4 @@ platforms:
 installer:
     silent: /S
     uninstall: scoop uninstall 7zip
-test: 7z.exe --version
+test: 7z --version

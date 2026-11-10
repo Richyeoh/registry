@@ -1,0 +1,21 @@
+api: v1
+name: node-compiler
+kind: app
+display: node-compiler
+description: Ahead-of-time (AOT) Compiler designed for Node.js
+homepage: https://github.com/lastmjs/node-compiler
+license: MIT
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - node-compiler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/node-compiler/nodec-v1.5.0-x64.7z.001
+      sha256: 31c7d5a5883237f38d7754114f7d42a159d99a787555ab51ab24c48d7ec5356b
+      bin:
+        - nodec.exe
+      strip: 1
+test: nodec --version

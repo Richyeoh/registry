@@ -1,0 +1,46 @@
+api: v1
+name: avro-c
+kind: app
+display: avro-c
+description: Data serialization system
+homepage: https://avro.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.12.2
+channels:
+    stable: 1.12.2
+provides:
+    - avro-c
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:dfb532b3e2dd04e1325c301259d2c4022acf1b159ce38b3317933d95c1c7f980
+      sha256: dfb532b3e2dd04e1325c301259d2c4022acf1b159ce38b3317933d95c1c7f980
+      bin:
+        - avro-c
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:cd90c5e29f7244629d1ef4550e31b6bc6394b70a604164b18968bf12bce5068c
+      sha256: cd90c5e29f7244629d1ef4550e31b6bc6394b70a604164b18968bf12bce5068c
+      bin:
+        - avro-c
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:a7562a33b60c43d3255e69bb13cb16c37f9efd1511c86ecd16284c049184da74
+      sha256: a7562a33b60c43d3255e69bb13cb16c37f9efd1511c86ecd16284c049184da74
+      bin:
+        - avro-c
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/avro-c/blobs/sha256:92cbdeac44b1fd20ecafdbe8bbd7a5f6f9e8037c920c4190f968f8607521fba9
+      sha256: 92cbdeac44b1fd20ecafdbe8bbd7a5f6f9e8037c920c4190f968f8607521fba9
+      bin:
+        - avro-c
+      strip: 1
+test: avro-c --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

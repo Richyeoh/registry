@@ -1,0 +1,21 @@
+api: v1
+name: etcher
+kind: app
+display: etcher
+description: balenaEtcher lets you flash OS images to SD cards & USB drives, safely and easily.
+homepage: https://etcher.balena.io/
+license: Apache-2.0
+version: 2.1.9
+channels:
+    stable: 2.1.9
+provides:
+    - etcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/balena-io/etcher/releases/download/v2.1.9/balenaEtcher-win32-x64-2.1.9.zip
+      sha256: b87cf10ea10efe03346a057d4a549cc0e57874618fd4ebc030b4de8d97c4b94b
+      bin:
+        - etcher.exe
+      strip: 1
+test: etcher --version

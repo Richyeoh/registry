@@ -1,0 +1,21 @@
+api: v1
+name: superslicer
+kind: app
+display: superslicer
+description: G-code generator for 3D printers (Prusa, Voron, Creality, etc.)
+homepage: https://github.com/supermerill/SuperSlicer
+license: AGPL-3.0-or-later
+version: 2.5.59.13
+channels:
+    stable: 2.5.59.13
+provides:
+    - superslicer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/supermerill/SuperSlicer/releases/download/2.5.59.13/SuperSlicer_2.5.59.13_win64_240701.zip
+      sha256: aefc6d051b3b3e6e1d1a571d66cb267a09d7cfbe2d8f889a433cd8ac5f787a69
+      bin:
+        - superslicer_console.exe
+      strip: 1
+test: superslicer_console --version

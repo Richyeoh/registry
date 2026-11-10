@@ -1,0 +1,24 @@
+api: v1
+name: appbuster
+kind: app
+display: appbuster
+description: Bust Apps you do not want!
+homepage: https://www.oo-software.com/en/ooappbuster
+license: Unknown
+version: 1.4.1345
+channels:
+    stable: 1.4.1345
+provides:
+    - appbuster
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl5.oo-software.com/files/ooappbuster/OOAPB.exe
+      sha256: 053ce0a4f1cddd3bc6eff802cd1e39a2c55a33798e7ed46df902729bb04941c1
+      bin:
+        - appbuster.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall appbuster
+test: appbuster --version

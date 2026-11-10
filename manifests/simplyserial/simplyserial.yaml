@@ -1,0 +1,21 @@
+api: v1
+name: simplyserial
+kind: app
+display: simplyserial
+description: A serial terminal that runs as a Windows console application.
+homepage: https://github.com/fasteddy516/SimplySerial
+license: MIT
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - simplyserial
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fasteddy516/SimplySerial/releases/download/v0.9.0/SimplySerial_0.9.0_standalone.zip
+      sha256: 9562f36d06705c37f191fa44df1834414141a53eadbdf67f9701d67036b6d6aa
+      bin:
+        - ss.exe
+      strip: 1
+test: ss --version

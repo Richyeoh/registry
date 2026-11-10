@@ -1,0 +1,32 @@
+api: v1
+name: amneziavpn
+kind: app
+display: Amnezia VPN
+description: VPN client
+homepage: https://amnezia.org/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 5.1.0.6
+channels:
+    stable: 5.1.0.6
+provides:
+    - amneziavpn
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_macos_x64.pkg
+      sha256: 4d61f8a0c872f5776b49f52d5fbabdc74bd99bc135269d02f3ede937e5b84b67
+      bin:
+        - amneziavpn
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_macos_x64.pkg
+      sha256: 4d61f8a0c872f5776b49f52d5fbabdc74bd99bc135269d02f3ede937e5b84b67
+      bin:
+        - amneziavpn
+      strip: 1
+test: amneziavpn --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

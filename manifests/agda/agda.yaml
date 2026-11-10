@@ -1,0 +1,39 @@
+api: v1
+name: agda
+kind: app
+display: agda
+description: Dependently typed functional programming language
+homepage: https://wiki.portal.chalmers.se/agda/
+license: MIT AND BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 2.8.0.2
+channels:
+    stable: 2.8.0.2
+provides:
+    - agda
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agda/blobs/sha256:431d52e45f2a28a93d8bcbe0cdbda69f672da86d51a62489cbea3a6c404f831c
+      sha256: 431d52e45f2a28a93d8bcbe0cdbda69f672da86d51a62489cbea3a6c404f831c
+      bin:
+        - agda
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/agda/blobs/sha256:fc9669287b8dce97cb26a69dfde3a9be800eca1fa51e1e486a2c14b5c284ff28
+      sha256: fc9669287b8dce97cb26a69dfde3a9be800eca1fa51e1e486a2c14b5c284ff28
+      bin:
+        - agda
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agda/blobs/sha256:fe64ce95b547d8b00fcf233bd0e7248b292ce731dd7c728288848271cf130040
+      sha256: fe64ce95b547d8b00fcf233bd0e7248b292ce731dd7c728288848271cf130040
+      bin:
+        - agda
+      strip: 1
+test: agda --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

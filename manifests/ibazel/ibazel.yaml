@@ -1,0 +1,24 @@
+api: v1
+name: ibazel
+kind: app
+display: ibazel
+description: Tools for building Bazel targets when source files change
+homepage: https://github.com/bazelbuild/bazel-watcher
+license: Apache-2.0
+version: 0.33.0
+channels:
+    stable: 0.33.0
+provides:
+    - ibazel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bazelbuild/bazel-watcher/releases/download/v0.33.0/ibazel_windows_amd64.exe#/ibazel.exe
+      sha256: 5be92e134bc3ee255e1918ce96ea161fcc3b308e8e79b660ab5f9b0900c178ae
+      bin:
+        - ibazel.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ibazel
+test: ibazel --version

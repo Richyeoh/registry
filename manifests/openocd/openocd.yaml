@@ -1,0 +1,21 @@
+api: v1
+name: openocd
+kind: app
+display: openocd
+description: OpenOCD is an open-source tool that allows debugging various ARM devices with GDB using a wide variety of JTAG programmers.
+homepage: https://openocd.org/
+license: GPL-2.0-or-later
+version: 0.12.0
+channels:
+    stable: 0.12.0
+provides:
+    - openocd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/openocd-org/openocd/releases/download/v0.12.0/openocd-v0.12.0-i686-w64-mingw32.tar.gz
+      sha256: d7168545a6d5df4772b6090d470650f3eb8c9732dbd19b1f9027824c7f4a6fa3
+      bin:
+        - bin\openocd.exe
+      strip: 1
+test: bin\openocd --version

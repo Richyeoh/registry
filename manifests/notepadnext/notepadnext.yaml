@@ -1,0 +1,21 @@
+api: v1
+name: notepadnext
+kind: app
+display: notepadnext
+description: A cross-platform reimplementation of Notepad++
+homepage: https://github.com/dail8859/NotepadNext
+license: GPL-3.0-only
+version: "0.15"
+channels:
+    stable: "0.15"
+provides:
+    - notepadnext
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dail8859/NotepadNext/releases/download/v0.15/NotepadNext-v0.15-win64.zip
+      sha256: 148aa88d706bb67a7c1f3727953ed686204be52876336971634b0223e6ed2148
+      bin:
+        - notepadnext.exe
+      strip: 1
+test: notepadnext --version

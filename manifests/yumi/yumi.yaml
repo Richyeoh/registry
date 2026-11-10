@@ -1,0 +1,24 @@
+api: v1
+name: yumi
+kind: app
+display: yumi
+description: Multiboot USB Creator. Supports either NTFS or FAT32 format. BIOS USB boot only.
+homepage: https://yumiusb.com/yumi-legacy/
+license: GPL-2.0-or-later
+version: 2.0.9.4
+channels:
+    stable: 2.0.9.4
+provides:
+    - yumi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://yumiusb.com/downloads/YUMI/YUMI-2.0.9.4.exe#/YUMI.exe
+      sha256: 3b89e177555d450e24ab11f85085ecad457cdcf797b3a2f3447fff091de9f397
+      bin:
+        - yumi.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yumi
+test: yumi --version

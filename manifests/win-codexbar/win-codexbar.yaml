@@ -1,0 +1,24 @@
+api: v1
+name: win-codexbar
+kind: app
+display: win-codexbar
+description: Windows system-tray app that shows usage stats for AI coding tools (Claude, Codex, Copilot, and more).
+homepage: https://github.com/nesszer/Win-CodexBar
+license: MIT
+version: 0.70.0
+channels:
+    stable: 0.70.0
+provides:
+    - win-codexbar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nesszer/Win-CodexBar/releases/download/v0.70.0/CodexBar-0.70.0-portable.exe#/CodexBar.exe
+      sha256: 6607fa34a68b1aea0bbcf810871a71debca628e95df1c8068a14b45510c54454
+      bin:
+        - CodexBar.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall win-codexbar
+test: CodexBar --version

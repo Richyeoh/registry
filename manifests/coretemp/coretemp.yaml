@@ -1,0 +1,21 @@
+api: v1
+name: coretemp
+kind: app
+display: coretemp
+description: Monitor processor temperature and other vital information.
+homepage: https://www.alcpu.com/CoreTemp/
+license: Unknown
+version: "1.21"
+channels:
+    stable: "1.21"
+provides:
+    - coretemp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.alcpu.com/CoreTemp/CoreTemp64.zip
+      sha256: 407a5dffbcaf43098200b7f6ae7875974cb7f1891b535837055de09a1f3d154f
+      bin:
+        - coretemp.exe
+      strip: 1
+test: coretemp --version

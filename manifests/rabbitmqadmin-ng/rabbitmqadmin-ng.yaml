@@ -1,0 +1,24 @@
+api: v1
+name: rabbitmqadmin-ng
+kind: app
+display: rabbitmqadmin-ng
+description: A command line tool for RabbitMQ that uses the HTTP API
+homepage: https://github.com/rabbitmq/rabbitmqadmin-ng
+license: Apache-2.0|MIT
+version: 2.35.0
+channels:
+    stable: 2.35.0
+provides:
+    - rabbitmqadmin-ng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.35.0/rabbitmqadmin-2.35.0-x86_64-pc-windows-msvc.exe#/rabbitmqadmin.exe
+      sha256: fe8098bcd4e192762c2d5901ca6be0c0951a37e4202d4d0d77eacf0dda9f44ee
+      bin:
+        - rabbitmqadmin.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rabbitmqadmin-ng
+test: rabbitmqadmin --version

@@ -1,0 +1,21 @@
+api: v1
+name: praat
+kind: app
+display: praat
+description: The scientific analysis of speech in phonetics
+homepage: https://praat.org/
+license: GPL-2.0-or-later
+version: 7.0.03
+channels:
+    stable: 7.0.03
+provides:
+    - praat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/praat/praat.github.io/releases/download/v7.0.03/praat7003_win-x64v3.zip
+      sha256: 393622c0e148a660f4dbc69ab7b44e7fa786c53d399c80486dc0f94c829fd657
+      bin:
+        - Praat.exe
+      strip: 1
+test: Praat --version

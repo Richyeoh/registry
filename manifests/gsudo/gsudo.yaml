@@ -1,0 +1,21 @@
+api: v1
+name: gsudo
+kind: app
+display: gsudo
+description: A Sudo for Windows
+homepage: https://gerardog.github.io/gsudo
+license: MIT
+version: 2.6.1
+channels:
+    stable: 2.6.1
+provides:
+    - gsudo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gerardog/gsudo/releases/download/v2.6.1/gsudo.portable.zip
+      sha256: 21130bf178d7b9891207f00bff56f05b6b363ce9cec7b2d084e45fb12ee51f44
+      bin:
+        - gsudo.exe
+      strip: 1
+test: gsudo --version

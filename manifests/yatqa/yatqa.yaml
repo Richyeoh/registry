@@ -1,0 +1,24 @@
+api: v1
+name: yatqa
+kind: app
+display: yatqa
+description: Manage TeamSpeak 3 servers and instances using a query interface
+homepage: https://yat.qa/
+license: Unknown
+version: 3.9.9b
+channels:
+    stable: 3.9.9b
+provides:
+    - yatqa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.yat.qa/stable/YaTQA-Setup_3.9.9b.exe
+      sha256: 6695d89c716c34c849f301f627671fd76e93c84404c83de75664821d39a23524
+      bin:
+        - yatqa.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yatqa
+test: yatqa --version

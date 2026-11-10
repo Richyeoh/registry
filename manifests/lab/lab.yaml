@@ -1,0 +1,21 @@
+api: v1
+name: lab
+kind: app
+display: lab
+description: An extension to command-line git that helps with everyday GitLab tasks.
+homepage: https://zaquestion.github.io/lab
+license: CC0-1.0
+version: 0.25.1
+channels:
+    stable: 0.25.1
+provides:
+    - lab
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zaquestion/lab/releases/download/v0.25.1/lab_0.25.1_windows_amd64.zip
+      sha256: 75daf8d98678c5544b20a1a544ae77506d2f5bd011e7094f251d69bdf3262994
+      bin:
+        - lab.exe
+      strip: 1
+test: lab --version

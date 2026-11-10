@@ -1,0 +1,24 @@
+api: v1
+name: diagram-designer
+kind: app
+display: diagram-designer
+description: Vector graphics editor for creating flowcharts, UML class diagrams, illustrations and slide shows.
+homepage: https://logicnet.dk/DiagramDesigner/
+license: Unknown
+version: 1.30.0
+channels:
+    stable: 1.30.0
+provides:
+    - diagram-designer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.fosshub.com/Diagram-Designer.html/DiagramDesignerSetup.1.30.0.msi
+      sha256: 0df1070ecc634204d93f4a85394f1f9680d9cd1a6d184e123dc980e59ede3d6f
+      bin:
+        - diagram-designer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall diagram-designer
+test: diagram-designer --version

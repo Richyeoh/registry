@@ -1,0 +1,39 @@
+api: v1
+name: aptos
+kind: app
+display: aptos
+description: Layer 1 blockchain built to support fair access to decentralized assets for all
+homepage: https://aptosfoundation.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 9.6.0
+channels:
+    stable: 9.6.0
+provides:
+    - aptos
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:700c2a780c5e9b3639bc8885682655e903023efbecca4e087b0b576d95c20e48
+      sha256: 700c2a780c5e9b3639bc8885682655e903023efbecca4e087b0b576d95c20e48
+      bin:
+        - aptos
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:1d3f461bbd1e4fc802586ccc997cb5f1052004e05abff7a9d9f9ebbf04361a95
+      sha256: 1d3f461bbd1e4fc802586ccc997cb5f1052004e05abff7a9d9f9ebbf04361a95
+      bin:
+        - aptos
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aptos/blobs/sha256:0a55cbe92fb0471e75e29b801c7cfecebc63aad670606e14d97c17b3654bba0e
+      sha256: 0a55cbe92fb0471e75e29b801c7cfecebc63aad670606e14d97c17b3654bba0e
+      bin:
+        - aptos
+      strip: 1
+test: aptos --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,39 @@
+api: v1
+name: ansible-builder
+kind: app
+display: ansible-builder
+description: CLI tool for building Ansible Execution Environments (Containers)
+homepage: https://ansible-builder.readthedocs.io/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 3.2.0
+channels:
+    stable: 3.2.0
+provides:
+    - ansible-builder
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansible-builder/blobs/sha256:874766b57678de7117a97a6fbd2caf0cd42fe550df032fd8364c99405fc34a01
+      sha256: 874766b57678de7117a97a6fbd2caf0cd42fe550df032fd8364c99405fc34a01
+      bin:
+        - ansible-builder
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ansible-builder/blobs/sha256:2c49e642f152368c00eb04ad6fb13e4c9c7dc91209d13184436318b3a8674f7e
+      sha256: 2c49e642f152368c00eb04ad6fb13e4c9c7dc91209d13184436318b3a8674f7e
+      bin:
+        - ansible-builder
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansible-builder/blobs/sha256:7d3ae35428a994b7c93c60601e09d89da8567c54cbecf4111ea790ab81ae39ae
+      sha256: 7d3ae35428a994b7c93c60601e09d89da8567c54cbecf4111ea790ab81ae39ae
+      bin:
+        - ansible-builder
+      strip: 1
+test: ansible-builder --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

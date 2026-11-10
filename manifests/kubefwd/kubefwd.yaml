@@ -1,0 +1,21 @@
+api: v1
+name: kubefwd
+kind: app
+display: kubefwd
+description: Bulk port forwarding Kubernetes services for local development
+homepage: https://kubefwd.com/
+license: Apache-2.0
+version: 1.25.18
+channels:
+    stable: 1.25.18
+provides:
+    - kubefwd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/txn2/kubefwd/releases/download/v1.25.18/kubefwd_Windows_x86_64.zip
+      sha256: fa156f4d46c8a4672b2ad862b89d40e02afa4c0d08e3cc193524fb9b05aefe60
+      bin:
+        - kubefwd.exe
+      strip: 1
+test: kubefwd --version

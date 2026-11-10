@@ -1,0 +1,26 @@
+api: v1
+name: ktx-software
+kind: app
+display: ktx-software
+description: A collection of tools for creating/validating/supercompressing/converting or information display of ktx files.
+homepage: https://github.com/KhronosGroup/KTX-Software
+license: Unknown
+version: 4.4.2
+channels:
+    stable: 4.4.2
+provides:
+    - ktx-software
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/KhronosGroup/KTX-Software/releases/download/v4.4.2/KTX-Software-4.4.2-Windows-x64.exe#/dl.7z
+      sha256: 1f323b0fec19794f5e6c0425a61d4b1da396872a10be862d105f4f4b2d2957fe
+      bin:
+        - ktx.exe
+        - ktx2check.exe
+        - ktx2ktx2.exe
+        - ktxinfo.exe
+        - ktxsc.exe
+        - toktx.exe
+      strip: 1
+test: ktx --version

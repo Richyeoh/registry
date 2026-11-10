@@ -1,0 +1,24 @@
+api: v1
+name: thinkrail
+kind: app
+display: thinkrail
+description: The worktree IDE by JetBrains for the pi coding agent.
+homepage: https://thinkrail.ai
+license: Apache-2.0
+version: 0.3.2
+channels:
+    stable: 0.3.2
+provides:
+    - thinkrail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JetBrains/thinkrail/releases/download/v0.3.2/thinkrail-windows-x64.exe#/thinkrail.exe
+      sha256: 38f6ded0f6a311c7f4df4781de0a86b0604c1d76101d38d428e8b3d35aeeed40
+      bin:
+        - thinkrail.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall thinkrail
+test: thinkrail --version

@@ -1,0 +1,21 @@
+api: v1
+name: peazip
+kind: app
+display: peazip
+description: A free file archiver utility, based on Open Source technologies
+homepage: https://peazip.github.io
+license: LGPL-3.0-only
+version: 11.4.0
+channels:
+    stable: 11.4.0
+provides:
+    - peazip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/peazip/PeaZip/releases/download/11.4.0/peazip_portable-11.4.0.WIN64.zip
+      sha256: 892426473d70e88738c869b336dd06534f84b7eeec3374494514e7ee32b3b833
+      bin:
+        - peazip.exe
+      strip: 1
+test: peazip --version

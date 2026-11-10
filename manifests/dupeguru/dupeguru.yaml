@@ -1,0 +1,21 @@
+api: v1
+name: dupeguru
+kind: app
+display: dupeguru
+description: Duplicates file finder
+homepage: https://dupeguru.voltaicideas.net
+license: GPL-3.0-only
+version: 4.3.1
+channels:
+    stable: 4.3.1
+provides:
+    - dupeguru
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/arsenetar/dupeguru/releases/download/4.3.1/dupeGuru_win64_4.3.1.exe#/dl.7z
+      sha256: 28293dada3c88336b2b53aca00adf59f85cabf1362f8386a8ffc6be5e1742836
+      bin:
+        - dupeguru-win64.exe
+      strip: 1
+test: dupeguru-win64 --version

@@ -1,0 +1,24 @@
+api: v1
+name: copy-dialog-lunar-lander
+kind: app
+display: copy-dialog-lunar-lander
+description: Copy Dialog Lunar Lander is a small open-source Windows game that turns the file copy progress dialog into a playable lunar lander overlay.
+homepage: https://github.com/Sanakan8472/copy-dialog-lunar-lander
+license: MIT
+version: "1.2"
+channels:
+    stable: "1.2"
+provides:
+    - copy-dialog-lunar-lander
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Sanakan8472/copy-dialog-lunar-lander/releases/download/v1.2/CopyDialogLunarLander.msi
+      sha256: 7c7f51589099d03c696128729ffcd9cd51ae32600701bb5f4ed4def8e43d1267
+      bin:
+        - copy-dialog-lunar-lander.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall copy-dialog-lunar-lander
+test: copy-dialog-lunar-lander --version

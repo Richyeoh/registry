@@ -1,0 +1,32 @@
+api: v1
+name: affinity-photo1
+kind: app
+display: Affinity Photo
+description: Professional image editing software
+homepage: https://affinity.serif.com/en-us/photo/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.10.8
+channels:
+    stable: 1.10.8
+provides:
+    - affinity-photo1
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://affinity-update.s3.amazonaws.com/mac/retail/Affinity%20Photo-1.10.8.app.zip
+      sha256: 02b1f30f890ae58cab9fa8bf9a509f4a9d8ad8c09de79baf499cd6f6fdd5bfb1
+      bin:
+        - affinity-photo1
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://affinity-update.s3.amazonaws.com/mac/retail/Affinity%20Photo-1.10.8.app.zip
+      sha256: 02b1f30f890ae58cab9fa8bf9a509f4a9d8ad8c09de79baf499cd6f6fdd5bfb1
+      bin:
+        - affinity-photo1
+      strip: 1
+test: affinity-photo1 --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

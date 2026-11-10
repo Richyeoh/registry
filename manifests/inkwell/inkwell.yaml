@@ -1,0 +1,21 @@
+api: v1
+name: inkwell
+kind: app
+display: inkwell
+description: Lightweight Markdown editor with split view, live preview, themes, focus mode, and diff viewer.
+homepage: https://inkwell.4worlds.dev/
+license: Unknown
+version: 1.5.2
+channels:
+    stable: 1.5.2
+provides:
+    - inkwell
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/4worlds4w-svg/inkwell/releases/download/v1.5.2/inkwell-windows-x64-v1.5.2.zip
+      sha256: 6aa670696ec22da09e67d262c61a85e439a2ca470bfa182ac6469c04cfd0d797
+      bin:
+        - inkwell.exe
+      strip: 1
+test: inkwell --version

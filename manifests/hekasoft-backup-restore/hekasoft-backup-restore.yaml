@@ -1,0 +1,21 @@
+api: v1
+name: hekasoft-backup-restore
+kind: app
+display: hekasoft-backup-restore
+description: Hekasoft Backup & Restore provides a reliable solution for backing up, restoring, and migrating browser profiles. It also allows you to optimize profile data by removing unnecessary files.
+homepage: https://hekasoft.com/hekasoft-backup-restore/
+license: Unknown
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - hekasoft-backup-restore
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://hekasoft.com/hbr-portable.zip
+      sha256: d2f2d1bfcfeebc929dfda570e96184c956a5b3109226c392fa5edeb4eb7d0cf6
+      bin:
+        - hekasoft-backup-restore.exe
+      strip: 1
+test: hekasoft-backup-restore --version

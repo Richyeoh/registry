@@ -1,0 +1,22 @@
+api: v1
+name: nanazip
+kind: app
+display: nanazip
+description: The 7-Zip derivative intended for the modern Windows experience
+homepage: https://nanazip.org
+license: MIT
+version: 7.0.1882.0
+channels:
+    stable: 7.0.1882.0
+provides:
+    - nanazip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/M2Team/NanaZip/releases/download/7.0.1882.0/NanaZip_7.0.1882.0.msixbundle#/dl.7z
+      sha256: c32c33e5a59a0d02db89f1e85889f942cd7b22ad81110289214187c20e2b6168
+      bin:
+        - NanaZip.Universal.Console.exe
+        - NanaZip.Universal.Windows.exe
+      strip: 1
+test: NanaZip.Universal.Console --version

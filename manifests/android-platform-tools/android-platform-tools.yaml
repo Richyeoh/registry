@@ -1,0 +1,32 @@
+api: v1
+name: android-platform-tools
+kind: app
+display: Android SDK Platform-Tools
+description: Android SDK component
+homepage: https://developer.android.com/tools/releases/platform-tools
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 37.0.2
+channels:
+    stable: 37.0.2
+provides:
+    - android-platform-tools
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://dl.google.com/android/repository/platform-tools_r37.0.2-darwin.zip
+      sha256: de86d62321ad38049d488fb1854c7b9a29f7e1b17e8dfb597c304b038cc37ae7
+      bin:
+        - android-platform-tools
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.google.com/android/repository/platform-tools_r37.0.2-darwin.zip
+      sha256: de86d62321ad38049d488fb1854c7b9a29f7e1b17e8dfb597c304b038cc37ae7
+      bin:
+        - android-platform-tools
+      strip: 1
+test: android-platform-tools --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

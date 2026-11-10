@@ -1,0 +1,24 @@
+api: v1
+name: nomino
+kind: app
+display: nomino
+description: Batch rename utility for developers
+homepage: https://github.com/yaa110/nomino
+license: Apache-2.0
+version: 1.6.4
+channels:
+    stable: 1.6.4
+provides:
+    - nomino
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yaa110/nomino/releases/download/v1.6.4/nomino-windows-64bit.exe#/nomino.exe
+      sha256: ea77b987adb4d802983ed73ada32e026cf92f8dfde23a35e2cc547e622b283b8
+      bin:
+        - nomino.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nomino
+test: nomino --version

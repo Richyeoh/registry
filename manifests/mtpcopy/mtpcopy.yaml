@@ -1,0 +1,24 @@
+api: v1
+name: mtpcopy
+kind: app
+display: mtpcopy
+description: A Windows CLI tool for copying files from/to a portable device via MTP
+homepage: https://github.com/kzmi/mtpcopy
+license: MIT
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - mtpcopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kzmi/mtpcopy/releases/download/0.3.0/mtpcopy.exe
+      sha256: 25768b655afcb8ef1ec9afb5d775c6b73ca44f9b8d35297a72cc94b4638910f8
+      bin:
+        - mtpcopy.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mtpcopy
+test: mtpcopy --version

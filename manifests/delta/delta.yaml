@@ -2,8 +2,8 @@ api: v1
 name: delta
 kind: app
 display: delta
-description: git 更好看的 diff
-homepage: https://github.com/dandavison/delta
+description: A syntax-highlighter for git and diff output
+homepage: https://dandavison.github.io/delta/
 license: MIT
 keywords:
     - github
@@ -43,4 +43,3 @@ platforms:
         - delta
       strip: 1
 test: delta --version
-caveats: 由 GitHub dandavison/delta latest 自动转制

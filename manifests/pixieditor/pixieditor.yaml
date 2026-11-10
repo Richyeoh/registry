@@ -1,0 +1,21 @@
+api: v1
+name: pixieditor
+kind: app
+display: pixieditor
+description: An universal 2D editor
+homepage: https://pixieditor.net/
+license: LGPL-3.0
+version: 2.1.2.5
+channels:
+    stable: 2.1.2.5
+provides:
+    - pixieditor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PixiEditor/PixiEditor/releases/download/2.1.2.5/PixiEditor.2.1.2.5.x64-win.zip
+      sha256: 0cc3751b4236f76da205ef66de9f599c0747d3c466cd0b78021b66f593002c40
+      bin:
+        - pixieditor.exe
+      strip: 1
+test: pixieditor --version

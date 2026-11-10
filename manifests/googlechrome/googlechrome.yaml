@@ -1,0 +1,21 @@
+api: v1
+name: googlechrome
+kind: app
+display: googlechrome
+description: Fast, secure, and free web browser, built for the modern web.
+homepage: https://www.google.com/chrome/
+license: Unknown
+version: 157.0.8103.51
+channels:
+    stable: 157.0.8103.51
+provides:
+    - googlechrome
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/release2/chrome/hhb3n3my4axozv7qmzlcqqaspi_157.0.8103.51/157.0.8103.51_chrome_installer_uncompressed.exe#/dl.7z
+      sha256: cc7aca3546b69255ecc2419c2cbfd51a21ed47837e953cf9d84ab60eca758d57
+      bin:
+        - chrome.exe
+      strip: 1
+test: chrome --version

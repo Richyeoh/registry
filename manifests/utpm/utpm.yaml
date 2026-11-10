@@ -1,0 +1,21 @@
+api: v1
+name: utpm
+kind: app
+display: utpm
+description: A package manager for local and remote Typst packages.
+homepage: https://github.com/typst-community/utpm
+license: MIT
+version: 0.4.1
+channels:
+    stable: 0.4.1
+provides:
+    - utpm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/typst-community/utpm/releases/download/v0.4.1/utpm-x86_64-pc-windows-msvc.tar.gz
+      sha256: 003553b7314466a2d1c2cc208c5b99f29adc50bbf17a4c31cd4a196742248cbc
+      bin:
+        - utpm.exe
+      strip: 1
+test: utpm --version

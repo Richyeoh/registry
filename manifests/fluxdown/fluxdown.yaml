@@ -1,0 +1,21 @@
+api: v1
+name: fluxdown
+kind: app
+display: fluxdown
+description: A Rust-powered download manager with HTTP, FTP, BitTorrent and HLS/DASH streaming support.
+homepage: https://fluxdown.zerx.dev
+license: Unknown
+version: 0.6.7
+channels:
+    stable: 0.6.7
+provides:
+    - fluxdown
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zerx-lab/FluxDown/releases/download/v0.6.7/FluxDown-0.6.7-windows-x64-portable.zip
+      sha256: c3233481eebe2fbe90c133f5af5dedee60854e79f810019634dde7892e0660da
+      bin:
+        - fluxdown.exe
+      strip: 1
+test: fluxdown --version

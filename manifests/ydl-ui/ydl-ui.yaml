@@ -1,0 +1,21 @@
+api: v1
+name: ydl-ui
+kind: app
+display: ydl-ui
+description: A UI for the command-line video downloader youtube-dl
+homepage: https://github.com/Maxstupo/ydl-ui
+license: MIT
+version: 2.9.1.0
+channels:
+    stable: 2.9.1.0
+provides:
+    - ydl-ui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Maxstupo/ydl-ui/releases/download/v2.9.1/YDL-UI_v2.9.1.0_Portable.zip
+      sha256: 388486c3aa8251f9e8f021f418912c668355c47f7c6855f96149ae3668a94d43
+      bin:
+        - YDL-UI.exe
+      strip: 1
+test: YDL-UI --version

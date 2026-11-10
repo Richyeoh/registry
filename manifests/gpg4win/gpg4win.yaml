@@ -1,0 +1,24 @@
+api: v1
+name: gpg4win
+kind: app
+display: gpg4win
+description: GNU Privacy Guard for Windows is encryption software for files and emails.
+homepage: https://www.gpg4win.org
+license: GPL-2.0-or-later
+version: 5.1.1
+channels:
+    stable: 5.1.1
+provides:
+    - gpg4win
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://files.gpg4win.org/gpg4win-5.1.1.exe
+      sha256: ed19c0c89ec42fe32c52a7abd6e3da5f491752700546b9eed7ddf82fd303cddf
+      bin:
+        - gpg4win.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gpg4win
+test: gpg4win --version

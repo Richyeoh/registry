@@ -1,0 +1,24 @@
+api: v1
+name: redis-tui
+kind: app
+display: redis-tui
+description: A Redis Text-based UI client
+homepage: https://github.com/mylxsw/redis-tui
+license: MIT
+version: 0.1.6
+channels:
+    stable: 0.1.6
+provides:
+    - redis-tui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mylxsw/redis-tui/releases/download/0.1.6/redis-tui-win.exe#/redis-tui.exe
+      sha256: c7c999f6f101d8aed35f03949934ec25ba539b8945236b463e69dea6ff965b3d
+      bin:
+        - redis-tui.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall redis-tui
+test: redis-tui --version

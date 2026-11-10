@@ -1,0 +1,21 @@
+api: v1
+name: lintalist
+kind: app
+display: lintalist
+description: Searchable interactive texts to copy & paste text, run scripts, using easily exchangeable bundles.
+homepage: https://github.com/lintalist/lintalist
+license: GPL-2.0-or-later
+version: 1.9.27
+channels:
+    stable: 1.9.27
+provides:
+    - lintalist
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lintalist/lintalist/releases/download/v1.9.27/lintalist64.zip
+      sha256: 45cb76a695118e70d798d55e21c122a2aa4e0e6a7c7ff16f21a29ae4bb5b07e3
+      bin:
+        - lintalist.exe
+      strip: 1
+test: lintalist --version

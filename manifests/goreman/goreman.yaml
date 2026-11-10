@@ -1,0 +1,21 @@
+api: v1
+name: goreman
+kind: app
+display: goreman
+description: Manage Procfile-based applications
+homepage: https://github.com/mattn/goreman
+license: MIT
+version: 0.3.19
+channels:
+    stable: 0.3.19
+provides:
+    - goreman
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mattn/goreman/releases/download/v0.3.19/goreman_v0.3.19_windows_amd64.zip
+      sha256: 59efb8a30769e40cc597f2c3bfebf364750acc142396ab9e9e763840a3ab3052
+      bin:
+        - goreman.exe
+      strip: 1
+test: goreman --version

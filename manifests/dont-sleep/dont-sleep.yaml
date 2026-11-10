@@ -1,0 +1,21 @@
+api: v1
+name: dont-sleep
+kind: app
+display: dont-sleep
+description: A small program to prevent system Shutdown, Stand By, Turn Off, Restart, Hibernate.
+homepage: https://www.softwareok.com/?Download=DontSleep
+license: Unknown
+version: "10.44"
+channels:
+    stable: "10.44"
+provides:
+    - dont-sleep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.softwareok.com/Download/DontSleep_x64.zip
+      sha256: fd0434393b6734741078d5f2e77557e3c86e7b9778b3bdeed9d945c423a629c6
+      bin:
+        - dont-sleep.exe
+      strip: 1
+test: dont-sleep --version

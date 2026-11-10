@@ -1,0 +1,24 @@
+api: v1
+name: cloc
+kind: app
+display: cloc
+description: Counts blank lines, comment lines, and physical lines of source code in many programming languages
+homepage: https://github.com/AlDanial/cloc
+license: GPL-2.0-only|Artistic-2.0
+version: "2.10"
+channels:
+    stable: "2.10"
+provides:
+    - cloc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AlDanial/cloc/releases/download/v2.10/cloc-2.10.exe#/cloc.exe
+      sha256: 97786c4b5bb71d2be67e42061a2f5d03db73bbf88228f8710001d770e867bbef
+      bin:
+        - cloc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cloc
+test: cloc --version

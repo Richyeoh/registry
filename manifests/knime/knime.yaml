@@ -1,0 +1,21 @@
+api: v1
+name: knime
+kind: app
+display: knime
+description: KNIME Analytics Platform. Software for creating data science applications and services. Intuitive, open, and continuously integrating new developments, KNIME makes understanding data and designing data science workflows and reusable components accessible to everyone.
+homepage: https://www.knime.com
+license: GPL-3.0-or-later
+version: 5.12.0
+channels:
+    stable: 5.12.0
+provides:
+    - knime
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.knime.org/analytics-platform/win/knime_5.12.0.win32.win32.x86_64.zip
+      sha256: 81c8a23fb4feb702140504c78df363a74179a223f33fda2bde05c411c2f89242
+      bin:
+        - knime.exe
+      strip: 1
+test: knime --version

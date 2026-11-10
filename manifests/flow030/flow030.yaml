@@ -1,0 +1,21 @@
+api: v1
+name: flow030
+kind: app
+display: flow030
+description: A static type checker for JavaScript code (version 0.30)
+homepage: https://flowtype.org/
+license: MIT
+version: 0.30.0
+channels:
+    stable: 0.30.0
+provides:
+    - flow030
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/flow/releases/download/v0.30.0/flow-win64-v0.30.0.zip
+      sha256: 68a13e25372e6fcc9141ab076bc954c30c03ee61db8d34930f724afbdb380864
+      bin:
+        - flow.exe
+      strip: 1
+test: flow --version

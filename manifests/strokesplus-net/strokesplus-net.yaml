@@ -1,0 +1,21 @@
+api: v1
+name: strokesplus-net
+kind: app
+display: strokesplus.net
+description: Mouse gesture recognition utility for Windows which allows you to create powerful mouse gestures that save you time.
+homepage: https://www.strokesplus.net
+license: Unknown
+version: 0.5.8.0
+channels:
+    stable: 0.5.8.0
+provides:
+    - strokesplus-net
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.strokesplus.net/StrokesPlus.net_Portable_0.5.8.0.zip
+      sha256: 1a9f21e62a60f1a3f4475bb813756b4d16f9c714f3b21a9c317d14a46a6c939f
+      bin:
+        - strokesplus-net.exe
+      strip: 1
+test: strokesplus-net --version

@@ -1,0 +1,21 @@
+api: v1
+name: popeye
+kind: app
+display: popeye
+description: A Kubernetes cluster resource sanitizer.
+homepage: https://popeyecli.io
+license: Apache-2.0
+version: 0.22.1
+channels:
+    stable: 0.22.1
+provides:
+    - popeye
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_windows_amd64.tar.gz
+      sha256: fa5c155d65313e93985bdb7ed1a79fb0e310b7868848dfaf381ea081f349dacc
+      bin:
+        - popeye.exe
+      strip: 1
+test: popeye --version

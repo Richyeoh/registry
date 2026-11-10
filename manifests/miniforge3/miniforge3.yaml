@@ -1,0 +1,26 @@
+api: v1
+name: miniforge3
+kind: app
+display: miniforge3
+description: Community-driven minimalistic conda installer using the conda-forge channel as default.
+homepage: https://github.com/conda-forge/miniforge
+license: BSD-3-Clause
+version: 26.9.4-2
+channels:
+    stable: 26.9.4-2
+provides:
+    - miniforge3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/conda-forge/miniforge/releases/download/26.9.4-2/Miniforge3-26.9.4-2-Windows-x86_64.exe
+      sha256: 9d83983669bc5d3b5dd4c631454bf953c3caf4ac78b9c9ada9971e5b021d83c3
+      bin:
+        - python.exe
+        - pythonw.exe
+        - python.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall miniforge3
+test: python --version

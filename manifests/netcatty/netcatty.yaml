@@ -1,0 +1,24 @@
+api: v1
+name: netcatty
+kind: app
+display: netcatty
+description: AI-powered SSH client, SFTP browser, and terminal manager
+homepage: https://netcatty.app
+license: GPL-3.0-only
+version: 1.1.90
+channels:
+    stable: 1.1.90
+provides:
+    - netcatty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/binaricat/Netcatty/releases/download/v1.1.90/Netcatty-1.1.90-portable-win-x64.exe#/Netcatty.exe
+      sha256: f08fc3fe42dd1675ea6573ce5ab1c41b3a15ac1dfdb60adfba4566deb4142028
+      bin:
+        - netcatty.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall netcatty
+test: netcatty --version

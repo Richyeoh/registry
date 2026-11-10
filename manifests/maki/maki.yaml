@@ -1,0 +1,21 @@
+api: v1
+name: maki
+kind: app
+display: maki
+description: An efficient AI coding agent extendable by neovim like Lua plugins.
+homepage: https://maki.sh
+license: MIT
+version: 0.7.1
+channels:
+    stable: 0.7.1
+provides:
+    - maki
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tontinton/maki/releases/download/v0.7.1/maki-v0.7.1-x86_64-pc-windows-msvc.zip
+      sha256: 47b8cf472ea608278a72c286173251037fd788dd03391afd82ab12fedfd2de62
+      bin:
+        - maki.exe
+      strip: 1
+test: maki --version

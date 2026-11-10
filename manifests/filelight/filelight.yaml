@@ -1,0 +1,21 @@
+api: v1
+name: filelight
+kind: app
+display: filelight
+description: Disk usage visualizer
+homepage: https://apps.kde.org/filelight
+license: GPL-2.0-or-later
+version: 26.08-2243
+channels:
+    stable: 26.08-2243
+provides:
+    - filelight
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.kde.org/ci-builds/utilities/filelight/release-26.08/windows/filelight-release_26.08-2243-windows-cl-msvc2022-x86_64.7z
+      sha256: 51e8c0bcaabaabdcdc6a4f46f8d8ceb86ec21d0a45881672370e53e74e49cfa5
+      bin:
+        - bin\filelight.exe
+      strip: 1
+test: bin\filelight --version

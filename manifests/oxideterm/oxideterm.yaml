@@ -1,0 +1,21 @@
+api: v1
+name: oxideterm
+kind: app
+display: oxideterm
+description: AI-native workspace for local shells and remote machines.
+homepage: https://oxideterm.app
+license: GPL-3.0-only
+version: 2.3.1
+channels:
+    stable: 2.3.1
+provides:
+    - oxideterm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AnalyseDeCircuit/oxideterm/releases/download/v2.3.1/OxideTerm_2.3.1_windows_x64_portable.zip
+      sha256: 41212ea88fc3427934bcdb2439f57578da9033ee7b4b2e8805dd20799e5924e2
+      bin:
+        - resources\cli-bin\x86_64-pc-windows-msvc\oxideterm.exe
+      strip: 1
+test: resources\cli-bin\x86_64-pc-windows-msvc\oxideterm --version

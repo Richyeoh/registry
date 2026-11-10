@@ -1,0 +1,21 @@
+api: v1
+name: registry-finder
+kind: app
+display: registry-finder
+description: Registry Finder is an improved replacement for the built-in Windows registry editor
+homepage: https://registry-finder.com/
+license: Unknown
+version: 2.63.0.0
+channels:
+    stable: 2.63.0.0
+provides:
+    - registry-finder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://registry-finder.com/bin/2.63.0.0/RegistryFinder64.zip
+      sha256: 7cd5db9cbd17c48387980525291d046662d394548a6cb7b737800820ec965e02
+      bin:
+        - registryfinder.exe
+      strip: 1
+test: registryfinder --version

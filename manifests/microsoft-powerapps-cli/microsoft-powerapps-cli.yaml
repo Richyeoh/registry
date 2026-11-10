@@ -1,0 +1,21 @@
+api: v1
+name: microsoft-powerapps-cli
+kind: app
+display: microsoft-powerapps-cli
+description: Simple, single-stop tool for developing customizations and extensions for Microsoft PowerApps.
+homepage: https://docs.microsoft.com/en-us/powerapps/developer/component-framework/overview
+license: Unknown
+version: 2.14.1
+channels:
+    stable: 2.14.1
+provides:
+    - microsoft-powerapps-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.nuget.org/api/v2/package/Microsoft.PowerApps.CLI/2.14.1#/dl.zip
+      sha256: 7a03c2de2e825efbdd4d36c57fa862cd8fa7e652b2fdc5e888614031dcd78252
+      bin:
+        - pac.exe
+      strip: 1
+test: pac --version

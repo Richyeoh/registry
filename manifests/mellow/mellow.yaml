@@ -1,0 +1,21 @@
+api: v1
+name: mellow
+kind: app
+display: mellow
+description: A rule-based global transparent proxy client. Also a Proxifier alternative.
+homepage: https://github.com/mellow-io/mellow
+license: Freeware
+version: 0.1.22
+channels:
+    stable: 0.1.22
+provides:
+    - mellow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mellow-io/mellow/releases/download/v0.1.22/Mellow.Setup.0.1.22.exe#/dl.7z
+      sha256: 96c95e6669ccb6affe6af283e91222448a5ddf2b5898516eb7c85994b1a6d322
+      bin:
+        - mellow.exe
+      strip: 1
+test: mellow --version

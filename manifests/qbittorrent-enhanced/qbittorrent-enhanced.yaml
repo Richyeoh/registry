@@ -1,0 +1,21 @@
+api: v1
+name: qbittorrent-enhanced
+kind: app
+display: qbittorrent-enhanced
+description: qBittorrent BitTorrent client with anti-leech enhancements
+homepage: https://github.com/c0re100/qBittorrent-Enhanced-Edition
+license: GPL-2.0-or-later
+version: 5.2.4.10
+channels:
+    stable: 5.2.4.10
+provides:
+    - qbittorrent-enhanced
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-5.2.4.10/qbittorrent_enhanced_5.2.4.10_x64_setup.exe#/dl.7z
+      sha256: d76fe0df0513fe85a5af4e936eda1a10d239b87e148e546af9aa4afc50d27dc2
+      bin:
+        - qbittorrent.exe
+      strip: 1
+test: qbittorrent --version

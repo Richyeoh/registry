@@ -1,0 +1,32 @@
+api: v1
+name: alex313031-thorium
+kind: app
+display: Thorium
+description: Chromium-based web browser
+homepage: https://thorium.rocks/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: M138.0.7204.303
+channels:
+    stable: M138.0.7204.303
+provides:
+    - alex313031-thorium
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/Alex313031/Thorium-MacOS/releases/download/M138.0.7204.303/Thorium_MacOS_ARM64.dmg
+      sha256: 01f77352f40445e5c39a838c6e48198a09b64c14b0ec423c83fd9b461e0d7069
+      bin:
+        - alex313031-thorium
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/Alex313031/Thorium-MacOS/releases/download/M138.0.7204.303/Thorium_MacOS_ARM64.dmg
+      sha256: 01f77352f40445e5c39a838c6e48198a09b64c14b0ec423c83fd9b461e0d7069
+      bin:
+        - alex313031-thorium
+      strip: 1
+test: alex313031-thorium --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

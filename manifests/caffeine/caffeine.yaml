@@ -1,0 +1,22 @@
+api: v1
+name: caffeine
+kind: app
+display: caffeine
+description: Prevents PC from locking, sleeping or activating the screensaver.
+homepage: https://www.zhornsoftware.co.uk/caffeine/index.htm
+license: Freeware
+version: "1.98"
+channels:
+    stable: "1.98"
+provides:
+    - caffeine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.zhornsoftware.co.uk/caffeine/caffeine.zip
+      sha256: 4a259c348e59eb51bbb75aac7fdcc798705496d575892ee1e01fff6970d5ba1c
+      bin:
+        - caffeine64.exe
+        - caffeine64.exe
+      strip: 1
+test: caffeine64 --version

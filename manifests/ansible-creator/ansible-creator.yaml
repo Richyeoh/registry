@@ -1,0 +1,39 @@
+api: v1
+name: ansible-creator
+kind: app
+display: ansible-creator
+description: CLI tool for scaffolding Ansible Content
+homepage: https://ansible.readthedocs.io/projects/creator/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 26.11.0
+channels:
+    stable: 26.11.0
+provides:
+    - ansible-creator
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansible-creator/blobs/sha256:42c0a19b2713fc9fb7d08bcfabf9c3938d28c63067db9af04c8890a7b97baf29
+      sha256: 42c0a19b2713fc9fb7d08bcfabf9c3938d28c63067db9af04c8890a7b97baf29
+      bin:
+        - ansible-creator
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ansible-creator/blobs/sha256:8c9dd9edfb791dcc2fbf49798fd5c03831c6cf8d6a267976af03335a760f1a29
+      sha256: 8c9dd9edfb791dcc2fbf49798fd5c03831c6cf8d6a267976af03335a760f1a29
+      bin:
+        - ansible-creator
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansible-creator/blobs/sha256:c73d1ff0b33937a7a31b6defa8dc277454292e57638fbaf1ef5013bcc086a264
+      sha256: c73d1ff0b33937a7a31b6defa8dc277454292e57638fbaf1ef5013bcc086a264
+      bin:
+        - ansible-creator
+      strip: 1
+test: ansible-creator --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: vncviewer
+kind: app
+display: vncviewer
+description: Control VNC enabled computers.
+homepage: https://www.realvnc.com/download/viewer
+license: Unknown
+version: 7.15.1
+channels:
+    stable: 7.15.1
+provides:
+    - vncviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-7.15.1-Windows-64bit.exe#/vncviewer.exe
+      sha256: 39195c0abe53dc8fc2a57beeb6df9accf72226d46688845bf864c4d639030d84
+      bin:
+        - vncviewer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall vncviewer
+test: vncviewer --version

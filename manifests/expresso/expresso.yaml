@@ -1,0 +1,24 @@
+api: v1
+name: expresso
+kind: app
+display: expresso
+description: Editor equally suitable as a teaching tool for the beginning user of regular expressions or as a full-featured development environment for the experienced programmer or web designer with an extensive knowledge of regular expressions.
+homepage: https://www.ultrapico.com/Expresso.htm
+license: Unknown
+version: 3.1.7917
+channels:
+    stable: 3.1.7917
+provides:
+    - expresso
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.ultrapico.com/ExpressoSetup-3.1.7917.msi
+      sha256: 4bac670cec408d26f8332a02c30c1a1de766956b8cd3c7ba8e9e1e8400e93eec
+      bin:
+        - expresso.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall expresso
+test: expresso --version

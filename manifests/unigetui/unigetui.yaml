@@ -1,0 +1,22 @@
+api: v1
+name: unigetui
+kind: app
+display: unigetui
+description: GUI for the most common CLI package managers, such as WinGet, Scoop, Chocolatey, Pip, Npm, .NET Tool, PowerShell Gallery and more.
+homepage: https://devolutions.net/unigetui/
+license: MIT
+version: 2026.3.3
+channels:
+    stable: 2026.3.3
+provides:
+    - unigetui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Devolutions/UniGetUI/releases/download/v2026.3.3/UniGetUI.x64.zip
+      sha256: 997c13d6691a59478bf0599618fa3e678f125468733a8bbc1d7b7e000026d8b3
+      bin:
+        - UniGetUI.exe
+        - uniget.exe
+      strip: 1
+test: UniGetUI --version

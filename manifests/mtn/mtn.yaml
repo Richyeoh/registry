@@ -1,0 +1,21 @@
+api: v1
+name: mtn
+kind: app
+display: mtn
+description: Movie Thumbnailer - save thumbnails (screenshots) of movie or video files to image files.
+homepage: https://gitlab.com/movie_thumbnailer/mtn/-/wikis/home
+license: GPL-2.0-or-later
+version: 3.5.0-1
+channels:
+    stable: 3.5.0-1
+provides:
+    - mtn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/-/project/3655713/uploads/5b7ca00b81629aacd8fcf8e99b859368/mtn-3.5.0-1-win64.zip
+      sha256: 4e21b1bdf4fde6df5cbc31a11abe1be4a48131a307b7dfc822dfe7bb8e5703e9
+      bin:
+        - mtn.exe
+      strip: 1
+test: mtn --version

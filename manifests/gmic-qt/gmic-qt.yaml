@@ -1,0 +1,21 @@
+api: v1
+name: gmic-qt
+kind: app
+display: gmic-qt
+description: A full-featured open-source framework for digital image processing.
+homepage: https://gmic.eu
+license: CECILL-2.1
+version: 4.0.7
+channels:
+    stable: 4.0.7
+provides:
+    - gmic-qt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gmic.eu/get_file.php?file=windows/gmic_4.0.7_qt_win64.zip
+      sha256: bf05023cb16b623517000665241a62e7c8ffa5ea057c27bd40efe90e22a65ff7
+      bin:
+        - gmic-qt.exe
+      strip: 1
+test: gmic-qt --version

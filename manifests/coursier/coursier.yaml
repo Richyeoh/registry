@@ -1,0 +1,21 @@
+api: v1
+name: coursier
+kind: app
+display: coursier
+description: Pure Scala Artifact Fetching
+homepage: https://get-coursier.io
+license: Apache-2.0
+version: 2.1.26
+channels:
+    stable: 2.1.26
+provides:
+    - coursier
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/coursier/coursier/releases/download/v2.1.26/coursier#/coursier.jar
+      sha256: eb0c35379e76f44404f777ab0a2335ca5326f6b7721b8cdfa873e87bd9f4ac0c
+      bin:
+        - coursier.jar.exe
+      strip: 1
+test: coursier.jar --version

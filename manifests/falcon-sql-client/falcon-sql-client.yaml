@@ -1,0 +1,21 @@
+api: v1
+name: falcon-sql-client
+kind: app
+display: falcon-sql-client
+description: SQL client with inline data visualization
+homepage: https://plot.ly/free-sql-client-download
+license: MIT
+version: 4.1.0
+channels:
+    stable: 4.1.0
+provides:
+    - falcon-sql-client
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/plotly/falcon-sql-client/releases/download/v4.1.0/win-falcon-v4.1.0.zip
+      sha256: eef03189f908bcc5a6b4562adccbfb6184f4965b3fdbd205c60927c4fbec0f7b
+      bin:
+        - falcon-sql-client.exe
+      strip: 1
+test: falcon-sql-client --version

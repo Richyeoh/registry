@@ -1,0 +1,21 @@
+api: v1
+name: tunnel
+kind: app
+display: tunnel
+description: Expose local servers to the internet securely.
+homepage: https://github.com/labstack/tunnel-client
+license: MIT
+version: 0.5.15
+channels:
+    stable: 0.5.15
+provides:
+    - tunnel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/labstack/tunnel-client/releases/download/v0.5.15/tunnel_0.5.15_windows_64-bit.zip
+      sha256: b9ddc128565f2ccf077b5a5b8d20e7545be49c96fd6b6f986635de16367ef00c
+      bin:
+        - tunnel.exe
+      strip: 1
+test: tunnel --version

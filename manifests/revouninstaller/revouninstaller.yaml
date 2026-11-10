@@ -1,0 +1,21 @@
+api: v1
+name: revouninstaller
+kind: app
+display: revouninstaller
+description: Software uninstaller with support for additional cleanup of registries/files
+homepage: https://www.revouninstaller.com/products/revo-uninstaller-free/
+license: Freeware
+version: 2.7.2
+channels:
+    stable: 2.7.2
+provides:
+    - revouninstaller
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.revouninstaller.com/download/RevoUninstaller_Portable.zip
+      sha256: a0a1a35fcba86dc6773b4d511a172ed7ab3f0082ac298074462b83d7ed2bd424
+      bin:
+        - revouninstaller.exe
+      strip: 1
+test: revouninstaller --version

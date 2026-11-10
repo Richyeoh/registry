@@ -1,0 +1,21 @@
+api: v1
+name: juicefs
+kind: app
+display: juicefs
+description: A distributed POSIX file system built on top of Redis and S3.
+homepage: https://juicefs.com
+license: Apache-2.0
+version: 1.4.2
+channels:
+    stable: 1.4.2
+provides:
+    - juicefs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/juicedata/juicefs/releases/download/v1.4.2/juicefs-1.4.2-windows-amd64.tar.gz
+      sha256: 94be30bb51b93685b0129e7209d1432532339718e6abd035f16ec77a18a0f64e
+      bin:
+        - juicefs.exe
+      strip: 1
+test: juicefs --version

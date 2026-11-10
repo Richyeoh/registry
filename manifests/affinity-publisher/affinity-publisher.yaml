@@ -1,0 +1,32 @@
+api: v1
+name: affinity-publisher
+kind: app
+display: Affinity Publisher 2
+description: Professional desktop publishing software
+homepage: https://affinity.serif.com/en-us/publisher/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.6.5,3782
+channels:
+    stable: 2.6.5,3782
+provides:
+    - affinity-publisher
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Publisher%202%20Affinity%20Store%203782.zip
+      sha256: 06b9628d108e7ecee5a2c4b3d607ba58996d5cdef4ef83a76195db48c1df9efa
+      bin:
+        - affinity-publisher
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Publisher%202%20Affinity%20Store%203782.zip
+      sha256: 06b9628d108e7ecee5a2c4b3d607ba58996d5cdef4ef83a76195db48c1df9efa
+      bin:
+        - affinity-publisher
+      strip: 1
+test: affinity-publisher --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

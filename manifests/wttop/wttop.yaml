@@ -1,0 +1,24 @@
+api: v1
+name: wttop
+kind: app
+display: wttop
+description: System monitor for the new Windows Terminal
+homepage: https://github.com/jchomarat/wttop
+license: MIT
+version: "1.1"
+channels:
+    stable: "1.1"
+provides:
+    - wttop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jchomarat/wttop/releases/download/1.1/wttop.exe
+      sha256: f39d5bf7aeb4a61b6c155ca39e4109ae4a41b0dfb50d587c6c6bb0aa6a486f28
+      bin:
+        - wttop.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wttop
+test: wttop --version

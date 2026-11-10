@@ -1,0 +1,21 @@
+api: v1
+name: backrest
+kind: app
+display: backrest
+description: Web UI and orchestrator for restic backup.
+homepage: https://github.com/garethgeorge/backrest
+license: GPL-3.0-only
+version: 1.14.1
+channels:
+    stable: 1.14.1
+provides:
+    - backrest
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/garethgeorge/backrest/releases/download/v1.14.1/backrest_Windows_x86_64.zip
+      sha256: 16b6d902303df77c14601325eada8656158e8a0531973d6094d22638ff45f545
+      bin:
+        - backrest.exe
+      strip: 1
+test: backrest --version

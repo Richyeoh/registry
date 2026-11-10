@@ -1,0 +1,22 @@
+api: v1
+name: debugviewpp
+kind: app
+display: debugviewpp
+description: Collect, view and filter application logs.
+homepage: https://github.com/CobaltFusion/DebugViewPP
+license: BSL-1.0
+version: 1.2.0.0
+channels:
+    stable: 1.2.0.0
+provides:
+    - debugviewpp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CobaltFusion/DebugViewPP/releases/download/v.1.20.0.0/Debugview-1.2.0.0-x64.zip
+      sha256: eb4e94faf5027ade8d7503309d6dc3127c45955f685b724308124473759cef90
+      bin:
+        - Debugviewpp.exe
+        - DebugViewConsole.exe
+      strip: 1
+test: Debugviewpp --version

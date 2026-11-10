@@ -1,0 +1,21 @@
+api: v1
+name: go-sqlcmd
+kind: app
+display: go-sqlcmd
+description: sqlcmd is a multi-platform command line experience for Microsoft SQL Server and Azure SQL
+homepage: https://learn.microsoft.com/sql/tools/sqlcmd/go-sqlcmd-utility
+license: MIT
+version: 1.10.0
+channels:
+    stable: 1.10.0
+provides:
+    - go-sqlcmd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/go-sqlcmd/releases/download/v1.10.0/sqlcmd-windows-amd64.zip
+      sha256: a4c28332fcc6e497d655e53ac8f4939f4ab170f9cfd32d0fa5081b60f4d9d691
+      bin:
+        - sqlcmd.exe
+      strip: 1
+test: sqlcmd --version

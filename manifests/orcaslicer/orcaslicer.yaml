@@ -1,0 +1,21 @@
+api: v1
+name: orcaslicer
+kind: app
+display: orcaslicer
+description: G-code generator for 3D printers (Bambu, Prusa, Voron, VzBot, RatRig, Creality, etc.)
+homepage: https://github.com/OrcaSlicer/OrcaSlicer
+license: AGPL-3.0-or-later
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - orcaslicer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v2.5.0/OrcaSlicer_Windows_V2.5.0_x64_portable.zip
+      sha256: e355d9f8ac0be4efa4b4f99ecae448d4e99def8dee97683847ede5aa0ccb9166
+      bin:
+        - orcaslicer.exe
+      strip: 1
+test: orcaslicer --version

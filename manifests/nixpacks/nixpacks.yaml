@@ -1,0 +1,21 @@
+api: v1
+name: nixpacks
+kind: app
+display: nixpacks
+description: Generate an OCI compliant image based off app source.
+homepage: https://nixpacks.com
+license: MIT
+version: 1.39.0
+channels:
+    stable: 1.39.0
+provides:
+    - nixpacks
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/railwayapp/nixpacks/releases/download/v1.39.0/nixpacks-v1.39.0-x86_64-pc-windows-msvc.zip
+      sha256: a857a34fc945f8936927bc36a0f5183b9fa3138205258692017033c8a71d8c63
+      bin:
+        - nixpacks.exe
+      strip: 1
+test: nixpacks --version

@@ -1,0 +1,24 @@
+api: v1
+name: dotmemory
+kind: app
+display: dotmemory
+description: DotMemory. Memory Profile & Unit testing framework for .NET by JetBrains.
+homepage: https://www.jetbrains.com/dotmemory/
+license: Unknown
+version: "2026.3"
+channels:
+    stable: "2026.3"
+provides:
+    - dotmemory
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/resharper/dotUltimate.2026.3/dotMemory.UI.64.2026.3.exe#/dotMemory.exe
+      sha256: 40085b7506121ead89b384de11af13974a059f8be9445af90d611de929c9a3ea
+      bin:
+        - dotmemory.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall dotmemory
+test: dotmemory --version

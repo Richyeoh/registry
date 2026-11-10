@@ -1,0 +1,21 @@
+api: v1
+name: siyuan-note
+kind: app
+display: siyuan-note
+description: SiYuan is a privacy-first, self-hosted, fully open source personal knowledge management software, supports fine-grained block-level reference, and Markdown WYSIWYG.
+homepage: https://b3log.org/siyuan
+license: AGPL-3.0-only
+version: 3.8.10
+channels:
+    stable: 3.8.10
+provides:
+    - siyuan-note
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/siyuan-note/siyuan/releases/download/v3.8.10/siyuan-3.8.10-win.exe#/dl.7z
+      sha256: 99a51a9296fe6dfe3a4ec77206d751243ef762170bbd1799726a9a344003dc6d
+      bin:
+        - siyuan-note.exe
+      strip: 1
+test: siyuan-note --version

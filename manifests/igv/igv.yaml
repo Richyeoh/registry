@@ -1,0 +1,21 @@
+api: v1
+name: igv
+kind: app
+display: igv
+description: Easy visualization of various genomics/bioinformatics file formats, including but not limited to BAM, VCF, and GFF3.
+homepage: https://igv.org
+license: MIT
+version: 2.19.8
+channels:
+    stable: 2.19.8
+provides:
+    - igv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.8-WithJava-installer.exe#/dl.7z
+      sha256: 6152f8a3ee1ed6b35532fb6fa18155f858c559504287c1beab1b68946c265892
+      bin:
+        - igv.bat.exe
+      strip: 1
+test: igv.bat --version

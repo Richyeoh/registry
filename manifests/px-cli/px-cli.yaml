@@ -1,0 +1,22 @@
+api: v1
+name: px-cli
+kind: app
+display: px
+description: An HTTP proxy server to automatically authenticate through an NTLM proxy.
+homepage: https://github.com/genotrance/px
+license: MIT
+version: 0.11.0
+channels:
+    stable: 0.11.0
+provides:
+    - px-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/genotrance/px/releases/download/v0.11.0/px-v0.11.0-windows-amd64.zip
+      sha256: 4e69f56f5bad9878190a5e82b5ea18857d15ef34a04256a624a40b4458e96417
+      bin:
+        - px.exe
+        - pxw.exe
+      strip: 1
+test: px --version

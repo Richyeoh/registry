@@ -1,0 +1,21 @@
+api: v1
+name: cosmosdbexplorer-beta
+kind: app
+display: cosmosdbexplorer-beta
+description: A nice client explorer for Microsoft Cosmos DB. It mimics the Data Explorer available on the Azure Portal on the desktop.
+homepage: https://github.com/sachabruttin/CosmosDbExplorer
+license: MIT
+version: 0.9.10-beta
+channels:
+    stable: 0.9.10-beta
+provides:
+    - cosmosdbexplorer-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sachabruttin/CosmosDbExplorer/releases/download/v0.9.10-beta/CosmosDbExplorer.zip
+      sha256: ecd373dff1474ed3e9e67da826de5a386e329ee32eba8f820b777fc1809567f2
+      bin:
+        - cosmosdbexplorer-beta.exe
+      strip: 1
+test: cosmosdbexplorer-beta --version

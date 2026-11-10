@@ -1,0 +1,22 @@
+api: v1
+name: termusic
+kind: app
+display: termusic
+description: Music Player TUI written in Rust
+homepage: https://github.com/tramhao/termusic
+license: GPL-3.0-or-later,MIT
+version: 0.13.2
+channels:
+    stable: 0.13.2
+provides:
+    - termusic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tramhao/termusic/releases/download/v0.13.2/termusic-v0.13.2-x86_64-windows.zip
+      sha256: 496b953b94a8ec39e3d9448e79beaec0b9502de8d6fd2752b899dacb6af22244
+      bin:
+        - termusic.exe
+        - termusic-server.exe
+      strip: 1
+test: termusic --version

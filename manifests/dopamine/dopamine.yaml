@@ -1,0 +1,21 @@
+api: v1
+name: dopamine
+kind: app
+display: dopamine
+description: Audio player which tries to make organizing and listening to music as simple and pretty as possible.
+homepage: https://www.digimezzo.com/software/dopamine/
+license: GPL-3.0
+version: 2.0.10.4000
+channels:
+    stable: 2.0.10.4000
+provides:
+    - dopamine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/digimezzo/dopamine-windows/releases/download/v2.0.10.4000/Dopamine.2.0.10.Release.-.Portable.zip
+      sha256: 6a4d52567e27484483df3b6fd7d3538cb56373817bf1caa74997b6cd0b2b5d67
+      bin:
+        - dopamine.exe
+      strip: 1
+test: dopamine --version

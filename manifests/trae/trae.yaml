@@ -1,0 +1,24 @@
+api: v1
+name: trae
+kind: app
+display: trae
+description: An AI-powered IDE that makes programming more enjoyable and efficient.
+homepage: https://www.trae.ai
+license: Freeware
+version: 2.3.88407
+channels:
+    stable: 2.3.88407
+provides:
+    - trae
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://lf-cdn.trae.ai/obj/trae-ai-sg/pkg/app/releases/stable/2.3.88407/win32/TraeCode-Setup-x64.exe
+      sha256: b0573a9b31264b6ca932ab70659482693d49491a0bffe9105bf7b54c8af8039b
+      bin:
+        - bin\trae.cmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall trae
+test: bin\trae.cmd --version

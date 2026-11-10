@@ -1,0 +1,46 @@
+api: v1
+name: autogen
+kind: app
+display: autogen
+description: Automated text file generator
+homepage: https://autogen.sourceforge.net/
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 5.18.16
+channels:
+    stable: 5.18.16
+provides:
+    - autogen
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autogen/blobs/sha256:7748ba11598da28c7e554768ed83c34a3fed3e5c2eea7ff9ac5811b652dd11b0
+      sha256: 7748ba11598da28c7e554768ed83c34a3fed3e5c2eea7ff9ac5811b652dd11b0
+      bin:
+        - autogen
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/autogen/blobs/sha256:0cefdb80090b60dd4280623c745b4ee34c8ac525a999e3bd15c069701b9b9277
+      sha256: 0cefdb80090b60dd4280623c745b4ee34c8ac525a999e3bd15c069701b9b9277
+      bin:
+        - autogen
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autogen/blobs/sha256:d109eab1f0b3a0293f60e0da2360694b3027ac39b0015e3573c57d10125da77f
+      sha256: d109eab1f0b3a0293f60e0da2360694b3027ac39b0015e3573c57d10125da77f
+      bin:
+        - autogen
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/autogen/blobs/sha256:6778d7687bfc74353db0b0ae81d994322814df152f7ec42f576e5eb591fd2958
+      sha256: 6778d7687bfc74353db0b0ae81d994322814df152f7ec42f576e5eb591fd2958
+      bin:
+        - autogen
+      strip: 1
+test: autogen --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

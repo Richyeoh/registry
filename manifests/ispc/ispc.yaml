@@ -1,0 +1,21 @@
+api: v1
+name: ispc
+kind: app
+display: ispc
+description: Intel® Implicit SPMD (Single Program Multiple Data) Compiler
+homepage: https://ispc.github.io/
+license: BSD-3-Clause
+version: 1.32.0
+channels:
+    stable: 1.32.0
+provides:
+    - ispc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ispc/ispc/releases/download/v1.32.0/ispc-v1.32.0-windows.zip
+      sha256: 148d5cd96abe7501c730d5fbd00f1f0c893b96bfeada38d1811c9b6251e86a5c
+      bin:
+        - ispc.exe
+      strip: 1
+test: ispc --version

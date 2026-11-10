@@ -1,0 +1,21 @@
+api: v1
+name: scooter
+kind: app
+display: scooter
+description: An interactive TUI tool for finding and replacing text.
+homepage: https://github.com/thomasschafer/scooter
+license: MIT
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - scooter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/thomasschafer/scooter/releases/download/v0.10.0/scooter-v0.10.0-x86_64-pc-windows-msvc.zip
+      sha256: a721360286ddbe045bbe4efdf73f40a1d1f25d35bad26bf2cc49080d53a9f505
+      bin:
+        - scooter.exe
+      strip: 1
+test: scooter --version

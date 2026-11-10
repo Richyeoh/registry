@@ -1,0 +1,22 @@
+api: v1
+name: mailsend-go
+kind: app
+display: mailsend-go
+description: A multi-platform command line tool to send mail via SMTP protocol.
+homepage: https://github.com/muquit/mailsend-go
+license: MIT
+version: 1.0.14
+channels:
+    stable: 1.0.14
+provides:
+    - mailsend-go
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/muquit/mailsend-go/releases/download/v1.0.14/mailsend-go-v1.0.14-windows-amd64.d.zip
+      sha256: 8604b135af205b67ec51959f5fa281cb6c4e7c05bb8283b0b7f651407a652176
+      bin:
+        - mailsend-go.exe
+        - mailsend-go.exe
+      strip: 1
+test: mailsend-go --version

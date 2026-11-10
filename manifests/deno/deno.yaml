@@ -1,0 +1,21 @@
+api: v1
+name: deno
+kind: app
+display: deno
+description: A secure runtime for JavaScript and TypeScript
+homepage: https://deno.com
+license: MIT
+version: 2.9.8
+channels:
+    stable: 2.9.8
+provides:
+    - deno
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/denoland/deno/releases/download/v2.9.8/deno-x86_64-pc-windows-msvc.zip
+      sha256: cba84b26e0df5ae7f74fc66b86a95b866872a86292ebd84fa1e959927edd93bf
+      bin:
+        - deno.exe
+      strip: 1
+test: deno --version

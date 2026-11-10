@@ -1,0 +1,30 @@
+api: v1
+name: wireshark
+kind: app
+display: wireshark
+description: A network protocol analyzer that lets you see what's happening on your network at a microscopic level.
+homepage: https://www.wireshark.org/
+license: GPL-2.0-or-later
+version: 4.6.9
+channels:
+    stable: 4.6.9
+provides:
+    - wireshark
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.wireshark.org/download/win64/Wireshark-4.6.9-x64.exe#/dl.7z
+      sha256: bf9b5ce8a89f244c376a9b1a946276eaa06463dde3e33069a34d7f102f5878cf
+      bin:
+        - capinfos.exe
+        - dumpcap.exe
+        - editcap.exe
+        - mergecap.exe
+        - randpkt.exe
+        - rawshark.exe
+        - reordercap.exe
+        - text2pcap.exe
+        - tshark.exe
+        - Wireshark.exe
+      strip: 1
+test: capinfos --version

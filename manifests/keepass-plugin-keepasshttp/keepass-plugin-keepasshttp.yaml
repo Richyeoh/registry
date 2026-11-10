@@ -1,0 +1,21 @@
+api: v1
+name: keepass-plugin-keepasshttp
+kind: app
+display: keepass-plugin-keepasshttp
+description: A plugin for KeePass 2.x and provides a secure means of exposing KeePass entries via HTTP for clients to consume
+homepage: https://github.com/pfn/keepasshttp
+license: GPL-3.0-or-later
+version: 1.8.4.2
+channels:
+    stable: 1.8.4.2
+provides:
+    - keepass-plugin-keepasshttp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/pfn/keepasshttp/b9a6813bfc9ccc9618938249c1bfff744a28ca44/KeePassHttp.plgx
+      sha256: e00b456692e337e63d21e34cfe23e03d67d5ec1ce08e9b66ca2a88f6a687ef6d
+      bin:
+        - keepass-plugin-keepasshttp.exe
+      strip: 1
+test: keepass-plugin-keepasshttp --version

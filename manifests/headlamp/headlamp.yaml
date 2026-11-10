@@ -1,0 +1,21 @@
+api: v1
+name: headlamp
+kind: app
+display: headlamp
+description: A Kubernetes web UI that is fully-featured, user-friendly and extensible
+homepage: https://headlamp.dev/
+license: Apache-2.0
+version: 0.46.0
+channels:
+    stable: 0.46.0
+provides:
+    - headlamp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/headlamp-k8s/headlamp/releases/download/v0.46.0/Headlamp-0.46.0-win-x64.exe#/dl.7z
+      sha256: 8169fadd6291c125266182e8566ecdef835d6e0e7b0a7c9ec16be660ee02c67a
+      bin:
+        - Headlamp.exe
+      strip: 1
+test: Headlamp --version

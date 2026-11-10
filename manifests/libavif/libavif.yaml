@@ -1,0 +1,23 @@
+api: v1
+name: libavif
+kind: app
+display: libavif
+description: Tools and library for encoding and decoding AV1 video streams (.avif)
+homepage: https://github.com/AOMediaCodec/libavif
+license: BSD-2-Clause
+version: 1.4.2
+channels:
+    stable: 1.4.2
+provides:
+    - libavif
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AOMediaCodec/libavif/releases/download/v1.4.2/windows-artifacts.zip
+      sha256: cb2d9fea43dcbab1d0707e3b37eb7b08070ad2fb60a2c188c39ec12382c0484a
+      bin:
+        - avifdec.exe
+        - avifenc.exe
+        - avifgainmaputil.exe
+      strip: 1
+test: avifdec --version

@@ -1,0 +1,21 @@
+api: v1
+name: pcem
+kind: app
+display: pcem
+description: An IBM PC compatibles emulator for Windows and Linux that specializes in running old os and software
+homepage: http://pcem-emulator.co.uk
+license: GPL-2.0-only
+version: "17"
+channels:
+    stable: "17"
+provides:
+    - pcem
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://pcem-emulator.co.uk/files/PCemV17Win.zip
+      sha256: 3f309d6b19f9c3a1fc4c256c53589f812fc5a4c4bfb84636ad325e02149460e1
+      bin:
+        - PCem.exe
+      strip: 1
+test: PCem --version

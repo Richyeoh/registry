@@ -1,0 +1,45 @@
+api: v1
+name: aqua
+kind: app
+display: aqua
+description: Declarative CLI version manager written in Go
+homepage: https://aquaproj.github.io/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 2.66.1
+channels:
+    stable: 2.66.1
+provides:
+    - aqua
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aquaproj/aqua/releases/download/v2.66.1/aqua_windows_amd64.zip
+      sha256: 01cc31aac9245f9b90000fc82332497162a2182515a4c616a67d5def594ca8e0
+      bin:
+        - aqua.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aqua/blobs/sha256:2ce844823fdfc28d14a557caf788fdf26892fb089c50f0f6681d7ccdf7804df2
+      sha256: 2ce844823fdfc28d14a557caf788fdf26892fb089c50f0f6681d7ccdf7804df2
+      bin:
+        - aqua
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aqua/blobs/sha256:906b626f321439261274b5721c4d8f8b538f65b639ea481cd56d5f6ddad1ba21
+      sha256: 906b626f321439261274b5721c4d8f8b538f65b639ea481cd56d5f6ddad1ba21
+      bin:
+        - aqua
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aqua/blobs/sha256:80fc7dfefe18336264ed2f682a11350a4b55d0e697a7220d013660ace9dbe2be
+      sha256: 80fc7dfefe18336264ed2f682a11350a4b55d0e697a7220d013660ace9dbe2be
+      bin:
+        - aqua
+      strip: 1
+test: aqua --version

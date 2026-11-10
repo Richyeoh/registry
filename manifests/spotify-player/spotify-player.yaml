@@ -1,0 +1,21 @@
+api: v1
+name: spotify-player
+kind: app
+display: spotify-player
+description: A Spotify player in the terminal with full feature parity
+homepage: https://github.com/aome510/spotify-player
+license: MIT
+version: 0.25.2
+channels:
+    stable: 0.25.2
+provides:
+    - spotify-player
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aome510/spotify-player/releases/download/v0.25.2/spotify_player-x86_64-pc-windows-msvc.zip
+      sha256: 5ddd441c1572c09c84a253b6fb2a63beb64627a785a88328d2e438a5c29432c9
+      bin:
+        - spotify_player.exe
+      strip: 1
+test: spotify_player --version

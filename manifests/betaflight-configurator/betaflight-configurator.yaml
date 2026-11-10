@@ -1,0 +1,24 @@
+api: v1
+name: betaflight-configurator
+kind: app
+display: betaflight-configurator
+description: A configuration tool for the Betaflight flight control system
+homepage: https://betaflight.com
+license: GPL-3.0-or-later
+version: 10.10.0
+channels:
+    stable: 10.10.0
+provides:
+    - betaflight-configurator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/betaflight/betaflight-configurator/releases/download/10.10.0/betaflight-configurator_10.10.0_win64-installer.exe
+      sha256: 82f6c0ab9e31c23852c856bd8ab5ed0a94d2560d9cd4d24a218ffb39a006d310
+      bin:
+        - betaflight-configurator.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall betaflight-configurator
+test: betaflight-configurator --version

@@ -1,0 +1,46 @@
+api: v1
+name: amber
+kind: app
+display: amber
+description: Crystal web framework. Bare metal performance, productivity and happiness
+homepage: https://amberframework.org/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - amber
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dalance/amber/releases/download/v0.6.1/amber-v0.6.1-x86_64-win.zip
+      sha256: ad3aa89d7751a1e8cbced749aa47d891aceffc55528eee852e631be392341abb
+      bin:
+        - ambs.exe
+        - ambr.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amber/blobs/sha256:c5f84b98a879b6e845b43ade33c7cfbc3dd94b152e9510a69358c6bf9b5c7272
+      sha256: c5f84b98a879b6e845b43ade33c7cfbc3dd94b152e9510a69358c6bf9b5c7272
+      bin:
+        - amber
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/amber/blobs/sha256:8384d89aad94347eca84037576acddbc92f2103a896593837d1dc1c73febe301
+      sha256: 8384d89aad94347eca84037576acddbc92f2103a896593837d1dc1c73febe301
+      bin:
+        - amber
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amber/blobs/sha256:37e4f44c761eab1d58a3698693dbcc5a2ce7375016b91373bede311874cfe653
+      sha256: 37e4f44c761eab1d58a3698693dbcc5a2ce7375016b91373bede311874cfe653
+      bin:
+        - amber
+      strip: 1
+test: ambs --version

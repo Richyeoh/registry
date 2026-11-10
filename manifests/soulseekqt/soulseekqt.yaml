@@ -1,0 +1,24 @@
+api: v1
+name: soulseekqt
+kind: app
+display: soulseekqt
+description: File sharing network.
+homepage: https://www.slsknet.org/news/
+license: Unknown
+version: 2026.4.30
+channels:
+    stable: 2026.4.30
+provides:
+    - soulseekqt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://f004.backblazeb2.com/file/SoulseekQt/SoulseekQt-2026-4-30-64bit.exe
+      sha256: 4ba32e37bbd804ee69a88af018c3b9b49dd1bf772b65ad7c268718d0ed93eb29
+      bin:
+        - SoulseekQt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall soulseekqt
+test: SoulseekQt --version

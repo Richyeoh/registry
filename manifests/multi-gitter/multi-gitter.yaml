@@ -1,0 +1,21 @@
+api: v1
+name: multi-gitter
+kind: app
+display: multi-gitter
+description: A command-line tool for updating multiple repositories with a single command.
+homepage: https://github.com/lindell/multi-gitter
+license: Apache-2.0
+version: 0.64.0
+channels:
+    stable: 0.64.0
+provides:
+    - multi-gitter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lindell/multi-gitter/releases/download/v0.64.0/multi-gitter_0.64.0_Windows_x86_64.tar.gz
+      sha256: 33f8760831f326edb00e219725f67b61b02ca1224000602489a08bda805ea3b1
+      bin:
+        - multi-gitter.exe
+      strip: 1
+test: multi-gitter --version

@@ -1,0 +1,21 @@
+api: v1
+name: xdelta3-cross-gui
+kind: app
+display: xdelta3-cross-gui
+description: A cross-platform GUI for creating xDelta3 patches
+homepage: https://github.com/dan0v/xdelta3-cross-gui
+license: Apache-2.0
+version: 1.8.0
+channels:
+    stable: 1.8.0
+provides:
+    - xdelta3-cross-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dan0v/xdelta3-cross-gui/releases/download/1.8.0/xdelta3-cross-gui_win_x86.zip
+      sha256: 33803f7543d4fbaa1e62efc0e554471e07e0b268497509b89f074e3ea2d4132a
+      bin:
+        - xdelta3-cross-gui.exe
+      strip: 1
+test: xdelta3-cross-gui --version

@@ -1,0 +1,24 @@
+api: v1
+name: powerline-go
+kind: app
+display: powerline-go
+description: A Powerline style prompt for your shell
+homepage: https://github.com/justjanne/powerline-go
+license: GPL-3.0-or-later
+version: "1.26"
+channels:
+    stable: "1.26"
+provides:
+    - powerline-go
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/justjanne/powerline-go/releases/download/v1.26/powerline-go-windows-amd64.exe#/powerline-go.exe
+      sha256: c90aa3c99b1cd2f17058bd77e5414c4fe4b504954d3e9bbfd611dcfca14efa4e
+      bin:
+        - powerline-go.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall powerline-go
+test: powerline-go --version

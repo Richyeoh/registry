@@ -5,6 +5,10 @@ display: curl
 description: Command line tool and library for transferring data with URLs
 homepage: https://curl.se/
 license: MIT
+keywords:
+    - arch
+    - pacman
+    - core
 version: 8.23.0_8
 channels:
     stable: 8.23.0_8
@@ -18,4 +22,10 @@ platforms:
       bin:
         - bin\curl.exe
       strip: 1
-test: bin\curl.exe --version
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/core/x86_64/curl/download/
+      sha256: 4d2bbf66b26c6dc7236e505c9d80644d3da6a28473c690365324edf276a68775
+      bin:
+        - curl
+test: bin\curl --version

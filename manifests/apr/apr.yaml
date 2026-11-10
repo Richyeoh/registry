@@ -1,0 +1,46 @@
+api: v1
+name: apr
+kind: app
+display: apr
+description: Apache Portable Runtime library
+homepage: https://apr.apache.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.7.6
+channels:
+    stable: 1.7.6
+provides:
+    - apr
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:fdf0f628598225db7ea43128abaf944011df61e2469811709c250607745b8570
+      sha256: fdf0f628598225db7ea43128abaf944011df61e2469811709c250607745b8570
+      bin:
+        - apr
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:38aa447e66b938737333b9858aad2386ff52daa70aba251982312f63e73f878f
+      sha256: 38aa447e66b938737333b9858aad2386ff52daa70aba251982312f63e73f878f
+      bin:
+        - apr
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:a52537b5ff653a7c477dd67be99faeb1684d3002cd9afe6c24501118083a6154
+      sha256: a52537b5ff653a7c477dd67be99faeb1684d3002cd9afe6c24501118083a6154
+      bin:
+        - apr
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apr/blobs/sha256:ee70c4b7041ea9743a1f87c8c0c9dc14e7a3372ab5d5e073912913b83cf2bcc3
+      sha256: ee70c4b7041ea9743a1f87c8c0c9dc14e7a3372ab5d5e073912913b83cf2bcc3
+      bin:
+        - apr
+      strip: 1
+test: apr --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

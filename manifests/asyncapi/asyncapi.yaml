@@ -1,0 +1,39 @@
+api: v1
+name: asyncapi
+kind: app
+display: asyncapi
+description: All in one CLI for all AsyncAPI tools
+homepage: https://www.asyncapi.com/tools/cli
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 6.3.0
+channels:
+    stable: 6.3.0
+provides:
+    - asyncapi
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asyncapi/blobs/sha256:79d6db48066d38f26c3517afcd319761b6b8fa270d37fdacc0973e378e1648eb
+      sha256: 79d6db48066d38f26c3517afcd319761b6b8fa270d37fdacc0973e378e1648eb
+      bin:
+        - asyncapi
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asyncapi/blobs/sha256:b1d484a48708587ed91ebfcc3ffaa2290e13257e55d076a28e47359c3e2ef59a
+      sha256: b1d484a48708587ed91ebfcc3ffaa2290e13257e55d076a28e47359c3e2ef59a
+      bin:
+        - asyncapi
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asyncapi/blobs/sha256:91eaf994b9f03e1cb702335c5eb03c7cc05b88807af6b732ccba3c8b1f840b13
+      sha256: 91eaf994b9f03e1cb702335c5eb03c7cc05b88807af6b732ccba3c8b1f840b13
+      bin:
+        - asyncapi
+      strip: 1
+test: asyncapi --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

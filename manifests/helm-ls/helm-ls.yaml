@@ -1,0 +1,24 @@
+api: v1
+name: helm-ls
+kind: app
+display: helm-ls
+description: Language server for Helm
+homepage: https://github.com/mrjosh/helm-ls
+license: MIT
+version: 0.5.4
+channels:
+    stable: 0.5.4
+provides:
+    - helm-ls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mrjosh/helm-ls/releases/download/v0.5.4/helm_ls_windows_amd64.exe#/helm-ls.exe
+      sha256: 38ed1eea9c018365d4ba1c335c2955b067a4ae68fcfe18ed52b5dc1df51c860f
+      bin:
+        - helm-ls.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall helm-ls
+test: helm-ls --version

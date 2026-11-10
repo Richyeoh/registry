@@ -1,0 +1,21 @@
+api: v1
+name: nunit-extension-nunit-v2-result-writer
+kind: app
+display: nunit-extension-nunit-v2-result-writer
+description: NUnit V2 Result Writer Extension
+homepage: https://nunit.org/
+license: MIT
+version: 3.8.0
+channels:
+    stable: 3.8.0
+provides:
+    - nunit-extension-nunit-v2-result-writer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/nunit-extension-nunit-v2-result-writer.3.8.0.nupkg
+      sha256: ac8ce2f558ce0ca4d0a7c1ef05f96e3a9bf2b54906a2636be5ddc2a13b9532e3
+      bin:
+        - nunit-extension-nunit-v2-result-writer.exe
+      strip: 1
+test: nunit-extension-nunit-v2-result-writer --version

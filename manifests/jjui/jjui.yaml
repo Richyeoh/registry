@@ -1,0 +1,21 @@
+api: v1
+name: jjui
+kind: app
+display: jjui
+description: Jujutsu UI (jjui) is a Text User Interface (TUI) designed for interacting with the Jujutsu version control system.
+homepage: https://idursun.github.io/jjui/
+license: MIT
+version: 0.10.12
+channels:
+    stable: 0.10.12
+provides:
+    - jjui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/idursun/jjui/releases/download/v0.10.12/jjui-0.10.12-windows-amd64.zip
+      sha256: c782a69010f5532d26fa29799a7c6b7dfe22f225bc2735c642d21814942f1bb4
+      bin:
+        - jjui.exe
+      strip: 1
+test: jjui --version

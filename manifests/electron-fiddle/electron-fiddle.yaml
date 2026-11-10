@@ -1,0 +1,21 @@
+api: v1
+name: electron-fiddle
+kind: app
+display: electron-fiddle
+description: Create and play with small Electron experiments
+homepage: https://www.electronjs.org/fiddle
+license: MIT
+version: 0.39.0
+channels:
+    stable: 0.39.0
+provides:
+    - electron-fiddle
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/electron/fiddle/releases/download/v0.39.0/electron-fiddle-0.39.0-win32-x64-setup.exe#/dl.7z
+      sha256: 3ab13b8491e7548b6273cddba084e47c646196f1dd9f993a6e3e2795006adfb1
+      bin:
+        - electron-fiddle.exe
+      strip: 1
+test: electron-fiddle --version

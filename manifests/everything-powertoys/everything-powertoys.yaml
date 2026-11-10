@@ -1,0 +1,21 @@
+api: v1
+name: everything-powertoys
+kind: app
+display: everything-powertoys
+description: This plugin adds Everything search results to PowerToys Run.
+homepage: https://github.com/lin-ycv/EverythingPowerToys
+license: EPL-2.0
+version: 0.91.1
+channels:
+    stable: 0.91.1
+provides:
+    - everything-powertoys
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lin-ycv/EverythingPowerToys/releases/download/v0.91.1/EverythingPT-0.91.1-x64.zip
+      sha256: 1ab45af0a4e8c39dd355a7264629911ab14ab12f3231a49849a69c0570de8790
+      bin:
+        - everything-powertoys.exe
+      strip: 1
+test: everything-powertoys --version

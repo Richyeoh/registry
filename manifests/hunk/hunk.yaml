@@ -1,0 +1,21 @@
+api: v1
+name: hunk
+kind: app
+display: hunk
+description: Review-first terminal diff viewer for agentic coders.
+homepage: https://hunk.dev
+license: MIT
+version: 0.24.1
+channels:
+    stable: 0.24.1
+provides:
+    - hunk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/modem-dev/hunk/releases/download/v0.24.1/hunkdiff-windows-x64.tar.gz
+      sha256: 77433c296e4e2a96bd3bec57cab44bd185183997972f796e1649e5fc50c3f6a3
+      bin:
+        - hunk.exe
+      strip: 1
+test: hunk --version

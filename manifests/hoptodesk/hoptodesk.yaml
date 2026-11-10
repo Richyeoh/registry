@@ -1,0 +1,24 @@
+api: v1
+name: hoptodesk
+kind: app
+display: hoptodesk
+description: Free remote desktop and remote support tool with end-to-end encryption
+homepage: https://www.hoptodesk.com
+license: AGPL-3.0-or-later
+version: 1.46.82
+channels:
+    stable: 1.46.82
+provides:
+    - hoptodesk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.hoptodesk.com/releases/1.46.82/HopToDesk64.exe#/HopToDesk.exe
+      sha256: e7b3671ee3174547e5ca330d1d22955bfe74d93bd846dd0cb1effb3bea702f3e
+      bin:
+        - HopToDesk.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hoptodesk
+test: HopToDesk --version

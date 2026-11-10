@@ -1,0 +1,24 @@
+api: v1
+name: meson
+kind: app
+display: meson
+description: Open source build system meant to be both extremely fast and user friendly.
+homepage: https://mesonbuild.com
+license: Apache-2.0
+version: 1.12.1
+channels:
+    stable: 1.12.1
+provides:
+    - meson
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mesonbuild/meson/releases/download/1.12.1/meson-1.12.1-64.msi
+      sha256: 0e541b6ae656cd9c8f9d5f8ac9eddc22c68d37006ae1dfd055e3ab485519804d
+      bin:
+        - meson.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall meson
+test: meson --version

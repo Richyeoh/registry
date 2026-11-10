@@ -1,0 +1,21 @@
+api: v1
+name: gut
+kind: app
+display: gut
+description: An easy to use Git client for the command line
+homepage: https://gut-cli.dev
+license: MIT
+version: 0.3.3
+channels:
+    stable: 0.3.3
+provides:
+    - gut
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/julien040/gut/releases/download/0.3.3/gut_Windows_x86_64.zip
+      sha256: 03be23f79088a5c93bf8e80081f8dd035c47460ce5ab8298a53a38ca3ec96ea4
+      bin:
+        - gut.exe
+      strip: 1
+test: gut --version

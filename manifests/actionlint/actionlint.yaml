@@ -1,0 +1,52 @@
+api: v1
+name: actionlint
+kind: app
+display: actionlint
+description: Static checker for GitHub Actions workflow files
+homepage: https://kjanat.github.io/actionlint/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.17.1
+channels:
+    stable: 1.17.1
+provides:
+    - actionlint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kjanat/actionlint/releases/download/v1.17.1/actionlint_1.17.1_windows_amd64.zip
+      sha256: 7a0e1a2466029df6b57e0e2690951a05339d05155fb7a4be80a8b14dc81586b8
+      bin:
+        - actionlint.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:288e9dd084bbc163fe8be8cf49817b1db5cca7ce47366b0dc2c499be59c3ef91
+      sha256: 288e9dd084bbc163fe8be8cf49817b1db5cca7ce47366b0dc2c499be59c3ef91
+      bin:
+        - actionlint
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:cf32eeac6a6f6dcd816944d78ad0c1553952c3c2b5c72c71ea4fb71aa777ca75
+      sha256: cf32eeac6a6f6dcd816944d78ad0c1553952c3c2b5c72c71ea4fb71aa777ca75
+      bin:
+        - actionlint
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:7d32ef049f0af2e06ab5f948e1850988f4e9ffb758f26e86279c7ebc395c25b7
+      sha256: 7d32ef049f0af2e06ab5f948e1850988f4e9ffb758f26e86279c7ebc395c25b7
+      bin:
+        - actionlint
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/actionlint/blobs/sha256:5fd8db6e4cf4685bea81a6225478b142635d8b9bd14cb664101a870760e57a21
+      sha256: 5fd8db6e4cf4685bea81a6225478b142635d8b9bd14cb664101a870760e57a21
+      bin:
+        - actionlint
+      strip: 1
+test: actionlint --version

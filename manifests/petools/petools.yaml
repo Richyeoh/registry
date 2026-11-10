@@ -1,0 +1,21 @@
+api: v1
+name: petools
+kind: app
+display: petools
+description: Portable executable (PE) manipulation toolkit. Process Viewer and PE files Editor, Dumper, Rebuilder, Comparator, Analyzer are included.
+homepage: https://petoolse.github.io/petools/
+license: MIT
+version: 1.9.762.2018
+channels:
+    stable: 1.9.762.2018
+provides:
+    - petools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/petoolse/petools/releases/download/v1.9.762/PE.Tools.v1.9.762.2018.7z
+      sha256: b831343a1441039c68a60777cef9ecb1f41381bff369c2f993cd3db6bf8c9fb8
+      bin:
+        - petools.exe
+      strip: 1
+test: petools --version

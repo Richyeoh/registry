@@ -1,0 +1,32 @@
+api: v1
+name: 8x8-work
+kind: app
+display: 8x8_work
+description: Communications application with voice, video, chat, and web conferencing
+homepage: https://docs.8x8.com/8x8WebHelp/8x8-work-for-desktop/Content/workd/about-the-app.htm
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 8.38.5-1
+channels:
+    stable: 8.38.5-1
+provides:
+    - 8x8-work
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://work-desktop-assets.8x8.com/prod-publish/ga/work-arm64-dmg-v8.38.5-1.dmg
+      sha256: d4e4f48b8e2435fae53791efd6470a60513fbf904238bd18c1cee93c45eb2b1a
+      bin:
+        - 8x8-work
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://work-desktop-assets.8x8.com/prod-publish/ga/work-arm64-dmg-v8.38.5-1.dmg
+      sha256: d4e4f48b8e2435fae53791efd6470a60513fbf904238bd18c1cee93c45eb2b1a
+      bin:
+        - 8x8-work
+      strip: 1
+test: 8x8-work --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

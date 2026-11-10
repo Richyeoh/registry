@@ -1,0 +1,21 @@
+api: v1
+name: geogebra
+kind: app
+display: geogebra
+description: A dynamic mathematics software for education that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus.
+homepage: https://www.geogebra.org
+license: Unknown
+version: 6.0.934.0
+channels:
+    stable: 6.0.934.0
+provides:
+    - geogebra
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.geogebra.org/installers/6.0/GeoGebra-Windows-Portable-6-0-934-0.zip
+      sha256: 0e978d53958246a984bd061c47e5b1e31ca8ed5de8c748129bf1b79289291eaa
+      bin:
+        - GeoGebra.exe
+      strip: 1
+test: GeoGebra --version

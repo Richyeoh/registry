@@ -1,0 +1,22 @@
+api: v1
+name: mole
+kind: app
+display: mole
+description: Deep clean, uninstall apps, optimize, analyze disk, and monitor Windows from the terminal.
+homepage: https://github.com/tw93/Mole/tree/windows
+license: GPL-3.0-or-later
+version: 1.44.0
+channels:
+    stable: 1.44.0
+provides:
+    - mole
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tw93/Mole/releases/download/V1.44.0-windows/mole-1.44.0-x64.zip
+      sha256: e1548c25b3716dbbe9b1e04abd838e9e92dbcd480afe73ee0d8e5f3c579c7c89
+      bin:
+        - mo.exe
+        - mo.exe
+      strip: 1
+test: mo --version

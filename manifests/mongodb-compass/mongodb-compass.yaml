@@ -1,0 +1,21 @@
+api: v1
+name: mongodb-compass
+kind: app
+display: mongodb-compass
+description: An interactive tool for querying, optimizing, and analyzing MongoDB data
+homepage: https://www.mongodb.com/products/compass
+license: SSPL-1.0
+version: 1.53.2
+channels:
+    stable: 1.53.2
+provides:
+    - mongodb-compass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.mongodb.com/compass/mongodb-compass-1.53.2-win32-x64.zip
+      sha256: b9706d0cf948227cf64be4484a6ebc402b6e260c610882eb68bb8e91e9e659b6
+      bin:
+        - mongodb-compass.exe
+      strip: 1
+test: mongodb-compass --version

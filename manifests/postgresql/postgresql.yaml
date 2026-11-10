@@ -1,0 +1,21 @@
+api: v1
+name: postgresql
+kind: app
+display: postgresql
+description: Object-relational database management system based on POSTGRES.
+homepage: https://www.postgresql.org
+license: PostgreSQL
+version: 18.6-5
+channels:
+    stable: 18.6-5
+provides:
+    - postgresql
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://get.enterprisedb.com/postgresql/postgresql-18.6-5-windows-x64-binaries.zip
+      sha256: e2246ba91d22345bc3d017586c09ede52d9df180b1eeb480f050445f1cad84e2
+      bin:
+        - postgresql.exe
+      strip: 1
+test: postgresql --version

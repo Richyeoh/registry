@@ -1,0 +1,104 @@
+api: v1
+name: microsoft-coreutils
+kind: app
+display: microsoft-coreutils
+description: A Microsoft-maintained build of uutils/coreutils, uutils/findutils.
+homepage: https://github.com/microsoft/coreutils
+license: MIT
+version: 2026.9.3
+channels:
+    stable: 2026.9.3
+provides:
+    - microsoft-coreutils
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/coreutils/releases/download/v2026.9.3/coreutils-2026.9.3-x64.exe
+      sha256: 5600caf3ea219274feb3e8f8b626a80263eb5c41d531e36a0acbc72cc670a229
+      bin:
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+        - coreutils.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall microsoft-coreutils
+test: coreutils --version

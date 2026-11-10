@@ -2,8 +2,8 @@ api: v1
 name: yq-cli
 kind: app
 display: yq
-description: YAML/JSON 命令行处理
-homepage: https://github.com/mikefarah/yq
+description: A portable command-line YAML processor
+homepage: https://mikefarah.gitbook.io/yq/
 license: MIT
 keywords:
     - github
@@ -49,5 +49,7 @@ platforms:
       bin:
         - yq
       strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yq
 test: yq --version
-caveats: 由 GitHub mikefarah/yq latest 自动转制

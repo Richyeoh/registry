@@ -1,0 +1,21 @@
+api: v1
+name: bandizip6
+kind: app
+display: bandizip6
+description: An archiver which provides fast speed and convenient features (last version with no ads)
+homepage: https://www.bandisoft.com/bandizip/old/6/
+license: Unknown
+version: "6.29"
+channels:
+    stable: "6.29"
+provides:
+    - bandizip6
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.bandisoft.com/bandizip/dl.php?old#/BANDIZIP6-PORTABLE.ZIP
+      sha256: 37d68f273d0479adec08db3a75bd229c6fad121894ae9bd456fedd8b5f2d2ede
+      bin:
+        - Bandizip.exe
+      strip: 1
+test: Bandizip --version

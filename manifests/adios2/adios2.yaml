@@ -1,0 +1,39 @@
+api: v1
+name: adios2
+kind: app
+display: adios2
+description: Next generation of ADIOS developed in the Exascale Computing Program
+homepage: https://adios2.readthedocs.io
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.12.1
+channels:
+    stable: 2.12.1
+provides:
+    - adios2
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:88ceacce907560d13eef2864e34100b8d08b98f26766d28677731e611f7caf99
+      sha256: 88ceacce907560d13eef2864e34100b8d08b98f26766d28677731e611f7caf99
+      bin:
+        - adios2
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:0d8e0a6bc7bee7f941cc30707f8be8183102ff5df52a754a61d20343e3158d26
+      sha256: 0d8e0a6bc7bee7f941cc30707f8be8183102ff5df52a754a61d20343e3158d26
+      bin:
+        - adios2
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adios2/blobs/sha256:11e084f06858c647a7067aa0f29d5e9061cbbcfdd96403994143a9646bcd0395
+      sha256: 11e084f06858c647a7067aa0f29d5e9061cbbcfdd96403994143a9646bcd0395
+      bin:
+        - adios2
+      strip: 1
+test: adios2 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: nunit-extension-nunit-project-loader
+kind: app
+display: nunit-extension-nunit-project-loader
+description: NUnit Project Loader Extension
+homepage: https://nunit.org/
+license: MIT
+version: 3.8.0
+channels:
+    stable: 3.8.0
+provides:
+    - nunit-extension-nunit-project-loader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/nunit-extension-nunit-project-loader.3.8.0.nupkg
+      sha256: be01b9d7c04f0518c97d82d3fe08ce3881f3aed68ea9edeb5c5fb809ab27b623
+      bin:
+        - nunit-extension-nunit-project-loader.exe
+      strip: 1
+test: nunit-extension-nunit-project-loader --version

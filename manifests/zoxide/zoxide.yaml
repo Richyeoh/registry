@@ -2,10 +2,13 @@ api: v1
 name: zoxide
 kind: app
 display: zoxide
-description: 更聪明的 cd
+description: A faster way to navigate your filesystem
 homepage: https://github.com/ajeetdsouza/zoxide
 license: MIT
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - ajeetdsouza
 version: 0.10.0
@@ -43,4 +46,3 @@ platforms:
         - zoxide
       strip: 1
 test: zoxide --version
-caveats: 由 GitHub ajeetdsouza/zoxide latest 自动转制

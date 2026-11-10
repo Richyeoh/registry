@@ -1,0 +1,21 @@
+api: v1
+name: photoflare
+kind: app
+display: photoflare
+description: Quick, simple but powerful image editor (Community Edition)
+homepage: https://photoflare.io
+license: GPL-3.0-or-later
+version: 1.7.5
+channels:
+    stable: 1.7.5
+provides:
+    - photoflare
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PhotoFlare/photoflare/releases/download/v1.7.5/photoflare_1.7.5_amd64_win_portable.zip
+      sha256: bd58c3e0d11645122d8cb1b1241251dc32198968158b204bf53816623787a521
+      bin:
+        - photoflare.exe
+      strip: 1
+test: photoflare --version

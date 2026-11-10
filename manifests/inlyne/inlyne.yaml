@@ -1,0 +1,21 @@
+api: v1
+name: inlyne
+kind: app
+display: inlyne
+description: A GPU powered yet browserless tool to help you quickly view markdown files in the blink of an eye.
+homepage: https://github.com/Inlyne-Project/inlyne
+license: MIT
+version: 0.5.3
+channels:
+    stable: 0.5.3
+provides:
+    - inlyne
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Inlyne-Project/inlyne/releases/download/v0.5.3/inlyne-v0.5.3-x86_64-pc-windows-msvc.zip
+      sha256: 3be217e1dd28be7250dc1403e63901f022babeed338c26a67e5a4280777c57d8
+      bin:
+        - inlyne.exe
+      strip: 1
+test: inlyne --version

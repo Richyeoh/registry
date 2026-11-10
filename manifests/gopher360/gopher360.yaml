@@ -1,0 +1,24 @@
+api: v1
+name: gopher360
+kind: app
+display: gopher360
+description: App to turn a controller into a mouse and keyboard
+homepage: https://github.com/Tylemagne/Gopher360
+license: GPL-3.0-only
+version: "0.989"
+channels:
+    stable: "0.989"
+provides:
+    - gopher360
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Tylemagne/Gopher360/releases/download/v0.989/Gopher.exe#/gopher360.exe
+      sha256: 13b45c1487d4920df5acc5e69ab4d827e69f086bdf0e666244038856e5ac8d4d
+      bin:
+        - gopher360.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gopher360
+test: gopher360 --version

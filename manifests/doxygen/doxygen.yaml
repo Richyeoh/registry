@@ -1,0 +1,23 @@
+api: v1
+name: doxygen
+kind: app
+display: doxygen
+description: Documentation generator from annotated source code.
+homepage: https://www.doxygen.nl/
+license: GPL-2.0-only
+version: 1.18.0
+channels:
+    stable: 1.18.0
+provides:
+    - doxygen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/doxygen/doxygen/releases/download/Release_1_18_0/doxygen-1.18.0.windows.x64.bin.zip
+      sha256: e84f54cfd49ef06b0b16536056dbec0c496323de28abcce53a4269463de35eaf
+      bin:
+        - doxygen.exe
+        - doxyindexer.exe
+        - doxysearch.cgi.exe
+      strip: 1
+test: doxygen --version

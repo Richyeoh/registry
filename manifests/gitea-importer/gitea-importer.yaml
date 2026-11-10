@@ -1,0 +1,21 @@
+api: v1
+name: gitea-importer
+kind: app
+display: gitea-importer
+description: CLI tool for migrating repositories, organizations, or entire installations from third-party Git hosting providers into Gitea.
+homepage: https://gitea.com/gitea/importer
+license: MIT
+version: 0.5.0
+channels:
+    stable: 0.5.0
+provides:
+    - gitea-importer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitea.com/gitea/importer/releases/download/v0.5.0/importer_Windows_x86_64.zip
+      sha256: 968efb9ac8d6f2fd94a9246bf954deba7a5b3b9e13b66a0324cfabfbc3258c9a
+      bin:
+        - importer.exe
+      strip: 1
+test: importer --version

@@ -1,0 +1,21 @@
+api: v1
+name: z-cli
+kind: app
+display: z
+description: z lets you quickly navigate the file system in PowerShell based on your cd command history.
+homepage: https://github.com/badmotorfinger/z
+license: Unknown
+version: 1.1.14
+channels:
+    stable: 1.1.14
+provides:
+    - z-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/z.1.1.14.nupkg
+      sha256: c3f808b1f63fe2ed8252126a82d882c6250f97ae9d07f7126c90c013f21f51ce
+      bin:
+        - z-cli.exe
+      strip: 1
+test: z-cli --version

@@ -1,0 +1,24 @@
+api: v1
+name: wget2
+kind: app
+display: wget2
+description: GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader.
+homepage: https://github.com/rockdaboot/wget2
+license: GPL-3.0-or-later
+version: 2.2.1
+channels:
+    stable: 2.2.1
+provides:
+    - wget2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rockdaboot/wget2/releases/download/v2.2.1/wget2.exe
+      sha256: c65f66842888b878d1fad48294d1372553985b86613f279cf4ed9612c4f80428
+      bin:
+        - wget2.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wget2
+test: wget2 --version

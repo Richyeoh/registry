@@ -1,0 +1,24 @@
+api: v1
+name: tixl
+kind: app
+display: tixl
+description: An open source software to create realtime motion graphics.
+homepage: https://tixl.app
+license: MIT
+version: 4.3.0.4
+channels:
+    stable: 4.3.0.4
+provides:
+    - tixl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tixl3d/tixl/releases/download/v4.3.0.4/Tixl-v4.3.0.4.exe
+      sha256: bfa8b614aad1b3c52cb9b940d2b08e8e347a972ec162dd8126014141c83eba1a
+      bin:
+        - tixl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tixl
+test: tixl --version

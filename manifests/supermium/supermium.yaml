@@ -1,0 +1,21 @@
+api: v1
+name: supermium
+kind: app
+display: supermium
+description: Chromium fork for Windows XP/2003 and up
+homepage: https://win32subsystem.live/supermium/
+license: Unknown
+version: 150.0.7871.255-r2.02
+channels:
+    stable: 150.0.7871.255-r2.02
+provides:
+    - supermium
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/win32ss/supermium/releases/download/v150-r2.02/supermium_150_64_setup_win10_11.exe#/dl.zip
+      sha256: f3be091a7a46be2fdac0640f04c2d1189e481f6eddec0240ea1f760cff342432
+      bin:
+        - chrome.exe
+      strip: 1
+test: chrome --version

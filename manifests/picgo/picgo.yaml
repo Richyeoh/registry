@@ -1,0 +1,21 @@
+api: v1
+name: picgo
+kind: app
+display: picgo
+description: Image uploader/manager
+homepage: https://picgo.app
+license: MIT
+version: 3.0.3
+channels:
+    stable: 3.0.3
+provides:
+    - picgo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Molunerfinn/PicGo/releases/download/v3.0.3/PicGo-3.0.3-x64.exe#/dl.7z
+      sha256: 4206dcd4a931886c6d6669fce1072dd158b5762ce30b6a8446ee85e2be724c63
+      bin:
+        - PicGo.exe
+      strip: 1
+test: PicGo --version

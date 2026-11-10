@@ -1,0 +1,21 @@
+api: v1
+name: skills-manager
+kind: app
+display: skills-manager
+description: Manage, sync, and organize AI agent skills across coding tools.
+homepage: https://skillsmanager.dev
+license: MIT
+version: 1.43.4
+channels:
+    stable: 1.43.4
+provides:
+    - skills-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xingkongliang/skills-manager/releases/download/v1.43.4/skills-manager_1.43.4_x64-setup.exe#/dl.7z
+      sha256: cf668be699c10059383f71ef68e6b45c5b76bd9611617769b2c29525cff3c349
+      bin:
+        - skills-manager-cli.exe
+      strip: 1
+test: skills-manager-cli --version

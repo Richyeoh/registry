@@ -1,0 +1,24 @@
+api: v1
+name: altbacktick
+kind: app
+display: altbacktick
+description: Switch between windows using ALT+backtick.
+homepage: https://github.com/akiver/AltBacktick
+license: MIT
+version: 1.5.2
+channels:
+    stable: 1.5.2
+provides:
+    - altbacktick
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/akiver/AltBacktick/releases/download/v1.5.2/AltBacktick.exe
+      sha256: a9d710df26120ee3563ab30f9676f3555cc9bf08b78d2bb9ee8338a8a2d349c5
+      bin:
+        - altbacktick.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall altbacktick
+test: altbacktick --version

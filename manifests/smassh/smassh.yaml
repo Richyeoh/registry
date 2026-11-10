@@ -1,0 +1,24 @@
+api: v1
+name: smassh
+kind: app
+display: smassh
+description: TUI-based typing test application inspired by Monkeytype
+homepage: https://github.com/kraanzu/smassh
+license: GPL-3.0-only
+version: 3.2.1
+channels:
+    stable: 3.2.1
+provides:
+    - smassh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kraanzu/smassh/releases/download/v3.2.1/windows-smassh.exe#/smassh.exe
+      sha256: 36c29a75ae17d11609d7c0f2d5f7d85ad2f828feff9a89a7075b9daa929bed6a
+      bin:
+        - smassh.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall smassh
+test: smassh --version

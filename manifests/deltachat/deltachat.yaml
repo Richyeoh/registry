@@ -1,0 +1,21 @@
+api: v1
+name: deltachat
+kind: app
+display: deltachat
+description: Email-based secure instant messaging
+homepage: https://delta.chat/en/
+license: GPL-3.0-or-later
+version: 2.65.0
+channels:
+    stable: 2.65.0
+provides:
+    - deltachat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.delta.chat/desktop/v2.65.0/DeltaChat-2.65.0-Portable.x64.exe#/dl.7z
+      sha256: 5754f53ee491a4945170cecb18fece8596cc5becdfc7a135ffaa63184bce9f67
+      bin:
+        - deltachat.exe
+      strip: 1
+test: deltachat --version

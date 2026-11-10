@@ -1,0 +1,21 @@
+api: v1
+name: vicinae
+kind: app
+display: vicinae
+description: A focused launcher for your desktop.
+homepage: https://vicinae.com
+license: GPL-3.0-only
+version: 0.30.0
+channels:
+    stable: 0.30.0
+provides:
+    - vicinae
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vicinaehq/vicinae/releases/download/v0.30.0/vicinae-x64-portable.zip
+      sha256: cf5689593bb81a6565dcf892cbf75505539b8f91d07cb393ee31d0a8e7f89e28
+      bin:
+        - vicinae.exe
+      strip: 1
+test: vicinae --version

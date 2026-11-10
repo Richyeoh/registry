@@ -1,0 +1,21 @@
+api: v1
+name: clink-completions
+kind: app
+display: clink-completions
+description: Completions for various commands through Clink
+homepage: https://github.com/vladimir-kotikov/clink-completions
+license: MIT
+version: 0.6.9
+channels:
+    stable: 0.6.9
+provides:
+    - clink-completions
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vladimir-kotikov/clink-completions/archive/v0.6.9.zip
+      sha256: 7d6ab53aece9ca08e4d44dc0bc858710313c715404e5b0aa8e36b20c3e206d56
+      bin:
+        - clink-completions.exe
+      strip: 1
+test: clink-completions --version

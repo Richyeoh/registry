@@ -1,0 +1,24 @@
+api: v1
+name: cfsec
+kind: app
+display: cfsec
+description: A static analysis security scanner for CloudFormation code
+homepage: https://aquasecurity.github.io/cfsec/
+license: MIT
+version: 0.3.2
+channels:
+    stable: 0.3.2
+provides:
+    - cfsec
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aquasecurity/cfsec/releases/download/v0.3.2/cfsec-windows-amd64.exe#/cfsec.exe
+      sha256: b8ed1092aa224f644eca0ac349945795f2e35e338f5b257f5344401470b2da03
+      bin:
+        - cfsec.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cfsec
+test: cfsec --version

@@ -1,0 +1,21 @@
+api: v1
+name: dgdemux
+kind: app
+display: dgdemux
+description: A standalone demuxer for BluRay/UHD disks.
+homepage: https://www.rationalqm.us/dgdemux/dgdemux.html
+license: Freeware
+version: 1.0.0.86
+channels:
+    stable: 1.0.0.86
+provides:
+    - dgdemux
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.videohelp.com/download/DGDemux_1.0.0.86.zip
+      sha256: b984ebbf8bed57ed8260a918edae05f2db016479d8589909a4c68d71df122e2c
+      bin:
+        - DGDemux.exe
+      strip: 1
+test: DGDemux --version

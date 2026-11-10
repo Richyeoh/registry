@@ -1,0 +1,21 @@
+api: v1
+name: zoom
+kind: app
+display: zoom
+description: Video and audio conferencing, chat, and webinars
+homepage: https://zoom.us
+license: Unknown
+version: 7.2.5.51704
+channels:
+    stable: 7.2.5.51704
+provides:
+    - zoom
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.zoom.us/prod/7.2.5.51704/x64/ZoomInstallerFull.exe#/dl.7z
+      sha256: ca35d25af457db1214bc5f6d4113a4fb0e02c71c76d47dda5d211ca694c397d3
+      bin:
+        - Zoom.exe
+      strip: 1
+test: Zoom --version

@@ -1,0 +1,21 @@
+api: v1
+name: globalping
+kind: app
+display: globalping
+description: Access a global network of probes without leaving your console
+homepage: https://www.jsdelivr.com/globalping
+license: MPL-2.0
+version: 1.6.1
+channels:
+    stable: 1.6.1
+provides:
+    - globalping
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jsdelivr/globalping-cli/releases/download/v1.6.1/globalping_Windows_x86_64.zip
+      sha256: 5b0f0a737d3a0553a9a281f0da562a0e86a04e00d8a07e554277c78fdd155497
+      bin:
+        - globalping.exe
+      strip: 1
+test: globalping --version

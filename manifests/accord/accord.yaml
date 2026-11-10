@@ -1,0 +1,32 @@
+api: v1
+name: accord
+kind: app
+display: accord
+description: Discord client written in Swift for modern Macs
+homepage: https://github.com/evelyneee/accord
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.7.1
+channels:
+    stable: 1.7.1
+provides:
+    - accord
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/evelyneee/accord/releases/download/v1.7.1/Accord.app.zip
+      sha256: 6dacc0767a03265ea6e9103d40eab4f9c51c8ad7ab6c3b86f9f3d992c630ce80
+      bin:
+        - accord
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/evelyneee/accord/releases/download/v1.7.1/Accord.app.zip
+      sha256: 6dacc0767a03265ea6e9103d40eab4f9c51c8ad7ab6c3b86f9f3d992c630ce80
+      bin:
+        - accord
+      strip: 1
+test: accord --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

@@ -1,0 +1,21 @@
+api: v1
+name: ripme
+kind: app
+display: ripme
+description: Downloads image albums from various websites in bulk.
+homepage: https://github.com/ripmeapp2/ripme
+license: MIT
+version: 2.1.12
+channels:
+    stable: 2.1.12
+provides:
+    - ripme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ripmeapp2/ripme/releases/download/2.1.12/ripme-2.1.12-7-d0b97acd.jar#/ripme.jar
+      sha256: ac40e5ff60f8e0bc7832874de529283a77f9e07d5a7d4a0e8f81e05d43e2df58
+      bin:
+        - ripme.jar.exe
+      strip: 1
+test: ripme.jar --version

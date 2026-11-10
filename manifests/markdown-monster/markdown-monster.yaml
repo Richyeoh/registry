@@ -1,0 +1,21 @@
+api: v1
+name: markdown-monster
+kind: app
+display: markdown-monster
+description: Markdown editing and weblog publishing tool
+homepage: https://markdownmonster.west-wind.com
+license: Unknown
+version: "4.6"
+channels:
+    stable: "4.6"
+provides:
+    - markdown-monster
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RickStrahl/MarkdownMonsterReleases/raw/master/CurrentRelease/MarkdownMonsterPortable.zip
+      sha256: 2d8e2e8c0844c2f006d5fbc5be0cbcf45b94fbb4990d4e87cdbcab50335e000e
+      bin:
+        - mmcli.exe
+      strip: 1
+test: mmcli --version

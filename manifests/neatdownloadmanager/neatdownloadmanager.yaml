@@ -1,0 +1,24 @@
+api: v1
+name: neatdownloadmanager
+kind: app
+display: neatdownloadmanager
+description: A simple and lightweight GUI wrapped around a powerful and optimized Download-Engine
+homepage: http://neatdownloadmanager.com/index.php
+license: Freeware
+version: "1.4"
+channels:
+    stable: "1.4"
+provides:
+    - neatdownloadmanager
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://neatdownloadmanager.com/file/NeatDM_setup.exe
+      sha256: 3474f9a78cf4a443eeba53d136d0d36d860cecdf955c39075f99287fc759c69e
+      bin:
+        - neatdownloadmanager.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall neatdownloadmanager
+test: neatdownloadmanager --version

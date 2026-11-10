@@ -1,0 +1,21 @@
+api: v1
+name: taplo
+kind: app
+display: taplo
+description: A TOML toolkit written in Rust
+homepage: https://taplo.tamasfe.dev/
+license: MIT
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - taplo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-windows-x86_64.zip
+      sha256: 1615eed140039bd58e7089109883b1c434de5d6de8f64a993e6e8c80ca57bdf9
+      bin:
+        - taplo.exe
+      strip: 1
+test: taplo --version

@@ -1,0 +1,21 @@
+api: v1
+name: chrlauncher
+kind: app
+display: chrlauncher
+description: Small and very fast portable launcher and updater for Chromium.
+homepage: https://github.com/henrypp/chrlauncher
+license: MIT
+version: "2.7"
+channels:
+    stable: "2.7"
+provides:
+    - chrlauncher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/henrypp/chrlauncher/releases/download/v.2.7/chrlauncher-2.7-bin.7z
+      sha256: 9c56bcbd71c2db2573d02e78435f0b4762d8bf287fa91b80e03eda885c07ee09
+      bin:
+        - chrlauncher.exe
+      strip: 1
+test: chrlauncher --version

@@ -1,0 +1,24 @@
+api: v1
+name: fnproject
+kind: app
+display: fnproject
+description: A container-native serverless platform that can be run anywhere (any cloud or on-premise).
+homepage: https://fnproject.io/
+license: Apache-2.0
+version: 0.6.73
+channels:
+    stable: 0.6.73
+provides:
+    - fnproject
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fnproject/cli/releases/download/0.6.73/fn.exe
+      sha256: ca3f258d0850b34708511a6b21131b472e3ebb774c6a38d072b32168d9f42f5f
+      bin:
+        - fn.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fnproject
+test: fn --version

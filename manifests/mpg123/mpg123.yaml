@@ -1,0 +1,24 @@
+api: v1
+name: mpg123
+kind: app
+display: mpg123
+description: Fast console MPEG Audio Player and decoder library
+homepage: https://www.mpg123.org
+license: LGPL-2.1
+version: 1.33.7
+channels:
+    stable: 1.33.7
+provides:
+    - mpg123
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.mpg123.org/download/win64/1.33.7/mpg123-1.33.7-static-x86-64.zip
+      sha256: da58591eb08f7b893136cd8950a187a01355dfdfbb545a3ba99342225ce49a72
+      bin:
+        - mpg123.exe
+        - mpg123-id3dump.exe
+        - mpg123-strip.exe
+        - out123.exe
+      strip: 1
+test: mpg123 --version

@@ -1,0 +1,24 @@
+api: v1
+name: azure-iot-explorer
+kind: app
+display: azure-iot-explorer
+description: Azure IoT devices manager
+homepage: https://github.com/Azure/azure-iot-explorer
+license: MIT
+version: 0.15.18
+channels:
+    stable: 0.15.18
+provides:
+    - azure-iot-explorer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/azure-iot-explorer/releases/download/v0.15.18/Azure.IoT.Explorer.preview.0.15.18.msi
+      sha256: b1e10adda08e8263ad71ff8002ccd4b79190cedc1f00c70a15b7ec3777838358
+      bin:
+        - azure-iot-explorer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall azure-iot-explorer
+test: azure-iot-explorer --version

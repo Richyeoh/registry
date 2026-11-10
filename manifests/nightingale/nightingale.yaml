@@ -1,0 +1,24 @@
+api: v1
+name: nightingale
+kind: app
+display: nightingale
+description: Machine learning powered Karaoke app (with scores!).
+homepage: https://nightingale.cafe
+license: GPL-3.0-or-later
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - nightingale
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rzru/nightingale/releases/download/v1.4.1/Nightingale_1.4.1_x64_en-US.msi
+      sha256: d986f6fa06799c605a14f2cb005e464ac79cf950ab31885467fa549b6a677885
+      bin:
+        - nightingale.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nightingale
+test: nightingale --version

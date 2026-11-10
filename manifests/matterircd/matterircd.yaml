@@ -1,0 +1,24 @@
+api: v1
+name: matterircd
+kind: app
+display: matterircd
+description: Connects to mattermost or slack using IRC-client.
+homepage: https://github.com/42wim/matterircd
+license: MIT
+version: 0.34.0
+channels:
+    stable: 0.34.0
+provides:
+    - matterircd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/42wim/matterircd/releases/download/v0.34.0/matterircd-0.34.0-windows-amd64.exe#/matterircd.exe
+      sha256: 1d2bbb65a7e78ddeca895b32e63108ad8ef7b6dc4d1a149815eca155118cc758
+      bin:
+        - matterircd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall matterircd
+test: matterircd --version

@@ -1,0 +1,22 @@
+api: v1
+name: armclient
+kind: app
+display: armclient
+description: A simple command line tool to invoke the Azure Resource Manager API
+homepage: https://blog.davidebbo.com/2015/01/azure-resource-manager-client.html
+license: Apache-2.0
+version: "1.9"
+channels:
+    stable: "1.9"
+provides:
+    - armclient
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/projectkudu/ARMClient/releases/download/v1.9/ARMClient.zip
+      sha256: 62e5c430c6572052a3d4646f3de3700009d72ea98ffcdad408312e44e4b08ef2
+      bin:
+        - ARMClient.exe
+        - AADClient.exe
+      strip: 1
+test: ARMClient --version

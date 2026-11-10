@@ -1,0 +1,25 @@
+api: v1
+name: pueue
+kind: app
+display: pueue
+description: Command-line task management tool for sequential and parallel execution of long-running tasks.
+homepage: https://github.com/Nukesor/pueue
+license: MIT
+version: 4.0.4
+channels:
+    stable: 4.0.4
+provides:
+    - pueue
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Nukesor/pueue/releases/download/v4.0.4/pueue-x86_64-pc-windows-msvc.exe#/pueue.exe
+      sha256: 28b0756d54ec16ce13d78b251d086aa62e0057089cb27f793cd649f9762b996a
+      bin:
+        - pueue.exe
+        - pueued.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pueue
+test: pueue --version

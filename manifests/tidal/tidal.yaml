@@ -1,0 +1,21 @@
+api: v1
+name: tidal
+kind: app
+display: tidal
+description: A music streaming service that offers music with high fidelity sound quality
+homepage: https://tidal.com/
+license: Unknown
+version: 2.47.0
+channels:
+    stable: 2.47.0
+provides:
+    - tidal
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.tidal.com/desktop/TIDALSetup.exe#/dl.7z
+      sha256: 6415b50476d4ff1ddc96a31923c822fef23dc37f5270395b088618e12a28e880
+      bin:
+        - tidal.exe
+      strip: 1
+test: tidal --version

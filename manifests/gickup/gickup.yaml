@@ -1,0 +1,21 @@
+api: v1
+name: gickup
+kind: app
+display: gickup
+description: A tool that allows you to clone/mirror repositories from one host to another.
+homepage: https://gickup.dev
+license: Apache-2.0
+version: 0.10.47
+channels:
+    stable: 0.10.47
+provides:
+    - gickup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cooperspencer/gickup/releases/download/v0.10.47/gickup_0.10.47_windows_amd64.zip
+      sha256: 976162526f98cb7d3a1674f3e151df9aae15dcf6ec3f7eee5b2ddd1e03ab98c0
+      bin:
+        - gickup.exe
+      strip: 1
+test: gickup --version

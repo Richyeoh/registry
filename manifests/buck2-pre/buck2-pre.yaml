@@ -1,0 +1,21 @@
+api: v1
+name: buck2-pre
+kind: app
+display: buck2-pre
+description: A large-scale build system from Meta, and the successor to Buck (Pre-release).
+homepage: https://buck2.build/
+license: MIT|Apache-2.0
+version: "2026-11-01"
+channels:
+    stable: "2026-11-01"
+provides:
+    - buck2-pre
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/buck2/releases/download/2026-11-01/buck2-x86_64-pc-windows-msvc.exe.zst#/buck2.exe.zst
+      sha256: db9d8823bafb7ea5a5155ec0601c12d68c76675d3cc7aec182435198a4bc6e8f
+      bin:
+        - buck2.exe
+      strip: 1
+test: buck2 --version

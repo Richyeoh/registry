@@ -1,0 +1,24 @@
+api: v1
+name: aws-copilot
+kind: app
+display: aws-copilot
+description: A tool for developers to build, release and operate production ready containerized applications on Amazon ECS and AWS Fargate.
+homepage: https://aws.github.io/copilot-cli/
+license: Apache-2.0
+version: 1.34.1
+channels:
+    stable: 1.34.1
+provides:
+    - aws-copilot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aws/copilot-cli/releases/download/v1.34.1/copilot-windows.exe#/copilot.exe
+      sha256: 78ab23664a5d10cac7ad20f96e3e75e9cbd12f58ca30d24cd2613a8d8019451c
+      bin:
+        - copilot.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall aws-copilot
+test: copilot --version

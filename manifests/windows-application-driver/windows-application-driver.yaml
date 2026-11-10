@@ -1,0 +1,24 @@
+api: v1
+name: windows-application-driver
+kind: app
+display: windows-application-driver
+description: Supports Selenium-like UI Test Automation on Windows Applications.
+homepage: https://github.com/microsoft/WinAppDriver
+license: MIT
+version: 1.2.1
+channels:
+    stable: 1.2.1
+provides:
+    - windows-application-driver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/WinAppDriver/releases/download/v1.2.1/WindowsApplicationDriver_1.2.1.msi
+      sha256: a76a8f4e44b29bad331acf6b6c248fcc65324f502f28826ad2acd5f3c80857fe
+      bin:
+        - WinAppDriver.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall windows-application-driver
+test: WinAppDriver --version

@@ -1,0 +1,21 @@
+api: v1
+name: trafficmonitor-lite
+kind: app
+display: trafficmonitor-lite
+description: Network monitoring floating window software on Windows. It can display the current network speed, CPU and memory usage. It also supports being embedded into the taskbar, theme changing and traffic statistics. (Lite version, which does not contain GPU, Hard Disk or temperature monitoring. Administrator privilege is not required)
+homepage: https://github.com/zhongyang219/TrafficMonitor/blob/master/README_en-us.md
+license: MIT
+version: "1.86"
+channels:
+    stable: "1.86"
+provides:
+    - trafficmonitor-lite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.86/TrafficMonitor_V1.86_x64_Lite.zip
+      sha256: d9774a64268f952b5cb88a1eead399f863f7d4ab64e945f19c096fed89cc1145
+      bin:
+        - trafficmonitor-lite.exe
+      strip: 1
+test: trafficmonitor-lite --version

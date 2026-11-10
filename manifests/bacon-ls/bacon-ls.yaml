@@ -1,0 +1,39 @@
+api: v1
+name: bacon-ls
+kind: app
+display: bacon-ls
+description: Rust diagnostic provider based on Bacon
+homepage: https://github.com/crisidev/bacon-ls
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.32.0
+channels:
+    stable: 0.32.0
+provides:
+    - bacon-ls
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bacon-ls/blobs/sha256:63f5a8fec139aa8a5c94945cd48ce33eb3a15ef5704badc6890a1e9e86751123
+      sha256: 63f5a8fec139aa8a5c94945cd48ce33eb3a15ef5704badc6890a1e9e86751123
+      bin:
+        - bacon-ls
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bacon-ls/blobs/sha256:c5aa83edc535b0d5f2022456d63eb320d6c53ba1e2f26b359aa32f220aa3b502
+      sha256: c5aa83edc535b0d5f2022456d63eb320d6c53ba1e2f26b359aa32f220aa3b502
+      bin:
+        - bacon-ls
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bacon-ls/blobs/sha256:10df2676d947252767bada254012689862e9f1c7bbe80ea2222d3deb6d0fdf26
+      sha256: 10df2676d947252767bada254012689862e9f1c7bbe80ea2222d3deb6d0fdf26
+      bin:
+        - bacon-ls
+      strip: 1
+test: bacon-ls --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

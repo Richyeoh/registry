@@ -1,0 +1,21 @@
+api: v1
+name: minisign
+kind: app
+display: minisign
+description: A dead simple tool to sign files and verify signatures
+homepage: https://jedisct1.github.io/minisign/
+license: ISC
+version: "0.12"
+channels:
+    stable: "0.12"
+provides:
+    - minisign
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jedisct1/minisign/releases/download/0.12/minisign-0.12-win64.zip
+      sha256: 37b600344e20c19314b2e82813db2bfdcc408b77b876f7727889dbd46d539479
+      bin:
+        - minisign.exe
+      strip: 1
+test: minisign --version

@@ -1,0 +1,24 @@
+api: v1
+name: cemu
+kind: app
+display: cemu
+description: TI-84 Plus CE / TI-83 Premium CE emulator, focused on developer features.
+homepage: https://ce-programming.github.io/CEmu/
+license: GPL-3.0-or-later
+version: "2.0"
+channels:
+    stable: "2.0"
+provides:
+    - cemu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CE-Programming/CEmu/releases/download/v2.0/CEmu-v2.0_win64_Qt6.exe#/CEmu.exe
+      sha256: 5260f4460c4f0e08d2d8197ecd206d5156bb8f1fa62941eda35ef1034326cfc3
+      bin:
+        - cemu.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cemu
+test: cemu --version

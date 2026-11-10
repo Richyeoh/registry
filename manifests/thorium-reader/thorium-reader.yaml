@@ -1,0 +1,21 @@
+api: v1
+name: thorium-reader
+kind: app
+display: thorium-reader
+description: A cross platform desktop reading app, based on the Readium Desktop toolkit
+homepage: https://github.com/edrlab/thorium-reader
+license: BSD-3-Clause
+version: 3.5.1
+channels:
+    stable: 3.5.1
+provides:
+    - thorium-reader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/edrlab/thorium-reader/releases/download/v3.5.1/Thorium-3.5.1-x64.exe#/dl.7z
+      sha256: ad33003c0648b8f8f91cb9368b457701f23b1ed9443b01c94934f756f7ed98fd
+      bin:
+        - thorium-reader.exe
+      strip: 1
+test: thorium-reader --version

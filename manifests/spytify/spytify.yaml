@@ -1,0 +1,21 @@
+api: v1
+name: spytify
+kind: app
+display: spytify
+description: Records Spotify while it plays without ads.
+homepage: https://jwallet.github.io/spy-spotify/overview.html
+license: MIT
+version: "1.12"
+channels:
+    stable: "1.12"
+provides:
+    - spytify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jwallet/spy-spotify/releases/download/1.12/Spytify-v.1.12.zip
+      sha256: d94a5c91889f6503bf93ef6d2493fc9c354aaa4dc8c60103398554bde20025bb
+      bin:
+        - Spytify.exe
+      strip: 1
+test: Spytify --version

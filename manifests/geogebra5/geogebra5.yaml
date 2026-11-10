@@ -1,0 +1,21 @@
+api: v1
+name: geogebra5
+kind: app
+display: geogebra5
+description: A dynamic mathematics software for education that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus.
+homepage: https://www.geogebra.org
+license: Unknown
+version: 5.4.934.0
+channels:
+    stable: 5.4.934.0
+provides:
+    - geogebra5
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.geogebra.org/installers/5.4/GeoGebra-Windows-Portable-5-4-934-0.zip
+      sha256: 73496d1d39b50a3ff3c2057a56ab888b231c7591dfdccc1465c1253629df491d
+      bin:
+        - GeoGebra.exe
+      strip: 1
+test: GeoGebra --version

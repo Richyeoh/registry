@@ -1,0 +1,22 @@
+api: v1
+name: ddev
+kind: app
+display: ddev
+description: An open source tool that makes it simple to get local PHP development environments up and running in minutes
+homepage: https://ddev.readthedocs.io/en/latest/
+license: Apache-2.0
+version: 1.25.5
+channels:
+    stable: 1.25.5
+provides:
+    - ddev
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ddev/ddev/releases/download/v1.25.5/ddev_windows-amd64.v1.25.5.zip
+      sha256: 8bed5ffead94a0b08ec7ddf8f6eeab4215089a620862593c54e98a7b19afd760
+      bin:
+        - ddev.exe
+        - ddev-hostname.exe
+      strip: 1
+test: ddev --version

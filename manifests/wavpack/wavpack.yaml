@@ -1,0 +1,24 @@
+api: v1
+name: wavpack
+kind: app
+display: wavpack
+description: Hybrid lossless audio compression
+homepage: https://www.wavpack.com
+license: BSD-3-Clause
+version: 5.9.0
+channels:
+    stable: 5.9.0
+provides:
+    - wavpack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dbry/WavPack/releases/download/5.9.0/wavpack-5.9.0-x64.zip
+      sha256: ad5e94bcde6f4edfc859210d98f144f225805a391c633c68f6dbb15a9e52570e
+      bin:
+        - wavpack.exe
+        - wvunpack.exe
+        - wvgain.exe
+        - wvtag.exe
+      strip: 1
+test: wavpack --version

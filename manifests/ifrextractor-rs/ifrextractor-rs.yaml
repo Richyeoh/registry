@@ -1,0 +1,21 @@
+api: v1
+name: ifrextractor-rs
+kind: app
+display: ifrextractor-rs
+description: Rust utility to extract UEFI IFR data into human-readable text
+homepage: https://github.com/LongSoft/IFRExtractor-RS
+license: BSD-2-Clause
+version: 1.6.1
+channels:
+    stable: 1.6.1
+provides:
+    - ifrextractor-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LongSoft/IFRExtractor-RS/releases/download/v1.6.1/ifrextractor_1.6.1_windows.zip
+      sha256: 3a0d93ecd3a4cb092d210c499d125ffd782982311f5f8dc40a8b180b58c4ffe7
+      bin:
+        - ifrextractor.exe
+      strip: 1
+test: ifrextractor --version

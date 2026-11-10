@@ -1,0 +1,21 @@
+api: v1
+name: vcpkg
+kind: app
+display: vcpkg
+description: C/C++ dependency manager from Microsoft For all platforms, buildsystems, and workflows
+homepage: https://vcpkg.io/
+license: MIT
+version: 2026.10.16
+channels:
+    stable: 2026.10.16
+provides:
+    - vcpkg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/vcpkg/archive/refs/tags/2026.10.16.zip
+      sha256: 4b78b9c84f6df2ea271e322c5354b29a28d4172212e41894bb6af61b932665ce
+      bin:
+        - vcpkg.exe
+      strip: 1
+test: vcpkg --version

@@ -1,0 +1,21 @@
+api: v1
+name: netcat
+kind: app
+display: netcat
+description: Read and write from/to network connections
+homepage: https://eternallybored.org/misc/netcat/
+license: GPL-2.0-only
+version: "1.12"
+channels:
+    stable: "1.12"
+provides:
+    - netcat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://eternallybored.org/misc/netcat/netcat-win32-1.12.zip
+      sha256: 413f85a1dbac60ab5516742d76beff4f4da22b8ef1a424f10f36ec77e6d274b1
+      bin:
+        - nc64.exe
+      strip: 1
+test: nc64 --version

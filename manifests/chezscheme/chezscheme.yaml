@@ -1,0 +1,25 @@
+api: v1
+name: chezscheme
+kind: app
+display: chezscheme
+description: A programming language and an implementation of that language, with supporting tools and documentation.
+homepage: https://cisco.github.io/ChezScheme/
+license: Apache-2.0
+version: 10.4.1
+channels:
+    stable: 10.4.1
+provides:
+    - chezscheme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cisco/ChezScheme/releases/download/v10.4.1/ChezScheme10.4.1.exe
+      sha256: 81c869b0f6a88dfeb37cc3c55198f816b7d08e5740900fef5e985f089476081d
+      bin:
+        - bin\a6nt\scheme.exe
+        - bin\a6nt\petite.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall chezscheme
+test: bin\a6nt\scheme --version

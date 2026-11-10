@@ -1,0 +1,46 @@
+api: v1
+name: aescrypt-packetizer
+kind: app
+display: aescrypt-packetizer
+description: Encrypt and decrypt using 256-bit AES encryption
+homepage: https://www.aescrypt.com
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "3.16"
+channels:
+    stable: "3.16"
+provides:
+    - aescrypt-packetizer
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aescrypt-packetizer/blobs/sha256:6ded6050675d0f771f473d5873bf897d0391859c9f9280362444f2189661ac3b
+      sha256: 6ded6050675d0f771f473d5873bf897d0391859c9f9280362444f2189661ac3b
+      bin:
+        - aescrypt-packetizer
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aescrypt-packetizer/blobs/sha256:f8ea5602c897a56c72464bea7b0de0b3e06694dae88df581be1e27aa6a67a2b2
+      sha256: f8ea5602c897a56c72464bea7b0de0b3e06694dae88df581be1e27aa6a67a2b2
+      bin:
+        - aescrypt-packetizer
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aescrypt-packetizer/blobs/sha256:3eddb8372fd630b7f93288f2fb19c3ec96a061b1de150918bee53d0a7a1d55ee
+      sha256: 3eddb8372fd630b7f93288f2fb19c3ec96a061b1de150918bee53d0a7a1d55ee
+      bin:
+        - aescrypt-packetizer
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aescrypt-packetizer/blobs/sha256:64bf374350078c9e283cd1b4e283fc477f9c484ca0388eebf12a140d1f1fa999
+      sha256: 64bf374350078c9e283cd1b4e283fc477f9c484ca0388eebf12a140d1f1fa999
+      bin:
+        - aescrypt-packetizer
+      strip: 1
+test: aescrypt-packetizer --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: bt-cli
+kind: app
+display: bt
+description: Opens required browser based on configuration
+homepage: https://www.aloneguid.uk/projects/bt/
+license: Freeware
+version: 5.6.12
+channels:
+    stable: 5.6.12
+provides:
+    - bt-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aloneguid/bt/releases/download/5.6.12/bt.zip
+      sha256: c631113cb854b96019f5cd266d63a3fe98b1d0eb7023f80ef97e44a3aafd412c
+      bin:
+        - bt.exe
+      strip: 1
+test: bt --version

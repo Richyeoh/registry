@@ -1,0 +1,24 @@
+api: v1
+name: emax64-pdumper
+kind: app
+display: emax64-pdumper
+description: An optimized clean build of emacs-pdumper branch (27.0.50) for 64-bit Windows. Built with `--without-compress-install --without-dbus --with-modules 'CFLAGS= -O2 -g3'`
+homepage: https://ntemacs.sourceforge.io
+license: GPL-3.0-or-later
+version: "20180619"
+channels:
+    stable: "20180619"
+provides:
+    - emax64-pdumper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/m-parashar/emax64/releases/download/pdumper-20180619/emax64-pdumper-bin-20180619.7z
+      sha256: 3f4c7f22654f7aafba593c19b2e5927cdc814491f59e8c9e4c29b8b31966063e
+      bin:
+        - bin\runemacs.exe
+        - bin\emacs.exe
+        - bin\emacsclientw.exe
+        - bin\emacs-27.0.50.exe
+      strip: 1
+test: bin\runemacs --version

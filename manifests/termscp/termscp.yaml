@@ -1,0 +1,21 @@
+api: v1
+name: termscp
+kind: app
+display: termscp
+description: Terminal UI file explorer with SCP/SFTP/FTP support
+homepage: https://termscp.rs
+license: MIT
+version: 1.2.2
+channels:
+    stable: 1.2.2
+provides:
+    - termscp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/veeso/termscp/releases/download/v1.2.2/termscp-v1.2.2-x86_64-pc-windows-msvc.zip
+      sha256: 5f1d93e2bed2a7546144353729309abcc793d90f50aa1a266f8cef6f2cedfe08
+      bin:
+        - termscp.exe
+      strip: 1
+test: termscp --version

@@ -1,0 +1,21 @@
+api: v1
+name: parabolic
+kind: app
+display: parabolic
+description: A powerful yt-dlp frontend that supports downloading videos in multiple formats (mp4, webm, mp3, opus, flac, and wav).
+homepage: https://nickvision.org/parabolic.html
+license: MIT
+version: 2026.5.0
+channels:
+    stable: 2026.5.0
+provides:
+    - parabolic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/NickvisionApps/Parabolic/releases/download/2026.5.0/NickvisionParabolicPortable.zip
+      sha256: d6c25b4968a35209b225e5342ea147eeca8091247a99bbb6d6011c64839ecf97
+      bin:
+        - parabolic.exe
+      strip: 1
+test: parabolic --version

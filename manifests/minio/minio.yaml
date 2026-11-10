@@ -1,0 +1,24 @@
+api: v1
+name: minio
+kind: app
+display: minio
+description: A high performance, distributed object storage server, designed for large-scale data infrastructure. (server)
+homepage: https://min.io
+license: Unknown
+version: 2026-09-19T17-05-25Z
+channels:
+    stable: 2026-09-19T17-05-25Z
+provides:
+    - minio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.min.io/aistor/minio/release/windows-amd64/archive/minio.exe.RELEASE.2026-09-19T17-05-25Z#/minio.exe
+      sha256: 29db67c14240d413ec00bae97338d46973c98a1df59e970938ac094bf675cce3
+      bin:
+        - minio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall minio
+test: minio --version

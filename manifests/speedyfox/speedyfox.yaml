@@ -1,0 +1,21 @@
+api: v1
+name: speedyfox
+kind: app
+display: speedyfox
+description: Boosts Firefox, Skype, Chrome, Thunderbird in a single click.
+homepage: https://www.crystalidea.com/speedyfox
+license: Unknown
+version: 2.0.30
+channels:
+    stable: 2.0.30
+provides:
+    - speedyfox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.crystalidea.com/downloads/speedyfox.zip
+      sha256: 3aad88cde609c382de6d1cce22a6bac22c4e779543827bb53a4d7280027877a5
+      bin:
+        - speedyfox.exe
+      strip: 1
+test: speedyfox --version

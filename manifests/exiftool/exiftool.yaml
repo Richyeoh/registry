@@ -1,0 +1,22 @@
+api: v1
+name: exiftool
+kind: app
+display: exiftool
+description: A command-line application for reading, writing and editing meta information in a wide variety of files.
+homepage: https://exiftool.org
+license: GPL-1.0-or-later|Artistic-1.0-Perl
+version: "13.62"
+channels:
+    stable: "13.62"
+provides:
+    - exiftool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.sourceforge.net/project/exiftool/exiftool-13.62_64.zip
+      sha256: 9c79e97a9444ba1f893da1dcbcae378fba0c0a0112afd8bf426b396c75f884ce
+      bin:
+        - exiftool.exe
+        - exiftool(-k).exe
+      strip: 1
+test: exiftool --version

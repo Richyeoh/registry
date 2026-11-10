@@ -1,0 +1,21 @@
+api: v1
+name: cocogitto
+kind: app
+display: cocogitto
+description: The Conventional Commits toolbox.
+homepage: https://docs.cocogitto.io
+license: MIT
+version: 7.0.0
+channels:
+    stable: 7.0.0
+provides:
+    - cocogitto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cocogitto/cocogitto/releases/download/7.0.0/cocogitto-7.0.0-x86_64-pc-windows-msvc.tar.gz
+      sha256: 074f68f05d270da5c0d69d3e234ec362bec4c6e3189c21d1c948d038603655d7
+      bin:
+        - cog.exe
+      strip: 1
+test: cog --version

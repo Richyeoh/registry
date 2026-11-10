@@ -1,0 +1,21 @@
+api: v1
+name: gtoolkit
+kind: app
+display: gtoolkit
+description: A moldable development environment.
+homepage: https://gtoolkit.com
+license: MIT
+version: 1.1.674
+channels:
+    stable: 1.1.674
+provides:
+    - gtoolkit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/feenkcom/gtoolkit/releases/download/v1.1.674/GlamorousToolkit-Windows-x86_64-v1.1.674.zip
+      sha256: 38999c727d1e82326339c7784ef7baeefe0505649980d77e06ed7116173737ba
+      bin:
+        - bin\GlamorousToolkit-cli.exe
+      strip: 1
+test: bin\GlamorousToolkit-cli --version

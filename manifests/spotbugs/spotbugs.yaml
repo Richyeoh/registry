@@ -1,0 +1,21 @@
+api: v1
+name: spotbugs
+kind: app
+display: spotbugs
+description: Static analysis tool for Java
+homepage: https://spotbugs.github.io/
+license: LGPL-2.1-only
+version: 4.10.5
+channels:
+    stable: 4.10.5
+provides:
+    - spotbugs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/spotbugs/spotbugs/releases/download/4.10.5/spotbugs-4.10.5.zip
+      sha256: f8eb9cf4ac8e1b29b3e29567541eef3f30b3bf49ff3880670a7963092cd8a859
+      bin:
+        - bin\spotbugs.bat.exe
+      strip: 1
+test: bin\spotbugs.bat --version

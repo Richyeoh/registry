@@ -1,0 +1,55 @@
+api: v1
+name: ab-av1
+kind: app
+display: ab-av1
+description: AV1 re-encoding using ffmpeg, svt-av1 & vmaf.
+homepage: https://github.com/alexheretic/ab-av1
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.11.7
+channels:
+    stable: 0.11.7
+provides:
+    - ab-av1
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/alexheretic/ab-av1/releases/download/v0.11.7/ab-av1.exe
+      sha256: a3a9534d2adecabc4861acf632d0f64741f56e2050d52032a5307bebb4fbdcc9
+      bin:
+        - ab-av1.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:8250e89b6bdd11e93baebecbc2b4f61723d4c6ee73061bb05dc38aa783d26831
+      sha256: 8250e89b6bdd11e93baebecbc2b4f61723d4c6ee73061bb05dc38aa783d26831
+      bin:
+        - ab-av1
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:0644477f88d598451369a7dbc701713f7236e67420e6a45380e7bf484a3d6a24
+      sha256: 0644477f88d598451369a7dbc701713f7236e67420e6a45380e7bf484a3d6a24
+      bin:
+        - ab-av1
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:d3dd6cac23a8ca95e0ebfe752670ba2dcda34f0de019fcfa11aa7e89bb810dc3
+      sha256: d3dd6cac23a8ca95e0ebfe752670ba2dcda34f0de019fcfa11aa7e89bb810dc3
+      bin:
+        - ab-av1
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ab-av1/blobs/sha256:ea69798027e767689402ca90ef1316d6003eeaff4b32822b0f6b05d4dd4127a2
+      sha256: ea69798027e767689402ca90ef1316d6003eeaff4b32822b0f6b05d4dd4127a2
+      bin:
+        - ab-av1
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ab-av1
+test: ab-av1 --version

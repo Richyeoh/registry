@@ -1,0 +1,21 @@
+api: v1
+name: cheat
+kind: app
+display: cheat
+description: Create and view interactive cheatsheets on the command-line
+homepage: https://github.com/cheat/cheat
+license: MIT
+version: 5.1.0
+channels:
+    stable: 5.1.0
+provides:
+    - cheat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cheat/cheat/releases/download/5.1.0/cheat-windows-amd64.exe.zip
+      sha256: a7fbdb2c02d575c2d75aa350ac25006699586edccbfce2304a01b5f518e06b80
+      bin:
+        - cheat.exe
+      strip: 1
+test: cheat --version

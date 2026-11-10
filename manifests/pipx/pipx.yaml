@@ -1,0 +1,21 @@
+api: v1
+name: pipx
+kind: app
+display: pipx
+description: Install and run Python applications in isolated environments
+homepage: https://pipx.pypa.io/
+license: MIT
+version: 1.18.16
+channels:
+    stable: 1.18.16
+provides:
+    - pipx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pypa/pipx/releases/download/1.18.16/pipx.pyz
+      sha256: bd3709947d3a36cb898f53c765aba568d01c1aef3302ec439037fcbbdad559c1
+      bin:
+        - pipx.bat.exe
+      strip: 1
+test: pipx.bat --version

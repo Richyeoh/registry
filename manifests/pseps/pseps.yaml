@@ -1,0 +1,21 @@
+api: v1
+name: pseps
+kind: app
+display: pseps
+description: Templating tool for PowerShell
+homepage: https://straightdave.github.io/eps/
+license: MIT
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - pseps
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/eps.1.0.0.nupkg
+      sha256: ddf192dcb6ae8eefd60e5b440c2d4fbd1bccd4bc49b59624357e831168463440
+      bin:
+        - pseps.exe
+      strip: 1
+test: pseps --version

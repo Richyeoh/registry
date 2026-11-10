@@ -1,0 +1,24 @@
+api: v1
+name: bt2qbt
+kind: app
+display: bt2qbt
+description: Cli tool for export from uTorrent/Bittorrent into qBittorrent.
+homepage: https://github.com/rumanzo/bt2qbt/
+license: GPL-3.0-only
+version: "1.22"
+channels:
+    stable: "1.22"
+provides:
+    - bt2qbt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rumanzo/bt2qbt/releases/download/v1.22/bt2qbt_v1.22_amd64.exe#/bt2qbt.exe
+      sha256: fcf8e26d7474ea8563048e7a817ad30ce654e45c1bd6f918bee2300ed6a52361
+      bin:
+        - bt2qbt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bt2qbt
+test: bt2qbt --version

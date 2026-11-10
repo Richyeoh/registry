@@ -1,0 +1,21 @@
+api: v1
+name: teamviewer
+kind: app
+display: teamviewer
+description: Remote control, desktop sharing, online meetings, web conferencing and file transfer between computers
+homepage: https://www.teamviewer.com
+license: Unknown
+version: 15.83.3
+channels:
+    stable: 15.83.3
+provides:
+    - teamviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.teamviewer.com/download/version_15x/TeamViewerPortable.zip
+      sha256: 010de743baef5d2b82795676a1b00d9542ad94f326dc47756bc88fbfd3bedd6d
+      bin:
+        - teamviewer.exe
+      strip: 1
+test: teamviewer --version

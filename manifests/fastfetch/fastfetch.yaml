@@ -1,0 +1,22 @@
+api: v1
+name: fastfetch
+kind: app
+display: fastfetch
+description: A maintained, feature-rich and performance oriented, neofetch like system information tool
+homepage: https://github.com/fastfetch-cli/fastfetch
+license: MIT
+version: 2.71.0
+channels:
+    stable: 2.71.0
+provides:
+    - fastfetch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastfetch-windows-amd64.7z
+      sha256: 9d39487241282a33c3eab506eed54dfb03f284834e043cc2423c40acb4415e26
+      bin:
+        - fastfetch.exe
+        - flashfetch.exe
+      strip: 1
+test: fastfetch --version

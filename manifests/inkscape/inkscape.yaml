@@ -1,0 +1,22 @@
+api: v1
+name: inkscape
+kind: app
+display: inkscape
+description: Professional vector graphics editor
+homepage: https://inkscape.org
+license: GPL-3.0-or-later
+version: 1.4.4
+channels:
+    stable: 1.4.4
+provides:
+    - inkscape
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://media.inkscape.org/dl/resources/file/inkscape-1.4.4_2026-05-05_dcaf3e7-x64_mHK170m.7z
+      sha256: c4dbd64a92628abe7d7316c43f9325396e4d48417866027ee3d993d4f5b54c6a
+      bin:
+        - bin\inkscape.com.exe
+        - bin\inkview.com.exe
+      strip: 1
+test: bin\inkscape.com --version

@@ -1,0 +1,21 @@
+api: v1
+name: zrok
+kind: app
+display: zrok
+description: Geo-scale, next-generation sharing platform built on top of OpenZiti
+homepage: https://zrok.io
+license: Apache-2.0
+version: 2.0.9
+channels:
+    stable: 2.0.9
+provides:
+    - zrok
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/openziti/zrok/releases/download/v2.0.9/zrok_2.0.9_windows_amd64.tar.gz
+      sha256: 2780e799269d92e64da5c5bfda48e76d4464925bdfcb7a11deafb40c6f25ad84
+      bin:
+        - zrok2.exe
+      strip: 1
+test: zrok2 --version

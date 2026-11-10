@@ -1,0 +1,21 @@
+api: v1
+name: nunit-extension-teamcity-event-listener
+kind: app
+display: nunit-extension-teamcity-event-listener
+description: NUnit Team City Event Listener Extension
+homepage: https://nunit.org/
+license: MIT
+version: 1.0.10
+channels:
+    stable: 1.0.10
+provides:
+    - nunit-extension-teamcity-event-listener
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/nunit-extension-teamcity-event-listener.1.0.10.nupkg
+      sha256: dc068f62fc4b02bd5b9406eff26a708c384dfd48138b1b04fd30070ff35a77d7
+      bin:
+        - nunit-extension-teamcity-event-listener.exe
+      strip: 1
+test: nunit-extension-teamcity-event-listener --version

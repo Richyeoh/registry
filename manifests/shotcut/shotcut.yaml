@@ -1,0 +1,21 @@
+api: v1
+name: shotcut
+kind: app
+display: shotcut
+description: Video editor
+homepage: https://www.shotcut.org
+license: GPL-3.0-or-later
+version: 26.9.27
+channels:
+    stable: 26.9.27
+provides:
+    - shotcut
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mltframework/shotcut/releases/download/v26.9.27/shotcut-win64-26.9.27.zip
+      sha256: 1f8c50ce7b125a2f0dcb60777b358e86baf03b8515982612b6adae10a83d93a5
+      bin:
+        - shotcut.exe
+      strip: 1
+test: shotcut --version

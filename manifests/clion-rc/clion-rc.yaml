@@ -1,0 +1,21 @@
+api: v1
+name: clion-rc
+kind: app
+display: clion-rc
+description: Cross-Platform IDE for C and C++ by JetBrains. (Release Candidate)
+homepage: https://www.jetbrains.com/cpp/
+license: Unknown
+version: 2026.3-263.7307.108
+channels:
+    stable: 2026.3-263.7307.108
+provides:
+    - clion-rc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/cpp/CLion-263.7307.108.win.zip
+      sha256: 123cebf99aa0439446863ee3f03bd2e848eb392d7c0eecb9098d57d22115e09c
+      bin:
+        - IDE\bin\clion64.exe
+      strip: 1
+test: IDE\bin\clion64 --version

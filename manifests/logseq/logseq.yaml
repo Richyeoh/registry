@@ -1,0 +1,21 @@
+api: v1
+name: logseq
+kind: app
+display: logseq
+description: A privacy-first platform for knowledge sharing and management
+homepage: https://logseq.com
+license: AGPL-3.0-only
+version: 2.0.2
+channels:
+    stable: 2.0.2
+provides:
+    - logseq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/logseq/logseq/releases/download/2.0.2/Logseq-win-x64-2.0.2.zip
+      sha256: 3332383c730bf8c0bd6bda9d5c60b669399f3ce9a1bee688dda12bfaaa5457db
+      bin:
+        - logseq.exe
+      strip: 1
+test: logseq --version

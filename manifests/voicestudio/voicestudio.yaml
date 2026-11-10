@@ -1,0 +1,21 @@
+api: v1
+name: voicestudio
+kind: app
+display: voicestudio
+description: Open-source voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.
+homepage: https://voicestudio.sh
+license: Unknown
+version: 0.5.6
+channels:
+    stable: 0.5.6
+provides:
+    - voicestudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/debpalash/VoiceStudio/releases/download/v0.5.6/VoiceStudio-Electron-0.5.6-win-x64.exe#/dl.7z
+      sha256: 3d7ac1d6b54e7854ca7fff4dda838e402d1c5d31acc9656b1838432e29a97624
+      bin:
+        - VoiceStudio.exe
+      strip: 1
+test: VoiceStudio --version

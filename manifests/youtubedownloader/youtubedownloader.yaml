@@ -1,0 +1,21 @@
+api: v1
+name: youtubedownloader
+kind: app
+display: youtubedownloader
+description: Download videos from YouTube.
+homepage: https://github.com/Tyrrrz/YoutubeDownloader
+license: GPL-3.0-or-later
+version: 1.17.1
+channels:
+    stable: 1.17.1
+provides:
+    - youtubedownloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.17.1/YoutubeDownloader.win-x64.zip
+      sha256: 5a74c9318e926543e18f0106aa16517258b2628e05670d347ee435c47d60aeb1
+      bin:
+        - youtubedownloader.exe
+      strip: 1
+test: youtubedownloader --version

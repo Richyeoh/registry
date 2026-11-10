@@ -1,0 +1,24 @@
+api: v1
+name: assimp3
+kind: app
+display: assimp3
+description: Open Asset Importer Library. Loads 40+ 3D-file-formats into one unified and clean data structure. (version 3)
+homepage: https://www.assimp.org/
+license: Unknown
+version: 3.3.1
+channels:
+    stable: 3.3.1
+provides:
+    - assimp3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/assimp/assimp/releases/download/v3.3.1/assimp-sdk-3.3.1-setup_vs2017.exe
+      sha256: d368b053f55c1557d0c265f9fd5f625fc1a401f9d8d0913dae440f2993bdf59a
+      bin:
+        - bin\x64\assimp.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall assimp3
+test: bin\x64\assimp --version

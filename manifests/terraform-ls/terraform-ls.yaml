@@ -1,0 +1,21 @@
+api: v1
+name: terraform-ls
+kind: app
+display: terraform-ls
+description: Terraform Language Server
+homepage: https://github.com/hashicorp/terraform-ls
+license: MPL-2.0
+version: 0.39.1
+channels:
+    stable: 0.39.1
+provides:
+    - terraform-ls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.hashicorp.com/terraform-ls/0.39.1/terraform-ls_0.39.1_windows_amd64.zip
+      sha256: bb8523b2e109c2ad719dbf6245c4be035386e322cb44e8f01c74b1caa4680efb
+      bin:
+        - terraform-ls.exe
+      strip: 1
+test: terraform-ls --version

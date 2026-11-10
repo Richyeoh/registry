@@ -1,0 +1,21 @@
+api: v1
+name: babelpad
+kind: app
+display: babelpad
+description: Unicode Text Editor for Windows
+homepage: https://www.babelstone.co.uk/Software/BabelPad.html
+license: Freeware
+version: 16.0.0.6
+channels:
+    stable: 16.0.0.6
+provides:
+    - babelpad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.babelstone.co.uk/Software/Download/BabelPad.zip
+      sha256: eed79df5a1e4638cb9006ec807fc47f16c5966f95ea319075336b819f40285b0
+      bin:
+        - BabelPad.exe
+      strip: 1
+test: BabelPad --version

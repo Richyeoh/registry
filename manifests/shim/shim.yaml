@@ -1,0 +1,21 @@
+api: v1
+name: shim
+kind: app
+display: shim
+description: Create shim for programs.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2023.06.28
+channels:
+    stable: 0.2023.06.28
+provides:
+    - shim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lukesampson/psutils/2a2453b72b099261dedbb9c861383676303f45b0/shim.ps1
+      sha256: eb866f97991b0a388e2f267deec0646d3e722dce1a1b089b4cffa141ef9d5112
+      bin:
+        - shim.ps1.exe
+      strip: 1
+test: shim.ps1 --version

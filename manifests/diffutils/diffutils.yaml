@@ -1,0 +1,27 @@
+api: v1
+name: diffutils
+kind: app
+display: diffutils
+description: A package of several programs related to finding differences between files
+homepage: https://www.gnu.org/software/diffutils/
+license: GPL-3.0-or-later
+version: "3.6"
+channels:
+    stable: "3.6"
+provides:
+    - diffutils
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://steffen.gulpe.de/gnu-tools-for-windows/i686-w64-mingw32/cmp.exe
+      sha256: d61bc5653d4f9a462413fdf2c19dfb464924e44db8547ec41257293f34e91513
+      bin:
+        - cmp.exe
+        - diff.exe
+        - diff3.exe
+        - sdiff.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall diffutils
+test: cmp --version

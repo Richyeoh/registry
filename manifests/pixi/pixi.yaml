@@ -1,0 +1,21 @@
+api: v1
+name: pixi
+kind: app
+display: pixi
+description: Package management made easy
+homepage: https://pixi.sh
+license: BSD-3-Clause
+version: 0.84.2
+channels:
+    stable: 0.84.2
+provides:
+    - pixi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/prefix-dev/pixi/releases/download/v0.84.2/pixi-x86_64-pc-windows-msvc.zip
+      sha256: aa4f02efac31566176d639007e65a36740aa7b56c22673c44ecfd2611e7a6b2c
+      bin:
+        - pixi.exe
+      strip: 1
+test: pixi --version

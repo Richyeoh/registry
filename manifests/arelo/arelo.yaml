@@ -1,0 +1,46 @@
+api: v1
+name: arelo
+kind: app
+display: arelo
+description: Simple auto reload (live reload) utility
+homepage: https://github.com/makiuchi-d/arelo
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.15.4
+channels:
+    stable: 1.15.4
+provides:
+    - arelo
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:14da6734979c2342999a2387f2682858ca121f8252dbb946911b9bd64a2e33df
+      sha256: 14da6734979c2342999a2387f2682858ca121f8252dbb946911b9bd64a2e33df
+      bin:
+        - arelo
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:c8669c54da8949643adb7cc6b7d7d2440db69b86d39868280c62ca9815472b39
+      sha256: c8669c54da8949643adb7cc6b7d7d2440db69b86d39868280c62ca9815472b39
+      bin:
+        - arelo
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:592beafb82bd1f10d9b8a303b0d224e0378d71eac089a47be9f141c266788e35
+      sha256: 592beafb82bd1f10d9b8a303b0d224e0378d71eac089a47be9f141c266788e35
+      bin:
+        - arelo
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arelo/blobs/sha256:8051a15270ccfa1ac4ba18bb6421ecf51e1f6d3a89a462809890a6b41c760ca9
+      sha256: 8051a15270ccfa1ac4ba18bb6421ecf51e1f6d3a89a462809890a6b41c760ca9
+      bin:
+        - arelo
+      strip: 1
+test: arelo --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

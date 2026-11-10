@@ -1,0 +1,24 @@
+api: v1
+name: cyberduck
+kind: app
+display: cyberduck
+description: Libre file transfer client supporting multiple protocols.
+homepage: https://cyberduck.io
+license: Freeware
+version: 9.6.0.46406
+channels:
+    stable: 9.6.0.46406
+provides:
+    - cyberduck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://update.cyberduck.io/windows/Cyberduck-Installer-9.6.0.46406.msi
+      sha256: a59c54fb56957c2451222b0f6ba5584ba159a4c2c75cfe89633856a64ba15aac
+      bin:
+        - cyberduck.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cyberduck
+test: cyberduck --version

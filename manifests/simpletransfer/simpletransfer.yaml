@@ -1,0 +1,21 @@
+api: v1
+name: simpletransfer
+kind: app
+display: simpletransfer
+description: Transfer photos & videos from iPhone or iPad to PC or Mac.
+homepage: https://rambax.com/simpletransfer
+license: Unknown
+version: 4.1.1
+channels:
+    stable: 4.1.1
+provides:
+    - simpletransfer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rambax.com/simpletransfer/desktop/SimpleTransfer%20Desktop-Windows-4.1.1.exe#/dl.7z
+      sha256: 9f027a9efa679ba0ae35c1e4b867a0e705b60b90cdcff5ed3e8903fc42944d12
+      bin:
+        - simpletransfer.exe
+      strip: 1
+test: simpletransfer --version

@@ -1,0 +1,21 @@
+api: v1
+name: ungoogled-chromium
+kind: app
+display: ungoogled-chromium
+description: Google Chromium, sans integration with Google.
+homepage: https://ungoogled-software.github.io/ungoogled-chromium-binaries/
+license: BSD-3-Clause
+version: 157.0.8103.38-1.1
+channels:
+    stable: 157.0.8103.38-1.1
+provides:
+    - ungoogled-chromium
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/157.0.8103.38-1.1/ungoogled-chromium_157.0.8103.38-1.1_windows_x64.zip
+      sha256: 7aae503c42974753de7e2fa3910106b8594b027e7e567baf7e69016b2a4e6c74
+      bin:
+        - chrome.exe
+      strip: 1
+test: chrome --version

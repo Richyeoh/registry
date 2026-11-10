@@ -1,0 +1,24 @@
+api: v1
+name: kopuz
+kind: app
+display: kopuz
+description: Your next music player
+homepage: https://kopuz.temidara.rocks
+license: MIT
+version: 0.67.1
+channels:
+    stable: 0.67.1
+provides:
+    - kopuz
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Kopuz-org/kopuz/releases/download/v0.67.1/Kopuz_0.67.1_x64.msi
+      sha256: 6827c38be04bc984b600cca8682ace4a08c299d0724a020e2517b3a871167095
+      bin:
+        - kopuz.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kopuz
+test: kopuz --version

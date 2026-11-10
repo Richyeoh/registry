@@ -1,0 +1,21 @@
+api: v1
+name: namida
+kind: app
+display: namida
+description: Multiplatform desktop and mobile media player with YouTube support.
+homepage: https://github.com/namidaco/namida
+license: Unknown
+version: 7.1.2
+channels:
+    stable: 7.1.2
+provides:
+    - namida
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/namidaco/namida/releases/download/v7.1.2/Namida-x86_64-7.1.2-Portable.zip
+      sha256: 01811fd4eff15a3d0c680312d69fb3b8588dde1e9910273455c769c1003db431
+      bin:
+        - namida.exe
+      strip: 1
+test: namida --version

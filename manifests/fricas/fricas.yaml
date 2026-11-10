@@ -1,0 +1,21 @@
+api: v1
+name: fricas
+kind: app
+display: fricas
+description: FriCAS is a general purpose computer algebra system (CAS).
+homepage: https://fricas.github.io/
+license: BSD-3-Clause-Modification
+version: 1.4.0
+channels:
+    stable: 1.4.0
+provides:
+    - fricas
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fricas/fricas/releases/download/1.4.0/fricas-1.4.0-windows-x86-64.zip
+      sha256: bbac0555aed7aa58f0f5f3471f9fcdd52e7cebb8d47464d0bf486c78e9ac8c4b
+      bin:
+        - bin\FRICASsys.exe
+      strip: 1
+test: bin\FRICASsys --version

@@ -1,0 +1,31 @@
+api: v1
+name: procs
+kind: app
+display: procs
+description: A modern replacement for ps(1)
+homepage: https://github.com/dalance/procs
+license: MIT
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 0.14.12
+channels:
+    stable: 0.14.12
+provides:
+    - procs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dalance/procs/releases/download/v0.14.12/procs-v0.14.12-x86_64-windows.zip
+      sha256: 4928c399ae78ee82f99139a5629077b8d90a58599d834584dd4e613cb60c83d0
+      bin:
+        - procs.exe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/procs/download/
+      sha256: 514e3c32773cb95984a5ac29105392148adaf3dd6988e6b57432da7a70a3fb2e
+      bin:
+        - procs
+test: procs --version

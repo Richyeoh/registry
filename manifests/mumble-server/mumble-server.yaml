@@ -1,0 +1,24 @@
+api: v1
+name: mumble-server
+kind: app
+display: mumble-server
+description: Server kit for Mumble, a low-latency and high quality voice chat primarily intended for use while gaming.
+homepage: https://www.mumble.info/
+license: BSD-3-Clause
+version: 1.5.939
+channels:
+    stable: 1.5.939
+provides:
+    - mumble-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mumble-voip/mumble/releases/download/v1.5.939/mumble_server-1.5.939.x64.exe
+      sha256: 6a028fbf36bb35713c38864c5dfcf1e76a4eb81bd49b02746deab3dad66719bf
+      bin:
+        - mumble-server.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mumble-server
+test: mumble-server --version

@@ -19,4 +19,4 @@ platforms:
         - WindowsTerminal.exe
         - wt.exe
       strip: 1
-test: WindowsTerminal.exe --version
+test: WindowsTerminal --version

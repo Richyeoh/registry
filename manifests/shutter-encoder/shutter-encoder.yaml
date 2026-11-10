@@ -1,0 +1,21 @@
+api: v1
+name: shutter-encoder
+kind: app
+display: shutter-encoder
+description: A professional video compression tool accessible to all, mostly based on FFmpeg.
+homepage: https://www.shutterencoder.com/
+license: Unknown
+version: "20.5"
+channels:
+    stable: "20.5"
+provides:
+    - shutter-encoder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.shutterencoder.com/Shutter%20Encoder%2020.5%20Windows%2064bits.zip
+      sha256: 2268446e30db61d3a5491679740241f9bfb1a904d4c60495c17e96c5bec4709e
+      bin:
+        - shutter-encoder.exe
+      strip: 1
+test: shutter-encoder --version

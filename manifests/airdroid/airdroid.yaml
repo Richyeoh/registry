@@ -1,0 +1,38 @@
+api: v1
+name: airdroid
+kind: app
+display: airdroid
+description: An application for transferring files across devices, remote control Android devices, mirror screen, and manage SMS & notifications on your computer.
+homepage: https://www.airdroid.com
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 3.8.0.4
+channels:
+    stable: 3.8.0.4
+provides:
+    - airdroid
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.airdroid.com/download/AirDroid/Win/v3.8.0.4/20250311152551/AirDroid_Desktop_Client_3.8.0.4.exe#/dl.7z
+      sha256: ce7f2dfa2ed42b0013c9342d52b5b870fab1a2ecda4d114c12074887806de60e
+      bin:
+        - AirDroid.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://dl.airdroid.com/AirDroid_Desktop_Client_3.7.3.1.dmg
+      sha256: f0d8199dedc6daa3a93ca672d5e1c8d33554b07bc7371ba4538802926ea1acba
+      bin:
+        - airdroid
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.airdroid.com/AirDroid_Desktop_Client_3.7.3.1.dmg
+      sha256: f0d8199dedc6daa3a93ca672d5e1c8d33554b07bc7371ba4538802926ea1acba
+      bin:
+        - airdroid
+      strip: 1
+test: AirDroid --version

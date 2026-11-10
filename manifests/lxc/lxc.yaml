@@ -1,0 +1,21 @@
+api: v1
+name: lxc
+kind: app
+display: lxc
+description: LXD client
+homepage: https://linuxcontainers.org/lxd
+license: Apache-2.0
+version: 6.10.0
+channels:
+    stable: 6.10.0
+provides:
+    - lxc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/lxc.6.10.0.nupkg
+      sha256: 9e1cf11dee035e7cd1190bf5005605390972504b34910be5a6ea1ead4f933b41
+      bin:
+        - lxc.exe
+      strip: 1
+test: lxc --version

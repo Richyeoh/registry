@@ -1,0 +1,32 @@
+api: v1
+name: adguard
+kind: app
+display: AdGuard
+description: Stand alone ad blocker
+homepage: https://adguard.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.20.3.2633
+channels:
+    stable: 2.20.3.2633
+provides:
+    - adguard
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://static.adguard.com/mac/release/AdGuard-2.20.3.2633.dmg
+      sha256: 8a9126a4fa60e2344dd8a7d9859ecea2e97a6131a7effcf799900a6c9b6a9a9d
+      bin:
+        - adguard
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://static.adguard.com/mac/release/AdGuard-2.20.3.2633.dmg
+      sha256: 8a9126a4fa60e2344dd8a7d9859ecea2e97a6131a7effcf799900a6c9b6a9a9d
+      bin:
+        - adguard
+      strip: 1
+test: adguard --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

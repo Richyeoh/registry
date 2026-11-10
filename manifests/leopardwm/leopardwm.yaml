@@ -1,0 +1,23 @@
+api: v1
+name: leopardwm
+kind: app
+display: leopardwm
+description: Scroll-first tiling window manager for Windows, inspired by niri.
+homepage: https://github.com/jcardama/LeopardWM
+license: GPL-3.0-only
+version: 0.3.5
+channels:
+    stable: 0.3.5
+provides:
+    - leopardwm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jcardama/LeopardWM/releases/download/v0.3.5/LeopardWM-0.3.5-x86_64-windows.zip
+      sha256: e5360e8a82dafbbcc33165f4550abd066ca6b1321e6519422be575f45a1cf188
+      bin:
+        - leopardwm.exe
+        - leopardwm-cli.exe
+        - lwm.exe
+      strip: 1
+test: leopardwm --version

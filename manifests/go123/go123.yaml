@@ -1,0 +1,22 @@
+api: v1
+name: go123
+kind: app
+display: go123
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.23.12
+channels:
+    stable: 1.23.12
+provides:
+    - go123
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.23.12.windows-amd64.zip
+      sha256: 07c35866cdd864b81bb6f1cfbf25ac7f87ddc3a976ede1bf5112acbb12dfe6dc
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

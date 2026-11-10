@@ -1,0 +1,21 @@
+api: v1
+name: zeronet
+kind: app
+display: zeronet
+description: Decentralized websites using Bitcoin crypto and BitTorrent network
+homepage: https://zeronet.io/
+license: GPL-2.0-only
+version: 670a9cf2e737f6b11187129515b2d4b73c78c962
+channels:
+    stable: 670a9cf2e737f6b11187129515b2d4b73c78c962
+provides:
+    - zeronet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HelloZeroNet/ZeroNet-win/archive/670a9cf2e737f6b11187129515b2d4b73c78c962.zip
+      sha256: 3faaa82bdb148a0212ad4d9219d2c7cc6725580560b0624a224ec369d732b891
+      bin:
+        - ZeroNet.exe
+      strip: 1
+test: ZeroNet --version

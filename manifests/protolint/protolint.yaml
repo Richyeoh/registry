@@ -1,0 +1,22 @@
+api: v1
+name: protolint
+kind: app
+display: protolint
+description: A pluggable linter and fixer to enforce Protocol Buffer style and conventions
+homepage: https://github.com/yoheimuta/protolint
+license: MIT
+version: 0.58.0
+channels:
+    stable: 0.58.0
+provides:
+    - protolint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yoheimuta/protolint/releases/download/v0.58.0/protolint_0.58.0_windows_amd64.tar.gz
+      sha256: 66efe70020a9f1c124aceb931509093e4cb2f13066b553b40c693f8e0f4bd593
+      bin:
+        - protolint.exe
+        - protoc-gen-protolint.exe
+      strip: 1
+test: protolint --version

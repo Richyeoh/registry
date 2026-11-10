@@ -1,0 +1,21 @@
+api: v1
+name: winget-ps
+kind: app
+display: winget-ps
+description: A PowerShell Module for the Windows Package Manager Client.
+homepage: https://learn.microsoft.com/windows/package-manager/
+license: MIT
+version: 1.29.380
+channels:
+    stable: 1.29.380
+provides:
+    - winget-ps
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/microsoft.winget.client.1.29.380.nupkg
+      sha256: 3469e5747eb6b100e51fed3f2057386b5ba60bc8955a6669b5c2eb562e316619
+      bin:
+        - winget-ps.exe
+      strip: 1
+test: winget-ps --version

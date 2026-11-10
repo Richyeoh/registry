@@ -1,0 +1,21 @@
+api: v1
+name: gitui
+kind: app
+display: gitui
+description: Terminal client for Git
+homepage: https://github.com/gitui-org/gitui
+license: MIT
+version: 0.28.1
+channels:
+    stable: 0.28.1
+provides:
+    - gitui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gitui-org/gitui/releases/download/v0.28.1/gitui-win.tar.gz
+      sha256: fab116ccdf9ae4e17378db912d76cc26e60aefd2226f44e665120dea166867e4
+      bin:
+        - gitui.exe
+      strip: 1
+test: gitui --version

@@ -1,0 +1,24 @@
+api: v1
+name: boringproxy
+kind: app
+display: boringproxy
+description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS
+homepage: https://github.com/boringproxy/boringproxy
+license: MIT
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - boringproxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/boringproxy/boringproxy/releases/download/v0.10.0/boringproxy-windows-x86_64.exe#/boringproxy.exe
+      sha256: 5d04e423d135a0cf9a247c62046f76ae0d19514ffe5831dc688a24122bc754e8
+      bin:
+        - boringproxy.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall boringproxy
+test: boringproxy --version

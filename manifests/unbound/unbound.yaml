@@ -1,0 +1,26 @@
+api: v1
+name: unbound
+kind: app
+display: unbound
+description: A validating, recursive, caching DNS resolver
+homepage: https://nlnetlabs.nl/projects/unbound/about/
+license: BSD-3-Clause
+version: 1.26.2
+channels:
+    stable: 1.26.2
+provides:
+    - unbound
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://nlnetlabs.nl/downloads/unbound/unbound_setup_1.26.2.exe#/dl.7z
+      sha256: eb0ff4c6bccef42050db47dafd7eb6421f1afbbbf366d39aebbcc3d63cb821e5
+      bin:
+        - unbound.exe
+        - unbound-anchor.exe
+        - unbound-checkconf.exe
+        - unbound-control.exe
+        - unbound-control-setup.cmd.exe
+        - unbound-host.exe
+      strip: 1
+test: unbound --version

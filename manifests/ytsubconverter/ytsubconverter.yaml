@@ -1,0 +1,24 @@
+api: v1
+name: ytsubconverter
+kind: app
+display: ytsubconverter
+description: A tool for creating styled YouTube subtitles.
+homepage: https://github.com/arcusmaximus/YTSubConverter
+license: MIT
+version: 1.6.5
+channels:
+    stable: 1.6.5
+provides:
+    - ytsubconverter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/arcusmaximus/YTSubConverter/releases/download/1.6.5/YTSubConverter.exe
+      sha256: 85fdb21727c64bf5bf8067054f0dbaa6d6e52b0d8a8b3c5308988eb3ae206d75
+      bin:
+        - YTSubConverter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ytsubconverter
+test: YTSubConverter --version

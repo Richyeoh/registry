@@ -1,0 +1,21 @@
+api: v1
+name: injector
+kind: app
+display: injector
+description: Command line utility to inject and eject DLLs.
+homepage: https://github.com/nefarius/Injector
+license: MIT
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - injector
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nefarius/Injector/releases/download/v1.5.0/Injector_x86_amd64_arm64.zip
+      sha256: ae8729976ae97cc068813ec67981833f26cf92b5cde0ffe16c01b7b44e346a38
+      bin:
+        - Injector.exe
+      strip: 1
+test: Injector --version

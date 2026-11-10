@@ -1,0 +1,32 @@
+api: v1
+name: android-ndk
+kind: app
+display: Android NDK
+description: Toolset to implement parts of Android apps in native code
+homepage: https://developer.android.com/ndk/index.html
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: "30"
+channels:
+    stable: "30"
+provides:
+    - android-ndk
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://dl.google.com/android/repository/android-ndk-r30-darwin.dmg
+      sha256: 285f6c877b0bdd3986b4549a0157f9ffcb653cecdf107837c19c8af1ceff37da
+      bin:
+        - android-ndk
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.google.com/android/repository/android-ndk-r30-darwin.dmg
+      sha256: 285f6c877b0bdd3986b4549a0157f9ffcb653cecdf107837c19c8af1ceff37da
+      bin:
+        - android-ndk
+      strip: 1
+test: android-ndk --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

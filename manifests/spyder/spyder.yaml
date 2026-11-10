@@ -1,0 +1,21 @@
+api: v1
+name: spyder
+kind: app
+display: spyder
+description: The Scientific Python Development Environment.
+homepage: https://www.spyder-ide.org/
+license: MIT
+version: 5.5.6
+channels:
+    stable: 5.5.6
+provides:
+    - spyder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/spyder-ide/spyder/releases/download/v5.5.6/Spyder_64bit_full.exe#/dl.7z
+      sha256: c0c5b36bb565d56eb26c656d4443e6a203429f32056afe66eafa1f7f192089f8
+      bin:
+        - spyder.exe
+      strip: 1
+test: spyder --version

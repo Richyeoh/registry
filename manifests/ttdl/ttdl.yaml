@@ -1,0 +1,21 @@
+api: v1
+name: ttdl
+kind: app
+display: ttdl
+description: Terminal ToDo List (TTDL) manager using plain text todo.txt format
+homepage: https://github.com/VladimirMarkelov/ttdl
+license: MIT
+version: 6.2.5
+channels:
+    stable: 6.2.5
+provides:
+    - ttdl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/VladimirMarkelov/ttdl/releases/download/v6.2.5/ttdl_6.2.5_win_x64.zip
+      sha256: 9081f1b051d4ee939540b8c2eba5384228a0e93c1d8b9332cee9e73c1cf89e67
+      bin:
+        - ttdl.exe
+      strip: 1
+test: ttdl --version

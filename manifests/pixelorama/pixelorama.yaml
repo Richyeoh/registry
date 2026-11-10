@@ -1,0 +1,21 @@
+api: v1
+name: pixelorama
+kind: app
+display: pixelorama
+description: 2D sprite editor designed for pixel art
+homepage: https://orama-interactive.itch.io/pixelorama
+license: MIT
+version: 1.2.4
+channels:
+    stable: 1.2.4
+provides:
+    - pixelorama
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Orama-Interactive/Pixelorama/releases/download/v1.2.4/Pixelorama-Windows-64bit.zip
+      sha256: 8ce63c264338b88fd36527f8edb3b7f6bba614d92451efc406ef7ce45b41da85
+      bin:
+        - Pixelorama.exe
+      strip: 1
+test: Pixelorama --version

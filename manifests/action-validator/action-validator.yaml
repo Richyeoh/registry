@@ -1,0 +1,46 @@
+api: v1
+name: action-validator
+kind: app
+display: action-validator
+description: Tool to validate GitHub Action and Workflow YAML files
+homepage: https://github.com/mpalmer/action-validator
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - action-validator
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/action-validator/blobs/sha256:543d0e8f0e3a0fa20b7b1ded901d0112c4e2f52fb3e46400dca43b2d11e627d1
+      sha256: 543d0e8f0e3a0fa20b7b1ded901d0112c4e2f52fb3e46400dca43b2d11e627d1
+      bin:
+        - action-validator
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/action-validator/blobs/sha256:14ab16254be123c6604ed9127ec2290858c83b338779f867e073c18646e8f931
+      sha256: 14ab16254be123c6604ed9127ec2290858c83b338779f867e073c18646e8f931
+      bin:
+        - action-validator
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/action-validator/blobs/sha256:d8f9021532e74756bad01482d0d435e1ec420429521c27c5c06e243c2108e3f5
+      sha256: d8f9021532e74756bad01482d0d435e1ec420429521c27c5c06e243c2108e3f5
+      bin:
+        - action-validator
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/action-validator/blobs/sha256:e50f6621e00aa7e515d73a7765296a05c8fb0882734224c6fcc103d72a5fb9aa
+      sha256: e50f6621e00aa7e515d73a7765296a05c8fb0882734224c6fcc103d72a5fb9aa
+      bin:
+        - action-validator
+      strip: 1
+test: action-validator --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

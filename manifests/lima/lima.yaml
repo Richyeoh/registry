@@ -1,0 +1,21 @@
+api: v1
+name: lima
+kind: app
+display: lima
+description: Linux virtual machines, with a focus on running containers.
+homepage: https://lima-vm.io
+license: Apache-2.0
+version: 2.3.0
+channels:
+    stable: 2.3.0
+provides:
+    - lima
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lima-vm/lima/releases/download/v2.3.0/lima-2.3.0-Windows-AMD64.zip
+      sha256: fbd49036909ba3833ea8618743bd3a051eb21049c80c0772452f79ed45af99dc
+      bin:
+        - lima.exe
+      strip: 1
+test: lima --version

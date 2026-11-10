@@ -1,0 +1,21 @@
+api: v1
+name: lightcraft
+kind: app
+display: lightcraft
+description: Photo library and raw development; an open-source, clean-room reimplementation of Adobe Lightroom, rebuilt in pure Rust
+homepage: https://getartcraft.com/apps/lightcraft
+license: MIT|Apache-2.0
+version: 0.19.0
+channels:
+    stable: 0.19.0
+provides:
+    - lightcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-windows-x64-portable.zip
+      sha256: db123c053b3cff4ca5e4a31c373655aebc94207457ec88f839c54429f67c586c
+      bin:
+        - lightcraft-cli.exe
+      strip: 1
+test: lightcraft-cli --version

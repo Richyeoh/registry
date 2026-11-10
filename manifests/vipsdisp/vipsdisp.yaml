@@ -1,0 +1,21 @@
+api: v1
+name: vipsdisp
+kind: app
+display: vipsdisp
+description: Tiny libvips / gtk+4 image viewer
+homepage: https://github.com/libvips/vipsdisp
+license: MIT
+version: 4.2.0
+channels:
+    stable: 4.2.0
+provides:
+    - vipsdisp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libvips/vipsdisp/releases/download/v4.2.0/vipsdisp-x64-4.2.0-1.zip
+      sha256: c2e77fa2021741a86097bc393fa53c7f7eb820af7cc072620a3a480afe24251a
+      bin:
+        - bin\vipsdisp.exe
+      strip: 1
+test: bin\vipsdisp --version

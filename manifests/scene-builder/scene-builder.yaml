@@ -1,0 +1,24 @@
+api: v1
+name: scene-builder
+kind: app
+display: scene-builder
+description: A visual, drag n drop, layout tool for designing JavaFX application user interfaces.
+homepage: https://gluonhq.com/products/scene-builder/
+license: BSD-3-Clause
+version: 26.0.0
+channels:
+    stable: 26.0.0
+provides:
+    - scene-builder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gluonhq/scenebuilder/releases/download/26.0.0/SceneBuilder-26.0.0.msi
+      sha256: 36b5d8616dbbebc8d2e62bc4506862073cdee0c5378d52cce5d37437b8fc8ee9
+      bin:
+        - SceneBuilder.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall scene-builder
+test: SceneBuilder --version

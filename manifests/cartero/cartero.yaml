@@ -1,0 +1,21 @@
+api: v1
+name: cartero
+kind: app
+display: cartero
+description: A native, lightweight, multiplatform and free HTTP client that you can use to test your APIs
+homepage: https://cartero.danirod.es
+license: GPL-3.0-or-later
+version: "26.0"
+channels:
+    stable: "26.0"
+provides:
+    - cartero
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/danirod/cartero/releases/download/v26.0/cartero-26.0-windows-x64.zip
+      sha256: 90aa3b4c5e68cf50b4d270ce9df209af36abf44846f671ebba4556d50e76d543
+      bin:
+        - cartero.exe
+      strip: 1
+test: cartero --version

@@ -1,0 +1,21 @@
+api: v1
+name: nginx
+kind: app
+display: nginx
+description: An HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.
+homepage: https://nginx.org
+license: BSD-2-Clause
+version: 1.31.8
+channels:
+    stable: 1.31.8
+provides:
+    - nginx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://nginx.org/download/nginx-1.31.8.zip
+      sha256: fbb1501009be34655cc238d460714cf20391b639013f4c73859813d7938783fd
+      bin:
+        - nginx.exe
+      strip: 1
+test: nginx --version

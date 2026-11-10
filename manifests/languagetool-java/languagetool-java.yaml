@@ -1,0 +1,23 @@
+api: v1
+name: languagetool-java
+kind: app
+display: languagetool-java
+description: Grammar, Style and Spell Checker for +25 languages
+homepage: https://languagetool.org/
+license: LGPL-2.1-or-later
+version: "6.6"
+channels:
+    stable: "6.6"
+provides:
+    - languagetool-java
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://languagetool.org/download/LanguageTool-6.6.zip
+      sha256: 53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631
+      bin:
+        - languagetool.bat.exe
+        - languagetool-commandline.jar.exe
+        - languagetool-server.jar.exe
+      strip: 1
+test: languagetool.bat --version

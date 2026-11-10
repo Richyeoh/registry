@@ -1,0 +1,24 @@
+api: v1
+name: nmap
+kind: app
+display: nmap
+description: Network exploration and security auditing utility.
+homepage: https://nmap.org
+license: Unknown
+version: "7.993"
+channels:
+    stable: "7.993"
+provides:
+    - nmap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://nmap.org/dist/nmap-7.993-setup.exe#/dl.7z
+      sha256: 22e5928d1738a1b94ffd3643014f52cb87d467dbec4cff9e5f721fe0b3782f1b
+      bin:
+        - nmap.exe
+        - ncat.exe
+        - ndiff.bat.exe
+        - nping.exe
+      strip: 1
+test: nmap --version

@@ -1,0 +1,21 @@
+api: v1
+name: diskwatch
+kind: app
+display: diskwatch
+description: Single-host, read-only disk diagnostics TUI.
+homepage: https://github.com/matthart1983/diskwatch
+license: MIT
+version: 0.7.1
+channels:
+    stable: 0.7.1
+provides:
+    - diskwatch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/matthart1983/diskwatch/releases/download/v0.7.1/diskwatch-windows-x86_64.tar.gz
+      sha256: b4c45eff90f4af80d73f49e756182977fedf993a36961c9c12a11e765d87917e
+      bin:
+        - diskwatch.exe
+      strip: 1
+test: diskwatch --version

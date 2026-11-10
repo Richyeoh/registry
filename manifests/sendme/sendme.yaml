@@ -1,0 +1,21 @@
+api: v1
+name: sendme
+kind: app
+display: sendme
+description: A command-line tool that sends files and directories over the internet, built on iroh.
+homepage: https://github.com/n0-computer/sendme
+license: Apache-2.0|MIT
+version: 0.37.1
+channels:
+    stable: 0.37.1
+provides:
+    - sendme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/n0-computer/sendme/releases/download/v0.37.1/sendme-v0.37.1-windows-x86_64.zip
+      sha256: fcf37ac1ebfff164f0a8e0cd0bd592531a028dac364ef6b05bff277b3d11faf5
+      bin:
+        - sendme.exe
+      strip: 1
+test: sendme --version

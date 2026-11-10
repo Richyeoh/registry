@@ -1,0 +1,21 @@
+api: v1
+name: host-editor
+kind: app
+display: host-editor
+description: A simple app that allows for easy changes to the hosts file.
+homepage: https://www.sordum.org/bluelifehosts-editor
+license: Unknown
+version: "1.6"
+channels:
+    stable: "1.6"
+provides:
+    - host-editor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/host-editor/HostsEditor.zip
+      sha256: e0b0254a685730f89d0f68ace4c3cefc617dbe6c749609e6f1ccb69f195496cd
+      bin:
+        - hEdit.exe
+      strip: 1
+test: hEdit --version

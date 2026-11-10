@@ -1,0 +1,23 @@
+api: v1
+name: gpac-nightly
+kind: app
+display: gpac-nightly
+description: Multimedia framework developed for research and academic purposes
+homepage: https://gpac.wp.imt.fr/
+license: LGPL-2.1-or-later
+version: 2.1-DEV-rev118
+channels:
+    stable: 2.1-DEV-rev118
+provides:
+    - gpac-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://download.tsi.telecom-paristech.fr/gpac/new_builds/win64/gpac-2.1-DEV-rev118-gc4aa2456-master-x64.exe#/dl.7z
+      sha256: f9a36532e10052cb8416bf2c9660c420052d2861fe2094c66a0fdc010301e048
+      bin:
+        - gpac.exe
+        - mp4box.exe
+        - mp4client.exe
+      strip: 1
+test: gpac --version

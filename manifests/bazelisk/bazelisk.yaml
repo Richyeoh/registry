@@ -1,0 +1,24 @@
+api: v1
+name: bazelisk
+kind: app
+display: bazelisk
+description: A user-friendly launcher for Bazel
+homepage: https://github.com/bazelbuild/bazelisk
+license: Apache-2.0
+version: 1.30.0
+channels:
+    stable: 1.30.0
+provides:
+    - bazelisk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bazelbuild/bazelisk/releases/download/v1.30.0/bazelisk-windows-amd64.exe#/bazelisk.exe
+      sha256: 5d14a31e9d8a363c48ba1900dbd56764d730835232eb0d113cce255856ffe3ef
+      bin:
+        - bazelisk.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bazelisk
+test: bazelisk --version

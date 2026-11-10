@@ -1,0 +1,24 @@
+api: v1
+name: probe-rs
+kind: app
+display: probe-rs
+description: A debugging toolset and library for debugging embedded ARM and RISC-V targets on a separate host.
+homepage: https://probe.rs
+license: Apache-2.0|MIT
+version: 0.32.0
+channels:
+    stable: 0.32.0
+provides:
+    - probe-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/probe-rs/probe-rs/releases/download/v0.32.0/probe-rs-tools-x86_64-pc-windows-msvc.zip
+      sha256: 56fc0564cc23d604b27dc2d57606194159c49f951999f3e47bd2cbffcba64103
+      bin:
+        - probe-rs.exe
+        - cargo-embed.exe
+        - cargo-flash.exe
+        - target-gen.exe
+      strip: 1
+test: probe-rs --version

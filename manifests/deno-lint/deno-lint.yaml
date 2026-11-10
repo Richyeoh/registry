@@ -1,0 +1,21 @@
+api: v1
+name: deno-lint
+kind: app
+display: deno-lint
+description: Blazing fast linter for JavaScript and TypeScript written in Rust
+homepage: https://docs.deno.com/lint/
+license: MIT
+version: 0.84.1
+channels:
+    stable: 0.84.1
+provides:
+    - deno-lint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/denoland/deno_lint/releases/download/0.84.1/dlint-x86_64-pc-windows-msvc.zip
+      sha256: 8db9e26a6f68cff49c7d4ea639316445e80481db9e3327acd892b5444e21ac5a
+      bin:
+        - dlint.exe
+      strip: 1
+test: dlint --version

@@ -1,0 +1,24 @@
+api: v1
+name: enpass
+kind: app
+display: enpass
+description: A cross-platform password management app to securely store passwords and other credentials in a virtual vault locked with a master password.
+homepage: https://www.enpass.io
+license: Unknown
+version: 6.11.21.2311
+channels:
+    stable: 6.11.21.2311
+provides:
+    - enpass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.enpass.io/stable/windows/setup/6.11.21.2311/Enpass-setup.exe
+      sha256: d932545f336f3e178f86c66d32784be5f091021e47772f0b7c83a9e63405ce8e
+      bin:
+        - Enpass.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall enpass
+test: Enpass --version

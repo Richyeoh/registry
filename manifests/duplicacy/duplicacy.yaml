@@ -1,0 +1,24 @@
+api: v1
+name: duplicacy
+kind: app
+display: duplicacy
+description: A lock-free deduplication cloud backup tool
+homepage: https://duplicacy.com/
+license: Unknown
+version: 3.3.0
+channels:
+    stable: 3.3.0
+provides:
+    - duplicacy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gilbertchen/duplicacy/releases/download/v3.3.0/duplicacy_win_x64_3.3.0.exe#/duplicacy.exe
+      sha256: 702b6a49cc8ae599ed7215759c8599563ffdf4099d0728f8c6a1bff2ad63cb46
+      bin:
+        - duplicacy.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall duplicacy
+test: duplicacy --version

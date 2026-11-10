@@ -1,0 +1,21 @@
+api: v1
+name: dart
+kind: app
+display: dart
+description: SDK for the Dart programming language
+homepage: https://dart.dev/
+license: BSD-3-Clause
+version: 3.13.7
+channels:
+    stable: 3.13.7
+provides:
+    - dart
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/dart-archive/channels/stable/release/3.13.7/sdk/dartsdk-windows-x64-release.zip
+      sha256: 3b31d9f90b27861f29842d378f39f98ce9e60910042334f950ef5702f174fb81
+      bin:
+        - dart.exe
+      strip: 1
+test: dart --version

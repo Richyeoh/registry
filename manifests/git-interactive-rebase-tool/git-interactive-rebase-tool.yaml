@@ -1,0 +1,24 @@
+api: v1
+name: git-interactive-rebase-tool
+kind: app
+display: git-interactive-rebase-tool
+description: An improved sequence editor for Git
+homepage: https://gitrebasetool.mitmaro.ca
+license: GPL-3.0-only
+version: 2.4.1
+channels:
+    stable: 2.4.1
+provides:
+    - git-interactive-rebase-tool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/MitMaro/git-interactive-rebase-tool/releases/download/2.4.1/git-interactive-rebase-tool-2.4.1-windows-_x86_64.exe#/interactive-rebase-tool.exe
+      sha256: c1ed22c2fe4d6f5d642714ad0c3bdad877805680460f5ada87ecd006d4d73440
+      bin:
+        - interactive-rebase-tool.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall git-interactive-rebase-tool
+test: interactive-rebase-tool --version

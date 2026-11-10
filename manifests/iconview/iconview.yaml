@@ -1,0 +1,21 @@
+api: v1
+name: iconview
+kind: app
+display: iconview
+description: A Windows Explorer shell extension that lets you easily view, copy, and save icons contained within programs and libraries.
+homepage: https://www.botproductions.com/iconview/iconview.html
+license: Freeware
+version: "3.02"
+channels:
+    stable: "3.02"
+provides:
+    - iconview
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.botproductions.com/iconview/download/IconViewer3.02-Setup-x64.exe#/dl.7z
+      sha256: 3be3664cfac0b9270da161c2c4c323499b4fe40a8e68a2d34cd4425b12ef223f
+      bin:
+        - iconview.exe
+      strip: 1
+test: iconview --version

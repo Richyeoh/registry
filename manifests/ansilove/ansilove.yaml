@@ -1,0 +1,39 @@
+api: v1
+name: ansilove
+kind: app
+display: ansilove
+description: ANSI/ASCII art to PNG converter
+homepage: https://www.ansilove.org
+license: BSD-2-Clause
+keywords:
+    - brew
+    - homebrew
+version: 4.2.3
+channels:
+    stable: 4.2.3
+provides:
+    - ansilove
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:f0a4c36ac41dee4c04977ac2a7296bfd055042c6c91462baa21fc75f2a36f7ed
+      sha256: f0a4c36ac41dee4c04977ac2a7296bfd055042c6c91462baa21fc75f2a36f7ed
+      bin:
+        - ansilove
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:828d37e6d8ccdd4ac8332e4c1bb06142709271dcf4e2965bc7887e1a3ea57f44
+      sha256: 828d37e6d8ccdd4ac8332e4c1bb06142709271dcf4e2965bc7887e1a3ea57f44
+      bin:
+        - ansilove
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansilove/blobs/sha256:ff50cd27756549977334048de13f3d105caf14a945bb10edee5af9b7eaaaa334
+      sha256: ff50cd27756549977334048de13f3d105caf14a945bb10edee5af9b7eaaaa334
+      bin:
+        - ansilove
+      strip: 1
+test: ansilove --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: balabolka
+kind: app
+display: balabolka
+description: Text-To-Speech software based on SAPI
+homepage: http://balabolka.site/balabolka.htm
+license: Freeware
+version: 2.15.0.923
+channels:
+    stable: 2.15.0.923
+provides:
+    - balabolka
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://balabolka.site/balabolka_portable.zip
+      sha256: 76a6ae0d68cf7d55d1d654507009b6fd690590f5b44335b569e62a487ee47825
+      bin:
+        - balabolka.exe
+      strip: 1
+test: balabolka --version

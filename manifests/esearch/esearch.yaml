@@ -1,0 +1,21 @@
+api: v1
+name: esearch
+kind: app
+display: esearch
+description: Screenshot OCR search translate search for picture paste the picture on the screen screen recorder.
+homepage: https://github.com/xushengfeng/eSearch
+license: Unknown
+version: 15.7.1
+channels:
+    stable: 15.7.1
+provides:
+    - esearch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xushengfeng/eSearch/releases/download/15.7.1/eSearch-15.7.1-win32-x64.zip
+      sha256: 00475573c43245ab22dcc39496b2f5ffca37f6e7b682866aa0f49c4901ac6d73
+      bin:
+        - e-search.exe
+      strip: 1
+test: e-search --version

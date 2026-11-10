@@ -1,0 +1,21 @@
+api: v1
+name: figcraft
+kind: app
+display: figcraft
+description: Interface design and prototyping; an open-source, clean-room reimplementation of collaborative design workflows in pure Rust
+homepage: https://github.com/storytold/figcraft
+license: MIT|Apache-2.0
+version: 0.16.0
+channels:
+    stable: 0.16.0
+provides:
+    - figcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/figcraft/releases/download/v0.16.0/figcraft-0.16.0-windows-x64-portable.zip
+      sha256: 72bb9e9ad1a2c8a5143a0012ddac028f5564de01c0cea967dec2f950fbbb49f8
+      bin:
+        - figcraft-cli.exe
+      strip: 1
+test: figcraft-cli --version

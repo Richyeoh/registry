@@ -1,0 +1,32 @@
+api: v1
+name: agentkube
+kind: app
+display: Agentkube
+description: AI-powered Kubernetes IDE
+homepage: https://agentkube.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.0.12
+channels:
+    stable: 0.0.12
+provides:
+    - agentkube
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/agentkube/agentkube/releases/download/v0.0.12/agentkube_0.0.12_aarch64.dmg
+      sha256: c8c80699198b681ad79a31f8294df24e718e4f2aa935e90e2708f2535dd93dc4
+      bin:
+        - agentkube
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/agentkube/agentkube/releases/download/v0.0.12/agentkube_0.0.12_aarch64.dmg
+      sha256: c8c80699198b681ad79a31f8294df24e718e4f2aa935e90e2708f2535dd93dc4
+      bin:
+        - agentkube
+      strip: 1
+test: agentkube --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

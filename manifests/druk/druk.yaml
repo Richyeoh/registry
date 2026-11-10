@@ -1,0 +1,21 @@
+api: v1
+name: druk
+kind: app
+display: druk
+description: Terminal code editor with a file tree, tabs, search, git integration and syntax highlighting.
+homepage: https://druk.sh
+license: MIT
+version: 1.40.1
+channels:
+    stable: 1.40.1
+provides:
+    - druk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/letstri/druk/releases/download/v1.40.1/druk-windows-x64.zip
+      sha256: 09fcaa865a2b1c7980fe5eaf5cc2ce6c060c7586a5c0d2f867ccde7fd771419a
+      bin:
+        - druk.exe
+      strip: 1
+test: druk --version

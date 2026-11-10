@@ -1,0 +1,24 @@
+api: v1
+name: minio-client
+kind: app
+display: minio-client
+description: A high performance, distributed object storage server, designed for large-scale data infrastructure. (client)
+homepage: https://min.io/
+license: Unknown
+version: 2026-09-19T15-24-59Z
+channels:
+    stable: 2026-09-19T15-24-59Z
+provides:
+    - minio-client
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.min.io/aistor/mc/release/windows-amd64/archive/mc.exe.RELEASE.2026-09-19T15-24-59Z#/mc.exe
+      sha256: e3852ee80498034460bb9904e1c483d19172e8db10fa3a67141af131f9f1414b
+      bin:
+        - mc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall minio-client
+test: mc --version

@@ -1,0 +1,24 @@
+api: v1
+name: listenmoeclient
+kind: app
+display: listenmoeclient
+description: Official, Simple and lightweight LISTEN.moe client
+homepage: https://github.com/LISTEN-moe/windows-app
+license: MIT
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - listenmoeclient
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LISTEN-moe/windows-app/releases/download/2.0.0/ListenMoeClient.exe
+      sha256: 1d52cc937c1a907ee3b434c75e68b2cbe62efaca403e7ffa875cb269d0c13e32
+      bin:
+        - ListenMoeClient.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall listenmoeclient
+test: ListenMoeClient --version

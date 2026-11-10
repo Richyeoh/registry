@@ -1,0 +1,21 @@
+api: v1
+name: featherwallet
+kind: app
+display: featherwallet
+description: A Monero SPV Wallet
+homepage: https://featherwallet.org/
+license: Unknown
+version: 2.9.1
+channels:
+    stable: 2.9.1
+provides:
+    - featherwallet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://featherwallet.org/files/releases/win/feather-2.9.1-win.zip
+      sha256: 5e16faf790f93599e95970ff7019b09db03ece5246882706909633d4d4102701
+      bin:
+        - featherwallet.exe
+      strip: 1
+test: featherwallet --version

@@ -1,0 +1,46 @@
+api: v1
+name: amazon-ecs-cli
+kind: app
+display: amazon-ecs-cli
+description: CLI for Amazon ECS to manage clusters and tasks for development
+homepage: https://aws.amazon.com/ecs/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.21.0
+channels:
+    stable: 1.21.0
+provides:
+    - amazon-ecs-cli
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/amazon-ecs-cli/blobs/sha256:c052c78ca3a7a564bfb1544cf70d6cee45fb933ae0ce6f4c9abe987df2e194d9
+      sha256: c052c78ca3a7a564bfb1544cf70d6cee45fb933ae0ce6f4c9abe987df2e194d9
+      bin:
+        - amazon-ecs-cli
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amazon-ecs-cli/blobs/sha256:9a98803f22995cb9fd3ccfff0d9ac6bcb8de73df88e94c9bf60f16181ffab227
+      sha256: 9a98803f22995cb9fd3ccfff0d9ac6bcb8de73df88e94c9bf60f16181ffab227
+      bin:
+        - amazon-ecs-cli
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/amazon-ecs-cli/blobs/sha256:4bfbca5701b37d685a0f5da1a135e736e4a594079e2368262c498396f4446261
+      sha256: 4bfbca5701b37d685a0f5da1a135e736e4a594079e2368262c498396f4446261
+      bin:
+        - amazon-ecs-cli
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/amazon-ecs-cli/blobs/sha256:5c02a7a6f0510165209dd1770595340906f5c0165084dd88801ef76916c61270
+      sha256: 5c02a7a6f0510165209dd1770595340906f5c0165084dd88801ef76916c61270
+      bin:
+        - amazon-ecs-cli
+      strip: 1
+test: amazon-ecs-cli --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

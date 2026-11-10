@@ -1,0 +1,25 @@
+api: v1
+name: llamafile
+kind: app
+display: llamafile
+description: Distribute and run LLMs with a single file.
+homepage: https://docs.mozilla.ai/llamafile
+license: Apache-2.0
+version: 0.10.6
+channels:
+    stable: 0.10.6
+provides:
+    - llamafile
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mozilla-ai/llamafile/releases/download/0.10.6/llamafile-0.10.6.zip
+      sha256: 1d0aacce58bb2254adb8b80abf69e4dfbd7dfa530defc0fcca37ce239217e5dc
+      bin:
+        - bin\diffusionfile.exe
+        - bin\llamafile.exe
+        - bin\transcribefile.exe
+        - bin\whisperfile.exe
+        - bin\zipalign.exe
+      strip: 1
+test: bin\diffusionfile --version

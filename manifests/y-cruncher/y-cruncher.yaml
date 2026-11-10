@@ -1,0 +1,21 @@
+api: v1
+name: y-cruncher
+kind: app
+display: y-cruncher
+description: Scalable multi-threaded benchmark calculating multiple mathematical constants to trillions of digits.
+homepage: https://www.numberworld.org/y-cruncher/
+license: Unknown
+version: 0.8.7.9547b
+channels:
+    stable: 0.8.7.9547b
+provides:
+    - y-cruncher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Mysticial/y-cruncher/releases/download/v0.8.7.9547b/y-cruncher.v0.8.7.9547b.zip
+      sha256: 3be696c1cc44907f2ea73aac35de4a5d45048255308f34ed4410a743163a4f87
+      bin:
+        - y-cruncher.exe
+      strip: 1
+test: y-cruncher --version

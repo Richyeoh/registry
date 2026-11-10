@@ -1,0 +1,21 @@
+api: v1
+name: bison
+kind: app
+display: bison
+description: Yacc-compatible parser generator (from GNUWin32)
+homepage: https://gnuwin32.sourceforge.net/packages/bison.htm
+license: GPL-3.0-or-later
+version: 2.4.1
+channels:
+    stable: 2.4.1
+provides:
+    - bison
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/gnuwin32/bison/2.4.1/bison-2.4.1-bin.zip
+      sha256: cd239ab43baea53cfdb1f2663ad0883586b97f22cee825c3780ad9bba7e6ee19
+      bin:
+        - bin\bison.exe
+      strip: 1
+test: bin\bison --version

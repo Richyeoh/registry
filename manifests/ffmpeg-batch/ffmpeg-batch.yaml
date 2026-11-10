@@ -1,0 +1,24 @@
+api: v1
+name: ffmpeg-batch
+kind: app
+display: ffmpeg-batch
+description: An ffmpeg gui with batch processing, video downloading, and more
+homepage: https://github.com/eibol/ffmpeg_batch
+license: CC-BY-SA-3.0
+version: 3.2.9
+channels:
+    stable: 3.2.9
+provides:
+    - ffmpeg-batch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/eibol/ffmpeg_batch/releases/download/3.2.9/FFBatch_AV_Converter_3.2.9_64bit.exe
+      sha256: 6f7cbebff1e1e758f5d9402af26798f180fecfb27bd1275782c51fe88faaebdf
+      bin:
+        - ffmpeg-batch.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ffmpeg-batch
+test: ffmpeg-batch --version

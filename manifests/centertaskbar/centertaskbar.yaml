@@ -1,0 +1,24 @@
+api: v1
+name: centertaskbar
+kind: app
+display: centertaskbar
+description: Centers Windows taskbar icons.
+homepage: https://github.com/mdhiggins/CenterTaskbar
+license: MIT
+version: "1.92"
+channels:
+    stable: "1.92"
+provides:
+    - centertaskbar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mdhiggins/CenterTaskbar/releases/download/1.92/CenterTaskbar.exe
+      sha256: f40e020b4657304e8ff55f53aab7265a3eac0c1c63e1586d4009f3cd02827ef3
+      bin:
+        - CenterTaskbar.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall centertaskbar
+test: CenterTaskbar --version

@@ -1,0 +1,21 @@
+api: v1
+name: traefik
+kind: app
+display: traefik
+description: HTTP reverse proxy and load balancer
+homepage: https://traefik.io/
+license: MIT
+version: 3.7.18
+channels:
+    stable: 3.7.18
+provides:
+    - traefik
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/traefik/traefik/releases/download/v3.7.18/traefik_v3.7.18_windows_amd64.zip
+      sha256: a719d3ac0abc2cbad2df831ec2163f21c723d658ca4752b5cc13b17dd6a546fc
+      bin:
+        - traefik.exe
+      strip: 1
+test: traefik --version

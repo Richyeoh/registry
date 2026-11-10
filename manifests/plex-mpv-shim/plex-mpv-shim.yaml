@@ -1,0 +1,24 @@
+api: v1
+name: plex-mpv-shim
+kind: app
+display: plex-mpv-shim
+description: Cast media from Plex Mobile and Web apps to MPV. (Unofficial)
+homepage: https://github.com/iwalton3/plex-mpv-shim
+license: MIT
+version: 1.11.0
+channels:
+    stable: 1.11.0
+provides:
+    - plex-mpv-shim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/iwalton3/plex-mpv-shim/releases/download/v1.11.0/plex-mpv-shim_1.11.0_installer.exe
+      sha256: e079ed8301cdb2286fc445debaa93850ebffeb44a039a3be7056ea896c9eb548
+      bin:
+        - plex-mpv-shim.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall plex-mpv-shim
+test: plex-mpv-shim --version

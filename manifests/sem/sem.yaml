@@ -1,0 +1,21 @@
+api: v1
+name: sem
+kind: app
+display: sem
+description: A semantic version control tool that works on top of Git, using tree-sitter to diff code at the entity level (functions, classes, and methods) instead of by lines.
+homepage: https://ataraxy-labs.github.io/sem/
+license: MIT|Apache-2.0
+version: 0.30.0
+channels:
+    stable: 0.30.0
+provides:
+    - sem
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Ataraxy-Labs/sem/releases/download/v0.30.0/sem-windows-x86_64.zip
+      sha256: d0a61abe007fcdf2fec5686f2076f252898919fc96697ca9acc6e154984890c1
+      bin:
+        - sem.exe
+      strip: 1
+test: sem --version

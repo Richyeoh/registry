@@ -1,0 +1,24 @@
+api: v1
+name: captfencoder
+kind: app
+display: captfencoder
+description: A network security tool suite, providing network security related code conversion, classical cryptography, cryptography, asymmetric encryption, miscellaneous tools.
+homepage: https://github.com/guyoung/CaptfEncoder
+license: Unlicense
+version: 3.1.2
+channels:
+    stable: 3.1.2
+provides:
+    - captfencoder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/guyoung/CaptfEncoder/releases/download/3.1.2/CaptfEncoder-win-x64-3.1.2.exe#/CaptfEncoder.exe
+      sha256: 91097bf3b295581805d49a099b55f76661415b05a48f9fcd89ede553ba4ecf2f
+      bin:
+        - captfencoder.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall captfencoder
+test: captfencoder --version

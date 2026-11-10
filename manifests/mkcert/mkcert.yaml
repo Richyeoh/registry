@@ -1,0 +1,24 @@
+api: v1
+name: mkcert
+kind: app
+display: mkcert
+description: A simple zero-config tool to make locally trusted development certificates with any names you'd like.
+homepage: https://github.com/FiloSottile/mkcert
+license: BSD-3-Clause
+version: 1.4.4
+channels:
+    stable: 1.4.4
+provides:
+    - mkcert
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-windows-amd64.exe#/mkcert.exe
+      sha256: d2660b50a9ed59eada480750561c96abc2ed4c9a38c6a24d93e30e0977631398
+      bin:
+        - mkcert.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mkcert
+test: mkcert --version

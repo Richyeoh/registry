@@ -1,0 +1,25 @@
+api: v1
+name: lazarus
+kind: app
+display: lazarus
+description: A Delphi compatible cross-platform IDE for Rapid Application Development.
+homepage: https://www.lazarus-ide.org
+license: Unknown
+version: "4.8"
+channels:
+    stable: "4.8"
+provides:
+    - lazarus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/lazarus/Lazarus%20Windows%2064%20bits/Lazarus%204.8/lazarus-4.8-fpc-3.2.2-win64.exe
+      sha256: ed25ee171d55e23cf14e0633159fdd2325efba56e186f8ab817ad3bf97d267d7
+      bin:
+        - lazarus.exe
+        - lazbuild.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall lazarus
+test: lazarus --version

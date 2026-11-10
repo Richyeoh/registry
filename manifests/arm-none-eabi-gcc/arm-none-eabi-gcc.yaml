@@ -1,0 +1,46 @@
+api: v1
+name: arm-none-eabi-gcc
+kind: app
+display: arm-none-eabi-gcc
+description: GNU compiler collection for arm-none-eabi
+homepage: https://gcc.gnu.org
+license: GPL-3.0-or-later WITH GCC-exception-3.1
+keywords:
+    - brew
+    - homebrew
+version: 16.2.0
+channels:
+    stable: 16.2.0
+provides:
+    - arm-none-eabi-gcc
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:c13208eaf3adf671f09fa0e74ae4d94236533c650bd201790da77a5aaea20976
+      sha256: c13208eaf3adf671f09fa0e74ae4d94236533c650bd201790da77a5aaea20976
+      bin:
+        - arm-none-eabi-gcc
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:c93204c206d528363dc8819eb6520448ee1b7c9096656a34d2ea697687ba8b59
+      sha256: c93204c206d528363dc8819eb6520448ee1b7c9096656a34d2ea697687ba8b59
+      bin:
+        - arm-none-eabi-gcc
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:ae711d63f483282c7782546d503c382b82a1eb992f98a16069c57c6bff60305a
+      sha256: ae711d63f483282c7782546d503c382b82a1eb992f98a16069c57c6bff60305a
+      bin:
+        - arm-none-eabi-gcc
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-none-eabi-gcc/blobs/sha256:8b29249dcd685d0fa9833aac51eb76c4d4267990acde6aed782a22c9f3da0c56
+      sha256: 8b29249dcd685d0fa9833aac51eb76c4d4267990acde6aed782a22c9f3da0c56
+      bin:
+        - arm-none-eabi-gcc
+      strip: 1
+test: arm-none-eabi-gcc --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

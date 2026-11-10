@@ -1,0 +1,21 @@
+api: v1
+name: nunustudio
+kind: app
+display: nunustudio
+description: Web powered cross-platform 3D, WebXR game engine.
+homepage: https://www.nunustudio.org/
+license: MIT
+version: 0.9.6
+channels:
+    stable: 0.9.6
+provides:
+    - nunustudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tentone/nunuStudio/releases/download/v0.9.6/nunuStudio_0.9.6_win_x64.zip
+      sha256: cf2bc8da4dcb040e2b1380cf2304495eec6786af32188c433a31a175b29d0677
+      bin:
+        - nunustudio.exe
+      strip: 1
+test: nunustudio --version

@@ -1,0 +1,21 @@
+api: v1
+name: ft2-clone
+kind: app
+display: ft2-clone
+description: Music tracker Fasttracker 2 clone.
+homepage: https://16-bits.org/ft2.php
+license: BSD-3-clause
+version: "2.29"
+channels:
+    stable: "2.29"
+provides:
+    - ft2-clone
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://16-bits.org/ft2-clone-v2.29-win64.zip
+      sha256: 7c41f4ab54e1ba0e1e20ac6b290b7a12cbf1d21e37c0b1b415c58a029599cc9c
+      bin:
+        - ft2-clone.exe
+      strip: 1
+test: ft2-clone --version

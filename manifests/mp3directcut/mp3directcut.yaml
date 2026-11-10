@@ -1,0 +1,24 @@
+api: v1
+name: mp3directcut
+kind: app
+display: mp3directcut
+description: Lossless audio editor and recorder for MP3 files.
+homepage: http://mpesch3.de
+license: Freeware
+version: "2.38"
+channels:
+    stable: "2.38"
+provides:
+    - mp3directcut
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.fosshub.com/mp3DirectCut.html/mp3DC238.exe
+      sha256: 34004b9d2479546c8467a60d4c444a3e81372468de457f2c918b181b7832b53e
+      bin:
+        - mp3DirectCut.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mp3directcut
+test: mp3DirectCut --version

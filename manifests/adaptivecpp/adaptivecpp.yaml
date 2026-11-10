@@ -1,0 +1,46 @@
+api: v1
+name: adaptivecpp
+kind: app
+display: adaptivecpp
+description: SYCL and C++ standard parallelism for CPUs and GPUs
+homepage: https://adaptivecpp.github.io/
+license: BSD-2-Clause
+keywords:
+    - brew
+    - homebrew
+version: 25.10.0
+channels:
+    stable: 25.10.0
+provides:
+    - adaptivecpp
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adaptivecpp/blobs/sha256:ca9715cf73fc66f4f305ca7415be18cf892be66cb40e9e5cea1c0e21166e5be3
+      sha256: ca9715cf73fc66f4f305ca7415be18cf892be66cb40e9e5cea1c0e21166e5be3
+      bin:
+        - adaptivecpp
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adaptivecpp/blobs/sha256:3a3c7652bc638e00799f49eee8287ecce83c400fb4b513c1d6c260dfedbe3552
+      sha256: 3a3c7652bc638e00799f49eee8287ecce83c400fb4b513c1d6c260dfedbe3552
+      bin:
+        - adaptivecpp
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adaptivecpp/blobs/sha256:4a78902bb2bc797d30058c1b31ac600bb07759f09178112d19dce02305367aa4
+      sha256: 4a78902bb2bc797d30058c1b31ac600bb07759f09178112d19dce02305367aa4
+      bin:
+        - adaptivecpp
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adaptivecpp/blobs/sha256:8d14507b04a9f0e8e0480609fd5d1c421327817145b01f39474e05b78f7bd99d
+      sha256: 8d14507b04a9f0e8e0480609fd5d1c421327817145b01f39474e05b78f7bd99d
+      bin:
+        - adaptivecpp
+      strip: 1
+test: adaptivecpp --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

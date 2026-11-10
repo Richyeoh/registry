@@ -1,0 +1,24 @@
+api: v1
+name: windowsspyblocker
+kind: app
+display: windowsspyblocker
+description: Block spying and tracking on Windows
+homepage: https://github.com/crazy-max/WindowsSpyBlocker
+license: MIT
+version: 4.39.0
+channels:
+    stable: 4.39.0
+provides:
+    - windowsspyblocker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/crazy-max/WindowsSpyBlocker/releases/download/4.39.0/WindowsSpyBlocker.exe
+      sha256: d4f1508a538abef4aba7365687d69636d4af3d030f4eee652c1640b1fefbcdc1
+      bin:
+        - WindowsSpyBlocker.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall windowsspyblocker
+test: WindowsSpyBlocker --version

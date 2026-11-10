@@ -1,0 +1,22 @@
+api: v1
+name: proto
+kind: app
+display: proto
+description: A pluggable multi-language version manager.
+homepage: https://moonrepo.dev/docs/proto
+license: MIT
+version: 0.63.2
+channels:
+    stable: 0.63.2
+provides:
+    - proto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/moonrepo/proto/releases/download/v0.63.2/proto_cli-x86_64-pc-windows-msvc.zip
+      sha256: 4f39177289667de29afe062dc982249475f838fb6a8101654b79d1bb086aff93
+      bin:
+        - proto-shim.exe
+        - proto.exe
+      strip: 1
+test: proto-shim --version

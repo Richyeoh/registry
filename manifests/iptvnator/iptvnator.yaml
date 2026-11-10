@@ -1,0 +1,21 @@
+api: v1
+name: iptvnator
+kind: app
+display: iptvnator
+description: Cross-platform IPTV player
+homepage: https://github.com/4gray/iptvnator
+license: MIT
+version: 0.25.0
+channels:
+    stable: 0.25.0
+provides:
+    - iptvnator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/4gray/iptvnator/releases/download/v0.25.0/iptvnator-0.25.0-windows-x64-setup.exe#/dl.7z
+      sha256: 893e3fe7e38e756dbe6910672a1a5612d9116efd0055d9dba6a5643af48d7cea
+      bin:
+        - iptvnator.exe
+      strip: 1
+test: iptvnator --version

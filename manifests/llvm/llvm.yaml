@@ -1,0 +1,24 @@
+api: v1
+name: llvm
+kind: app
+display: llvm
+description: Collection of modular and reusable compiler and toolchain technologies.
+homepage: https://www.llvm.org
+license: NCSA
+version: 23.1.5
+channels:
+    stable: 23.1.5
+provides:
+    - llvm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/LLVM-23.1.5-win64.msi
+      sha256: 288ab326377157a9e02e6fb9724914cc2b55963882d493a405f31dc66e837c12
+      bin:
+        - llvm.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall llvm
+test: llvm --version

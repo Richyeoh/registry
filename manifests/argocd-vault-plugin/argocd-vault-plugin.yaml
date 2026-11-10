@@ -1,0 +1,46 @@
+api: v1
+name: argocd-vault-plugin
+kind: app
+display: argocd-vault-plugin
+description: Argo CD plugin to retrieve secrets from Secret Management tools
+homepage: https://argocd-vault-plugin.readthedocs.io
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.18.1
+channels:
+    stable: 1.18.1
+provides:
+    - argocd-vault-plugin
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:1fc47e2adeb0af27bb1ad84156319b7196a8fabd70ea2712e4c673d55e85f867
+      sha256: 1fc47e2adeb0af27bb1ad84156319b7196a8fabd70ea2712e4c673d55e85f867
+      bin:
+        - argocd-vault-plugin
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:970654a4b8bef5d591523361516f75776feef6ac7493623407ace0d879b03f83
+      sha256: 970654a4b8bef5d591523361516f75776feef6ac7493623407ace0d879b03f83
+      bin:
+        - argocd-vault-plugin
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:4cd74305d5e1cac49e5621a88abbfcdd897c07e81ebe27ddc30eeeba1cf40260
+      sha256: 4cd74305d5e1cac49e5621a88abbfcdd897c07e81ebe27ddc30eeeba1cf40260
+      bin:
+        - argocd-vault-plugin
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/argocd-vault-plugin/blobs/sha256:69abd86b96dfd35560cff8ca258da75d78e26fbeb2f2a7139e03cf4749f53c2f
+      sha256: 69abd86b96dfd35560cff8ca258da75d78e26fbeb2f2a7139e03cf4749f53c2f
+      bin:
+        - argocd-vault-plugin
+      strip: 1
+test: argocd-vault-plugin --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

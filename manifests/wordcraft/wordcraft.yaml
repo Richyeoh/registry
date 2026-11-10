@@ -1,0 +1,21 @@
+api: v1
+name: wordcraft
+kind: app
+display: wordcraft
+description: Writing and document design; an open-source, clean-room reimplementation of Microsoft Word, rebuilt in pure Rust
+homepage: https://github.com/storytold/wordcraft
+license: MIT|Apache-2.0
+version: 0.16.0
+channels:
+    stable: 0.16.0
+provides:
+    - wordcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-0.16.0-windows-x64-portable.zip
+      sha256: aab5bfc4b5ce63c1bb1036ea2ab68aa1dbb300d8936de948c29739b15b3118e3
+      bin:
+        - wordcraft-cli.exe
+      strip: 1
+test: wordcraft-cli --version

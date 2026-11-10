@@ -1,0 +1,21 @@
+api: v1
+name: fsviewer
+kind: app
+display: fsviewer
+description: FastStone Image Viewer is a fast, stable, user-friendly image browser, converter and editor
+homepage: https://www.faststone.org/FSViewerDetail.htm
+license: Unknown
+version: "8.5"
+channels:
+    stable: "8.5"
+provides:
+    - fsviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.faststonesoft.net/DN/FSViewer85.zip
+      sha256: 685282a063b91daf4388b84be9e0daf3c5feed4073651137eb9fe9421cf39439
+      bin:
+        - FSViewer.exe
+      strip: 1
+test: FSViewer --version

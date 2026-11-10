@@ -1,0 +1,24 @@
+api: v1
+name: mini-sftp-server
+kind: app
+display: mini-sftp-server
+description: A simple mini sftp server with GUI controls
+homepage: http://www.coreftp.com/server/
+license: Freeware
+version: "2.38"
+channels:
+    stable: "2.38"
+provides:
+    - mini-sftp-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.coreftp.com/server/download/mini-sftp-server.x64.exe
+      sha256: f586500a3672343a8cd3d457091976e428800635de32bf6be0b0cc3709098309
+      bin:
+        - mini-sftp-server.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mini-sftp-server
+test: mini-sftp-server --version

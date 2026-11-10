@@ -1,0 +1,21 @@
+api: v1
+name: runastool
+kind: app
+display: runastool
+description: A simple app that allows users to run a specific program with administrator privileges without the need to enter the administrator password.
+homepage: https://www.sordum.org/runastool
+license: Unknown
+version: "1.7"
+channels:
+    stable: "1.7"
+provides:
+    - runastool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/runastool/RunAsTool.zip
+      sha256: 8667d925712b463a39024108a9ba4da4d1c598f9502e2be1fa87050df786f13a
+      bin:
+        - RunAsTool.exe
+      strip: 1
+test: RunAsTool --version

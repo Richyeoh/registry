@@ -1,0 +1,21 @@
+api: v1
+name: trunk
+kind: app
+display: trunk
+description: Build, bundle & ship your Rust WASM application to the web.
+homepage: https://trunk-rs.github.io/trunk
+license: MIT|Apache-2.0
+version: 0.22.1
+channels:
+    stable: 0.22.1
+provides:
+    - trunk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trunk-rs/trunk/releases/download/v0.22.1/trunk-x86_64-pc-windows-msvc.zip
+      sha256: 1cc65012a9df60b02db948f5a3f0601e594ce952efb1cfd23147c9021c9f7d75
+      bin:
+        - trunk.exe
+      strip: 1
+test: trunk --version

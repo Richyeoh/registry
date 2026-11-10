@@ -1,0 +1,21 @@
+api: v1
+name: nwjs
+kind: app
+display: nwjs
+description: An app runtime based on Chromium and NodeJS
+homepage: https://nwjs.io
+license: MIT
+version: 0.119.2
+channels:
+    stable: 0.119.2
+provides:
+    - nwjs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.nwjs.io/v0.119.2/nwjs-v0.119.2-win-x64.zip
+      sha256: 4fed5fafb00a1ff59e2e77f7682d7d68fe3466367b8ee351ffb1f00714e094fe
+      bin:
+        - nwjs\nw.exe
+      strip: 1
+test: nwjs\nw --version
