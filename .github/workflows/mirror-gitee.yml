@@ -1,0 +1,25 @@
+name: mirror-gitee
+
+# registry GitHub 主仓 -> Gitee 镜像，国内用户只走 Gitee，不再超时。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: push to gitee
+        env:
+          GITEE_MIRROR_KEY: ${{ secrets.GITEE_MIRROR_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$GITEE_MIRROR_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+          git remote add gitee git@gitee.com:verx/registry.git || true
+          git push gitee main:main --force
