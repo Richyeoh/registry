@@ -1,0 +1,21 @@
+api: v1
+name: gh-cli
+kind: app
+display: gh
+description: Official GitHub CLI
+homepage: https://cli.github.com
+license: MIT
+version: 2.103.3
+channels:
+    stable: 2.103.3
+provides:
+    - gh-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_windows_amd64.zip
+      sha256: 98d0cfa794721665d7973dd728c78aff7bd836d58f10f6d7a03568eccb0a22e0
+      bin:
+        - bin\gh.exe
+      strip: 1
+test: bin\gh.exe --version

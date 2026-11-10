@@ -1,0 +1,21 @@
+api: v1
+name: curl
+kind: app
+display: curl
+description: Command line tool and library for transferring data with URLs
+homepage: https://curl.se/
+license: MIT
+version: 8.23.0_8
+channels:
+    stable: 8.23.0_8
+provides:
+    - curl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://curl.se/windows/dl-8.23.0_8/curl-8.23.0_8-win64-mingw.tar.xz
+      sha256: 5ef1877e8ac5d039bc86c24184ff265f2338f5b57e1b6c791ed27cb376f18149
+      bin:
+        - bin\curl.exe
+      strip: 1
+test: bin\curl.exe --version

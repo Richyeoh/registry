@@ -1,0 +1,21 @@
+api: v1
+name: wget
+kind: app
+display: wget
+description: A command-line utility for retrieving files using HTTP, HTTPS, FTP, and FTPS protocols.
+homepage: https://eternallybored.org/misc/wget/
+license: GPL-3.0-or-later
+version: 1.25.0
+channels:
+    stable: 1.25.0
+provides:
+    - wget
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://eternallybored.org/misc/wget/releases/wget-1.25.0-win64.zip
+      sha256: 7567cbc08a1616931162b1c05f1731316853c32c79a21af1e850ccb673d1620c
+      bin:
+        - wget.exe
+      strip: 1
+test: wget.exe --version

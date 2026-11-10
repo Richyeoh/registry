@@ -1,0 +1,22 @@
+api: v1
+name: neovim
+kind: app
+display: neovim
+description: Vim-fork focused on extensibility and usability
+homepage: https://neovim.io/
+license: Unknown
+version: 0.12.6
+channels:
+    stable: 0.12.6
+provides:
+    - neovim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-win64.zip
+      sha256: 4e12b7103b601ffc8f25954b4da100f339faa73dccb69a5b135e897fa3d893ed
+      bin:
+        - bin\nvim.exe
+        - bin\xxd.exe
+      strip: 1
+test: bin\nvim.exe --version

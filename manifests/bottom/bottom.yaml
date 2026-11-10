@@ -1,0 +1,21 @@
+api: v1
+name: bottom
+kind: app
+display: bottom
+description: Graphical process/system monitor
+homepage: https://clementtsang.github.io/bottom/
+license: MIT
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - bottom
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ClementTsang/bottom/releases/download/0.15.0/bottom_x86_64-pc-windows-msvc.zip
+      sha256: aeff72e355116516d2583f34348e31f60c5899e394a08eeda79a2bdb361e27bd
+      bin:
+        - btm.exe
+      strip: 1
+test: btm.exe --version

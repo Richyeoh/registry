@@ -5,18 +5,49 @@ display: ripgrep
 description: 超快 grep 替代
 homepage: https://github.com/BurntSushi/ripgrep
 license: MIT
-keywords: [search, cli]
-version: 14.1.0
-revision: 0
-channels: {stable: 14.1.0}
-provides: [rg]
-conflicts: []
-replaces: []
+keywords:
+    - github
+    - burntsushi
+version: 15.2.0
+channels:
+    stable: 15.2.0
+provides:
+    - ripgrep
 platforms:
-  - {os: windows, arch: amd64, url: https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-pc-windows-msvc.zip, sha256: "fe4f75edfaa50f0d4fecbf47696b7629f3449c9c2c5a4da828753139e5a2e203", bin: [rg.exe], strip: 1}
-  - {os: darwin, arch: amd64, url: https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-apple-darwin.tar.gz, sha256: "4d882fc945e5a9b6080a5c0506f7fe4aaea191c1865355428dd4bfa096f974b5", bin: [rg], strip: 1}
-  - {os: darwin, arch: arm64, url: https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-aarch64-apple-darwin.tar.gz, sha256: "fc59ca3eaa5b5bcfa1488eeb80291bad0e8e2842e05d4400fc7b29d5ee4bd26b", bin: [rg], strip: 1}
-  - {os: linux, arch: amd64, url: https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz, sha256: "f84757b07f425fe5cf11d87df6644691c644a5cd2348a2c670894272999d3ba7", bin: [rg], strip: 1}
-  - {os: linux, arch: arm64, url: https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-aarch64-unknown-linux-gnu.tar.gz, sha256: "c8c210b99844fbf16b7a36d1c963e8351bca5ff2dd7c788f5fba4ac18ba8c60d", bin: [rg], strip: 1}
+    - os: windows
+      arch: amd64
+      url: https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-pc-windows-msvc.zip
+      sha256: e4abca10c3a64ebea742667dd7009449d49403db5460dd6873e389fa2945360f
+      bin:
+        - rg.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz
+      sha256: 3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4
+      bin:
+        - rg
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz
+      sha256: 3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4
+      bin:
+        - rg
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-musl.tar.gz
+      sha256: 800b1e7206afe799dfb5a6901f23147cfaabe0e52210538100f61e86e1740915
+      bin:
+        - rg
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-gnu.tar.gz
+      sha256: a740b91c82eaf9914cfedd353572f2791cbe0162c84101ee0951058f4dcbc90d
+      bin:
+        - rg
+      strip: 1
 test: rg --version
-shortcuts: [{name: Ripgrep, exec: rg}]
+caveats: 由 GitHub BurntSushi/ripgrep latest 自动转制
