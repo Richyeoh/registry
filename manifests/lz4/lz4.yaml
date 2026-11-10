@@ -1,0 +1,21 @@
+api: v1
+name: lz4
+kind: app
+display: lz4
+description: Fast LZ compression algorithm library and tool
+homepage: https://www.lz4.org
+license: GPL-2.0-or-later
+version: 1.11.0
+channels:
+    stable: 1.11.0
+provides:
+    - lz4
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lz4/lz4/releases/download/v1.11.0/lz4_win64_v1_11_0.zip
+      sha256: 02969870683aff32a4eb0ce2d3d84fddcd590818378ccdf66a1c79e03118fbac
+      bin:
+        - lz4.exe
+      strip: 1
+test: lz4 --version

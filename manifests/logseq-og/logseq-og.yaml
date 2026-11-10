@@ -1,0 +1,21 @@
+api: v1
+name: logseq-og
+kind: app
+display: logseq-og
+description: A privacy-first platform for knowledge sharing and management (OG, file-based)
+homepage: https://logseq.com
+license: AGPL-3.0-only
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - logseq-og
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/logseq/og/releases/download/1.0.0/Logseq-OG-win-x64-1.0.0.zip
+      sha256: 7274779b15438b1572f84a756b5d9db75a7564abed2ed519107a7d55b5411cb6
+      bin:
+        - logseq-og.exe
+      strip: 1
+test: logseq-og --version

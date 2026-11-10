@@ -1,0 +1,24 @@
+api: v1
+name: pageedit
+kind: app
+display: pageedit
+description: ePub XHTML Visual Editor
+homepage: https://github.com/Sigil-Ebook/PageEdit
+license: GPL-3.0-only
+version: 2.7.6
+channels:
+    stable: 2.7.6
+provides:
+    - pageedit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Sigil-Ebook/PageEdit/releases/download/2.7.6/PageEdit-2.7.6-Windows-x64-Setup.exe
+      sha256: 8dfbc6a62a887aa9da272184fba5ed0a568215f6ee83823257e6c3206a6a081e
+      bin:
+        - PageEdit.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pageedit
+test: PageEdit --version

@@ -1,0 +1,25 @@
+api: v1
+name: antigen
+kind: app
+display: antigen
+description: Plugin manager for zsh, inspired by oh-my-zsh and vundle
+homepage: https://github.com/zsh-users/antigen
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 2.2.3
+channels:
+    stable: 2.2.3
+provides:
+    - antigen
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/antigen/blobs/sha256:3256f387fafd0971b040e466f519ba6be88de0a5d98aec8310b173b8ebfed7a8
+      sha256: 3256f387fafd0971b040e466f519ba6be88de0a5d98aec8310b173b8ebfed7a8
+      bin:
+        - antigen
+      strip: 1
+test: antigen --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

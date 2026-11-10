@@ -1,0 +1,21 @@
+api: v1
+name: coder
+kind: app
+display: coder
+description: Creates remote development machines so your team can develop from anywhere.
+homepage: https://coder.com/
+license: AGPL-3.0-or-later
+version: 2.38.7
+channels:
+    stable: 2.38.7
+provides:
+    - coder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/coder/coder/releases/download/v2.38.7/coder_2.38.7_windows_amd64.zip
+      sha256: 96e0449d3c63d2210aba3e3714b31ac6717f880b72e8124a49aa126e08dcb7dd
+      bin:
+        - coder.exe
+      strip: 1
+test: coder --version

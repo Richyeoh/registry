@@ -1,0 +1,21 @@
+api: v1
+name: adguardhome
+kind: app
+display: adguardhome
+description: Network-wide ads & trackers blocking DNS server
+homepage: https://adguard.com/en/adguard-home/overview.html
+license: GPL-3.0-or-later
+version: 0.107.80
+channels:
+    stable: 0.107.80
+provides:
+    - adguardhome
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.80/AdGuardHome_windows_amd64.zip
+      sha256: 46f69352b088595ff2764917d1209a69a3e8fa7a60a643201fd0d4da3d9c94bb
+      bin:
+        - AdGuardHome.exe
+      strip: 1
+test: AdGuardHome --version

@@ -1,0 +1,21 @@
+api: v1
+name: kaf
+kind: app
+display: kaf
+description: Modern CLI for Apache Kafka
+homepage: https://github.com/birdayz/kaf
+license: Apache-2.0
+version: 0.2.14
+channels:
+    stable: 0.2.14
+provides:
+    - kaf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/birdayz/kaf/releases/download/v0.2.14/kaf_0.2.14_Windows_x86_64.tar.gz
+      sha256: cc3459cf92661af617bae8fc2e696a4747d51187c843391223623416915b633e
+      bin:
+        - kaf.exe
+      strip: 1
+test: kaf --version

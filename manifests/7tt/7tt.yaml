@@ -1,0 +1,21 @@
+api: v1
+name: 7tt
+kind: app
+display: 7tt
+description: Allows you to configure various aspects of the Windows taskbar.
+homepage: https://rammichael.com/7-taskbar-tweaker
+license: GPL-3.0-only
+version: 5.15.4
+channels:
+    stable: 5.15.4
+provides:
+    - 7tt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rammichael.com/downloads/7tt_setup.exe#/dl.7z
+      sha256: 86e361f13f5394724a984e19e2534682de9575a021ebd1f1683455e8a37b57fc
+      bin:
+        - 7+ Taskbar Tweaker.exe
+      strip: 1
+test: 7+ Taskbar Tweaker.exe --version

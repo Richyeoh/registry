@@ -1,0 +1,48 @@
+api: v1
+name: aqtinstall
+kind: app
+display: aqtinstall
+description: A command line tool for downloading Qt binaries, documents and sources.
+homepage: https://aqtinstall.readthedocs.io/en/latest/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 3.3.0
+channels:
+    stable: 3.3.0
+provides:
+    - aqtinstall
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/miurahr/aqtinstall/releases/download/v3.3.0/aqt_x64.exe#/aqt.exe
+      sha256: 4f74d4c95c464d238d7e17ec2d9b7f22a7c333f0f5270a62584e2b47fc765150
+      bin:
+        - aqt.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aqtinstall/blobs/sha256:b0e7c860f3b18f378dae9748bafe015ea440054d799e49aa24fc8ef8890013a7
+      sha256: b0e7c860f3b18f378dae9748bafe015ea440054d799e49aa24fc8ef8890013a7
+      bin:
+        - aqtinstall
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aqtinstall/blobs/sha256:6fa802df0f0b5926a6a39bd7b069d7917f755d22714451cbc8d199d250738f88
+      sha256: 6fa802df0f0b5926a6a39bd7b069d7917f755d22714451cbc8d199d250738f88
+      bin:
+        - aqtinstall
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aqtinstall/blobs/sha256:b21341543497d1b90eaf9c10a2fef32459955ddf11adfca20b9aed31fb4341c8
+      sha256: b21341543497d1b90eaf9c10a2fef32459955ddf11adfca20b9aed31fb4341c8
+      bin:
+        - aqtinstall
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall aqtinstall
+test: aqt --version

@@ -1,0 +1,32 @@
+api: v1
+name: ananas-analytics-desktop-edition
+kind: app
+display: Ananas Analytics Desktop Edition
+description: Hackable data integration & analysis tool
+homepage: https://ananasanalytics.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - ananas-analytics-desktop-edition
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/ananas-analytics/ananas-desktop/releases/download/v0.9.0/Ananas.Analytics.Desktop.Edition-0.9.0.macos.dmg
+      sha256: cb4a73521d5f5ffb97405b3c7e041f73fd5044ab1ffe1ff6e967c0fb1555dec3
+      bin:
+        - ananas-analytics-desktop-edition
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/ananas-analytics/ananas-desktop/releases/download/v0.9.0/Ananas.Analytics.Desktop.Edition-0.9.0.macos.dmg
+      sha256: cb4a73521d5f5ffb97405b3c7e041f73fd5044ab1ffe1ff6e967c0fb1555dec3
+      bin:
+        - ananas-analytics-desktop-edition
+      strip: 1
+test: ananas-analytics-desktop-edition --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

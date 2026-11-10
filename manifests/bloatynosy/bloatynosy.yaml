@@ -1,0 +1,21 @@
+api: v1
+name: bloatynosy
+kind: app
+display: bloatynosy
+description: Universal debloater and PC manager for Windows 11
+homepage: https://github.com/builtbybel/BloatyNosy
+license: MIT
+version: 1.0.20.522
+channels:
+    stable: 1.0.20.522
+provides:
+    - bloatynosy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/builtbybel/Bloatynosy/releases/download/1.0.20.522/Bloatynosy.zip
+      sha256: afb079b1b556970e841d9b2685793bd553cd8a9666cc87b339b508d816c05a2c
+      bin:
+        - BloatyNosy.exe
+      strip: 1
+test: BloatyNosy --version

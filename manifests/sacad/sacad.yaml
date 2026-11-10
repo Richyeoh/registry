@@ -1,0 +1,22 @@
+api: v1
+name: sacad
+kind: app
+display: sacad
+description: A command line tool to download album covers without manual intervention.
+homepage: https://github.com/desbma/sacad
+license: MPL-2.0
+version: 3.0.4
+channels:
+    stable: 3.0.4
+provides:
+    - sacad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/desbma/sacad/releases/download/3.0.4/sacad_3.0.4_windows_x86_64.zip
+      sha256: 22f8d3aa11c4b323eb1ef452b725ed57365a1f1e3096afde5419e0debe05d389
+      bin:
+        - sacad.exe
+        - sacad_r.exe
+      strip: 1
+test: sacad --version

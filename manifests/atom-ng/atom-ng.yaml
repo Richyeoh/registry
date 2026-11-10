@@ -1,0 +1,22 @@
+api: v1
+name: atom-ng
+kind: app
+display: atom-ng
+description: The hackable text editor for the 21st century (community maintained fork)
+homepage: https://thorium.rocks/atom-ng/
+license: MIT
+version: 1.66.12
+channels:
+    stable: 1.66.12
+provides:
+    - atom-ng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Alex313031/atom-ng/releases/download/v1.66.12/Atom-ng_win64_1.66.12_AVX.zip
+      sha256: aeb16537b0b504d2a9b34a8ae2284b4f010ca35154e2988909e2ae29573a9aaf
+      bin:
+        - resources\cli\atom.cmd.exe
+        - resources\app\apm\bin\apm.cmd.exe
+      strip: 1
+test: resources\cli\atom.cmd --version

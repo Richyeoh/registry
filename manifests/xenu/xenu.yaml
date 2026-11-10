@@ -1,0 +1,21 @@
+api: v1
+name: xenu
+kind: app
+display: xenu
+description: Xenu's Link Sleuth checks Web sites for broken links
+homepage: http://home.snafu.de/tilman/xenulink.html
+license: Unknown
+version: 1.3.8
+channels:
+    stable: 1.3.8
+provides:
+    - xenu
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://home.snafu.de/tilman/XENU.ZIP
+      sha256: 319108b72709e32c250bb49bd02739f26d37b8a9d5a9bb3bbfa488d7354e197f
+      bin:
+        - xenu.exe
+      strip: 1
+test: xenu --version

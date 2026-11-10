@@ -1,0 +1,24 @@
+api: v1
+name: texmacs
+kind: app
+display: texmacs
+description: a free wysiwyw word processor, structured document explorer, structured editor for Scheme/AST, typesetting system based on TeX algorithm, user friendly interface for many external systems for computer algebra, numerical analysis, statistics, etc.
+homepage: http://texmacs.org/
+license: GPL-3.0-or-later
+version: 2.1.4
+channels:
+    stable: 2.1.4
+provides:
+    - texmacs
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.texmacs.org/Download/ftp/tmftp/windows/TeXmacs-2.1.4-installer.exe
+      sha256: 915dc8f19c73cc5d482d737e831cd4204319a10f9b6e98f33f39a1955e207958
+      bin:
+        - bin\texmacs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall texmacs
+test: bin\texmacs --version

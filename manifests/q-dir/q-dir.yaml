@@ -1,0 +1,21 @@
+api: v1
+name: q-dir
+kind: app
+display: q-dir
+description: A quad window file manager based on Windows File Explorer
+homepage: https://www.softwareok.com/?seite=Freeware/Q-Dir
+license: Unknown
+version: "12.83"
+channels:
+    stable: "12.83"
+provides:
+    - q-dir
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.softwareok.com/Download/Q-Dir_Portable_x64.zip
+      sha256: 93360dc4e1fbb4d68a013fe9cfd89794098a54eb886699fb9bb880b38b68571c
+      bin:
+        - Q-Dir_x64.exe
+      strip: 1
+test: Q-Dir_x64 --version

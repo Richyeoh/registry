@@ -1,0 +1,21 @@
+api: v1
+name: dumbpipe
+kind: app
+display: dumbpipe
+description: A netcat-inspired command-line tool that creates an encrypted pipe between two machines, built on iroh.
+homepage: https://dumbpipe.dev
+license: Apache-2.0|MIT
+version: 0.40.1
+channels:
+    stable: 0.40.1
+provides:
+    - dumbpipe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/n0-computer/dumbpipe/releases/download/v0.40.1/dumbpipe-v0.40.1-windows-x86_64.zip
+      sha256: ffee0f811526e486992a12d3255ed26a84e932c76743009c50858ef15e4b046a
+      bin:
+        - dumbpipe.exe
+      strip: 1
+test: dumbpipe --version

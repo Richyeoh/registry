@@ -1,0 +1,21 @@
+api: v1
+name: trufflehog
+kind: app
+display: trufflehog
+description: Find leaked credentials
+homepage: https://trufflesecurity.com
+license: AGPL-3.0-only
+version: 3.99.8
+channels:
+    stable: 3.99.8
+provides:
+    - trufflehog
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trufflesecurity/trufflehog/releases/download/v3.99.8/trufflehog_3.99.8_windows_amd64.tar.gz
+      sha256: 89415ee864cf343bd37633645ef04f87493aed3a52fc4529ae8f25828f4004d2
+      bin:
+        - trufflehog.exe
+      strip: 1
+test: trufflehog --version

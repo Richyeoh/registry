@@ -1,0 +1,32 @@
+api: v1
+name: amitv87-pip
+kind: app
+display: PiP
+description: Always on top window preview
+homepage: https://github.com/amitv87/PiP
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: "3.01"
+channels:
+    stable: "3.01"
+provides:
+    - amitv87-pip
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/amitv87/PiP/releases/download/v3.01/PiP-3.01.dmg
+      sha256: 3317ddd35ae36b16f06d501c6b870aeb0565548cc07165c0bd1df23ac1af8d83
+      bin:
+        - amitv87-pip
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/amitv87/PiP/releases/download/v3.01/PiP-3.01.dmg
+      sha256: 3317ddd35ae36b16f06d501c6b870aeb0565548cc07165c0bd1df23ac1af8d83
+      bin:
+        - amitv87-pip
+      strip: 1
+test: amitv87-pip --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

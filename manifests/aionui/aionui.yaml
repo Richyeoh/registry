@@ -1,0 +1,32 @@
+api: v1
+name: aionui
+kind: app
+display: AionUi
+description: Unified GUI for command-line AI agents
+homepage: https://www.aionui.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.2.2
+channels:
+    stable: 2.2.2
+provides:
+    - aionui
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://static.aionui.com/releases/2.2.2/AionUi-2.2.2-mac-arm64.dmg
+      sha256: 813dae4972fdc6352567ed201702e79ad67b0332e400a281fcd4a46e36b3b253
+      bin:
+        - aionui
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://static.aionui.com/releases/2.2.2/AionUi-2.2.2-mac-arm64.dmg
+      sha256: 813dae4972fdc6352567ed201702e79ad67b0332e400a281fcd4a46e36b3b253
+      bin:
+        - aionui
+      strip: 1
+test: aionui --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

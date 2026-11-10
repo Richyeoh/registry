@@ -1,0 +1,24 @@
+api: v1
+name: totalcommander
+kind: app
+display: totalcommander
+description: Total Commander is a Shareware file manager for Windows® 95/98/ME/NT/2000/XP/Vista/7/8/8.1/10, and Windows® 3.1.
+homepage: https://www.ghisler.com
+license: Shareware
+version: "11.58"
+channels:
+    stable: "11.58"
+provides:
+    - totalcommander
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://totalcommander.ch/1158/tcmd1158x64.exe
+      sha256: 2281f3827a8746a597a75287f521690f1291bdb535d7e1269768dbe077a13ed4
+      bin:
+        - TOTALCMD64.EXE
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall totalcommander
+test: TOTALCMD64.EXE --version

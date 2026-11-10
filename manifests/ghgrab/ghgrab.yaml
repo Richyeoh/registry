@@ -1,0 +1,24 @@
+api: v1
+name: ghgrab
+kind: app
+display: ghgrab
+description: A simple, pretty terminal tool that lets you browse and download files from GitHub, GitLab, Codeberg, Gitea, and Forgejo without leaving your CLI.
+homepage: https://ghgrab.readthedocs.io
+license: MIT
+version: 2.3.1
+channels:
+    stable: 2.3.1
+provides:
+    - ghgrab
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/abhixdd/ghgrab/releases/download/v2.3.1/ghgrab-win32.exe#/ghgrab.exe
+      sha256: 4d8d4b5a0af259689a34b5b2c7d55aee861fb08a8050325aa2b3c6444dbc317b
+      bin:
+        - ghgrab.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ghgrab
+test: ghgrab --version

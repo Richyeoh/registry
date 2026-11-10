@@ -1,0 +1,21 @@
+api: v1
+name: git-filter-repo
+kind: app
+display: git-filter-repo
+description: git filter-branch replacement
+homepage: https://github.com/newren/git-filter-repo
+license: MIT
+version: 2.47.0
+channels:
+    stable: 2.47.0
+provides:
+    - git-filter-repo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/newren/git-filter-repo/archive/v2.47.0.zip#/dl.zip_
+      sha256: 8f3d099bf91ceac6cae60d79aac701e9bc08fd0eed67c601cc5dd401d5788871
+      bin:
+        - git-filter-repo.exe
+      strip: 1
+test: git-filter-repo --version

@@ -1,0 +1,21 @@
+api: v1
+name: desync
+kind: app
+display: desync
+description: A Go library and CLI tool that re-implements casync features for content-addressed binary distribution.
+homepage: https://github.com/folbricht/desync
+license: BSD-3-Clause
+version: 1.1.5
+channels:
+    stable: 1.1.5
+provides:
+    - desync
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/folbricht/desync/releases/download/v1.1.5/desync_1.1.5_windows_amd64.zip
+      sha256: 114a18e415842d939fc3578e7f486f06d78ce536379bb2b6320879baa4c4e80e
+      bin:
+        - desync.exe
+      strip: 1
+test: desync --version

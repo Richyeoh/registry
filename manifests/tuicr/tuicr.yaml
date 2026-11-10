@@ -1,0 +1,21 @@
+api: v1
+name: tuicr
+kind: app
+display: tuicr
+description: A code review TUI with vim keybindings. Export to GitHub or clipboard.
+homepage: https://tuicr.dev
+license: MIT
+version: 0.28.0
+channels:
+    stable: 0.28.0
+provides:
+    - tuicr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/agavra/tuicr/releases/download/v0.28.0/tuicr-0.28.0-x86_64-pc-windows-msvc.zip
+      sha256: 444dcaf70575f2566c96b4e67215696676d720c796ea306a6f3595a10dbb1aee
+      bin:
+        - tuicr.exe
+      strip: 1
+test: tuicr --version

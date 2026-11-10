@@ -1,0 +1,24 @@
+api: v1
+name: openfreebuds
+kind: app
+display: openfreebuds
+description: Manage wireless headphones from HUAWEI/Honor
+homepage: https://mmk.pw/en/openfreebuds/
+license: GPL-3.0-or-later
+version: 0.18.1
+channels:
+    stable: 0.18.1
+provides:
+    - openfreebuds
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/melianmiko/OpenFreebuds/releases/download/v0.18.1/openfreebuds_0.18.1_x86_64_windows_portable.exe#/openfreebuds.exe
+      sha256: bd67b650e7c545a48ae0583b17b20ea1bdab3f0f3281334f115f9a8f77604833
+      bin:
+        - openfreebuds.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall openfreebuds
+test: openfreebuds --version

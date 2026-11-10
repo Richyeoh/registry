@@ -1,0 +1,21 @@
+api: v1
+name: virgo
+kind: app
+display: virgo
+description: Virtual desktops for Windows.
+homepage: https://github.com/henkman/virgo
+license: MIT
+version: 1.4.2
+channels:
+    stable: 1.4.2
+provides:
+    - virgo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/henkman/virgo/releases/download/v.1.4.2/virgo.zip
+      sha256: bc9f698daa1a7c19c933f90dd7382af0f7fec844a01f38baa428d3bae318c739
+      bin:
+        - virgo.exe
+      strip: 1
+test: virgo --version

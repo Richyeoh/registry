@@ -1,0 +1,21 @@
+api: v1
+name: blush
+kind: app
+display: blush
+description: Grep with colours
+homepage: https://github.com/arsham/blush
+license: MIT
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - blush
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/arsham/blush/releases/download/v0.6.0/blush_windows_v0.6.0.zip
+      sha256: bc0da24b6a0bc37104b8f3c5741c79ba676aa4f7445d7203a9ff04f45f03f991
+      bin:
+        - blush.exe
+      strip: 1
+test: blush --version

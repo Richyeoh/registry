@@ -1,0 +1,46 @@
+api: v1
+name: apachetop
+kind: app
+display: apachetop
+description: Top-like display of Apache log
+homepage: https://github.com/tessus/apachetop
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 0.23.2
+channels:
+    stable: 0.23.2
+provides:
+    - apachetop
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:4c6d945946d47eed147f9ff9550bb06d00c5c12662d32375a0ad2e1c2a2429d5
+      sha256: 4c6d945946d47eed147f9ff9550bb06d00c5c12662d32375a0ad2e1c2a2429d5
+      bin:
+        - apachetop
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:389e4bc159a263ac6d53b0094b65341e45d426294e8844ac6d26328ef68e72c9
+      sha256: 389e4bc159a263ac6d53b0094b65341e45d426294e8844ac6d26328ef68e72c9
+      bin:
+        - apachetop
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:b12e4f730309bb91ee34bb2972ef2004a979c2a608abb93500b859973994abf8
+      sha256: b12e4f730309bb91ee34bb2972ef2004a979c2a608abb93500b859973994abf8
+      bin:
+        - apachetop
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apachetop/blobs/sha256:ee4946ec586338260b8540ae8954f40001f2cd482663f55a9e19f94572756f67
+      sha256: ee4946ec586338260b8540ae8954f40001f2cd482663f55a9e19f94572756f67
+      bin:
+        - apachetop
+      strip: 1
+test: apachetop --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

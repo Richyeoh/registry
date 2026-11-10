@@ -1,0 +1,22 @@
+api: v1
+name: qpdf
+kind: app
+display: qpdf
+description: A command-line program that does structural, content-preserving transformations on PDF files.
+homepage: https://qpdf.sourceforge.io
+license: Apache-2.0
+version: 12.4.2
+channels:
+    stable: 12.4.2
+provides:
+    - qpdf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/qpdf/qpdf/releases/download/v12.4.2/qpdf-12.4.2-msvc64.zip
+      sha256: db87077e683630c1217e0e8f9a20a9749d952ab676e881c3689187763a5de25d
+      bin:
+        - bin\qpdf.exe
+        - bin\fix-qdf.exe
+      strip: 1
+test: bin\qpdf --version

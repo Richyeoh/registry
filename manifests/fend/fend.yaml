@@ -1,0 +1,21 @@
+api: v1
+name: fend
+kind: app
+display: fend
+description: 'Arbitrary-precision unit-aware calculator '
+homepage: https://printfn.github.io/fend/
+license: MIT
+version: 1.5.9
+channels:
+    stable: 1.5.9
+provides:
+    - fend
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/printfn/fend/releases/download/v1.5.9/fend-1.5.9-windows-x64-exe.zip
+      sha256: a20b24378baef4a732ea188f04b9462d7cfd344d65ec1a53f16a501a0d2a2c1d
+      bin:
+        - fend.exe
+      strip: 1
+test: fend --version

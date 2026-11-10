@@ -1,0 +1,21 @@
+api: v1
+name: hayabusa
+kind: app
+display: hayabusa
+description: Sigma-based threat hunting and fast forensics timeline generator for Windows event logs.
+homepage: https://github.com/Yamato-Security/hayabusa
+license: AGPL-3.0-only
+version: 4.4.0
+channels:
+    stable: 4.4.0
+provides:
+    - hayabusa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Yamato-Security/hayabusa/releases/download/v4.4.0/hayabusa-4.4.0-win-x64.zip
+      sha256: dec63d2efa9e87ccf76da7e52e491df379f9eb37b69a92775d90ab6d91f22807
+      bin:
+        - hayabusa.exe
+      strip: 1
+test: hayabusa --version

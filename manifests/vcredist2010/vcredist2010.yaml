@@ -1,0 +1,24 @@
+api: v1
+name: vcredist2010
+kind: app
+display: vcredist2010
+description: Microsoft Visual C++ Redistributable for Visual Studio 2010
+homepage: https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
+license: Unknown
+version: 10.0.40219.325
+channels:
+    stable: 10.0.40219.325
+provides:
+    - vcredist2010
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe
+      sha256: f3b7a76d84d23f91957aa18456a14b4e90609e4ce8194c5653384ed38dada6f3
+      bin:
+        - vcredist2010.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall vcredist2010
+test: vcredist2010 --version

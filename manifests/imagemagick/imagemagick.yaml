@@ -1,0 +1,24 @@
+api: v1
+name: imagemagick
+kind: app
+display: imagemagick
+description: Create, edit, compose, and convert 200+ bitmap image formats.
+homepage: https://imagemagick.org/
+license: ImageMagick
+version: 7.1.2-35
+channels:
+    stable: 7.1.2-35
+provides:
+    - imagemagick
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-35/ImageMagick-7.1.2-35-Q16-HDRI-x64-dll.exe
+      sha256: 32cc21fe23f7d7b7d9133905a2dc5aac94f574a07740911d948eb88b09a0b432
+      bin:
+        - imagemagick.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall imagemagick
+test: imagemagick --version

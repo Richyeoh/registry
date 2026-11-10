@@ -1,0 +1,21 @@
+api: v1
+name: ccache
+kind: app
+display: ccache
+description: Compiler cache to speed up recompilation by caching previous compilations and detecting when the same compilation is being done again.
+homepage: https://ccache.dev
+license: GPL-3.0-or-later
+version: 4.14.3
+channels:
+    stable: 4.14.3
+provides:
+    - ccache
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ccache/ccache/releases/download/v4.14.3/ccache-4.14.3-windows-x86_64.zip
+      sha256: c845c3d65be81954c75659145a522a793a27586bf940c5dcfe18af33fa1a67dd
+      bin:
+        - ccache.exe
+      strip: 1
+test: ccache --version

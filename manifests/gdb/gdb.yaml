@@ -1,0 +1,22 @@
+api: v1
+name: gdb
+kind: app
+display: gdb
+description: GNU Debugger
+homepage: https://www.gnu.org/software/gdb/
+license: GPL-3.0-or-later
+version: "17.1"
+channels:
+    stable: "17.1"
+provides:
+    - gdb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://nuwen.net/files/mingw/components-20.0.7z
+      sha256: 561d873b7f95dbb39a34b7ab00050dc6028808310a847721a8aea5e5b0bff1c9
+      bin:
+        - bin\gdb.exe
+        - bin\gdbserver.exe
+      strip: 1
+test: bin\gdb --version

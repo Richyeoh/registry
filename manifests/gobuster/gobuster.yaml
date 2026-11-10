@@ -1,0 +1,21 @@
+api: v1
+name: gobuster
+kind: app
+display: gobuster
+description: A tool to brute-force URIs, DNS subdomains or Virtual Host names
+homepage: https://github.com/OJ/gobuster
+license: Apache-2.0
+version: 3.8.2
+channels:
+    stable: 3.8.2
+provides:
+    - gobuster
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/OJ/gobuster/releases/download/v3.8.2/gobuster_Windows_x86_64.zip
+      sha256: 677abe8e56c5455804225ad2264dc6e9981e99673ef3ccd6a2fa2af8a2e92aba
+      bin:
+        - gobuster.exe
+      strip: 1
+test: gobuster --version

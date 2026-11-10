@@ -1,0 +1,21 @@
+api: v1
+name: rdiff-backup
+kind: app
+display: rdiff-backup
+description: Reverse differential backup tool, over a network or locally
+homepage: https://rdiff-backup.net
+license: GPL-2.0-only
+version: 2.2.7
+channels:
+    stable: 2.2.7
+provides:
+    - rdiff-backup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rdiff-backup/rdiff-backup/releases/download/v2.2.7/rdiff-backup-2.2.7.win64exe.zip
+      sha256: 0076b3b9936214fa770479eb210462a80cb6525276e10241d108527e0314dfc4
+      bin:
+        - rdiff-backup.exe
+      strip: 1
+test: rdiff-backup --version

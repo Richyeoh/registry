@@ -1,0 +1,32 @@
+api: v1
+name: atop
+kind: app
+display: atop
+description: Advanced system and process monitor for Linux using process events
+homepage: https://www.atoptool.nl
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 2.13.0
+channels:
+    stable: 2.13.0
+provides:
+    - atop
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atop/blobs/sha256:362c4b0dd3c636214e20c1b0b74bde7449d4d9a6b4648251b07e7ca1209cbc86
+      sha256: 362c4b0dd3c636214e20c1b0b74bde7449d4d9a6b4648251b07e7ca1209cbc86
+      bin:
+        - atop
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atop/blobs/sha256:79f0e3d6905ef3ad32afd3884550bc1abc65722b4a49dcc1672f5545fe46596b
+      sha256: 79f0e3d6905ef3ad32afd3884550bc1abc65722b4a49dcc1672f5545fe46596b
+      bin:
+        - atop
+      strip: 1
+test: atop --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

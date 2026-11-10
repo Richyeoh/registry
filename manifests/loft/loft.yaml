@@ -1,0 +1,24 @@
+api: v1
+name: loft
+kind: app
+display: loft
+description: Namespace & Virtual Cluster Manager for Kubernetes
+homepage: https://loft.sh/docs/introduction
+license: Apache-2.0
+version: 3.4.10
+channels:
+    stable: 3.4.10
+provides:
+    - loft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/loft-sh/loft/releases/download/v3.4.10/loft-windows-amd64.exe#/loft.exe
+      sha256: 9bd3092dc9335acbe03aa002a52ef7907ed9f5d7a4164ed5c0463fb28e596d7b
+      bin:
+        - loft.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall loft
+test: loft --version

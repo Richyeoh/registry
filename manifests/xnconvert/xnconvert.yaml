@@ -1,0 +1,21 @@
+api: v1
+name: xnconvert
+kind: app
+display: xnconvert
+description: Batch photo resizer and image converter to crop, convert, compress, resize images.
+homepage: https://www.xnview.com/en/xnconvert/
+license: Freeware
+version: 1.118.0
+channels:
+    stable: 1.118.0
+provides:
+    - xnconvert
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.xnview.com/versions/XnConvert/XnConvert-1.118.0-win-x64.zip
+      sha256: a9706021970374ba787b0ed4418c5f2a535b2fc46e729c00a89e198cd3c3c90e
+      bin:
+        - xnconvert.exe
+      strip: 1
+test: xnconvert --version

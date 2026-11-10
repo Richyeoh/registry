@@ -1,0 +1,21 @@
+api: v1
+name: posh-docker
+kind: app
+display: posh-docker
+description: Powershell tab completion for Docker
+homepage: https://github.com/samneirinck/posh-docker
+license: MIT
+version: 0.7.0
+channels:
+    stable: 0.7.0
+provides:
+    - posh-docker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/samneirinck/posh-docker/archive/v0.7.0.zip
+      sha256: a28f2b07c63bd5460115565e9ad1a9b5418f39ef305a82b6268f26635111b69b
+      bin:
+        - posh-docker.exe
+      strip: 1
+test: posh-docker --version

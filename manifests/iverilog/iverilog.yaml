@@ -1,0 +1,24 @@
+api: v1
+name: iverilog
+kind: app
+display: iverilog
+description: Compiler for IEEE-1364 Verilog hardware description language.
+homepage: https://bleyer.org/icarus/
+license: GPL-2.0-or-later
+version: 14-20260804
+channels:
+    stable: 14-20260804
+provides:
+    - iverilog
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bleyer.org/icarus/iverilog-v14-20260804-x64_setup.exe#/dl.7z
+      sha256: 5d65c90c269af75c12ba6e9af6ceb0d64511ea8913d0b2a28eb82e697521cf17
+      bin:
+        - bin\iverilog.exe
+        - bin\iverilog-vpi.exe
+        - bin\vvp.exe
+        - bin\gtkwave.exe
+      strip: 1
+test: bin\iverilog --version

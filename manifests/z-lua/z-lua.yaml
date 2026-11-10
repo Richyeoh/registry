@@ -1,0 +1,21 @@
+api: v1
+name: z-lua
+kind: app
+display: z.lua
+description: A command-line cd replacement that accelerates directory navigation by learning user access patterns.
+homepage: https://github.com/skywind3000/z.lua
+license: Unknown
+version: 1.8.27
+channels:
+    stable: 1.8.27
+provides:
+    - z-lua
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/skywind3000/z.lua/archive/refs/tags/1.8.27.zip
+      sha256: 90d86300de410779c89cc5e6081dff00c6880cae83eb651cbbaad22af4595b75
+      bin:
+        - z-lua.exe
+      strip: 1
+test: z-lua --version

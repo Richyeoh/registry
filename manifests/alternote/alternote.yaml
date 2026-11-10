@@ -1,0 +1,32 @@
+api: v1
+name: alternote
+kind: app
+display: Alternote
+description: Note-taking App for Evernote
+homepage: https://alternoteapp.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.0.18,1018
+channels:
+    stable: 1.0.18,1018
+provides:
+    - alternote
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://alternoteapp.com/assets/downloads/Alternote1018.zip
+      sha256: b1a3c0d311b0633bae1a327d393c61a82bf21e2a0363109ef984e8f1c99549ff
+      bin:
+        - alternote
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://alternoteapp.com/assets/downloads/Alternote1018.zip
+      sha256: b1a3c0d311b0633bae1a327d393c61a82bf21e2a0363109ef984e8f1c99549ff
+      bin:
+        - alternote
+      strip: 1
+test: alternote --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

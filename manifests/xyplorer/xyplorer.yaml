@@ -1,0 +1,21 @@
+api: v1
+name: xyplorer
+kind: app
+display: xyplorer
+description: File manager for Windows
+homepage: https://www.xyplorer.com/free.php
+license: Unknown
+version: 17.40.0100
+channels:
+    stable: 17.40.0100
+provides:
+    - xyplorer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.xyplorer.com/download/xyplorer_free_noinstall.zip
+      sha256: 38cb3abc8a699023e5f74fe19c167e91e59be67a09c9e1fc7f589b98324b9ee9
+      bin:
+        - XYplorerFree.exe
+      strip: 1
+test: XYplorerFree --version

@@ -1,0 +1,21 @@
+api: v1
+name: musicbee
+kind: app
+display: musicbee
+description: The ultimate music player to easily manage, find, and play music, podcasts, web radio stations, etc
+homepage: https://getmusicbee.com
+license: Unknown
+version: 3.6.9668
+channels:
+    stable: 3.6.9668
+provides:
+    - musicbee
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.videohelp.com/download/MusicBeePortable_3_6.zip
+      sha256: aff35dc919b4a620847ca0c5269d1d75e93bf96bcabcbbdc0d058ce3e1d82c5d
+      bin:
+        - MusicBee.exe
+      strip: 1
+test: MusicBee --version

@@ -1,0 +1,21 @@
+api: v1
+name: tern-subtitle-file-translator
+kind: app
+display: tern-subtitle-file-translator
+description: .srt .ass .vtt file translator
+homepage: https://tern.1c7.me
+license: Unknown
+version: 5.3.7
+channels:
+    stable: 5.3.7
+provides:
+    - tern-subtitle-file-translator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/1c7/Translate-Subtitle-File/releases/download/v5.3.7/Windows-win32-x64-5.3.7.zip
+      sha256: 78ae47eaa1669579613def311f74600d66bac8835b2103570f545ccbbc5daf1b
+      bin:
+        - tern-subtitle-file-translator.exe
+      strip: 1
+test: tern-subtitle-file-translator --version

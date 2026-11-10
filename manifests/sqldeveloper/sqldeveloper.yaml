@@ -1,0 +1,21 @@
+api: v1
+name: sqldeveloper
+kind: app
+display: sqldeveloper
+description: A graphical tool for working with SQL in Oracle databases
+homepage: https://www.oracle.com/database/sqldeveloper/
+license: Unknown
+version: 24.3.1.347.1826
+channels:
+    stable: 24.3.1.347.1826
+provides:
+    - sqldeveloper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.oracle.com/otn_software/java/sqldeveloper/sqldeveloper-24.3.1.347.1826-no-jre.zip
+      sha256: 3390ef58972f1f255077c49e66b171b8664773bb16e37570a7ca16acc5afb8cb
+      bin:
+        - sqldeveloper.exe
+      strip: 1
+test: sqldeveloper --version

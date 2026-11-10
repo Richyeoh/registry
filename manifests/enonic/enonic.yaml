@@ -1,0 +1,21 @@
+api: v1
+name: enonic
+kind: app
+display: enonic
+description: Project and instances manager for Enonic XP.
+homepage: https://developer.enonic.com/docs/enonic-cli/stable
+license: GPL-3.0-or-later
+version: 4.1.4
+channels:
+    stable: 4.1.4
+provides:
+    - enonic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://repo.enonic.com/public/com/enonic/cli/enonic/4.1.4/enonic_4.1.4_Windows_64-bit.zip
+      sha256: 9395c7b73c189b32969a0e99cdd0043d577a6a96da968cce30798a5f20a284bf
+      bin:
+        - enonic.exe
+      strip: 1
+test: enonic --version

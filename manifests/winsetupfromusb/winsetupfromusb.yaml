@@ -1,0 +1,21 @@
+api: v1
+name: winsetupfromusb
+kind: app
+display: winsetupfromusb
+description: Create multi-boot USB for Windows/Linux installations.
+homepage: http://www.winsetupfromusb.com/
+license: Unknown
+version: "1.10"
+channels:
+    stable: "1.10"
+provides:
+    - winsetupfromusb
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://downloads.winsetupfromusb.com/WinSetupFromUSB-1-10.exe#/dl.7z
+      sha256: f1f2db8cc6e02a8c7abd3e91a7aad23d1f3730eb16763b9041e73a55b817a7eb
+      bin:
+        - winsetupfromusb.exe
+      strip: 1
+test: winsetupfromusb --version

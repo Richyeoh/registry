@@ -1,0 +1,26 @@
+api: v1
+name: libjpeg-turbo
+kind: app
+display: libjpeg-turbo
+description: A JPEG image codec that uses SIMD instructions
+homepage: https://libjpeg-turbo.org/
+license: IJG,BSD-3-Clause,Zlib
+version: 3.2.1
+channels:
+    stable: 3.2.1
+provides:
+    - libjpeg-turbo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.1/libjpeg-turbo-3.2.1-vc-x64.exe#/dl.7z
+      sha256: 1f05bc3ed1585e6b12a8b0c24c8c5f07b1f6d90d01b4b709b331bedc9d6e5838
+      bin:
+        - cjpeg.exe
+        - djpeg.exe
+        - jpegtran.exe
+        - rdjpgcom.exe
+        - tjbench.exe
+        - wrjpgcom.exe
+      strip: 1
+test: cjpeg --version

@@ -1,0 +1,21 @@
+api: v1
+name: qrcp
+kind: app
+display: qrcp
+description: Transfers files over wifi from computer to mobile device by scanning a QR code without leaving the terminal.
+homepage: https://qrcp.sh/
+license: MIT
+version: 0.11.7
+channels:
+    stable: 0.11.7
+provides:
+    - qrcp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/claudiodangelis/qrcp/releases/download/v0.11.7/qrcp_0.11.7_windows_amd64.tar.gz
+      sha256: 072082e1bace619f3fedba2b3189d3f6420d32a2dbb87d5831c9b883b95f47f7
+      bin:
+        - qrcp.exe
+      strip: 1
+test: qrcp --version

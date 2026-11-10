@@ -1,0 +1,21 @@
+api: v1
+name: roslynpad
+kind: app
+display: roslynpad
+description: A cross-platform C# editor based on Roslyn and AvalonEdit
+homepage: https://roslynpad.net
+license: Apache-2.0
+version: "22.1"
+channels:
+    stable: "22.1"
+provides:
+    - roslynpad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/roslynpad/roslynpad/releases/download/22.1/RoslynPad-windows-x64.zip
+      sha256: 40acf22dc8ca71c1c2d85a7f98f0e1bedf26d0152c89cd8493c0a5189901aa55
+      bin:
+        - RoslynPad.exe
+      strip: 1
+test: RoslynPad --version

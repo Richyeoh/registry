@@ -1,0 +1,21 @@
+api: v1
+name: vivaldi
+kind: app
+display: vivaldi
+description: An innovatively designed web browser, based on Blink, for users in Vivaldi.net community that replaced departed My Opera.
+homepage: https://vivaldi.com/
+license: BSD-3-Clause
+version: 8.3.4191.35
+channels:
+    stable: 8.3.4191.35
+provides:
+    - vivaldi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.vivaldi.com/stable/Vivaldi.8.3.4191.35.x64.exe#/dl.7z
+      sha256: d9cd421314ff8fd0f5a8b2a7dbb6818ac1dfe26882426253b26b89f09a66afdc
+      bin:
+        - Application\vivaldi.exe
+      strip: 1
+test: Application\vivaldi --version

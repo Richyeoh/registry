@@ -1,0 +1,21 @@
+api: v1
+name: helmfile
+kind: app
+display: helmfile
+description: Command line interface to deploy Kubernetes Helm Charts.
+homepage: https://helmfile.readthedocs.io
+license: MIT
+version: 1.8.3
+channels:
+    stable: 1.8.3
+provides:
+    - helmfile
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/helmfile/helmfile/releases/download/v1.8.3/helmfile_1.8.3_windows_amd64.tar.gz
+      sha256: 1f4209a22437596fafade7809b4d223e6f1aca41437f4511e45b7c2d3c97b5d3
+      bin:
+        - helmfile.exe
+      strip: 1
+test: helmfile --version

@@ -1,0 +1,24 @@
+api: v1
+name: proton-authenticator
+kind: app
+display: proton-authenticator
+description: An open source and end-to-end encrypted 2FA app that's simple and free to use
+homepage: https://proton.me/authenticator
+license: GPL-3.0
+version: 1.1.6
+channels:
+    stable: 1.1.6
+provides:
+    - proton-authenticator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://proton.me/download/authenticator/windows/ProtonAuthenticator_1.1.6_x64_en-US.msi#setup.msi
+      sha256: 52e5c0b28be769910fbbf24724f552ed4a75dd8571be1004dcf6992fba3a2cb5
+      bin:
+        - proton-authenticator.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall proton-authenticator
+test: proton-authenticator --version

@@ -1,0 +1,21 @@
+api: v1
+name: shellcheck
+kind: app
+display: shellcheck
+description: Static analysis tool for shell scripts
+homepage: https://shellcheck.net/
+license: GPL-3.0-only
+version: 0.11.0
+channels:
+    stable: 0.11.0
+provides:
+    - shellcheck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.zip
+      sha256: 8a4e35ab0b331c85d73567b12f2a444df187f483e5079ceffa6bda1faa2e740e
+      bin:
+        - shellcheck.exe
+      strip: 1
+test: shellcheck --version

@@ -1,0 +1,25 @@
+api: v1
+name: tmux
+kind: app
+display: tmux
+description: tmux
+homepage: https://github.com/tmux/tmux/wiki
+license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
+version: "3.8"
+channels:
+    stable: "3.8"
+provides:
+    - tmux
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/tmux/download/
+      sha256: 458fb70e06289bb30e90da74f4724ee87dd92ea7dd6a0bdbf4c7c6adcec75a02
+      bin:
+        - tmux
+test: tmux --version
+caveats: 由 Arch 官方仓自动转制（pacman/paru 源）

@@ -1,0 +1,21 @@
+api: v1
+name: ghidra92
+kind: app
+display: ghidra92
+description: A software reverse engineering (SRE) framework (version 9.2).
+homepage: https://github.com/NationalSecurityAgency/ghidra
+license: Apache-2.0
+version: "9.2"
+channels:
+    stable: "9.2"
+provides:
+    - ghidra92
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_9.2_build/ghidra_9.2_PUBLIC_20201113.zip
+      sha256: ffebd3d87bc7c6d9ae1766dd3293d1fdab3232a99b170f8ea8b57497a1704ff6
+      bin:
+        - ghidraRun.bat.exe
+      strip: 1
+test: ghidraRun.bat --version

@@ -1,0 +1,22 @@
+api: v1
+name: streamlink
+kind: app
+display: streamlink
+description: A command-line utility that pipes video streams from various services into a video player.
+homepage: https://streamlink.github.io/
+license: BSD-2-Clause
+version: 8.6.3-1
+channels:
+    stable: 8.6.3-1
+provides:
+    - streamlink
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/streamlink/windows-builds/releases/download/8.6.3-1/streamlink-8.6.3-1-py315-x86_64.zip
+      sha256: 3b1f1470d4b135080a8107ca2917379ca3ff5acadbcdc215568b79eea1450497
+      bin:
+        - bin\streamlink.exe
+        - bin\streamlinkw.exe
+      strip: 1
+test: bin\streamlink --version

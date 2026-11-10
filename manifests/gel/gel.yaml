@@ -1,0 +1,21 @@
+api: v1
+name: gel
+kind: app
+display: gel
+description: A graph-relational database (Formerly known as EdgeDB).
+homepage: https://www.geldata.com
+license: Apache-2.0|MIT
+version: 7.10.2+e00c46c
+channels:
+    stable: 7.10.2+e00c46c
+provides:
+    - gel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.geldata.com/archive/x86_64-pc-windows-msvc/gel-cli-7.10.2+e00c46c.exe.zst
+      sha256: 1e1da0cadc8cd079843e761ebd486b1384d4b5f5d4958615b78be89a60861d65
+      bin:
+        - gel.exe
+      strip: 1
+test: gel --version

@@ -1,0 +1,21 @@
+api: v1
+name: wavebox
+kind: app
+display: wavebox
+description: Wavebox 10. A distraction-free browser for fast and focused working across all web apps.
+homepage: https://wavebox.io/
+license: Unknown
+version: 157.3.32.2
+channels:
+    stable: 157.3.32.2
+provides:
+    - wavebox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.wavebox.app/stable/win/Install%20Wavebox%20157.3.32.2.exe#/dl.7z
+      sha256: 917c672bb4ce29e0d19a772052fdf4781ef9f162631a5629b4163ae934489f2e
+      bin:
+        - Wavebox.exe
+      strip: 1
+test: Wavebox --version

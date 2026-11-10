@@ -1,0 +1,21 @@
+api: v1
+name: neovide
+kind: app
+display: neovide
+description: A simple GUI for Neovim
+homepage: https://neovide.dev
+license: MIT
+version: 0.17.2
+channels:
+    stable: 0.17.2
+provides:
+    - neovide
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/neovide/neovide/releases/download/0.17.2/neovide-windows-x86_64.zip
+      sha256: 53fbc5bbcd41adb73badab7ae42103846a1358ef1cfa98dce8b98fae63aa4c68
+      bin:
+        - neovide.exe
+      strip: 1
+test: neovide --version

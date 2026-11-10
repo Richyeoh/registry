@@ -1,0 +1,46 @@
+api: v1
+name: authz0
+kind: app
+display: authz0
+description: Automated authorization test tool
+homepage: https://authz0.hahwul.com/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.1.2
+channels:
+    stable: 1.1.2
+provides:
+    - authz0
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/authz0/blobs/sha256:0cc9c71a90cc770c96bd24a6946a23759912d1dd52bc0b0953732a33064c208a
+      sha256: 0cc9c71a90cc770c96bd24a6946a23759912d1dd52bc0b0953732a33064c208a
+      bin:
+        - authz0
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/authz0/blobs/sha256:0fe2da611b2c22d82a4279dc10401a4046c94da994c296f87e4cb30c6f1556d5
+      sha256: 0fe2da611b2c22d82a4279dc10401a4046c94da994c296f87e4cb30c6f1556d5
+      bin:
+        - authz0
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/authz0/blobs/sha256:b5b62fb4bf2c7ac8e013fbff4d57cbb6ab2ea703e16be23f0415dc0d02bd7c83
+      sha256: b5b62fb4bf2c7ac8e013fbff4d57cbb6ab2ea703e16be23f0415dc0d02bd7c83
+      bin:
+        - authz0
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/authz0/blobs/sha256:e60ac9cf6e9d8901bf7ad5f70e96757abd79f6b6121ad1945135f6043cd010e7
+      sha256: e60ac9cf6e9d8901bf7ad5f70e96757abd79f6b6121ad1945135f6043cd010e7
+      bin:
+        - authz0
+      strip: 1
+test: authz0 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

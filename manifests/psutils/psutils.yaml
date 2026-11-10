@@ -1,0 +1,30 @@
+api: v1
+name: psutils
+kind: app
+display: psutils
+description: A collection of command line utilities written in PowerShell proudly ignoring PowerShell Verb-Noun naming conventions.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2023.06.28
+channels:
+    stable: 0.2023.06.28
+provides:
+    - psutils
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lukesampson/psutils/archive/1d746384cb351f2e38bdbe98120d3a9322bbd1a0.zip
+      sha256: fd2609aae7065a6218e566a0345f38e308a1199b9674e38db572c8465b56c3a0
+      bin:
+        - gitignore.ps1.exe
+        - ln.ps1.exe
+        - runat.ps1.exe
+        - say.ps1.exe
+        - shasum.ps1.exe
+        - sudo.ps1.exe
+        - time.ps1.exe
+        - time.ps1.exe
+        - touch.ps1.exe
+        - vimtutor.ps1.exe
+      strip: 1
+test: gitignore.ps1 --version

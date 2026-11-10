@@ -1,0 +1,22 @@
+api: v1
+name: neo-cowsay
+kind: app
+display: neo-cowsay
+description: Cowsay written in Go, with more fun options
+homepage: https://github.com/Code-Hex/Neo-cowsay
+license: Artistic-2.0
+version: 2.0.4
+channels:
+    stable: 2.0.4
+provides:
+    - neo-cowsay
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Code-Hex/Neo-cowsay/releases/download/v2.0.4/cowsay_2.0.4_Windows_x86_64.zip
+      sha256: 9a7ba1dfd94c526f9fbef10e8b59f068530e18d2457d0776240ffab791824cb1
+      bin:
+        - cowsay.exe
+        - cowthink.exe
+      strip: 1
+test: cowsay --version

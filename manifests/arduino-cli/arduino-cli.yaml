@@ -1,0 +1,45 @@
+api: v1
+name: arduino-cli
+kind: app
+display: arduino-cli
+description: Arduino command line interface
+homepage: https://arduino.github.io/arduino-cli/latest/
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - arduino-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/arduino/arduino-cli/releases/download/v1.6.0/arduino-cli_1.6.0_Windows_64bit.zip
+      sha256: 2769b9b282ce597db9679d8ec14d726d57004ca4205ef4d7a795bf36b6cdc9d8
+      bin:
+        - arduino-cli.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arduino-cli/blobs/sha256:7414060afe50509dffdd50f3f83f8020983fa335170a2e8f740cadbc8f43b551
+      sha256: 7414060afe50509dffdd50f3f83f8020983fa335170a2e8f740cadbc8f43b551
+      bin:
+        - arduino-cli
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arduino-cli/blobs/sha256:856e2730f80a3d04790ff9b98c8b7d4d5994924c310600f86039223dbcad8b28
+      sha256: 856e2730f80a3d04790ff9b98c8b7d4d5994924c310600f86039223dbcad8b28
+      bin:
+        - arduino-cli
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arduino-cli/blobs/sha256:cfeda7b7926fa21ccca6b27c4937944db876ed6023e36ea504eb84ceb0221c98
+      sha256: cfeda7b7926fa21ccca6b27c4937944db876ed6023e36ea504eb84ceb0221c98
+      bin:
+        - arduino-cli
+      strip: 1
+test: arduino-cli --version

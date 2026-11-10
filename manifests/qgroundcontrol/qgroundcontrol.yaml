@@ -1,0 +1,21 @@
+api: v1
+name: qgroundcontrol
+kind: app
+display: qgroundcontrol
+description: Intuitive and Powerful Ground Control Station for the MAVLink protocol
+homepage: http://qgroundcontrol.com
+license: Apache-2.0|GPL-3.0-only
+version: 5.1.5
+channels:
+    stable: 5.1.5
+provides:
+    - qgroundcontrol
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mavlink/qgroundcontrol/releases/download/v5.1.5/QGroundControl-installer-AMD64.exe#/dl.7z
+      sha256: 5c3435932446461f5bee5b6d2fe9ef977ca9b471eeb894e26e6b9209f09d0374
+      bin:
+        - bin\QGroundControl.exe
+      strip: 1
+test: bin\QGroundControl --version

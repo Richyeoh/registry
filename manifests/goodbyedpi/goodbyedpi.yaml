@@ -1,0 +1,21 @@
+api: v1
+name: goodbyedpi
+kind: app
+display: goodbyedpi
+description: Bypass Deep Packet Inspection systems found in many Internet Service Providers which block access to certain websites.
+homepage: https://github.com/ValdikSS/GoodbyeDPI
+license: Apache-2.0
+version: 0.2.2
+channels:
+    stable: 0.2.2
+provides:
+    - goodbyedpi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ValdikSS/GoodbyeDPI/releases/download/0.2.2/goodbyedpi-0.2.2.zip
+      sha256: 00a2f8b99cd817f8c7fc4c449033015f039d18af213de78cb66bf202277c0628
+      bin:
+        - goodbyedpi.exe
+      strip: 1
+test: goodbyedpi --version

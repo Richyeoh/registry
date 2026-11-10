@@ -1,0 +1,32 @@
+api: v1
+name: alfaview
+kind: app
+display: Alfaview
+description: Audio video conferencing
+homepage: https://alfaview.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 9.30.5
+channels:
+    stable: 9.30.5
+provides:
+    - alfaview
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://assets.alfaview.com/stable/mac/alfaview-mac-production-9.30.5.pkg
+      sha256: f7d0487fe7242e103ee0773da559a4c44cc37384baeb2bcde21eeb2e0c8a5627
+      bin:
+        - alfaview
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://assets.alfaview.com/stable/mac/alfaview-mac-production-9.30.5.pkg
+      sha256: f7d0487fe7242e103ee0773da559a4c44cc37384baeb2bcde21eeb2e0c8a5627
+      bin:
+        - alfaview
+      strip: 1
+test: alfaview --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

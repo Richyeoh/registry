@@ -1,0 +1,21 @@
+api: v1
+name: gui-for-singbox
+kind: app
+display: gui-for-singbox
+description: A GUI program for SingBox developed by vue3 + wails.
+homepage: https://github.com/GUI-for-Cores/GUI.for.SingBox
+license: GPL-3.0-or-later
+version: 1.29.0
+channels:
+    stable: 1.29.0
+provides:
+    - gui-for-singbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.29.0/GUI.for.SingBox-windows-amd64.zip
+      sha256: 8af71af43e25ddfe5e4f60e264efa46e94968d84ff9fbf81e477e746e03d2a95
+      bin:
+        - gui-for-singbox.exe
+      strip: 1
+test: gui-for-singbox --version

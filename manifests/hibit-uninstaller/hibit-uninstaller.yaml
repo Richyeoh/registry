@@ -1,0 +1,21 @@
+api: v1
+name: hibit-uninstaller
+kind: app
+display: hibit-uninstaller
+description: Completely uninstall stubborn software, windows apps & browser extension.
+homepage: https://www.hibitsoft.ir/Uninstaller.html
+license: Freeware
+version: 4.0.10
+channels:
+    stable: 4.0.10
+provides:
+    - hibit-uninstaller
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-Portable-4.0.10.zip
+      sha256: 986b1e07de8037cda70e4d2cf01010e2660042f79f233bbac91846de94741646
+      bin:
+        - hibit-uninstaller.exe
+      strip: 1
+test: hibit-uninstaller --version

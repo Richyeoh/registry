@@ -1,0 +1,26 @@
+api: v1
+name: miniconda3
+kind: app
+display: miniconda3
+description: A cross-platform, Python-agnostic binary package manager
+homepage: https://docs.anaconda.com/miniconda/
+license: BSD-3-Clause
+version: 26.9.4-1
+channels:
+    stable: 26.9.4-1
+provides:
+    - miniconda3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://repo.anaconda.com/miniconda/Miniconda3-py314_26.9.4-1-Windows-x86_64.exe#/setup.exe
+      sha256: c147ac9b3ec8af9c1f5de8e99f9326064f1af3451fda0dab07f273eccbb74f1c
+      bin:
+        - python.exe
+        - pythonw.exe
+        - python.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall miniconda3
+test: python --version

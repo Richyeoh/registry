@@ -1,0 +1,21 @@
+api: v1
+name: fclones
+kind: app
+display: fclones
+description: Efficient duplicate file finder
+homepage: https://github.com/pkolaczk/fclones
+license: MIT
+version: 0.35.0
+channels:
+    stable: 0.35.0
+provides:
+    - fclones
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pkolaczk/fclones/releases/download/v0.35.0/fclones-0.35.0-windows-x86_64.zip
+      sha256: cbbc14167d93d3c550af5e38b617437b9c89b8eb3a5aaf8903a9ea6e5b551424
+      bin:
+        - fclones.exe
+      strip: 1
+test: fclones --version

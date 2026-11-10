@@ -1,0 +1,24 @@
+api: v1
+name: opentoonz
+kind: app
+display: opentoonz
+description: An open-source full-featured 2D animation creation software
+homepage: https://github.com/opentoonz/opentoonz
+license: BSD-3-Clause
+version: 1.8.0
+channels:
+    stable: 1.8.0
+provides:
+    - opentoonz
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/opentoonz/opentoonz/releases/download/v1.8.0/OpenToonzSetup.exe
+      sha256: bd678a03d2725522346bf5a055a7bc44ded6537957efb0026bfd875d3ac061d0
+      bin:
+        - opentoonz.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall opentoonz
+test: opentoonz --version

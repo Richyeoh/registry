@@ -1,0 +1,24 @@
+api: v1
+name: quickinstaller
+kind: app
+display: quickinstaller
+description: QuickInstaller is a free software updater and installer for Windows for both installers and portable applications.
+homepage: https://quickinstaller.net/
+license: Unknown
+version: 0.3.8859.20616
+channels:
+    stable: 0.3.8859.20616
+provides:
+    - quickinstaller
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://app.quickinstaller.net/downloads/QuickInstallerSetup.exe
+      sha256: 260e487feb6870c01bd8440117aebae4a7ca4cbc14cbbe4aca84b91b26c160d4
+      bin:
+        - QuickInstaller.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall quickinstaller
+test: QuickInstaller --version

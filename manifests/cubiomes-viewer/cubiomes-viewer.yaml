@@ -1,0 +1,24 @@
+api: v1
+name: cubiomes-viewer
+kind: app
+display: cubiomes-viewer
+description: An efficient graphical Minecraft seed finder and map viewer.
+homepage: https://github.com/Cubitect/cubiomes-viewer
+license: GPL-3.0-or-later
+version: 4.1.2
+channels:
+    stable: 4.1.2
+provides:
+    - cubiomes-viewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Cubitect/cubiomes-viewer/releases/download/4.1.2/cubiomes-viewer-static-w64.exe#/cubiomes-viewer.exe
+      sha256: a66cc99ceec6c4c14c7dadd5222c247e390ba2a7f9d3b462bbb65b6d2f3b762b
+      bin:
+        - cubiomes-viewer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cubiomes-viewer
+test: cubiomes-viewer --version

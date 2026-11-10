@@ -1,0 +1,22 @@
+api: v1
+name: haxe
+kind: app
+display: haxe
+description: High-level, cross-platform, multi-paradigm programming language and compiler
+homepage: https://haxe.org
+license: Unknown
+version: 4.3.7
+channels:
+    stable: 4.3.7
+provides:
+    - haxe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HaxeFoundation/haxe/releases/download/4.3.7/haxe-4.3.7-win64.zip
+      sha256: 29f7acb0fb9fc66a2b9f6bd9453af3474ccb14ebd9fd0142f351d7311c4010c9
+      bin:
+        - haxe.exe
+        - haxelib.exe
+      strip: 1
+test: haxe --version

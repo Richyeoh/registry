@@ -1,0 +1,21 @@
+api: v1
+name: grex
+kind: app
+display: grex
+description: A regular expression generator
+homepage: https://pemistahl.github.io/grex-js/
+license: Apache-2.0
+version: 1.4.6
+channels:
+    stable: 1.4.6
+provides:
+    - grex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pemistahl/grex/releases/download/v1.4.6/grex-v1.4.6-x86_64-pc-windows-msvc.zip
+      sha256: 7691dbb8e46339a15d8362b79b2456f508266cf00a55fe685ed69a6259577485
+      bin:
+        - grex.exe
+      strip: 1
+test: grex --version

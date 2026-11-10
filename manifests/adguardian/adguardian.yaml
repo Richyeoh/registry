@@ -1,0 +1,24 @@
+api: v1
+name: adguardian
+kind: app
+display: adguardian
+description: AdGuard Home traffic monitoring and statistics in your terminal
+homepage: https://adguardian.as93.net
+license: MIT
+version: 1.8.0
+channels:
+    stable: 1.8.0
+provides:
+    - adguardian
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Lissy93/AdGuardian-Term/releases/download/1.8.0/adguardian-windows.exe#/adguardian.exe
+      sha256: c61be8a13e5f7f5e9fc4d4eb0a05be9e2676bbda438694662ee1941234830b02
+      bin:
+        - adguardian.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall adguardian
+test: adguardian --version

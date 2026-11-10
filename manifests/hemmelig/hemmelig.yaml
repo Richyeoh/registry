@@ -1,0 +1,24 @@
+api: v1
+name: hemmelig
+kind: app
+display: hemmelig
+description: Share sensitive information securely with client-side encryption and self-destructing messages.
+homepage: https://hemmelig.app
+license: Unknown
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - hemmelig
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HemmeligOrg/Hemmelig.app/releases/download/cli-v1.2.0/hemmelig-windows-amd64.exe#/hemmelig.exe
+      sha256: 52a4a8ea44d76d157e534d4e7b2a20ef6801f2a7af5995ad2394f39708f64591
+      bin:
+        - hemmelig.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hemmelig
+test: hemmelig --version

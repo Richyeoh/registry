@@ -1,0 +1,22 @@
+api: v1
+name: yazi
+kind: app
+display: yazi
+description: Blazing fast terminal file manager written in Rust, based on async I/O.
+homepage: https://yazi-rs.github.io
+license: MIT
+version: 26.9.1
+channels:
+    stable: 26.9.1
+provides:
+    - yazi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-x86_64-pc-windows-msvc.zip
+      sha256: 7c033e5f2de6355fd03d865319053fc97db780275974ed17653c057f5d0f8d21
+      bin:
+        - ya.exe
+        - yazi.exe
+      strip: 1
+test: ya --version

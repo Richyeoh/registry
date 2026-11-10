@@ -1,0 +1,21 @@
+api: v1
+name: ddosify
+kind: app
+display: ddosify
+description: Load testing and DDOS attack simulation tool
+homepage: https://ddosify.com
+license: AGPL-3.0-only
+version: 2.4.0
+channels:
+    stable: 2.4.0
+provides:
+    - ddosify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/getanteon/anteon/releases/download/v2.4.0/ddosify_2.4.0_windows_amd64.zip
+      sha256: cfc15344a98b31f8568e66457f48adb5482915a2d0190ccbc98e61ad82eabd2a
+      bin:
+        - ddosify.exe
+      strip: 1
+test: ddosify --version

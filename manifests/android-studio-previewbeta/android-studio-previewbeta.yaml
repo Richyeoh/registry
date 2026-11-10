@@ -1,0 +1,32 @@
+api: v1
+name: android-studio-previewbeta
+kind: app
+display: Android Studio Preview (Beta)
+description: Tools for building Android applications
+homepage: https://developer.android.com/studio/preview/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2026.2.2.7,rabbit2-rc2
+channels:
+    stable: 2026.2.2.7,rabbit2-rc2
+provides:
+    - android-studio-previewbeta
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.7/android-studio-rabbit2-rc2-mac_arm.dmg
+      sha256: a548a639b46b88c9a53ea5ff56497765d0f6e4c620bdab7d0952845ea43df321
+      bin:
+        - android-studio-previewbeta
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.7/android-studio-rabbit2-rc2-mac_arm.dmg
+      sha256: a548a639b46b88c9a53ea5ff56497765d0f6e4c620bdab7d0952845ea43df321
+      bin:
+        - android-studio-previewbeta
+      strip: 1
+test: android-studio-previewbeta --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

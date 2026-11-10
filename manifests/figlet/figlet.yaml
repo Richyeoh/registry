@@ -1,0 +1,21 @@
+api: v1
+name: figlet
+kind: app
+display: figlet
+description: Create large letters using ASCII art out of ordinary text.
+homepage: https://github.com/lukesampson/figlet
+license: BSD-3-Clause
+version: 1.0-go
+channels:
+    stable: 1.0-go
+provides:
+    - figlet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lukesampson/figlet/releases/download/go-1.0-win/figlet-go-1.0-win.zip
+      sha256: 11ee1f4de608d147ab5b61ddb5967730e9b2c1e43f7d2c96582ee260c030e413
+      bin:
+        - figlet.exe
+      strip: 1
+test: figlet --version

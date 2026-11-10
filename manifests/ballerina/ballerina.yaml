@@ -1,0 +1,25 @@
+api: v1
+name: ballerina
+kind: app
+display: ballerina
+description: Programming Language for Network Distributed Applications
+homepage: https://ballerina.io
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2201.14.1
+channels:
+    stable: 2201.14.1
+provides:
+    - ballerina
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ballerina/blobs/sha256:741394621aa9f5583304884184d79e9713a98eadd18c97dd08c40eedb929ce4b
+      sha256: 741394621aa9f5583304884184d79e9713a98eadd18c97dd08c40eedb929ce4b
+      bin:
+        - ballerina
+      strip: 1
+test: ballerina --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

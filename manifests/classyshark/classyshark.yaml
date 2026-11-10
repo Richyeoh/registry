@@ -1,0 +1,21 @@
+api: v1
+name: classyshark
+kind: app
+display: classyshark
+description: Standalone binary inspection tool for android apps (APK).
+homepage: https://github.com/google/android-classyshark/
+license: Apache-2.0
+version: "8.2"
+channels:
+    stable: "8.2"
+provides:
+    - classyshark
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/android-classyshark/releases/download/8.2/ClassyShark.jar
+      sha256: b3bd94ce2177f2423183070c3dd096cb9b695a70e8e04d8d7d3cca530d9b855d
+      bin:
+        - ClassyShark.jar.exe
+      strip: 1
+test: ClassyShark.jar --version

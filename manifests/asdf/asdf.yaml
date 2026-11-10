@@ -1,0 +1,39 @@
+api: v1
+name: asdf
+kind: app
+display: asdf
+description: Extendable version manager with support for Ruby, Node.js, Erlang & more
+homepage: https://asdf-vm.com/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.20.2
+channels:
+    stable: 0.20.2
+provides:
+    - asdf
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asdf/blobs/sha256:11395793631019858ca30d90a18dc1a91d2d73312d01365488d03f8c3a641fbd
+      sha256: 11395793631019858ca30d90a18dc1a91d2d73312d01365488d03f8c3a641fbd
+      bin:
+        - asdf
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asdf/blobs/sha256:73c846eac2f880bd73f8675780a30ffd43ef151febc5a50333a3cd66760bfd9f
+      sha256: 73c846eac2f880bd73f8675780a30ffd43ef151febc5a50333a3cd66760bfd9f
+      bin:
+        - asdf
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asdf/blobs/sha256:eb4859574064a3e8ba599b447ee8d96853b02c62f4692ffbf1a7398f6db5642d
+      sha256: eb4859574064a3e8ba599b447ee8d96853b02c62f4692ffbf1a7398f6db5642d
+      bin:
+        - asdf
+      strip: 1
+test: asdf --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

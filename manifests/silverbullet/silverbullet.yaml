@@ -1,0 +1,21 @@
+api: v1
+name: silverbullet
+kind: app
+display: silverbullet
+description: A Programmable, Private, Browser-based, Open Source, Self Hosted, Personal Knowledge Management Platform
+homepage: https://silverbullet.md
+license: MIT
+version: 2.12.1
+channels:
+    stable: 2.12.1
+provides:
+    - silverbullet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/silverbulletmd/silverbullet/releases/download/2.12.1/silverbullet-server-windows-x86_64.zip
+      sha256: 1633ca553161aaa0e1780891f5febf508abf8615277ddc1a07f0bbf31e922ce6
+      bin:
+        - silverbullet.exe
+      strip: 1
+test: silverbullet --version

@@ -1,0 +1,21 @@
+api: v1
+name: droidcam
+kind: app
+display: droidcam
+description: A simple tool that allows users to use their phone as a webcam.
+homepage: https://www.dev47apps.com/
+license: Unknown
+version: 6.5.3
+channels:
+    stable: 6.5.3
+provides:
+    - droidcam
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dev47apps/windows-releases/releases/download/win-6.5.3/DroidCam.Setup.6.5.3.exe#/dl.7z
+      sha256: 9b5eb0b62cc60e63fe61a1f724d15d9e6bdc8493ec0dbe7610ecd5f9bb57783c
+      bin:
+        - DroidCamApp.exe
+      strip: 1
+test: DroidCamApp --version

@@ -1,0 +1,32 @@
+api: v1
+name: affinity-photo
+kind: app
+display: Affinity Photo 2
+description: Professional image editing software
+homepage: https://affinity.serif.com/en-us/photo/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.6.5,3782
+channels:
+    stable: 2.6.5,3782
+provides:
+    - affinity-photo
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Photo%202%20Affinity%20Store%203782.zip
+      sha256: 8ea03dfac76cebe9eeceef996ac585813b47624217c3f23e6921cbd9580a0788
+      bin:
+        - affinity-photo
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Photo%202%20Affinity%20Store%203782.zip
+      sha256: 8ea03dfac76cebe9eeceef996ac585813b47624217c3f23e6921cbd9580a0788
+      bin:
+        - affinity-photo
+      strip: 1
+test: affinity-photo --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

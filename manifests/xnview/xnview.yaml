@@ -1,0 +1,21 @@
+api: v1
+name: xnview
+kind: app
+display: xnview
+description: Photo viewer, image resizer & batch converter
+homepage: https://www.xnview.com/en/xnview-classic/
+license: Freeware|Proprietary
+version: 2.52.7
+channels:
+    stable: 2.52.7
+provides:
+    - xnview
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.xnview.com/versions/XnView_Classic/XnView_Classic-2.52.7-win-full.zip
+      sha256: 83c2da6831b0930e4d25b1aa29d59fb9c3d1f2cfd12ac144c6e2af4317c09b6e
+      bin:
+        - xnview.exe
+      strip: 1
+test: xnview --version

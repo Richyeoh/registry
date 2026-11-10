@@ -1,0 +1,21 @@
+api: v1
+name: nomeiryoui
+kind: app
+display: nomeiryoui
+description: No!! MeiryoUI is Windows system font setting tool on Windows 8.1/10/11.
+homepage: https://github.com/Tatsu-syo/noMeiryoUI
+license: MIT
+version: 3.5.1
+channels:
+    stable: 3.5.1
+provides:
+    - nomeiryoui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip
+      sha256: f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2
+      bin:
+        - noMeiryoUI.exe
+      strip: 1
+test: noMeiryoUI --version

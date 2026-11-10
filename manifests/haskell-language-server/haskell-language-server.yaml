@@ -1,0 +1,21 @@
+api: v1
+name: haskell-language-server
+kind: app
+display: haskell-language-server
+description: The official language server for Haskell.
+homepage: https://github.com/haskell/haskell-language-server
+license: Apache-2.0
+version: 2.15.0.0
+channels:
+    stable: 2.15.0.0
+provides:
+    - haskell-language-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/haskell/haskell-language-server/releases/download/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-mingw64.zip
+      sha256: dbd244dd6860e821c1696b6687d9fd89410d5dbc5e3a350bc76bfcc32c1f3c90
+      bin:
+        - haskell-language-server.exe
+      strip: 1
+test: haskell-language-server --version

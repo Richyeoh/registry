@@ -1,0 +1,29 @@
+api: v1
+name: transmission
+kind: app
+display: transmission
+description: A fast, easy, and free BitTorrent client.
+homepage: https://transmissionbt.com/
+license: GPL-2.0-only|GPL-3.0-only
+version: 4.1.4
+channels:
+    stable: 4.1.4
+provides:
+    - transmission
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4-x64.msi
+      sha256: cf51e5772f39a3ead3c8f763b689399b9b4b8b016a4c0ca68ab5d6c634be2e1c
+      bin:
+        - transmission-qt.exe
+        - transmission-create.exe
+        - transmission-daemon.exe
+        - transmission-edit.exe
+        - transmission-remote.exe
+        - transmission-show.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall transmission
+test: transmission-qt --version

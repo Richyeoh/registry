@@ -1,0 +1,24 @@
+api: v1
+name: jetbrains-license-server
+kind: app
+display: jetbrains-license-server
+description: JetBrains Floating License Server for centralized license management and usage reporting.
+homepage: https://www.jetbrains.com/license-server/
+license: Unknown
+version: "55128"
+channels:
+    stable: "55128"
+provides:
+    - jetbrains-license-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/lcsrv/license-server-installer.msi
+      sha256: fce76d8fe01bc59a5034e22578bed7cbd1382367a1b53a44bcee9268c838c921
+      bin:
+        - bin\license-server.bat.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jetbrains-license-server
+test: bin\license-server.bat --version

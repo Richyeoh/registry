@@ -1,0 +1,21 @@
+api: v1
+name: manifold
+kind: app
+display: manifold
+description: Parallel GIS, ETL, data science and DBMS tool
+homepage: https://manifold.net/
+license: Proprietary
+version: 9.0.182.6
+channels:
+    stable: 9.0.182.6
+provides:
+    - manifold
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://manifold.net/updates/manifold-9.0.182.6.zip
+      sha256: 4567e16128782734e4025a02266fc786725eb9710cd76e0bfa440de11b090aee
+      bin:
+        - manifold.exe
+      strip: 1
+test: manifold --version

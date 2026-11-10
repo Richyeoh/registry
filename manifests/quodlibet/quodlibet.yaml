@@ -1,0 +1,23 @@
+api: v1
+name: quodlibet
+kind: app
+display: quodlibet
+description: Music player and music library manager.
+homepage: https://quodlibet.readthedocs.io
+license: GPL-2.0-only
+version: 4.7.1
+channels:
+    stable: 4.7.1
+provides:
+    - quodlibet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/quodlibet/quodlibet/releases/download/release-4.7.1/quodlibet-4.7.1-portable.exe#/dl.7z
+      sha256: a12e2026af4e109ef324ff352ded21e1900db65573917087b1d8737aaaadb77f
+      bin:
+        - data\bin\quodlibet-cmd.exe
+        - data\bin\exfalso-cmd.exe
+        - data\bin\operon.exe
+      strip: 1
+test: data\bin\quodlibet-cmd --version

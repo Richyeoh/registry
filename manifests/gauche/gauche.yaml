@@ -1,0 +1,29 @@
+api: v1
+name: gauche
+kind: app
+display: gauche
+description: Scheme Scripting Engine
+homepage: https://practical-scheme.net/gauche/
+license: BSD-3-Clause
+version: 0.9.15
+channels:
+    stable: 0.9.15
+provides:
+    - gauche
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shirok/Gauche/releases/download/release0_9_15/Gauche-mingw-0.9.15-64bit.msi
+      sha256: 3e0f6c2139fc4c9daec99402bcdf3ebc33114d6167538b28994246227b174f54
+      bin:
+        - bin\gauche-cesconv.exe
+        - bin\gauche-config.exe
+        - bin\gauche-install.exe
+        - bin\gauche-package.exe
+        - bin\gosh.exe
+        - bin\gosh-noconsole.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gauche
+test: bin\gauche-cesconv --version

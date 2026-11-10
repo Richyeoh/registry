@@ -1,0 +1,24 @@
+api: v1
+name: nosleep
+kind: app
+display: nosleep
+description: Lightweight Windows utility to prevent screen locking
+homepage: https://github.com/CHerSun/NoSleep
+license: Unlicense
+version: 1.7.0
+channels:
+    stable: 1.7.0
+provides:
+    - nosleep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CHerSun/NoSleep/releases/download/1.7.0/NoSleep.exe
+      sha256: 57a1ee4c7cab44cd87a22ea9148303c3046d6b8acb947c8e386fee78bf7ec404
+      bin:
+        - nosleep.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nosleep
+test: nosleep --version

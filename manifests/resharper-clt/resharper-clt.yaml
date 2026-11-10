@@ -1,0 +1,22 @@
+api: v1
+name: resharper-clt
+kind: app
+display: resharper-clt
+description: A standalone command line tools to run ReSharper inspections outside of Visual Studio.
+homepage: https://www.jetbrains.com/resharper/download/index.html#section=resharper-clt
+license: Unknown
+version: "2026.3"
+channels:
+    stable: "2026.3"
+provides:
+    - resharper-clt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/resharper/dotUltimate.2026.3/JetBrains.ReSharper.CommandLineTools.2026.3.zip
+      sha256: dfd3aea578190dfd3b6153ed9d81448ff7da40aa30e2cb23ce0204788defdcb7
+      bin:
+        - cleanupcode.exe
+        - inspectcode.exe
+      strip: 1
+test: cleanupcode --version

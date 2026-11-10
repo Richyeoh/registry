@@ -1,0 +1,21 @@
+api: v1
+name: jmkvpropedit
+kind: app
+display: jmkvpropedit
+description: A batch GUI for mkvpropedit (part of MKVToolNix) written in Java
+homepage: https://github.com/BrunoReX/jmkvpropedit
+license: BSD-2-Clause
+version: 1.5.2
+channels:
+    stable: 1.5.2
+provides:
+    - jmkvpropedit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BrunoReX/jmkvpropedit/releases/download/v1.5.2/jmkvpropedit-v1.5.2.zip
+      sha256: 1a3998ee7ad343852b0f8e669278b03a88d546a7335dec166cead96c33fc27b9
+      bin:
+        - jmkvpropedit.exe
+      strip: 1
+test: jmkvpropedit --version

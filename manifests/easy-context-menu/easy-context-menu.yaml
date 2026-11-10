@@ -1,0 +1,21 @@
+api: v1
+name: easy-context-menu
+kind: app
+display: easy-context-menu
+description: A simple app for editing the context menu.
+homepage: https://www.sordum.org/easy-context-menu
+license: Unknown
+version: "1.6"
+channels:
+    stable: "1.6"
+provides:
+    - easy-context-menu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/easy-context-menu/ec_menu.zip
+      sha256: 1a436364b374a4521df590d8e7a1a4bf0cb3aa9acc92aa127f4a4487cae8e479
+      bin:
+        - easy-context-menu.exe
+      strip: 1
+test: easy-context-menu --version

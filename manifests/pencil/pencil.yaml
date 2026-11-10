@@ -1,0 +1,21 @@
+api: v1
+name: pencil
+kind: app
+display: pencil
+description: GUI prototyping tool
+homepage: https://pencil.evolus.vn
+license: GPL-2.0-only
+version: 4.0.0
+channels:
+    stable: 4.0.0
+provides:
+    - pencil
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://pencil.evolus.vn/dl/V4.0.0.ga/Pencil-4.0.0.ga.exe#/dl.7z
+      sha256: 19dd56fbcdeecf66def18ec6766f4796127aedf2342798c48cde2e74bef498f0
+      bin:
+        - Pencil.exe
+      strip: 1
+test: Pencil --version

@@ -1,0 +1,21 @@
+api: v1
+name: cairo-desktop
+kind: app
+display: cairo-desktop
+description: Alternative desktop environment for Windows
+homepage: https://cairoshell.com
+license: Apache-2.0
+version: 0.4.434
+channels:
+    stable: 0.4.434
+provides:
+    - cairo-desktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cairoshell/cairoshell/releases/download/v0.4.434/CairoSetup_64bit.exe#/dl.7z
+      sha256: dc22970c3b80af4298aab1a664f0785fcef906adb0eb897a14d814916d0625c5
+      bin:
+        - CairoDesktop.exe
+      strip: 1
+test: CairoDesktop --version

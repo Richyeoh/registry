@@ -1,0 +1,21 @@
+api: v1
+name: superfile
+kind: app
+display: superfile
+description: Pretty fancy and modern terminal file manager
+homepage: https://superfile.netlify.app/
+license: MIT
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - superfile
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yorukot/superfile/releases/download/v1.6.0/superfile-windows-v1.6.0-amd64.zip
+      sha256: 4264a84d38c5d13804960a5da9ea8dedb8a00439e2612d6b8a28699836ed0143
+      bin:
+        - spf.exe
+      strip: 1
+test: spf --version

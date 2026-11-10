@@ -1,0 +1,21 @@
+api: v1
+name: macintosh-js
+kind: app
+display: macintosh.js
+description: Macintosh Quadra (1991) emulator
+homepage: https://github.com/felixrieseberg/macintosh.js
+license: Freeware
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - macintosh-js
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/felixrieseberg/macintosh.js/releases/download/v1.2.0/macintosh.js-win32-x64-1.2.0.zip
+      sha256: bb137dfe1ca943491a59034f2b627f685858556ae6d747f8d9ac68c1590edb03
+      bin:
+        - macintosh-js.exe
+      strip: 1
+test: macintosh-js --version

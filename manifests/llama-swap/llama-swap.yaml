@@ -1,0 +1,21 @@
+api: v1
+name: llama-swap
+kind: app
+display: llama-swap
+description: Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc.
+homepage: https://github.com/mostlygeek/llama-swap
+license: MIT
+version: "272"
+channels:
+    stable: "272"
+provides:
+    - llama-swap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mostlygeek/llama-swap/releases/download/v272/llama-swap_272_windows_amd64.zip
+      sha256: a1784767d662503bdc85649f939747109229306bd818e77a417c52da28c0084c
+      bin:
+        - llama-swap.exe
+      strip: 1
+test: llama-swap --version

@@ -1,0 +1,24 @@
+api: v1
+name: optimizer
+kind: app
+display: optimizer
+description: An advanced configuration utility that helps you restore your privacy and increase your security.
+homepage: https://github.com/hellzerg/optimizer
+license: GPL-3.0
+version: "16.7"
+channels:
+    stable: "16.7"
+provides:
+    - optimizer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hellzerg/optimizer/releases/download/16.7/Optimizer-16.7.exe#/Optimizer.exe
+      sha256: 03a234060541b686ac4265754aff43df9325c21383f90e17f831e67965d717f8
+      bin:
+        - Optimizer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall optimizer
+test: Optimizer --version

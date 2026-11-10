@@ -1,0 +1,21 @@
+api: v1
+name: sing-box
+kind: app
+display: sing-box
+description: The universal proxy platform.
+homepage: https://sing-box.sagernet.org/
+license: GPL-3.0-or-later
+version: 1.14.4
+channels:
+    stable: 1.14.4
+provides:
+    - sing-box
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-windows-amd64.zip
+      sha256: 99185d75d314a07dbba4a130c8ad986cbeb629a07927975636b341ca61f991df
+      bin:
+        - sing-box.exe
+      strip: 1
+test: sing-box --version

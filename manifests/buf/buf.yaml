@@ -1,0 +1,24 @@
+api: v1
+name: buf
+kind: app
+display: buf
+description: A tool for working with Protocol Buffers APIs, offering a range of features not found in the standard protoc compiler.
+homepage: https://buf.build/
+license: Apache-2.0
+version: 1.75.0
+channels:
+    stable: 1.75.0
+provides:
+    - buf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bufbuild/buf/releases/download/v1.75.0/buf-Windows-x86_64.exe#/buf.exe
+      sha256: de35b288e7962ac72aefee5048aff80551a4f0e6ac865a21f838693461ac8b8d
+      bin:
+        - buf.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall buf
+test: buf --version

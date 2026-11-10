@@ -1,0 +1,21 @@
+api: v1
+name: integerscaler
+kind: app
+display: integerscaler
+description: A utility for pixel-perfect integer-ratio scaling (a.k.a. integer scaling) of games with no blur
+homepage: https://tanalin.com/en/projects/integer-scaler/
+license: Freeware
+version: "2.20"
+channels:
+    stable: "2.20"
+provides:
+    - integerscaler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.tanalin.com/projects/integer-scaler/IntegerScaler-2.20.7z
+      sha256: 48871a65797bad3e9ca2862b0b61b34e89ad82a5087fa9ddd77a79cbf073dad3
+      bin:
+        - IntegerScaler_64bit.exe
+      strip: 1
+test: IntegerScaler_64bit --version

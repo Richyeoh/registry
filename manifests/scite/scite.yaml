@@ -1,0 +1,21 @@
+api: v1
+name: scite
+kind: app
+display: scite
+description: SCIntilla based Text Editor
+homepage: https://www.scintilla.org/SciTE.html
+license: HPND
+version: 5.6.9
+channels:
+    stable: 5.6.9
+provides:
+    - scite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.scintilla.org/wscite569.zip
+      sha256: 68dabc521837f548298d584831c81b0fa5cddc7c21c2ef253f5b3cc56289a747
+      bin:
+        - SciTE.exe
+      strip: 1
+test: SciTE --version

@@ -1,0 +1,24 @@
+api: v1
+name: fio
+kind: app
+display: fio
+description: Flexible I/O Tester
+homepage: https://github.com/axboe/fio
+license: GPL-2.0-only
+version: "3.43"
+channels:
+    stable: "3.43"
+provides:
+    - fio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/axboe/fio/releases/download/fio-3.43/fio-3.43-x64.msi
+      sha256: 8299e6e6fbc024d3b74aa1ce62fb94ef6960b45629fbfa678b720834b6eb34aa
+      bin:
+        - fio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fio
+test: fio --version

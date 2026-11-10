@@ -1,0 +1,21 @@
+api: v1
+name: kirocrew
+kind: app
+display: kirocrew
+description: Autonomous agent management layer for Kiro - persistent memory, scheduled jobs, background subagents, and multi-session orchestration.
+homepage: https://kiro.dev/crew/
+license: Apache-2.0
+version: 0.12.1
+channels:
+    stable: 0.12.1
+provides:
+    - kirocrew
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kirodotdev/KiroCrew/releases/download/v0.12.1/KiroCrew-0.12.1-Setup-x64.exe#/dl.7z
+      sha256: 5bbd8a5904b39d6204d641b8b683fa6ced6ef98ea46d7372948e1e4113cbea37
+      bin:
+        - resources\backend-dist\kirocrew-backend\bin\kirocrew.cmd.exe
+      strip: 1
+test: resources\backend-dist\kirocrew-backend\bin\kirocrew.cmd --version

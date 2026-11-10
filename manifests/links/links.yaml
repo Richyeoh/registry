@@ -1,0 +1,21 @@
+api: v1
+name: links
+kind: app
+display: links
+description: A graphics and text mode web browser.
+homepage: https://links.twibright.com/
+license: GPL-2.0-only
+version: "2.30"
+channels:
+    stable: "2.30"
+provides:
+    - links
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://links.twibright.com/download/binaries/win32/Links-2.30-64bit-install.exe#/dl.7z
+      sha256: 7b67f64462c9d914409839d43079186733e33a31d7f81adf32578ee2fb537c09
+      bin:
+        - links.exe
+      strip: 1
+test: links --version

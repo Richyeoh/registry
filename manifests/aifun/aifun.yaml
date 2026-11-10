@@ -1,0 +1,32 @@
+api: v1
+name: aifun
+kind: app
+display: AiFun
+description: AI chat and painting app
+homepage: https://getaifun.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.8.10
+channels:
+    stable: 0.8.10
+provides:
+    - aifun
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://static.aifun.kapokcloud.com/v0.8.10/AiFun_0.8.10_macos.dmg
+      sha256: a650c4ce9cbcc6e24243560fa38ade436ca2cc8880b16903f2b8e7a77d74527f
+      bin:
+        - aifun
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://static.aifun.kapokcloud.com/v0.8.10/AiFun_0.8.10_macos.dmg
+      sha256: a650c4ce9cbcc6e24243560fa38ade436ca2cc8880b16903f2b8e7a77d74527f
+      bin:
+        - aifun
+      strip: 1
+test: aifun --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

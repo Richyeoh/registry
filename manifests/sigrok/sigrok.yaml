@@ -1,0 +1,22 @@
+api: v1
+name: sigrok
+kind: app
+display: sigrok
+description: A command line utility for the sigrok software.
+homepage: https://sigrok.org/
+license: GPL-3.0-or-later
+version: 0.7.2
+channels:
+    stable: 0.7.2
+provides:
+    - sigrok
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://sigrok.org/download/binary/sigrok-cli/sigrok-cli-0.7.2-x86_64-installer.exe#/dl.7z
+      sha256: 27ddf838c992381f3d9c52ad9d5a7ec7db382d9aea1905d44538a7c7bd368446
+      bin:
+        - sigrok-cli.exe
+        - sigrok-cli.exe
+      strip: 1
+test: sigrok-cli --version

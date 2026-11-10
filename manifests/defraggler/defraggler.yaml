@@ -1,0 +1,22 @@
+api: v1
+name: defraggler
+kind: app
+display: defraggler
+description: Speed up your PC with quick & easy defragmentation.
+homepage: https://www.ccleaner.com/defraggler
+license: Freeware
+version: 2.22.995
+channels:
+    stable: 2.22.995
+provides:
+    - defraggler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.ccleaner.com/dfsetup222.exe#/dl.7z
+      sha256: 167b7192937b39e657def16ffb0fdbbab326f007747505d5c8785811d6b03ab8
+      bin:
+        - Defraggler64.exe
+        - df64.exe
+      strip: 1
+test: Defraggler64 --version

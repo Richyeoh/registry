@@ -1,0 +1,24 @@
+api: v1
+name: empty-recycle-bin
+kind: app
+display: empty-recycle-bin
+description: Empty the Windows recycle bin
+homepage: https://github.com/sindresorhus/empty-recycle-bin
+license: MIT
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - empty-recycle-bin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sindresorhus/empty-recycle-bin/releases/download/1.0.0/empty-recycle-bin.exe
+      sha256: b5c939a5747afa4d43f2342705726602e34d9cf46fe6664c2a7d0dea39e64560
+      bin:
+        - empty-recycle-bin.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall empty-recycle-bin
+test: empty-recycle-bin --version

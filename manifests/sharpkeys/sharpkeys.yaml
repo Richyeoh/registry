@@ -1,0 +1,24 @@
+api: v1
+name: sharpkeys
+kind: app
+display: sharpkeys
+description: A utility that manages a Registry key that allows Windows to remap one key to any other key.
+homepage: https://github.com/randyrants/sharpkeys
+license: MS-PL
+version: 3.9.4
+channels:
+    stable: 3.9.4
+provides:
+    - sharpkeys
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/randyrants/sharpkeys/releases/download/v3.9.4/sharpkeys394.msi
+      sha256: 059ad91921008299f76729f2d6eb0092ebaa11ae31b1871ca638c787544f8a07
+      bin:
+        - SharpKeys.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sharpkeys
+test: SharpKeys --version

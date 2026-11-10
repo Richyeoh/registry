@@ -1,0 +1,21 @@
+api: v1
+name: roswell
+kind: app
+display: roswell
+description: Lisp implementation installer/manager and launcher
+homepage: https://github.com/roswell/roswell
+license: MIT
+version: 26.10.119
+channels:
+    stable: 26.10.119
+provides:
+    - roswell
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/roswell/roswell/releases/download/v26.10.119/roswell_26.10.119_amd64.zip
+      sha256: 2d8c18e8086fe17eade5dc2192f41e92ab97f34f144b696a0f1e34d71e61cbbe
+      bin:
+        - ros.exe
+      strip: 1
+test: ros --version

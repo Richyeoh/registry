@@ -1,0 +1,21 @@
+api: v1
+name: hatch
+kind: app
+display: hatch
+description: A modern, extensible Python project manager.
+homepage: https://hatch.pypa.io
+license: MIT
+version: 1.18.2
+channels:
+    stable: 1.18.2
+provides:
+    - hatch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pypa/hatch/releases/download/hatch-v1.18.2/hatch-x86_64-pc-windows-msvc.zip
+      sha256: dd675c427238236769d3cf5849558dc92ffdb3a20544f4f5b6fa3ab43b1350a6
+      bin:
+        - hatch.exe
+      strip: 1
+test: hatch --version

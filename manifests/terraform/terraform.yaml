@@ -1,0 +1,21 @@
+api: v1
+name: terraform
+kind: app
+display: terraform
+description: Create and manage infrastructure as code using simple declarative configuration files.
+homepage: https://www.terraform.io
+license: BUSL-1.1
+version: 1.17.1
+channels:
+    stable: 1.17.1
+provides:
+    - terraform
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.hashicorp.com/terraform/1.17.1/terraform_1.17.1_windows_amd64.zip
+      sha256: a3b71365cff94c0f978cf75d86addb075ea1bb6409055ea0ab359bf057d7898a
+      bin:
+        - terraform.exe
+      strip: 1
+test: terraform --version

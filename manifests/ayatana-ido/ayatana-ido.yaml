@@ -1,0 +1,46 @@
+api: v1
+name: ayatana-ido
+kind: app
+display: ayatana-ido
+description: Ayatana Indicator Display Objects
+homepage: https://github.com/AyatanaIndicators/ayatana-ido
+license: GPL-3.0-or-later OR LGPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 0.10.4
+channels:
+    stable: 0.10.4
+provides:
+    - ayatana-ido
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:bcfe9b250aded01df24c30e98a9af7f59dd4977de6943dbdbfbd05790d8039ea
+      sha256: bcfe9b250aded01df24c30e98a9af7f59dd4977de6943dbdbfbd05790d8039ea
+      bin:
+        - ayatana-ido
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:5d0af5ab2a2e00224ea5a389c67f0205e4cd2a088d5f196b40ad25d81a53e727
+      sha256: 5d0af5ab2a2e00224ea5a389c67f0205e4cd2a088d5f196b40ad25d81a53e727
+      bin:
+        - ayatana-ido
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:8f0d6f6881280961dad410b8a81dbc5ef48b7ef76c3e34fbe8c7c3cf63531e40
+      sha256: 8f0d6f6881280961dad410b8a81dbc5ef48b7ef76c3e34fbe8c7c3cf63531e40
+      bin:
+        - ayatana-ido
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ayatana-ido/blobs/sha256:f0b910095890cd349897387533b4f43b45c185a3d7f904c29711d35869a67e6a
+      sha256: f0b910095890cd349897387533b4f43b45c185a3d7f904c29711d35869a67e6a
+      bin:
+        - ayatana-ido
+      strip: 1
+test: ayatana-ido --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

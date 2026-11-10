@@ -1,0 +1,24 @@
+api: v1
+name: ipfilter-updater
+kind: app
+display: ipfilter-updater
+description: Protects privacy and security when using Bit Torrent by blocking a list of potentially malicious peers.
+homepage: https://www.ipfilter.app/
+license: MIT
+version: 3.0.5-beta
+channels:
+    stable: 3.0.5-beta
+provides:
+    - ipfilter-updater
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DavidMoore/ipfilter/releases/download/3.0.5-beta/IPFilter.msi
+      sha256: 78326c970df93226c5b57f25873e38e05be848cddfeaab9ec88ddaedb68e9144
+      bin:
+        - ipfilter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ipfilter-updater
+test: ipfilter --version

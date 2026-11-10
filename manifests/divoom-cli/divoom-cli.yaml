@@ -1,0 +1,21 @@
+api: v1
+name: divoom-cli
+kind: app
+display: divoom-cli
+description: Command line tool built on top of divoom APIs for controlling divoom devices, like pixoo.
+homepage: https://github.com/r12f/divoom
+license: Apache-2.0
+version: 0.1.42
+channels:
+    stable: 0.1.42
+provides:
+    - divoom-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/r12f/divoom/releases/download/0.1.42/divoom-cli.0.1.42.windows.x64.zip
+      sha256: 4823f97041444d8791c12a8d33257020e601b53e1f2a1faf03c402c88c089b6c
+      bin:
+        - divoom-cli.exe
+      strip: 1
+test: divoom-cli --version

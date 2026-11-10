@@ -1,0 +1,46 @@
+api: v1
+name: aliddns
+kind: app
+display: aliddns
+description: Aliyun(Alibaba Cloud) ddns for golang
+homepage: https://github.com/OpenIoTHub/aliddns
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.0.23
+channels:
+    stable: 0.0.23
+provides:
+    - aliddns
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:f083114a10855bf586164f35d83235d74b5cd3b848adf3a7d609c26aedc4a496
+      sha256: f083114a10855bf586164f35d83235d74b5cd3b848adf3a7d609c26aedc4a496
+      bin:
+        - aliddns
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:06b60c6460fba278ca18d975d72e209b6e7089b35012f21dfceba3334db24b92
+      sha256: 06b60c6460fba278ca18d975d72e209b6e7089b35012f21dfceba3334db24b92
+      bin:
+        - aliddns
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:bf0adee43a8efe19657d0aec5deb3aae6bf0d54030f3fe30dd1155935dcc192e
+      sha256: bf0adee43a8efe19657d0aec5deb3aae6bf0d54030f3fe30dd1155935dcc192e
+      bin:
+        - aliddns
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aliddns/blobs/sha256:04d29e980abbe4840c4a77b971d61dfa6ddc0239d72ab00de599c98d75ad5193
+      sha256: 04d29e980abbe4840c4a77b971d61dfa6ddc0239d72ab00de599c98d75ad5193
+      bin:
+        - aliddns
+      strip: 1
+test: aliddns --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

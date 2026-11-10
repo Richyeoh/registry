@@ -1,0 +1,21 @@
+api: v1
+name: telegram-downloader
+kind: app
+display: telegram-downloader
+description: A cli utility for downloading files from Telegram, backing up your Telegram data, uploading files to Telegram, and recovering your Telegram data.
+homepage: https://github.com/iyear/tdl
+license: AGPL-3.0
+version: 0.20.4
+channels:
+    stable: 0.20.4
+provides:
+    - telegram-downloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/iyear/tdl/releases/download/v0.20.4/tdl_Windows_64bit.zip
+      sha256: 3f219779c07a4be628c34491b9910c18a3b0a0ca0b0aa4f283bb83ab33b007c8
+      bin:
+        - tdl.exe
+      strip: 1
+test: tdl --version

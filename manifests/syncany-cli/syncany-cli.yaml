@@ -1,0 +1,25 @@
+api: v1
+name: syncany-cli
+kind: app
+display: syncany-cli
+description: An open-source cloud storage and filesharing application. Securely synchronize your files to any kind of storage!
+homepage: https://www.syncany.org
+license: GPL-3.0-or-later
+version: 0.4.9
+channels:
+    stable: 0.4.9
+provides:
+    - syncany-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/syncany/syncany/releases/download/v0.4.9-alpha/syncany-cli-0.4.9-alpha.exe
+      sha256: 6ee34b4767689abc983c0e5632dc4502cc3689e4e2d7f89f03a0a6afe67a44d8
+      bin:
+        - bin\sy.bat.exe
+        - bin\syncany.bat.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall syncany-cli
+test: bin\sy.bat --version

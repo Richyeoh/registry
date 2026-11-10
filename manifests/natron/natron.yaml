@@ -1,0 +1,22 @@
+api: v1
+name: natron
+kind: app
+display: natron
+description: Compositing software for VFX and motion graphics
+homepage: https://natrongithub.github.io/
+license: GPL-2.0-only
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - natron
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/NatronGitHub/Natron/releases/download/v2.5.0/Natron-2.5.0-Windows-x86_64.zip
+      sha256: caed0b649ff2515b963f0b4fc009eb451a41d8ba3d6e5d4260253dd9e104c517
+      bin:
+        - bin\Natron.exe
+        - bin\NatronRenderer.exe
+      strip: 1
+test: bin\Natron --version

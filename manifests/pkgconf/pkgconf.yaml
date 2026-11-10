@@ -1,0 +1,28 @@
+api: v1
+name: pkgconf
+kind: app
+display: pkgconf
+description: Package compiler and linker metadata toolkit.
+homepage: https://github.com/pkgconf/pkgconf
+license: ISC
+version: 3.0.10
+channels:
+    stable: 3.0.10
+provides:
+    - pkgconf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-x64-3.0.10.msi
+      sha256: 28cc9e44473a3ef277260f3dac20f58e2a667760393bd47dc309b6426e9bd727
+      bin:
+        - bomtool.exe
+        - pccritic.exe
+        - pkgconf.exe
+        - pkg-config.exe
+        - spdxtool.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pkgconf
+test: bomtool --version

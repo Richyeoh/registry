@@ -1,0 +1,24 @@
+api: v1
+name: pnpm
+kind: app
+display: pnpm
+description: A fast and disk space efficient Node package manager.
+homepage: https://pnpm.io/
+license: MIT
+version: 12.19.0
+channels:
+    stable: 12.19.0
+provides:
+    - pnpm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pnpm/pnpm/releases/download/v12.19.0/pnpm-win32-x64.zip
+      sha256: 1fa21198d4b9dfebabac985b6ab863bd4138d83ad07457d4eb0910cc2b3286c5
+      bin:
+        - pnpm.exe
+        - pnpm.exe
+        - pnpm.exe
+        - pnpm.exe
+      strip: 1
+test: pnpm --version

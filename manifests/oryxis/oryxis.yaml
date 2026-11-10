@@ -1,0 +1,21 @@
+api: v1
+name: oryxis
+kind: app
+display: oryxis
+description: Modern SSH client built in Rust (encrypted vault, P2P sync, AI, Kubernetes)
+homepage: https://github.com/wilsonglasser/oryxis
+license: AGPL-3.0-or-later
+version: 0.23.0
+channels:
+    stable: 0.23.0
+provides:
+    - oryxis
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wilsonglasser/oryxis/releases/download/v0.23.0/oryxis-windows-x86_64.zip
+      sha256: c12851344e78c086a25df1e01e8556378819f7f0ba69eec9e1b276c1d31312f7
+      bin:
+        - oryxis.exe
+      strip: 1
+test: oryxis --version

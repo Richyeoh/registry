@@ -1,0 +1,24 @@
+api: v1
+name: carvel-vendir
+kind: app
+display: carvel-vendir
+description: Carvel vendir is a tool that makes it easy to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively
+homepage: https://carvel.dev/vendir/
+license: Apache-2.0
+version: 0.46.3
+channels:
+    stable: 0.46.3
+provides:
+    - carvel-vendir
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/carvel-dev/vendir/releases/download/v0.46.3/vendir-windows-amd64.exe#/vendir.exe
+      sha256: 68aa4fb1ff9ce66510dc9a77477d3ba0e304eb0770b478cd59eb8d1a0d8cfa5a
+      bin:
+        - vendir.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall carvel-vendir
+test: vendir --version

@@ -1,0 +1,24 @@
+api: v1
+name: protoc-gen-grpc-web
+kind: app
+display: protoc-gen-grpc-web
+description: gRPC javascript code generator plugin for Web Clients
+homepage: https://grpc.io
+license: Apache-2.0
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - protoc-gen-grpc-web
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/grpc/grpc-web/releases/download/2.1.1/protoc-gen-grpc-web-2.1.1-windows-x86_64.exe#/protoc-gen-grpc-web.exe
+      sha256: 206fde8d99a75a1586fe13164ce0e7497afd358c0cf47c75dbebf3423dd35873
+      bin:
+        - protoc-gen-grpc-web.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall protoc-gen-grpc-web
+test: protoc-gen-grpc-web --version

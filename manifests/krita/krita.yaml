@@ -1,0 +1,22 @@
+api: v1
+name: krita
+kind: app
+display: krita
+description: A free digital painting application
+homepage: https://krita.org/
+license: GPL-3.0-or-later
+version: 5.3.4.1
+channels:
+    stable: 5.3.4.1
+provides:
+    - krita
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/krita/5.3.4.1/krita-x64-5.3.4.1-setup.exe#/dl.7z
+      sha256: 025523cf1751ff209faf7ecfe1cff851f2cdab64acb8c555b307b349ad56ce8f
+      bin:
+        - bin\krita.exe
+        - bin\kritarunner.exe
+      strip: 1
+test: bin\krita --version

@@ -1,0 +1,24 @@
+api: v1
+name: cloudflared
+kind: app
+display: cloudflared
+description: Command-line client to interact with Cloudflare Tunnel, Cloudflare Access, start up a DNS over HTTPS resolver and more.
+homepage: https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/
+license: Apache-2.0
+version: 2026.10.7
+channels:
+    stable: 2026.10.7
+provides:
+    - cloudflared
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cloudflare/cloudflared/releases/download/2026.10.7/cloudflared-windows-amd64.exe#/cloudflared.exe
+      sha256: 2493dbc168923bb3e59e5e7716f71deced92992eea9acd6e9d74f84ac7751343
+      bin:
+        - cloudflared.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cloudflared
+test: cloudflared --version

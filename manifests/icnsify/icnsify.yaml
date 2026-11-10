@@ -1,0 +1,21 @@
+api: v1
+name: icnsify
+kind: app
+display: icnsify
+description: CLI to easily convert .jpg and .png to .icns and vice versa
+homepage: https://github.com/JackMordaunt/icns
+license: MIT
+version: 4.2.0
+channels:
+    stable: 4.2.0
+provides:
+    - icnsify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JackMordaunt/icns/releases/download/v4.2.0/icns_4.2.0_Windows_amd64.zip
+      sha256: ae08b7ed2884847c05d42c40490918d9539e24482e2d40de76f1fd218d34cdc9
+      bin:
+        - icnsify.exe
+      strip: 1
+test: icnsify --version

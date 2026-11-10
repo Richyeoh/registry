@@ -1,0 +1,21 @@
+api: v1
+name: winfile
+kind: app
+display: winfile
+description: Original Windows File Manager (winfile) with enhancements.
+homepage: https://github.com/Microsoft/winfile
+license: MIT
+version: 10.4.0.0
+channels:
+    stable: 10.4.0.0
+provides:
+    - winfile
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Microsoft/winfile/releases/download/v10.4.0.0/Winfile_v10.4.0.0.zip
+      sha256: 5c7f9504fce89ceb2d127529e4157869bea7a5a0114fb400f49905e0203dd3ba
+      bin:
+        - Winfile.exe
+      strip: 1
+test: Winfile --version

@@ -1,0 +1,21 @@
+api: v1
+name: sshm
+kind: app
+display: sshm
+description: SSHM is a beautiful command-line tool that transforms how you manage and connect to your SSH hosts.
+homepage: https://github.com/Gu1llaum-3/sshm
+license: MIT
+version: 1.12.0
+channels:
+    stable: 1.12.0
+provides:
+    - sshm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Gu1llaum-3/sshm/releases/download/v1.12.0/sshm_Windows_x86_64.zip
+      sha256: 415171ee7495f2814d235eceea2eea9c21291a1d470aa0b6b0e032c2a3debed0
+      bin:
+        - sshm.exe
+      strip: 1
+test: sshm --version

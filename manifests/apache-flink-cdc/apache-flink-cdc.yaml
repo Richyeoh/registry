@@ -1,0 +1,25 @@
+api: v1
+name: apache-flink-cdc
+kind: app
+display: apache-flink-cdc
+description: Flink CDC is a streaming data integration tool
+homepage: https://nightlies.apache.org/flink/flink-cdc-docs-stable/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 3.7.0
+channels:
+    stable: 3.7.0
+provides:
+    - apache-flink-cdc
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-flink-cdc/blobs/sha256:09a708542b335241347e26a148296b99b7d679d4a4d72c248d1871321b759580
+      sha256: 09a708542b335241347e26a148296b99b7d679d4a4d72c248d1871321b759580
+      bin:
+        - apache-flink-cdc
+      strip: 1
+test: apache-flink-cdc --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

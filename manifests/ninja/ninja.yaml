@@ -1,0 +1,21 @@
+api: v1
+name: ninja
+kind: app
+display: ninja
+description: A small build system with a focus on speed.
+homepage: https://ninja-build.org/
+license: Apache-2.0
+version: 1.13.2
+channels:
+    stable: 1.13.2
+provides:
+    - ninja
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip
+      sha256: 07fc8261b42b20e71d1720b39068c2e14ffcee6396b76fb7a795fb460b78dc65
+      bin:
+        - ninja.exe
+      strip: 1
+test: ninja --version

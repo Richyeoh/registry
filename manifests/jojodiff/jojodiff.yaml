@@ -1,0 +1,22 @@
+api: v1
+name: jojodiff
+kind: app
+display: jojodiff
+description: Binary file diff utility
+homepage: https://jojodiff.sourceforge.net/
+license: GPL-3.0-or-later
+version: 0.8.1
+channels:
+    stable: 0.8.1
+provides:
+    - jojodiff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/jojodiff/jojodiff/jojodiff08/jdiff081.zip
+      sha256: e78cd8e65d2e65849948f893a6561f5b650a91c894f4bf5d1558e36e890b5ce7
+      bin:
+        - win32\jdiff.exe
+        - win32\jptch.exe
+      strip: 1
+test: win32\jdiff --version

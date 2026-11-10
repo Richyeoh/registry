@@ -1,0 +1,26 @@
+api: v1
+name: rust-msvc
+kind: app
+display: rust-msvc
+description: A language empowering everyone to build reliable and efficient software. (MSVC toolchain)
+homepage: https://www.rust-lang.org
+license: MIT|Apache-2.0
+version: 1.99.1
+channels:
+    stable: 1.99.1
+provides:
+    - rust-msvc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static.rust-lang.org/dist/rust-1.99.1-x86_64-pc-windows-msvc.msi
+      sha256: 11d5b1d217277b0c9cd1688b8682f046cf0d6778c58d8894309104f0fe860f23
+      bin:
+        - bin\rustc.exe
+        - bin\rustdoc.exe
+        - bin\cargo.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rust-msvc
+test: bin\rustc --version

@@ -1,0 +1,21 @@
+api: v1
+name: ncspot
+kind: app
+display: ncspot
+description: ncurses Spotify client written in Rust
+homepage: https://github.com/hrkfdn/ncspot
+license: BSD-2-Clause
+version: 1.5.1
+channels:
+    stable: 1.5.1
+provides:
+    - ncspot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hrkfdn/ncspot/releases/download/v1.5.1/ncspot-v1.5.1-windows-x86_64.zip
+      sha256: 3af768346b3b7725da22614e09479dc8889e255439b03698f62827389be2989c
+      bin:
+        - ncspot.exe
+      strip: 1
+test: ncspot --version

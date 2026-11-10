@@ -1,0 +1,21 @@
+api: v1
+name: gitea-cli
+kind: app
+display: gitea-cli
+description: The rewritten Gitea command line client (successor of 'tea').
+homepage: https://gitea.com/gitea/cli
+license: MIT
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - gitea-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitea.com/gitea/cli/releases/download/v1.2.0/gitea-cli-1.2.0-windows-amd64.exe.xz
+      sha256: 57442c8d1ff1a0148b07769acc98e2921b4e1d7edb647eb7a6e2bf344c52ed7f
+      bin:
+        - gt.exe
+      strip: 1
+test: gt --version

@@ -1,0 +1,21 @@
+api: v1
+name: selene
+kind: app
+display: selene
+description: A blazing-fast modern Lua linter written in Rust
+homepage: https://kampfkarren.github.io/selene/
+license: MPL-2.0
+version: 0.32.0
+channels:
+    stable: 0.32.0
+provides:
+    - selene
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Kampfkarren/selene/releases/download/0.32.0/selene-0.32.0-windows.zip
+      sha256: c8b693de81d0ddc11490d8e1170dd98d775c2b21431144bd8286f738ef416109
+      bin:
+        - selene.exe
+      strip: 1
+test: selene --version

@@ -1,0 +1,23 @@
+api: v1
+name: psmux
+kind: app
+display: psmux
+description: Terminal multiplexer for Windows - tmux alternative for PowerShell and Windows Terminal
+homepage: https://psmux.pages.dev
+license: MIT
+version: 3.4.0
+channels:
+    stable: 3.4.0
+provides:
+    - psmux
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/psmux/psmux/releases/download/v3.4.0/psmux-v3.4.0-windows-x64.zip
+      sha256: a66b6be7c13c6fa0dc3660a267b9e34eaa91a4eb7f07fbd55a0468018bd0f721
+      bin:
+        - psmux.exe
+        - pmux.exe
+        - tmux.exe
+      strip: 1
+test: psmux --version

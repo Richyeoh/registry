@@ -1,0 +1,21 @@
+api: v1
+name: tahoma2d
+kind: app
+display: tahoma2d
+description: Tahoma2D is a 2D and stop motion animation software.
+homepage: https://tahoma2d.org/
+license: Unknown
+version: 1.6.3
+channels:
+    stable: 1.6.3
+provides:
+    - tahoma2d
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tahoma2d/tahoma2d/releases/download/v1.6.3/Tahoma2D-portable-win.zip
+      sha256: 50dafb36ba12535239a447e10bc6939aff477a071e56c958a401c8ca6c22b05a
+      bin:
+        - tahoma2d.exe
+      strip: 1
+test: tahoma2d --version

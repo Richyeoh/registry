@@ -1,0 +1,26 @@
+api: v1
+name: yasb
+kind: app
+display: yasb
+description: A highly configurable Windows status bar written in Python
+homepage: https://github.com/amnweb/yasb
+license: MIT
+version: 2.0.8
+channels:
+    stable: 2.0.8
+provides:
+    - yasb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/amnweb/yasb/releases/download/v2.0.8/yasb-2.0.8-x64.msi
+      sha256: fe1197bf739117be7c29cc858a4852f0a6c9e23134f094f6630f539347051404
+      bin:
+        - yasb.exe
+        - yasbc.exe
+        - yasb_themes.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yasb
+test: yasb --version

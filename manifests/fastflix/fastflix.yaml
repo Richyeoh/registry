@@ -1,0 +1,21 @@
+api: v1
+name: fastflix
+kind: app
+display: fastflix
+description: A free GUI for HEVC and AV1 encoding, GIF/WebP/AVIF creation, and more!
+homepage: https://github.com/cdgriffith/FastFlix
+license: MIT
+version: 6.3.2
+channels:
+    stable: 6.3.2
+provides:
+    - fastflix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cdgriffith/FastFlix/releases/download/6.3.2/FastFlix_6.3.2_win64.zip
+      sha256: b194edfb5dac109c60f532ff96cd68f3204573fe2f514aafe0e1aee90620c939
+      bin:
+        - fastflix.exe
+      strip: 1
+test: fastflix --version

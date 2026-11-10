@@ -1,0 +1,21 @@
+api: v1
+name: tombi
+kind: app
+display: tombi
+description: Feature-Rich TOML Toolkit.
+homepage: https://tombi-toml.github.io/tombi/
+license: MIT
+version: 1.11.2
+channels:
+    stable: 1.11.2
+provides:
+    - tombi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tombi-toml/tombi/releases/download/v1.11.2/tombi-cli-1.11.2-x86_64-pc-windows-msvc.zip
+      sha256: fc059da801b0f6f6dd816eb4ede2a532d1562bc16c56cfe6557a9ecfa81a235a
+      bin:
+        - tombi.exe
+      strip: 1
+test: tombi --version

@@ -1,0 +1,21 @@
+api: v1
+name: winget
+kind: app
+display: winget
+description: Windows Package Manager CLI (aka winget)
+homepage: https://learn.microsoft.com/windows/package-manager/
+license: MIT
+version: 1.29.380
+channels:
+    stable: 1.29.380
+provides:
+    - winget
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/winget-cli/releases/download/v1.29.380/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle#/dl.7z
+      sha256: 65dea9c01ce08ee7b763366b27c0e651f97db857c11ca9b9c301826c10092f2e
+      bin:
+        - winget.exe
+      strip: 1
+test: winget --version

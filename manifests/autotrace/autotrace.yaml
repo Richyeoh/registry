@@ -1,0 +1,46 @@
+api: v1
+name: autotrace
+kind: app
+display: autotrace
+description: Convert bitmap to vector graphics
+homepage: https://autotrace.sourceforge.net/
+license: GPL-2.0-or-later AND LGPL-2.1-or-later
+keywords:
+    - brew
+    - homebrew
+version: 0.31.10
+channels:
+    stable: 0.31.10
+provides:
+    - autotrace
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:e4d9f47afb4b508a32cbcb02bcb2266c70bc15103337a502c1a5b0b064a1ff8a
+      sha256: e4d9f47afb4b508a32cbcb02bcb2266c70bc15103337a502c1a5b0b064a1ff8a
+      bin:
+        - autotrace
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:b9725af1513a0da94e283765802022e0e9ae80b0d785a0d5c78da4981a16496e
+      sha256: b9725af1513a0da94e283765802022e0e9ae80b0d785a0d5c78da4981a16496e
+      bin:
+        - autotrace
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:b8b573bdd4ece3b522e921a559424bea53474d39b7d0b6484a0719a9c6653f53
+      sha256: b8b573bdd4ece3b522e921a559424bea53474d39b7d0b6484a0719a9c6653f53
+      bin:
+        - autotrace
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/autotrace/blobs/sha256:55965727c03a1092493b6e0affc35fcebd8a86e2a4d74b928c9b931ca03ede47
+      sha256: 55965727c03a1092493b6e0affc35fcebd8a86e2a4d74b928c9b931ca03ede47
+      bin:
+        - autotrace
+      strip: 1
+test: autotrace --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

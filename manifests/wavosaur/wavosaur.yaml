@@ -1,0 +1,21 @@
+api: v1
+name: wavosaur
+kind: app
+display: wavosaur
+description: A free sound editor, audio editor, wav editor software for editing, processing and recording sounds, wav and mp3 files.
+homepage: https://www.wavosaur.com/
+license: Freeware
+version: 1.8.0.0
+channels:
+    stable: 1.8.0.0
+provides:
+    - wavosaur
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.wavosaur.com/download/files/Wavosaur.1.8.0.0-x64.zip
+      sha256: 5807d9b719b27504739c7ca8daa2a652229a503be5e0df2723dea0967f4b58e0
+      bin:
+        - Wavosaur.exe
+      strip: 1
+test: Wavosaur --version

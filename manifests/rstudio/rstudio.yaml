@@ -1,0 +1,21 @@
+api: v1
+name: rstudio
+kind: app
+display: rstudio
+description: An IDE for R with console, syntax-highlighting, editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.
+homepage: https://posit.co/products/open-source/rstudio/
+license: AGPL-3.0-only
+version: 2026.10.1-239
+channels:
+    stable: 2026.10.1-239
+provides:
+    - rstudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://s3.amazonaws.com/rstudio-desktop/electron/windows/RStudio-2026.10.1-239.exe#/dl.7z
+      sha256: 215bc4bb4d0c2d4bb343141b0b6f220c39ded9ec281f4bd0bd9951325de68222
+      bin:
+        - rstudio.exe
+      strip: 1
+test: rstudio --version

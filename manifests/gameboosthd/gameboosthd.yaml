@@ -1,0 +1,21 @@
+api: v1
+name: gameboosthd
+kind: app
+display: gameboosthd
+description: Maximize game performance by Dynamically adjust process priority of background applications.
+homepage: https://r1ch.net/projects/gameboosthd
+license: Unknown
+version: "1.4"
+channels:
+    stable: "1.4"
+provides:
+    - gameboosthd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://r1ch.net/assets/gameboosthd/gameboosthd-1.4.zip
+      sha256: 6f23373ebfba028255d103185785bb140016d4dde0363bca11c28bb7527c5130
+      bin:
+        - gameboosthd.exe
+      strip: 1
+test: gameboosthd --version

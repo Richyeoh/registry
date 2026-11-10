@@ -1,0 +1,21 @@
+api: v1
+name: ln-cli
+kind: app
+display: ln
+description: An approximation of the Unix ln command.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2018.07.25
+channels:
+    stable: 0.2018.07.25
+provides:
+    - ln-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lukesampson/psutils/3290c04d7653ea8183a5e11d3d5a4e46716035d1/ln.ps1
+      sha256: 2e97f2f1bacba1c403c538a80493e8c6c56203ba689f2a29a9fde6ba3576d3f7
+      bin:
+        - ln.ps1.exe
+      strip: 1
+test: ln.ps1 --version

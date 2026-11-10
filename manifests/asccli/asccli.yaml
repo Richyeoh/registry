@@ -1,0 +1,25 @@
+api: v1
+name: asccli
+kind: app
+display: asccli
+description: App Store Connect CLI to manage apps, versions, and screenshots
+homepage: https://github.com/tddworks/asc-cli
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 0.18.9
+channels:
+    stable: 0.18.9
+provides:
+    - asccli
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asccli/blobs/sha256:bf748fcf5632a84cce5328b9e02a89a186f3d9081039d08420b73fa3da9a7a0a
+      sha256: bf748fcf5632a84cce5328b9e02a89a186f3d9081039d08420b73fa3da9a7a0a
+      bin:
+        - asccli
+      strip: 1
+test: asccli --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: psfzf
+kind: app
+display: psfzf
+description: A PowerShell wrapper around the fuzzy finder fzf
+homepage: https://github.com/kelleyma49/PSFzf
+license: MIT
+version: 2.7.12
+channels:
+    stable: 2.7.12
+provides:
+    - psfzf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/psfzf.2.7.12.nupkg
+      sha256: 5d5c55df79d24b5efbb6c6715c12ec12cb34f32dca57f5c90868de7f47a9b1ad
+      bin:
+        - psfzf.exe
+      strip: 1
+test: psfzf --version

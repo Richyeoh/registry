@@ -1,0 +1,21 @@
+api: v1
+name: config-file-validator
+kind: app
+display: config-file-validator
+description: A tool to validate the syntax of configuration files
+homepage: https://boeing.github.io/config-file-validator/
+license: Apache-2.0
+version: 3.0.0
+channels:
+    stable: 3.0.0
+provides:
+    - config-file-validator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Boeing/config-file-validator/releases/download/v3.0.0/cfv-3.0.0-windows-amd64.zip
+      sha256: 283d45c22a0fcaf3ae4c4340405329a25e5256834dd1babd8c329f1df96271d3
+      bin:
+        - cfv.exe
+      strip: 1
+test: cfv --version

@@ -1,0 +1,21 @@
+api: v1
+name: wasabi-wallet
+kind: app
+display: wasabi-wallet
+description: An open-source, non-custodial, privacy-focused Bitcoin wallet for desktop, that implements trustless coinjoin over the Tor anonymity network.
+homepage: https://wasabiwallet.io/
+license: Unknown
+version: 2.8.5
+channels:
+    stable: 2.8.5
+provides:
+    - wasabi-wallet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WalletWasabi/WalletWasabi/releases/download/v2.8.5/Wasabi-2.8.5-win-x64.zip
+      sha256: 6bfd0aa3990392e76dbfaf934a6dd5924ebadba960c4c68cb1a017031571d5cb
+      bin:
+        - wasabi-wallet.exe
+      strip: 1
+test: wasabi-wallet --version

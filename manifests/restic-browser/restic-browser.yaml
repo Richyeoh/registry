@@ -1,0 +1,21 @@
+api: v1
+name: restic-browser
+kind: app
+display: restic-browser
+description: A GUI to browse and restore restic backup repositories.
+homepage: https://github.com/emuell/restic-browser
+license: MIT
+version: 0.3.3
+channels:
+    stable: 0.3.3
+provides:
+    - restic-browser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/emuell/restic-browser/releases/download/v0.3.3/Restic-Browser-v0.3.3-windows.zip
+      sha256: 1a5315992e58cef937278482ed9363c95d72154c908ed53f0fc94b50635989ef
+      bin:
+        - restic-browser.exe
+      strip: 1
+test: restic-browser --version

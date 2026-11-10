@@ -1,0 +1,21 @@
+api: v1
+name: jcode
+kind: app
+display: jcode
+description: Coding Agent Harness.
+homepage: https://jcode.sh
+license: MIT
+version: 0.99.1
+channels:
+    stable: 0.99.1
+provides:
+    - jcode
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/1jehuang/jcode/releases/download/v0.99.1/jcode-windows-x86_64.tar.gz
+      sha256: c74f56b57df8df9b23f48a3e76382b3ca05d41c85fb7e8218319931a0560dcae
+      bin:
+        - jcode.exe
+      strip: 1
+test: jcode --version

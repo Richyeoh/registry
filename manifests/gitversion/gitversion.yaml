@@ -1,0 +1,21 @@
+api: v1
+name: gitversion
+kind: app
+display: gitversion
+description: Easy Semantic Versioning for projects using Git.
+homepage: https://gitversion.net/docs/
+license: MIT
+version: 6.8.2
+channels:
+    stable: 6.8.2
+provides:
+    - gitversion
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GitTools/GitVersion/releases/download/6.8.2/gitversion-win-x64-6.8.2.zip
+      sha256: 73219908a616847bd4049680dff389fc3623d4fbe8585e92198a5572da63f796
+      bin:
+        - gitversion.exe
+      strip: 1
+test: gitversion --version

@@ -1,0 +1,21 @@
+api: v1
+name: git-cliff
+kind: app
+display: git-cliff
+description: A highly customizable Changelog Generator that follows Conventional Commit specifications
+homepage: https://git-cliff.org
+license: GPL-3.0-or-later
+version: 2.14.2
+channels:
+    stable: 2.14.2
+provides:
+    - git-cliff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/orhun/git-cliff/releases/download/v2.14.2/git-cliff-2.14.2-x86_64-pc-windows-msvc.zip
+      sha256: 6ece2112b3f4af462190ecbea4aeb1315fff6af415629b597f84319073c31131
+      bin:
+        - git-cliff.exe
+      strip: 1
+test: git-cliff --version

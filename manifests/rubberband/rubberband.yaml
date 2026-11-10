@@ -1,0 +1,22 @@
+api: v1
+name: rubberband
+kind: app
+display: rubberband
+description: A high quality software library for audio time-stretching and pitch-shifting
+homepage: https://breakfastquay.com/rubberband/
+license: GPL-2.0-or-later
+version: 4.0.0
+channels:
+    stable: 4.0.0
+provides:
+    - rubberband
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://breakfastquay.com/files/releases/rubberband-4.0.0-gpl-executable-windows.zip
+      sha256: f2d47fc64dbb42f6cc62edf7933ac4fa89d8f0ef8b9cf97b6afc263a7fe05644
+      bin:
+        - rubberband.exe
+        - rubberband-r3.exe
+      strip: 1
+test: rubberband --version

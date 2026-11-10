@@ -1,0 +1,21 @@
+api: v1
+name: yek
+kind: app
+display: yek
+description: A fast Rust based tool to serialize text-based files in a repository or directory for LLM consumption
+homepage: https://github.com/bodo-run/yek
+license: MIT
+version: 0.25.5
+channels:
+    stable: 0.25.5
+provides:
+    - yek
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bodo-run/yek/releases/download/v0.25.5/yek-x86_64-pc-windows-msvc.zip
+      sha256: 4d964df9c202f0f8e547b2d362bfb7d250c37c1936ad2858cc5a364cdd238823
+      bin:
+        - yek.exe
+      strip: 1
+test: yek --version

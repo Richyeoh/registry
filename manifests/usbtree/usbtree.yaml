@@ -1,0 +1,21 @@
+api: v1
+name: usbtree
+kind: app
+display: usbtree
+description: A cross-platform TUI for inspecting USB devices.
+homepage: https://gnomeria.github.io/usbtree
+license: MIT
+version: 0.1.2
+channels:
+    stable: 0.1.2
+provides:
+    - usbtree
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gnomeria/usbtree/releases/download/v0.1.2/usbtree_0.1.2_windows-amd64.zip
+      sha256: 4486bebb89b7c1465189f4e2f82269bbc8ee3bc215737a8201f9beb40d9dcba0
+      bin:
+        - usbtree.exe
+      strip: 1
+test: usbtree --version

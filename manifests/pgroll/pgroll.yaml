@@ -1,0 +1,24 @@
+api: v1
+name: pgroll
+kind: app
+display: pgroll
+description: An open source command-line tool that offers safe and reversible schema migrations for PostgreSQL by serving multiple schema versions simultaneously.
+homepage: https://pgroll.com
+license: Apache-2.0
+version: 0.16.3
+channels:
+    stable: 0.16.3
+provides:
+    - pgroll
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xataio/pgroll/releases/download/v0.16.3/pgroll.win.amd64.exe#/pgroll.exe
+      sha256: 691911916079f9c4343a2b8d107639949cc1de218d6907aeec900811bb48a47a
+      bin:
+        - pgroll.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pgroll
+test: pgroll --version

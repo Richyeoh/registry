@@ -1,0 +1,21 @@
+api: v1
+name: winpty
+kind: app
+display: winpty
+description: A Windows software package providing an interface similar to a Unix pty-master for communicating with Windows console programs
+homepage: https://github.com/rprichard/winpty
+license: MIT
+version: 0.4.3
+channels:
+    stable: 0.4.3
+provides:
+    - winpty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rprichard/winpty/releases/download/0.4.3/winpty-0.4.3-msvc2015.zip
+      sha256: 35a48ece2ff4acdcbc8299d4920de53eb86b1fb41e64d2fe5ae7898931bcee89
+      bin:
+        - x64\bin\winpty-agent.exe
+      strip: 1
+test: x64\bin\winpty-agent --version

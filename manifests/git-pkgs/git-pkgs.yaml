@@ -1,0 +1,21 @@
+api: v1
+name: git-pkgs
+kind: app
+display: git-pkgs
+description: Git subcommand for tracking package dependencies across git history. Analyzes your repository to show when dependencies were added, modified, or removed, who made those changes, and why.
+homepage: https://git-pkgs.dev/
+license: MIT
+version: 0.22.0
+channels:
+    stable: 0.22.0
+provides:
+    - git-pkgs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-pkgs/git-pkgs/releases/download/v0.22.0/git-pkgs_0.22.0_windows_amd64.tar.gz
+      sha256: a3799f31b2e2a380bdbc3aba1aff5bfe1fa68296c5173207888bfabb33fc97b3
+      bin:
+        - git-pkgs.exe
+      strip: 1
+test: git-pkgs --version

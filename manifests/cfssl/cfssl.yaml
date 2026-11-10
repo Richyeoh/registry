@@ -1,0 +1,31 @@
+api: v1
+name: cfssl
+kind: app
+display: cfssl
+description: Command line tool and an HTTP API server for signing, verifying, and bundling TLS certificates.
+homepage: https://cfssl.org
+license: BSD-2-Clause
+version: 1.7.1
+channels:
+    stable: 1.7.1
+provides:
+    - cfssl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cloudflare/cfssl/releases/download/v1.7.1/cfssl_1.7.1_windows_amd64.exe#/cfssl.exe
+      sha256: 68a47a3b645190c0390f9859e03809a575e857039becce9bcd8fb4181e82291c
+      bin:
+        - cfssl.exe
+        - cfssl-bundle.exe
+        - cfssl-certinfo.exe
+        - cfssl-newkey.exe
+        - cfssl-scan.exe
+        - cfssljson.exe
+        - mkbundle.exe
+        - multirootca.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cfssl
+test: cfssl --version

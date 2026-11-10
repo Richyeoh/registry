@@ -1,0 +1,21 @@
+api: v1
+name: geoipupdate
+kind: app
+display: geoipupdate
+description: GeoIP Update program to perform automatic updates of GeoIP2 and GeoIP Legacy binary databases.
+homepage: https://github.com/maxmind/geoipupdate
+license: Apache-2.0|MIT
+version: 8.0.0
+channels:
+    stable: 8.0.0
+provides:
+    - geoipupdate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/maxmind/geoipupdate/releases/download/v8.0.0/geoipupdate_8.0.0_windows_amd64.zip
+      sha256: 1aadec5283389670729b1332ca938e3cf12a1413853c30a2193cfe9d3fc8bbea
+      bin:
+        - geoipupdate.exe
+      strip: 1
+test: geoipupdate --version

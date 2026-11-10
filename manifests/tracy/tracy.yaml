@@ -1,0 +1,21 @@
+api: v1
+name: tracy
+kind: app
+display: tracy
+description: A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications
+homepage: https://github.com/wolfpld/tracy
+license: BSD-3-Clause
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - tracy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wolfpld/tracy/releases/download/v0.15.0/windows-0.15.0.zip
+      sha256: 3549555e0ce253932b9e37dc2c2b72af9fe46f65c64391cbf1762a4a510f67c7
+      bin:
+        - tracy.exe
+      strip: 1
+test: tracy --version

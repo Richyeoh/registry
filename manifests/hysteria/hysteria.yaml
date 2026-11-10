@@ -1,0 +1,24 @@
+api: v1
+name: hysteria
+kind: app
+display: hysteria
+description: Network utility optimized for networks of poor quality (e.g. satellite connections, congested public Wi-Fi, connecting from China to servers abroad)
+homepage: https://github.com/apernet/hysteria
+license: MIT
+version: 2.13.0
+channels:
+    stable: 2.13.0
+provides:
+    - hysteria
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/apernet/hysteria/releases/download/app/v2.13.0/hysteria-windows-amd64.exe#/hysteria.exe
+      sha256: 162ef8fe55dc7ec810dda662908f8e65ec36bd6da39cb87c3bd66184ab68f067
+      bin:
+        - hysteria.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hysteria
+test: hysteria --version

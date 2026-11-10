@@ -1,0 +1,21 @@
+api: v1
+name: rehex
+kind: app
+display: rehex
+description: Hex editor for reverse engineering
+homepage: https://github.com/solemnwarning/rehex
+license: GPL-2.0-only
+version: 0.64.0
+channels:
+    stable: 0.64.0
+provides:
+    - rehex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/solemnwarning/rehex/releases/download/0.64.0/rehex-0.64.0-win-x64.zip
+      sha256: 83c73bcb51b9e67f1e680d09378fe77b863eb343274b9d31dc66ec104ad1dbe2
+      bin:
+        - rehex.exe
+      strip: 1
+test: rehex --version

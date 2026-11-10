@@ -1,0 +1,21 @@
+api: v1
+name: keepass-plugin-keetheme
+kind: app
+display: keepass-plugin-keetheme
+description: A plugin for KeePass 2.x that changes the appearance to make it look better at night
+homepage: https://github.com/xatupal/KeeTheme
+license: MIT
+version: 1.0.3
+channels:
+    stable: 1.0.3
+provides:
+    - keepass-plugin-keetheme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xatupal/KeeTheme/releases/download/v1.0.3/KeeTheme.plgx
+      sha256: 285eae535a7a08ab41ab5ea30a06541628c683849e641e206c541eb93e6d7b5a
+      bin:
+        - keepass-plugin-keetheme.exe
+      strip: 1
+test: keepass-plugin-keetheme --version

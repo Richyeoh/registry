@@ -1,0 +1,21 @@
+api: v1
+name: httping
+kind: app
+display: httping
+description: Ping with HTTP requests.
+homepage: https://www.vanheusden.com/httping/
+license: GPL-2.0-or-later
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - httping
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/httping/httping_1.4.1.7z
+      sha256: dbc66ef4fd92cb8e9563cc4dd172f2670104ab73aaf51d643f53030722ff1c41
+      bin:
+        - httping.exe
+      strip: 1
+test: httping --version

@@ -1,0 +1,21 @@
+api: v1
+name: gosec
+kind: app
+display: gosec
+description: Inspects source code for security problems by scanning the Go AST.
+homepage: https://securego.io
+license: Apache-2.0
+version: 2.30.0
+channels:
+    stable: 2.30.0
+provides:
+    - gosec
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/securego/gosec/releases/download/v2.30.0/gosec_2.30.0_windows_amd64.tar.gz
+      sha256: 503bdfe6155584f2497ef855846b66406bce5b574ce1a9c7a7bb171aff2caa02
+      bin:
+        - gosec.exe
+      strip: 1
+test: gosec --version

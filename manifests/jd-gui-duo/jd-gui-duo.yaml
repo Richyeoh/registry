@@ -1,0 +1,21 @@
+api: v1
+name: jd-gui-duo
+kind: app
+display: jd-gui-duo
+description: A Java Decompiler based on JD-CORE v0 and v1, supporting 3rd party decompilers
+homepage: https://github.com/nbauma109/jd-gui-duo
+license: GPL-3.0-only
+version: 2.0.116
+channels:
+    stable: 2.0.116
+provides:
+    - jd-gui-duo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nbauma109/jd-gui-duo/releases/download/2.0.116/jd-gui-duo-windows-2.0.116.tar.xz
+      sha256: 4eb5e52e63aeac24ac1cd38ee40dd469f07efdf9c6150d201557bd3438cda690
+      bin:
+        - jd-gui-duo.bat.exe
+      strip: 1
+test: jd-gui-duo.bat --version

@@ -1,0 +1,21 @@
+api: v1
+name: windirstat
+kind: app
+display: windirstat
+description: A disk usage statistics viewer and cleanup tool.
+homepage: https://windirstat.net
+license: GPL-2.0-only
+version: 2.9.3
+channels:
+    stable: 2.9.3
+provides:
+    - windirstat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/windirstat/windirstat/releases/download/release%2Fv2.9.3/WinDirStat.7z
+      sha256: e0509718e588ffae76e93f3db6bebaba48b93fa1b9972275de85876229806977
+      bin:
+        - windirstat.exe
+      strip: 1
+test: windirstat --version

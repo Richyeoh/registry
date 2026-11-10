@@ -1,0 +1,32 @@
+api: v1
+name: airstats
+kind: app
+display: AirStats
+description: Menu bar system monitor
+homepage: https://airstats.app/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: "1.6"
+channels:
+    stable: "1.6"
+provides:
+    - airstats
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/byrencheema/airstats/releases/download/v1.6/AirStats.dmg
+      sha256: 63189e9f262b9dab708fff0af39b14bd4faa80baa6bdc6e0dc409f2426c82418
+      bin:
+        - airstats
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/byrencheema/airstats/releases/download/v1.6/AirStats.dmg
+      sha256: 63189e9f262b9dab708fff0af39b14bd4faa80baa6bdc6e0dc409f2426c82418
+      bin:
+        - airstats
+      strip: 1
+test: airstats --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

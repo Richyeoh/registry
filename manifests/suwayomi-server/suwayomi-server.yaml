@@ -1,0 +1,21 @@
+api: v1
+name: suwayomi-server
+kind: app
+display: suwayomi-server
+description: A manga reader compatible with Tachiyomi extensions and backups
+homepage: https://github.com/Suwayomi/Suwayomi-Server
+license: Unknown
+version: 2.4.2366
+channels:
+    stable: 2.4.2366
+provides:
+    - suwayomi-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Suwayomi/Suwayomi-Server/releases/download/v2.4.2366/Suwayomi-Server-v2.4.2366-windows-x64.zip
+      sha256: b955f374a8d94b8d1c2750ae28fa7eb2066b479957561b5ba9cf8ac993c8fc13
+      bin:
+        - suwayomi.ps1.exe
+      strip: 1
+test: suwayomi.ps1 --version

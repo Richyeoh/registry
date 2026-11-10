@@ -1,0 +1,25 @@
+api: v1
+name: boinc
+kind: app
+display: boinc
+description: Volunteer scientific or grid computing client
+homepage: https://boinc.berkeley.edu/
+license: LGPL-3.0-or-later
+version: 8.2.15
+channels:
+    stable: 8.2.15
+provides:
+    - boinc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://boinc.berkeley.edu/dl/boinc_8.2.15_windows_x86_64.exe#/dl.exe
+      sha256: 89cbad087ee1ee1009aafcd61ae8f14ed09d81827f1cbd791eecd70e5d0e050c
+      bin:
+        - boinc.exe
+        - boinccmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall boinc
+test: boinc --version

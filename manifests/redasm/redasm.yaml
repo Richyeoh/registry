@@ -1,0 +1,21 @@
+api: v1
+name: redasm
+kind: app
+display: redasm
+description: Interactive, multiarchitecture disassembler
+homepage: https://redasm.dev
+license: GPL-3.0-only
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - redasm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/redasm-dev/REDasm/releases/download/v2.1.1/REDasm_2.1.1_Windows_x86_64.zip
+      sha256: f507817b319a4196a4245f6f2bea59e092d01e279dc57b910938201042cfed6e
+      bin:
+        - REDasm.exe
+      strip: 1
+test: REDasm --version

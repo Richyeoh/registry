@@ -1,0 +1,21 @@
+api: v1
+name: locale-remulator
+kind: app
+display: locale-remulator
+description: System Region and Language Simulator.
+homepage: https://github.com/InWILL/Locale_Remulator
+license: LGPL-3.0-only
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - locale-remulator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/InWILL/Locale_Remulator/releases/download/v1.6.0/Locale_Remulator.1.6.0.zip
+      sha256: f7f7b4ed8ef5bf1b25d46eb6cbf10d0a01dddfe5030ae09f8a1e73c5ad3c1b02
+      bin:
+        - LRProc.exe
+      strip: 1
+test: LRProc --version

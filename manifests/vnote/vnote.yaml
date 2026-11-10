@@ -1,0 +1,21 @@
+api: v1
+name: vnote
+kind: app
+display: vnote
+description: A pleasant note-taking platform
+homepage: https://docs.vnote.fun
+license: LGPL-3.0-only
+version: 4.14.2
+channels:
+    stable: 4.14.2
+provides:
+    - vnote
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vnotex/vnote/releases/download/v4.14.2/VNote-4.14.2-win64.zip
+      sha256: 07ca9d701116a7b560b15e9e916a67867029a01f1080f0d610f8106188598d58
+      bin:
+        - vnote.exe
+      strip: 1
+test: vnote --version

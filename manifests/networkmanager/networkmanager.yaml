@@ -1,0 +1,21 @@
+api: v1
+name: networkmanager
+kind: app
+display: networkmanager
+description: Tool for managing networks and network troubleshooting
+homepage: https://borntoberoot.net/NETworkManager/
+license: GPL-3.0-only
+version: 2026.7.7.0
+channels:
+    stable: 2026.7.7.0
+provides:
+    - networkmanager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BornToBeRoot/NETworkManager/releases/download/2026.7.7.0/NETworkManager_2026.7.7.0_Portable.zip
+      sha256: 39d4a17a299431079c021eb480c4b0b718b9a3c56a0a3fdcd079c89b83740290
+      bin:
+        - NETworkManager.exe
+      strip: 1
+test: NETworkManager --version

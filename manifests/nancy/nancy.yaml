@@ -1,0 +1,21 @@
+api: v1
+name: nancy
+kind: app
+display: nancy
+description: A tool to check for vulnerabilities in Golang dependencies, powered by Sonatype OSS Index
+homepage: https://github.com/sonatype-nexus-community/nancy
+license: Apache-2.0
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - nancy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sonatype-nexus-community/nancy/releases/download/v2.1.1/nancy-v2.1.1-windows-amd64.zip
+      sha256: 271eeb980106d528b361b3938593c115d85d23012f6b9a8030492c48160990fa
+      bin:
+        - nancy.exe
+      strip: 1
+test: nancy --version

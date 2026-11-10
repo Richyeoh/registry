@@ -2,7 +2,7 @@ api: v1
 name: gh-cli
 kind: app
 display: gh
-description: GitHub 官方命令行
+description: Official GitHub CLI
 homepage: https://cli.github.com
 license: MIT
 keywords:
@@ -35,5 +35,4 @@ platforms:
       bin:
         - gh
       strip: 1
-test: gh --version
-caveats: 由 GitHub cli/cli latest 自动转制
+test: bin\gh --version

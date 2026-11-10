@@ -1,0 +1,36 @@
+api: v1
+name: monero
+kind: app
+display: monero
+description: The secure, private, untraceable cryptocurrency
+homepage: https://getmonero.org
+license: BSD-3-Clause
+version: 0.18.5.4
+channels:
+    stable: 0.18.5.4
+provides:
+    - monero
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dlsrc.getmonero.org/gui/monero-gui-win-x64-v0.18.5.4.zip
+      sha256: 0b5cbbe0a1fda5ec487a667cea62599114dca3609acaab436b64a38fa84d449c
+      bin:
+        - monerod.exe
+        - monero-wallet-gui.exe
+        - start-low-graphics-mode.bat.exe
+        - extras\monero-wallet-rpc.exe
+        - extras\monero-wallet-cli.exe
+        - extras\monero-gen-trusted-multisig.exe
+        - extras\monero-blockchain-usage.exe
+        - extras\monero-blockchain-mark-spent-outputs.exe
+        - extras\monero-blockchain-import.exe
+        - extras\monero-blockchain-export.exe
+        - extras\monero-blockchain-depth.exe
+        - extras\monero-blockchain-ancestry.exe
+        - extras\monero-blockchain-prune.exe
+        - extras\monero-blockchain-prune-known-spent-data.exe
+        - extras\monero-blockchain-stats.exe
+        - extras\monero-blockchain-mark-spent-outputs.exe
+      strip: 1
+test: monerod --version

@@ -1,0 +1,21 @@
+api: v1
+name: peco
+kind: app
+display: peco
+description: Simplistic interactive filtering tool
+homepage: https://github.com/peco/peco
+license: MIT
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - peco
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/peco/peco/releases/download/v0.6.0/peco_0.6.0_windows_amd64.zip
+      sha256: 5bd9aa4bc02338a6ec8ab1ef212c7b2e54c23e2416254c7681f03e9fa6857863
+      bin:
+        - peco.exe
+      strip: 1
+test: peco --version

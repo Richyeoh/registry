@@ -1,0 +1,25 @@
+api: v1
+name: azurite
+kind: app
+display: azurite
+description: Lightweight server clone of Azure Storage that simulates it locally
+homepage: https://github.com/Azure/Azurite
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 3.37.0
+channels:
+    stable: 3.37.0
+provides:
+    - azurite
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/azurite/blobs/sha256:e0d2b9196a3bdedae60f932a3857e3119b445501a692c31e1faf5d5f21f2680e
+      sha256: e0d2b9196a3bdedae60f932a3857e3119b445501a692c31e1faf5d5f21f2680e
+      bin:
+        - azurite
+      strip: 1
+test: azurite --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

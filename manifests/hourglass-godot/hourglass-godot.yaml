@@ -1,0 +1,21 @@
+api: v1
+name: hourglass-godot
+kind: app
+display: hourglass-godot
+description: A project manager for Godot Engine
+homepage: https://hourglass.jwestman.net/
+license: GPL-3.0-or-later
+version: 0.9.4
+channels:
+    stable: 0.9.4
+provides:
+    - hourglass-godot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://jwestman.gitlab.io/hourglass/hourglass-windows.zip
+      sha256: e016ebcd4d865c609f7ebf9b6110104b7c818d3a56f9fc9d75a2966041bbc39d
+      bin:
+        - hourglass-godot.exe
+      strip: 1
+test: hourglass-godot --version

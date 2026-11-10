@@ -1,0 +1,21 @@
+api: v1
+name: maestro
+kind: app
+display: maestro
+description: An open-source framework that makes UI and end-to-end testing for Android, iOS, and web apps simple and fast.
+homepage: https://maestro.dev
+license: Apache-2.0
+version: 2.12.1
+channels:
+    stable: 2.12.1
+provides:
+    - maestro
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mobile-dev-inc/Maestro/releases/download/cli-2.12.1/maestro.zip
+      sha256: 54dbb0716425626604973cbb374c585ca30272375d9ce15177a1152765ddd9d7
+      bin:
+        - bin\maestro.bat.exe
+      strip: 1
+test: bin\maestro.bat --version

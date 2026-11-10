@@ -1,0 +1,25 @@
+api: v1
+name: octave
+kind: app
+display: octave
+description: A high-level language primarily intended for numerical computations.
+homepage: https://octave.org
+license: GPL-3.0-only
+version: 11.3.0
+channels:
+    stable: 11.3.0
+provides:
+    - octave
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ftpmirror.gnu.org/octave/windows/octave-11.3.0-w64.7z
+      sha256: fd3cf0e885467a15211b8ceded42800432a5462481324d49a896ef257e05d1a0
+      bin:
+        - post-install.bat.exe
+        - mingw64\bin\octave.bat.exe
+        - mingw64\bin\octave-gui.exe
+        - mingw64\bin\octave-cli.exe
+        - mingw64\bin\octave-config.exe
+      strip: 1
+test: post-install.bat --version

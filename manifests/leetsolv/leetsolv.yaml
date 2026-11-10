@@ -1,0 +1,24 @@
+api: v1
+name: leetsolv
+kind: app
+display: leetsolv
+description: A CLI tool for DSA problem revision with spaced repetition, powered by a customized SuperMemo 2 algorithm.
+homepage: https://github.com/eannchen/leetsolv
+license: MIT
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - leetsolv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/eannchen/leetsolv/releases/download/v1.2.0/leetsolv-windows-amd64.exe#/leetsolv.exe
+      sha256: c99167a421f4b18daf08800d57df2c07f8e6830b132528020cec2f904c8a7f63
+      bin:
+        - leetsolv.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall leetsolv
+test: leetsolv --version

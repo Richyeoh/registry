@@ -1,0 +1,21 @@
+api: v1
+name: visualc
+kind: app
+display: visualc
+description: The command-line compiler functions of VS 2010 C++.
+homepage: https://www.visualstudio.com
+license: Unknown
+version: 16.00.30319.01
+channels:
+    stable: 16.00.30319.01
+provides:
+    - visualc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://go.microsoft.com/fwlink/?LinkId=165122&clcid=0x409#/vs_expbsln_x64_enu.cab
+      sha256: 5bd5a2c3ae77f2882ac2316174e96d05c0ad6676fb7416c2a1eafc2a87f5cc0b
+      bin:
+        - visualc.exe
+      strip: 1
+test: visualc --version

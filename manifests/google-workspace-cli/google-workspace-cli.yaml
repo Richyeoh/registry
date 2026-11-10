@@ -1,0 +1,21 @@
+api: v1
+name: google-workspace-cli
+kind: app
+display: google-workspace-cli
+description: Official command-line tool for Gooogle Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more.
+homepage: https://developers.google.com/workspace
+license: Apache-2.0
+version: 0.22.5
+channels:
+    stable: 0.22.5
+provides:
+    - google-workspace-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/googleworkspace/cli/releases/download/v0.22.5/google-workspace-cli-x86_64-pc-windows-msvc.zip
+      sha256: 407705d695dc83d48b1c5f50d71b5aa64095bf6f17d5b439b2e9a373bbe67ec2
+      bin:
+        - gws.exe
+      strip: 1
+test: gws --version

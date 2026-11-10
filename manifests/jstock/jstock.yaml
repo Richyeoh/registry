@@ -1,0 +1,21 @@
+api: v1
+name: jstock
+kind: app
+display: jstock
+description: Free stock market software for 28 countries
+homepage: https://jstock.org
+license: GPL-2.0-only
+version: 1.0.7.60
+channels:
+    stable: 1.0.7.60
+provides:
+    - jstock
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yccheok/jstock/releases/download/release_1-0-7-60/jstock-1.0.7.60-bin.zip
+      sha256: 86c549ca82bc9cd4af7d2b5ad5e3269f64e9456eab10c100730e0d428e3ba675
+      bin:
+        - jstock.exe
+      strip: 1
+test: jstock --version

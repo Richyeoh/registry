@@ -1,0 +1,39 @@
+api: v1
+name: aws-c-cal
+kind: app
+display: aws-c-cal
+description: AWS Crypto Abstraction Layer
+homepage: https://github.com/awslabs/aws-c-cal
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - aws-c-cal
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-cal/blobs/sha256:f9aabf2cda22318de8d70e0eed3239885f7e9d8bc335096226ea88dd12bfa9e8
+      sha256: f9aabf2cda22318de8d70e0eed3239885f7e9d8bc335096226ea88dd12bfa9e8
+      bin:
+        - aws-c-cal
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-cal/blobs/sha256:2671dffb067fe8702ee66e276c3419aba648b20aa8630e19271840eef8eb3aec
+      sha256: 2671dffb067fe8702ee66e276c3419aba648b20aa8630e19271840eef8eb3aec
+      bin:
+        - aws-c-cal
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-cal/blobs/sha256:69bb772ab91ce811dbe8a182ec4dc64ff5e8cdddd4731146f0a9e8812b29c12e
+      sha256: 69bb772ab91ce811dbe8a182ec4dc64ff5e8cdddd4731146f0a9e8812b29c12e
+      bin:
+        - aws-c-cal
+      strip: 1
+test: aws-c-cal --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

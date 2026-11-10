@@ -1,0 +1,21 @@
+api: v1
+name: xnresize
+kind: app
+display: xnresize
+description: A fast and powerful image resizer
+homepage: https://www.xnview.com/en/xnresize/
+license: Freeware
+version: "1.11"
+channels:
+    stable: "1.11"
+provides:
+    - xnresize
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.xnview.com/XnResize-win-x64.zip
+      sha256: d8799ce40bab1478a712ff34221e3584884a7679cdacd315907cadc194cc7149
+      bin:
+        - XnResize.exe
+      strip: 1
+test: XnResize --version

@@ -1,0 +1,21 @@
+api: v1
+name: gogs
+kind: app
+display: gogs
+description: A painless self-hosted Git service
+homepage: https://gogs.io
+license: MIT
+version: 0.14.3
+channels:
+    stable: 0.14.3
+provides:
+    - gogs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.gogs.io/0.14.3/gogs_v0.14.3_windows_amd64_mws.zip
+      sha256: 3a39c981121979be82af33c03d283d7db9aa1edaf5cb608da801e26aebfb5b54
+      bin:
+        - gogs.exe
+      strip: 1
+test: gogs --version

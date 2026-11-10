@@ -1,0 +1,21 @@
+api: v1
+name: manifold-viewer
+kind: app
+display: manifold-viewer
+description: File viewer for Manifold - a parallel GIS, ETL, data science and DBMS tool
+homepage: https://manifold.net/
+license: Freeware
+version: 9.0.182.6
+channels:
+    stable: 9.0.182.6
+provides:
+    - manifold-viewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://manifold.net/updates/manifold-viewer-9.0.182.6.zip
+      sha256: c0b79e72ee25af524026a99ec381f36bfa40e3c82686905294ee9725eeb1c7be
+      bin:
+        - manifold.exe
+      strip: 1
+test: manifold --version

@@ -1,0 +1,21 @@
+api: v1
+name: flow-launcher
+kind: app
+display: flow-launcher
+description: Quick file searcher and app launcher with community-made plugins
+homepage: https://www.flowlauncher.com
+license: MIT
+version: 2.1.4
+channels:
+    stable: 2.1.4
+provides:
+    - flow-launcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Flow-Launcher/Flow.Launcher/releases/download/v2.1.4/Flow-Launcher-Portable.zip
+      sha256: 32cd448751863eca7a4fa9ee282bb6fe4e617ec1c8f23af707796a72279ba1d8
+      bin:
+        - flow-launcher.exe
+      strip: 1
+test: flow-launcher --version

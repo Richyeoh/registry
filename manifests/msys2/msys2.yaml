@@ -1,0 +1,27 @@
+api: v1
+name: msys2
+kind: app
+display: msys2
+description: A software distro and building platform for Windows.
+homepage: https://www.msys2.org/
+license: GPL-2.0-only|BSD-3-Clause
+version: "2026-09-27"
+channels:
+    stable: "2026-09-27"
+provides:
+    - msys2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/msys2/msys2-installer/releases/download/2026-09-27/msys2-base-x86_64-20260927.tar.xz
+      sha256: ea2f31a0b6ade63914ce441ffb022f0f6aa96982bfefa2326460a26d5fb01322
+      bin:
+        - msys2_shell.cmd.exe
+        - msys2_shell.cmd.exe
+        - msys2_shell.cmd.exe
+        - msys2_shell.cmd.exe
+        - msys2_shell.cmd.exe
+        - msys2_shell.cmd.exe
+        - msys2_shell.cmd.exe
+      strip: 1
+test: msys2_shell.cmd --version

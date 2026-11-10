@@ -1,0 +1,21 @@
+api: v1
+name: qsv
+kind: app
+display: qsv
+description: A command line CSV data-wrangling toolkit
+homepage: https://qsv.dathere.com
+license: Unlicense|MIT
+version: 28.0.0
+channels:
+    stable: 28.0.0
+provides:
+    - qsv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dathere/qsv/releases/download/28.0.0/qsv-28.0.0-x86_64-pc-windows-msvc.zip
+      sha256: f93d9cdfb769cb86ffb620808845586425c18a6b55bc902a74366628b9398216
+      bin:
+        - qsv.exe
+      strip: 1
+test: qsv --version

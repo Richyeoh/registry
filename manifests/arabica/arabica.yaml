@@ -1,0 +1,46 @@
+api: v1
+name: arabica
+kind: app
+display: arabica
+description: XML toolkit written in C++
+homepage: https://www.jezuk.co.uk/tags/arabica.html
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: "20200425"
+channels:
+    stable: "20200425"
+provides:
+    - arabica
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arabica/blobs/sha256:6fc9d75c64dc7690bf5c6b4d07642b65cee5f5a7cd582e59dfa22cb5cf8cac07
+      sha256: 6fc9d75c64dc7690bf5c6b4d07642b65cee5f5a7cd582e59dfa22cb5cf8cac07
+      bin:
+        - arabica
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arabica/blobs/sha256:9894818dc68197bac84b8b19785dfff403ceb947a8cc6f1a4b34b9020b8301a3
+      sha256: 9894818dc68197bac84b8b19785dfff403ceb947a8cc6f1a4b34b9020b8301a3
+      bin:
+        - arabica
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arabica/blobs/sha256:129967d8e801a766a2d8209dff39cc8358bff641249838682ac1a943d0b7d385
+      sha256: 129967d8e801a766a2d8209dff39cc8358bff641249838682ac1a943d0b7d385
+      bin:
+        - arabica
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arabica/blobs/sha256:fca2b168c6149c388d0692cecce3959175ef8aeec053cb64c0fa653f2c6553a2
+      sha256: fca2b168c6149c388d0692cecce3959175ef8aeec053cb64c0fa653f2c6553a2
+      bin:
+        - arabica
+      strip: 1
+test: arabica --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

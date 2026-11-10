@@ -1,0 +1,21 @@
+api: v1
+name: keypirinha
+kind: app
+display: keypirinha
+description: A fast launcher for keyboard ninjas on Windows.
+homepage: http://keypirinha.com
+license: Unknown
+version: "2.26"
+channels:
+    stable: "2.26"
+provides:
+    - keypirinha
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Keypirinha/Keypirinha/releases/download/v2.26/keypirinha-2.26-x64-portable.7z
+      sha256: d109a16e6a5cf311abf6d06bbe5b1be3b9ba323b79c32a168628189e10f102a5
+      bin:
+        - keypirinha.exe
+      strip: 1
+test: keypirinha --version

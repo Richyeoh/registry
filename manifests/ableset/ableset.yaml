@@ -1,0 +1,32 @@
+api: v1
+name: ableset
+kind: app
+display: AbleSet
+description: Ableton setlist manager
+homepage: https://ableset.app/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 3.1.9
+channels:
+    stable: 3.1.9
+provides:
+    - ableset
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://s3.amazonaws.com/download.ableset.app/mac-arm64/AbleSet-3.1.9-arm64.dmg
+      sha256: 477f6879638947b65894aef5a615dc2342cb20c085be467ff4202b1a43ff2c82
+      bin:
+        - ableset
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://s3.amazonaws.com/download.ableset.app/mac-arm64/AbleSet-3.1.9-arm64.dmg
+      sha256: 477f6879638947b65894aef5a615dc2342cb20c085be467ff4202b1a43ff2c82
+      bin:
+        - ableset
+      strip: 1
+test: ableset --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

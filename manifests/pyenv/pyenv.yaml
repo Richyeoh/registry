@@ -1,0 +1,21 @@
+api: v1
+name: pyenv
+kind: app
+display: pyenv
+description: Simple python version management tool for switching between multiple versions of Python.
+homepage: https://pyenv-win.github.io/pyenv-win/
+license: MIT
+version: 3.1.1
+channels:
+    stable: 3.1.1
+provides:
+    - pyenv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pyenv-win/pyenv-win/archive/v3.1.1.zip
+      sha256: a7481ccaf1f2328702e4a854a65793e95639f40dc63dd89782d160536f6b1ed0
+      bin:
+        - pyenv.exe
+      strip: 1
+test: pyenv --version

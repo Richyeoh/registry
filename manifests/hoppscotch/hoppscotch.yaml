@@ -1,0 +1,24 @@
+api: v1
+name: hoppscotch
+kind: app
+display: hoppscotch
+description: A cross-platform desktop application that helps you create and manage API requests
+homepage: https://hoppscotch.com/
+license: Unknown
+version: 26.10.1-0
+channels:
+    stable: 26.10.1-0
+provides:
+    - hoppscotch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hoppscotch/releases/releases/download/v26.10.1-0/Hoppscotch_win_x64.msi
+      sha256: 7e1dfb1e1a5fb0b30777a3338c2d410b32810ec2bad3a76967beeb95df7383e8
+      bin:
+        - hoppscotch.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hoppscotch
+test: hoppscotch --version

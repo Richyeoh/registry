@@ -1,0 +1,21 @@
+api: v1
+name: stylua
+kind: app
+display: stylua
+description: An opinionated Lua code formatter
+homepage: https://github.com/JohnnyMorganz/StyLua
+license: MPL-2.0
+version: 2.6.0
+channels:
+    stable: 2.6.0
+provides:
+    - stylua
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JohnnyMorganz/StyLua/releases/download/v2.6.0/stylua-windows-x86_64.zip
+      sha256: fd13b4014e3b779c244bbc03f2c282e357f15bc526de6a6fa5ecbc447538313c
+      bin:
+        - stylua.exe
+      strip: 1
+test: stylua --version

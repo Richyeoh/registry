@@ -1,0 +1,21 @@
+api: v1
+name: parsec
+kind: app
+display: parsec
+description: Remote desktop software, Portable.
+homepage: https://parsec.app
+license: Unknown
+version: 150-105c
+channels:
+    stable: 150-105c
+provides:
+    - parsec
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://builds.parsec.app/package/parsec-flat-windows.zip#/dl.zip
+      sha256: f3060956a2bca1347765443f6a4e8884a10e845b7bcfbf5bf53dee1eae2d7fee
+      bin:
+        - parsec.exe
+      strip: 1
+test: parsec --version

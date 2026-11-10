@@ -1,0 +1,21 @@
+api: v1
+name: terrascan
+kind: app
+display: terrascan
+description: A static code analyzer for Infrastructure as Code.
+homepage: https://runterrascan.io/
+license: Apache-2.0
+version: 1.19.9
+channels:
+    stable: 1.19.9
+provides:
+    - terrascan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tenable/terrascan/releases/download/v1.19.9/terrascan_1.19.9_Windows_x86_64.zip
+      sha256: 2585e0ae7121bfa28a471175ec3cabe810680fcbeb064eefab93a8c6c475b094
+      bin:
+        - terrascan.exe
+      strip: 1
+test: terrascan --version

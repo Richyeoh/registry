@@ -1,0 +1,21 @@
+api: v1
+name: photocraft
+kind: app
+display: photocraft
+description: Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust
+homepage: https://getartcraft.com/apps/photocraft
+license: MIT|Apache-2.0
+version: 0.21.0
+channels:
+    stable: 0.21.0
+provides:
+    - photocraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/photocraft/releases/download/v0.21.0/photocraft-0.21.0-windows-x64-portable.zip
+      sha256: 93b4e90a0ba74cdbf61ce36e227128ed78f5a0e43f814aa71563b1bf46e8b6a4
+      bin:
+        - photocraft-cli.exe
+      strip: 1
+test: photocraft-cli --version

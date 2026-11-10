@@ -1,0 +1,34 @@
+api: v1
+name: monero-cli
+kind: app
+display: monero-cli
+description: The secure, private, untraceable cryptocurrency (CLI)
+homepage: https://getmonero.org/
+license: BSD-3-Clause
+version: 0.18.5.4
+channels:
+    stable: 0.18.5.4
+provides:
+    - monero-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dlsrc.getmonero.org/cli/monero-win-x64-v0.18.5.4.zip
+      sha256: 1ccac3b476ba75bf6dfdfa848f6520a79b64cdf3457a160eaa0dad82d5a2a042
+      bin:
+        - monerod.exe
+        - monero-wallet-rpc.exe
+        - monero-wallet-cli.exe
+        - monero-gen-trusted-multisig.exe
+        - monero-blockchain-usage.exe
+        - monero-blockchain-mark-spent-outputs.exe
+        - monero-blockchain-import.exe
+        - monero-blockchain-export.exe
+        - monero-blockchain-depth.exe
+        - monero-blockchain-ancestry.exe
+        - monero-blockchain-prune.exe
+        - monero-blockchain-prune-known-spent-data.exe
+        - monero-blockchain-stats.exe
+        - monero-blockchain-mark-spent-outputs.exe
+      strip: 1
+test: monerod --version

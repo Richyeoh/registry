@@ -1,0 +1,21 @@
+api: v1
+name: antimicrox
+kind: app
+display: antimicrox
+description: Mapping keyboard buttons and mouse controls to a gamepad.
+homepage: https://github.com/AntiMicroX/antimicrox
+license: GPL-3.0-only
+version: 3.6.1
+channels:
+    stable: 3.6.1
+provides:
+    - antimicrox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AntiMicroX/antimicrox/releases/download/3.6.1/antimicrox-3.6.1-PortableWindows-AMD64.zip
+      sha256: 1d31c7186987ba099aabe1cea4b31f7020a4e71920bbcec6fb25eaf132c6e176
+      bin:
+        - antimicrox.exe
+      strip: 1
+test: antimicrox --version

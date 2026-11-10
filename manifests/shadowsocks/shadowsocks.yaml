@@ -1,0 +1,21 @@
+api: v1
+name: shadowsocks
+kind: app
+display: shadowsocks
+description: A secure socks5 proxy, designed to protect your Internet traffic.
+homepage: https://github.com/shadowsocks/shadowsocks-windows
+license: GPL-3.0-only
+version: 4.4.1.0
+channels:
+    stable: 4.4.1.0
+provides:
+    - shadowsocks
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.4.1.0/Shadowsocks-4.4.1.0.zip
+      sha256: 62b74a688d22bfdf20f673a351580029d7b9de67c6facc9a5613b22b3f798968
+      bin:
+        - Shadowsocks.exe
+      strip: 1
+test: Shadowsocks --version

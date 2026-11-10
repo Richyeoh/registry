@@ -1,0 +1,21 @@
+api: v1
+name: yaffplayer
+kind: app
+display: yaffplayer
+description: A simple video player based on FFmpeg libraries.
+homepage: https://www.geeks3d.com/yaffplayer/
+license: Freeware
+version: 0.13.0.1
+channels:
+    stable: 0.13.0.1
+provides:
+    - yaffplayer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://geeks3d.com/dl/get/822#YAFFplayer_0.13.0.1_win64.7z
+      sha256: 723ccf0f4e87f90fb034661d642d6f3f44b608fcf4ffe17daa58af6914203122
+      bin:
+        - yaffplayer.exe
+      strip: 1
+test: yaffplayer --version

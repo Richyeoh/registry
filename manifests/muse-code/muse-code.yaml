@@ -1,0 +1,24 @@
+api: v1
+name: muse-code
+kind: app
+display: muse-code
+description: Meta's coding agent for the terminal and CI, built for Muse Spark.
+homepage: https://dev.meta.ai/docs/muse-code
+license: Unknown
+version: 1.4.15-R8339.1
+channels:
+    stable: 1.4.15-R8339.1
+provides:
+    - muse-code
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://lookaside.facebook.com/lookaside/muse/download/?channel=muse&version=1.4.15-R8339.1&file=muse-x86-windows.exe#/muse.exe
+      sha256: fd8693d726474ca7413721d2bcdfc48db343d7dab8203d493524d7535b7a426b
+      bin:
+        - muse.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall muse-code
+test: muse --version

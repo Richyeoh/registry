@@ -1,0 +1,22 @@
+api: v1
+name: umlet
+kind: app
+display: umlet
+description: Free UML Tool for Fast UML Diagrams
+homepage: https://www.umlet.com/
+license: GPL-3.0-or-later
+version: "15.1"
+channels:
+    stable: "15.1"
+provides:
+    - umlet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.umlet.com/download/umlet_15_1/umlet-standalone-15.1.zip
+      sha256: 33aa1559b3a63c14f2812f9316463d3d6b9c15f60b0f7decb8d52e5a914b308a
+      bin:
+        - Umlet.exe
+        - Umlet_cmd.bat.exe
+      strip: 1
+test: Umlet --version

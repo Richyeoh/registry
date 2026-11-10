@@ -1,0 +1,21 @@
+api: v1
+name: gradle5
+kind: app
+display: gradle5
+description: An open-source build automation tool focused on flexibility and performance. (Source code and documentation boundled)
+homepage: https://gradle.org
+license: Apache-2.0
+version: 5.6.4
+channels:
+    stable: 5.6.4
+provides:
+    - gradle5
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://services.gradle.org/distributions/gradle-5.6.4-all.zip
+      sha256: abc10bcedb58806e8654210f96031db541bcd2d6fc3161e81cb0572d6a15e821
+      bin:
+        - bin\gradle.bat.exe
+      strip: 1
+test: bin\gradle.bat --version

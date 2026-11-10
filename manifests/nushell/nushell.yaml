@@ -1,0 +1,25 @@
+api: v1
+name: nushell
+kind: app
+display: nushell
+description: nushell
+homepage: https://www.nushell.sh
+license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 0.117.0
+channels:
+    stable: 0.117.0
+provides:
+    - nushell
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/nushell/download/
+      sha256: c99e0c48f8387b0435a9338f985b8fa252d2b0bf774671e0ccb7a94075aaf2f6
+      bin:
+        - nushell
+test: nushell --version
+caveats: 由 Arch 官方仓自动转制（pacman/paru 源）

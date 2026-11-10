@@ -1,0 +1,24 @@
+api: v1
+name: compactgui
+kind: app
+display: compactgui
+description: CompactGUI is a standalone user interface that makes the Windows 10 compact.exe function easier to use.
+homepage: https://github.com/ImminentFate/CompactGUI
+license: GPL-3.0-only
+version: 3.8.0
+channels:
+    stable: 3.8.0
+provides:
+    - compactgui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ImminentFate/CompactGUI/releases/download/v3.8.0/CompactGUI.exe
+      sha256: f21963a68c25b72d59a8431af2e0e98b4a701e87c4f4a47ec4363238d7d384d2
+      bin:
+        - CompactGUI.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall compactgui
+test: CompactGUI --version

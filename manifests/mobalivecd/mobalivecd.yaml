@@ -1,0 +1,24 @@
+api: v1
+name: mobalivecd
+kind: app
+display: mobalivecd
+description: Run a Linux LiveCD on Windows using Qemu emulator.
+homepage: https://www.mobatek.net/labs_mobalivecd.html
+license: GPL-2.0
+version: "2.1"
+channels:
+    stable: "2.1"
+provides:
+    - mobalivecd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.mobatek.net/exes/MobaLiveCD_v2.1.exe#/MobaLiveCD.exe
+      sha256: ddb4adf5dff5656673bf90e37ff397cb0736c68225ae8f4d17ee17f83c723994
+      bin:
+        - mobalivecd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mobalivecd
+test: mobalivecd --version

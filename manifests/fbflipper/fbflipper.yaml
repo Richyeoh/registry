@@ -1,0 +1,21 @@
+api: v1
+name: fbflipper
+kind: app
+display: fbflipper
+description: A desktop debugging platform for mobile developers
+homepage: https://fbflipper.com
+license: MIT
+version: 0.239.0
+channels:
+    stable: 0.239.0
+provides:
+    - fbflipper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/flipper/releases/download/v0.239.0/Flipper-win.zip
+      sha256: ced4e5c8314183d82c80a6801bc4c0e9c58665d2589ec40ef09054320760f5c4
+      bin:
+        - Flipper.exe
+      strip: 1
+test: Flipper --version

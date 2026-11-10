@@ -1,0 +1,21 @@
+api: v1
+name: latexindent
+kind: app
+display: latexindent
+description: Perl script to add indentation to LaTeX files
+homepage: https://github.com/cmhughes/latexindent.pl
+license: GPL-3.0-only
+version: 4.0.3
+channels:
+    stable: 4.0.3
+provides:
+    - latexindent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirrors.ctan.org/support/latexindent.zip
+      sha256: 59c851ec0a8cdc0708116c9ac494068d126ed5e10addb39cddf7696dfe9b8cc5
+      bin:
+        - bin\windows\latexindent.exe
+      strip: 1
+test: bin\windows\latexindent --version

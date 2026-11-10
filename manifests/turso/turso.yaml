@@ -1,0 +1,21 @@
+api: v1
+name: turso
+kind: app
+display: turso
+description: An open-source, SQLite-compatible database written in Rust that lets developers create millions of small, file-based databases for AI agents, multi-tenant SaaS applications, and edge workloads.
+homepage: https://turso.tech
+license: MIT
+version: 0.8.3
+channels:
+    stable: 0.8.3
+provides:
+    - turso
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tursodatabase/turso/releases/download/v0.8.3/turso_cli-x86_64-pc-windows-msvc.zip
+      sha256: ab97196b2c942bccdfb6d1a991f4fa001e4116e0c9ca079215edf06ce97489f6
+      bin:
+        - tursodb.exe
+      strip: 1
+test: tursodb --version

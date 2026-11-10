@@ -1,0 +1,24 @@
+api: v1
+name: tealdeer
+kind: app
+display: tealdeer
+description: A very fast implementation of tldr in Rust.
+homepage: https://tealdeer-rs.github.io/tealdeer/
+license: Apache-2.0|MIT
+version: 1.9.1
+channels:
+    stable: 1.9.1
+provides:
+    - tealdeer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.1/tealdeer-windows-x86_64-msvc.exe#/tldr.exe
+      sha256: f75a3e4b43e7b03d30bac88eccf928af90b8993cd354fe207aec1c643910736f
+      bin:
+        - tldr.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tealdeer
+test: tldr --version

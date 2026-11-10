@@ -1,0 +1,21 @@
+api: v1
+name: rink
+kind: app
+display: rink
+description: A tool for unit conversions, calculations, and dimensionality analysis
+homepage: https://rinkcalc.app/about
+license: MPL-2.0,GPL-3.0-or-later
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - rink
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tiffany352/rink-rs/releases/download/v0.9.0/Rink.CLI.Windows.zip
+      sha256: 9684e738fa169b1f0de88e8b351fb1c2c870986e955276725cf9a9c8f28993ce
+      bin:
+        - rink.exe
+      strip: 1
+test: rink --version

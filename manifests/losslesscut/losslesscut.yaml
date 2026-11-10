@@ -1,0 +1,21 @@
+api: v1
+name: losslesscut
+kind: app
+display: losslesscut
+description: Lossless trimming tool for video and audio files
+homepage: https://losslesscut.app/
+license: GPL-2.0-only
+version: 3.70.2
+channels:
+    stable: 3.70.2
+provides:
+    - losslesscut
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mifi/lossless-cut/releases/download/v3.70.2/LosslessCut-win-x64.7z
+      sha256: 1740c5f17b952c04cf1b1612cf32f56c68a88105c045199526c7ea9678d309b0
+      bin:
+        - LosslessCut.exe
+      strip: 1
+test: LosslessCut --version

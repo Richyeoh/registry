@@ -1,0 +1,21 @@
+api: v1
+name: sdl2
+kind: app
+display: sdl2
+description: SDL (Simple DirectMedia Layer) is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+homepage: https://www.libsdl.org
+license: Zlib
+version: 2.32.10
+channels:
+    stable: 2.32.10
+provides:
+    - sdl2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip
+      sha256: af347939395a58b365846aaea27391e69f9ec9d4dd650d6ac40802159b418a6e
+      bin:
+        - sdl2.exe
+      strip: 1
+test: sdl2 --version

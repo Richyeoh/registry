@@ -1,0 +1,24 @@
+api: v1
+name: ffstudio
+kind: app
+display: ffstudio
+description: Graphical User Interface for FFmpeg with powerful features.
+homepage: https://ffstudio.app
+license: GPL-3.0-only
+version: 0.2.8
+channels:
+    stable: 0.2.8
+provides:
+    - ffstudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Draver93/ff-studio/releases/download/v0.2.8/ffstudio-0.2.8-x86_64-pc-windows-msvc.msi
+      sha256: 66244c0469762252e09a06fe4535217bd6a5c550b27f2175849d62ba875e074c
+      bin:
+        - ffstudio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ffstudio
+test: ffstudio --version

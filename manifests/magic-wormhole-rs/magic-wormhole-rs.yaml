@@ -1,0 +1,21 @@
+api: v1
+name: magic-wormhole-rs
+kind: app
+display: magic-wormhole-rs
+description: Securely transfer data between computers. Rust implementation of Magic Wormhole, with new features and enhancements
+homepage: https://github.com/magic-wormhole/magic-wormhole.rs
+license: EUPL-1.2
+version: 0.8.1
+channels:
+    stable: 0.8.1
+provides:
+    - magic-wormhole-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/magic-wormhole/magic-wormhole.rs/releases/download/0.8.1/magic-wormhole-cli-x86_64-pc-windows-gnu.tgz
+      sha256: 67898966c1d88778f04ab77b6bdedc98ec35de0b11c5410e32b85aaa47b08c66
+      bin:
+        - wormhole-rs.exe
+      strip: 1
+test: wormhole-rs --version

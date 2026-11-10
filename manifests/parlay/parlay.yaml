@@ -1,0 +1,21 @@
+api: v1
+name: parlay
+kind: app
+display: parlay
+description: Enrich SBOMs with data from third party services.
+homepage: https://github.com/snyk/parlay
+license: Apache-2.0
+version: 0.11.0
+channels:
+    stable: 0.11.0
+provides:
+    - parlay
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/snyk/parlay/releases/download/v0.11.0/parlay_Windows_x86_64.zip
+      sha256: 51e5fee301181cffb8dd1fad8757bdc9328990ad7c73f4d700b06591b7757599
+      bin:
+        - parlay.exe
+      strip: 1
+test: parlay --version

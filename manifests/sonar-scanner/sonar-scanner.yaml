@@ -1,0 +1,21 @@
+api: v1
+name: sonar-scanner
+kind: app
+display: sonar-scanner
+description: Source code scanner for SonarQube analyzer.
+homepage: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+license: LGPL-3.0-only
+version: 8.4.0.16527
+channels:
+    stable: 8.4.0.16527
+provides:
+    - sonar-scanner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-8.4.0.16527.zip
+      sha256: 0bc442965fe778693e714234b75ad9ee8667d6fe53e90556f86eb215fa4073a5
+      bin:
+        - bin\sonar-scanner.bat.exe
+      strip: 1
+test: bin\sonar-scanner.bat --version

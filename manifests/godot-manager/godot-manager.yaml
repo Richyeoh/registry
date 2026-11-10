@@ -1,0 +1,21 @@
+api: v1
+name: godot-manager
+kind: app
+display: godot-manager
+description: A project, version, and addons/plugins manager for Godot.
+homepage: https://github.com/eumario/godot-manager
+license: MIT
+version: 0.2.9
+channels:
+    stable: 0.2.9
+provides:
+    - godot-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/eumario/godot-manager/releases/download/v0.2.9/godotmanager-windows-v0.2.9.zip
+      sha256: b268dacf7f00d9e87e2013569e14888a1e0edbc31afcfd0134f7a0a8aa6db3c5
+      bin:
+        - godot-manager.exe
+      strip: 1
+test: godot-manager --version

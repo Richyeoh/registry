@@ -1,0 +1,21 @@
+api: v1
+name: pyzo
+kind: app
+display: pyzo
+description: The Interactive editor for scientific Python
+homepage: https://pyzo.org/
+license: BSD-3-Clause
+version: 4.22.0
+channels:
+    stable: 4.22.0
+provides:
+    - pyzo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pyzo/pyzo/releases/download/v4.22.0/pyzo-4.22.0-win64.zip
+      sha256: 9d5cb456a3a306cc4ea273f60274349b1e8014377fc2333815fdc6d36a938ad7
+      bin:
+        - pyzo.exe
+      strip: 1
+test: pyzo --version

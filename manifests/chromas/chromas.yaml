@@ -1,0 +1,24 @@
+api: v1
+name: chromas
+kind: app
+display: chromas
+description: Free trace viewer for simple DNA sequencing projects (Free version, does not support assembly of multiple sequences)
+homepage: https://technelysium.com.au/wp/chromas/
+license: Freeware
+version: 2.6.6
+channels:
+    stable: 2.6.6
+provides:
+    - chromas
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.technelysium.com.au/Chromas266Setup.exe
+      sha256: 4d36e23073d8c7cbbee58fdcb57e0276345fd1856e536e43ff3c57a2fd4bccd2
+      bin:
+        - Chromas.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall chromas
+test: Chromas --version

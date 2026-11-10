@@ -1,0 +1,21 @@
+api: v1
+name: jbang
+kind: app
+display: jbang
+description: The tool to run java, jar or jsh files with automatic dependency fetching, immediate compilation and execution
+homepage: https://jbang.dev/
+license: MIT
+version: 0.143.0
+channels:
+    stable: 0.143.0
+provides:
+    - jbang
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jbangdev/jbang/releases/download/v0.143.0/jbang-0.143.0.zip
+      sha256: 301c5ef16a7b2a4725515477b03f11f491501eb6db57adfa59393433d4d8f3b2
+      bin:
+        - jbang.exe
+      strip: 1
+test: jbang --version

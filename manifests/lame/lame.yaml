@@ -1,0 +1,21 @@
+api: v1
+name: lame
+kind: app
+display: lame
+description: High quality MPEG Audio Layer III (MP3) encoder
+homepage: https://lame.sourceforge.io/
+license: LGPL-2.0-only
+version: 4.0-q4-patched
+channels:
+    stable: 4.0-q4-patched
+provides:
+    - lame
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.rarewares.org/files/mp3/lame-4.0-x64-q4-patched.zip
+      sha256: c900843218ae13b1ddfc334c705298be4503d8a1e9db6bb3d03458dd1c1f1157
+      bin:
+        - lame.exe
+      strip: 1
+test: lame --version

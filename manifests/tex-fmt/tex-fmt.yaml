@@ -1,0 +1,21 @@
+api: v1
+name: tex-fmt
+kind: app
+display: tex-fmt
+description: An extremely fast LaTeX formatter written in Rust.
+homepage: https://github.com/WGUNDERWOOD/tex-fmt
+license: MIT
+version: 0.5.7
+channels:
+    stable: 0.5.7
+provides:
+    - tex-fmt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WGUNDERWOOD/tex-fmt/releases/download/v0.5.7/tex-fmt-x86_64-windows.zip
+      sha256: 807b6df5bef297eb8c44f79562bf9917b2e87f41e8e9c6b7f27e2df3f8cc9c98
+      bin:
+        - tex-fmt.exe
+      strip: 1
+test: tex-fmt --version

@@ -1,0 +1,22 @@
+api: v1
+name: jadx
+kind: app
+display: jadx
+description: Dex to Java decompiler
+homepage: https://github.com/skylot/jadx
+license: Apache-2.0
+version: 1.5.6
+channels:
+    stable: 1.5.6
+provides:
+    - jadx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/skylot/jadx/releases/download/v1.5.6/jadx-1.5.6.zip
+      sha256: 545ea2be9c242511bc145755cf4bda2485ade42966e096f8b4d3da2a230e8974
+      bin:
+        - bin\jadx.bat.exe
+        - bin\jadx-gui.bat.exe
+      strip: 1
+test: bin\jadx.bat --version

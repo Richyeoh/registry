@@ -1,0 +1,23 @@
+api: v1
+name: xdelta
+kind: app
+display: xdelta
+description: Xdelta version 3 is a C library and command-line tool for delta compression using VCDIFF/RFC 3284 streams.
+homepage: https://github.com/jmacd/xdelta
+license: Apache-2.0
+version: 3.2.2
+channels:
+    stable: 3.2.2
+provides:
+    - xdelta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jmacd/xdelta/releases/download/v3.2.2/xdelta3-3.2.2-windows-x86_64.zip
+      sha256: d48f7651d86b78fdca397057b46601f89131f37219675df736db70af44ec3379
+      bin:
+        - xdelta3.exe
+        - xdelta3.exe
+        - xdelta3decode.exe
+      strip: 1
+test: xdelta3 --version

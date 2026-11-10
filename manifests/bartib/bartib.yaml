@@ -1,0 +1,46 @@
+api: v1
+name: bartib
+kind: app
+display: bartib
+description: Simple timetracker for the command-line
+homepage: https://github.com/nikolassv/bartib
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - bartib
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bartib/blobs/sha256:b0ae657c86becd8b322873503cf52457afc6ddf51e90b7937db03f1aec103f51
+      sha256: b0ae657c86becd8b322873503cf52457afc6ddf51e90b7937db03f1aec103f51
+      bin:
+        - bartib
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bartib/blobs/sha256:42242e50705c778c366ba844a712b7ed298e59515f03bbfe990c59e43372438f
+      sha256: 42242e50705c778c366ba844a712b7ed298e59515f03bbfe990c59e43372438f
+      bin:
+        - bartib
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/bartib/blobs/sha256:67345dd0da6698d9c95b8ed43a394fa960574f29f3d45fd1d548561d559c34b6
+      sha256: 67345dd0da6698d9c95b8ed43a394fa960574f29f3d45fd1d548561d559c34b6
+      bin:
+        - bartib
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/bartib/blobs/sha256:c652215df17112bc66caf38b274458b81c97a6d22ca7b91cf4fbe6ad908d3328
+      sha256: c652215df17112bc66caf38b274458b81c97a6d22ca7b91cf4fbe6ad908d3328
+      bin:
+        - bartib
+      strip: 1
+test: bartib --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

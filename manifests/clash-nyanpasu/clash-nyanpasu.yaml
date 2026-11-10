@@ -1,0 +1,21 @@
+api: v1
+name: clash-nyanpasu
+kind: app
+display: clash-nyanpasu
+description: Clash Nyanpasu! (∠・ω< )⌒☆ An opinionated Clash GUI based on Tauri.
+homepage: https://github.com/libnyanpasu/clash-nyanpasu
+license: GPL-3.0-only
+version: 2.0.1
+channels:
+    stable: 2.0.1
+provides:
+    - clash-nyanpasu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libnyanpasu/clash-nyanpasu/releases/download/v2.0.1/Clash.Nyanpasu_2.0.1_x86_64_portable.zip
+      sha256: ab8700c3ad48a8ee29be043a27543d2e0f47e639ecbf7d8960fb6abe6989df1b
+      bin:
+        - clash-nyanpasu.exe
+      strip: 1
+test: clash-nyanpasu --version

@@ -1,0 +1,38 @@
+api: v1
+name: ammonite
+kind: app
+display: ammonite
+description: 'Ammonite lets you use the Scala language for scripting purposes: in the REPL, as scripts, as a library, or as a standalone systems shell.'
+homepage: https://ammonite.io
+license: MIT
+keywords:
+    - brew
+    - cask
+version: 3.0.9
+channels:
+    stable: 3.0.9
+provides:
+    - ammonite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/com-lihaoyi/Ammonite/releases/download/3.0.9/2.12-3.0.9#/amm.bat
+      sha256: 80cc934033e61ec97a6f70810ac2076fff33d85c0bdfe4f1bb3d2c88582f4b0b
+      bin:
+        - amm.bat.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://www.soma-zone.com/download/files/Ammonite-1.30.tar.xz
+      sha256: 0d5bc4d5042b240640331047a24dfeeb139adc4b89ba0e8f7601cd95ffaf65f7
+      bin:
+        - ammonite
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://www.soma-zone.com/download/files/Ammonite-1.30.tar.xz
+      sha256: 0d5bc4d5042b240640331047a24dfeeb139adc4b89ba0e8f7601cd95ffaf65f7
+      bin:
+        - ammonite
+      strip: 1
+test: amm.bat --version

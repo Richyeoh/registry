@@ -1,0 +1,24 @@
+api: v1
+name: electron-cash
+kind: app
+display: electron-cash
+description: A Bitcoin Cash SPV Wallet
+homepage: https://electroncash.org
+license: MIT
+version: 4.4.6
+channels:
+    stable: 4.4.6
+provides:
+    - electron-cash
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Electron-Cash/Electron-Cash/releases/download/4.4.6/Electron-Cash-4.4.6-x86_64-portable.exe#/Electron-Cash.exe
+      sha256: 1258fc34f6403bf3d28fbdcc9f08023005af066fa8071d8e12d682a9f3ad368a
+      bin:
+        - electron-cash.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall electron-cash
+test: electron-cash --version

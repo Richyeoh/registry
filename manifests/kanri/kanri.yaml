@@ -1,0 +1,24 @@
+api: v1
+name: kanri
+kind: app
+display: kanri
+description: Modern offline Kanban board app built with simplicity and user experience in mind.
+homepage: https://www.kanriapp.com
+license: GPL-3.0
+version: 0.8.2
+channels:
+    stable: 0.8.2
+provides:
+    - kanri
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trobonox/kanri/releases/download/app-v0.8.2/kanri_0.8.2_x64_en-US.msi
+      sha256: 61aa3d12418c09afd75736f4b0cb665373b61782142f037ee309cd586f7d43c9
+      bin:
+        - kanri.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kanri
+test: kanri --version

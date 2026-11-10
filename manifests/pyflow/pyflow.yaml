@@ -1,0 +1,21 @@
+api: v1
+name: pyflow
+kind: app
+display: pyflow
+description: A modern Python installation and dependency manager
+homepage: https://github.com/David-OConnor/pyflow
+license: MIT
+version: 0.3.1
+channels:
+    stable: 0.3.1
+provides:
+    - pyflow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/David-OConnor/pyflow/releases/download/0.3.1/pyflow.zip
+      sha256: 66f38dccd246c86777919c0b0d1ca519a63e253d0fd64e3f8a2d143c2c7901f0
+      bin:
+        - pyflow.exe
+      strip: 1
+test: pyflow --version

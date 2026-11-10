@@ -1,0 +1,21 @@
+api: v1
+name: zaproxy
+kind: app
+display: zaproxy
+description: Integrated penetration testing tool for finding vulnerabilities in web applications
+homepage: https://www.zaproxy.org
+license: Apache-2.0
+version: 2.17.0
+channels:
+    stable: 2.17.0
+provides:
+    - zaproxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2.17.0_Crossplatform.zip
+      sha256: 94c8f767b1c2e94f0db66b3ae56514d5e3f5a728ee1b6c798e0c8fe2d61fbff0
+      bin:
+        - zap.bat.exe
+      strip: 1
+test: zap.bat --version

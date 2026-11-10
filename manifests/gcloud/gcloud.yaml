@@ -1,0 +1,25 @@
+api: v1
+name: gcloud
+kind: app
+display: gcloud
+description: Command-line interface for Google Cloud Platform products and services.
+homepage: https://cloud.google.com/sdk/
+license: Proprietary
+version: 593.0.0
+channels:
+    stable: 593.0.0
+provides:
+    - gcloud
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-593.0.0-windows-x86_64-bundled-python.zip#/dl.zip_
+      sha256: 8fbdc9d644ffdd25a7f515c2643edc87100d3d48be9d3aa635454f6d7fb6a53c
+      bin:
+        - bin\gcloud.cmd.exe
+        - bin\gsutil.cmd.exe
+        - bin\bq.cmd.exe
+        - bin\docker-credential-gcloud.cmd.exe
+        - bin\git-credential-gcloud.cmd.exe
+      strip: 1
+test: bin\gcloud.cmd --version

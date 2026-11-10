@@ -1,0 +1,21 @@
+api: v1
+name: cuetools
+kind: app
+display: cuetools
+description: A suite of tools for lossless audio/CUE sheet format conversion and verification.
+homepage: http://cue.tools/wiki/Main_Page
+license: GPL-2.0-or-later
+version: 2.2.6
+channels:
+    stable: 2.2.6
+provides:
+    - cuetools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gchudov/cuetools.net/releases/download/v2.2.6/CUETools_2.2.6.zip
+      sha256: 103b209502935c911f2162a5babfb21550476413aee13d88187e39783a2a2e32
+      bin:
+        - CUETools.Ripper.Console.exe
+      strip: 1
+test: CUETools.Ripper.Console --version

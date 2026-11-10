@@ -1,0 +1,24 @@
+api: v1
+name: whepfrom
+kind: app
+display: whepfrom
+description: WHEP to RTP/RTSP tool.
+homepage: https://live777.pages.dev
+license: Unknown
+version: 0.10.2
+channels:
+    stable: 0.10.2
+provides:
+    - whepfrom
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-x86_64-pc-windows-msvc.exe#/whepfrom.exe
+      sha256: 2543c11799589b4d7103bb74f1fdd846219329f5827d393b7876c85b097b698e
+      bin:
+        - whepfrom.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall whepfrom
+test: whepfrom --version

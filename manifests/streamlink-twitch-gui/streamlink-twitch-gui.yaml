@@ -1,0 +1,21 @@
+api: v1
+name: streamlink-twitch-gui
+kind: app
+display: streamlink-twitch-gui
+description: A multi platform Twitch.tv browser for Streamlink
+homepage: https://streamlink.github.io/streamlink-twitch-gui/
+license: MIT
+version: 2.5.3
+channels:
+    stable: 2.5.3
+provides:
+    - streamlink-twitch-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.5.3/streamlink-twitch-gui-v2.5.3-win64.zip
+      sha256: cc0eda3090a215abe23ca631cad91f247417677fc22fbc7f533ee5508bb42182
+      bin:
+        - streamlink-twitch-gui.exe
+      strip: 1
+test: streamlink-twitch-gui --version

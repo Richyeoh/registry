@@ -1,0 +1,21 @@
+api: v1
+name: chromaprint
+kind: app
+display: chromaprint
+description: fpcalc binary from Chromaprint for generating audio fingerprints used by AcoustID
+homepage: https://acoustid.org/chromaprint
+license: LGPL-2.1-or-later
+version: 1.6.2
+channels:
+    stable: 1.6.2
+provides:
+    - chromaprint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/acoustid/chromaprint/releases/download/v1.6.2/chromaprint-fpcalc-1.6.2-windows-x86_64.zip
+      sha256: b74369726676670af3ab0eadff45f960cf969fdf4a87a971ba37eaf8d530e874
+      bin:
+        - fpcalc.exe
+      strip: 1
+test: fpcalc --version

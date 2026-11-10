@@ -1,0 +1,21 @@
+api: v1
+name: imhex
+kind: app
+display: imhex
+description: Hex editor
+homepage: https://github.com/WerWolv/ImHex
+license: GPL-2.0-only
+version: 1.38.1
+channels:
+    stable: 1.38.1
+provides:
+    - imhex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WerWolv/ImHex/releases/download/v1.38.1/imhex-1.38.1-Windows-Portable-x86_64.zip
+      sha256: 32520e57712894bc8304c4b01553223e7dda25852326184f99dfd72a09a80187
+      bin:
+        - imhex.exe
+      strip: 1
+test: imhex --version

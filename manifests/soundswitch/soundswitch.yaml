@@ -1,0 +1,24 @@
+api: v1
+name: soundswitch
+kind: app
+display: soundswitch
+description: Switch your default playback devices and/or recording devices using simple hotkeys
+homepage: https://soundswitch.aaflalo.me/
+license: GPL-2.0-or-later
+version: 7.4.1
+channels:
+    stable: 7.4.1
+provides:
+    - soundswitch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Belphemur/SoundSwitch/releases/download/v7.4.1/SoundSwitch_v7.4.1.0_Release_Installer.exe
+      sha256: 52a694c9fbcc41125c6dcce090bd3352a976eaddca5152f401723aec160f1b2c
+      bin:
+        - soundswitch.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall soundswitch
+test: soundswitch --version

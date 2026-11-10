@@ -1,0 +1,24 @@
+api: v1
+name: rio
+kind: app
+display: rio
+description: A hardware-accelerated GPU terminal emulator focusing to run in desktops and browsers
+homepage: https://github.com/raphamorim/rio
+license: MIT
+version: 0.5.29
+channels:
+    stable: 0.5.29
+provides:
+    - rio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/raphamorim/rio/releases/download/v0.5.29/Rio-portable-x86_64.exe#/rio.exe
+      sha256: a245f6e0bf980d19e8acfc84552b542038a4529ed97ef1ddcad7249e4c780f9e
+      bin:
+        - rio.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rio
+test: rio --version

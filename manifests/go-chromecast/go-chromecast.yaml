@@ -1,0 +1,21 @@
+api: v1
+name: go-chromecast
+kind: app
+display: go-chromecast
+description: CLI for controlling Google Chromecast devices.
+homepage: https://github.com/vishen/go-chromecast
+license: Apache-2.0
+version: 0.3.4
+channels:
+    stable: 0.3.4
+provides:
+    - go-chromecast
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vishen/go-chromecast/releases/download/v0.3.4/go-chromecast_Windows_x86_64.zip
+      sha256: 95424f0c5d87cd696f4ad77c917025682bdbd90400fa611f1914b5fb26bd61db
+      bin:
+        - go-chromecast.exe
+      strip: 1
+test: go-chromecast --version

@@ -1,0 +1,24 @@
+api: v1
+name: butane
+kind: app
+display: butane
+description: Translates Butane configs into Ignition configs.
+homepage: https://coreos.github.io/butane/
+license: Apache-2.0
+version: 0.29.0
+channels:
+    stable: 0.29.0
+provides:
+    - butane
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/coreos/butane/releases/download/v0.29.0/butane-x86_64-pc-windows-gnu.exe#/butane.exe
+      sha256: b4966a4c4dbe4dd66de3ab593f557c8030c8a0b945285d83ae7930e72b05a678
+      bin:
+        - butane.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall butane
+test: butane --version

@@ -1,0 +1,21 @@
+api: v1
+name: electronmail
+kind: app
+display: electronmail
+description: An Electron-based unofficial desktop client for ProtonMail.
+homepage: https://github.com/vladimiry/ElectronMail
+license: GPL-3.0-only
+version: 5.3.10
+channels:
+    stable: 5.3.10
+provides:
+    - electronmail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.10/electron-mail-5.3.10-windows-x64-nsis-installer.exe#/dl.7z
+      sha256: 1b1ab30a86d21335d4e67cf807f0b808c1be2aa633d4dbaca1f9402de62ddfcb
+      bin:
+        - electronmail.exe
+      strip: 1
+test: electronmail --version

@@ -1,0 +1,21 @@
+api: v1
+name: chromedriver
+kind: app
+display: chromedriver
+description: An open source tool for automated testing of webapps across many browsers
+homepage: https://chromedriver.chromium.org/
+license: BSD-3-Clause
+version: 157.0.8103.50
+channels:
+    stable: 157.0.8103.50
+provides:
+    - chromedriver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.50/win64/chromedriver-win64.zip
+      sha256: 408d7da374064d0b01f1918d898b983029294f49be8bb0c23729920390e61376
+      bin:
+        - chromedriver.exe
+      strip: 1
+test: chromedriver --version

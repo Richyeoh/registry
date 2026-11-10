@@ -1,0 +1,46 @@
+api: v1
+name: awsweeper
+kind: app
+display: awsweeper
+description: CLI tool for cleaning your AWS account
+homepage: https://github.com/jckuester/awsweeper/
+license: MPL-2.0
+keywords:
+    - brew
+    - homebrew
+version: 0.12.0
+channels:
+    stable: 0.12.0
+provides:
+    - awsweeper
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/awsweeper/blobs/sha256:54bc928c085313ad7b2cd353bbf4b7e49df992527526348ee0eb01437f9ca87b
+      sha256: 54bc928c085313ad7b2cd353bbf4b7e49df992527526348ee0eb01437f9ca87b
+      bin:
+        - awsweeper
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awsweeper/blobs/sha256:57cca26932b44660312b377bca14d2f3fdde698d215c127f4be5740304cb61ca
+      sha256: 57cca26932b44660312b377bca14d2f3fdde698d215c127f4be5740304cb61ca
+      bin:
+        - awsweeper
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/awsweeper/blobs/sha256:81776b638e309f839a362f70ba7d0621c2ca9e80f6472f334c5472049cbc3374
+      sha256: 81776b638e309f839a362f70ba7d0621c2ca9e80f6472f334c5472049cbc3374
+      bin:
+        - awsweeper
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awsweeper/blobs/sha256:6509b1bdbe77f14394f17818f3956b0bde26493eb49f1ad0088f4873cec209d9
+      sha256: 6509b1bdbe77f14394f17818f3956b0bde26493eb49f1ad0088f4873cec209d9
+      bin:
+        - awsweeper
+      strip: 1
+test: awsweeper --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

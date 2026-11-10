@@ -1,0 +1,21 @@
+api: v1
+name: designcraft
+kind: app
+display: designcraft
+description: Page layout and publishing; an open-source, clean-room reimplementation of Adobe InDesign, rebuilt in pure Rust
+homepage: https://getartcraft.com/apps/designcraft
+license: MIT|Apache-2.0
+version: 0.18.0
+channels:
+    stable: 0.18.0
+provides:
+    - designcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/designcraft/releases/download/v0.18.0/designcraft-0.18.0-windows-x64-portable.zip
+      sha256: 380ae0da561aea64946fa0f5242deed2b676f11e1755ceeb4e42042d418fdf3b
+      bin:
+        - designcraft-cli.exe
+      strip: 1
+test: designcraft-cli --version

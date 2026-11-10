@@ -1,0 +1,21 @@
+api: v1
+name: wsl2-distro-manager
+kind: app
+display: wsl2-distro-manager
+description: A quick way to manage your WSL instances with a GUI.
+homepage: https://github.com/bostrot/wsl2-distro-manager
+license: GPL-3.0-or-later
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - wsl2-distro-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bostrot/wsl2-distro-manager/releases/download/v2.5.0/wsl2-distro-manager-v2.5.0.zip
+      sha256: a4655776912bd135e32bf7f8e9d27c39554bf91a0c5a57f8fff79686cf6de1fc
+      bin:
+        - wsl2-distro-manager.exe
+      strip: 1
+test: wsl2-distro-manager --version

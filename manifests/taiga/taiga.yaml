@@ -1,0 +1,21 @@
+api: v1
+name: taiga
+kind: app
+display: taiga
+description: Detects anime videos on computer and synchronizes progress with online services.
+homepage: https://taiga.moe/
+license: GPL-3.0-only
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - taiga
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/erengy/taiga/releases/download/v1.4.1/TaigaSetup_1.4.1.exe#/dl.7z
+      sha256: 747d3b22e8ea20ca8153d6102c3c10a7205ea3791a3a651e1addf6a22d498f53
+      bin:
+        - Taiga.exe
+      strip: 1
+test: Taiga --version

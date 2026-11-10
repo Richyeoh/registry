@@ -1,0 +1,21 @@
+api: v1
+name: clumsy
+kind: app
+display: clumsy
+description: Broken network simulator
+homepage: https://jagt.github.io/clumsy/
+license: MIT
+version: "0.3"
+channels:
+    stable: "0.3"
+provides:
+    - clumsy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jagt/clumsy/releases/download/0.3/clumsy-0.3-win64-a.zip
+      sha256: f50dc734148815831c67d9fc2c246c22d421c53dcea51e26eee905b0b2806c27
+      bin:
+        - clumsy.exe
+      strip: 1
+test: clumsy --version

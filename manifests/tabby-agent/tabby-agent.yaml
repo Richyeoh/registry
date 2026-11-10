@@ -1,0 +1,21 @@
+api: v1
+name: tabby-agent
+kind: app
+display: tabby-agent
+description: Self-hosted AI coding assistant.
+homepage: https://tabbyml.com
+license: Apache-2.0
+version: 0.32.0
+channels:
+    stable: 0.32.0
+provides:
+    - tabby-agent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TabbyML/tabby/releases/download/v0.32.0/tabby_x86_64-windows-msvc-cpu.zip
+      sha256: d492b1e49433fcdbe5be954ae54adf56a3f3cc20f8a824fa957b992b5ed3ac78
+      bin:
+        - tabby.exe
+      strip: 1
+test: tabby --version

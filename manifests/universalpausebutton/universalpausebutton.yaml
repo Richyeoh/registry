@@ -1,0 +1,21 @@
+api: v1
+name: universalpausebutton
+kind: app
+display: universalpausebutton
+description: A pause button that pauses the unpausable. Handy for video game cut scenes especially
+homepage: https://github.com/ryanries/UniversalPauseButton
+license: MIT
+version: 1.1.5
+channels:
+    stable: 1.1.5
+provides:
+    - universalpausebutton
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ryanries/UniversalPauseButton/releases/download/v1.1.5/UniversalPauseButton_v1.1.5.zip
+      sha256: bdf7c72c29de2bd53de35671b336c63ecf74bc243116df4dec19dbd775a6d7d0
+      bin:
+        - UniversalPauseButton.exe
+      strip: 1
+test: UniversalPauseButton --version

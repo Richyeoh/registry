@@ -1,0 +1,21 @@
+api: v1
+name: drone
+kind: app
+display: drone
+description: A self-service Continuous Delivery platform for busy development teams.
+homepage: https://drone.io/
+license: Apache-2.0
+version: 1.9.0
+channels:
+    stable: 1.9.0
+provides:
+    - drone
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/harness/drone-cli/releases/download/v1.9.0/drone_windows_amd64.tar.gz
+      sha256: 1762a18183d8245a857a89fcdf87bf143f654e876a6be7608a571c72e8a74549
+      bin:
+        - drone.exe
+      strip: 1
+test: drone --version

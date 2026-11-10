@@ -1,0 +1,21 @@
+api: v1
+name: super-productivity
+kind: app
+display: super-productivity
+description: To-do list & time tracker for programmers and other digital workers with Jira, Github, and Gitlab integration
+homepage: https://super-productivity.com
+license: MIT
+version: 20.0.0
+channels:
+    stable: 20.0.0
+provides:
+    - super-productivity
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/super-productivity/super-productivity/releases/download/v20.0.0/superProductivity-x64.exe#/dl.7z
+      sha256: ee53b488383dfce9cffd35f3ccf29a49811dd8218d3ff84aa7ead908f56193bc
+      bin:
+        - super-productivity.exe
+      strip: 1
+test: super-productivity --version

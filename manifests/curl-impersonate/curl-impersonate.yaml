@@ -1,0 +1,57 @@
+api: v1
+name: curl-impersonate
+kind: app
+display: curl-impersonate
+description: A special build of curl that can impersonate Chrome & Firefox
+homepage: https://curl-impersonate.readthedocs.io
+license: MIT
+version: 2.3.2
+channels:
+    stable: 2.3.2
+provides:
+    - curl-impersonate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lexiforest/curl-impersonate/releases/download/v2.3.2/curl-impersonate-v2.3.2.x86_64-win32.tar.gz
+      sha256: 94affc91c64991552403d427cf0e6656ee74f85dcbe58c0ba389f540819f40db
+      bin:
+        - curl-impersonate.exe
+        - curl_chrome99.bat.exe
+        - curl_chrome99_android.bat.exe
+        - curl_chrome100.bat.exe
+        - curl_chrome101.bat.exe
+        - curl_chrome104.bat.exe
+        - curl_chrome107.bat.exe
+        - curl_chrome110.bat.exe
+        - curl_chrome116.bat.exe
+        - curl_chrome119.bat.exe
+        - curl_chrome120.bat.exe
+        - curl_chrome123.bat.exe
+        - curl_chrome124.bat.exe
+        - curl_chrome131.bat.exe
+        - curl_chrome131_android.bat.exe
+        - curl_chrome133a.bat.exe
+        - curl_chrome136.bat.exe
+        - curl_chrome142.bat.exe
+        - curl_chrome145.bat.exe
+        - curl_chrome146.bat.exe
+        - curl_edge99.bat.exe
+        - curl_edge101.bat.exe
+        - curl_firefox133.bat.exe
+        - curl_firefox135.bat.exe
+        - curl_firefox144.bat.exe
+        - curl_firefox147.bat.exe
+        - curl_safari153.bat.exe
+        - curl_safari155.bat.exe
+        - curl_safari170.bat.exe
+        - curl_safari172_ios.bat.exe
+        - curl_safari180.bat.exe
+        - curl_safari180_ios.bat.exe
+        - curl_safari184.bat.exe
+        - curl_safari184_ios.bat.exe
+        - curl_safari260.bat.exe
+        - curl_safari260_ios.bat.exe
+        - curl_tor145.bat.exe
+      strip: 1
+test: curl-impersonate --version

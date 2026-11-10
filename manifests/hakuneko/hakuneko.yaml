@@ -1,0 +1,21 @@
+api: v1
+name: hakuneko
+kind: app
+display: hakuneko
+description: Manga and anime downloader
+homepage: https://hakuneko.download
+license: Unlicense
+version: 6.1.7
+channels:
+    stable: 6.1.7
+provides:
+    - hakuneko
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/manga-download/hakuneko/releases/download/v6.1.7/hakuneko-desktop_6.1.7_windows-portable_amd64.zip
+      sha256: 170e50b5e95a945fac9172f2ab7f2b8015c486f91468a6311593ac33075073f2
+      bin:
+        - hakuneko.exe
+      strip: 1
+test: hakuneko --version

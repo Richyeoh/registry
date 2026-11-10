@@ -1,0 +1,21 @@
+api: v1
+name: kusion
+kind: app
+display: kusion
+description: 'Platform Engineering Engine: Deliver intentions to Kubernetes and Clouds'
+homepage: https://kusionstack.io
+license: Apache-2.0
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - kusion
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/KusionStack/kusion/releases/download/v0.15.0/kusion_0.15.0_windows_amd64.zip
+      sha256: d125bee2bfb5b5e3a468135da058696d843aca70c8a2bfec12b9582c69dafb7d
+      bin:
+        - kusion.exe
+      strip: 1
+test: kusion --version

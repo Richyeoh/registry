@@ -1,0 +1,23 @@
+api: v1
+name: autoit
+kind: app
+display: autoit
+description: Scripting language designed for automating the Windows GUI and general scripting
+homepage: https://www.autoitscript.com/site/autoit/
+license: Unknown
+version: 3.3.18.0
+channels:
+    stable: 3.3.18.0
+provides:
+    - autoit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.autoitscript.com/files/autoit3/autoit-v3.zip
+      sha256: ceb666a993a9f62621c3a0d4ee602774b2e7f543de1f08ec0380632ee3f89beb
+      bin:
+        - AutoIt3_x64.exe
+        - Aut2Exe\Aut2exe_x64.exe
+        - Au3Check.exe
+      strip: 1
+test: AutoIt3_x64 --version

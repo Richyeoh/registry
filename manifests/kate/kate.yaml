@@ -1,0 +1,21 @@
+api: v1
+name: kate
+kind: app
+display: kate
+description: Multi-document editor
+homepage: https://kate-editor.org
+license: LGPL-2.0-only
+version: 26.08-12840
+channels:
+    stable: 26.08-12840
+provides:
+    - kate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.kde.org/ci-builds/utilities/kate/release-26.08/windows/kate-release_26.08-12840-windows-cl-msvc2022-x86_64.7z
+      sha256: 2c5ddd51fbc0d9cd0c557dccfa7fd07171335d27bd4b741d7f2e19d61273a2aa
+      bin:
+        - bin\kate.exe
+      strip: 1
+test: bin\kate --version

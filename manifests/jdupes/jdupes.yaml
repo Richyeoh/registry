@@ -1,0 +1,21 @@
+api: v1
+name: jdupes
+kind: app
+display: jdupes
+description: A powerful duplicate file finder
+homepage: https://codeberg.org/jbruchon/jdupes
+license: MIT
+version: 1.31.3
+channels:
+    stable: 1.31.3
+provides:
+    - jdupes
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://codeberg.org/jbruchon/jdupes/releases/download/v1.31.3/jdupes-1.31.3-win64.zip
+      sha256: 2e57f2c11b45b87a0bc04ab1f346d3366a4525e79a1e8f0e0060eca5292d2ab0
+      bin:
+        - jdupes.exe
+      strip: 1
+test: jdupes --version

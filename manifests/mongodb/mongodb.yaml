@@ -1,0 +1,25 @@
+api: v1
+name: mongodb
+kind: app
+display: mongodb
+description: A document database with the scalability and flexibility.
+homepage: https://www.mongodb.org
+license: Unknown
+version: 9.0.4
+channels:
+    stable: 9.0.4
+provides:
+    - mongodb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-9.0.4-signed.msi
+      sha256: 914085f58aaa9699d3bee720ef660db6bf83c478f4afa2aa40909ea773e5d476
+      bin:
+        - bin\mongod.exe
+        - bin\mongos.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mongodb
+test: bin\mongod --version

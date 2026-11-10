@@ -1,0 +1,21 @@
+api: v1
+name: handy
+kind: app
+display: handy
+description: A free, open source, and extensible speech-to-text application that works completely offline.
+homepage: https://handy.computer/
+license: MIT
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - handy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cjpais/Handy/releases/download/v0.10.0/Handy_0.10.0_x64-setup.exe#/dl.7z
+      sha256: d4c02386d6b4b2a8ef8e53a7ce5c6c417d554005e91b3529def3920e0e786d03
+      bin:
+        - handy.exe
+      strip: 1
+test: handy --version

@@ -1,0 +1,21 @@
+api: v1
+name: streamlabs-obs
+kind: app
+display: streamlabs-obs
+description: Open Broadcaster Software for Gamers
+homepage: https://streamlabs.com/streamlabs-obs
+license: GPL-3.0-only
+version: 1.22.4
+channels:
+    stable: 1.22.4
+provides:
+    - streamlabs-obs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://slobs-cdn.streamlabs.com/Streamlabs+Desktop+Setup+1.22.4.exe#/dl.7z
+      sha256: 67007c8bd1ffbd44161907efd3d40f405c17ba825d5496889c03d6c2ec1563cc
+      bin:
+        - streamlabs-obs.exe
+      strip: 1
+test: streamlabs-obs --version

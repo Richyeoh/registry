@@ -1,0 +1,21 @@
+api: v1
+name: modern7z
+kind: app
+display: modern7z
+description: A plugin for 7-Zip that provides support for leading-edge compression methods—including Zstandard, Brotli, LZ4, LZ5, Lizard, and Fast LZMA2—while enhancing compatibility with modern single-file compression formats.
+homepage: https://www.tc4shell.com/en/7zip/modern7z/
+license: Unknown
+version: 1.9.2
+channels:
+    stable: 1.9.2
+provides:
+    - modern7z
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.tc4shell.com/binary/Modern7z.zip
+      sha256: 3cd202da38024c85512822a42da2897095334bedd910f34c3339c54b7c88f5f0
+      bin:
+        - modern7z.exe
+      strip: 1
+test: modern7z --version

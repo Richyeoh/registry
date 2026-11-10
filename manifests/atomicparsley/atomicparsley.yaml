@@ -1,0 +1,52 @@
+api: v1
+name: atomicparsley
+kind: app
+display: atomicparsley
+description: Lightweight command line program for reading, parsing and setting metadata into MPEG-4 files
+homepage: https://github.com/wez/atomicparsley
+license: GPL-2.0-only
+keywords:
+    - brew
+    - homebrew
+version: 20240608.083822.1ed9031
+channels:
+    stable: 20240608.083822.1ed9031
+provides:
+    - atomicparsley
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wez/atomicparsley/releases/download/20240608.083822.1ed9031/AtomicParsleyWindows.zip
+      sha256: cc7c5a7dcaba28869f3819e4a57f382dc0ff307b7b013f9bffd028605ae6f52d
+      bin:
+        - AtomicParsley.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atomicparsley/blobs/sha256:5c590c6fdb51209e2b36b6bf290d72215cf768c6816da58f483021af4c8df5c0
+      sha256: 5c590c6fdb51209e2b36b6bf290d72215cf768c6816da58f483021af4c8df5c0
+      bin:
+        - atomicparsley
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atomicparsley/blobs/sha256:ec3992fb93db9d6927cc5261cadb7b4e03f3802136c0c5fefefa0ac96fe934b5
+      sha256: ec3992fb93db9d6927cc5261cadb7b4e03f3802136c0c5fefefa0ac96fe934b5
+      bin:
+        - atomicparsley
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atomicparsley/blobs/sha256:05df26f40020528cbc1df0b9338257fd3bb2b2085c125985015be4b276e59b01
+      sha256: 05df26f40020528cbc1df0b9338257fd3bb2b2085c125985015be4b276e59b01
+      bin:
+        - atomicparsley
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atomicparsley/blobs/sha256:598edb090c4b9222ca0ebb0f6514acf735f9311e8fc03f3afcb0eb8a92210a3d
+      sha256: 598edb090c4b9222ca0ebb0f6514acf735f9311e8fc03f3afcb0eb8a92210a3d
+      bin:
+        - atomicparsley
+      strip: 1
+test: AtomicParsley --version

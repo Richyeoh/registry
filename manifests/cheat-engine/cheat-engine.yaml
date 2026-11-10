@@ -1,0 +1,21 @@
+api: v1
+name: cheat-engine
+kind: app
+display: cheat-engine
+description: Tool for modifying/debugging single player games and applications.
+homepage: https://cheatengine.org
+license: Unknown
+version: "7.6"
+channels:
+    stable: "7.6"
+provides:
+    - cheat-engine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/cheat-engine/CheatEngine76.7z
+      sha256: 87d58e73fac883aea6c3a09e7497acbf1c6ebdd12a8a76152f0438e9f9927559
+      bin:
+        - cheat-engine.exe
+      strip: 1
+test: cheat-engine --version

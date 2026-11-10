@@ -1,0 +1,24 @@
+api: v1
+name: openssl-lts
+kind: app
+display: openssl-lts
+description: TLS/SSL toolkit (3.0.X LTS)
+homepage: https://slproweb.com/products/Win32OpenSSL.html
+license: Apache-2.0
+version: 3.0.22
+channels:
+    stable: 3.0.22
+provides:
+    - openssl-lts
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://slproweb.com/download/Win64OpenSSL-3_0_22.exe
+      sha256: 08a48026a3b862167832b38e50d7c8594ac63ab933cf678b77002e5c3a81e8ec
+      bin:
+        - openssl-lts.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall openssl-lts
+test: openssl-lts --version

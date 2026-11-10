@@ -1,0 +1,21 @@
+api: v1
+name: vitomu
+kind: app
+display: vitomu
+description: A converter for online and offline videos to audio files.
+homepage: https://github.com/digimezzo/vitomu
+license: GPL-3.0-only
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - vitomu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/digimezzo/vitomu/releases/download/v2.1.0/Vitomu-2.1.0.exe#/dl.7z
+      sha256: b9c6a767ce0fc4cbac0c7d33a0d021afca0fb3e978babc39dfd2e3f16b2ec255
+      bin:
+        - vitomu.exe
+      strip: 1
+test: vitomu --version

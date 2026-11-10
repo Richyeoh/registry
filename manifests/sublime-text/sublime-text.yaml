@@ -1,0 +1,21 @@
+api: v1
+name: sublime-text
+kind: app
+display: sublime-text
+description: A sophisticated text editor for code, markup and prose
+homepage: https://www.sublimetext.com
+license: Unknown
+version: 4-4215
+channels:
+    stable: 4-4215
+provides:
+    - sublime-text
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.sublimetext.com/sublime_text_build_4215_x64.zip
+      sha256: 14f9d6190d5d118bd61a7067a6b00e27e6a82f5f42a94e675792ec7734e09aca
+      bin:
+        - subl.exe
+      strip: 1
+test: subl --version

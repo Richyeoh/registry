@@ -1,0 +1,21 @@
+api: v1
+name: kicad
+kind: app
+display: kicad
+description: Electronics Design Automation Suite
+homepage: https://www.kicad.org
+license: GPL-3.0-only
+version: 10.0.8
+channels:
+    stable: 10.0.8
+provides:
+    - kicad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/KiCad/kicad-source-mirror/releases/download/10.0.8/kicad-10.0.8-x86_64.exe#/dl.7z
+      sha256: 5652b9ed52fca4aa63ec2ec61c8bfd4fab4f6a2fbfdb441def2972b0e9b2dfc7
+      bin:
+        - bin\kicad-cli.exe
+      strip: 1
+test: bin\kicad-cli --version

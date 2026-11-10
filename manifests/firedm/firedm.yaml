@@ -1,0 +1,21 @@
+api: v1
+name: firedm
+kind: app
+display: firedm
+description: Multi-connections download manager
+homepage: https://github.com/firedm/FireDM
+license: LGPL-3.0-only
+version: 2022.2.5
+channels:
+    stable: 2022.2.5
+provides:
+    - firedm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/firedm/FireDM_2022.2.5.7z.001
+      sha256: 056b0fb5a0af2920ba2fd17146ceac93dc000771fff795f4a987c29da6507f58
+      bin:
+        - firedm.exe
+      strip: 1
+test: firedm --version

@@ -1,0 +1,21 @@
+api: v1
+name: fancontrol
+kind: app
+display: fancontrol
+description: A highly customizable fan controlling software for Windows
+homepage: https://getfancontrol.com/
+license: Freeware
+version: "285"
+channels:
+    stable: "285"
+provides:
+    - fancontrol
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Rem0o/FanControl.Releases/releases/download/V285/FanControl_285_net_10_0.zip
+      sha256: 8ddd0819cdaa435be06e37750c5317365375a6f3d75f6c1366fdbb2ea986359d
+      bin:
+        - fancontrol.exe
+      strip: 1
+test: fancontrol --version

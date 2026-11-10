@@ -1,0 +1,39 @@
+api: v1
+name: arm-optimized-routines
+kind: app
+display: arm-optimized-routines
+description: Optimized implementations of various library functions for Arm processors
+homepage: https://github.com/ARM-software/optimized-routines
+license: MIT OR (Apache-2.0 WITH LLVM-exception)
+keywords:
+    - brew
+    - homebrew
+version: "26.07"
+channels:
+    stable: "26.07"
+provides:
+    - arm-optimized-routines
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-optimized-routines/blobs/sha256:062827cb07403531361eefd5f29d9df800b58cff8ab9e437bf217339968ddd3d
+      sha256: 062827cb07403531361eefd5f29d9df800b58cff8ab9e437bf217339968ddd3d
+      bin:
+        - arm-optimized-routines
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arm-optimized-routines/blobs/sha256:222b546b909b3f7e016c67b0a3fa52a29ccb089eecfcc0686506be3bb56a0cc5
+      sha256: 222b546b909b3f7e016c67b0a3fa52a29ccb089eecfcc0686506be3bb56a0cc5
+      bin:
+        - arm-optimized-routines
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arm-optimized-routines/blobs/sha256:70aac5f44c9cff2548caad514a3e447fa1d68a74a6f02e6f4419bbef80b7df88
+      sha256: 70aac5f44c9cff2548caad514a3e447fa1d68a74a6f02e6f4419bbef80b7df88
+      bin:
+        - arm-optimized-routines
+      strip: 1
+test: arm-optimized-routines --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: t-clock
+kind: app
+display: t-clock
+description: Highly configurable Windows taskbar clock
+homepage: https://github.com/White-Tiger/T-Clock
+license: Unknown
+version: 2.4.4
+channels:
+    stable: 2.4.4
+provides:
+    - t-clock
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/White-Tiger/T-Clock/releases/download/v2.4.4%23492-rc/T-Clock.7z
+      sha256: 22aa3e68767de4f55939d9ec698eedac5ccdc13e6c9c73c8c18d9fa4b3a0a272
+      bin:
+        - t-clock.exe
+      strip: 1
+test: t-clock --version

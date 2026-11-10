@@ -1,0 +1,39 @@
+api: v1
+name: argyll-cms
+kind: app
+display: argyll-cms
+description: ICC compatible color management system
+homepage: https://www.argyllcms.com/
+license: AGPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 3.5.0
+channels:
+    stable: 3.5.0
+provides:
+    - argyll-cms
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/argyll-cms/blobs/sha256:585de1b56d00de6d7ab345d8d590cd415d70e3c5f5a847ab37196f074b1b5c22
+      sha256: 585de1b56d00de6d7ab345d8d590cd415d70e3c5f5a847ab37196f074b1b5c22
+      bin:
+        - argyll-cms
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/argyll-cms/blobs/sha256:5c6c560545149c627bb8b069668ed4769ea81c2dc1d309c5046b32dd50112842
+      sha256: 5c6c560545149c627bb8b069668ed4769ea81c2dc1d309c5046b32dd50112842
+      bin:
+        - argyll-cms
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/argyll-cms/blobs/sha256:c00d9e488f123acea9ac11e5bcdf23d21833a9432d829e25e389087837cacba8
+      sha256: c00d9e488f123acea9ac11e5bcdf23d21833a9432d829e25e389087837cacba8
+      bin:
+        - argyll-cms
+      strip: 1
+test: argyll-cms --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

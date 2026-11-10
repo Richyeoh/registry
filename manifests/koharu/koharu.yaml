@@ -1,0 +1,21 @@
+api: v1
+name: koharu
+kind: app
+display: koharu
+description: ML-powered manga translator, written in Rust.
+homepage: https://koharu.rs/
+license: GPL-3.0-only|Apache-2.0
+version: 0.83.5
+channels:
+    stable: 0.83.5
+provides:
+    - koharu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mayocream/koharu/releases/download/0.83.5/koharu_0.83.5_x64-setup.exe#/dl.7z
+      sha256: fc4eacb5e762e132f5686493288424a8762735daa842ceeb10f0c172bbcf9235
+      bin:
+        - koharu.exe
+      strip: 1
+test: koharu --version

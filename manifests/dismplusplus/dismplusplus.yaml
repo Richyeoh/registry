@@ -1,0 +1,22 @@
+api: v1
+name: dismplusplus
+kind: app
+display: dismplusplus
+description: A gratis Windows utility similar to DISM, but with a GUI and based on CBS
+homepage: https://github.com/Chuyu-Team/Dism-Multi-language/
+license: MIT
+version: 10.1.1002.1B
+channels:
+    stable: 10.1.1002.1B
+provides:
+    - dismplusplus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.2/Dism++10.1.1002.1B.zip
+      sha256: 5bbab96d60704854efd8246a7d9371688b9102261544827fc8884126d70bcb3b
+      bin:
+        - DISM++x64.exe
+        - DISM++x64.exe
+      strip: 1
+test: DISM++x64 --version

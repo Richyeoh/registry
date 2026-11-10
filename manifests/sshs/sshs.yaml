@@ -1,0 +1,24 @@
+api: v1
+name: sshs
+kind: app
+display: sshs
+description: Terminal user interface for SSH
+homepage: https://github.com/quantumsheep/sshs
+license: MIT
+version: 4.8.0
+channels:
+    stable: 4.8.0
+provides:
+    - sshs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/quantumsheep/sshs/releases/download/4.8.0/sshs-windows-amd64.exe#/sshs.exe
+      sha256: 4e249f479adee078b411dab9f5455d0bfa24476c5f1a9e95c3627fb36af701e7
+      bin:
+        - sshs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sshs
+test: sshs --version

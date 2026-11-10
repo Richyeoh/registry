@@ -1,0 +1,39 @@
+api: v1
+name: atomgit-cli
+kind: app
+display: atomgit-cli
+description: Command-line interface for AtomGit
+homepage: https://atomgit.com/hust-open-atom-club/atomgit-cli
+license: MulanPSL-2.0
+keywords:
+    - brew
+    - homebrew
+version: 0.7.4
+channels:
+    stable: 0.7.4
+provides:
+    - atomgit-cli
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atomgit-cli/blobs/sha256:6a6fc5a6bfd8fae5e29417c66d97da3245a8c9ebc695764b97afc8b962156e91
+      sha256: 6a6fc5a6bfd8fae5e29417c66d97da3245a8c9ebc695764b97afc8b962156e91
+      bin:
+        - atomgit-cli
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atomgit-cli/blobs/sha256:b6dd7e664b7c064279fbb17a8e045409a285493fbff4f3222ef52e039c94e7a6
+      sha256: b6dd7e664b7c064279fbb17a8e045409a285493fbff4f3222ef52e039c94e7a6
+      bin:
+        - atomgit-cli
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atomgit-cli/blobs/sha256:cd0a89831dcfa035ea1030a87814682f158c5b4a757bb53e8d12101f5e1a5e8f
+      sha256: cd0a89831dcfa035ea1030a87814682f158c5b4a757bb53e8d12101f5e1a5e8f
+      bin:
+        - atomgit-cli
+      strip: 1
+test: atomgit-cli --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

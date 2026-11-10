@@ -1,0 +1,22 @@
+api: v1
+name: processing
+kind: app
+display: processing
+description: A flexible software sketchbook and a language for learning how to code within the context of the visual arts
+homepage: https://processing.org/
+license: Unknown
+version: 3.5.4
+channels:
+    stable: 3.5.4
+provides:
+    - processing
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/processing/processing/releases/download/processing-0270-3.5.4/processing-3.5.4-windows64.zip
+      sha256: e7a3f924bc265e926e63e1ea771d1379448b58c2d0671b0f8ddadef1aa6eda0e
+      bin:
+        - processing.exe
+        - processing-java.exe
+      strip: 1
+test: processing --version

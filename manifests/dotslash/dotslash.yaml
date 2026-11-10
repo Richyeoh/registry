@@ -1,0 +1,21 @@
+api: v1
+name: dotslash
+kind: app
+display: dotslash
+description: A command-line tool that lets you represent a set of platform-specific, heavyweight executables with an equivalent small, easy-to-read text file.
+homepage: https://dotslash-cli.com
+license: Apache-2.0
+version: 0.5.9
+channels:
+    stable: 0.5.9
+provides:
+    - dotslash
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/dotslash/releases/download/v0.5.9/dotslash-windows.v0.5.9.tar.gz
+      sha256: c925840a9bf9105a187cd120278cb023c51dac0cecb3234855152422751b7b41
+      bin:
+        - dotslash.exe
+      strip: 1
+test: dotslash --version

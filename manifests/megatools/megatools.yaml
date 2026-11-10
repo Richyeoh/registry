@@ -1,0 +1,21 @@
+api: v1
+name: megatools
+kind: app
+display: megatools
+description: Collection of programs for accessing Mega.nz service from a command line.
+homepage: https://xff.cz/megatools
+license: GPL-2.0-or-later
+version: 1.11.5.20250706
+channels:
+    stable: 1.11.5.20250706
+provides:
+    - megatools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://xff.cz/megatools/builds/builds/megatools-1.11.5.20250706-win64.zip
+      sha256: bd1269e50d9c45e369c14e287c1754c9506e1b11efcc0cd4bb95d460c9d782b5
+      bin:
+        - megatools.exe
+      strip: 1
+test: megatools --version

@@ -1,0 +1,21 @@
+api: v1
+name: cobalt
+kind: app
+display: cobalt
+description: Static site generator written in Rust
+homepage: https://cobalt-org.github.io/
+license: MIT
+version: 0.20.4
+channels:
+    stable: 0.20.4
+provides:
+    - cobalt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cobalt-org/cobalt.rs/releases/download/v0.20.4/cobalt-v0.20.4-x86_64-pc-windows-msvc.zip
+      sha256: 19c4ed116c4336d4c3bf0826ac11edb66a43713445d747a9357e78e9b1dec5e8
+      bin:
+        - cobalt.exe
+      strip: 1
+test: cobalt --version

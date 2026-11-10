@@ -1,0 +1,24 @@
+api: v1
+name: any-code
+kind: app
+display: any-code
+description: Professional AI code assistant desktop app supporting Claude Code, OpenAI Codex and Google Gemini CLI.
+homepage: https://github.com/anyme123/Any-code
+license: MIT
+version: 5.29.1
+channels:
+    stable: 5.29.1
+provides:
+    - any-code
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/anyme123/Any-code/releases/download/v5.29.1/Any_Code_5.29.1_x64-portable.exe#/Any-Code.exe
+      sha256: edf895aed81087d15c75fc93826431ed7de5f599a3bb17c2b536d020af00edc9
+      bin:
+        - any-code.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall any-code
+test: any-code --version

@@ -1,0 +1,21 @@
+api: v1
+name: stranslate
+kind: app
+display: stranslate
+description: A ready-to-use, ready-to-go translation and OCR tool developed by WPF
+homepage: https://stranslate.zggsong.com
+license: Unknown
+version: 2.0.10
+channels:
+    stable: 2.0.10
+provides:
+    - stranslate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/STranslate/STranslate/releases/download/v2.0.10/STranslate-win-Portable.zip
+      sha256: d63f4cef674ae2f6ef782e1c7fa43b2475e62aea0ad31c34b41ab5c9cb58abc5
+      bin:
+        - stranslate.exe
+      strip: 1
+test: stranslate --version

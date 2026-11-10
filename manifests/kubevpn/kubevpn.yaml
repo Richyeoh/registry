@@ -1,0 +1,21 @@
+api: v1
+name: kubevpn
+kind: app
+display: kubevpn
+description: KubeVPN offers a Cloud Native Dev Environment that connects to kubernetes cluster network.
+homepage: https://www.kubevpn.dev/
+license: MIT
+version: 2.12.0
+channels:
+    stable: 2.12.0
+provides:
+    - kubevpn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubenetworks/kubevpn/releases/download/v2.12.0/kubevpn_v2.12.0_windows_amd64.zip
+      sha256: 2ab89b6d373fd6798854c8ae72e7533d0dcb8655756663c58b804b13f4e42d37
+      bin:
+        - kubevpn.exe
+      strip: 1
+test: kubevpn --version

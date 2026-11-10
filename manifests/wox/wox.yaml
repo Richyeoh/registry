@@ -1,0 +1,24 @@
+api: v1
+name: wox
+kind: app
+display: wox
+description: A full-featured launcher, access programs and web contents as you type.
+homepage: https://github.com/Wox-launcher/Wox
+license: Unknown
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - wox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Wox-launcher/Wox/releases/download/v2.5.0/wox-windows-amd64.exe#/wox.exe
+      sha256: d327a0dd82fa270557d3bd17f4500d9e5eb0f57e8565e579e45f23470bbdcdb9
+      bin:
+        - wox.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wox
+test: wox --version

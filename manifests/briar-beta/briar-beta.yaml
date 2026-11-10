@@ -1,0 +1,24 @@
+api: v1
+name: briar-beta
+kind: app
+display: briar-beta
+description: A censorship-resistant, peer-to-peer messaging app that bypasses centralized servers.
+homepage: https://briarproject.org/
+license: GPL-3.0-only
+version: 0.6.5
+channels:
+    stable: 0.6.5
+provides:
+    - briar-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://desktop.briarproject.org/msis/0.6.5-beta/Briar-Desktop-0.6.5-beta.msi
+      sha256: df25efe50dde0940ece29055107621ba270fe1e4ff9ec20ded6492fde95564f1
+      bin:
+        - briar-beta.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall briar-beta
+test: briar-beta --version

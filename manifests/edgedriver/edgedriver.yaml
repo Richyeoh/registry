@@ -1,0 +1,21 @@
+api: v1
+name: edgedriver
+kind: app
+display: edgedriver
+description: Close the loop on your developer cycle by automating testing of your website in Microsoft Edge (Chromium).
+homepage: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver
+license: Unknown
+version: 157.0.4341.46
+channels:
+    stable: 157.0.4341.46
+provides:
+    - edgedriver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://msedgedriver.microsoft.com/157.0.4341.46/edgedriver_win64.zip
+      sha256: ad94f3a90cb9ac70fc691d83ac98fdcadd2abb94c58cae33020aa2b497519420
+      bin:
+        - msedgedriver.exe
+      strip: 1
+test: msedgedriver --version

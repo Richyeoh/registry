@@ -1,0 +1,21 @@
+api: v1
+name: datree
+kind: app
+display: datree
+description: "Prevent Kubernetes misconfigurations from reaching production (again \U0001F624 )! From code to cloud, Datree provides an E2E policy enforcement solution to run automatic checks for rule violations."
+homepage: https://hub.datree.io
+license: Apache-2.0
+version: 1.9.19
+channels:
+    stable: 1.9.19
+provides:
+    - datree
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/datreeio/datree/releases/download/1.9.19/datree-cli_1.9.19_windows_x86_64.zip
+      sha256: 5c108942b18dc097e53173d289317eaf26c25fd683d054e2b34c54c5d5a738eb
+      bin:
+        - datree.exe
+      strip: 1
+test: datree --version

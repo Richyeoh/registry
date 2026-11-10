@@ -1,0 +1,21 @@
+api: v1
+name: yapa2
+kind: app
+display: yapa2
+description: A continuation of the original YAPA, the minimalistic desktop timer app for Pomodoro Technique users.
+homepage: https://yapa2.app/
+license: MIT
+version: 2.0.190
+channels:
+    stable: 2.0.190
+provides:
+    - yapa2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/YetAnotherPomodoroApp/YAPA-2/releases/download/v2.0.190/YAPA2.2.0.190.exe#/dl.7z
+      sha256: 717cd3efa62253cdd997ebece5f10b9ef8099d73ece8ec9d625d1508aa8fed2b
+      bin:
+        - YAPA.exe
+      strip: 1
+test: YAPA --version

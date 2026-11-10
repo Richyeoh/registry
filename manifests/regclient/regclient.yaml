@@ -1,0 +1,26 @@
+api: v1
+name: regclient
+kind: app
+display: regclient
+description: Command line interface and tools for the regclient Go library (regctl, regbot, regsync).
+homepage: https://regclient.org/
+license: Unknown
+version: 0.11.7
+channels:
+    stable: 0.11.7
+provides:
+    - regclient
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/regclient/regclient/releases/download/v0.11.7/regctl-windows-amd64.exe#/regctl.exe
+      sha256: 70f195ff4923082340738c796880864f66a296e6c5d3296bf743310653ad761f
+      bin:
+        - regctl.exe
+        - regbot.exe
+        - regsync.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall regclient
+test: regctl --version

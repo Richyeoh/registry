@@ -1,0 +1,39 @@
+api: v1
+name: anycable-go
+kind: app
+display: anycable-go
+description: WebSocket server with action cable protocol
+homepage: https://anycable.io
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.6.20
+channels:
+    stable: 1.6.20
+provides:
+    - anycable-go
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/anycable-go/blobs/sha256:0bbff3113f6d5eea2cdcf132bad61ac7d2f35061dd297af5d60a29f2d3ec3061
+      sha256: 0bbff3113f6d5eea2cdcf132bad61ac7d2f35061dd297af5d60a29f2d3ec3061
+      bin:
+        - anycable-go
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/anycable-go/blobs/sha256:421f7da28f3fe54e23afa94c9d8ca01e25b9eb95bba3acb3882b3d823143a627
+      sha256: 421f7da28f3fe54e23afa94c9d8ca01e25b9eb95bba3acb3882b3d823143a627
+      bin:
+        - anycable-go
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/anycable-go/blobs/sha256:45f0197c4860167ee3547015571717172287faeec59aa2bf2ea6a7f4c5b4e2c3
+      sha256: 45f0197c4860167ee3547015571717172287faeec59aa2bf2ea6a7f4c5b4e2c3
+      bin:
+        - anycable-go
+      strip: 1
+test: anycable-go --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

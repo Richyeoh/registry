@@ -1,0 +1,24 @@
+api: v1
+name: mremoteng
+kind: app
+display: mremoteng
+description: Tabbed, multi-protocol, remote connections manager
+homepage: https://mremoteng.org/
+license: GPL-2.0-only
+version: 1.76.20.24615
+channels:
+    stable: 1.76.20.24615
+provides:
+    - mremoteng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.20/mRemoteNG-Installer-1.76.20.24615.msi
+      sha256: 2c4d1efb90124f885215f88304c9ecc8bbeecc9cca285f6d17baae43b49f6227
+      bin:
+        - mRemoteNG.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mremoteng
+test: mRemoteNG --version

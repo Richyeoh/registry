@@ -1,0 +1,48 @@
+api: v1
+name: atmos
+kind: app
+display: atmos
+description: Terraform Orchestration Tool for DevOps
+homepage: https://atmos.tools
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.234.0
+channels:
+    stable: 1.234.0
+provides:
+    - atmos
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cloudposse/atmos/releases/download/v1.234.0/atmos_1.234.0_windows_amd64.exe#/atmos.exe
+      sha256: 2740fd803db670302941f6fea46bfe1a7b5d46cf77fd184cf7d60de8d4e473ce
+      bin:
+        - atmos.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atmos/blobs/sha256:0e014ac6d7943fb51c77e5b992188d0730e217dc50dada3d90443840d19baead
+      sha256: 0e014ac6d7943fb51c77e5b992188d0730e217dc50dada3d90443840d19baead
+      bin:
+        - atmos
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atmos/blobs/sha256:18031c485b57216674f1ac8ed8ee8905244d8c3e9f13b7efab5cc9e71408160a
+      sha256: 18031c485b57216674f1ac8ed8ee8905244d8c3e9f13b7efab5cc9e71408160a
+      bin:
+        - atmos
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atmos/blobs/sha256:b3cc6a60d521a480b18606a1822ee7a7fda93166e33910e9d3f257e11cbf89b4
+      sha256: b3cc6a60d521a480b18606a1822ee7a7fda93166e33910e9d3f257e11cbf89b4
+      bin:
+        - atmos
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall atmos
+test: atmos --version

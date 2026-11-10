@@ -1,0 +1,24 @@
+api: v1
+name: git-xargs
+kind: app
+display: git-xargs
+description: A CLI tool for making updates across multiple Github repositories with a single command
+homepage: https://blog.gruntwork.io/introducing-git-xargs-an-open-source-tool-to-update-multiple-github-repos-753f9f3675ec
+license: Apache-2.0
+version: 0.1.16
+channels:
+    stable: 0.1.16
+provides:
+    - git-xargs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gruntwork-io/git-xargs/releases/download/v0.1.16/git-xargs_windows_amd64.exe#/git-xargs.exe
+      sha256: 34ec3be30ca11d396b4dc57611f39156456a79a7a621e598ab6b6d7fc79031ab
+      bin:
+        - git-xargs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall git-xargs
+test: git-xargs --version

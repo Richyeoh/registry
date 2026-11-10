@@ -1,0 +1,46 @@
+api: v1
+name: asciiquarium
+kind: app
+display: asciiquarium
+description: Aquarium animation in ASCII art
+homepage: https://robobunny.com/projects/asciiquarium/html/
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "1.1"
+channels:
+    stable: "1.1"
+provides:
+    - asciiquarium
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asciiquarium/blobs/sha256:b7d8dd2e459fbc17a9377e6314e63dc7ae33a321cfec0135dd834aa6665a4ae4
+      sha256: b7d8dd2e459fbc17a9377e6314e63dc7ae33a321cfec0135dd834aa6665a4ae4
+      bin:
+        - asciiquarium
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asciiquarium/blobs/sha256:87cd5f6d40aeddab0aedaa98883a35967c9fad8c062795dc3c5e685b7e9b5999
+      sha256: 87cd5f6d40aeddab0aedaa98883a35967c9fad8c062795dc3c5e685b7e9b5999
+      bin:
+        - asciiquarium
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asciiquarium/blobs/sha256:c12b30a0628118b53ea655f55b1067ec530be5f748177f5ef07469fca8cf0f5c
+      sha256: c12b30a0628118b53ea655f55b1067ec530be5f748177f5ef07469fca8cf0f5c
+      bin:
+        - asciiquarium
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asciiquarium/blobs/sha256:462fde5700c9aabe1b3d4d12e51dd4b31fda33019dd057bbb135584ffdb95cd3
+      sha256: 462fde5700c9aabe1b3d4d12e51dd4b31fda33019dd057bbb135584ffdb95cd3
+      bin:
+        - asciiquarium
+      strip: 1
+test: asciiquarium --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

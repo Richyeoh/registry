@@ -1,0 +1,21 @@
+api: v1
+name: timoni
+kind: app
+display: timoni
+description: The package manager for Kubernetes
+homepage: https://timoni.sh
+license: Apache-2.0
+version: 0.37.0
+channels:
+    stable: 0.37.0
+provides:
+    - timoni
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stefanprodan/timoni/releases/download/v0.37.0/timoni_0.37.0_windows_amd64.zip
+      sha256: 6efff7300cd6cfae6098df913dd67d1d70d7cbbaf940acc0022ba69a7aca8175
+      bin:
+        - timoni.exe
+      strip: 1
+test: timoni --version

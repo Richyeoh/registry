@@ -1,0 +1,21 @@
+api: v1
+name: webview2
+kind: app
+display: webview2
+description: Microsoft Edge WebView2 Runtime. Embed web content (HTML, CSS, and JavaScript) in your native applications with Microsoft Edge WebView2.
+homepage: https://developer.microsoft.com/en-us/microsoft-edge/webview2
+license: Unknown
+version: 157.0.4341.46
+channels:
+    stable: 157.0.4341.46
+provides:
+    - webview2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/edb19202-9173-4dd1-ab87-c45c2d80aaec/Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.x64.cab#/dl.7z
+      sha256: 0ac7317a08c3f3beebbb9b6d90f5b77352569f0a33a54a15ef6aaabc82899b7c
+      bin:
+        - webview2.exe
+      strip: 1
+test: webview2 --version

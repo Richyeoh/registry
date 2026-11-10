@@ -1,0 +1,24 @@
+api: v1
+name: pkl-cli
+kind: app
+display: pkl-cli
+description: A configuration as code language with rich validation and tooling.
+homepage: https://pkl-lang.org/
+license: Apache-2.0
+version: 0.33.0
+channels:
+    stable: 0.33.0
+provides:
+    - pkl-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/apple/pkl/releases/download/0.33.0/pkl-windows-amd64.exe#/pkl.exe
+      sha256: 9875af0d17d3535ed0e3903f3ae71fc8007268949328f73c2d12942fca11840c
+      bin:
+        - pkl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pkl-cli
+test: pkl --version

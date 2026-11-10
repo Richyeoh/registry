@@ -1,0 +1,21 @@
+api: v1
+name: tidy
+kind: app
+display: tidy
+description: Tidy HTML and XML files
+homepage: https://www.html-tidy.org/
+license: BSD-3-Clause
+version: 5.8.0
+channels:
+    stable: 5.8.0
+provides:
+    - tidy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/htacg/tidy-html5/releases/download/5.8.0/tidy-5.8.0-win64.zip
+      sha256: ffb2f86484c66e70e6a6da369cb8f0f459ad2ffec7c7ca80d09a13445ee51a40
+      bin:
+        - tidy.exe
+      strip: 1
+test: tidy --version

@@ -1,0 +1,24 @@
+api: v1
+name: presentmon
+kind: app
+display: presentmon
+description: Tool for collection and processing of ETW events related to frame presentation on Windows.
+homepage: https://game.intel.com/story/intel-presentmon/
+license: MIT
+version: 2.6.0
+channels:
+    stable: 2.6.0
+provides:
+    - presentmon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GameTechDev/PresentMon/releases/download/v2.6.0/PresentMon-2.6.0-x64.exe#/PresentMon.exe
+      sha256: b2a706bc6ad475749e3b7e3409263aa1e6906d45bdcf993f6dbc0f660188f1af
+      bin:
+        - PresentMon.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall presentmon
+test: PresentMon --version

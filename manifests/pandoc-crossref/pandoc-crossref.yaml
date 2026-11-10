@@ -1,0 +1,21 @@
+api: v1
+name: pandoc-crossref
+kind: app
+display: pandoc-crossref
+description: Pandoc filter for cross-references
+homepage: https://hackage.haskell.org/package/pandoc-crossref
+license: GPL-2.0-or-later
+version: 0.3.26a
+channels:
+    stable: 0.3.26a
+provides:
+    - pandoc-crossref
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.26a/pandoc-crossref-Windows-X64.7z
+      sha256: f11c828389fc7359622ad3b7a389c3a7bb3b2c7b4f0fed53e48d68c40dfc3a88
+      bin:
+        - pandoc-crossref.exe
+      strip: 1
+test: pandoc-crossref --version

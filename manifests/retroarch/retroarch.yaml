@@ -1,0 +1,21 @@
+api: v1
+name: retroarch
+kind: app
+display: retroarch
+description: Frontend for emulators, game engines and media players.
+homepage: https://www.retroarch.com/
+license: GPL-3.0-only
+version: 1.22.2
+channels:
+    stable: 1.22.2
+provides:
+    - retroarch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://buildbot.libretro.com/stable/1.22.2/windows/x86_64/RetroArch.7z
+      sha256: b2139b1d0f9d4526dc6b5ce23cbb3efdc766096fa6f2c3df016818b486ac6372
+      bin:
+        - retroarch.exe
+      strip: 1
+test: retroarch --version

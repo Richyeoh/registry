@@ -1,0 +1,24 @@
+api: v1
+name: sed
+kind: app
+display: sed
+description: sed (stream editor) is a non-interactive command-line text editor
+homepage: https://www.gnu.org/software/sed
+license: GPL-3.0-or-later
+version: "4.9"
+channels:
+    stable: "4.9"
+provides:
+    - sed
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mbuilov/sed-windows/releases/download/sed-4.9-x64-fixed/sed-4.9-x64.exe#/sed.exe
+      sha256: 38fbdb237afaf25fdaee462c6504d61ce7dd122db0206b353df1a29e5b0aa7c5
+      bin:
+        - sed.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sed
+test: sed --version

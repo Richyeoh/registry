@@ -1,0 +1,24 @@
+api: v1
+name: isocreator
+kind: app
+display: isocreator
+description: Creates ISO images from a given folder or volume.
+homepage: https://sourceforge.net/projects/iso-creator-cs/
+license: Public Domain
+version: "1.0"
+channels:
+    stable: "1.0"
+provides:
+    - isocreator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.sourceforge.net/project/iso-creator-cs/iso-creator-cs/binary-installer/IsoCreator.msi
+      sha256: f01a0a824ddeeb46ade73e2bfc3141a0fee650089a6c4522ab38895d97351634
+      bin:
+        - isocreator.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall isocreator
+test: isocreator --version

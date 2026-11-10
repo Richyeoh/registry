@@ -1,0 +1,22 @@
+api: v1
+name: mingit-busybox
+kind: app
+display: mingit-busybox
+description: Minimal Git for Windows (MinGit) is a reduced sized package designed to support application integration (like integrated development environments, graph visualizers, etc.) where full console support (colorization, pagniation, etc.) is not needed.(BusyBox-backed MinGit, experimental, smaller version of MinGit)
+homepage: https://git-for-windows.github.io/
+license: GPL-2.0-only
+version: 2.56.0.4
+channels:
+    stable: 2.56.0.4
+provides:
+    - mingit-busybox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/MinGit-2.56.0.4-busybox-64-bit.zip
+      sha256: c4f27d9356ef471dd9fea1f89e5c176cfff7c85b29912a00f3cc7fb59197a39f
+      bin:
+        - cmd\git.exe
+        - ucrt64\bin\busybox.exe
+      strip: 1
+test: cmd\git --version

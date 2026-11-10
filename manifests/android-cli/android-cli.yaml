@@ -1,0 +1,42 @@
+api: v1
+name: android-cli
+kind: app
+display: android-cli
+description: Command-line interface for efficient Android development, providing access to official tools, skills, and knowledge for agent-first workflows and automation.
+homepage: https://developer.android.com/tools/agents/android-cli
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.1.16717390
+channels:
+    stable: 1.1.16717390
+provides:
+    - android-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/android/cli/1.1.16717390/windows_x86_64/android-cli.exe
+      sha256: e461a361540882a759031dd94ad4814b0ba109183cdfdf18013b639539a9af7b
+      bin:
+        - android-cli.exe
+        - android-cli.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://dl.google.com/android/cli/1.1.16717390/darwin_arm64/android
+      sha256: 564d8ad922e8026b75915b3a7e8dafa9c2da7a209bde005edaf5c30e97a5aea5
+      bin:
+        - android-cli
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.google.com/android/cli/1.1.16717390/darwin_arm64/android
+      sha256: 564d8ad922e8026b75915b3a7e8dafa9c2da7a209bde005edaf5c30e97a5aea5
+      bin:
+        - android-cli
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall android-cli
+test: android-cli --version

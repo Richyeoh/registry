@@ -1,0 +1,47 @@
+api: v1
+name: bind
+kind: app
+display: bind
+description: Versatile, classic, complete name server software.
+homepage: https://www.isc.org/bind/
+license: MPL-2.0
+version: 9.16.50
+channels:
+    stable: 9.16.50
+provides:
+    - bind
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.isc.org/isc/bind9/9.16.50/BIND9.16.50.x64.zip
+      sha256: 658c6f02d445d4e751d0cfc45a1fa4c89cddd3677cd1c4c3d4743c323022766f
+      bin:
+        - bin\arpaname.exe
+        - bin\ddns-confgen.exe
+        - bin\delv.exe
+        - bin\dig.exe
+        - bin\dnssec-cds.exe
+        - bin\dnssec-dsfromkey.exe
+        - bin\dnssec-importkey.exe
+        - bin\dnssec-keyfromlabel.exe
+        - bin\dnssec-keygen.exe
+        - bin\dnssec-revoke.exe
+        - bin\dnssec-settime.exe
+        - bin\dnssec-signzone.exe
+        - bin\dnssec-verify.exe
+        - bin\host.exe
+        - bin\mdig.exe
+        - bin\named-checkconf.exe
+        - bin\named-checkzone.exe
+        - bin\named-compilezone.exe
+        - bin\named-journalprint.exe
+        - bin\named-rrchecker.exe
+        - bin\named.exe
+        - bin\nsec3hash.exe
+        - bin\nslookup.exe
+        - bin\nsupdate.exe
+        - bin\rndc-confgen.exe
+        - bin\rndc.exe
+        - bin\tsig-keygen.exe
+      strip: 1
+test: bin\arpaname --version

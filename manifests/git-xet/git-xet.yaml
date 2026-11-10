@@ -1,0 +1,21 @@
+api: v1
+name: git-xet
+kind: app
+display: git-xet
+description: Git LFS custom transfer agent that implements upload and download of files using the Xet protocol.
+homepage: https://huggingface.co/docs/hub/xet/index
+license: Apache-2.0
+version: 0.2.1
+channels:
+    stable: 0.2.1
+provides:
+    - git-xet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/huggingface/xet-core/releases/download/git-xet-v0.2.1/git-xet-windows-x86_64.zip
+      sha256: 427179c2f410bb0a1da28df590adcfbdc8fff50369f295da148fb1c9c27d2cea
+      bin:
+        - git-xet.exe
+      strip: 1
+test: git-xet --version

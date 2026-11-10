@@ -1,0 +1,21 @@
+api: v1
+name: pacparser
+kind: app
+display: pacparser
+description: A library to parse proxy auto-config (PAC) files
+homepage: https://pacparser.manugarg.com
+license: LGPL-3.0-or-later
+version: 1.5.4
+channels:
+    stable: 1.5.4
+provides:
+    - pacparser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/manugarg/pacparser/releases/download/v1.5.4/pacparser-v1.5.4-windows-x86_64.zip
+      sha256: 99a459eb3408c87f87c39380629566a123c8f0f34121cfa8ec27f259ba955ca0
+      bin:
+        - pactester.exe
+      strip: 1
+test: pactester --version

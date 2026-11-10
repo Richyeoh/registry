@@ -1,0 +1,21 @@
+api: v1
+name: azure-functions-core-tools
+kind: app
+display: azure-functions-core-tools
+description: Command line tools for Azure Functions
+homepage: https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local
+license: MIT
+version: 4.16.0
+channels:
+    stable: 4.16.0
+provides:
+    - azure-functions-core-tools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/azure-functions-core-tools/releases/download/4.16.0/Azure.Functions.Cli.win-x64.4.16.0.zip#/dl.7z
+      sha256: 5447017693611fe507edce98bb1d5ebc132e179297e67a49ad23f26b95b87dd1
+      bin:
+        - func.exe
+      strip: 1
+test: func --version

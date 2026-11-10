@@ -1,0 +1,21 @@
+api: v1
+name: proxytunnel
+kind: app
+display: proxytunnel
+description: Stealth tunneling through HTTP(S) proxies.
+homepage: https://proxytunnel.sourceforge.io
+license: GPL-2.0-only
+version: 1.13.0
+channels:
+    stable: 1.13.0
+provides:
+    - proxytunnel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/proxytunnel/proxytunnel/releases/download/v1.13.0/proxytunnel-v1.13.0-x86_64-windows-msys.zip
+      sha256: e2d5535fdcc2348de5de33f8057508da2da947a3916f4a993b3eea3cb9d91272
+      bin:
+        - proxytunnel.exe
+      strip: 1
+test: proxytunnel --version

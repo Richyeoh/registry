@@ -1,0 +1,21 @@
+api: v1
+name: detekt
+kind: app
+display: detekt
+description: A static code analysis tool for the Kotlin programming language
+homepage: https://detekt.dev
+license: Apache-2.0
+version: 1.23.8
+channels:
+    stable: 1.23.8
+provides:
+    - detekt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/detekt/detekt/releases/download/v1.23.8/detekt-cli-1.23.8.zip
+      sha256: ff9f9258879ff2ec4349114740221498afec46a85cf6302c9f80b06eb4429501
+      bin:
+        - bin\detekt-cli.bat.exe
+      strip: 1
+test: bin\detekt-cli.bat --version

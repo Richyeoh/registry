@@ -1,0 +1,24 @@
+api: v1
+name: mcp-toolbox
+kind: app
+display: mcp-toolbox
+description: MCP server that connects AI agents, IDEs and applications directly to databases.
+homepage: https://mcp-toolbox.dev
+license: Apache-2.0
+version: 1.16.0
+channels:
+    stable: 1.16.0
+provides:
+    - mcp-toolbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/mcp-toolbox-for-databases/v1.16.0/windows/amd64/toolbox.exe
+      sha256: 326c9783187f7a3d639baa0a2a78ef3f452ea945aa31b6d5ff82f75d505b7e7f
+      bin:
+        - toolbox.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mcp-toolbox
+test: toolbox --version

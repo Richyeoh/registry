@@ -1,0 +1,21 @@
+api: v1
+name: hideul
+kind: app
+display: hideul
+description: A tiny utility designed to help you mask applications in the Add/Remove Programs of Windows.
+homepage: https://www.sordum.org/hide-from-uninstall-list
+license: Unknown
+version: "1.1"
+channels:
+    stable: "1.1"
+provides:
+    - hideul
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sordum.org/files/download/hide-from-uninstall-list/HideUL.zip
+      sha256: d7cd442b727422cba2863bb144d8a4c0948f8d229196f957508cea86af78d48a
+      bin:
+        - hideul.exe
+      strip: 1
+test: hideul --version

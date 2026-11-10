@@ -1,0 +1,39 @@
+api: v1
+name: awscli
+kind: app
+display: awscli
+description: Official Amazon AWS command-line interface
+homepage: https://aws.amazon.com/cli/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.39.7
+channels:
+    stable: 2.39.7
+provides:
+    - awscli
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:232f9d3df09aec692ac21403b4957ac5ac45d040b93ff5f281a600290f23bfdb
+      sha256: 232f9d3df09aec692ac21403b4957ac5ac45d040b93ff5f281a600290f23bfdb
+      bin:
+        - awscli
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:eea33ba4a2a769dbd2ba4b55a9446debb2845cba2309586050b00701c3ff416e
+      sha256: eea33ba4a2a769dbd2ba4b55a9446debb2845cba2309586050b00701c3ff416e
+      bin:
+        - awscli
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:ef50ecf34798685c5f22187a70569f5e0bd2fc486e6eb5a34d353575669add90
+      sha256: ef50ecf34798685c5f22187a70569f5e0bd2fc486e6eb5a34d353575669add90
+      bin:
+        - awscli
+      strip: 1
+test: awscli --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

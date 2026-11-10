@@ -1,0 +1,26 @@
+api: v1
+name: tailscale
+kind: app
+display: tailscale
+description: Tailscale a WireGuard based mesh VPN, used to connect your computers and other devices together securely without proxies.
+homepage: https://tailscale.com
+license: BSD-3-Clause
+version: 1.104.5
+channels:
+    stable: 1.104.5
+provides:
+    - tailscale
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://pkgs.tailscale.com/stable/tailscale-setup-1.104.5-amd64.msi
+      sha256: 3c41318c83c5d95d0b017b1baa08ba7c99fd5334166122bbb1931e55af99839c
+      bin:
+        - tailscale.exe
+        - tailscale-ipn.exe
+        - tailscaled.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tailscale
+test: tailscale --version

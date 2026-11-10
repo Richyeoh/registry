@@ -1,0 +1,24 @@
+api: v1
+name: listary
+kind: app
+display: listary
+description: A revolutionary search utility.
+homepage: https://www.listary.com
+license: Shareware
+version: 6.3.5.94
+channels:
+    stable: 6.3.5.94
+provides:
+    - listary
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.listary.com/download/Listary.exe?version=6.3.5.94#/dl.exe
+      sha256: c62249e0d4d49bd3f062d55635cf6a3ab089ea8ee7f6c03947f6febfafaa0288
+      bin:
+        - listary.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall listary
+test: listary --version

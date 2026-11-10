@@ -1,0 +1,21 @@
+api: v1
+name: github-beta
+kind: app
+display: github-beta
+description: Extend your GitHub workflow beyond your browser.
+homepage: https://desktop.github.com/
+license: MIT
+version: 3.6.11-beta1
+channels:
+    stable: 3.6.11-beta1
+provides:
+    - github-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/desktop/desktop/releases/download/release-3.6.11-beta1/GitHubDesktop-3.6.11-beta1-x64-full.nupkg
+      sha256: 03bd06b77419961b1b796e5cf592e189039bc80f1c20b40fa9e5edfefee3468a
+      bin:
+        - GitHubDesktop.exe
+      strip: 1
+test: GitHubDesktop --version

@@ -1,0 +1,21 @@
+api: v1
+name: gitea
+kind: app
+display: gitea
+description: A painless self-hosted Git service
+homepage: https://gitea.io/
+license: MIT
+version: 28.3.0
+channels:
+    stable: 28.3.0
+provides:
+    - gitea
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.gitea.com/gitea/28.3.0/gitea-28.3.0-windows-amd64.exe.xz
+      sha256: 0e8ec8c6ca826c6e1e3875214061653b3fdb620b227d8550dd36865a08b31b79
+      bin:
+        - gitea.exe
+      strip: 1
+test: gitea --version

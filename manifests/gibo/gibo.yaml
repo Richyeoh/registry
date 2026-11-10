@@ -1,0 +1,21 @@
+api: v1
+name: gibo
+kind: app
+display: gibo
+description: gibo (short for .gitignore boilerplates) is a shell script to help you easily access .gitignore boilerplates from github.com/github/gitignore
+homepage: https://github.com/simonwhitaker/gibo
+license: Unlicense
+version: 3.0.23
+channels:
+    stable: 3.0.23
+provides:
+    - gibo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/simonwhitaker/gibo/releases/download/v3.0.23/gibo_Windows_x86_64.zip
+      sha256: 7eab8611ca792ce53af9645c6a959fe38b26b1245352804b7d3906262519be75
+      bin:
+        - gibo.exe
+      strip: 1
+test: gibo --version

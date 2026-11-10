@@ -1,0 +1,21 @@
+api: v1
+name: eiskaltdcpp
+kind: app
+display: eiskaltdcpp
+description: File sharing program using DC and ADC protocols
+homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
+license: GPL-3.0-or-later
+version: 2.4.2
+channels:
+    stable: 2.4.2
+provides:
+    - eiskaltdcpp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/eiskaltdcpp/files/Windows/EiskaltDC++-2.4.2_x86_64-portable.7z
+      sha256: 170e360739c08af912d5f2e602d9d0be8f09e21a2488aae83c050bcac583336f
+      bin:
+        - eiskaltdcpp-daemon.exe
+      strip: 1
+test: eiskaltdcpp-daemon --version

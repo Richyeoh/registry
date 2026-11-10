@@ -1,0 +1,24 @@
+api: v1
+name: mathpix
+kind: app
+display: mathpix
+description: A tool for an easy and fast way to create math equations using LaTex.
+homepage: https://mathpix.com/
+license: Unknown
+version: 03.00.0160
+channels:
+    stable: 03.00.0160
+provides:
+    - mathpix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.mathpix.com/windows/mathpix_snipping_tool_setup.v03.00.0160.exe
+      sha256: debfa192247540b9953223f426dbb814b209f7b3d223ad8770078aec612a2764
+      bin:
+        - mathpix.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mathpix
+test: mathpix --version

@@ -1,0 +1,32 @@
+api: v1
+name: anka-build-cloud-registry
+kind: app
+display: Anka Build Cloud Controller
+description: Anka virtual machine registry & API
+homepage: https://veertu.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.52.0-36aa9fba
+channels:
+    stable: 1.52.0-36aa9fba
+provides:
+    - anka-build-cloud-registry
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://downloads.veertu.com/anka/anka-registry-arm64-1.52.0-36aa9fba.pkg
+      sha256: 6081e5b4f0d18163f6f2fbfa3f2c422b51fecc4cde181da1106199df17fdabbd
+      bin:
+        - anka-build-cloud-registry
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://downloads.veertu.com/anka/anka-registry-arm64-1.52.0-36aa9fba.pkg
+      sha256: 6081e5b4f0d18163f6f2fbfa3f2c422b51fecc4cde181da1106199df17fdabbd
+      bin:
+        - anka-build-cloud-registry
+      strip: 1
+test: anka-build-cloud-registry --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

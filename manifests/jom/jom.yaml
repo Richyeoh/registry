@@ -1,0 +1,22 @@
+api: v1
+name: jom
+kind: app
+display: jom
+description: Clone of nmake to support the execution of multiple independent commands in parallel
+homepage: https://wiki.qt.io/Jom
+license: GPL-3.0-or-later
+version: 1.1.7
+channels:
+    stable: 1.1.7
+provides:
+    - jom
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.qt.io/official_releases/jom/jom_1_1_7.zip
+      sha256: 4c8af345586a9a08fbfd2f613fcac748226d91a75627aa3581b297dd513046fe
+      bin:
+        - ibjom.bat.exe
+        - jom.exe
+      strip: 1
+test: ibjom.bat --version

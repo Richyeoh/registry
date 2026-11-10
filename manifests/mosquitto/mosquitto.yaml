@@ -1,0 +1,25 @@
+api: v1
+name: mosquitto
+kind: app
+display: mosquitto
+description: An open-source message broker that implements the MQTT protocol.
+homepage: https://mosquitto.org/
+license: EPL-1.0
+version: 2.1.2
+channels:
+    stable: 2.1.2
+provides:
+    - mosquitto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mosquitto.org/files/binary/win64/mosquitto-2.1.2-install-windows-x64.exe#dl.7z
+      sha256: 58008ad7a22ada0b4073afa415801746e027c5f583e4fa52d0f4e9193b98d6aa
+      bin:
+        - mosquitto.exe
+        - mosquitto_passwd.exe
+        - mosquitto_pub.exe
+        - mosquitto_rr.exe
+        - mosquitto_sub.exe
+      strip: 1
+test: mosquitto --version

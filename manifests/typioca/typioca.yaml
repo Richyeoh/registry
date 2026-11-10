@@ -1,0 +1,24 @@
+api: v1
+name: typioca
+kind: app
+display: typioca
+description: Minimal, terminal based typing speed tester.
+homepage: https://github.com/bloznelis/typioca
+license: MIT
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - typioca
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bloznelis/typioca/releases/download/3.1.0/typioca-win-amd64.exe#/typioca.exe
+      sha256: 3b5feb91a7e2f38a39f54643ae382699849859c46c66c135181e645ff34eeb75
+      bin:
+        - typioca.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall typioca
+test: typioca --version

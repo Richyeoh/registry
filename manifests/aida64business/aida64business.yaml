@@ -1,0 +1,21 @@
+api: v1
+name: aida64business
+kind: app
+display: aida64business
+description: System information, diagnostics, and auditing application
+homepage: https://www.aida64.com/products/aida64-business
+license: Unknown
+version: 8.40.5000
+channels:
+    stable: 8.40.5000
+provides:
+    - aida64business
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.aida64.com/aida64business840.zip
+      sha256: e15af3e51c216090855f9e4bc8008d69ab0d8cdbb508264aa6307b4677522d35
+      bin:
+        - aida64.exe
+      strip: 1
+test: aida64 --version

@@ -1,0 +1,28 @@
+api: v1
+name: groovy
+kind: app
+display: groovy
+description: A powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform aimed at improving developer productivity thanks to a concise, familiar and easy to learn syntax.
+homepage: https://www.groovy-lang.org
+license: Apache-2.0
+version: 6.0.0
+channels:
+    stable: 6.0.0
+provides:
+    - groovy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-6.0.0.zip
+      sha256: 54ab1a877f01da2ed16ed43c1ed7a8d6c36b122714c6959712700e89e6efde7c
+      bin:
+        - bin\grape.bat.exe
+        - bin\groovy.bat.exe
+        - bin\groovyc.bat.exe
+        - bin\groovyConsole.bat.exe
+        - bin\groovydoc.bat.exe
+        - bin\groovysh.bat.exe
+        - bin\java2groovy.bat.exe
+        - bin\startGroovy.bat.exe
+      strip: 1
+test: bin\grape.bat --version

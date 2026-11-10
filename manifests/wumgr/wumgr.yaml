@@ -1,0 +1,21 @@
+api: v1
+name: wumgr
+kind: app
+display: wumgr
+description: Manage updates of Microsoft products.
+homepage: https://github.com/DavidXanatos/wumgr
+license: GPL-3.0-or-later
+version: 1.1b
+channels:
+    stable: 1.1b
+provides:
+    - wumgr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DavidXanatos/wumgr/releases/download/v1.1/WuMgr_v1.1b.zip
+      sha256: 585f10d7d75779b8a74859a9b70a925370f593b239ecf8b8c328ed59c71b276a
+      bin:
+        - wumgr.exe
+      strip: 1
+test: wumgr --version

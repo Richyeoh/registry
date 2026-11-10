@@ -1,0 +1,21 @@
+api: v1
+name: openlogi
+kind: app
+display: openlogi
+description: A local-first alternative to Logitech Options+, written in Rust. Remap buttons, drive DPI and SmartShift over HID++. No account, no telemetry.
+homepage: https://openlogi.org
+license: MIT|Apache-2.0
+version: 0.9.0
+channels:
+    stable: 0.9.0
+provides:
+    - openlogi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AprilNEA/OpenLogi/releases/download/v0.9.0/OpenLogi-v0.9.0-windows-x86_64.zip
+      sha256: 1e42f56714108e592b99ac42fa7cea0b41e39fee8119dec36a75800ae0d7a5b4
+      bin:
+        - bin\openlogi.exe
+      strip: 1
+test: bin\openlogi --version

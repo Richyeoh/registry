@@ -1,0 +1,24 @@
+api: v1
+name: fontcreator
+kind: app
+display: fontcreator
+description: the most popular font editor
+homepage: https://www.high-logic.com/font-editor/fontcreator
+license: Unknown
+version: 16.0.0.3086
+channels:
+    stable: 16.0.0.3086
+provides:
+    - fontcreator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.high-logic.com/FontCreatorSetup-x64.exe
+      sha256: 0f258968eaa50c06a90816f6cc0489ed651068d694d3abb7ec85274a188b838c
+      bin:
+        - fontcreator.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fontcreator
+test: fontcreator --version

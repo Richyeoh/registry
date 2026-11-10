@@ -1,0 +1,21 @@
+api: v1
+name: effectcraft
+kind: app
+display: effectcraft
+description: Motion graphics and visual effects; an open-source, clean-room reimplementation of Adobe After Effects, rebuilt in pure Rust
+homepage: https://getartcraft.com/apps/effectcraft
+license: MIT|Apache-2.0
+version: 0.22.0
+channels:
+    stable: 0.22.0
+provides:
+    - effectcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/effectcraft/releases/download/v0.22.0/effectcraft-0.22.0-windows-x64-portable.zip
+      sha256: a690c870390d7ff673b8443acf620c79662e47d37541fbb0c4fd6988850ca188
+      bin:
+        - effectcraft-cli.exe
+      strip: 1
+test: effectcraft-cli --version

@@ -1,0 +1,24 @@
+api: v1
+name: oh-my-openagent
+kind: app
+display: oh-my-openagent
+description: Your tool for real work. But it's an agent.
+homepage: https://omo.dev
+license: SUL-1.0
+version: 5.1.66
+channels:
+    stable: 5.1.66
+provides:
+    - oh-my-openagent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://get.omo.dev/v/5.1.66/omo-windows-x64.exe#/omo.exe
+      sha256: 7f2c684398638608c0168c65fc1491f6893aba262519a0152772fae63ad65594
+      bin:
+        - omo.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall oh-my-openagent
+test: omo --version

@@ -1,0 +1,21 @@
+api: v1
+name: nswagstudio
+kind: app
+display: nswagstudio
+description: The OpenAPI/Swagger API toolchain for .NET and TypeScript
+homepage: https://github.com/RicoSuter/NSwag
+license: MIT
+version: 14.7.1
+channels:
+    stable: 14.7.1
+provides:
+    - nswagstudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RicoSuter/NSwag/releases/download/v14.7.1/NSwag.zip
+      sha256: ca8c81467cf23900b8cc9440ccab3c3138add7943223f855814518350aeab60d
+      bin:
+        - Win\NSwag.exe
+      strip: 1
+test: Win\NSwag --version

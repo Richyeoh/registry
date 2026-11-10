@@ -1,0 +1,21 @@
+api: v1
+name: serial-cloner
+kind: app
+display: serial-cloner
+description: Molecular Biology software. Provides tools with an intuitive interface that assists you in DNA cloning, sequence analysis and visualization.
+homepage: http://serialbasics.free.fr/Serial_Cloner.html
+license: Unknown
+version: 2.6.1
+channels:
+    stable: 2.6.1
+provides:
+    - serial-cloner
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://serialbasics.free.fr/Serial_Cloner-Download_files/SerialCloner2-6.zip
+      sha256: 8e9da3c597a203311cbf35adca9169f70ef80eec978f1607353cb59303afe42e
+      bin:
+        - serial-cloner.exe
+      strip: 1
+test: serial-cloner --version

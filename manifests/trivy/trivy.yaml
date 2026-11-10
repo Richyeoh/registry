@@ -1,0 +1,21 @@
+api: v1
+name: trivy
+kind: app
+display: trivy
+description: Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more
+homepage: https://trivy.dev
+license: Apache-2.0
+version: 0.76.2
+channels:
+    stable: 0.76.2
+provides:
+    - trivy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aquasecurity/trivy/releases/download/v0.76.2/trivy_0.76.2_windows-64bit.zip
+      sha256: 691f737a7e5566a673c3a74dab9160552ec32101e953b659e5c77443d16dddb6
+      bin:
+        - trivy.exe
+      strip: 1
+test: trivy --version

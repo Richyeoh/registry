@@ -1,0 +1,21 @@
+api: v1
+name: eagleget
+kind: app
+display: eagleget
+description: A free all-in-one download manager.
+homepage: https://www.eagleget.org/
+license: Unknown
+version: 2.1.5.10
+channels:
+    stable: 2.1.5.10
+provides:
+    - eagleget
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/eagleget/EagleGetPortable_2.1.5.10.zip
+      sha256: 2bc66da27a05eeca270b55f02ad5b57bd70287713a7de1e5a3737e9a41c37788
+      bin:
+        - eagleget.exe
+      strip: 1
+test: eagleget --version

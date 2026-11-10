@@ -1,0 +1,21 @@
+api: v1
+name: fun
+kind: app
+display: fun
+description: Complete set of commands to define, develop, test serverless applications, and deploy them to the Alibaba Cloud.
+homepage: https://alibabacloud.com/help/doc-detail/64204.html?lang=en
+license: MIT
+version: 3.6.24
+channels:
+    stable: 3.6.24
+provides:
+    - fun
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://funcruft-release.oss-accelerate.aliyuncs.com/fun/fun-v3.6.24-win.exe.zip
+      sha256: 9e05614352e0b0a32a79cd69c754482f76a675df5b9b257c073d39527ba1c9c7
+      bin:
+        - fun.exe
+      strip: 1
+test: fun --version

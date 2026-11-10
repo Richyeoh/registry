@@ -1,0 +1,21 @@
+api: v1
+name: gojq
+kind: app
+display: gojq
+description: Pure Go implementation of jq, an ultra-fast and flexible JSON processor.
+homepage: https://github.com/itchyny/gojq
+license: MIT
+version: 0.12.20
+channels:
+    stable: 0.12.20
+provides:
+    - gojq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/itchyny/gojq/releases/download/v0.12.20/gojq_v0.12.20_windows_amd64.zip
+      sha256: fa418a4a97422d10e4f65f093ea4c35eab239f9c0957810d4f4fc1c4253fbf7c
+      bin:
+        - gojq.exe
+      strip: 1
+test: gojq --version

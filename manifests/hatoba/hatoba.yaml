@@ -1,0 +1,21 @@
+api: v1
+name: hatoba
+kind: app
+display: hatoba
+description: Open-source desktop SSH client with an AI assistant and end-to-end encrypted sync
+homepage: https://hatoba.fog.moe
+license: MIT
+version: 0.8.5
+channels:
+    stable: 0.8.5
+provides:
+    - hatoba
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/scarletkc/Hatoba/releases/download/v0.8.5/Hatoba_0.8.5_windows-x64-setup.exe#/dl.7z
+      sha256: cccfc1ede3695779e7ac0a5c274994eacf783ae9ff91d59d2b634f3450d8da50
+      bin:
+        - hatoba.exe
+      strip: 1
+test: hatoba --version

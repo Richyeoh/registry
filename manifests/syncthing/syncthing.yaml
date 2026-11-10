@@ -1,0 +1,21 @@
+api: v1
+name: syncthing
+kind: app
+display: syncthing
+description: Open Source Continuous File Synchronization.
+homepage: https://syncthing.net/
+license: MPL-2.0
+version: 2.1.7
+channels:
+    stable: 2.1.7
+provides:
+    - syncthing
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/syncthing/syncthing/releases/download/v2.1.7/syncthing-windows-amd64-v2.1.7.zip
+      sha256: 3ce7da770f546a8d02b65b2e7ee31f2a3b8b7c3f990ede045590cca4172ecfe1
+      bin:
+        - syncthing.exe
+      strip: 1
+test: syncthing --version

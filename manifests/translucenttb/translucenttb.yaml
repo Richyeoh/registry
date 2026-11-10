@@ -1,0 +1,21 @@
+api: v1
+name: translucenttb
+kind: app
+display: translucenttb
+description: Makes the Windows taskbar translucent/transparent.
+homepage: https://github.com/TranslucentTB/TranslucentTB
+license: GPL-3.0-only
+version: "2026.2"
+channels:
+    stable: "2026.2"
+provides:
+    - translucenttb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TranslucentTB/TranslucentTB/releases/download/2026.2/TranslucentTB-portable-x64.zip
+      sha256: 0dbe8e0255c20e131cde536dcd0ae490d45989a7d360e26d0150dff1922ac420
+      bin:
+        - translucenttb.exe
+      strip: 1
+test: translucenttb --version

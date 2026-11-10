@@ -1,0 +1,21 @@
+api: v1
+name: xsv
+kind: app
+display: xsv
+description: A fast CSV command line toolkit written in Rust
+homepage: https://github.com/BurntSushi/xsv
+license: Unlicense
+version: 0.13.0
+channels:
+    stable: 0.13.0
+provides:
+    - xsv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-pc-windows-msvc.zip
+      sha256: 3e319c08456031a9683c19c998ac9f61756a2e456413db17c8e6819b17818a1a
+      bin:
+        - xsv.exe
+      strip: 1
+test: xsv --version

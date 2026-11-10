@@ -1,0 +1,27 @@
+api: v1
+name: p4v
+kind: app
+display: p4v
+description: Provides access to versioned files in Helix Core through a graphical interface.
+homepage: https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v
+license: Unknown
+version: 2026.3-3115448
+channels:
+    stable: 2026.3-3115448
+provides:
+    - p4v
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdist2.perforce.com/perforce/r26.3/bin.ntx64/p4vinst64.msi
+      sha256: 9569c926588b954f07d51d1a18ba9502d23da31edca2c2c4ad16b970e2dabd92
+      bin:
+        - p4.exe
+        - p4admin.exe
+        - p4merge.exe
+        - p4v.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall p4v
+test: p4 --version

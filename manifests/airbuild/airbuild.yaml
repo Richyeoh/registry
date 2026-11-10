@@ -1,0 +1,32 @@
+api: v1
+name: airbuild
+kind: app
+display: AirBuild
+description: AI agents that build iOS apps and handle App Store review
+homepage: https://air.build/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.6.27
+channels:
+    stable: 1.6.27
+provides:
+    - airbuild
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://release.air.build/macos/AirBuild-macOS-1.6-27.zip
+      sha256: 690c0b4e0c20f2495b61f4992cb9276d8527df67c832b88f78d811828297d748
+      bin:
+        - airbuild
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://release.air.build/macos/AirBuild-macOS-1.6-27.zip
+      sha256: 690c0b4e0c20f2495b61f4992cb9276d8527df67c832b88f78d811828297d748
+      bin:
+        - airbuild
+      strip: 1
+test: airbuild --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

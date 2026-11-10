@@ -1,0 +1,21 @@
+api: v1
+name: fedify
+kind: app
+display: fedify
+description: CLI toolchain for Fedify and debugging ActivityPub
+homepage: https://fedify.dev/cli
+license: MIT
+version: 2.4.5
+channels:
+    stable: 2.4.5
+provides:
+    - fedify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fedify-dev/fedify/releases/download/2.4.5/fedify-cli-2.4.5-windows-x86_64.zip
+      sha256: b102d040720ded36f63b7c945b2fe9ce346b4ab1645fc51e7003b8457f05882b
+      bin:
+        - fedify.exe
+      strip: 1
+test: fedify --version

@@ -1,0 +1,21 @@
+api: v1
+name: glfw
+kind: app
+display: glfw
+description: GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.
+homepage: https://www.glfw.org
+license: zlib-acknowledgement
+version: 3.5.1
+channels:
+    stable: 3.5.1
+provides:
+    - glfw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/glfw/glfw/releases/download/3.5.1/glfw-3.5.1.bin.WIN64.zip
+      sha256: 34c6766043e09ad9c6e88b5636a5f34d1f2857aae828768c5bf2016dc8821a93
+      bin:
+        - glfw.exe
+      strip: 1
+test: glfw --version

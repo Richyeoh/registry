@@ -1,0 +1,21 @@
+api: v1
+name: screen-saver-control
+kind: app
+display: screen-saver-control
+description: Activate/deactivate both screen saver and monitor power off with a simple click.
+homepage: http://www.ampsoft.net/utilities/ScreenSaverControl.php
+license: Freeware
+version: "1.61"
+channels:
+    stable: "1.61"
+provides:
+    - screen-saver-control
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.ampsoft.net/files/ScreenSaverControl.zip
+      sha256: 26ab07326d91db6a80fc9de77dedbc9b36bb3070c514a1be7239ea397beb512f
+      bin:
+        - ScreenSaverControl.exe
+      strip: 1
+test: ScreenSaverControl --version

@@ -1,0 +1,21 @@
+api: v1
+name: tumblthree
+kind: app
+display: tumblthree
+description: A Tumblr Backup Application
+homepage: https://github.com/TumblThreeApp/TumblThree
+license: MIT
+version: 2.23.1
+channels:
+    stable: 2.23.1
+provides:
+    - tumblthree
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TumblThreeApp/TumblThree/releases/download/v2.23.1/TumblThree-v2.23.1-x64-Application.zip
+      sha256: cd977883cb850f1fbeb77c1ed687007995b72631f02c9b99b7fd30fce200a36c
+      bin:
+        - TumblThree.exe
+      strip: 1
+test: TumblThree --version

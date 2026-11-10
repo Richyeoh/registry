@@ -1,0 +1,21 @@
+api: v1
+name: texmaker
+kind: app
+display: texmaker
+description: A free, modern and cross-platform LaTeX editor that integrates many tools needed to develop documents with LaTeX.
+homepage: https://www.xm1math.net/texmaker/
+license: GPL-2.0-only
+version: 6.0.2
+channels:
+    stable: 6.0.2
+provides:
+    - texmaker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.xm1math.net/texmaker/assets/files/texmakerwin64usb.zip
+      sha256: 736b4b7cbb8f8be8f4548f3b6bb29a029ab9044f771fd34d7649a10b878be831
+      bin:
+        - texmaker.exe
+      strip: 1
+test: texmaker --version

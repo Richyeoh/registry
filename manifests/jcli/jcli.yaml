@@ -1,0 +1,21 @@
+api: v1
+name: jcli
+kind: app
+display: jcli
+description: Multiple Jenkins servers manager
+homepage: https://github.com/jenkins-zh/jenkins-cli
+license: MIT
+version: 0.0.47
+channels:
+    stable: 0.0.47
+provides:
+    - jcli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jenkins-zh/jenkins-cli/releases/download/v0.0.47/jcli-windows-amd64.zip
+      sha256: deadcca486c55d2d243a9351c18f5387f95ddf9f99c28423145ead696eeefbbb
+      bin:
+        - jcli.exe
+      strip: 1
+test: jcli --version

@@ -1,0 +1,21 @@
+api: v1
+name: vesta
+kind: app
+display: vesta
+description: VESTA is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies.
+homepage: https://jp-minerals.org/vesta/en/
+license: Unknown
+version: 3.5.8
+channels:
+    stable: 3.5.8
+provides:
+    - vesta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://jp-minerals.org/vesta/archives/3.5.8/VESTA-win64.zip
+      sha256: 9390bccd3e7e9d89ba18fe19a5a8568d42d308bd27922610e84bd6bcf182e146
+      bin:
+        - vesta.exe
+      strip: 1
+test: vesta --version

@@ -1,0 +1,24 @@
+api: v1
+name: powersession
+kind: app
+display: powersession
+description: Terminal session recorder (Asciinema format) written in C#
+homepage: https://github.com/Watfaq-legacy/PowerSession
+license: MIT
+version: 1.4.7
+channels:
+    stable: 1.4.7
+provides:
+    - powersession
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Watfaq-legacy/PowerSession/releases/download/v1.4.7/PowerSession-win10-x64.exe#/PowerSession.exe
+      sha256: cf54f5fa087bf84ce915ae514f2512df848d01f2d5e6fb33dff235dcc669c65a
+      bin:
+        - PowerSession.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall powersession
+test: PowerSession --version

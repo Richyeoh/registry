@@ -1,0 +1,21 @@
+api: v1
+name: mqtt-cli
+kind: app
+display: mqtt-cli
+description: 'MQTT CLI is a useful command line interface for connecting various MQTT clients supporting MQTT 5.0 and 3.1.1 '
+homepage: https://hivemq.github.io/mqtt-cli/
+license: Apache-2.0
+version: 4.57.0
+channels:
+    stable: 4.57.0
+provides:
+    - mqtt-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hivemq/mqtt-cli/releases/download/v4.57.0/mqtt-cli-4.57.0-win.zip
+      sha256: 03fbe6fcba49ea890e3720e0fdf86d13e7a18398ad019dc77e0d5c2023b354ad
+      bin:
+        - mqtt-cli.exe
+      strip: 1
+test: mqtt-cli --version

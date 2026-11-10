@@ -1,0 +1,39 @@
+api: v1
+name: afl
+kind: app
+display: afl++
+description: American Fuzzy Lop++
+homepage: https://aflplus.plus/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 5.03c
+channels:
+    stable: 5.03c
+provides:
+    - afl
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aflxx/blobs/sha256:c1bef335568baa534e74b980038d04d1c4f9eba041fd32bf9e4c7f4e3549429e
+      sha256: c1bef335568baa534e74b980038d04d1c4f9eba041fd32bf9e4c7f4e3549429e
+      bin:
+        - afl
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aflxx/blobs/sha256:1713c39232765877919f72fb6b7032ab9a662e65a2c76ae94a1405cd3a419530
+      sha256: 1713c39232765877919f72fb6b7032ab9a662e65a2c76ae94a1405cd3a419530
+      bin:
+        - afl
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aflxx/blobs/sha256:746128a45ef705adc4abc6950628590d91d96ba74df3f5dc42aa8d10b87bfc6e
+      sha256: 746128a45ef705adc4abc6950628590d91d96ba74df3f5dc42aa8d10b87bfc6e
+      bin:
+        - afl
+      strip: 1
+test: afl --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

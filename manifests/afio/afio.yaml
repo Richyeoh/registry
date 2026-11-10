@@ -1,0 +1,46 @@
+api: v1
+name: afio
+kind: app
+display: afio
+description: Creates cpio-format archives
+homepage: https://github.com/kholtman/afio
+license: LicenseRef-Homebrew-cannot-represent
+keywords:
+    - brew
+    - homebrew
+version: 2.5.2
+channels:
+    stable: 2.5.2
+provides:
+    - afio
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/afio/blobs/sha256:9e5718d3fe605e90aa5bd956bf4849274d716f09617c10da3d3bb522dea23d24
+      sha256: 9e5718d3fe605e90aa5bd956bf4849274d716f09617c10da3d3bb522dea23d24
+      bin:
+        - afio
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/afio/blobs/sha256:68d35795dc8274afdba6c80145c71da38edbb92deec65de03186061cc7271a6c
+      sha256: 68d35795dc8274afdba6c80145c71da38edbb92deec65de03186061cc7271a6c
+      bin:
+        - afio
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/afio/blobs/sha256:93dee32378176bea139dadf874fed07b411076443fee3a7ff33c84eadfc7760d
+      sha256: 93dee32378176bea139dadf874fed07b411076443fee3a7ff33c84eadfc7760d
+      bin:
+        - afio
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/afio/blobs/sha256:8a697f6c0f0e1fd2b2fca0db9d4eacb4e12dbb0f82212fbe00947bca01c3eea6
+      sha256: 8a697f6c0f0e1fd2b2fca0db9d4eacb4e12dbb0f82212fbe00947bca01c3eea6
+      bin:
+        - afio
+      strip: 1
+test: afio --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

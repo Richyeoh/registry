@@ -1,0 +1,24 @@
+api: v1
+name: biome
+kind: app
+display: biome
+description: Formatter, linter, bundler, and more for JavaScript, TypeScript, JSON, HTML, Markdown, and CSS.
+homepage: https://biomejs.dev/
+license: MIT
+version: 2.6.6
+channels:
+    stable: 2.6.6
+provides:
+    - biome
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/biomejs/biome/releases/download/%40biomejs%2Fbiome%402.6.6/biome-win32-x64.exe#/biome.exe
+      sha256: d3aac0b55e1b52ce586892b7c64de6bd2fc3774fe5b71129426af92c8a3c0571
+      bin:
+        - biome.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall biome
+test: biome --version

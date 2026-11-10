@@ -1,0 +1,24 @@
+api: v1
+name: msival2
+kind: app
+display: msival2
+description: MSI Database Validation Tool
+homepage: https://docs.microsoft.com/en-us/windows/desktop/Msi/msival2-exe
+license: Unknown
+version: 5.0.18362.1
+channels:
+    stable: 5.0.18362.1
+provides:
+    - msival2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/4/2/2/42245968-6A79-4DA7-A5FB-08C0AD0AE661/windowssdk/Installers/MsiVal2-x86_en-us.msi
+      sha256: 1e720cd85ee7a0ce4be27cf0a26a4b7b4424bd551124e494a019f5a496a44d1e
+      bin:
+        - MsiVal2.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall msival2
+test: MsiVal2 --version

@@ -1,0 +1,21 @@
+api: v1
+name: wintun-dll
+kind: app
+display: wintun-dll
+description: A very simple and minimal TUN driver for the Windows kernel, which provides userspace programs with a simple network adapter for reading and writing packets.
+homepage: https://www.wintun.net/
+license: Unknown
+version: 0.14.1
+channels:
+    stable: 0.14.1
+provides:
+    - wintun-dll
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.wintun.net/builds/wintun-0.14.1.zip
+      sha256: 07c256185d6ee3652e09fa55c0b673e2624b565e02c4b9091c79ca7d2f24ef51
+      bin:
+        - wintun-dll.exe
+      strip: 1
+test: wintun-dll --version

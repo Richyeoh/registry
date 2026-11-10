@@ -1,0 +1,39 @@
+api: v1
+name: algolia
+kind: app
+display: algolia
+description: Command-line tool to manage Algolia applications, accounts, and search resources
+homepage: https://www.algolia.com/doc/tools/cli/get-started
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.18.0
+channels:
+    stable: 1.18.0
+provides:
+    - algolia
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/algolia/blobs/sha256:20384d59e998742f5cd6f428188bddac97b7a65631180510740961f05c2e150e
+      sha256: 20384d59e998742f5cd6f428188bddac97b7a65631180510740961f05c2e150e
+      bin:
+        - algolia
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/algolia/blobs/sha256:84319373e6fbcc15a3b259c48029aaabbbda4418a8051a6071725a12e7844fc3
+      sha256: 84319373e6fbcc15a3b259c48029aaabbbda4418a8051a6071725a12e7844fc3
+      bin:
+        - algolia
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/algolia/blobs/sha256:9166e69884021e3c86bae6d3bbf987b07974716f7206373e442103897000b75b
+      sha256: 9166e69884021e3c86bae6d3bbf987b07974716f7206373e442103897000b75b
+      bin:
+        - algolia
+      strip: 1
+test: algolia --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

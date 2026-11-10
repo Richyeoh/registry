@@ -1,0 +1,24 @@
+api: v1
+name: mpd
+kind: app
+display: mpd
+description: Music Player Daemon
+homepage: https://www.musicpd.org/
+license: GPL-2.0-or-later
+version: 0.24.18
+channels:
+    stable: 0.24.18
+provides:
+    - mpd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.musicpd.org/download/win32/0.24.18/mpd.exe
+      sha256: 18121d1593450b18451f7d83565adef4ac73cb70005eba1113617afb607433bd
+      bin:
+        - mpd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mpd
+test: mpd --version

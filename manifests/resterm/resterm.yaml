@@ -1,0 +1,24 @@
+api: v1
+name: resterm
+kind: app
+display: resterm
+description: Terminal API client for HTTP/GraphQL/gRPC with support for SSH tunnels, WebSockets, SSE, workflows, profiling, OpenAPI and response diffs.
+homepage: https://resterm.app
+license: Apache-2.0
+version: 1.18.1
+channels:
+    stable: 1.18.1
+provides:
+    - resterm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/unkn0wn-root/resterm/releases/download/v1.18.1/resterm_Windows_x86_64.exe#/resterm.exe
+      sha256: 39cf88d9f41287c2874b103ecf81ea105d2317254049e1a905c5e8dd4aa38cca
+      bin:
+        - resterm.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall resterm
+test: resterm --version

@@ -1,0 +1,21 @@
+api: v1
+name: zk-cli
+kind: app
+display: zk
+description: A plain text note-taking assistant.
+homepage: https://zk-org.github.io/zk
+license: GPL-3.0-only
+version: 0.15.7
+channels:
+    stable: 0.15.7
+provides:
+    - zk-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zk-org/zk/releases/download/v0.15.7/zk-v0.15.7-windows-x86_64.tar.gz
+      sha256: ccb8364a89c4998be8278afc296c812a6d6ffea6b27db238f4ea408e83d8a3e3
+      bin:
+        - zk.exe
+      strip: 1
+test: zk --version

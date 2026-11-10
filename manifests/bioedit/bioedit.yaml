@@ -1,0 +1,21 @@
+api: v1
+name: bioedit
+kind: app
+display: bioedit
+description: Biological sequence alignment editor.
+homepage: https://thalljiscience.github.io/
+license: Unknown
+version: 7.7.1.0
+channels:
+    stable: 7.7.1.0
+provides:
+    - bioedit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://thalljiscience.github.io/BioEditFullFolder.zip
+      sha256: a1436374942bd6454859b38c22a784a76aacec983e76341954974dd13ee7259f
+      bin:
+        - bioedit.exe
+      strip: 1
+test: bioedit --version

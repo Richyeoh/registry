@@ -1,0 +1,21 @@
+api: v1
+name: azure-developer-cli
+kind: app
+display: azure-developer-cli
+description: 'A developer CLI that provides commands for working with Azure resources that map to key workflow stages: code, build, deploy, monitor, repeat.'
+homepage: https://aka.ms/azd
+license: MIT
+version: 1.37.3
+channels:
+    stable: 1.37.3
+provides:
+    - azure-developer-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.37.3/azd-windows-amd64.zip
+      sha256: 966dfb234d0d02953124dc314083cc0aec22dfa51b70578551e2185b76cc7369
+      bin:
+        - azd.exe
+      strip: 1
+test: azd --version

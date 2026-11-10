@@ -1,0 +1,21 @@
+api: v1
+name: difftastic
+kind: app
+display: difftastic
+description: A structural diff that understands syntax
+homepage: https://difftastic.wilfred.me.uk
+license: MIT
+version: 0.72.0
+channels:
+    stable: 0.72.0
+provides:
+    - difftastic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Wilfred/difftastic/releases/download/0.72.0/difft-0.72.0-x86_64-pc-windows-msvc.zip
+      sha256: 7b6295a9a433ba79978b02ad4b4b27f955423b8eb379927409b9ff4e5156379e
+      bin:
+        - difft.exe
+      strip: 1
+test: difft --version

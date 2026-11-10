@@ -1,0 +1,21 @@
+api: v1
+name: dbxcli
+kind: app
+display: dbxcli
+description: A command line client for Dropbox
+homepage: https://github.com/dropbox/dbxcli
+license: Apache-2.0
+version: 3.7.4
+channels:
+    stable: 3.7.4
+provides:
+    - dbxcli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dropbox/dbxcli/releases/download/v3.7.4/dbxcli_3.7.4_windows_amd64.zip
+      sha256: a772a6c83be56fd6bb07ab9b2a84dcbb94c472bd8dd02b22309c55095afd6cf8
+      bin:
+        - dbxcli.exe
+      strip: 1
+test: dbxcli --version

@@ -1,0 +1,21 @@
+api: v1
+name: komga
+kind: app
+display: komga
+description: Media server for comics/mangas/BDs with API and OPDS support
+homepage: https://komga.org/
+license: MIT
+version: 1.30.1
+channels:
+    stable: 1.30.1
+provides:
+    - komga
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gotson/komga/releases/download/1.30.1/komga-1.30.1.jar#/komga.jar
+      sha256: a443bc806800ccbecca84fa433bc8307230fc985984225fe00a85503077ed6d9
+      bin:
+        - komga.jar.exe
+      strip: 1
+test: komga.jar --version

@@ -1,0 +1,32 @@
+api: v1
+name: airtool
+kind: app
+display: Airtool
+description: Capture Wi-Fi packets
+homepage: https://www.intuitibits.com/products/airtool/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.7.9
+channels:
+    stable: 2.7.9
+provides:
+    - airtool
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://www.intuitibits.com/downloads/Airtool_2.7.9.pkg
+      sha256: 4b39127605d1a17e9b3758e4a048145a7f70ea53cdf8747c034449417ac1ec26
+      bin:
+        - airtool
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://www.intuitibits.com/downloads/Airtool_2.7.9.pkg
+      sha256: 4b39127605d1a17e9b3758e4a048145a7f70ea53cdf8747c034449417ac1ec26
+      bin:
+        - airtool
+      strip: 1
+test: airtool --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

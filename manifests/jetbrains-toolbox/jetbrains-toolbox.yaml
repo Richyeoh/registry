@@ -1,0 +1,24 @@
+api: v1
+name: jetbrains-toolbox
+kind: app
+display: jetbrains-toolbox
+description: Toolbox App. A control panel for all JetBrains tools.
+homepage: https://www.jetbrains.com/toolbox/
+license: Unknown
+version: 3.9.1.89198
+channels:
+    stable: 3.9.1.89198
+provides:
+    - jetbrains-toolbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.1.89198.exe
+      sha256: 595e627254d6b7ce07c0a1ea455828253137ff82a6611cd9e69a9e59c5b9d053
+      bin:
+        - jetbrains-toolbox.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jetbrains-toolbox
+test: jetbrains-toolbox --version

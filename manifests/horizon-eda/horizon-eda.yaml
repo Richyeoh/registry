@@ -1,0 +1,24 @@
+api: v1
+name: horizon-eda
+kind: app
+display: horizon-eda
+description: Horizon is a free EDA package
+homepage: https://horizon-eda.org/
+license: GPL-3.0
+version: 2.7.2
+channels:
+    stable: 2.7.2
+provides:
+    - horizon-eda
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/horizon-eda/horizon/releases/download/v2.7.2/horizon-eda-2.7.2-x64.msi
+      sha256: 7a226e9423bdca53cd3de46280267b0abeca757ffbb637f01e05bd574f9b0476
+      bin:
+        - horizon-eda.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall horizon-eda
+test: horizon-eda --version

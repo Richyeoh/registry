@@ -1,0 +1,24 @@
+api: v1
+name: kubeshark
+kind: app
+display: kubeshark
+description: The API Traffic Viewer for Kubernetes
+homepage: https://kubeshark.com
+license: Apache-2.0
+version: 53.6.0
+channels:
+    stable: 53.6.0
+provides:
+    - kubeshark
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubeshark/kubeshark/releases/download/v53.6.0/kubeshark.exe
+      sha256: 9ef199cddce8a9bb930898fa39744bdb777cb71b437d5e0476cabc5f1e522451
+      bin:
+        - kubeshark.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kubeshark
+test: kubeshark --version

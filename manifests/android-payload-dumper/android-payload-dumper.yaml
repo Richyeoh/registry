@@ -1,0 +1,21 @@
+api: v1
+name: android-payload-dumper
+kind: app
+display: android-payload-dumper
+description: Android OTA payload dumper written in Go
+homepage: https://github.com/ssut/payload-dumper-go
+license: Apache-2.0
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - android-payload-dumper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ssut/payload-dumper-go/releases/download/2.1.0/payload-dumper-go_2.1.0_windows_amd64.tar.gz
+      sha256: 45483c54bdd9219b8dcdb757256e7ce7a2bf9552d0e43f32e03389a1f0c55b15
+      bin:
+        - payload-dumper-go.exe
+      strip: 1
+test: payload-dumper-go --version

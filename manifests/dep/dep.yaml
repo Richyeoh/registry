@@ -1,0 +1,24 @@
+api: v1
+name: dep
+kind: app
+display: dep
+description: Go dependency management tool
+homepage: https://golang.github.io/dep/
+license: BSD-3-Clause
+version: 0.5.4
+channels:
+    stable: 0.5.4
+provides:
+    - dep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/golang/dep/releases/download/v0.5.4/dep-windows-amd64.exe#/dep.exe
+      sha256: 61e542fcf5aeba57129387f3ff1dae006c13a6f09fbe1ffc2e9867a4555cee1d
+      bin:
+        - dep.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall dep
+test: dep --version

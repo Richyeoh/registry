@@ -1,0 +1,24 @@
+api: v1
+name: simple-dnscrypt
+kind: app
+display: simple-dnscrypt
+description: An easy to use GUI for dnscrypt-proxy
+homepage: https://simplednscrypt.org/
+license: MIT
+version: 0.7.1
+channels:
+    stable: 0.7.1
+provides:
+    - simple-dnscrypt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.7.1/SimpleDNSCrypt64.msi
+      sha256: 5ba0c94774acd7ade18446b4351e7d28a948c490aefc50dc6c08c13551f19f7f
+      bin:
+        - SimpleDnsCrypt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall simple-dnscrypt
+test: SimpleDnsCrypt --version

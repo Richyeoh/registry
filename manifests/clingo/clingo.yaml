@@ -1,0 +1,25 @@
+api: v1
+name: clingo
+kind: app
+display: clingo
+description: A grounder and solver for logic programs.
+homepage: https://potassco.org/clingo/
+license: MIT
+version: 5.4.0
+channels:
+    stable: 5.4.0
+provides:
+    - clingo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/potassco/clingo/releases/download/v5.4.0/clingo-5.4.0-win64.zip
+      sha256: 90d29b586455b609e3a63c9c6cf0c7a74098aa9ef8d268a26a769f844d5480a6
+      bin:
+        - clingo.exe
+        - clasp.exe
+        - gringo.exe
+        - reify.exe
+        - lpconvert.exe
+      strip: 1
+test: clingo --version

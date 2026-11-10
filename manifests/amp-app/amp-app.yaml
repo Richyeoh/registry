@@ -1,0 +1,32 @@
+api: v1
+name: amp-app
+kind: app
+display: Amp
+description: Coding agent and development environment
+homepage: https://ampcode.com/app
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.0,1240
+channels:
+    stable: 1.0,1240
+provides:
+    - amp-app
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://static.ampcode.com/mac/Amp-1.0-1240.dmg
+      sha256: 7a5e7c0dfd6cf3cbe82560876108431e0ce5578992e8d3bdfb57013d743fb550
+      bin:
+        - amp-app
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://static.ampcode.com/mac/Amp-1.0-1240.dmg
+      sha256: 7a5e7c0dfd6cf3cbe82560876108431e0ce5578992e8d3bdfb57013d743fb550
+      bin:
+        - amp-app
+      strip: 1
+test: amp-app --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

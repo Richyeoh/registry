@@ -1,0 +1,21 @@
+api: v1
+name: tweakstyle
+kind: app
+display: tweakstyle
+description: Integrated Development Environment for Web Development.
+homepage: https://tweakstyle.com
+license: Unknown
+version: 0.9.5
+channels:
+    stable: 0.9.5
+provides:
+    - tweakstyle
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://tweakstyle.com/dl/TweakStyle-win64-0.9.5.zip
+      sha256: 2cea370ba8d6e69dcec3026fea619fa7fa38839f1dd389a9e0d8d62edca97cb1
+      bin:
+        - tweakstyle.exe
+      strip: 1
+test: tweakstyle --version

@@ -1,0 +1,21 @@
+api: v1
+name: fadetop
+kind: app
+display: fadetop
+description: Simple and fun break reminder
+homepage: https://www.fadetop.com
+license: Freeware
+version: 3.1.0.171
+channels:
+    stable: 3.1.0.171
+provides:
+    - fadetop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/fadetop/FadeTop_3.0.171.7z
+      sha256: 11230ea82f53ef382aa18a3b202826baff6709efb126229d0cd08e5f6de80880
+      bin:
+        - FadeTop.exe
+      strip: 1
+test: FadeTop --version

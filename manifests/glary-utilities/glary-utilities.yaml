@@ -1,0 +1,21 @@
+api: v1
+name: glary-utilities
+kind: app
+display: glary-utilities
+description: All-in-one utility for cleaning your PC
+homepage: https://www.glarysoft.com/
+license: Unknown
+version: "6.50"
+channels:
+    stable: "6.50"
+provides:
+    - glary-utilities
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.glarysoft.com/guportable.zip
+      sha256: f5893d2bf375b3b1d381e12726b6a3c0ba45bd92bd0f1a9326d4d9f1175e535f
+      bin:
+        - glary-utilities.exe
+      strip: 1
+test: glary-utilities --version

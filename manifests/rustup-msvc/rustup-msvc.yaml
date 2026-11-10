@@ -1,0 +1,24 @@
+api: v1
+name: rustup-msvc
+kind: app
+display: rustup-msvc
+description: Manage multiple rust installations with ease
+homepage: https://rustup.rs
+license: MIT|Apache-2.0
+version: 1.29.3
+channels:
+    stable: 1.29.3
+provides:
+    - rustup-msvc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe
+      sha256: 38027d51d69a5d05493627a0634dbea52d6cd793c8f072d2373d3f4163eec7db
+      bin:
+        - rustup-msvc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rustup-msvc
+test: rustup-msvc --version

@@ -1,0 +1,21 @@
+api: v1
+name: vacuumtube
+kind: app
+display: vacuumtube
+description: Unofficial YouTube Leanback (the Smart TV interface) desktop wrapper with a built-in ad blocker and enhancements.
+homepage: https://github.com/shy1132/VacuumTube
+license: MIT
+version: 2.0.1
+channels:
+    stable: 2.0.1
+provides:
+    - vacuumtube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shy1132/VacuumTube/releases/download/v2.0.1/VacuumTube-x64-Portable.zip
+      sha256: c58fdf3ddead8c374a308acef3d4799d4b95237951ad7fad07669f3d23a830ef
+      bin:
+        - VacuumTube.exe
+      strip: 1
+test: VacuumTube --version

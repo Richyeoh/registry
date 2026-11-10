@@ -1,0 +1,21 @@
+api: v1
+name: folge
+kind: app
+display: folge
+description: Simple, free, and powerful desktop tool for creating, managing, and sharing your processes and knowledge.
+homepage: https://folge.me
+license: Unknown
+version: 1.40.6
+channels:
+    stable: 1.40.6
+provides:
+    - folge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.folge.me/Folge-1.40.6.exe#/dl.7z
+      sha256: 36f36e3fba0e5e5fc8b1a775dc49db6170c5d3c40e63131779fb41b3bf67dbc8
+      bin:
+        - folge.exe
+      strip: 1
+test: folge --version

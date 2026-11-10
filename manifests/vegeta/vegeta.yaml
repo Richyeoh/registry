@@ -1,0 +1,21 @@
+api: v1
+name: vegeta
+kind: app
+display: vegeta
+description: Versatile HTTP load testing tool
+homepage: https://github.com/tsenart/vegeta
+license: MIT
+version: 12.13.0
+channels:
+    stable: 12.13.0
+provides:
+    - vegeta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tsenart/vegeta/releases/download/v12.13.0/vegeta_12.13.0_windows_amd64.zip
+      sha256: 421362edb7c8e1b97db9faf43806d2a8850067afc97c2f1bf9bc5cdcdfc9c0b6
+      bin:
+        - vegeta.exe
+      strip: 1
+test: vegeta --version

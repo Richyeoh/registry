@@ -1,0 +1,21 @@
+api: v1
+name: pdfsam
+kind: app
+display: pdfsam
+description: A JavaFX desktop application to split, merge, rotate and perform other manipulations on PDF documents
+homepage: https://github.com/torakiki/pdfsam
+license: AGPL-3.0-only
+version: 6.0.10
+channels:
+    stable: 6.0.10
+provides:
+    - pdfsam
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/torakiki/pdfsam/releases/download/v6.0.10/pdfsam-basic-6.0.10-windows-x64.zip
+      sha256: 2dc9410edf53fa1109c244c03a8533dcc2fc527a434240c017451722a4bbc148
+      bin:
+        - pdfsam.exe
+      strip: 1
+test: pdfsam --version

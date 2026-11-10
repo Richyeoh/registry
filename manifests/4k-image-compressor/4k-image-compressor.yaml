@@ -1,0 +1,32 @@
+api: v1
+name: 4k-image-compressor
+kind: app
+display: 4K Image Compressor
+description: Image compressor
+homepage: https://www.4kdownload.com/products/imagecompressor
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 26.0.0
+channels:
+    stable: 26.0.0
+provides:
+    - 4k-image-compressor
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://dl.4kdownload.com/app/4kimagecompressor_26.0.0_arm64.dmg
+      sha256: fa61a084c3d901b7906dc9e03c94c372c6d2513bc447c6f1653164ac3c6c2447
+      bin:
+        - 4k-image-compressor
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://dl.4kdownload.com/app/4kimagecompressor_26.0.0_arm64.dmg
+      sha256: fa61a084c3d901b7906dc9e03c94c372c6d2513bc447c6f1653164ac3c6c2447
+      bin:
+        - 4k-image-compressor
+      strip: 1
+test: 4k-image-compressor --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

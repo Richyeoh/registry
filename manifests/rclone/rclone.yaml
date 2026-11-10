@@ -1,0 +1,21 @@
+api: v1
+name: rclone
+kind: app
+display: rclone
+description: Sync files and directories to and from multiple cloud / FTP / HTTP hosters.
+homepage: https://rclone.org
+license: MIT
+version: 1.76.0
+channels:
+    stable: 1.76.0
+provides:
+    - rclone
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rclone/rclone/releases/download/v1.76.0/rclone-v1.76.0-windows-amd64.zip
+      sha256: 8b4fd2737ade4e70c057ef4a49deb7cffe94b0fb9d7587c189d149823f21a1dc
+      bin:
+        - rclone.exe
+      strip: 1
+test: rclone --version

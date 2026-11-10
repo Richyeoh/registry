@@ -1,0 +1,25 @@
+api: v1
+name: htop
+kind: app
+display: htop
+description: htop
+homepage: https://htop.dev/
+license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 3.5.3
+channels:
+    stable: 3.5.3
+provides:
+    - htop
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/htop/download/
+      sha256: f21661bc0229ef8ef9b1898b61b37bcd84fcc334c01f724d184e220aba89fda6
+      bin:
+        - htop
+test: htop --version
+caveats: 由 Arch 官方仓自动转制（pacman/paru 源）

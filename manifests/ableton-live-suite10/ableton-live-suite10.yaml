@@ -1,0 +1,32 @@
+api: v1
+name: ableton-live-suite10
+kind: app
+display: Ableton Live Suite
+description: Sound and music editor
+homepage: https://www.ableton.com/en/live/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 10.1.43
+channels:
+    stable: 10.1.43
+provides:
+    - ableton-live-suite10
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://cdn-downloads.ableton.com/channels/10.1.43/ableton_live_suite_10.1.43_64.dmg
+      sha256: 8bb8e4b9a4f1f3daa1129dbdf8add879d4e8d575ba95e923ed6dcba368f48717
+      bin:
+        - ableton-live-suite10
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://cdn-downloads.ableton.com/channels/10.1.43/ableton_live_suite_10.1.43_64.dmg
+      sha256: 8bb8e4b9a4f1f3daa1129dbdf8add879d4e8d575ba95e923ed6dcba368f48717
+      bin:
+        - ableton-live-suite10
+      strip: 1
+test: ableton-live-suite10 --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

@@ -1,0 +1,21 @@
+api: v1
+name: media-downloader
+kind: app
+display: media-downloader
+description: A Qt/C++ front-end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books.
+homepage: https://github.com/mhogomchungu/media-downloader
+license: GPL-2.0
+version: 5.6.8
+channels:
+    stable: 5.6.8
+provides:
+    - media-downloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mhogomchungu/media-downloader/releases/download/5.6.8/MediaDownloaderQt6-5.6.8.zip
+      sha256: b6d5d9b5bc81c5498d2a1a147fc79d834880e93a9700479a52f15f686a5afdcb
+      bin:
+        - media-downloader.exe
+      strip: 1
+test: media-downloader --version

@@ -1,0 +1,32 @@
+api: v1
+name: androidtool
+kind: app
+display: AndroidTool
+description: App for recording the screen and installing apps in iOS and Android
+homepage: https://github.com/mortenjust/androidtool-mac
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: "1.66"
+channels:
+    stable: "1.66"
+provides:
+    - androidtool
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/mortenjust/androidtool-mac/releases/download/1.66/AndroidTool.zip
+      sha256: 4f432ad45660071a1f36c4878bd444dd8bedd520c7c70096e5d7a7907ff7c86a
+      bin:
+        - androidtool
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/mortenjust/androidtool-mac/releases/download/1.66/AndroidTool.zip
+      sha256: 4f432ad45660071a1f36c4878bd444dd8bedd520c7c70096e5d7a7907ff7c86a
+      bin:
+        - androidtool
+      strip: 1
+test: androidtool --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

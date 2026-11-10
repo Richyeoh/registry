@@ -1,0 +1,21 @@
+api: v1
+name: oxfmt
+kind: app
+display: oxfmt
+description: A high-performance formatter for the JavaScript ecosystem.
+homepage: https://oxc.rs/docs/guide/usage/formatter
+license: MIT
+version: 0.78.0
+channels:
+    stable: 0.78.0
+provides:
+    - oxfmt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oxc-project/oxc/releases/download/oxfmt_v0.78.0/oxfmt-x86_64-pc-windows-msvc.zip
+      sha256: 79f999cbcadb28c3cac9e6ec5801513c87e8d01aabeb6bbb348c01f1ccb469a8
+      bin:
+        - oxfmt.exe
+      strip: 1
+test: oxfmt --version

@@ -1,0 +1,21 @@
+api: v1
+name: ytcast
+kind: app
+display: ytcast
+description: Cast YouTube videos to your smart TV from command-line
+homepage: https://github.com/MarcoLucidi01/ytcast
+license: MIT
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - ytcast
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/MarcoLucidi01/ytcast/releases/download/v1.4.1/ytcast-v1.4.1-windows-amd64.zip
+      sha256: cda9c9e83b755b519af034b58f5519c0ef0be803efaa7ca459b94b6748a42b9f
+      bin:
+        - ytcast.exe
+      strip: 1
+test: ytcast --version

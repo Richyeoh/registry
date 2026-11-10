@@ -1,0 +1,22 @@
+api: v1
+name: squashfs-tools
+kind: app
+display: squashfs-tools
+description: Mounts SquashFS archives in user-space.
+homepage: https://github.com/pmq20/squashfuse
+license: BSD-2-Clause
+version: "43"
+channels:
+    stable: "43"
+provides:
+    - squashfs-tools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pmq20/squashfuse/files/691217/sqfs43-win32.zip
+      sha256: 4707312bed66f697f921e92cc88e774d572a052a68e568c1f347204e035ac81b
+      bin:
+        - mksquashfs.exe
+        - unsquashfs.exe
+      strip: 1
+test: mksquashfs --version

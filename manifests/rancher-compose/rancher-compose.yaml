@@ -1,0 +1,21 @@
+api: v1
+name: rancher-compose
+kind: app
+display: rancher-compose
+description: A complete software stack for teams adopting containers.
+homepage: https://rancher.com/
+license: Apache-2.0
+version: 0.12.5
+channels:
+    stable: 0.12.5
+provides:
+    - rancher-compose
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rancher/rancher-compose/releases/download/v0.12.5/rancher-compose-windows-amd64-v0.12.5.zip
+      sha256: 465e651c5fedcdd91417a7e25bcab351c9e99732192263afbcb91496138ef7d9
+      bin:
+        - rancher-compose.exe
+      strip: 1
+test: rancher-compose --version

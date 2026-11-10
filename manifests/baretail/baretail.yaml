@@ -1,0 +1,24 @@
+api: v1
+name: baretail
+kind: app
+display: baretail
+description: A free real-time log file monitoring tool
+homepage: https://www.baremetalsoft.com/baretail/
+license: Unknown
+version: 3.50a
+channels:
+    stable: 3.50a
+provides:
+    - baretail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.baremetalsoft.com/baretail/download.php?p=m#/baretail.exe
+      sha256: 160d6a3bdc9d64677643376f82e559eb4112289e6b6d722b5b3b32699d18bca9
+      bin:
+        - baretail.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall baretail
+test: baretail --version

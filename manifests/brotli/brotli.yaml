@@ -1,0 +1,21 @@
+api: v1
+name: brotli
+kind: app
+display: brotli
+description: Lossless compression algorithm
+homepage: https://brotli.org/
+license: MIT
+version: 1.2.1
+channels:
+    stable: 1.2.1
+provides:
+    - brotli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/brotli/releases/download/v1.2.1/brotli-x64-windows-static.zip
+      sha256: 9556acc3223662402cbc5b1a3fa3c4328badf231a7ed1be7128fc6750207188e
+      bin:
+        - brotli.exe
+      strip: 1
+test: brotli --version

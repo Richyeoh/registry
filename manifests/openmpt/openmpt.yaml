@@ -1,0 +1,21 @@
+api: v1
+name: openmpt
+kind: app
+display: openmpt
+description: Music tracker
+homepage: https://openmpt.org
+license: BSD-3-Clause
+version: 1.32.12.00
+channels:
+    stable: 1.32.12.00
+provides:
+    - openmpt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.openmpt.org/archive/openmpt/1.32/OpenMPT-1.32.12.00-portable-amd64.zip
+      sha256: 6f31386fc95754a8cb33c5d4d8e54bd03f61070d3d6bcdc60762365ba3ce0daf
+      bin:
+        - openmpt.exe
+      strip: 1
+test: openmpt --version

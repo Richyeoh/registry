@@ -1,0 +1,22 @@
+api: v1
+name: racket-minimal
+kind: app
+display: racket-minimal
+description: Minimal Racket installation, without DrRacket/docs
+homepage: https://racket-lang.org
+license: LGPL-3.0-or-later
+version: "9.3"
+channels:
+    stable: "9.3"
+provides:
+    - racket-minimal
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://mirror.racket-lang.org/installers/9.3/racket-minimal-9.3-x86_64-win32.exe#/dl.7z
+      sha256: 7f8212273192bcfd412c6cc16e7312b0a681d0ec547c52e71b40b4fc0257f210
+      bin:
+        - racket.exe
+        - raco.exe
+      strip: 1
+test: racket --version

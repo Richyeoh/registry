@@ -1,0 +1,21 @@
+api: v1
+name: diun
+kind: app
+display: diun
+description: A CLI application to receive notifications when a Docker image is updated on a Docker registry
+homepage: https://crazymax.dev/diun/
+license: MIT
+version: 4.33.1
+channels:
+    stable: 4.33.1
+provides:
+    - diun
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/crazy-max/diun/releases/download/v4.33.1/diun_4.33.1_windows_amd64.zip
+      sha256: 597b28f5f8026794fd4600f7442f6056d9e1b399ffb4d6bc587d2f48e73faa3e
+      bin:
+        - diun.exe
+      strip: 1
+test: diun --version

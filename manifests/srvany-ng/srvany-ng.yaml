@@ -1,0 +1,21 @@
+api: v1
+name: srvany-ng
+kind: app
+display: srvany-ng
+description: Run any Windows application as a Service. Drop-in compatible replacement for "srvany.exe" from the W2K3 Resource Kit.
+homepage: https://github.com/birkett/srvany-ng
+license: MIT
+version: 1.1.0.0
+channels:
+    stable: 1.1.0.0
+provides:
+    - srvany-ng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/birkett/srvany-ng/releases/download/v1.1.0.0/srvany-ng-21-09-2024.zip
+      sha256: c98e48a5427b45d662a2eec15c7f37fd6679f2c99397fee9399f85040090ef95
+      bin:
+        - x64\srvany-ng.exe
+      strip: 1
+test: x64\srvany-ng --version

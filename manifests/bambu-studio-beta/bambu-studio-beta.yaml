@@ -1,0 +1,21 @@
+api: v1
+name: bambu-studio-beta
+kind: app
+display: bambu-studio-beta
+description: An open-source, cutting-edge, feature-rich slicing software for BambuLab and other 3D printers (beta version).
+homepage: https://bambulab.com/en-us/download/studio
+license: AGPL-3.0-or-later
+version: 02.09.01.70
+channels:
+    stable: 02.09.01.70
+provides:
+    - bambu-studio-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bambulab/BambuStudio/releases/download/v02.09.01.70/Bambu_Studio_win-v02.09.01.70-20261103183404.zip
+      sha256: a4c0d5f94109cb2c2c07fb02ca1f740e96b586fbf3ae557a1647eeb5503a15b8
+      bin:
+        - bambu-studio-beta.exe
+      strip: 1
+test: bambu-studio-beta --version

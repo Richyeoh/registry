@@ -1,0 +1,21 @@
+api: v1
+name: avspmod
+kind: app
+display: avspmod
+description: An enhanced version of AvsP for editing and previewing AviSynth scripts
+homepage: https://github.com/gispos/AvsPmod
+license: GPL-2.0-only
+version: 2.7.9.7
+channels:
+    stable: 2.7.9.7
+provides:
+    - avspmod
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gispos/AvsPmod/releases/download/2.7.9.7/AvsPmod_v2.7.9.7_.Windows_x86-64.zip
+      sha256: 3e2719d91d1bf55c48330bfae6cf681e2142595b2f56572193f7b6bb7cb2e0fe
+      bin:
+        - avspmod.exe
+      strip: 1
+test: avspmod --version

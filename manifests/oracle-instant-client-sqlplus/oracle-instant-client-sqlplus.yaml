@@ -1,0 +1,21 @@
+api: v1
+name: oracle-instant-client-sqlplus
+kind: app
+display: oracle-instant-client-sqlplus
+description: The SQL*Plus command line tool for SQL and PL/SQL queries with Oracle Instant Client.
+homepage: https://www.oracle.com/database/technologies/instant-client.html
+license: Unknown
+version: 23.26.4.0.0
+channels:
+    stable: 23.26.4.0.0
+provides:
+    - oracle-instant-client-sqlplus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.oracle.com/otn_software/nt/instantclient/2326400/instantclient-sqlplus-windows.x64-23.26.4.0.0.zip
+      sha256: e3600a5a56cf174232731f0874cf9f9cb4a6b0334a68fae9b585dc40ab244b05
+      bin:
+        - oracle-instant-client-sqlplus.exe
+      strip: 1
+test: oracle-instant-client-sqlplus --version

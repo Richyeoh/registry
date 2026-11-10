@@ -1,0 +1,21 @@
+api: v1
+name: vrcx
+kind: app
+display: vrcx
+description: Friendship management tool for VRChat
+homepage: https://github.com/vrcx-team/VRCX
+license: MIT
+version: 2026.09.16
+channels:
+    stable: 2026.09.16
+provides:
+    - vrcx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vrcx-team/VRCX/releases/download/v2026.09.16/VRCX_2026.09.16.zip
+      sha256: aa57534030a53d861c24febd7a9c1ed8bab30eb500d29ccb1ee32e4cd01f7cec
+      bin:
+        - vrcx.exe
+      strip: 1
+test: vrcx --version

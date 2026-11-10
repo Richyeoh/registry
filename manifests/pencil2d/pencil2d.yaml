@@ -1,0 +1,21 @@
+api: v1
+name: pencil2d
+kind: app
+display: pencil2d
+description: An easy, intuitive tool to make 2D hand-drawn animations.
+homepage: https://www.pencil2d.org
+license: GPL-2.0-only
+version: 0.7.2
+channels:
+    stable: 0.7.2
+provides:
+    - pencil2d
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pencil2d/pencil/releases/download/v0.7.2/pencil2d-win64-v0.7.2.zip
+      sha256: c8d3044a0ab42b39cb2ac29c84d7d83a511dfe71d96d89a45b9c3dd82910be7c
+      bin:
+        - pencil2d.exe
+      strip: 1
+test: pencil2d --version

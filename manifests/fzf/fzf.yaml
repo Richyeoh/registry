@@ -2,10 +2,13 @@ api: v1
 name: fzf
 kind: app
 display: fzf
-description: 命令行模糊查找器
-homepage: https://github.com/junegunn/fzf
+description: A general-purpose command-line fuzzy finder
+homepage: https://junegunn.github.io/fzf/
 license: MIT
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - junegunn
 version: 0.75.0
@@ -50,4 +53,3 @@ platforms:
         - fzf
       strip: 1
 test: fzf --version
-caveats: 由 GitHub junegunn/fzf latest 自动转制

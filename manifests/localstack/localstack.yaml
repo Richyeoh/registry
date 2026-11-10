@@ -1,0 +1,21 @@
+api: v1
+name: localstack
+kind: app
+display: localstack
+description: A fully functional local AWS cloud stack. Develop and test your cloud & Serverless apps offline.
+homepage: https://localstack.cloud
+license: Apache-2.0
+version: 2026.8.2
+channels:
+    stable: 2026.8.2
+provides:
+    - localstack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/localstack/localstack-cli/releases/download/v2026.8.2/localstack-cli-2026.8.2-windows-amd64-onefile.zip
+      sha256: 43c491efb938d96f6d5d7554b222a491ab4256ab309ae763252dbee1adc23699
+      bin:
+        - localstack.exe
+      strip: 1
+test: localstack --version

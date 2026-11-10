@@ -2,10 +2,13 @@ api: v1
 name: neovim
 kind: app
 display: neovim
-description: 高配 vim
-homepage: https://neovim.io
-license: Apache-2.0
+description: Vim-fork focused on extensibility and usability
+homepage: https://neovim.io/
+license: Unknown
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - neovim
 version: 0.12.6
@@ -35,5 +38,4 @@ platforms:
       bin:
         - nvim
       strip: 1
-test: nvim --version
-caveats: 由 GitHub neovim/neovim latest 自动转制
+test: bin\nvim --version

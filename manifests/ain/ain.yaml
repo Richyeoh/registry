@@ -1,0 +1,46 @@
+api: v1
+name: ain
+kind: app
+display: ain
+description: HTTP API client for the terminal
+homepage: https://github.com/jonaslu/ain
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - ain
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ain/blobs/sha256:9299bcb45b88a76fa588d7352925a379b41cc6cfc0d23f4c38b80903b2391bf5
+      sha256: 9299bcb45b88a76fa588d7352925a379b41cc6cfc0d23f4c38b80903b2391bf5
+      bin:
+        - ain
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ain/blobs/sha256:4594a73e9c336dd339fb03e8ff324ac815138289dce9cebc0a5442d913bebbdf
+      sha256: 4594a73e9c336dd339fb03e8ff324ac815138289dce9cebc0a5442d913bebbdf
+      bin:
+        - ain
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ain/blobs/sha256:0b63dff05d2c4e4c322a6f4213271cf5e5a80d9a55d8a0cdca5dcbf3bda87748
+      sha256: 0b63dff05d2c4e4c322a6f4213271cf5e5a80d9a55d8a0cdca5dcbf3bda87748
+      bin:
+        - ain
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ain/blobs/sha256:c56fbc38b0d4116a3fff8bfd8dcc8d0ed9860433b03625a7dd4a60c6c628ead7
+      sha256: c56fbc38b0d4116a3fff8bfd8dcc8d0ed9860433b03625a7dd4a60c6c628ead7
+      bin:
+        - ain
+      strip: 1
+test: ain --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

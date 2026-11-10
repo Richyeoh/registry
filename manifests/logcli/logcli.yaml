@@ -1,0 +1,21 @@
+api: v1
+name: logcli
+kind: app
+display: logcli
+description: Command-line tool for querying and exploring logs in Grafana Loki.
+homepage: https://grafana.com/docs/loki/latest/query/logcli/
+license: AGPL-3.0-only
+version: 3.7.9
+channels:
+    stable: 3.7.9
+provides:
+    - logcli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/grafana/loki/releases/download/v3.7.9/logcli-windows-amd64.exe.zip
+      sha256: 7cfc7f96b6d2ed4d99dae6485d7a7d774f57a275c4985d8998eb19167ffff988
+      bin:
+        - logcli.exe
+      strip: 1
+test: logcli --version

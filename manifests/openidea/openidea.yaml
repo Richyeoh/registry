@@ -1,0 +1,21 @@
+api: v1
+name: openidea
+kind: app
+display: openidea
+description: An open-source IDE inspired by IntelliJ IDEA.
+homepage: https://github.com/l0ng-ai/openidea
+license: Apache-2.0
+version: 0.1.40
+channels:
+    stable: 0.1.40
+provides:
+    - openidea
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/l0ng-ai/openidea/releases/download/v0.1.40/OpenIDEA_0.1.40_x64-setup.exe#/dl.7z
+      sha256: 43840ef67f9ad3e958b0bd4e5aead453e08961f2ef9a5faae6db0ba61f2e6049
+      bin:
+        - openidea.exe
+      strip: 1
+test: openidea --version

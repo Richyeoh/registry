@@ -1,0 +1,21 @@
+api: v1
+name: clash-mini
+kind: app
+display: clash.mini
+description: A simple GUI for Clash.
+homepage: https://github.com/MetaCubeX/Clash.Mini
+license: AGPL-3.0-only
+version: 0.2.2
+channels:
+    stable: 0.2.2
+provides:
+    - clash-mini
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/MetaCubeX/Clash.Mini/releases/download/v0.2.2/Clash.Mini_v0.2.2_x64.zip
+      sha256: c84f0e1dcb175f13ec1194793ab2d368ea7e90a3439cfb323086930e98cecf87
+      bin:
+        - clash-mini.exe
+      strip: 1
+test: clash-mini --version

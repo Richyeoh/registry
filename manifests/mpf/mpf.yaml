@@ -1,0 +1,21 @@
+api: v1
+name: mpf
+kind: app
+display: mpf
+description: GUI for redumper/Aaru/DiscImageCreator.
+homepage: https://github.com/SabreTools/MPF
+license: MIT
+version: 3.11.1
+channels:
+    stable: 3.11.1
+provides:
+    - mpf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SabreTools/MPF/releases/download/3.11.1/MPF.UI_3.11.1_net10.0-windows_win-x64_release.zip
+      sha256: 82c1858e329b5b6aff5712b97ba8005cf242e38218267f7d501564982cb2abc3
+      bin:
+        - mpf.exe
+      strip: 1
+test: mpf --version

@@ -1,0 +1,21 @@
+api: v1
+name: dxc
+kind: app
+display: dxc
+description: DirectXShaderCompiler is a collection of tools, libraries and tests for compiling HLSL into DXIL, SPIR-V, and other target languages.
+homepage: https://github.com/microsoft/DirectXShaderCompiler
+license: Unknown
+version: 1.9.2609
+channels:
+    stable: 1.9.2609
+provides:
+    - dxc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/DirectXShaderCompiler/releases/download/v1.9.2609/dxc_2026_09_29.zip
+      sha256: ad31b1fc8443175d204f77a611fdb3ef2ec42759bdc2f1167368de24a4a7e7f1
+      bin:
+        - dxc.exe
+      strip: 1
+test: dxc --version

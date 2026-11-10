@@ -1,0 +1,21 @@
+api: v1
+name: tailcat
+kind: app
+display: tailcat
+description: Tailscale's netcat-like tool over its open-source data plane, without the control plane.
+homepage: https://tailscale.com/tailcat
+license: BSD-3-Clause
+version: 0.7.0
+channels:
+    stable: 0.7.0
+provides:
+    - tailcat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tailscale/tailcat/releases/download/v0.7.0/tailcat_0.7.0_windows_amd64.zip
+      sha256: f04cac07e3bf6c700b0b543df0d3315a3b312cd5a05ee76714e1cc848e9b2dff
+      bin:
+        - tailcat.exe
+      strip: 1
+test: tailcat --version

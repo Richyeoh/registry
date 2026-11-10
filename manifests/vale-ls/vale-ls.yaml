@@ -1,0 +1,21 @@
+api: v1
+name: vale-ls
+kind: app
+display: vale-ls
+description: The Vale Language Server (vale-ls) is an implementation of the Language Server Protocol (LSP) for Vale.
+homepage: https://github.com/vale-cli/vale-ls
+license: MIT
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - vale-ls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vale-cli/vale-ls/releases/download/v0.6.0/vale-ls-x86_64-pc-windows-gnu.zip
+      sha256: 1489bd362333b8a26b1442fb2709da9ef5e998c116ccad06dc45f3e89030f20c
+      bin:
+        - vale-ls.exe
+      strip: 1
+test: vale-ls --version

@@ -1,0 +1,24 @@
+api: v1
+name: filezilla-server
+kind: app
+display: filezilla-server
+description: Open-source FTP server software
+homepage: https://filezilla-project.org/
+license: GPL-2.0-or-later
+version: 1.12.6
+channels:
+    stable: 1.12.6
+provides:
+    - filezilla-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/filezilla.server.1.12.6.nupkg
+      sha256: af04bfcc64aa7140ad92cd9f602f52714d1ffcee5cc1803e3c80c45ac019fe39
+      bin:
+        - filezilla-server.exe
+        - filezilla-server-config-converter.exe
+        - filezilla-server-crypt.exe
+        - filezilla-server-impersonator.exe
+      strip: 1
+test: filezilla-server --version

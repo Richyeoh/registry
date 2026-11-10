@@ -1,0 +1,32 @@
+api: v1
+name: awww
+kind: app
+display: awww
+description: Answer to your Wayland Wallpaper Woes
+homepage: https://codeberg.org/LGFae/awww
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 0.12.1
+channels:
+    stable: 0.12.1
+provides:
+    - awww
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/awww/blobs/sha256:8bffa733e52162073e1dce735235170c3b7960d93b954f31c439e9d88b83795f
+      sha256: 8bffa733e52162073e1dce735235170c3b7960d93b954f31c439e9d88b83795f
+      bin:
+        - awww
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awww/blobs/sha256:0f7a20bc3a33eb692f2efed463cac9e10d998d61d2a761573578703ae790d66b
+      sha256: 0f7a20bc3a33eb692f2efed463cac9e10d998d61d2a761573578703ae790d66b
+      bin:
+        - awww
+      strip: 1
+test: awww --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

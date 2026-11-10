@@ -1,0 +1,38 @@
+api: v1
+name: aegisub
+kind: app
+display: aegisub
+description: Cross-platform advanced subtitle editor
+homepage: https://www.aegisub.org/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 3.5.1
+channels:
+    stable: 3.5.1
+provides:
+    - aegisub
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TypesettingTools/Aegisub/releases/download/v3.5.1/Aegisub-3.5.1-x64-portable.zip
+      sha256: e8349f18e1bcd4d57e3361683a1289d8ce3f3baebad30228752a41414b444403
+      bin:
+        - aegisub.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://github.com/TypesettingTools/Aegisub/releases/download/v3.4.2/Aegisub-3.4.2.dmg
+      sha256: cbbfd3276e0414b540f6b1bc12a69abd6b8a96b0a452de3b08c290d553754ad3
+      bin:
+        - aegisub
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/TypesettingTools/Aegisub/releases/download/v3.4.2/Aegisub-3.4.2.dmg
+      sha256: cbbfd3276e0414b540f6b1bc12a69abd6b8a96b0a452de3b08c290d553754ad3
+      bin:
+        - aegisub
+      strip: 1
+test: aegisub --version

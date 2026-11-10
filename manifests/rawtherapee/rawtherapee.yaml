@@ -1,0 +1,25 @@
+api: v1
+name: rawtherapee
+kind: app
+display: rawtherapee
+description: Raw image processor
+homepage: https://rawtherapee.com
+license: GPL-3.0-only
+version: "5.13"
+channels:
+    stable: "5.13"
+provides:
+    - rawtherapee
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RawTherapee/RawTherapee/releases/download/5.13/RawTherapee_5.13_win64_x86_64_release.exe
+      sha256: d27df7ebde717c5efa114338a4b1cf1c426a439e5a1a92e142e87868cbe45383
+      bin:
+        - rawtherapee.exe
+        - rawtherapee-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rawtherapee
+test: rawtherapee --version

@@ -1,0 +1,39 @@
+api: v1
+name: awsume
+kind: app
+display: awsume
+description: Utility for easily assuming AWS IAM roles from the command-line
+homepage: https://awsu.me
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 4.5.5
+channels:
+    stable: 4.5.5
+provides:
+    - awsume
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awsume/blobs/sha256:af78cb0c83bc75400956e97603400ce0ade2f6de01db4ae1785c688b58a779a9
+      sha256: af78cb0c83bc75400956e97603400ce0ade2f6de01db4ae1785c688b58a779a9
+      bin:
+        - awsume
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/awsume/blobs/sha256:14dd52a12ed8466386ddbb196dd6b3033dc2231d6af221cf20930b1fca18b8e6
+      sha256: 14dd52a12ed8466386ddbb196dd6b3033dc2231d6af221cf20930b1fca18b8e6
+      bin:
+        - awsume
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awsume/blobs/sha256:30c8e3fb89ad78901d2c132faa4d3cbc9ce57fdbbf9e5b7c30238a895cb516b1
+      sha256: 30c8e3fb89ad78901d2c132faa4d3cbc9ce57fdbbf9e5b7c30238a895cb516b1
+      bin:
+        - awsume
+      strip: 1
+test: awsume --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

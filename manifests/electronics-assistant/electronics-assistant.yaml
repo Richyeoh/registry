@@ -1,0 +1,24 @@
+api: v1
+name: electronics-assistant
+kind: app
+display: electronics-assistant
+description: An electronics helper that offers resistor colour codes, capacitance and power calculations.
+homepage: https://www.electronics2000.co.uk/
+license: Freeware
+version: "4.32"
+channels:
+    stable: "4.32"
+provides:
+    - electronics-assistant
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.electronics2000.co.uk/assist/assist.exe
+      sha256: b3578b90a73596a5d62cff02d88ee44996c5c35e63dddb4a7b10cde87c04534f
+      bin:
+        - electronics-assistant.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall electronics-assistant
+test: electronics-assistant --version

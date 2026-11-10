@@ -1,0 +1,24 @@
+api: v1
+name: furmark1
+kind: app
+display: furmark1
+description: A GPU Stress Test and OpenGL Benchmark
+homepage: https://geeks3d.com/furmark/
+license: Freeware
+version: 1.39.4.0
+channels:
+    stable: 1.39.4.0
+provides:
+    - furmark1
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://geeks3d.com/dl/get/788#/FurMark_1.39.4.0_Setup.exe
+      sha256: 88d2d4224e5b3da0670e475c1c8efac49ddabfdc63eabec19a58564eca2d456e
+      bin:
+        - furmark1.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall furmark1
+test: furmark1 --version

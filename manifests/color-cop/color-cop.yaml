@@ -1,0 +1,21 @@
+api: v1
+name: color-cop
+kind: app
+display: color-cop
+description: Multi-purpose color picker for web designers and programmers
+homepage: https://colorcop.net
+license: Unknown
+version: 5.4.5
+channels:
+    stable: 5.4.5
+provides:
+    - color-cop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://colorcop.net/tools/colorcop/colorcop.zip
+      sha256: d8575e286565460c0fc312d5653c41f72cfe3068a7428b0c0ae5d99ed6bcd90d
+      bin:
+        - color-cop.exe
+      strip: 1
+test: color-cop --version

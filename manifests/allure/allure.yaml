@@ -1,0 +1,31 @@
+api: v1
+name: allure
+kind: app
+display: allure
+description: A flexible lightweight multi-language test report tool
+homepage: https://allurereport.org/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.46.2
+channels:
+    stable: 2.46.2
+provides:
+    - allure
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/allure-framework/allure2/releases/download/2.46.2/allure-2.46.2.zip
+      sha256: 43da085ce226c239c886d2818e4eec7be2a9a09ac0f3f42a6b092cdb27be696e
+      bin:
+        - bin\allure.bat.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/allure/blobs/sha256:9c8ffac0d1e774b6781b43510653f5bb3e3619bb7ded0cd178481a9fbd47e553
+      sha256: 9c8ffac0d1e774b6781b43510653f5bb3e3619bb7ded0cd178481a9fbd47e553
+      bin:
+        - allure
+      strip: 1
+test: bin\allure.bat --version

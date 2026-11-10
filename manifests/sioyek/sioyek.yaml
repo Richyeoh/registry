@@ -1,0 +1,21 @@
+api: v1
+name: sioyek
+kind: app
+display: sioyek
+description: A PDF viewer designed for reading research papers and technical books
+homepage: https://sioyek.info/
+license: GPL-3.0-only
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - sioyek
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ahrm/sioyek/releases/download/v2.0.0/sioyek-release-windows-portable.zip
+      sha256: 1f4fedbb38c0dc46bbba4bb95d0d6fab39fcf3525092ac26d92c891684d2bf8d
+      bin:
+        - sioyek.exe
+      strip: 1
+test: sioyek --version

@@ -1,0 +1,21 @@
+api: v1
+name: artcraft-launcher
+kind: app
+display: artcraft-launcher
+description: One place to install, update and open every app in the Craft App Suite
+homepage: https://github.com/storytold/craft-launcher
+license: MIT|Apache-2.0
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - artcraft-launcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/craft-launcher/releases/download/v0.15.0/artcraft-launcher-0.15.0-windows-x64-portable.zip
+      sha256: d20c329c42bcd4d6033b9cc53099c9177799c965b96c0aa26ba8b05d331f2628
+      bin:
+        - artcraft-launcher.exe
+      strip: 1
+test: artcraft-launcher --version

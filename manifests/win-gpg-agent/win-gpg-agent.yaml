@@ -1,0 +1,21 @@
+api: v1
+name: win-gpg-agent
+kind: app
+display: win-gpg-agent
+description: Simple set of tools to make working with GPG and SSH keys easier on Windows 10/11.
+homepage: https://github.com/rupor-github/win-gpg-agent
+license: Apache-2.0
+version: 1.6.3
+channels:
+    stable: 1.6.3
+provides:
+    - win-gpg-agent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rupor-github/win-gpg-agent/releases/download/v1.6.3/win-gpg-agent.zip
+      sha256: 23cc5e7b7e1937049ab7a416871713f44fbf84a002aa58fd6326d99876b79cd0
+      bin:
+        - win-gpg-agent.exe
+      strip: 1
+test: win-gpg-agent --version

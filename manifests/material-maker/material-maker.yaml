@@ -1,0 +1,21 @@
+api: v1
+name: material-maker
+kind: app
+display: material-maker
+description: Extensible procedural material generator
+homepage: https://rodzilla.itch.io/material-maker
+license: MIT
+version: "1.8"
+channels:
+    stable: "1.8"
+provides:
+    - material-maker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RodZill4/godot-procedural-textures/releases/download/1.8/material_maker_1_8_windows.zip
+      sha256: 4dc604a09b8f2143f429aaba42e0829a83137c4e8b0d91b79d610c542c5ee9ff
+      bin:
+        - material_maker.exe
+      strip: 1
+test: material_maker --version

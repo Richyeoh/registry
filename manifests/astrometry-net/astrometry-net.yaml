@@ -1,0 +1,39 @@
+api: v1
+name: astrometry-net
+kind: app
+display: astrometry-net
+description: Automatic identification of astronomical images
+homepage: https://github.com/dstndstn/astrometry.net
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: "0.97"
+channels:
+    stable: "0.97"
+provides:
+    - astrometry-net
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/astrometry-net/blobs/sha256:46bfc0a2f53fe5874800a68344de95c1414e27751705e4dcb4c175e6c4aec2d6
+      sha256: 46bfc0a2f53fe5874800a68344de95c1414e27751705e4dcb4c175e6c4aec2d6
+      bin:
+        - astrometry-net
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/astrometry-net/blobs/sha256:6c34882b97cba749132013da4db732c9ac0fff77016bf3e95fac367190a627a3
+      sha256: 6c34882b97cba749132013da4db732c9ac0fff77016bf3e95fac367190a627a3
+      bin:
+        - astrometry-net
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/astrometry-net/blobs/sha256:131874437054f0f1d4efcf4319984814edf5bfd3637df83befd7eb32fd2690c6
+      sha256: 131874437054f0f1d4efcf4319984814edf5bfd3637df83befd7eb32fd2690c6
+      bin:
+        - astrometry-net
+      strip: 1
+test: astrometry-net --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

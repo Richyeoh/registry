@@ -1,0 +1,24 @@
+api: v1
+name: gallery-dl
+kind: app
+display: gallery-dl
+description: Command-line program to download image-galleries and -collections from several image hosting sites.
+homepage: https://codeberg.org/mikf/gallery-dl
+license: GPL-2.0-only
+version: 1.32.19
+channels:
+    stable: 1.32.19
+provides:
+    - gallery-dl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://codeberg.org/mikf/gallery-dl/releases/download/v1.32.19/gallery-dl.exe
+      sha256: 4dda3f14efbc8a8e616af1fc7e1e88d795995326b47692453e620117254dec18
+      bin:
+        - gallery-dl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gallery-dl
+test: gallery-dl --version

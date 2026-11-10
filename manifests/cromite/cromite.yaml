@@ -1,0 +1,21 @@
+api: v1
+name: cromite
+kind: app
+display: cromite
+description: A Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy
+homepage: https://www.cromite.org/
+license: Unknown
+version: 153.0.8010.37
+channels:
+    stable: 153.0.8010.37
+provides:
+    - cromite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/uazo/cromite/releases/download/v153.0.8010.37-11507ac1061b5ea227806f5e84db5a57df6ccf6a/chrome-win.zip
+      sha256: c95d1c679142a421df7de2cab090539ccb4158f69410dc1878735fb8f60e0fab
+      bin:
+        - chrome.exe
+      strip: 1
+test: chrome --version

@@ -1,0 +1,21 @@
+api: v1
+name: gui-for-clash
+kind: app
+display: gui-for-clash
+description: A GUI program for Clash developed by vue3 + wails.
+homepage: https://github.com/GUI-for-Cores/GUI.for.Clash
+license: GPL-3.0
+version: 1.29.0
+channels:
+    stable: 1.29.0
+provides:
+    - gui-for-clash
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GUI-for-Cores/GUI.for.Clash/releases/download/v1.29.0/GUI.for.Clash-windows-amd64.zip
+      sha256: 9a2db3efa2a3761d4126dce8bf4b54b806044a23fd655f9bb87605c5c58fb93e
+      bin:
+        - gui-for-clash.exe
+      strip: 1
+test: gui-for-clash --version

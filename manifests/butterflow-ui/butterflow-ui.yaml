@@ -1,0 +1,24 @@
+api: v1
+name: butterflow-ui
+kind: app
+display: butterflow-ui
+description: Graphical user interface for butterflow, a video manipulation tool.
+homepage: https://github.com/wagesj45/butterflow-ui
+license: MIT
+version: 1.1.1
+channels:
+    stable: 1.1.1
+provides:
+    - butterflow-ui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/wagesj45/butterflow-ui/releases/download/1.1.1/butterflow_ui.setup.msi
+      sha256: 60ec8454741603ff44947748996f88dabc683ddd2e56d09269057b884195fa8f
+      bin:
+        - butterflow-ui.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall butterflow-ui
+test: butterflow-ui --version

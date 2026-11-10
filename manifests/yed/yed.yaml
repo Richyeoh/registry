@@ -1,0 +1,21 @@
+api: v1
+name: yed
+kind: app
+display: yed
+description: Powerful desktop application that can be used to quickly and effectively generate high-quality diagrams.
+homepage: https://www.yworks.com/products/yed
+license: Unknown
+version: 3.25.1
+channels:
+    stable: 3.25.1
+provides:
+    - yed
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.yworks.com/resources/yed/demo/yEd-3.25.1.zip
+      sha256: 369258f7704b485445ede54713042f0b57b4094e7073e4389d12c7015035cd3e
+      bin:
+        - yed.jar.exe
+      strip: 1
+test: yed.jar --version

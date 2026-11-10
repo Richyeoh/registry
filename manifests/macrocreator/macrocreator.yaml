@@ -1,0 +1,21 @@
+api: v1
+name: macrocreator
+kind: app
+display: macrocreator
+description: Automation tool and script generator based on AutoHotkey language
+homepage: https://www.macrocreator.com
+license: GPL-3.0-or-later
+version: 5.4.1
+channels:
+    stable: 5.4.1
+provides:
+    - macrocreator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Pulover/PuloversMacroCreator/releases/download/v5.4.1/PuloversMacroCreator-Portable.zip
+      sha256: aebdf335913eae4270b585339727b44593a98d17d73a3aae80e4d46d27c01310
+      bin:
+        - macrocreator.exe
+      strip: 1
+test: macrocreator --version

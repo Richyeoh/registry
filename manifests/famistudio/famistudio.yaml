@@ -1,0 +1,21 @@
+api: v1
+name: famistudio
+kind: app
+display: famistudio
+description: FamiStudio NES Music Editor
+homepage: https://github.com/BleuBleu/FamiStudio
+license: MIT
+version: 4.5.3
+channels:
+    stable: 4.5.3
+provides:
+    - famistudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/BleuBleu/FamiStudio/releases/download/4.5.3/FamiStudio453-WinPortableExe.zip
+      sha256: a46b6b53f3e248f4bed83b8ad80412a534a84ce3ce334a8d42b4a9ff123b5373
+      bin:
+        - FamiStudio.exe
+      strip: 1
+test: FamiStudio --version

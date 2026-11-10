@@ -1,0 +1,21 @@
+api: v1
+name: micro
+kind: app
+display: micro
+description: A terminal-based text editor that aims to be easy to use and intuitive, while also taking advantage of the full capabilities of modern terminals.
+homepage: https://micro-editor.github.io/
+license: MIT
+version: 2.0.15
+channels:
+    stable: 2.0.15
+provides:
+    - micro
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/micro-editor/micro/releases/download/v2.0.15/micro-2.0.15-win64.zip
+      sha256: 90635c53c11aa2a0d997f5e3ed43528877740725500207640b29551cef18479b
+      bin:
+        - micro.exe
+      strip: 1
+test: micro --version

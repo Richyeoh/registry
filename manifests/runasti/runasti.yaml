@@ -1,0 +1,24 @@
+api: v1
+name: runasti
+kind: app
+display: runasti
+description: Launch processes with TrustedInstaller privilege.
+homepage: https://github.com/jschicht/RunAsTI
+license: MIT
+version: 1.0.0.1
+channels:
+    stable: 1.0.0.1
+provides:
+    - runasti
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/jschicht/RunAsTI/master/RunAsTI64.exe#/RunAsTI.exe
+      sha256: bf365d7d5bc3076e5a7f41bb9f0b9e9beb58ae900bffcb3bbb10b575c08d66db
+      bin:
+        - RunAsTI.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall runasti
+test: RunAsTI --version

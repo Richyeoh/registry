@@ -1,0 +1,21 @@
+api: v1
+name: chromedriver-canary
+kind: app
+display: chromedriver-canary
+description: An open source tool for automated testing of webapps across many browsers
+homepage: https://chromedriver.chromium.org/
+license: BSD-3-Clause
+version: 159.0.8153.0
+channels:
+    stable: 159.0.8153.0
+provides:
+    - chromedriver-canary
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/159.0.8153.0/win64/chromedriver-win64.zip
+      sha256: 11fa8f3244bc8d8189becc67ea5f1ad85d65c2f6ac8020302ada4cc6cd17ca4c
+      bin:
+        - chromedriver.exe
+      strip: 1
+test: chromedriver --version

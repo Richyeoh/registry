@@ -1,0 +1,21 @@
+api: v1
+name: digital
+kind: app
+display: digital
+description: A digital logic designer and circuit simulator
+homepage: https://github.com/hneemann/Digital
+license: GPL-3.0-only
+version: "0.31"
+channels:
+    stable: "0.31"
+provides:
+    - digital
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hneemann/Digital/releases/download/v0.31/Digital.zip
+      sha256: 12f014c8b99140554f8f7464ebc771bbe3de6af39c83c20463492bcb892afc69
+      bin:
+        - digital.exe
+      strip: 1
+test: digital --version

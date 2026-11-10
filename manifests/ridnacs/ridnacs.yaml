@@ -1,0 +1,21 @@
+api: v1
+name: ridnacs
+kind: app
+display: ridnacs
+description: Disk space usage analyzer
+homepage: https://www.splashsoft.de/ridnacs-disk-space-usage-analyzer/
+license: Unknown
+version: "3.0"
+channels:
+    stable: "3.0"
+provides:
+    - ridnacs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.splashsoft.de/?download=520#/dl.zip
+      sha256: e25052121994423edd757dc549ff8520dad87092bd1bba57c573dbdc59a38f9a
+      bin:
+        - RidNacs.exe
+      strip: 1
+test: RidNacs --version

@@ -1,0 +1,24 @@
+api: v1
+name: kubescape
+kind: app
+display: kubescape
+description: Scans K8s clusters, YAML files, and HELM charts, and detect misconfigurations and software vulnerabilities at early stages of the CI/CD pipeline and provides a risk score instantly and risk trends over time.
+homepage: https://kubescape.io
+license: Apache-2.0
+version: 4.0.20
+channels:
+    stable: 4.0.20
+provides:
+    - kubescape
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kubescape/kubescape/releases/download/v4.0.20/kubescape_4.0.20_windows_amd64.exe#/kubescape.exe
+      sha256: 4e5da67e891eb84f677aad25fbea9d0025a43b1f5d032b5a34c7ae2dc1eff223
+      bin:
+        - kubescape.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kubescape
+test: kubescape --version

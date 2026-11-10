@@ -1,0 +1,21 @@
+api: v1
+name: lilypond
+kind: app
+display: lilypond
+description: A music engraving program devoted to producing the highest-quality sheet music possible.
+homepage: https://lilypond.org
+license: GPL-3.0-or-later
+version: 2.26.0
+channels:
+    stable: 2.26.0
+provides:
+    - lilypond
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/lilypond/lilypond/-/releases/v2.26.0/downloads/lilypond-2.26.0-mingw-x86_64.zip
+      sha256: 14ddddc233b469ef60d4ffc1c7f35520f15ac6b58e38cab458c60bdcc3af650c
+      bin:
+        - bin\lilypond.exe
+      strip: 1
+test: bin\lilypond --version

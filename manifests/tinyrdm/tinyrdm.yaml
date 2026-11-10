@@ -1,0 +1,21 @@
+api: v1
+name: tinyrdm
+kind: app
+display: tinyrdm
+description: A modern, colorful, super lightweight Redis GUI client.
+homepage: https://www.tinyrdm.com/
+license: GPL-3.0-or-later
+version: 1.2.7
+channels:
+    stable: 1.2.7
+provides:
+    - tinyrdm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tiny-craft/tiny-rdm/releases/download/v1.2.7/TinyRDM_Portable_1.2.7_windows_x64.zip
+      sha256: e4ec11abe5ffccb3277d60eba3980b9b23d254b5906c4980ee39562a8ea9beb3
+      bin:
+        - Tiny RDM.exe
+      strip: 1
+test: Tiny RDM.exe --version

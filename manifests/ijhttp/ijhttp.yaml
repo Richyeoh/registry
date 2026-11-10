@@ -1,0 +1,21 @@
+api: v1
+name: ijhttp
+kind: app
+display: ijhttp
+description: Allows to run HTTP requests from a terminal, without the IDE, or include HTTP request testing in a CI workflow.
+homepage: https://www.jetbrains.com/help/idea/http-client-cli.html
+license: Unknown
+version: 261.25134.95
+channels:
+    stable: 261.25134.95
+provides:
+    - ijhttp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/resources/intellij/http-client/261.25134.95/intellij-http-client.zip
+      sha256: 4656e9c1e2c798fbe7fd78ed8fc124bc071ebb46e02770e198a562689da32c9d
+      bin:
+        - ijhttp.bat.exe
+      strip: 1
+test: ijhttp.bat --version

@@ -1,0 +1,21 @@
+api: v1
+name: outlook-window-hook
+kind: app
+display: outlook-window-hook
+description: Keep Outlook running in the background when the main window is closed
+homepage: https://github.com/Palsternakka/OutlookWindowHook
+license: GPL-3.0-only
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - outlook-window-hook
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Palsternakka/OutlookWindowHook/releases/download/v1.0.0/OutlookWindowsHook-Standalone.zip
+      sha256: b93e484d742f682cb4b6330650337188b6eea8d89827a5a16d65d266c4eebae8
+      bin:
+        - outlook-window-hook.exe
+      strip: 1
+test: outlook-window-hook --version

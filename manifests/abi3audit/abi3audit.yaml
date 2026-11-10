@@ -1,0 +1,39 @@
+api: v1
+name: abi3audit
+kind: app
+display: abi3audit
+description: Scans Python packages for abi3 violations and inconsistencies
+homepage: https://github.com/pypa/abi3audit
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.0.26
+channels:
+    stable: 0.0.26
+provides:
+    - abi3audit
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abi3audit/blobs/sha256:7696e30c03be5fb8ce445ab25e823fe6e2bec1692d7addebab505b89060bfe69
+      sha256: 7696e30c03be5fb8ce445ab25e823fe6e2bec1692d7addebab505b89060bfe69
+      bin:
+        - abi3audit
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abi3audit/blobs/sha256:685aca2a84f158cb28563f6c845ee1d671b44c70f88ddfcebaf91e46eb647056
+      sha256: 685aca2a84f158cb28563f6c845ee1d671b44c70f88ddfcebaf91e46eb647056
+      bin:
+        - abi3audit
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abi3audit/blobs/sha256:685aca2a84f158cb28563f6c845ee1d671b44c70f88ddfcebaf91e46eb647056
+      sha256: 685aca2a84f158cb28563f6c845ee1d671b44c70f88ddfcebaf91e46eb647056
+      bin:
+        - abi3audit
+      strip: 1
+test: abi3audit --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

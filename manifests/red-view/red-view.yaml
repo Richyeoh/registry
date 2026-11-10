@@ -1,0 +1,24 @@
+api: v1
+name: red-view
+kind: app
+display: red-view
+description: Programming language inspired by Rebol. GUI console version, includes view.
+homepage: https://www.red-lang.org
+license: Unknown
+version: 10nov26
+channels:
+    stable: 10nov26
+provides:
+    - red-view
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://static.red-lang.org/dl/auto/win/red-view-10nov26-de388d6cc.exe#/red-view.exe
+      sha256: 9426795f1217a70164ea87f243bb92e8288b9806426877a27780859260455a65
+      bin:
+        - red-view.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall red-view
+test: red-view --version

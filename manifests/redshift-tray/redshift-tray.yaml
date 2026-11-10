@@ -1,0 +1,22 @@
+api: v1
+name: redshift-tray
+kind: app
+display: redshift-tray
+description: A no-frills GUI for Redshift.
+homepage: https://codeberg.org/ltguillaume/redshift-tray
+license: GPL-3.0-only
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - redshift-tray
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://codeberg.org/ltguillaume/redshift-tray/releases/download/3.1.0/redshift-tray_3.1.0.zip
+      sha256: 4b9ac69b44da7aa449e6105e4767b5ddc21cae2ae973c2fbaee83cf03d1bbbfa
+      bin:
+        - redshift.exe
+        - rstray.exe
+      strip: 1
+test: redshift --version

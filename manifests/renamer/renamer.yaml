@@ -1,0 +1,21 @@
+api: v1
+name: renamer
+kind: app
+display: renamer
+description: Very powerful and flexible file renaming tool
+homepage: https://www.den4b.com/products/renamer
+license: CC-BY-NC-ND-3.0|Shareware
+version: "7.10"
+channels:
+    stable: "7.10"
+provides:
+    - renamer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.den4b.com/download/renamer/portable/7.10?token=scoop#/dl.zip
+      sha256: f2d3ae20dccd2be92b0c497768292dccccd286a3e862fa8dfe3932b201446935
+      bin:
+        - ReNamer.exe
+      strip: 1
+test: ReNamer --version

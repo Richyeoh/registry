@@ -1,0 +1,25 @@
+api: v1
+name: pov-ray
+kind: app
+display: pov-ray
+description: A high-quality tool for creating stunning three-dimensional graphics.
+homepage: https://www.povray.org/
+license: AGPL-3.0-or-later
+version: 3.7.0
+channels:
+    stable: 3.7.0
+provides:
+    - pov-ray
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.povray.org/ftp/pub/povray/Official/povwin-3.7-agpl3-setup.exe
+      sha256: 2b1331641b6f96113c2dba951be80d99eb548639480399cabb5e3a60dce5bdc8
+      bin:
+        - bin\pvengine64.exe
+        - bin\pvengine64.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pov-ray
+test: bin\pvengine64 --version

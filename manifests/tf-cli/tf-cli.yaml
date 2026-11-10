@@ -1,0 +1,24 @@
+api: v1
+name: tf-cli
+kind: app
+display: tf
+description: Less verbose and more shell-friendly Terraform.
+homepage: https://github.com/dex4er/tf
+license: MIT
+version: 2.14.1
+channels:
+    stable: 2.14.1
+provides:
+    - tf-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dex4er/tf/releases/download/v2.14.1/tf-windows-amd64.exe#/tf.exe
+      sha256: 3ffd80652de99a422c09958cc9a7e81e2bc3382ac241ef7bd8f2b23a7322c4ca
+      bin:
+        - tf.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tf
+test: tf --version

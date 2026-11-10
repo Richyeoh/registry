@@ -1,0 +1,24 @@
+api: v1
+name: twg
+kind: app
+display: twg
+description: A command line interface to the Atlassian Teamwork Graph and Cloud services.
+homepage: https://developer.atlassian.com/platform/teamwork-graph/twg-cli/
+license: Unknown
+version: 1.4.4
+channels:
+    stable: 1.4.4
+provides:
+    - twg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://teamwork-graph.atlassian.com/cli/twg-windows-x64-v1.4.4.exe#/twg.exe
+      sha256: a490eecff0aea9222cca99b6fb573d365e90c7240e09021d67eae16541c952bc
+      bin:
+        - twg.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall twg
+test: twg --version

@@ -1,0 +1,21 @@
+api: v1
+name: libgen-desktop
+kind: app
+display: libgen-desktop
+description: Desktop application for Library Genesis
+homepage: https://github.com/libgenapps/LibgenDesktop
+license: Unknown
+version: 1.4.1
+channels:
+    stable: 1.4.1
+provides:
+    - libgen-desktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libgenapps/LibgenDesktop/releases/download/1.4.1/LibgenDesktop.Portable.64-bit.zip
+      sha256: 3560006aa20d9be09b6b37cf818364e3b7e0862313a15eb7ce3e8840b2af7c47
+      bin:
+        - libgen-desktop.exe
+      strip: 1
+test: libgen-desktop --version

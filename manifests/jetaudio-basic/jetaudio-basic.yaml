@@ -1,0 +1,21 @@
+api: v1
+name: jetaudio-basic
+kind: app
+display: jetaudio-basic
+description: Music and video organizer
+homepage: http://www.jetaudio.com/
+license: Unknown
+version: 8.1.8
+channels:
+    stable: 8.1.8
+provides:
+    - jetaudio-basic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/jetaudio/jetaudio-basic-8.1.8.7z
+      sha256: 3ce4af838ec72432a85a79dc1046bb3907c82a83eb09ef0f8b2375a3d9f92b76
+      bin:
+        - jetaudio-basic.exe
+      strip: 1
+test: jetaudio-basic --version

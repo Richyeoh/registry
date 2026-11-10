@@ -1,0 +1,21 @@
+api: v1
+name: juce
+kind: app
+display: juce
+description: C++ audio application framework
+homepage: https://juce.com
+license: Unknown
+version: 9.0.5
+channels:
+    stable: 9.0.5
+provides:
+    - juce
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/juce-framework/JUCE/releases/download/9.0.5/juce-9.0.5-windows.zip
+      sha256: 236f7172349febddf8d54a7551c73915cdae468c0b512644816e77ca72fe2115
+      bin:
+        - Projucer.exe
+      strip: 1
+test: Projucer --version

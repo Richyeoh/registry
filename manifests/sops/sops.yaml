@@ -1,0 +1,24 @@
+api: v1
+name: sops
+kind: app
+display: sops
+description: Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP
+homepage: https://getsops.io
+license: MPL-2.0
+version: 3.13.3
+channels:
+    stable: 3.13.3
+provides:
+    - sops
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.amd64.exe#/sops.exe
+      sha256: a4a9a398858fe8b2ef72d9686d930bf7c5cece9be74ad83ac3b53cfdd70e6b1c
+      bin:
+        - sops.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sops
+test: sops --version

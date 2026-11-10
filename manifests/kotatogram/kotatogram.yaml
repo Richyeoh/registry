@@ -1,0 +1,21 @@
+api: v1
+name: kotatogram
+kind: app
+display: kotatogram
+description: Experimental Telegram Desktop fork.
+homepage: https://kotatogram.github.io/
+license: Unknown
+version: 1.4.8
+channels:
+    stable: 1.4.8
+provides:
+    - kotatogram
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kotatogram/kotatogram-desktop/releases/download/k1.4.8/1.4.8-win64-portable.zip
+      sha256: 691f09a6d50de6e0a94bba8a6ef18d5b4ffc0e2cf3a849b584d8cbb3543f81a5
+      bin:
+        - kotatogram.exe
+      strip: 1
+test: kotatogram --version

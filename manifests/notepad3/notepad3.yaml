@@ -1,0 +1,23 @@
+api: v1
+name: notepad3
+kind: app
+display: notepad3
+description: Notepad-like text editor based on the Scintilla source code
+homepage: https://www.rizonesoft.com/downloads/notepad3/
+license: BSD-3-Clause
+version: 7.26.602.1
+channels:
+    stable: 7.26.602.1
+provides:
+    - notepad3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rizonesoft/Notepad3/releases/download/RELEASE_7.26.602.1/Notepad3_7.26.602.1_x64_Portable.zip
+      sha256: 4f8d02c5c1d5943cd0495c4322ee2e3d07c4734f15d29e2e24ae6f5fcbc1a9eb
+      bin:
+        - Notepad3.exe
+        - minipath.exe
+        - np3encrypt.exe
+      strip: 1
+test: Notepad3 --version

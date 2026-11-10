@@ -1,0 +1,22 @@
+api: v1
+name: beef-nightly
+kind: app
+display: beef-nightly
+description: Beef programming language compiler. (nightly version)
+homepage: https://www.beeflang.org/
+license: MIT
+version: 0.43.6.11092026
+channels:
+    stable: 0.43.6.11092026
+provides:
+    - beef-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://nightly.beeflang.org/BeefSetup_0_43_6__11_09_2026.exe#/dl.7z
+      sha256: 8f91d5faa8a6547ee33b67af99dbd3eac2a06cc04abca3f00eb405d66688bc08
+      bin:
+        - bin\BeefIDE.exe
+        - bin\BeefBuild.exe
+      strip: 1
+test: bin\BeefIDE --version

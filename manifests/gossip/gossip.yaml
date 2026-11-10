@@ -1,0 +1,24 @@
+api: v1
+name: gossip
+kind: app
+display: gossip
+description: Desktop client for Nostr written in Rust
+homepage: https://github.com/mikedilger/gossip
+license: MIT
+version: 0.14.0
+channels:
+    stable: 0.14.0
+provides:
+    - gossip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mikedilger/gossip/releases/download/v0.14.0/gossip.0.14.0.msi
+      sha256: fae7063d0e2741ec55cccc51753ed4c5f9be374665b25323cf6c31179c4f4736
+      bin:
+        - gossip.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gossip
+test: gossip --version

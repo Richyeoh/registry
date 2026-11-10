@@ -1,0 +1,24 @@
+api: v1
+name: protonmail-bridge
+kind: app
+display: protonmail-bridge
+description: Bridge app that allows to users to use their preferred desktop mail client (e.g. Microsoft Outlook, Apple Mail, Mozilla Thunderbird), while benefiting from Proton Mail’s end-to-end encryption.
+homepage: https://proton.me/mail/bridge
+license: GPL-3.0-only
+version: 3.27.1
+channels:
+    stable: 3.27.1
+provides:
+    - protonmail-bridge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ProtonMail/proton-bridge/releases/download/v3.27.1/Bridge-Installer.exe#/dl.exe
+      sha256: 025b6faa5d01b900acf5fb40acbf5bb1e4d72091b681517e632eb9fb3d931537
+      bin:
+        - protonmail-bridge.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall protonmail-bridge
+test: protonmail-bridge --version

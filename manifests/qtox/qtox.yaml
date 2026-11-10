@@ -1,0 +1,21 @@
+api: v1
+name: qtox
+kind: app
+display: qtox
+description: Chat, voice, video, and file transfer IM client using the encrypted peer-to-peer Tox protocol.
+homepage: https://qtox.github.io/
+license: GPL-3.0-or-later
+version: 1.17.6
+channels:
+    stable: 1.17.6
+provides:
+    - qtox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/qTox/qTox/releases/download/v1.17.6/setup-qtox-x86_64-release.exe#/dl.7z
+      sha256: f1cd7cda26c2fdae4a924ddde34af44b2247d5e8561f7dafdfed75ef6632e40c
+      bin:
+        - qtox.exe
+      strip: 1
+test: qtox --version

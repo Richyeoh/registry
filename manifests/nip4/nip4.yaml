@@ -1,0 +1,21 @@
+api: v1
+name: nip4
+kind: app
+display: nip4
+description: A spreadsheet-like interface to the libvips image processing library
+homepage: https://github.com/libvips/nip4
+license: GPL-2.0-or-later
+version: 9.2.1
+channels:
+    stable: 9.2.1
+provides:
+    - nip4
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libvips/nip4/releases/download/v9.2.1/nip4-x64-9.2.1.zip
+      sha256: 392be20f7c5a0ea1c962e6b911a9732b4f3d5ac28001dfd03793937bab62a457
+      bin:
+        - bin\nip4.exe
+      strip: 1
+test: bin\nip4 --version

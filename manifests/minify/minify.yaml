@@ -1,0 +1,21 @@
+api: v1
+name: minify
+kind: app
+display: minify
+description: Go minifiers for web formats
+homepage: https://go.tacodewolff.nl/minify
+license: MIT
+version: 2.24.25
+channels:
+    stable: 2.24.25
+provides:
+    - minify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tdewolff/minify/releases/download/v2.24.25/minify_windows_amd64.zip
+      sha256: dd0b489c107ff228cf83e90c0eaccaadfff2c57d0bd3f882be1532b20c112aab
+      bin:
+        - minify.exe
+      strip: 1
+test: minify --version

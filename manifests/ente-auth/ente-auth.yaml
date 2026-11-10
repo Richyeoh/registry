@@ -1,0 +1,21 @@
+api: v1
+name: ente-auth
+kind: app
+display: ente-auth
+description: Free, open source, cross-platform 2FA authenticator, with end-to-end encrypted backups.
+homepage: https://ente.io/auth/
+license: AGPL-3.0-only
+version: 4.4.26
+channels:
+    stable: 4.4.26
+provides:
+    - ente-auth
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ente-io/ente/releases/download/auth-v4.4.26/ente-auth-v4.4.26-windows.zip
+      sha256: f62c5a4bb98a0d993b8a08519f4d29f5ef4055240d6433987f057d75057829fe
+      bin:
+        - ente-auth.exe
+      strip: 1
+test: ente-auth --version

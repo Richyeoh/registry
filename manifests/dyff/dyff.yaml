@@ -1,0 +1,21 @@
+api: v1
+name: dyff
+kind: app
+display: dyff
+description: A diff tool for YAML files, and sometimes JSON.
+homepage: https://github.com/homeport/dyff
+license: MIT
+version: 1.12.0
+channels:
+    stable: 1.12.0
+provides:
+    - dyff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/homeport/dyff/releases/download/v1.12.0/dyff_1.12.0_windows_amd64.tar.gz
+      sha256: 63d237debecd0188287df4de01ded6dbede28ee15a616d5eeaf061c0cdd9a394
+      bin:
+        - dyff.exe
+      strip: 1
+test: dyff --version

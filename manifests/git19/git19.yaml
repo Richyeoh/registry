@@ -1,0 +1,22 @@
+api: v1
+name: git19
+kind: app
+display: git19
+description: A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+homepage: https://git-for-windows.github.io/
+license: GPL-2.0-only
+version: 1.9.5-preview20150319
+channels:
+    stable: 1.9.5-preview20150319
+provides:
+    - git19
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/msysgit/msysgit/releases/download/Git-1.9.5-preview20150319/PortableGit-1.9.5-preview20150319.7z
+      sha256: 26261872847b18d171a197c8e4b3f4c0e60b4310c4b8ef1f4d9884950288aa7c
+      bin:
+        - cmd\git.exe
+        - cmd\gitk.cmd.exe
+      strip: 1
+test: cmd\git --version

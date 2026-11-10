@@ -1,0 +1,21 @@
+api: v1
+name: recmd
+kind: app
+display: recmd
+description: Command-line Registry tool for searching, multi-hive support, plugins, and more.
+homepage: https://ericzimmerman.github.io
+license: MIT
+version: 2026.10.3
+channels:
+    stable: 2026.10.3
+provides:
+    - recmd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.ericzimmermanstools.com/net/RECmd.zip
+      sha256: dcdf32f5b75733c5a7cd6d9fc97572c8466b11cdb9cfb4eaa7d56416c6e1dae9
+      bin:
+        - RECmd.exe
+      strip: 1
+test: RECmd --version

@@ -1,0 +1,21 @@
+api: v1
+name: i2pd
+kind: app
+display: i2pd
+description: End-to-End encrypted and anonymous Internet
+homepage: https://i2pd.website
+license: BSD-3-Clause
+version: 3.0.0
+channels:
+    stable: 3.0.0
+provides:
+    - i2pd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PurpleI2P/i2pd/releases/download/3.0.0/i2pd_3.0.0_win64_mingw.zip
+      sha256: 973abdd5793e05cd21171ee701f3e2603d756543872dfb81d0a5c2d1a3ff3fb3
+      bin:
+        - i2pd.exe
+      strip: 1
+test: i2pd --version

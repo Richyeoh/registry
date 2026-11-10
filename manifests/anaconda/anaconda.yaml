@@ -1,0 +1,32 @@
+api: v1
+name: anaconda
+kind: app
+display: Anaconda Distribution
+description: Distribution of the Python and R programming languages for scientific computing
+homepage: https://www.anaconda.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2026.07-1
+channels:
+    stable: 2026.07-1
+provides:
+    - anaconda
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://repo.anaconda.com/archive/Anaconda3-2026.07-1-MacOSX-arm64.sh
+      sha256: 6a9b63c645db4dbe293ffe9f168f7e380fe7a041fc863e67ee84db027425bce2
+      bin:
+        - anaconda
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://repo.anaconda.com/archive/Anaconda3-2026.07-1-MacOSX-arm64.sh
+      sha256: 6a9b63c645db4dbe293ffe9f168f7e380fe7a041fc863e67ee84db027425bce2
+      bin:
+        - anaconda
+      strip: 1
+test: anaconda --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

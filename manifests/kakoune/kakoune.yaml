@@ -1,0 +1,25 @@
+api: v1
+name: kakoune
+kind: app
+display: kakoune
+description: kakoune
+homepage: https://kakoune.org/
+license: Unknown
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 2026.05.21
+channels:
+    stable: 2026.05.21
+provides:
+    - kakoune
+platforms:
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/kakoune/download/
+      sha256: 60166e8f1c0d8da3287ab81362d8f38ca6323fc83090b188d5037afc91a66a9b
+      bin:
+        - kakoune
+test: kakoune --version
+caveats: 由 Arch 官方仓自动转制（pacman/paru 源）

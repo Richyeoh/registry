@@ -1,0 +1,21 @@
+api: v1
+name: kondo
+kind: app
+display: kondo
+description: Save disk space by cleaning non-essential files from software projects.
+homepage: https://github.com/tbillington/kondo
+license: MIT
+version: "0.9"
+channels:
+    stable: "0.9"
+provides:
+    - kondo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tbillington/kondo/releases/download/v0.9/kondo-x86_64-pc-windows-msvc.zip
+      sha256: 4c70e7de85bfaf1b66de931654e9943681af42b093cd591530fc0dd4cc4a0f88
+      bin:
+        - kondo.exe
+      strip: 1
+test: kondo --version

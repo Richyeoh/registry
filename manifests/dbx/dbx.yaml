@@ -1,0 +1,21 @@
+api: v1
+name: dbx
+kind: app
+display: dbx
+description: Lightweight, cross-platform database client
+homepage: https://dbxio.com
+license: Apache-2.0
+version: 0.6.68
+channels:
+    stable: 0.6.68
+provides:
+    - dbx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/t8y2/dbx/releases/download/v0.6.68/DBX_0.6.68_x64-portable.zip
+      sha256: 641245a7d5d3dd6885ae25a444d2c0a556242736d250b91bd4c93051e27c9eb5
+      bin:
+        - dbx.exe
+      strip: 1
+test: dbx --version

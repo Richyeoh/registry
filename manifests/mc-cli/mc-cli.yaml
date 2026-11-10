@@ -1,0 +1,24 @@
+api: v1
+name: mc-cli
+kind: app
+display: mc
+description: Native GNU Midnight Commander for Win32
+homepage: https://midnight-commander.org/
+license: GPL-3.0-or-later
+version: 4.8.33.236
+channels:
+    stable: 4.8.33.236
+provides:
+    - mc-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/adamyg/mcwin32/releases/download/4.8.33.236/mcwin32-build236-x64-setup.exe
+      sha256: c7edf10402542d334df7e6ff802e2213d384eafa949a6fa88d3813bd87a8ee04
+      bin:
+        - mc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mc
+test: mc --version

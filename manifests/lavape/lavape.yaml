@@ -1,0 +1,21 @@
+api: v1
+name: lavape
+kind: app
+display: lavape
+description: Lava language. An Object-oriented rapid application development (RAD) language with type parameters (virtual types), refactoring, and extensive static checks.
+homepage: http://lavape.sourceforge.net/
+license: GPL-3.0-or-later
+version: 0.9.4
+channels:
+    stable: 0.9.4
+provides:
+    - lavape
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/lavape/LavaPE%20%28Windows_Unix%29/lavape-0.9.4/lavape-0.9.4-win32-bin.exe#/dl.7z
+      sha256: ad4d1bf25864f7009cbaba359fa8938cc0a249187c2db067439d84754e5cc716
+      bin:
+        - bin\lpc.exe
+      strip: 1
+test: bin\lpc --version

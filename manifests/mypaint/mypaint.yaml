@@ -1,0 +1,21 @@
+api: v1
+name: mypaint
+kind: app
+display: mypaint
+description: A simple drawing and painting program that works well with Wacom-style graphics tablets.
+homepage: http://mypaint.org
+license: GPL-2.0-or-later
+version: 2.0.1
+channels:
+    stable: 2.0.1
+provides:
+    - mypaint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mypaint/mypaint/releases/download/v2.0.1/mypaint-w64-2.0.1-standalone.7z
+      sha256: 6c2d033653b30fb02087cf168d45cd06a940eb72f702567d05358c9a23c5178a
+      bin:
+        - mypaint.exe
+      strip: 1
+test: mypaint --version

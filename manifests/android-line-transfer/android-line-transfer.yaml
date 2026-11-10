@@ -1,0 +1,21 @@
+api: v1
+name: android-line-transfer
+kind: app
+display: android-line-transfer
+description: Powerful Android Line Messages Backup and Restore Software
+homepage: https://www.backuptrans.com/android-line-transfer.html
+license: Unknown
+version: 3.1.100
+channels:
+    stable: 3.1.100
+provides:
+    - android-line-transfer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.backuptrans.com/download/exe/android-line-transfer_x64.exe#/dl.7z
+      sha256: dd23b8c565a82ccab8256e09c2caa5ac821c71848020f848f33f0cb9b6597923
+      bin:
+        - android-line-transfer.exe
+      strip: 1
+test: android-line-transfer --version

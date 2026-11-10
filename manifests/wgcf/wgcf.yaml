@@ -1,0 +1,24 @@
+api: v1
+name: wgcf
+kind: app
+display: wgcf
+description: Unofficial CLI for Cloudflare Warp (Wireguard VPN service)
+homepage: https://github.com/ViRb3/wgcf
+license: MIT
+version: 2.3.1
+channels:
+    stable: 2.3.1
+provides:
+    - wgcf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ViRb3/wgcf/releases/download/v2.3.1/wgcf_2.3.1_windows_amd64.exe#/wgcf.exe
+      sha256: e222fd9443d7cb3264d825a3e86967797fc9c938507c5d93e3cc21e4aed11dcc
+      bin:
+        - wgcf.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wgcf
+test: wgcf --version

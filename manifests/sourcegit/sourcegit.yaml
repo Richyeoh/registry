@@ -1,0 +1,21 @@
+api: v1
+name: sourcegit
+kind: app
+display: sourcegit
+description: Open-source GUI client for git users.
+homepage: https://github.com/sourcegit-scm/sourcegit
+license: MIT
+version: "2026.24"
+channels:
+    stable: "2026.24"
+provides:
+    - sourcegit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sourcegit-scm/sourcegit/releases/download/v2026.24/sourcegit_2026.24.win-x64.zip
+      sha256: c18e890fb6b946db991bf6b583d3b65416f40dd14890f6f0228acebf6ff4a40b
+      bin:
+        - SourceGit.exe
+      strip: 1
+test: SourceGit --version

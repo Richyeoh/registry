@@ -1,0 +1,22 @@
+api: v1
+name: carotdav
+kind: app
+display: carotdav
+description: A simple WebDAV / FTP / SFTP / Online Storages client for Windows OS
+homepage: http://rei.to/carotdav_en.html
+license: Unknown
+version: 1.16.4
+channels:
+    stable: 1.16.4
+provides:
+    - carotdav
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://rei.to/CarotDAV1.16.4.portable.zip
+      sha256: d8e92ad50591cfce3c7ed6fb0ae462b2b5ad55f09a0a870630d37acd1dfe2a0b
+      bin:
+        - CarotDAV.exe
+        - CarotDAVC.exe
+      strip: 1
+test: CarotDAV --version

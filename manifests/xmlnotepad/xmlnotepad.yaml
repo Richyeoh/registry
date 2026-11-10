@@ -1,0 +1,21 @@
+api: v1
+name: xmlnotepad
+kind: app
+display: xmlnotepad
+description: Provides a simple intuitive User Interface for browsing and editing XML documents
+homepage: https://microsoft.github.io/XmlNotepad/
+license: MIT
+version: 2.9.0.22
+channels:
+    stable: 2.9.0.22
+provides:
+    - xmlnotepad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/XmlNotepad/releases/download/2.9.0.22/XmlNotepadPackage_2.9.0.22_AnyCPU.msixbundle#/dl.7z
+      sha256: 9cbafe9e930c23bc8ad0d77f7a7df2fa2a21f08fc79f24b6bc12943c1282587a
+      bin:
+        - xmlnotepad.exe
+      strip: 1
+test: xmlnotepad --version

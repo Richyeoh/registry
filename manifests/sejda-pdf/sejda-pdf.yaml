@@ -1,0 +1,21 @@
+api: v1
+name: sejda-pdf
+kind: app
+display: sejda-pdf
+description: PDF Editor
+homepage: https://www.sejda.com/desktop
+license: Unknown
+version: 7.9.12
+channels:
+    stable: 7.9.12
+provides:
+    - sejda-pdf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sejda-cdn.com/sejda-desktop_7.9.12_x64_portable.zip
+      sha256: b0492d06c4e28212ae3800efcdba26919cc222677e838c8d981659f4a917d5a9
+      bin:
+        - sejda-pdf.exe
+      strip: 1
+test: sejda-pdf --version

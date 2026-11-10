@@ -2,10 +2,13 @@ api: v1
 name: dust
 kind: app
 display: dust
-description: 更直观的 du
+description: du(1) - File space usage analyzer
 homepage: https://github.com/bootandy/dust
 license: Apache-2.0
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - bootandy
 version: 1.2.7
@@ -50,4 +53,3 @@ platforms:
         - dust
       strip: 1
 test: dust --version
-caveats: 由 GitHub bootandy/dust latest 自动转制

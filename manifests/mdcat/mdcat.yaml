@@ -1,0 +1,21 @@
+api: v1
+name: mdcat
+kind: app
+display: mdcat
+description: cat for markdown
+homepage: https://github.com/swsnr/mdcat
+license: MPL-2.0
+version: 2.7.1
+channels:
+    stable: 2.7.1
+provides:
+    - mdcat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/swsnr/mdcat/releases/download/mdcat-2.7.1/mdcat-2.7.1-x86_64-pc-windows-msvc.zip
+      sha256: e140429e8892e164d42d093ef6646336bbb512fffd102baff64d009059cc6e86
+      bin:
+        - mdcat.exe
+      strip: 1
+test: mdcat --version

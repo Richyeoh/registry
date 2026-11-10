@@ -1,0 +1,24 @@
+api: v1
+name: rcedit
+kind: app
+display: rcedit
+description: Command-line tool for editing resources of PE executables
+homepage: https://github.com/electron/rcedit
+license: MIT
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - rcedit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/electron/rcedit/releases/download/v2.0.0/rcedit-x64.exe#/rcedit.exe
+      sha256: 3e7801db1a5edbec91b49a24a094aad776cb4515488ea5a4ca2289c400eade2a
+      bin:
+        - rcedit.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rcedit
+test: rcedit --version

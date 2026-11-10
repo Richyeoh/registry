@@ -1,0 +1,24 @@
+api: v1
+name: powersession-rs
+kind: app
+display: powersession-rs
+description: Terminal session recorder (Asciinema format) written in Rust.
+homepage: https://github.com/Watfaq-legacy/PowerSession-rs
+license: MIT
+version: 0.1.16
+channels:
+    stable: 0.1.16
+provides:
+    - powersession-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Watfaq-legacy/PowerSession-rs/releases/download/v0.1.16/PowerSession.exe
+      sha256: 8310b2a0e6bb88f08624db6ee3245d7efb89bf01a1f4459a2bf4ab0f1525bbf4
+      bin:
+        - PowerSession.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall powersession-rs
+test: PowerSession --version

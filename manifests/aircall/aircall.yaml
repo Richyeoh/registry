@@ -1,0 +1,32 @@
+api: v1
+name: aircall
+kind: app
+display: Aircall
+description: Cloud-based call center and phone system software
+homepage: https://aircall.io/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 3.1.66
+channels:
+    stable: 3.1.66
+provides:
+    - aircall
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://download-electron.aircall.io/Aircall-3.1.66.dmg
+      sha256: d61c50d9f3466fe3751abe4945bc45d68cc9f6b71865b8ffa2a9bfd616fdb35b
+      bin:
+        - aircall
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://download-electron.aircall.io/Aircall-3.1.66.dmg
+      sha256: d61c50d9f3466fe3751abe4945bc45d68cc9f6b71865b8ffa2a9bfd616fdb35b
+      bin:
+        - aircall
+      strip: 1
+test: aircall --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

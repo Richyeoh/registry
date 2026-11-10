@@ -1,0 +1,22 @@
+api: v1
+name: zeebe
+kind: app
+display: zeebe
+description: Distributed Workflow Engine for Microservices Orchestration
+homepage: https://camunda.com/products/cloud/workflow-engine/
+license: Unknown
+version: 8.10.9
+channels:
+    stable: 8.10.9
+provides:
+    - zeebe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/camunda/camunda/releases/download/8.10.9/camunda-zeebe-8.10.9.zip
+      sha256: eb3cb0558816f1520ae9b9903866c4a52e635a89cbc6544ce960d492577f6b5b
+      bin:
+        - bin\broker.bat.exe
+        - bin\gateway.bat.exe
+      strip: 1
+test: bin\broker.bat --version

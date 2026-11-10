@@ -1,0 +1,21 @@
+api: v1
+name: usbtreeview
+kind: app
+display: usbtreeview
+description: USB Device Tree Viewer
+homepage: https://www.uwe-sieber.de/usbtreeview_e.html
+license: Freeware
+version: 4.8.0
+channels:
+    stable: 4.8.0
+provides:
+    - usbtreeview
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.uwe-sieber.de/files/UsbTreeView480_x64.zip
+      sha256: bce7e2d861d586904d57f7d6500b91c7931105aba3888ac761c90dc8aedbae06
+      bin:
+        - UsbTreeView.exe
+      strip: 1
+test: UsbTreeView --version

@@ -1,0 +1,24 @@
+api: v1
+name: regeditor
+kind: app
+display: regeditor
+description: Windows Registry editor
+homepage: https://www.oo-software.com/en/ooregeditor
+license: Unknown
+version: 16.1.6660
+channels:
+    stable: 16.1.6660
+provides:
+    - regeditor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl5.oo-software.com/files/ooregeditor16/161/OORegEditor.exe#/OORegEdt.exe
+      sha256: b30c6596438fdc845333ff55db92107b64dae5c546b45d2a31cbb53ab5ab3b29
+      bin:
+        - regeditor.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall regeditor
+test: regeditor --version

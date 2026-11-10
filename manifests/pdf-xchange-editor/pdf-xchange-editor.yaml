@@ -1,0 +1,21 @@
+api: v1
+name: pdf-xchange-editor
+kind: app
+display: pdf-xchange-editor
+description: A fast and feature-rich PDF viewer/editor.
+homepage: https://www.pdf-xchange.com/product/pdf-xchange-editor
+license: Unknown
+version: 11.1.2.0
+channels:
+    stable: 11.1.2.0
+provides:
+    - pdf-xchange-editor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.pdf-xchange.com/downloads/PXCEditor11_Portable_x64.zip?version=11.1.2.0
+      sha256: 46f4cf584990f6ec633d5fcc33f8da6b13078e2f5afa29f3bd4cd9e20053a3a6
+      bin:
+        - PXCEditor.exe
+      strip: 1
+test: PXCEditor --version

@@ -1,0 +1,21 @@
+api: v1
+name: euro-office
+kind: app
+display: euro-office
+description: Office suite that combines text, spreadsheet, presentation and PDF editors allowing to create, view and edit documents.
+homepage: https://github.com/Euro-Office/DesktopEditors
+license: AGPL-3.0-only
+version: 9.3.6
+channels:
+    stable: 9.3.6
+provides:
+    - euro-office
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Euro-Office/DesktopEditors/releases/download/v9.3.6/Euro-Office-DesktopEditors-9.3.6-0-windows-x64.zip
+      sha256: 1f6a221fec9864956fd4e787b2267668220ab2bc51807685bd15e89493b6d533
+      bin:
+        - DesktopEditors.exe
+      strip: 1
+test: DesktopEditors --version

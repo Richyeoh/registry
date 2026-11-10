@@ -1,0 +1,21 @@
+api: v1
+name: smolvm
+kind: app
+display: smolvm
+description: Manage and run custom Linux virtual machines locally by using a portable, lightweight, self-contained virtual machine.
+homepage: https://smolmachines.com
+license: Apache-2.0
+version: 1.34.1
+channels:
+    stable: 1.34.1
+provides:
+    - smolvm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/smol-machines/smolvm/releases/download/v1.34.1/smolvm-1.34.1-windows-x86_64.zip
+      sha256: b31af80517f59f28ef4690d423d78d9f853899ecbd836f4f7263b5eba4cbb420
+      bin:
+        - smolvm.exe
+      strip: 1
+test: smolvm --version

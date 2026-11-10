@@ -1,0 +1,21 @@
+api: v1
+name: playnite
+kind: app
+display: playnite
+description: Video game library manager and launcher with support for 3rd party libraries like Steam, GOG, Origin, Battle.net, ...
+homepage: https://playnite.link
+license: MIT
+version: "10.64"
+channels:
+    stable: "10.64"
+provides:
+    - playnite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JosefNemec/Playnite/releases/download/10.64/10.64.7z
+      sha256: a4538628d6a0f49cd337c8a8640294849d736217bf4d2d7c99c1eb1b68428611
+      bin:
+        - Playnite.DesktopApp.exe
+      strip: 1
+test: Playnite.DesktopApp --version

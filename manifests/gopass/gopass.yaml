@@ -1,0 +1,21 @@
+api: v1
+name: gopass
+kind: app
+display: gopass
+description: The slightly more awesome standard unix password manager for teams
+homepage: https://www.gopass.pw/
+license: MIT
+version: 1.17.4
+channels:
+    stable: 1.17.4
+provides:
+    - gopass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gopasspw/gopass/releases/download/v1.17.4/gopass-1.17.4-windows-amd64.zip
+      sha256: 8965ee29f9ede2acfde2de6f5564ecc98de9965a612b675acb453c784d847eaa
+      bin:
+        - gopass.exe
+      strip: 1
+test: gopass --version

@@ -1,0 +1,21 @@
+api: v1
+name: freecommander
+kind: app
+display: freecommander
+description: Easy-to-use file manager.
+homepage: https://freecommander.com
+license: Unknown
+version: "2026.941"
+channels:
+    stable: "2026.941"
+provides:
+    - freecommander
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://freecommander.com/downloads/FreeCommanderXE-32_portable941.zip
+      sha256: 50fd15b7568122799b1b1f682405e5f9803a0e1103b8c9617dfb172c1d6b14d7
+      bin:
+        - freecommander.exe
+      strip: 1
+test: freecommander --version

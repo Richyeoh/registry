@@ -1,0 +1,21 @@
+api: v1
+name: lmms
+kind: app
+display: lmms
+description: Cross-platform music production software.
+homepage: https://lmms.io/
+license: GPL-2.0-or-later
+version: 1.2.2
+channels:
+    stable: 1.2.2
+provides:
+    - lmms
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-win64.exe#/dl.7z
+      sha256: 5f20af1d782468507417d0785826b1f064fadba88ed1691e2def269922ace56b
+      bin:
+        - lmms.exe
+      strip: 1
+test: lmms --version

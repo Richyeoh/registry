@@ -1,0 +1,46 @@
+api: v1
+name: babl
+kind: app
+display: babl
+description: Dynamic, any-to-any, pixel format translation library
+homepage: https://www.gegl.org/babl/
+license: LGPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 0.1.128
+channels:
+    stable: 0.1.128
+provides:
+    - babl
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:f32536e8bb1b2db0fc9522252ca1187f148964b8ae9460bba2a55fa1ca574893
+      sha256: f32536e8bb1b2db0fc9522252ca1187f148964b8ae9460bba2a55fa1ca574893
+      bin:
+        - babl
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:b31e9c8879397ac0b7d852678272a5f12806d1aca99e71cae4d728b46b84eab6
+      sha256: b31e9c8879397ac0b7d852678272a5f12806d1aca99e71cae4d728b46b84eab6
+      bin:
+        - babl
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:2a3b46660626a3fa045698091d52ebf8b4633a59e8058b5b231f9561d1a38612
+      sha256: 2a3b46660626a3fa045698091d52ebf8b4633a59e8058b5b231f9561d1a38612
+      bin:
+        - babl
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/babl/blobs/sha256:74b3531bd9da3d27ae4fb0177803635508f60654bec64638a31792bb2c97c0d1
+      sha256: 74b3531bd9da3d27ae4fb0177803635508f60654bec64638a31792bb2c97c0d1
+      bin:
+        - babl
+      strip: 1
+test: babl --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

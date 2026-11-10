@@ -1,0 +1,21 @@
+api: v1
+name: proton-pass-cli
+kind: app
+display: proton-pass-cli
+description: Command-line interface for Proton Pass.
+homepage: https://protonpass.github.io/pass-cli/
+license: GPL-3.0-or-later
+version: 2.7.0
+channels:
+    stable: 2.7.0
+provides:
+    - proton-pass-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://proton.me/download/pass-cli/2.7.0/pass-cli-windows-x86_64.zip
+      sha256: c752af109dbda98ad154dfcdb40e8e43f1a38bc37de224b6182647b625290bb7
+      bin:
+        - pass-cli.exe
+      strip: 1
+test: pass-cli --version

@@ -1,0 +1,21 @@
+api: v1
+name: sophiapp
+kind: app
+display: sophiapp
+description: An open-source app for configuring and fine-tuning Windows 10 & Windows 11.
+homepage: https://github.com/Sophia-Community/SophiApp/
+license: MIT
+version: 1.0.97
+channels:
+    stable: 1.0.97
+provides:
+    - sophiapp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Sophia-Community/SophiApp/releases/download/1.0.97/SophiApp.zip
+      sha256: 621226b572dcaa91d44e36450f82fcf28fce052dff5770d50b3f628987f59291
+      bin:
+        - sophiapp.exe
+      strip: 1
+test: sophiapp --version

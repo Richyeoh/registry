@@ -1,0 +1,45 @@
+api: v1
+name: apm
+kind: app
+display: apm
+description: The package manager for AI-Native Development.
+homepage: https://microsoft.github.io/apm/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.35.0
+channels:
+    stable: 0.35.0
+provides:
+    - apm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/apm/releases/download/v0.35.0/apm-windows-x86_64.zip
+      sha256: 9a0a912b3ba68ac154b940e1931425c85f03edcfcc2339661d3aa32d8fa17c2f
+      bin:
+        - apm.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apm/blobs/sha256:2fb622a7ec6b505b82be4ba414fe6b879162d110ede4ef04a184a6b7df76c53e
+      sha256: 2fb622a7ec6b505b82be4ba414fe6b879162d110ede4ef04a184a6b7df76c53e
+      bin:
+        - apm
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apm/blobs/sha256:a41d6fed86b957137a2822c42fe9b0985fe109036130c2c233052ca94b5c4420
+      sha256: a41d6fed86b957137a2822c42fe9b0985fe109036130c2c233052ca94b5c4420
+      bin:
+        - apm
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apm/blobs/sha256:9ef24226e1fb222938f5f8be9808d2075878567b27bce11fa3e34f8bbbf4b9b2
+      sha256: 9ef24226e1fb222938f5f8be9808d2075878567b27bce11fa3e34f8bbbf4b9b2
+      bin:
+        - apm
+      strip: 1
+test: apm --version

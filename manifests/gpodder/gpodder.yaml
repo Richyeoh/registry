@@ -1,0 +1,22 @@
+api: v1
+name: gpodder
+kind: app
+display: gpodder
+description: Simple open source podcast client written in Python using GTK+.
+homepage: https://gpodder.org/
+license: GPL-3.0-only
+version: 3.11.5
+channels:
+    stable: 3.11.5
+provides:
+    - gpodder
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gpodder/gpodder/releases/download/3.11.5/windows-gpodder-3.11.5-portable.exe#/dl.7z
+      sha256: c73d6d1e6df63d8c8ff631c053f3d4d8db975b319022adc60a56add41166fb7b
+      bin:
+        - data\bin\gpo.exe
+        - data\bin\gpodder.exe
+      strip: 1
+test: data\bin\gpo --version

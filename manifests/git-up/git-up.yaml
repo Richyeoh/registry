@@ -1,0 +1,21 @@
+api: v1
+name: git-up
+kind: app
+display: git-up
+description: A nicer 'git pull'
+homepage: https://github.com/msiemens/PyGitUp
+license: MIT
+version: 2.6.1
+channels:
+    stable: 2.6.1
+provides:
+    - git-up
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/msiemens/PyGitUp/archive/v2.6.1.zip
+      sha256: 60215b2637417b198588f6dbbadc31041261ce4c05feb8a2a5be82e987352d17
+      bin:
+        - git-up.exe
+      strip: 1
+test: git-up --version

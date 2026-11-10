@@ -1,0 +1,24 @@
+api: v1
+name: sonic-visualiser
+kind: app
+display: sonic-visualiser
+description: Visualisation, analysis, and annotation of music audio recordings.
+homepage: https://www.sonicvisualiser.org
+license: GPL-2.0
+version: 5.2.1
+channels:
+    stable: 5.2.1
+provides:
+    - sonic-visualiser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v5.2.1/sonic-visualiser-5.2.1-win64.msi
+      sha256: fb421363db474de2161ef5e73d5a5a1f548d2df0624d811ad0713e76bdae43b1
+      bin:
+        - sonic-visualiser.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sonic-visualiser
+test: sonic-visualiser --version

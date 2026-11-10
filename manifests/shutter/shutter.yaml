@@ -1,0 +1,21 @@
+api: v1
+name: shutter
+kind: app
+display: shutter
+description: A multifunctional scheduling utility, which has a user friendly, easy-to-use interface and supports many different Events and Actions.
+homepage: https://www.den4b.com/products/shutter
+license: Unknown
+version: "4.9"
+channels:
+    stable: "4.9"
+provides:
+    - shutter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.den4b.com/download/shutter/portable/4.9?token=scoop#/dl.zip
+      sha256: 72b42716d07f98cfe149effa3ef66c50faef811d61ab9d311b9c4aadce173e4d
+      bin:
+        - Shutter.exe
+      strip: 1
+test: Shutter --version

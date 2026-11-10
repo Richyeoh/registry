@@ -1,0 +1,24 @@
+api: v1
+name: boosterx
+kind: app
+display: boosterx
+description: A Windows optimization tool that helps you tailor the system to your workflow by reducing unnecessary background activity, tuning key settings, and organizing tweaks in one safe, guided process.
+homepage: https://boosterx.org/en/
+license: Unknown
+version: 2.2.4.2
+channels:
+    stable: 2.2.4.2
+provides:
+    - boosterx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.boosterx.org/BoosterX.exe
+      sha256: d21ff11ac4f9077b53a22545a510d302ca371f12bc5ff8dd85c8e7d8198d6dc4
+      bin:
+        - boosterx.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall boosterx
+test: boosterx --version

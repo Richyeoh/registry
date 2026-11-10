@@ -1,0 +1,21 @@
+api: v1
+name: rustrover
+kind: app
+display: rustrover
+description: Cross-Platform IDE for Rust by JetBrains.
+homepage: https://www.jetbrains.com/rust/
+license: Unknown
+version: 2026.3-263.7307.214
+channels:
+    stable: 2026.3-263.7307.214
+provides:
+    - rustrover
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/rustrover/RustRover-2026.3.exe#/dl.7z
+      sha256: 5537c9b25380cee17a38a3914b8dd165e9e014b6fee2a052ee77c20021a2b0e6
+      bin:
+        - IDE\bin\rustrover64.exe
+      strip: 1
+test: IDE\bin\rustrover64 --version

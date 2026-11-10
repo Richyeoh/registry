@@ -1,0 +1,21 @@
+api: v1
+name: cangjie
+kind: app
+display: cangjie
+description: A general-purpose programming language designed for all-scenario application development.
+homepage: https://cangjie-lang.cn/en
+license: Apache-2.0
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - cangjie
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=cangjie-sdk-windows-x64-1.2.0.zip&objectKey=6ab1eafae4bd101f57762f5e#/cangjie-sdk-windows-x64-1.2.0.zip
+      sha256: 7bd5088ad56fb03c1214e73ea076de5ac08580cc419a8cbd46a524ee1ca250bf
+      bin:
+        - cangjie.exe
+      strip: 1
+test: cangjie --version

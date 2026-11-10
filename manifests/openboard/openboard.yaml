@@ -1,0 +1,24 @@
+api: v1
+name: openboard
+kind: app
+display: openboard
+description: Interactive whiteboard for schools and universities
+homepage: https://www.openboard.ch/index.en.html
+license: GPL-3.0-only
+version: 1.7.7
+channels:
+    stable: 1.7.7
+provides:
+    - openboard
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/OpenBoard-org/OpenBoard/releases/download/v1.7.7/OpenBoard_Installer_1.7.7.exe
+      sha256: 0b3e703f5d2971ca2ce68bf7203428d74426d4eb7c1447c728f590b4efaafac9
+      bin:
+        - openboard.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall openboard
+test: openboard --version

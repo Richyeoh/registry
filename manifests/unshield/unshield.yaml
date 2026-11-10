@@ -1,0 +1,22 @@
+api: v1
+name: unshield
+kind: app
+display: unshield
+description: Tool and library to extract CAB files from InstallShield installers.
+homepage: https://github.com/twogood/unshield
+license: MIT
+version: 1.6.2
+channels:
+    stable: 1.6.2
+provides:
+    - unshield
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/unshield/unshield-1.6.2-x64.7z
+      sha256: 662fefefc6988a3744ddc6b5b8d2e96ac21876d532f7d23a597c4ca797764a6b
+      bin:
+        - unshield.exe
+        - unshield-deobfuscate.exe
+      strip: 1
+test: unshield --version

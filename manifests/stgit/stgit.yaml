@@ -1,0 +1,24 @@
+api: v1
+name: stgit
+kind: app
+display: stgit
+description: Manage Git commits as a stack of patches
+homepage: https://stacked-git.github.io/
+license: GPL-2.0-only
+version: 2.7.0
+channels:
+    stable: 2.7.0
+provides:
+    - stgit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/stacked-git/stgit/releases/download/v2.7.0/stgit-2.7.0.msi
+      sha256: deebf4db69c6c135babd8e692577b962de3c52ebaa93d3b9be4178fecd0e1bae
+      bin:
+        - bin\stg.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall stgit
+test: bin\stg --version

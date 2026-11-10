@@ -1,0 +1,21 @@
+api: v1
+name: recyclarr
+kind: app
+display: recyclarr
+description: A command-line application that will automatically synchronize recommended settings from the TRaSH guides to your Sonarr/Radarr instances.
+homepage: https://recyclarr.dev/
+license: MIT
+version: 8.8.1
+channels:
+    stable: 8.8.1
+provides:
+    - recyclarr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/recyclarr/recyclarr/releases/download/v8.8.1/recyclarr-win-x64.zip
+      sha256: b027df84e201486b3fc9e2987dab52add24ba1d104a5509f3201c0011103d860
+      bin:
+        - recyclarr.exe
+      strip: 1
+test: recyclarr --version

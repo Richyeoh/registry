@@ -1,0 +1,24 @@
+api: v1
+name: bzip3
+kind: app
+display: bzip3
+description: A better and stronger spiritual successor to BZip2
+homepage: https://github.com/kspalaiologos/bzip3
+license: LGPLv3
+version: 1.5.5
+channels:
+    stable: 1.5.5
+provides:
+    - bzip3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kspalaiologos/bzip3/releases/download/1.5.5/bzip3-x86_64.exe#/bzip3.exe
+      sha256: 46bda47809c2d10aa13bcd4dc52ecbf85e24d81bd07891c322a18d372e4307ce
+      bin:
+        - bzip3.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bzip3
+test: bzip3 --version

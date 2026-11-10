@@ -1,0 +1,24 @@
+api: v1
+name: whipinto
+kind: app
+display: whipinto
+description: RTP/RTSP to WHIP tool.
+homepage: https://live777.pages.dev
+license: Unknown
+version: 0.10.2
+channels:
+    stable: 0.10.2
+provides:
+    - whipinto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-x86_64-pc-windows-msvc.exe#/whipinto.exe
+      sha256: dd33b54cd7edeb569b2d2f5d1893ab27be833f27c0093706138798679b330ef8
+      bin:
+        - whipinto.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall whipinto
+test: whipinto --version

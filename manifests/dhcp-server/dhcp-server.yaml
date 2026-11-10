@@ -1,0 +1,21 @@
+api: v1
+name: dhcp-server
+kind: app
+display: dhcp-server
+description: Very simple and easy to use implementation of a DHCP Server
+homepage: https://www.dhcpserver.de
+license: Unknown
+version: 2.5.2
+channels:
+    stable: 2.5.2
+provides:
+    - dhcp-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.dhcpserver.de/cms/wp-content/plugins/download-attachments/includes/download.php?id=625#/dl.zip
+      sha256: 24a9794ab6a47b8e7650af1748d881e77dd739858013cca64af8e731904f376c
+      bin:
+        - dhcp-server.exe
+      strip: 1
+test: dhcp-server --version

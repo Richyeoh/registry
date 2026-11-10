@@ -1,0 +1,21 @@
+api: v1
+name: v2rayn
+kind: app
+display: v2rayn
+description: v2rayN (WPF-based version) is a GUI client for V2Ray, with support for Xray, sing-box, and other compatible cores.
+homepage: https://github.com/2dust/v2rayN
+license: GPL-3.0-only
+version: 7.25.6
+channels:
+    stable: 7.25.6
+provides:
+    - v2rayn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/2dust/v2rayN/releases/download/7.25.6/v2rayN-windows-64.zip
+      sha256: 9b94718c2a214a246b04dec84b9a27f1f0ced8489c2dd25eb80a0fbb806bd13f
+      bin:
+        - v2rayn.exe
+      strip: 1
+test: v2rayn --version

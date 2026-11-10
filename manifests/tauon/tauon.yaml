@@ -1,0 +1,21 @@
+api: v1
+name: tauon
+kind: app
+display: tauon
+description: Tauon Music Box is a free, open-source, lightweight music player for Windows built with Electron
+homepage: https://github.com/Taiko2k/Tauon
+license: Unknown
+version: 13.1.1
+channels:
+    stable: 13.1.1
+provides:
+    - tauon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Taiko2k/Tauon/releases/download/v13.1.1/TauonMusicBox-windows.7z
+      sha256: e9a2a9919c71266a36ed565b0c0270d5edfb9d12a026438b1a57a637854e1721
+      bin:
+        - tauon.exe
+      strip: 1
+test: tauon --version

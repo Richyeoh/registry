@@ -1,0 +1,21 @@
+api: v1
+name: jqp
+kind: app
+display: jqp
+description: A TUI playground to experiment with jq
+homepage: https://github.com/noahgorstein/jqp
+license: MIT
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - jqp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/noahgorstein/jqp/releases/download/v0.8.0/jqp_Windows_x86_64.tar.gz
+      sha256: 9d62970c1355705c7050788f70fe597f65f1fe808a7b29fc34876c90bf509c17
+      bin:
+        - jqp.exe
+      strip: 1
+test: jqp --version

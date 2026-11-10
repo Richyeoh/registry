@@ -1,0 +1,21 @@
+api: v1
+name: alire
+kind: app
+display: alire
+description: Command-line tool from the Alire project and supporting library
+homepage: https://github.com/alire-project/alire
+license: GPL-3.0-only
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - alire
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/alire-project/alire/releases/download/v2.1.1/alr-2.1.1-bin-x86_64-windows.zip
+      sha256: 863013b1f94da6f3b7d0d5a74022ac3370424eeea9a470ebdb33d188d61b9125
+      bin:
+        - bin\alr.exe
+      strip: 1
+test: bin\alr --version

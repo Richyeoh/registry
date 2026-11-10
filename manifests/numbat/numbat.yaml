@@ -1,0 +1,21 @@
+api: v1
+name: numbat
+kind: app
+display: numbat
+description: A statically typed programming language for scientific computations with first class support for physical dimensions and units
+homepage: https://numbat.dev/
+license: Apache-2.0, MIT
+version: 1.24.0
+channels:
+    stable: 1.24.0
+provides:
+    - numbat
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sharkdp/numbat/releases/download/v1.24.0/numbat-v1.24.0-x86_64-pc-windows-msvc.zip
+      sha256: 450027111a5df0dd3ee4ce97a557c4847fc76b05851fccb9e26e875433084049
+      bin:
+        - numbat.exe
+      strip: 1
+test: numbat --version

@@ -1,0 +1,24 @@
+api: v1
+name: onlyoffice-desktopeditors
+kind: app
+display: onlyoffice-desktopeditors
+description: Office suite that combines text, spreadsheet and presentation editors allowing to create, view and edit documents.
+homepage: https://www.onlyoffice.com/apps.aspx
+license: AGPL-3.0-only
+version: 10.0.0
+channels:
+    stable: 10.0.0
+provides:
+    - onlyoffice-desktopeditors
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/DesktopEditors_x64.exe
+      sha256: e9f6df29bb09770cfc14c9ebb9bce881ff7ad9705d76b3faf038831fe248e46b
+      bin:
+        - DesktopEditors.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall onlyoffice-desktopeditors
+test: DesktopEditors --version

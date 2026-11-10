@@ -1,0 +1,24 @@
+api: v1
+name: yubikey-manager-cli
+kind: app
+display: yubikey-manager-cli
+description: Python library and command line tool for configuring any YubiKey over all USB interfaces.
+homepage: https://developers.yubico.com/yubikey-manager/
+license: BSD-2-Clause
+version: 5.9.2
+channels:
+    stable: 5.9.2
+provides:
+    - yubikey-manager-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Yubico/yubikey-manager/releases/download/5.9.2/yubikey-manager-5.9.2-win64.msi
+      sha256: 54e5830c56fafcdde80037de490a88de4fe3afc398fc2ad7ccbffcfc6b93be9f
+      bin:
+        - ykman.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yubikey-manager-cli
+test: ykman --version

@@ -1,0 +1,21 @@
+api: v1
+name: natural-docs
+kind: app
+display: natural-docs
+description: Readable source code documentation for 20 programming languages.
+homepage: https://www.naturaldocs.org/
+license: AGPL-3.0-only
+version: 2.3.1
+channels:
+    stable: 2.3.1
+provides:
+    - natural-docs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.naturaldocs.org/download/natural_docs/2.3.1/Natural_Docs_2.3.1.zip
+      sha256: 92144e2deb1ff2606d29343cfea203ea890549ad2f77c03df1cea2d8014972cb
+      bin:
+        - NaturalDocs.exe
+      strip: 1
+test: NaturalDocs --version

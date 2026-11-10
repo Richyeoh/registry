@@ -1,0 +1,21 @@
+api: v1
+name: lmstudio
+kind: app
+display: lmstudio
+description: Discover, download, and run local LLMs (llama.cpp, MLX). Chat UI and OpenAI-compatible local API server.
+homepage: https://lmstudio.ai
+license: Unknown
+version: 0.4.28-2
+channels:
+    stable: 0.4.28-2
+provides:
+    - lmstudio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://installers.lmstudio.ai/win32/x64/0.4.28-2/LM-Studio-0.4.28-2-x64.exe#/dl.7z
+      sha256: 442aa5cdb5b7d0a6693ba6d11e1663838afb2cdd8f5bfcc538cad23f00f0cf68
+      bin:
+        - resources\app\.webpack\lms.exe
+      strip: 1
+test: resources\app\.webpack\lms --version

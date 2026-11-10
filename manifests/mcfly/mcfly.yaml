@@ -1,0 +1,21 @@
+api: v1
+name: mcfly
+kind: app
+display: mcfly
+description: Fly through your shell history. Great Scott!
+homepage: https://github.com/cantino/mcfly
+license: MIT
+version: 0.9.4
+channels:
+    stable: 0.9.4
+provides:
+    - mcfly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cantino/mcfly/releases/download/v0.9.4/mcfly-v0.9.4-x86_64-pc-windows-msvc.zip
+      sha256: a390a094a8dfc324f4e474f8d8eb4eed956386170242adba3eadbe3a298f8193
+      bin:
+        - mcfly.exe
+      strip: 1
+test: mcfly --version

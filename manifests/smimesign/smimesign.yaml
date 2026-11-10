@@ -1,0 +1,21 @@
+api: v1
+name: smimesign
+kind: app
+display: smimesign
+description: An S/MIME signing utility compatible with Git that allows developers to sign their commits and tags using X.509 certificates
+homepage: https://github.com/github/smimesign
+license: MIT
+version: 0.2.0
+channels:
+    stable: 0.2.0
+provides:
+    - smimesign
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/github/smimesign/releases/download/v0.2.0/smimesign-windows-amd64-v0.2.0.zip
+      sha256: e6ccd16f61b5d3405836168acf782d4e52164bafae35004329bba41a94cd8329
+      bin:
+        - smimesign.exe
+      strip: 1
+test: smimesign --version

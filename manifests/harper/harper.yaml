@@ -1,0 +1,22 @@
+api: v1
+name: harper
+kind: app
+display: harper
+description: The Grammar Checker for Developers
+homepage: https://writewithharper.com
+license: Apache-2.0
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - harper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Automattic/harper/releases/download/v3.1.0/harper-ls-x86_64-pc-windows-msvc.zip
+      sha256: 0827f6940a1cc150335ea475307dfa0b7c1237a5e5dd24b1a506fab5839addf8
+      bin:
+        - harper-ls.exe
+        - harper-cli.exe
+      strip: 1
+test: harper-ls --version

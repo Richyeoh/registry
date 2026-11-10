@@ -1,0 +1,21 @@
+api: v1
+name: txikijs
+kind: app
+display: txikijs
+description: A tiny JavaScript runtime.
+homepage: https://txikijs.org
+license: MIT
+version: 26.11.0
+channels:
+    stable: 26.11.0
+provides:
+    - txikijs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/saghul/txiki.js/releases/download/v26.11.0/txiki-windows-x86_64.zip
+      sha256: 93879731c79039af97cece865442d300e1bcf2af0760b60aea70a2949ce7fbac
+      bin:
+        - tjs.exe
+      strip: 1
+test: tjs --version

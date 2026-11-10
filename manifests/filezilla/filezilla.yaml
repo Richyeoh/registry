@@ -1,0 +1,21 @@
+api: v1
+name: filezilla
+kind: app
+display: filezilla
+description: Fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
+homepage: https://filezilla-project.org
+license: GPL-2.0-or-later
+version: 3.71.1
+channels:
+    stable: 3.71.1
+provides:
+    - filezilla
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/filezilla.3.71.1.nupkg
+      sha256: 0d64593f19db06ca1ef3c19cfc7eb76e578948f6d5a4e08f2b71112e45e7f053
+      bin:
+        - filezilla.exe
+      strip: 1
+test: filezilla --version

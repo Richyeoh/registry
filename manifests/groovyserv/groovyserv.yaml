@@ -1,0 +1,22 @@
+api: v1
+name: groovyserv
+kind: app
+display: groovyserv
+description: Reduces startup time of the JVM for running Groovy significantly.
+homepage: https://kobo.github.io/groovyserv/
+license: Apache-2.0
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - groovyserv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bitbucket.org/kobo/groovyserv-mirror/downloads/groovyserv-1.2.0-bin.zip
+      sha256: 88a93e07ce18b7ea33f98dd75ce21550b3a25820dd6eb00ab790f16573317e93
+      bin:
+        - bin\groovyclient.exe
+        - bin\groovyserver.exe
+      strip: 1
+test: bin\groovyclient --version

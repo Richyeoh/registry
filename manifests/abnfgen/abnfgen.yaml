@@ -1,0 +1,46 @@
+api: v1
+name: abnfgen
+kind: app
+display: abnfgen
+description: Quickly generate random documents that match an ABFN grammar
+homepage: https://www.quut.com/abnfgen/
+license: LicenseRef-Homebrew-cannot-represent
+keywords:
+    - brew
+    - homebrew
+version: "0.21"
+channels:
+    stable: "0.21"
+provides:
+    - abnfgen
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abnfgen/blobs/sha256:aabd22f0c8be1bfdb787b8ca17c303350ac9d726df2cb6ee2b760972c8fa6b1d
+      sha256: aabd22f0c8be1bfdb787b8ca17c303350ac9d726df2cb6ee2b760972c8fa6b1d
+      bin:
+        - abnfgen
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abnfgen/blobs/sha256:dbb853413b291a12a931c32fe4698d1e97f263c70ea9635875afcdf2bf3a63d8
+      sha256: dbb853413b291a12a931c32fe4698d1e97f263c70ea9635875afcdf2bf3a63d8
+      bin:
+        - abnfgen
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abnfgen/blobs/sha256:76f35d17e3a1bad80de9ef0c2fb654882619b43a70f00cc23293b7d63c3fc513
+      sha256: 76f35d17e3a1bad80de9ef0c2fb654882619b43a70f00cc23293b7d63c3fc513
+      bin:
+        - abnfgen
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abnfgen/blobs/sha256:3d3524e2008a5cb3a6c5248cdddc948d023a0e1781246862c0035d7a3cbf6bbe
+      sha256: 3d3524e2008a5cb3a6c5248cdddc948d023a0e1781246862c0035d7a3cbf6bbe
+      bin:
+        - abnfgen
+      strip: 1
+test: abnfgen --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

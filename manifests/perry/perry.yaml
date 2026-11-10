@@ -1,0 +1,21 @@
+api: v1
+name: perry
+kind: app
+display: perry
+description: Native TypeScript compiler — compiles .ts directly to native executables via LLVM.
+homepage: https://www.perryts.com
+license: MIT
+version: 0.5.1665
+channels:
+    stable: 0.5.1665
+provides:
+    - perry
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PerryTS/perry/releases/download/v0.5.1665/perry-windows-x86_64.zip
+      sha256: 0677ab51c2851ccfb47afcb2b41b0dcdd24e5af0387b44748820931829481298
+      bin:
+        - perry.exe
+      strip: 1
+test: perry --version

@@ -1,0 +1,25 @@
+api: v1
+name: aicommit2
+kind: app
+display: aicommit2
+description: Reactive CLI that generates commit messages for Git and Jujutsu with AI
+homepage: https://github.com/tak-bro/aicommit2
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 2.16.0
+channels:
+    stable: 2.16.0
+provides:
+    - aicommit2
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aicommit2/blobs/sha256:92218f46e1b77f600c486a96cbaa368ea9617a6cf41e40b9fa24ed8f78c5ac69
+      sha256: 92218f46e1b77f600c486a96cbaa368ea9617a6cf41e40b9fa24ed8f78c5ac69
+      bin:
+        - aicommit2
+      strip: 1
+test: aicommit2 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

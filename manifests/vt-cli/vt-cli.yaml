@@ -1,0 +1,21 @@
+api: v1
+name: vt-cli
+kind: app
+display: vt-cli
+description: Tool for interacting with VirusTotal
+homepage: https://virustotal.github.io/vt-cli/
+license: Apache-2.0
+version: 1.3.1
+channels:
+    stable: 1.3.1
+provides:
+    - vt-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/VirusTotal/vt-cli/releases/download/1.3.1/Windows64.zip
+      sha256: 0b355668acbd181b2b8d9a04bcf70853616fb7a96f41491243b8daaa077da947
+      bin:
+        - vt.exe
+      strip: 1
+test: vt --version

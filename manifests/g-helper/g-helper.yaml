@@ -1,0 +1,21 @@
+api: v1
+name: g-helper
+kind: app
+display: g-helper
+description: Lightweight control tool for Asus laptops
+homepage: https://g-helper.com
+license: MIT
+version: "0.291"
+channels:
+    stable: "0.291"
+provides:
+    - g-helper
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/seerge/g-helper/releases/download/v0.291/GHelper.zip
+      sha256: 64492aeb6a02d25d4c64f19b8ef28d13aa4ffad65e28e33e703ada568a6f41ef
+      bin:
+        - GHelper.exe
+      strip: 1
+test: GHelper --version

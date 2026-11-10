@@ -1,0 +1,21 @@
+api: v1
+name: cyme
+kind: app
+display: cyme
+description: A modern cross-platform `lsusb` tool that lists system USB buses and devices.
+homepage: https://github.com/tuna-f1sh/cyme
+license: GPL-3.0-only
+version: 3.0.2
+channels:
+    stable: 3.0.2
+provides:
+    - cyme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tuna-f1sh/cyme/releases/download/v3.0.2/cyme-v3.0.2-x86_64-pc-windows-gnu.zip
+      sha256: e40d3d77bec7c42378ece627be832ce0d2fd6b1a571cbab5317a3fa76c5e7944
+      bin:
+        - cyme.exe
+      strip: 1
+test: cyme --version

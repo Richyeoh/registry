@@ -1,0 +1,28 @@
+api: v1
+name: gimp
+kind: app
+display: gimp
+description: GNU Image Manipulation Program
+homepage: https://www.gimp.org
+license: GPL-3.0-only
+version: 3.2.8
+channels:
+    stable: 3.2.8
+provides:
+    - gimp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.8-setup.exe
+      sha256: 1d78874295661d791eaf149982e9b3564888631ea29186da5ff99e8114020a5b
+      bin:
+        - bin\gimp-console-3.2.exe
+        - bin\gimp-console-3.2.exe
+        - bin\gimp-console-3.2.exe
+        - bin\gimptool-3.2.exe
+        - bin\gimptool-3.2.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gimp
+test: bin\gimp-console-3.2 --version

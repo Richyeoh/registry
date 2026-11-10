@@ -1,0 +1,24 @@
+api: v1
+name: ffsend
+kind: app
+display: ffsend
+description: Easily and securely share files from the command line. A fully featured Firefox Send client.
+homepage: https://github.com/timvisee/ffsend
+license: GPL-3.0-only
+version: 0.2.76
+channels:
+    stable: 0.2.76
+provides:
+    - ffsend
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/timvisee/ffsend/releases/download/v0.2.76/ffsend-v0.2.76-windows-x64-static.exe#/ffsend.exe
+      sha256: 09d923348d083c130e8e26f990ba4c90022a2b26e6a9f0c55ac78420f84089f8
+      bin:
+        - ffsend.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ffsend
+test: ffsend --version

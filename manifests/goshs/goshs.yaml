@@ -1,0 +1,21 @@
+api: v1
+name: goshs
+kind: app
+display: goshs
+description: A single-binary file server built for pentesters and CTF players. HTTP/S, WebDAV, SFTP, SMB, LDAP/S, NTLM hash capture, DNS/SMTP callbacks.
+homepage: https://goshs.de
+license: Unknown
+version: 2.1.7
+channels:
+    stable: 2.1.7
+provides:
+    - goshs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/goshs-labs/goshs/releases/download/v2.1.7/goshs_v2.1.7_windows_x86_64.zip
+      sha256: 9f6a2ee1ce481af10031b518a194f46e4bc38bca295096fe6807be6b2159ae62
+      bin:
+        - goshs.exe
+      strip: 1
+test: goshs --version

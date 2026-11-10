@@ -1,0 +1,21 @@
+api: v1
+name: liquidsoap
+kind: app
+display: liquidsoap
+description: Icecast-compatible streamer for streaming audio and video
+homepage: https://www.liquidsoap.info
+license: GPL-2.0-or-later
+version: 2.4.6
+channels:
+    stable: 2.4.6
+provides:
+    - liquidsoap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/savonet/liquidsoap/releases/download/v2.4.6/liquidsoap-2.4.6-win64.zip
+      sha256: 99e690d6c4df48c8b8a5c18eba36aa11a37e3de2bb79da6ae91de59171cb2973
+      bin:
+        - liquidsoap.exe
+      strip: 1
+test: liquidsoap --version

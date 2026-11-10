@@ -1,0 +1,21 @@
+api: v1
+name: everything-beta
+kind: app
+display: everything-beta
+description: Locate files and folders by name instantly (beta version).
+homepage: https://www.voidtools.com
+license: MIT
+version: 1.5.0.1424b
+channels:
+    stable: 1.5.0.1424b
+provides:
+    - everything-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.voidtools.com/Everything-1.5.0.1424b.x64.zip
+      sha256: f8e5d907305fc1aff288ad4d722548f36a1ef8c3389933b1fbc935dba7083084
+      bin:
+        - Everything.exe
+      strip: 1
+test: Everything --version

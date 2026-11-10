@@ -1,0 +1,21 @@
+api: v1
+name: noir
+kind: app
+display: noir
+description: Desktop Android leak auditor that maps app permissions and APK endpoints to data flows and generates rollback-safe remediations over adb.
+homepage: https://verlintas.dev/noir/
+license: MIT
+version: 0.4.2
+channels:
+    stable: 0.4.2
+provides:
+    - noir
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Verlintas/NOIR/releases/download/v0.4.2/noir-v0.4.2-Windows-portable.zip
+      sha256: e79a0cb2b859b838a328a05c88e106b375056dc2c8ed70a122d6b68a878c13c7
+      bin:
+        - Start NOIR.bat.exe
+      strip: 1
+test: Start NOIR.bat.exe --version

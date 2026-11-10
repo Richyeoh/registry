@@ -1,0 +1,24 @@
+api: v1
+name: opennetmeter
+kind: app
+display: opennetmeter
+description: A simple program to monitor your network/data usage.
+homepage: https://github.com/Ashfaaq18/OpenNetMeter
+license: Apache-2.0
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - opennetmeter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Ashfaaq18/OpenNetMeter/releases/download/v0.15.0/OpenNetMeter-0.15.0.msi
+      sha256: fb4fe6ae18dbe50534599f6541619d87d3973ffe7df656365d9d8d2f29a2ed7f
+      bin:
+        - opennetmeter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall opennetmeter
+test: opennetmeter --version

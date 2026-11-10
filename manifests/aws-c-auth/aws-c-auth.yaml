@@ -1,0 +1,39 @@
+api: v1
+name: aws-c-auth
+kind: app
+display: aws-c-auth
+description: C99 library implementation of AWS client-side authentication
+homepage: https://github.com/awslabs/aws-c-auth
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.0.3
+channels:
+    stable: 1.0.3
+provides:
+    - aws-c-auth
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-auth/blobs/sha256:85b0afa9e796e8a6b76a09b900392aeac7af5ef0db9222d91a5b0782c2f08f8e
+      sha256: 85b0afa9e796e8a6b76a09b900392aeac7af5ef0db9222d91a5b0782c2f08f8e
+      bin:
+        - aws-c-auth
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-auth/blobs/sha256:d8f716b6894965ad225585d6dbee2d2be24c34d2258b00e80161ba09c5e43996
+      sha256: d8f716b6894965ad225585d6dbee2d2be24c34d2258b00e80161ba09c5e43996
+      bin:
+        - aws-c-auth
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-auth/blobs/sha256:134f3fa540c66b82e374e7e7122072349733178aaae065ba61b1795cfe70158a
+      sha256: 134f3fa540c66b82e374e7e7122072349733178aaae065ba61b1795cfe70158a
+      bin:
+        - aws-c-auth
+      strip: 1
+test: aws-c-auth --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

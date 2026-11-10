@@ -1,0 +1,24 @@
+api: v1
+name: pritunl-client
+kind: app
+display: pritunl-client
+description: OpenVPN Client
+homepage: https://client.pritunl.com
+license: Unknown
+version: 1.4.4791.77
+channels:
+    stable: 1.4.4791.77
+provides:
+    - pritunl-client
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pritunl/pritunl-client-electron/releases/download/1.4.4791.77/Pritunl.exe#/dl.exe
+      sha256: 3ead176518ae7627921c902305770066afe07bac16c6e637647f70785696edc7
+      bin:
+        - pritunl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pritunl-client
+test: pritunl --version

@@ -1,0 +1,21 @@
+api: v1
+name: recuva
+kind: app
+display: recuva
+description: Recover your deleted files quickly and easily.
+homepage: https://www.ccleaner.com/recuva
+license: Freeware
+version: 1.55.133
+channels:
+    stable: 1.55.133
+provides:
+    - recuva
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.ccleaner.com/rcsetup155.exe#/dl.7z
+      sha256: 6440c5e69e01da6ec4345a7264145d65221a139a46c13e26a21ad18b04663244
+      bin:
+        - recuva64.exe
+      strip: 1
+test: recuva64 --version

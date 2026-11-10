@@ -1,0 +1,21 @@
+api: v1
+name: fluentcleaner
+kind: app
+display: fluentcleaner
+description: Transparent, community-powered CCleaner alternative for Windows, featuring terminal control and multi-database support.
+homepage: https://github.com/builtbybel/FluentCleaner
+license: MIT
+version: 26.09.01
+channels:
+    stable: 26.09.01
+provides:
+    - fluentcleaner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/builtbybel/FluentCleaner/releases/download/26.09.01/FluentCleaner-win-x64.zip
+      sha256: 570d73ee702e888ecc3db2af583dd24428cd6f59a26edf1a1c0dbdc2552613b3
+      bin:
+        - FCleaner.exe
+      strip: 1
+test: FCleaner --version

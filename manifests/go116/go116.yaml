@@ -1,0 +1,22 @@
+api: v1
+name: go116
+kind: app
+display: go116
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.16.15
+channels:
+    stable: 1.16.15
+provides:
+    - go116
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.16.15.windows-amd64.zip
+      sha256: 0d6e551206b6d744d1286e62abf46aa2f17fed90f07ec4624a0448d71380407d
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

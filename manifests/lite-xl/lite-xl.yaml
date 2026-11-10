@@ -1,0 +1,21 @@
+api: v1
+name: lite-xl
+kind: app
+display: lite-xl
+description: A lightweight text editor written in Lua, adapted from lite.
+homepage: https://lite-xl.github.io
+license: MIT
+version: 2.1.8
+channels:
+    stable: 2.1.8
+provides:
+    - lite-xl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lite-xl/lite-xl/releases/download/v2.1.8/lite-xl-v2.1.8-windows-x86_64.zip
+      sha256: de4983f8f537e3876d0c326423537914b576b6970e35b9c9cc62eafe72719ec2
+      bin:
+        - lite-xl.exe
+      strip: 1
+test: lite-xl --version

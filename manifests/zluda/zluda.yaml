@@ -1,0 +1,23 @@
+api: v1
+name: zluda
+kind: app
+display: zluda
+description: A drop-in replacement for CUDA on non-NVIDIA GPUs.
+homepage: https://vosen.github.io/ZLUDA/
+license: Apache-2.0|MIT
+version: "6"
+channels:
+    stable: "6"
+provides:
+    - zluda
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vosen/ZLUDA/releases/download/v6/zluda-windows-3fe1206.zip
+      sha256: fda8891c6fdfaba438f2eb0f9d749ffa2c1fddbdf225be2301f0d7a25e37208a
+      bin:
+        - zluda.exe
+        - zluda_precompile.exe
+        - ptxas.exe
+      strip: 1
+test: zluda --version

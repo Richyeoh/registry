@@ -1,0 +1,21 @@
+api: v1
+name: fsresizer
+kind: app
+display: fsresizer
+description: An image converter and renaming tool
+homepage: https://www.faststone.org/FSResizerDetail.htm
+license: Unknown
+version: "4.5"
+channels:
+    stable: "4.5"
+provides:
+    - fsresizer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.faststonesoft.net/DN/FSResizer45.zip
+      sha256: bc6de20d6424f7bd27c7e3d69861dacc24ecdc23effff982bcda262e66f2a9f7
+      bin:
+        - FSResizer.exe
+      strip: 1
+test: FSResizer --version

@@ -1,0 +1,46 @@
+api: v1
+name: base91
+kind: app
+display: base91
+description: Utility to encode and decode base91 files
+homepage: https://base91.sourceforge.net/
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - base91
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/base91/blobs/sha256:5631c841168b7506040aa82be29ac05c5a91714107e99cfa2d7f3b59fd1958cb
+      sha256: 5631c841168b7506040aa82be29ac05c5a91714107e99cfa2d7f3b59fd1958cb
+      bin:
+        - base91
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/base91/blobs/sha256:3c288d4a7310b87b44e080c9b10ae3f541945cc7ba1e990edd1006df84c6ad9e
+      sha256: 3c288d4a7310b87b44e080c9b10ae3f541945cc7ba1e990edd1006df84c6ad9e
+      bin:
+        - base91
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/base91/blobs/sha256:c611713705345338da5415ea274901781c883f71e870384f92866fb7275083b3
+      sha256: c611713705345338da5415ea274901781c883f71e870384f92866fb7275083b3
+      bin:
+        - base91
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/base91/blobs/sha256:570aa4d67d764052049d02bb6f3843b306378950a45ac01145b0e11e183bebc0
+      sha256: 570aa4d67d764052049d02bb6f3843b306378950a45ac01145b0e11e183bebc0
+      bin:
+        - base91
+      strip: 1
+test: base91 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

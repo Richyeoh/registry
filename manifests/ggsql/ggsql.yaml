@@ -1,0 +1,25 @@
+api: v1
+name: ggsql
+kind: app
+display: ggsql
+description: A SQL extension for declarative data visualization based on the Grammar of Graphics.
+homepage: https://ggsql.org
+license: MIT
+version: 0.5.2
+channels:
+    stable: 0.5.2
+provides:
+    - ggsql
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/posit-dev/ggsql/releases/download/v0.5.2/ggsql_0.5.2_x64_en-US.msi
+      sha256: 04e54d1722f7ab88c41e74698617e0a673fefb3bc3cb6768d3bd79401506d083
+      bin:
+        - ggsql.exe
+        - ggsql-jupyter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ggsql
+test: ggsql --version

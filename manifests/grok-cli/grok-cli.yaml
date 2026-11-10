@@ -1,0 +1,24 @@
+api: v1
+name: grok-cli
+kind: app
+display: grok-cli
+description: An extensible coding agent that can be used interactively, in scripts, or through the Agent Client Protocol
+homepage: https://x.ai/cli
+license: Unknown
+version: 1.0.77
+channels:
+    stable: 1.0.77
+provides:
+    - grok-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://x.ai/cli/grok-1.0.77-windows-x86_64.exe#/grok.exe
+      sha256: 6b757512d240a6439535ca75aad039e581d00f17ba8e937112fd0dbaadf1bc81
+      bin:
+        - grok.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall grok-cli
+test: grok --version

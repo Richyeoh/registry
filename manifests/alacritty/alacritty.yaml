@@ -1,0 +1,50 @@
+api: v1
+name: alacritty
+kind: app
+display: alacritty
+description: GPU-accelerated terminal emulator
+homepage: https://github.com/alacritty/alacritty
+license: Apache-2.0
+keywords:
+    - arch
+    - pacman
+    - extra
+    - brew
+    - cask
+version: 0.17.0
+channels:
+    stable: 0.17.0
+provides:
+    - alacritty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/alacritty/alacritty/releases/download/v0.17.0/Alacritty-v0.17.0-portable.exe#/alacritty.exe
+      sha256: 5ad70ddc5c2a2bfe84084a2c4c73558e9360914f035a902d7a69277be7249f1f
+      bin:
+        - alacritty.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://github.com/alacritty/alacritty/releases/download/v0.17.0/Alacritty-v0.17.0.dmg
+      sha256: ad8d7de35fb38e43184776cac6dfee05ca325caa0b6639a06a55e54e4b026620
+      bin:
+        - alacritty
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/alacritty/alacritty/releases/download/v0.17.0/Alacritty-v0.17.0.dmg
+      sha256: ad8d7de35fb38e43184776cac6dfee05ca325caa0b6639a06a55e54e4b026620
+      bin:
+        - alacritty
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/alacritty/download/
+      sha256: b3ddf24281e26e2d62826ed1369d6e3e51c14d88e01199225912656bdeec97c1
+      bin:
+        - alacritty
+installer:
+    silent: /S
+    uninstall: scoop uninstall alacritty
+test: alacritty --version

@@ -1,0 +1,24 @@
+api: v1
+name: jhead
+kind: app
+display: jhead
+description: JPEG Exif header manipulation tool
+homepage: https://www.sentex.net/~mwandel/jhead/
+license: Public Domain
+version: "3.04"
+channels:
+    stable: "3.04"
+provides:
+    - jhead
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://web.archive.org/web/20251206011100id_/https://www.sentex.net/~mwandel/jhead/jhead.exe
+      sha256: 47d819ae4785dd89d8f6739a3de0f20448e148a12394c83c9abf78c07d279850
+      bin:
+        - jhead.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jhead
+test: jhead --version

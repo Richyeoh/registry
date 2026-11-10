@@ -1,0 +1,21 @@
+api: v1
+name: sdl2-image
+kind: app
+display: sdl2-image
+description: SDL_image is an image loading library that is used with the SDL library, and almost as portable. It allows a programmer to use multiple image formats without having to code all the loading and conversion algorithms themselves.
+homepage: https://github.com/libsdl-org/SDL_image
+license: Zlib
+version: 2.8.12
+channels:
+    stable: 2.8.12
+provides:
+    - sdl2-image
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.12/SDL2_image-devel-2.8.12-VC.zip
+      sha256: 9e14b4166d6c905db18dbe5bbe2288bca17874a0944c70b457cd31b31f0ecf8f
+      bin:
+        - sdl2-image.exe
+      strip: 1
+test: sdl2-image --version

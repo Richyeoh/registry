@@ -1,0 +1,21 @@
+api: v1
+name: jenkins
+kind: app
+display: jenkins
+description: An automation server which enables developers around the world to reliably build, test, and deploy their software.
+homepage: https://www.jenkins.io
+license: MIT
+version: "2.590"
+channels:
+    stable: "2.590"
+provides:
+    - jenkins
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://get.jenkins.io/war/2.590/jenkins.war#/jenkins.jar
+      sha256: 15c08f52cb270de1aa6d0b89fc3021eee22737b4f9ffbde8a217a099938d1884
+      bin:
+        - jenkins.jar.exe
+      strip: 1
+test: jenkins.jar --version

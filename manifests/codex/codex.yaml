@@ -1,0 +1,21 @@
+api: v1
+name: codex
+kind: app
+display: codex
+description: OpenAI's Codex AI coding assistant
+homepage: https://github.com/openai/codex
+license: Apache-2.0
+version: 0.167.0
+channels:
+    stable: 0.167.0
+provides:
+    - codex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-pc-windows-msvc.tar.gz
+      sha256: 60567ca940bbaf6c10501805d9909d1328179231e2d47a0deec7a1368bb21641
+      bin:
+        - bin\codex.exe
+      strip: 1
+test: bin\codex --version

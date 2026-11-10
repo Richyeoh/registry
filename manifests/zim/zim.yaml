@@ -1,0 +1,21 @@
+api: v1
+name: zim
+kind: app
+display: zim
+description: Zim is a graphical text editor used to maintain a collection of wiki pages.
+homepage: https://zim-wiki.org/
+license: GPL-2.0-only
+version: 0.77.2
+channels:
+    stable: 0.77.2
+provides:
+    - zim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://zim-wiki.org/downloads/zim-desktop-wiki-0.77.2-setup-w64_x86.exe#/dl.7z
+      sha256: 4bd117d4b913eb2adfa8661e3c1593a21186f5633629c2326f5275f487e51e4b
+      bin:
+        - zim.exe
+      strip: 1
+test: zim --version

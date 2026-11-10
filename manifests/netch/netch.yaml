@@ -1,0 +1,21 @@
+api: v1
+name: netch
+kind: app
+display: netch
+description: Game accelerator
+homepage: https://github.com/NetchX/Netch
+license: MIT
+version: 1.9.7
+channels:
+    stable: 1.9.7
+provides:
+    - netch
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/NetchX/Netch/releases/download/1.9.7/Netch.7z
+      sha256: 692aa6ddd20ed98cf9dd1c51c0495206c8ea3aeef9e9f50fb1de94eca28be5a8
+      bin:
+        - Netch.exe
+      strip: 1
+test: Netch --version

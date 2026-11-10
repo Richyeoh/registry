@@ -1,0 +1,24 @@
+api: v1
+name: glazewm
+kind: app
+display: glazewm
+description: A tiling window manager for Windows inspired by i3 and Polybar.
+homepage: https://github.com/glzr-io/glazewm
+license: GPL-3.0-only
+version: 3.10.1
+channels:
+    stable: 3.10.1
+provides:
+    - glazewm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/glzr-io/glazewm/releases/download/v3.10.1/standalone-glazewm-v3.10.1-x64.msi
+      sha256: ad4122dd4420690e502e7df3ce8d1e4772bf1246cc815db0dd2aaac0e4dc583f
+      bin:
+        - cli\GlazeWM.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall glazewm
+test: cli\GlazeWM --version

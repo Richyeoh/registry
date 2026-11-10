@@ -1,0 +1,21 @@
+api: v1
+name: g-assist
+kind: app
+display: g-assist
+description: Unofficial desktop client for Google Assistant
+homepage: https://github.com/Melvin-Abraham/Google-Assistant-Unofficial-Desktop-Client
+license: Apache-2.0
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - g-assist
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Melvin-Abraham/Google-Assistant-Unofficial-Desktop-Client/releases/download/v1.1.0/Google-Assistant-Setup-1.1.0.exe#/dl.7z
+      sha256: 69ae20f1f2c5861e2fef0ebea27761c3abc2906f86402c28ed6bda927262e6c3
+      bin:
+        - g-assist.exe
+      strip: 1
+test: g-assist --version

@@ -1,0 +1,21 @@
+api: v1
+name: quickviewer
+kind: app
+display: quickviewer
+description: An image/comic viewer
+homepage: https://kanryu.github.io/quickviewer/
+license: GPL-3.0-only
+version: 1.2.8
+channels:
+    stable: 1.2.8
+provides:
+    - quickviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kanryu/quickviewer/releases/download/v1.2.8/QuickViewer-portable-1.2.8-x64.zip
+      sha256: 3a908865359c0ea2a83352e664bc4f461f8aca4e9e9fd40b422b1839d139587b
+      bin:
+        - QuickViewer.exe
+      strip: 1
+test: QuickViewer --version

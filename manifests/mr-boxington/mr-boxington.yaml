@@ -1,0 +1,21 @@
+api: v1
+name: mr-boxington
+kind: app
+display: mr-boxington
+description: A shared cache for Cargo builds that reuses compiler work across projects, worktrees, and CI.
+homepage: https://mr-boxington.jdx.dev
+license: MIT
+version: 1.30.0
+channels:
+    stable: 1.30.0
+provides:
+    - mr-boxington
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jdx/mr-boxington/releases/download/v1.30.0/mbx-x86_64-pc-windows-msvc.zip
+      sha256: 2d709445957ea5dae95d51379aa9e7e575cfedb12c0d5731de4761a6972626f5
+      bin:
+        - mbx.exe
+      strip: 1
+test: mbx --version

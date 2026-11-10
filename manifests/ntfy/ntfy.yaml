@@ -1,0 +1,21 @@
+api: v1
+name: ntfy
+kind: app
+display: ntfy
+description: Send push notifications to your phone or desktop via PUT/POST
+homepage: https://ntfy.sh
+license: Apache-2.0
+version: 2.37.2
+channels:
+    stable: 2.37.2
+provides:
+    - ntfy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/binwiederhier/ntfy/releases/download/v2.37.2/ntfy_2.37.2_windows_amd64.zip
+      sha256: 72a1ad4f8976ee9986a77670d68e3d58a5b9a6b9fbbcaf43fc6dd24255b2d44c
+      bin:
+        - ntfy.exe
+      strip: 1
+test: ntfy --version

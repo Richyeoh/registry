@@ -1,0 +1,21 @@
+api: v1
+name: drawpen
+kind: app
+display: drawpen
+description: A simple screen annotation.
+homepage: https://github.com/DmytroVasin/DrawPen
+license: MIT
+version: 0.0.61
+channels:
+    stable: 0.0.61
+provides:
+    - drawpen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DmytroVasin/DrawPen/releases/download/v0.0.61/DrawPen-win32-x64-0.0.61.zip
+      sha256: b6500fb4dea826e370093299d41083f5a85833cead198dde3763f06458f117c0
+      bin:
+        - drawpen.exe
+      strip: 1
+test: drawpen --version

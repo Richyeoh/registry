@@ -1,0 +1,21 @@
+api: v1
+name: zlocation
+kind: app
+display: zlocation
+description: ZLocation is the new Jump-Location
+homepage: https://github.com/vors/ZLocation
+license: MIT
+version: 1.4.3
+channels:
+    stable: 1.4.3
+provides:
+    - zlocation
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/zlocation.1.4.3.nupkg
+      sha256: 027f219447d0f02b364700c4a284a946389a946850eacf47efff5c300854aa46
+      bin:
+        - zlocation.exe
+      strip: 1
+test: zlocation --version

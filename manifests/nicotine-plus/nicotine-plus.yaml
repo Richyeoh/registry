@@ -1,0 +1,21 @@
+api: v1
+name: nicotine-plus
+kind: app
+display: nicotine-plus
+description: Graphical client for the Soulseek file sharing network
+homepage: https://nicotine-plus.org
+license: GPL-3.0-or-later
+version: 3.3.11
+channels:
+    stable: 3.3.11
+provides:
+    - nicotine-plus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nicotine-plus/nicotine-plus/releases/download/3.3.11/windows-x86_64-package.zip
+      sha256: 4924f9f60c6b1a60e9fe62f5e94a4289058c6826cc7ee33f26ca43dea8ca8608
+      bin:
+        - nicotine-plus.exe
+      strip: 1
+test: nicotine-plus --version

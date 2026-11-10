@@ -1,0 +1,21 @@
+api: v1
+name: updatecli
+kind: app
+display: updatecli
+description: A tool used to apply file update strategies. Designed to be used from everywhere, each application 'run' detects if a value needs to be updated using a custom strategy then apply changes according to the strategy.
+homepage: https://www.updatecli.io/
+license: Apache-2.0
+version: 0.123.0
+channels:
+    stable: 0.123.0
+provides:
+    - updatecli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/updatecli/updatecli/releases/download/v0.123.0/updatecli_Windows_x86_64.zip
+      sha256: a4b4978da6487a21a64c5a2607b6c650d5cceeaa950723ff83b6c5d7264c08e7
+      bin:
+        - updatecli.exe
+      strip: 1
+test: updatecli --version

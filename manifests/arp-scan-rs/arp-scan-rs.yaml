@@ -1,0 +1,46 @@
+api: v1
+name: arp-scan-rs
+kind: app
+display: arp-scan-rs
+description: ARP scan tool written in Rust for fast local network scans
+homepage: https://github.com/kongbytes/arp-scan-rs
+license: AGPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 0.15.1
+channels:
+    stable: 0.15.1
+provides:
+    - arp-scan-rs
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arp-scan-rs/blobs/sha256:564410dd322d19205f29167bb1681dd7b9efe81f1bd8ab5d5bb38e537c6a312b
+      sha256: 564410dd322d19205f29167bb1681dd7b9efe81f1bd8ab5d5bb38e537c6a312b
+      bin:
+        - arp-scan-rs
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arp-scan-rs/blobs/sha256:9844bb9f7c626b59e0e9ee4fc02a030fd8a10941193e110ee37c21f40d4afb31
+      sha256: 9844bb9f7c626b59e0e9ee4fc02a030fd8a10941193e110ee37c21f40d4afb31
+      bin:
+        - arp-scan-rs
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arp-scan-rs/blobs/sha256:6750fe3231d3d634a0b9a3d0384479fdb3f658d869443689aa67ad8b6380a1d5
+      sha256: 6750fe3231d3d634a0b9a3d0384479fdb3f658d869443689aa67ad8b6380a1d5
+      bin:
+        - arp-scan-rs
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arp-scan-rs/blobs/sha256:3a28a6dea691d50c0e4084c5f4fd9842a814bede065bc9174a41cebd08871c40
+      sha256: 3a28a6dea691d50c0e4084c5f4fd9842a814bede065bc9174a41cebd08871c40
+      bin:
+        - arp-scan-rs
+      strip: 1
+test: arp-scan-rs --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: installerclean
+kind: app
+display: installerclean
+description: Open source tool to safely clean orphaned Windows Installer files and reclaim disk space.
+homepage: https://github.com/no-faff/InstallerClean
+license: Apache-2.0
+version: 3.7.0
+channels:
+    stable: 3.7.0
+provides:
+    - installerclean
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/no-faff/InstallerClean/releases/download/v3.7.0/InstallerClean-portable.exe
+      sha256: fb4b42288d59154064ad0c47f8eb93ebd11a90d8352ca999f7f76dcf9f0eaf9c
+      bin:
+        - installerclean.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall installerclean
+test: installerclean --version

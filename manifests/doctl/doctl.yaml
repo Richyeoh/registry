@@ -1,0 +1,21 @@
+api: v1
+name: doctl
+kind: app
+display: doctl
+description: A command line tool for DigitalOcean services
+homepage: https://docs.digitalocean.com/reference/doctl/
+license: Apache-2.0
+version: 2.4.0
+channels:
+    stable: 2.4.0
+provides:
+    - doctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/digitalocean/doctl/releases/download/v2.4.0/doctl-2.4.0-windows-amd64.zip
+      sha256: dd74ea04c8d40e593f5298bff00d4c90bbdeaca5f9476b9894750a5c06cd5fbe
+      bin:
+        - doctl.exe
+      strip: 1
+test: doctl --version

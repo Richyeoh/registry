@@ -1,0 +1,21 @@
+api: v1
+name: deskreen
+kind: app
+display: deskreen
+description: Turn any device into a secondary screen for your computer (Community edition).
+homepage: https://deskreen.com/
+license: Unknown
+version: 3.2.16
+channels:
+    stable: 3.2.16
+provides:
+    - deskreen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pavlobu/deskreen/releases/download/v3.2.16/deskreen-ce-3.2.16-x64.exe#/dl.7z
+      sha256: de6052a0d5dc893e0d16da6a8da82aacae5803602a3efdde50037b536e3213f8
+      bin:
+        - deskreen.exe
+      strip: 1
+test: deskreen --version

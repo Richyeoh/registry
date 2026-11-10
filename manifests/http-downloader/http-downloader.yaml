@@ -1,0 +1,21 @@
+api: v1
+name: http-downloader
+kind: app
+display: http-downloader
+description: A download manager for the HTTP(S) and FTP(S) protocols.
+homepage: https://erickutcher.github.io/#HTTP_Downloader
+license: GPL-3.0-or-later
+version: 1.0.6.9
+channels:
+    stable: 1.0.6.9
+provides:
+    - http-downloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/erickutcher/httpdownloader/releases/download/v1.0.6.9/HTTP_Downloader_64.zip
+      sha256: a80e8a712d01f150e995c750ed1fcafe7e6e9c06f2866f2e338df2c0cc6be616
+      bin:
+        - HTTP_Downloader.exe
+      strip: 1
+test: HTTP_Downloader --version

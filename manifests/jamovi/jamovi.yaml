@@ -1,0 +1,21 @@
+api: v1
+name: jamovi
+kind: app
+display: jamovi
+description: Statistical spreadsheet
+homepage: https://www.jamovi.org
+license: AGPL-3.0-only
+version: 2.7.41.0
+channels:
+    stable: 2.7.41.0
+provides:
+    - jamovi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.jamovi.org/downloads/jamovi-2.7.41.0-win-x64.zip
+      sha256: 6d052f1aa5330db5b1ab7378ac99ce4cb40930b5210a1574a4dc3b735bfb2df7
+      bin:
+        - jamovi.exe
+      strip: 1
+test: jamovi --version

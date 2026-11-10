@@ -1,0 +1,21 @@
+api: v1
+name: goland-rc
+kind: app
+display: goland-rc
+description: Cross-Platform IDE for Go by JetBrains. (Release Candidate)
+homepage: https://www.jetbrains.com/goland/
+license: Unknown
+version: 2026.3-263.7307.110
+channels:
+    stable: 2026.3-263.7307.110
+provides:
+    - goland-rc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/go/goland-263.7307.110.exe#/dl.7z
+      sha256: d151c136d4c7a64a78213321b8908ac0e17d0fc51fcd14b3f61e60022bf4084d
+      bin:
+        - IDE\bin\goland64.exe
+      strip: 1
+test: IDE\bin\goland64 --version

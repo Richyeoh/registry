@@ -1,0 +1,21 @@
+api: v1
+name: nova
+kind: app
+display: nova
+description: Utility to scan your Kubernetes cluster for installed Helm charts, then cross-checks them against all known Helm repositories. If it finds an updated version of the chart you're using, or notices your current version is deprecated, it will let you know.
+homepage: https://nova.docs.fairwinds.com/
+license: Apache-2.0
+version: 3.12.3
+channels:
+    stable: 3.12.3
+provides:
+    - nova
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/FairwindsOps/nova/releases/download/v3.12.3/nova_3.12.3_windows_amd64.tar.gz
+      sha256: 73d08cf16d103e1417d356faaa705fbc4ed6759419e0e212618f170f43664be6
+      bin:
+        - nova.exe
+      strip: 1
+test: nova --version

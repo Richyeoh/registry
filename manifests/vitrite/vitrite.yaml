@@ -1,0 +1,21 @@
+api: v1
+name: vitrite
+kind: app
+display: vitrite
+description: Configures the level of transparency for almost any visible window.
+homepage: http://www.vanmiddlesworth.org/vitrite/
+license: GPL-2.0-only
+version: 1.1.1
+channels:
+    stable: 1.1.1
+provides:
+    - vitrite
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://vitrite.vanmiddlesworth.org/vitrite/1.1.1/Vitrite-1.1.zip
+      sha256: 870bdfdddb463587b98cce6269dd5cda3335cb6004358dcfc226bbc7ca625cc6
+      bin:
+        - Vitrite.exe
+      strip: 1
+test: Vitrite --version

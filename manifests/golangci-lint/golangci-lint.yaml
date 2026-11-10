@@ -1,0 +1,21 @@
+api: v1
+name: golangci-lint
+kind: app
+display: golangci-lint
+description: Go language linters aggregator
+homepage: https://golangci-lint.run/
+license: GPL-3.0-only
+version: 2.15.0
+channels:
+    stable: 2.15.0
+provides:
+    - golangci-lint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/golangci/golangci-lint/releases/download/v2.15.0/golangci-lint-2.15.0-windows-amd64.zip
+      sha256: cd7ea6063c95de245e17e5246e42bdc14bb221792c429dbd239ab3a6ade6ca6a
+      bin:
+        - golangci-lint.exe
+      strip: 1
+test: golangci-lint --version

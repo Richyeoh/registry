@@ -1,0 +1,21 @@
+api: v1
+name: waterfox-classic
+kind: app
+display: waterfox-classic
+description: The 100% fresh, free-range, ethical browser (classic branch)
+homepage: https://classic.waterfox.net
+license: MPL-2.0
+version: "2022.11"
+channels:
+    stable: "2022.11"
+provides:
+    - waterfox-classic
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WaterfoxCo/Waterfox-Classic/releases/download/2022.11-classic/WaterfoxClassic2022.11.exe#/dl.7z
+      sha256: 67005d3e3883291e9685c454fb6a926e2cb5a23ed48f7e57b65746edf7f7f30e
+      bin:
+        - waterfox.exe
+      strip: 1
+test: waterfox --version

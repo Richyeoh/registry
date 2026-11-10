@@ -1,0 +1,24 @@
+api: v1
+name: audiveris
+kind: app
+display: audiveris
+description: An open source tool for optical music recognition (OMR).
+homepage: https://audiveris.github.io/audiveris/
+license: AGPL-3.0-or-later
+version: 5.11.0
+channels:
+    stable: 5.11.0
+provides:
+    - audiveris
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Audiveris/audiveris/releases/download/5.11.0/Audiveris-5.11.0-windowsConsole-x86_64.msi
+      sha256: 5f1b4e96a12c53c7da426814b76e599363c4181e291855996e0a6878dda95f71
+      bin:
+        - Audiveris.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall audiveris
+test: Audiveris --version

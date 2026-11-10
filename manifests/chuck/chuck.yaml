@@ -1,0 +1,25 @@
+api: v1
+name: chuck
+kind: app
+display: chuck
+description: Strongly-timed, Concurrent, and On-the-fly Music Programming Language.
+homepage: https://chuck.stanford.edu
+license: GPL-2.0-only
+version: 1.5.5.9
+channels:
+    stable: 1.5.5.9
+provides:
+    - chuck
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://chuck.stanford.edu/release/files/exe/chuck-1.5.5.9.msi
+      sha256: 45dcd892c8e2e42017183d84c488e9e0e07c119ea37f639e19944c85512c5bfb
+      bin:
+        - chuck.exe
+        - miniAudicle.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall chuck
+test: chuck --version

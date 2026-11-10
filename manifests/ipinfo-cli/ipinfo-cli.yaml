@@ -1,0 +1,21 @@
+api: v1
+name: ipinfo-cli
+kind: app
+display: ipinfo-cli
+description: This is the official CLI for the IPinfo.io IP address API
+homepage: https://ipinfo.io/
+license: Apache-2.0
+version: 3.3.4
+channels:
+    stable: 3.3.4
+provides:
+    - ipinfo-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.4/ipinfo_3.3.4_windows_amd64.zip
+      sha256: 42f97562f6d0a4014b91e2d5ee7903e3fc1aa3b50b7a3268d9bf484882d1082a
+      bin:
+        - ipinfo.exe
+      strip: 1
+test: ipinfo --version

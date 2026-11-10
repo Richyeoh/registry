@@ -1,0 +1,24 @@
+api: v1
+name: xdman
+kind: app
+display: xdman
+description: Fast, resumable download accelerator and streaming video downloader.
+homepage: https://xtremedownloadmanager.com/
+license: GPL-3.0-only
+version: 9.0.8
+channels:
+    stable: 9.0.8
+provides:
+    - xdman
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/subhra74/xdm/releases/download/9.0.8/xdm-9.0.8-x64.msi
+      sha256: 5481f89dbb32798c4f0689f997827ee52a16e7d4a4c45194ce0643dbff0c7b98
+      bin:
+        - xdm-app.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall xdman
+test: xdm-app --version

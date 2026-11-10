@@ -1,0 +1,21 @@
+api: v1
+name: elixir-ls
+kind: app
+display: elixir-ls
+description: Language server for Elixir.
+homepage: https://elixir-lsp.github.io/elixir-ls/
+license: Apache-2.0
+version: 0.31.1
+channels:
+    stable: 0.31.1
+provides:
+    - elixir-ls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/elixir-lsp/elixir-ls/releases/download/v0.31.1/elixir-ls-v0.31.1.zip
+      sha256: bac08322ea3698157eb2373bb5b65e38c15df9dd41e1c06f142f874367fa472f
+      bin:
+        - language_server.bat.exe
+      strip: 1
+test: language_server.bat --version

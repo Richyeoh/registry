@@ -1,0 +1,21 @@
+api: v1
+name: mpv
+kind: app
+display: mpv
+description: A free, open source, and cross-platform media player
+homepage: https://mpv.io
+license: LGPL-2.1-or-later,GPL-2.0-or-later
+version: 0.42.0
+channels:
+    stable: 0.42.0
+provides:
+    - mpv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mpv-player/mpv/releases/download/v0.42.0/mpv-v0.42.0-x86_64-w64-mingw32-full.zip
+      sha256: c7d4ff6a67dd33659f71d81efa56335fea2213c7522fd67235f3abf0d9ea1dbd
+      bin:
+        - mpv.exe
+      strip: 1
+test: mpv --version

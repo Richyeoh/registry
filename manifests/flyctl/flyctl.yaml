@@ -1,0 +1,22 @@
+api: v1
+name: flyctl
+kind: app
+display: flyctl
+description: Command line deployment/management client for fly.io services
+homepage: https://fly.io
+license: ' Apache-2.0'
+version: 0.5.6
+channels:
+    stable: 0.5.6
+provides:
+    - flyctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/superfly/flyctl/releases/download/v0.5.6/flyctl_0.5.6_Windows_x86_64.zip
+      sha256: 6c0d641f2082aed5f97b88d5f6125fc2158fc4fa6ddafcde0bcac172cfe1f29c
+      bin:
+        - flyctl.exe
+        - flyctl.exe
+      strip: 1
+test: flyctl --version

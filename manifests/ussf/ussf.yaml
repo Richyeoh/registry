@@ -1,0 +1,24 @@
+api: v1
+name: ussf
+kind: app
+display: ussf
+description: A compact utility designed to help you find the silent switch in the applications that you want to install.
+homepage: https://www.softpedia.com/get/System/Launchers-Shutdown-Tools/Universal-Silent-Switch-Finder.shtml
+license: Apache-2.0
+version: 1.5.0.0
+channels:
+    stable: 1.5.0.0
+provides:
+    - ussf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/scoopinstaller/binary/master/ussf/ussf-1.5.0.0.exe#/ussf.exe
+      sha256: d9076bf31bcf4107b85d4bf368d752f6debe58f9cce8b50f0a50fece2243da38
+      bin:
+        - ussf.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ussf
+test: ussf --version

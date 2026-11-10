@@ -1,0 +1,21 @@
+api: v1
+name: switchhosts
+kind: app
+display: switchhosts
+description: Hosts management & switching
+homepage: https://switchhosts.app
+license: MIT
+version: 5.0.3
+channels:
+    stable: 5.0.3
+provides:
+    - switchhosts
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oldj/SwitchHosts/releases/download/v5.0.3/SwitchHosts-5.0.3-windows-x64-setup.exe#/dl.7z
+      sha256: 0f0af3e5f4bae316eede8ff1299f15e7cca8da81be33e3aac7153a278d434ed1
+      bin:
+        - switchhosts.exe
+      strip: 1
+test: switchhosts --version

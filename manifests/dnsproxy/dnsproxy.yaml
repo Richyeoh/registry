@@ -1,0 +1,21 @@
+api: v1
+name: dnsproxy
+kind: app
+display: dnsproxy
+description: Simple DNS proxy with DoH, DoT, DoQ and DNSCrypt support
+homepage: https://github.com/AdguardTeam/dnsproxy
+license: Apache-2.0
+version: 0.86.0
+channels:
+    stable: 0.86.0
+provides:
+    - dnsproxy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AdguardTeam/dnsproxy/releases/download/v0.86.0/dnsproxy-windows-amd64-v0.86.0.zip
+      sha256: dedc186ddd4b96bf92474f91d972f67da0824e0141d09e3102fd96db9f8a0dbc
+      bin:
+        - dnsproxy.exe
+      strip: 1
+test: dnsproxy --version

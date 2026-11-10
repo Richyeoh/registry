@@ -1,0 +1,21 @@
+api: v1
+name: lnav
+kind: app
+display: lnav
+description: A log file viewer for the terminal.
+homepage: https://lnav.org
+license: Unknown
+version: 0.14.1
+channels:
+    stable: 0.14.1
+provides:
+    - lnav
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tstack/lnav/releases/download/v0.14.1/lnav-0.14.1-windows-x86_64.zip
+      sha256: 6eacbc1c540837cfef3bc555e985027d91638023462ecc96616c14ef49f521a1
+      bin:
+        - bin\lnav.exe
+      strip: 1
+test: bin\lnav --version

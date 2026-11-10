@@ -1,0 +1,21 @@
+api: v1
+name: ytdlp-interface
+kind: app
+display: ytdlp-interface
+description: Windows graphical interface for yt-dlp, designed as a simple YouTube downloader
+homepage: https://github.com/ErrorFlynn/ytdlp-interface
+license: MIT
+version: 2.19.1
+channels:
+    stable: 2.19.1
+provides:
+    - ytdlp-interface
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ErrorFlynn/ytdlp-interface/releases/download/v2.19.1/ytdlp-interface.7z
+      sha256: 53b54e3c5c753e8cb2a8b9638c69c95c1449c8185c3145a9f0b06a2000b3702e
+      bin:
+        - ytdlp-interface.exe
+      strip: 1
+test: ytdlp-interface --version

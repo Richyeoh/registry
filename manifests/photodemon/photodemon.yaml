@@ -1,0 +1,21 @@
+api: v1
+name: photodemon
+kind: app
+display: photodemon
+description: Photo editor focused on pro-grade features, high performance, and maximum usability.
+homepage: https://photodemon.org
+license: Unknown
+version: "2025.12"
+channels:
+    stable: "2025.12"
+provides:
+    - photodemon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tannerhelland/PhotoDemon/releases/download/v2025.12/PhotoDemon-2025.12.zip
+      sha256: 269095087093575a975a66a9588cd8bcc18ff356d20fd4b2851f7e1088df75a1
+      bin:
+        - PhotoDemon.exe
+      strip: 1
+test: PhotoDemon --version

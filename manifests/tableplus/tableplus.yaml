@@ -1,0 +1,24 @@
+api: v1
+name: tableplus
+kind: app
+display: tableplus
+description: Relational database explorer
+homepage: https://tableplus.com
+license: Unknown
+version: 27.2.0.412
+channels:
+    stable: 27.2.0.412
+provides:
+    - tableplus
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://files.tableplus.com/windows/27.2.0/TablePlusSetup.exe
+      sha256: b9298fc7086056276b7b03c9e898a0931f724bb4e62848f500349ae2fdf09b66
+      bin:
+        - TablePlus.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tableplus
+test: TablePlus --version

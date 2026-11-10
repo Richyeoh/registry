@@ -1,0 +1,21 @@
+api: v1
+name: jc-cli
+kind: app
+display: jc
+description: Convert the output of CLI, file-types, and common strings to JSON, YAML, or Dictionaries
+homepage: https://kellyjonbrazil.github.io/jc/
+license: MIT
+version: 1.26.2
+channels:
+    stable: 1.26.2
+provides:
+    - jc-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kellyjonbrazil/jc/releases/download/v1.26.2/jc-1.26.2-windows.zip
+      sha256: 1d722857ce7b8f267b31b93d2904e145d09e5322c0183358909d775c83abff60
+      bin:
+        - jc.exe
+      strip: 1
+test: jc --version

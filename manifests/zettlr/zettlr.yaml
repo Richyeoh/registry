@@ -1,0 +1,21 @@
+api: v1
+name: zettlr
+kind: app
+display: zettlr
+description: Powerful markdown editor
+homepage: https://www.zettlr.com
+license: GPL-3.0-or-later
+version: 4.9.0
+channels:
+    stable: 4.9.0
+provides:
+    - zettlr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Zettlr/Zettlr/releases/download/v4.9.0/Zettlr-4.9.0-x64.exe#/dl.7z
+      sha256: ffccfcbdd71531fd7a6d4805ea9c199d75c2b4e023ee73df9b3bf6e20cdb5068
+      bin:
+        - zettlr.exe
+      strip: 1
+test: zettlr --version

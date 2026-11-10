@@ -1,0 +1,21 @@
+api: v1
+name: nbping
+kind: app
+display: nbping
+description: A Ping Tool in Rust with Real-Time Data and Visualizations.
+homepage: https://github.com/hanshuaikang/NBping
+license: Unknown
+version: 0.7.1
+channels:
+    stable: 0.7.1
+provides:
+    - nbping
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hanshuaikang/NBping/releases/download/v0.7.1/nbping-x86_64-pc-windows-msvc.zip
+      sha256: 973fdf04028f7a89893caf607c0706c8d5ab7f4a67c4bfaf4d1677c46c811543
+      bin:
+        - nbping.exe
+      strip: 1
+test: nbping --version

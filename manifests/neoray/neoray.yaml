@@ -1,0 +1,21 @@
+api: v1
+name: neoray
+kind: app
+display: neoray
+description: Simple and lightweight GUI client for Neovim.
+homepage: https://github.com/hismailbulut/Neoray
+license: MIT
+version: 0.2.7
+channels:
+    stable: 0.2.7
+provides:
+    - neoray
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hismailbulut/Neoray/releases/download/v0.2.7/neoray-windows.zip
+      sha256: 313d33a76d8709da7e9b43862ad5b54ff87abc936aab11bfda01d2cc92eb7a01
+      bin:
+        - neoray.exe
+      strip: 1
+test: neoray --version

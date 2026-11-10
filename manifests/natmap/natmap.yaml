@@ -1,0 +1,24 @@
+api: v1
+name: natmap
+kind: app
+display: natmap
+description: TCP/UDP port mapping for full-cone NAT
+homepage: https://github.com/heiher/natmap
+license: MIT
+version: "20261109"
+channels:
+    stable: "20261109"
+provides:
+    - natmap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/heiher/natmap/releases/download/20261109/natmap-win-x64.exe#/natmap.exe
+      sha256: fbaac52ef2fd90a21b1fefe025921bdcf861d902926addb7ffaca98ea71b0702
+      bin:
+        - natmap.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall natmap
+test: natmap --version

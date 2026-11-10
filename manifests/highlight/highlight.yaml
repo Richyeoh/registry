@@ -1,0 +1,21 @@
+api: v1
+name: highlight
+kind: app
+display: highlight
+description: Converts source code to formatted text with syntax highlighting.
+homepage: http://www.andre-simon.de/doku/highlight/en/highlight.php
+license: GPL-3.0-only
+version: "4.22"
+channels:
+    stable: "4.22"
+provides:
+    - highlight
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.andre-simon.de/zip/highlight-4.22-x64.zip
+      sha256: 2e98ec4c82c44d4bf24a637dd18d511e67daec3435c812d42e4f5f515e280fe8
+      bin:
+        - highlight.exe
+      strip: 1
+test: highlight --version

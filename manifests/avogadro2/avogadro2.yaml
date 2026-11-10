@@ -1,0 +1,21 @@
+api: v1
+name: avogadro2
+kind: app
+display: avogadro2
+description: The official continuation of the advanced molecule editor and visualizer designed for use in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas.
+homepage: https://two.avogadro.cc/index.html
+license: BSD-3-Clause
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - avogadro2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/OpenChemistry/avogadrolibs/releases/download/2.1.0/Avogadro2-2.1.0-win64.exe#/dl.7z
+      sha256: b75884ab13412b7c936d99546ba1a5fcb2037dd432895f41cb6cfa0fa5b4d564
+      bin:
+        - bin\avogadro2.exe
+      strip: 1
+test: bin\avogadro2 --version

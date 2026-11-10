@@ -1,0 +1,24 @@
+api: v1
+name: cherry-studio-pre
+kind: app
+display: cherry-studio-pre
+description: A desktop client that supports for multiple LLM providers (Pre-release).
+homepage: https://cherry-ai.com
+license: Apache-2.0
+version: 2.0.0-rc.5
+channels:
+    stable: 2.0.0-rc.5
+provides:
+    - cherry-studio-pre
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CherryHQ/cherry-studio/releases/download/v2.0.0-rc.5/Cherry-Studio-2.0.0-rc.5-x64-portable.exe#/Cherry-Studio.exe
+      sha256: 2bb0e6ffb8a7be3b07f6a604b32fb11a820255fa8c6d4a6f065c09b43f254a59
+      bin:
+        - cherry-studio-pre.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cherry-studio-pre
+test: cherry-studio-pre --version

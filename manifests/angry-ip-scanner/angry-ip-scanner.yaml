@@ -1,0 +1,32 @@
+api: v1
+name: angry-ip-scanner
+kind: app
+display: Angry IP Scanner
+description: Network scanner
+homepage: https://angryip.org/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 3.9.3
+channels:
+    stable: 3.9.3
+provides:
+    - angry-ip-scanner
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/angryip/ipscan/releases/download/3.9.3/ipscan-macArm64-3.9.3.zip
+      sha256: e8997d2ff12f7322ecb3dd0b4c4a410187aa8a26ad89772c833af6de781dfd29
+      bin:
+        - angry-ip-scanner
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/angryip/ipscan/releases/download/3.9.3/ipscan-macArm64-3.9.3.zip
+      sha256: e8997d2ff12f7322ecb3dd0b4c4a410187aa8a26ad89772c833af6de781dfd29
+      bin:
+        - angry-ip-scanner
+      strip: 1
+test: angry-ip-scanner --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

@@ -1,0 +1,21 @@
+api: v1
+name: msiafterburner
+kind: app
+display: msiafterburner
+description: Overclocking utility for graphics cards. Main features include GPU/Shader/Memory clock adjustment, advanced fan speed and GPU voltage control.
+homepage: https://www.msi.com/page/afterburner
+license: Unknown
+version: 4.6.6
+channels:
+    stable: 4.6.6
+provides:
+    - msiafterburner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/%5BGuru3D%5D-MSIAfterburnerSetup466Build16757.zip
+      sha256: 348e9690a638d84e30e32e9c7c2dd7aad9fd82d71eced1942c04c4c5620b0e1e
+      bin:
+        - MSIAfterburner.exe
+      strip: 1
+test: MSIAfterburner --version

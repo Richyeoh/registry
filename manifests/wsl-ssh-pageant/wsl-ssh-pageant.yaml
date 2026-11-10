@@ -1,0 +1,25 @@
+api: v1
+name: wsl-ssh-pageant
+kind: app
+display: wsl-ssh-pageant
+description: A Pageant -> TCP bridge for use with WSL, allowing for Pageant to be used as an ssh-ageant within the WSL environment.
+homepage: https://github.com/benpye/wsl-ssh-pageant
+license: BSD-2-Clause
+version: "20201121.2"
+channels:
+    stable: "20201121.2"
+provides:
+    - wsl-ssh-pageant
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/benpye/wsl-ssh-pageant/releases/download/20201121.2/wsl-ssh-pageant-amd64.exe#/wsl-ssh-pageant.exe
+      sha256: d2979bed31d7fe09fbd0186a45ae029e1311eb44cc432cb88d232fd3a4f4c1e0
+      bin:
+        - wsl-ssh-pageant.exe
+        - wsl-ssh-pageant-gui.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wsl-ssh-pageant
+test: wsl-ssh-pageant --version

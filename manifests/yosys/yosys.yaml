@@ -1,0 +1,22 @@
+api: v1
+name: yosys
+kind: app
+display: yosys
+description: Framework for Verilog RTL synthesis
+homepage: https://yosyshq.net/yosys/
+license: ISC
+version: "0.9"
+channels:
+    stable: "0.9"
+provides:
+    - yosys
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ScoopInstaller/Binary/raw/master/yosys/yosys-win32-mxebin-0.9.zip
+      sha256: d638d860dff1f351c15ff0caeaa668742649677b874b1a9bdb0b6ce0e54840f5
+      bin:
+        - yosys.exe
+        - yosys-abc.exe
+      strip: 1
+test: yosys --version

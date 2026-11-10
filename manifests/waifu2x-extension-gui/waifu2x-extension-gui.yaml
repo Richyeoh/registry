@@ -1,0 +1,21 @@
+api: v1
+name: waifu2x-extension-gui
+kind: app
+display: waifu2x-extension-gui
+description: Video, Image and GIF upscale/enlarge(Super-Resolution) and Video frame interpolation. Achieved with Waifu2x, Real-ESRGAN, Real-CUGAN, SRMD, RealSR, Anime4K, RIFE, CAIN, DAIN, and ACNet.
+homepage: https://github.com/AaronFeng753/Waifu2x-Extension-GUI
+license: Unknown
+version: 3.143.01
+channels:
+    stable: 3.143.01
+provides:
+    - waifu2x-extension-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v3.143.01/Waifu2x-Extension-GUI-v3.143.01-Win64.7z
+      sha256: f9fa9da70841bd207f3a9ac1c001d0135095b99bda4a8dec761b587ab93cfd46
+      bin:
+        - waifu2x-extension-gui.exe
+      strip: 1
+test: waifu2x-extension-gui --version

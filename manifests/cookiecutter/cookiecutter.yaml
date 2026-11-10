@@ -1,0 +1,21 @@
+api: v1
+name: cookiecutter
+kind: app
+display: cookiecutter
+description: A command-line utility that creates projects from project templates.
+homepage: https://github.com/cookiecutter/cookiecutter
+license: BSD-3-Clause
+version: 2.7.1
+channels:
+    stable: 2.7.1
+provides:
+    - cookiecutter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://files.pythonhosted.org/packages/py3/c/cookiecutter/cookiecutter-2.7.1-py3-none-any.whl
+      sha256: cee50defc1eaa7ad0071ee9b9893b746c1b3201b66bf4d3686d0f127c8ed6cf9
+      bin:
+        - cookiecutter\Scripts\cookiecutter.exe
+      strip: 1
+test: cookiecutter\Scripts\cookiecutter --version

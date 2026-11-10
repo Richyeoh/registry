@@ -1,0 +1,21 @@
+api: v1
+name: shadowsocks-v2ray-plugin
+kind: app
+display: shadowsocks-v2ray-plugin
+description: SIP003 plugin based on v2ray for shadowsocks
+homepage: https://github.com/shadowsocks/v2ray-plugin
+license: MIT
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - shadowsocks-v2ray-plugin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.5.0/v2ray-plugin-windows-amd64-v1.5.0.tar.gz
+      sha256: 2a49c79681a77396dc3e3ad9976a248c8198eed4b1cd8425759056add893fbd5
+      bin:
+        - v2ray-plugin_windows_amd64.exe
+      strip: 1
+test: v2ray-plugin_windows_amd64 --version

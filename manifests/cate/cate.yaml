@@ -1,0 +1,21 @@
+api: v1
+name: cate
+kind: app
+display: cate
+description: An infinite zoomable canvas IDE with editor, terminal, and browser panels
+homepage: https://cate.cero-ai.com
+license: MIT
+version: 2.0.5
+channels:
+    stable: 2.0.5
+provides:
+    - cate
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/0-AI-UG/cate/releases/download/v2.0.5/Cate-2.0.5-win.zip
+      sha256: fd38de7b98db8a2a05298aeb150b4705ba761be62886dee9b24d7fa33fae9c5e
+      bin:
+        - cate.exe
+      strip: 1
+test: cate --version

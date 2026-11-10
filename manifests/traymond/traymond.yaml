@@ -1,0 +1,24 @@
+api: v1
+name: traymond
+kind: app
+display: traymond
+description: A simple Windows app for minimizing windows to tray icons
+homepage: https://github.com/fcFn/traymond
+license: MIT
+version: 1.0.4
+channels:
+    stable: 1.0.4
+provides:
+    - traymond
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fcFn/traymond/releases/download/v1.0.4/Traymond.exe
+      sha256: 4c87f96849d38d083199316a5afdd6e9cc1206825a1fcbcd00e5150a6e808a23
+      bin:
+        - Traymond.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall traymond
+test: Traymond --version

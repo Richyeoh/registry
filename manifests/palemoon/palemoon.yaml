@@ -1,0 +1,21 @@
+api: v1
+name: palemoon
+kind: app
+display: palemoon
+description: Mozilla-derived web browser focusing on efficiency and customization
+homepage: https://www.palemoon.org
+license: MPL-2.0
+version: 35.0.3
+channels:
+    stable: 35.0.3
+provides:
+    - palemoon
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://rm-eu.palemoon.org/release/Palemoon-Portable-35.0.3.win64.exe#/palemoon.7z
+      sha256: 3b82af3813cf84c19598fefbe9a35a55122781b8ce2811d160bdcc080540313a
+      bin:
+        - Palemoon-Portable.exe
+      strip: 1
+test: Palemoon-Portable --version

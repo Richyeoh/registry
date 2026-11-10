@@ -1,0 +1,22 @@
+api: v1
+name: digikam
+kind: app
+display: digikam
+description: Professional Photo Management
+homepage: https://www.digikam.org
+license: GPL-3.0-or-later
+version: 9.1.0
+channels:
+    stable: 9.1.0
+provides:
+    - digikam
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/digikam/9.1.0/digiKam-9.1.0-Qt6-Win64.exe#/dl.7z
+      sha256: 28ef373ab45ecc7eb1fd105b57828a29588504eb5a286c9e89c987c056bce8be
+      bin:
+        - digikam.exe
+        - showfoto.exe
+      strip: 1
+test: digikam --version

@@ -1,0 +1,21 @@
+api: v1
+name: mingit
+kind: app
+display: mingit
+description: Minimal Git for Windows (MinGit) is a lightweight distribution intended primarily for application-integration scenarios (such as integrated development environments and graphical visualization tools) where full interactive console capabilities, including colorization and pagination, are not required.
+homepage: https://gitforwindows.org
+license: Unknown
+version: 2.56.0.4
+channels:
+    stable: 2.56.0.4
+provides:
+    - mingit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/MinGit-2.56.0.4-64-bit.zip
+      sha256: e3bf78351fe777fba47ddee5950082f8a98bb0f02604fdc7ba3ee2cb68ffa877
+      bin:
+        - mingit.exe
+      strip: 1
+test: mingit --version

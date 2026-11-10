@@ -1,0 +1,21 @@
+api: v1
+name: free-manga-downloader2
+kind: app
+display: free-manga-downloader2
+description: Active fork of Free Manga Downloader, an application for managing and downloading manga from various websites.
+homepage: https://github.com/dazedcat19/FMD2
+license: GPL-2.0-only
+version: 2.0.34.5
+channels:
+    stable: 2.0.34.5
+provides:
+    - free-manga-downloader2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dazedcat19/FMD2/releases/download/2.0.34.5/fmd_2.0.34.5_x86_64-win64.7z
+      sha256: dd35300ee22ef04fd56523ba241fd972fada5c780ed8b6ad4d06fd83bf231434
+      bin:
+        - fmd.exe
+      strip: 1
+test: fmd --version

@@ -1,0 +1,45 @@
+api: v1
+name: atac
+kind: app
+display: atac
+description: Arguably a Terminal API Client based on well-known clients such as Postman, Insomnia, or even Bruno.
+homepage: https://github.com/Julien-cpsn/ATAC
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.24.0
+channels:
+    stable: 0.24.0
+provides:
+    - atac
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Julien-cpsn/ATAC/releases/download/v0.24.0/atac-v0.24.0-x86_64-pc-windows-msvc.zip
+      sha256: 927b165091e5aaf4ed58849fe7af9eae310f7bab61c641800c2405a0a835f4e5
+      bin:
+        - atac.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atac/blobs/sha256:67388cc622f5850aa2d7f1af0f199e27233ecf4d7e8d05ad86f03afd26489d7a
+      sha256: 67388cc622f5850aa2d7f1af0f199e27233ecf4d7e8d05ad86f03afd26489d7a
+      bin:
+        - atac
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/atac/blobs/sha256:c2a6027961705ce7c5e9fc2a4a09efa1ecca2886e9c238e796e0e1bc391c34ff
+      sha256: c2a6027961705ce7c5e9fc2a4a09efa1ecca2886e9c238e796e0e1bc391c34ff
+      bin:
+        - atac
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/atac/blobs/sha256:dc55cf5581582f8951902223f2acc4d1579c013992825884a2f62a5049215980
+      sha256: dc55cf5581582f8951902223f2acc4d1579c013992825884a2f62a5049215980
+      bin:
+        - atac
+      strip: 1
+test: atac --version

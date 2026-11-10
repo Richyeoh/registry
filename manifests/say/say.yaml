@@ -1,0 +1,21 @@
+api: v1
+name: say
+kind: app
+display: say
+description: An approximation of say from macOS.
+homepage: https://github.com/lukesampson/psutils
+license: MIT
+version: 0.2023.06.28
+channels:
+    stable: 0.2023.06.28
+provides:
+    - say
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/lukesampson/psutils/1d746384cb351f2e38bdbe98120d3a9322bbd1a0/say.ps1
+      sha256: b8951f0c7f54701c8775fedfb0e33a97a2fa45931d7c6571c739b82627bad73d
+      bin:
+        - say.ps1.exe
+      strip: 1
+test: say.ps1 --version

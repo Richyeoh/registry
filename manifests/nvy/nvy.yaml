@@ -1,0 +1,24 @@
+api: v1
+name: nvy
+kind: app
+display: nvy
+description: A Neovim client in C++
+homepage: https://github.com/RMichelsen/Nvy
+license: MIT
+version: 0.4.1
+channels:
+    stable: 0.4.1
+provides:
+    - nvy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/RMichelsen/Nvy/releases/download/v0.4.1/Nvy.exe
+      sha256: 34a2ab342fb5ab0aa7f4df85cede5677fe5580ece446b0519331e318db2b551d
+      bin:
+        - Nvy.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nvy
+test: Nvy --version

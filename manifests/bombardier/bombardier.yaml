@@ -1,0 +1,24 @@
+api: v1
+name: bombardier
+kind: app
+display: bombardier
+description: Fast cross-platform HTTP benchmarking tool written in Go
+homepage: https://github.com/codesenberg/bombardier
+license: MIT
+version: 2.0.2
+channels:
+    stable: 2.0.2
+provides:
+    - bombardier
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/codesenberg/bombardier/releases/download/v2.0.2/bombardier-windows-amd64.exe#/bombardier.exe
+      sha256: 8a4559d5981b025523bb5144c4a8ae470b57049f7f27242227dfee71d2a17853
+      bin:
+        - bombardier.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bombardier
+test: bombardier --version

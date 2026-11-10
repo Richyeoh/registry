@@ -1,0 +1,21 @@
+api: v1
+name: ethereum-wallet
+kind: app
+display: ethereum-wallet
+description: A gateway to decentralized applications on the Ethereum blockchain
+homepage: https://ethereum.org
+license: GPL-3.0-only
+version: 0.11.1
+channels:
+    stable: 0.11.1
+provides:
+    - ethereum-wallet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ethereum/mist/releases/download/v0.11.1/Ethereum-Wallet-win64-0-11-1.zip
+      sha256: c78c48d50acbff1b7442f473854f6ae88245e5b4f057164211f8b63d17d5c65e
+      bin:
+        - ethereum-wallet.exe
+      strip: 1
+test: ethereum-wallet --version

@@ -1,0 +1,21 @@
+api: v1
+name: mtuner
+kind: app
+display: mtuner
+description: A C/C++ memory profiler and memory leak finder for Windows, PlayStation 4 and 3, Android and other platforms.
+homepage: https://github.com/milostosic/MTuner
+license: BSD-2-Clause
+version: "5.0"
+channels:
+    stable: "5.0"
+provides:
+    - mtuner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/milostosic/MTuner/releases/download/v5.0/mtuner64.zip
+      sha256: c8107ec6dbe9bef767b3c03f42f3fda184a24ec4a3c0e5923ab4e838906ebdd6
+      bin:
+        - MTuner.com.exe
+      strip: 1
+test: MTuner.com --version

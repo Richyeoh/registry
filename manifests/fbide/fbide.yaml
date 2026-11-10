@@ -1,0 +1,21 @@
+api: v1
+name: fbide
+kind: app
+display: fbide
+description: '#1 editor for FreeBASIC'
+homepage: https://fbide.freebasic.net
+license: MIT
+version: 0.5.2
+channels:
+    stable: 0.5.2
+provides:
+    - fbide
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/albeva/fbide/releases/download/v0.5.2/fbide-0.5.2-win64.zip
+      sha256: 8f7ec456fc8111892832e17b17801e4f9de393d2837ea5a3492517458b159ef7
+      bin:
+        - fbide.exe
+      strip: 1
+test: fbide --version

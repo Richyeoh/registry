@@ -1,0 +1,25 @@
+api: v1
+name: aws-cdk
+kind: app
+display: aws-cdk
+description: AWS Cloud Development Kit - framework for defining AWS infra as code
+homepage: https://github.com/aws/aws-cdk
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.1148.0
+channels:
+    stable: 2.1148.0
+provides:
+    - aws-cdk
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-cdk/blobs/sha256:d024c924f728e2c933c25fec78f5ed37fff123d862c7ff47db0fd4e185c0c3d8
+      sha256: d024c924f728e2c933c25fec78f5ed37fff123d862c7ff47db0fd4e185c0c3d8
+      bin:
+        - aws-cdk
+      strip: 1
+test: aws-cdk --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

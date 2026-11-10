@@ -1,0 +1,21 @@
+api: v1
+name: archwsl
+kind: app
+display: archwsl
+description: Install ArchLinux as a WSL Instance
+homepage: https://github.com/yuk7/ArchWSL
+license: MIT
+version: 26.10.14.0
+channels:
+    stable: 26.10.14.0
+provides:
+    - archwsl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yuk7/ArchWSL/releases/download/26.10.14.0/Arch.zip
+      sha256: 9d46fc6244d25f3bc1a3ff0ed97e7bf75b1254f8c42a0ca3eccacf7a274c3360
+      bin:
+        - Arch.exe
+      strip: 1
+test: Arch --version

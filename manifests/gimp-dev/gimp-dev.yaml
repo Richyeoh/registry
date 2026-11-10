@@ -1,0 +1,28 @@
+api: v1
+name: gimp-dev
+kind: app
+display: gimp-dev
+description: GNU Image Manipulation Program
+homepage: https://www.gimp.org
+license: GPL-3.0-only
+version: 3.2.0-RC3
+channels:
+    stable: 3.2.0-RC3
+provides:
+    - gimp-dev
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.0-RC3-setup.exe
+      sha256: 98a28f2b2606c60aa689be6c733bf1e157f1391e34ba901f9de1cdde913e0047
+      bin:
+        - bin\gimp-console-3.2.exe
+        - bin\gimp-console-3.2.exe
+        - bin\gimp-console-3.2.exe
+        - bin\gimptool-3.2.exe
+        - bin\gimptool-3.2.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gimp-dev
+test: bin\gimp-console-3.2 --version

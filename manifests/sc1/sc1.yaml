@@ -1,0 +1,24 @@
+api: v1
+name: sc1
+kind: app
+display: sc1
+description: SCIntilla based Text Editor
+homepage: https://www.scintilla.org/SciTE.html
+license: HPND
+version: 5.6.9
+channels:
+    stable: 5.6.9
+provides:
+    - sc1
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.scintilla.org/Sc569.exe#/Sc1.exe
+      sha256: 1d5e65096598fc6b32db3d2ab2288af031590b56d2a594af6b6b94cc1bc36733
+      bin:
+        - Sc1.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sc1
+test: Sc1 --version

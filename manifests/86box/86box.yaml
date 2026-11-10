@@ -1,0 +1,38 @@
+api: v1
+name: 86box
+kind: app
+display: 86Box
+description: Emulator of x86-based machines based on PCem
+homepage: https://86box.net/
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - cask
+version: 6.0,9001
+channels:
+    stable: 6.0,9001
+provides:
+    - 86box
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/86Box/86Box/releases/download/v6.0/86Box-Windows-64-b9001.zip
+      sha256: b86722ed547089f095e8875805411f83c76aafd7d318f67286a5a69aecdd7644
+      bin:
+        - 86Box.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://github.com/86Box/86Box/releases/download/v6.0/86Box-macOS-x86_64+arm64-b9001.zip
+      sha256: fc66fc97225012af20145ae04193911bbf689fc75f89590774a904483140a5a9
+      bin:
+        - 86box
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/86Box/86Box/releases/download/v6.0/86Box-macOS-x86_64+arm64-b9001.zip
+      sha256: fc66fc97225012af20145ae04193911bbf689fc75f89590774a904483140a5a9
+      bin:
+        - 86box
+      strip: 1
+test: 86Box --version

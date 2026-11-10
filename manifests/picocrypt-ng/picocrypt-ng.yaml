@@ -1,0 +1,24 @@
+api: v1
+name: picocrypt-ng
+kind: app
+display: picocrypt-ng
+description: A very small, very simple, yet very secure encryption tool.
+homepage: https://github.com/Picocrypt-NG/Picocrypt-NG
+license: GPL-3.0-only
+version: "2.18"
+channels:
+    stable: "2.18"
+provides:
+    - picocrypt-ng
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Picocrypt-NG/Picocrypt-NG/releases/download/2.18/Picocrypt-NG-portable.exe#/Picocrypt-NG.exe
+      sha256: 98fc9fe47db7004131b4559e4949bee70cc3f92ff9dd72fd36eb5dee50dfa1b5
+      bin:
+        - picocrypt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall picocrypt-ng
+test: picocrypt --version

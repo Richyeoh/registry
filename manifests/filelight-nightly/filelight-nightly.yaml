@@ -1,0 +1,21 @@
+api: v1
+name: filelight-nightly
+kind: app
+display: filelight-nightly
+description: Disk usage visualizer
+homepage: https://apps.kde.org/filelight
+license: LGPL-2.0-only
+version: "2248"
+channels:
+    stable: "2248"
+provides:
+    - filelight-nightly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.kde.org/ci-builds/utilities/filelight/master/windows/filelight-master-2248-windows-cl-msvc2022-x86_64.7z
+      sha256: 474d78b3f7651707d3e5823bfccdee61756a8fe5dca6f7bf1287ee7b9ed66b9a
+      bin:
+        - bin\filelight.exe
+      strip: 1
+test: bin\filelight --version

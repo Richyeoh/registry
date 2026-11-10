@@ -1,0 +1,21 @@
+api: v1
+name: proxifier
+kind: app
+display: proxifier
+description: Allows network applications that do not support working through proxy servers to operate through a SOCKS or HTTPS proxy and chains.
+homepage: https://www.proxifier.com
+license: Unknown
+version: "4.14"
+channels:
+    stable: "4.14"
+provides:
+    - proxifier
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.proxifier.com/download/ProxifierPE.zip
+      sha256: 03a03ffb1227e3c409fc42593a52de53c77bb3ea837bf1dbf309571f62c68819
+      bin:
+        - Proxifier.exe
+      strip: 1
+test: Proxifier --version

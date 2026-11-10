@@ -1,0 +1,21 @@
+api: v1
+name: image-usb
+kind: app
+display: image-usb
+description: A free utility which lets you write an image concurrently to multiple USB Flash Drives.
+homepage: https://www.osforensics.com/tools/write-usb-images.html
+license: Freeware
+version: 1.5.1007
+channels:
+    stable: 1.5.1007
+provides:
+    - image-usb
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.osforensics.com/downloads/imageusb.zip
+      sha256: 290ddf3070f7d99c492533b2daba74cbf53ad8c4bc49ee0fc0dbef392f19a748
+      bin:
+        - image-usb.exe
+      strip: 1
+test: image-usb --version

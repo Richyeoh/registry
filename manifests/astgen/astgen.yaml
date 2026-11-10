@@ -1,0 +1,39 @@
+api: v1
+name: astgen
+kind: app
+display: astgen
+description: Generate AST in json format for JS/TS
+homepage: https://github.com/joernio/astgen-monorepo
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 3.54.0
+channels:
+    stable: 3.54.0
+provides:
+    - astgen
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/astgen/blobs/sha256:4f810e6242424019691dc42674cee45ac3d9c14e8a597f1d44d5b9e5c01b037e
+      sha256: 4f810e6242424019691dc42674cee45ac3d9c14e8a597f1d44d5b9e5c01b037e
+      bin:
+        - astgen
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/astgen/blobs/sha256:bf102bcf10d8a79a0f8133f15341d997d05158c00238963580258ca65cbaf2ab
+      sha256: bf102bcf10d8a79a0f8133f15341d997d05158c00238963580258ca65cbaf2ab
+      bin:
+        - astgen
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/astgen/blobs/sha256:7534bf4cd97a6b9a64a30be81d943da3f566442b42f63528312136acbc2eb757
+      sha256: 7534bf4cd97a6b9a64a30be81d943da3f566442b42f63528312136acbc2eb757
+      bin:
+        - astgen
+      strip: 1
+test: astgen --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

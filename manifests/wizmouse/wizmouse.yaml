@@ -1,0 +1,22 @@
+api: v1
+name: wizmouse
+kind: app
+display: wizmouse
+description: Mouse enhancement utility that makes mouse wheel work on the window currently under the mouse pointer.
+homepage: https://antibody-software.com/wizmouse
+license: Unknown
+version: 1.7.0.3
+channels:
+    stable: 1.7.0.3
+provides:
+    - wizmouse
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://antibody-software.com/files/wizmouse_1_7_0_3_portable.zip
+      sha256: 452e75ef27db171e1bca55fc1762a1736da98b087eb12803a21de4c925edfbbd
+      bin:
+        - WizMouse.exe
+        - WizMouseConfig.exe
+      strip: 1
+test: WizMouse --version

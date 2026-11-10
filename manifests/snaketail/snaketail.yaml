@@ -1,0 +1,24 @@
+api: v1
+name: snaketail
+kind: app
+display: snaketail
+description: A Windows tail utility for monitoring growing text log files.
+homepage: http://snakenest.com/snaketail/
+license: GPL-3.0-only
+version: 1.9.9
+channels:
+    stable: 1.9.9
+provides:
+    - snaketail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/snakefoot/snaketail-net/releases/download/1.9.9/SnakeTail.v1.9.9.x64.msi
+      sha256: b5ca319d3de1fa428b2ea66856cce53b03cceb117fc834a81072aa2fbca35f0c
+      bin:
+        - SnakeTail.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall snaketail
+test: SnakeTail --version

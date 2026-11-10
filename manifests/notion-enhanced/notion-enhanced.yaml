@@ -1,0 +1,21 @@
+api: v1
+name: notion-enhanced
+kind: app
+display: notion-enhanced
+description: Collaborative note taking. Notion with notion-enhancer embedded.
+homepage: https://notion-enhancer.github.io/
+license: MIT
+version: 2.0.18-1
+channels:
+    stable: 2.0.18-1
+provides:
+    - notion-enhanced
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/notion-enhancer/notion-repackaged/releases/download/v2.0.18-1/Notion-Enhanced-2.0.18-1-win.zip
+      sha256: 22fb539c65caf2fbbaa201ac8ce983e6bf7c4af7e05ea706302c7c4c1947165e
+      bin:
+        - notion-enhanced.exe
+      strip: 1
+test: notion-enhanced --version

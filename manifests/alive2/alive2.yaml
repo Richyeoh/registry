@@ -1,0 +1,39 @@
+api: v1
+name: alive2
+kind: app
+display: alive2
+description: Automatic verification of LLVM optimizations
+homepage: https://github.com/AliveToolkit/alive2
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: "21.0"
+channels:
+    stable: "21.0"
+provides:
+    - alive2
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alive2/blobs/sha256:9a61dfaf01f72c515cbd4b1127cf512ec33bbd147ed7f781da2fc00b2da15b12
+      sha256: 9a61dfaf01f72c515cbd4b1127cf512ec33bbd147ed7f781da2fc00b2da15b12
+      bin:
+        - alive2
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alive2/blobs/sha256:3b484db0bfb6537a57c9cd065849243e71afda39b2612f61245e3556fc47ded0
+      sha256: 3b484db0bfb6537a57c9cd065849243e71afda39b2612f61245e3556fc47ded0
+      bin:
+        - alive2
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alive2/blobs/sha256:6e4d8da2108ed770615e5143e495fcc21bbf36cf18307c2f1fabe50a0358a23f
+      sha256: 6e4d8da2108ed770615e5143e495fcc21bbf36cf18307c2f1fabe50a0358a23f
+      bin:
+        - alive2
+      strip: 1
+test: alive2 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: final2x
+kind: app
+display: final2x
+description: A cross-platform image super-resolution tool.
+homepage: https://github.com/EutropicAI/Final2x
+license: Unknown
+version: 4.0.0
+channels:
+    stable: 4.0.0
+provides:
+    - final2x
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/EutropicAI/Final2x/releases/download/v4.0.0/Final2x-windows-x64-unpacked.7z
+      sha256: 9b724efbd37611c2f7ead1278a0d450d4413b831851d0a1fe7d9f7017384571e
+      bin:
+        - final2x.exe
+      strip: 1
+test: final2x --version

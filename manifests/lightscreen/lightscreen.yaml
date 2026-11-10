@@ -1,0 +1,24 @@
+api: v1
+name: lightscreen
+kind: app
+display: lightscreen
+description: Screenshot Tool
+homepage: https://lightscreen.com.ar
+license: GPL-2.0-only
+version: "2.5"
+channels:
+    stable: "2.5"
+provides:
+    - lightscreen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ckaiser/Lightscreen/releases/download/v2.5/LightscreenSetup-2.5.exe
+      sha256: 626479bfd6b160df9be29ff169937575e371b50d258c2ad51bf4dcbd8e8251aa
+      bin:
+        - lightscreen.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall lightscreen
+test: lightscreen --version

@@ -1,0 +1,23 @@
+api: v1
+name: deluge
+kind: app
+display: deluge
+description: Lightweight, free, cross-platform BitTorrent client
+homepage: https://deluge-torrent.org
+license: GPL-3.0-only
+version: 2.2.0
+channels:
+    stable: 2.2.0
+provides:
+    - deluge
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://download.deluge-torrent.org/windows/deluge-2.2.0-win64-setup.exe#/dl.7z
+      sha256: b2e414dd9cf637d3ea9f5b783972bb36cbb801134b6df79d67c1c08f68f4e889
+      bin:
+        - deluge-console.exe
+        - deluge-web.exe
+        - deluged.exe
+      strip: 1
+test: deluge-console --version

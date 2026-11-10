@@ -1,0 +1,24 @@
+api: v1
+name: ddc-toolbox
+kind: app
+display: ddc-toolbox
+description: ViPER DDC files editor with AutoEQ integration
+homepage: https://github.com/ThePBone/DDCToolbox
+license: GPL-3.0-only
+version: 2.0.1
+channels:
+    stable: 2.0.1
+provides:
+    - ddc-toolbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ThePBone/DDCToolbox/releases/download/2.0.1/DDCToolbox_Portable_win64_2.0.1-b46d76.exe#/DDCToolbox.exe
+      sha256: 02cac5a9bede40ad67847fdde8bb528324f0e8926f3d5e3f59d5670077abd9e0
+      bin:
+        - DDCToolbox.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ddc-toolbox
+test: DDCToolbox --version

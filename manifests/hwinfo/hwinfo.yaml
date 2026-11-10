@@ -1,0 +1,21 @@
+api: v1
+name: hwinfo
+kind: app
+display: hwinfo
+description: Comprehensive Hardware Analysis, Monitoring and Reporting for Windows and DOS.
+homepage: https://www.hwinfo.com
+license: Unknown
+version: 8.60-6120
+channels:
+    stable: 8.60-6120
+provides:
+    - hwinfo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sac.sk/download/utildiag/hwi_860.zip
+      sha256: 0f7726ee30f6b040cc13aa9de5a19619545a00dd7515fc17ebea9f9f2996e83c
+      bin:
+        - HWiNFO64.exe
+      strip: 1
+test: HWiNFO64 --version

@@ -1,0 +1,24 @@
+api: v1
+name: odo
+kind: app
+display: odo
+description: Developer-focused CLI for OpenShift and Kubernetes.
+homepage: https://odo.dev
+license: Apache-2.0
+version: 3.16.1
+channels:
+    stable: 3.16.1
+provides:
+    - odo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/odo/v3.16.1/odo-windows-amd64.exe#/odo.exe
+      sha256: e147d6d9c9940389790084fcbff749600dbeafd5f4495320ba1a09ea0ddcef3c
+      bin:
+        - odo.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall odo
+test: odo --version

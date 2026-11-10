@@ -1,0 +1,21 @@
+api: v1
+name: mediamtx
+kind: app
+display: mediamtx
+description: Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish and proxy video and audio streams
+homepage: https://mediamtx.org
+license: MIT
+version: 1.21.3
+channels:
+    stable: 1.21.3
+provides:
+    - mediamtx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bluenviron/mediamtx/releases/download/v1.21.3/mediamtx_v1.21.3_windows_amd64.zip
+      sha256: b2f5246b07cb72961df03b8d5e8cad43dc657bcf3f49a87bb031bdf22721af74
+      bin:
+        - mediamtx.exe
+      strip: 1
+test: mediamtx --version

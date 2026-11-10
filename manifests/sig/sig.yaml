@@ -1,0 +1,21 @@
+api: v1
+name: sig
+kind: app
+display: sig
+description: Interactive grep (for streaming).
+homepage: https://github.com/ynqa/sig
+license: MIT
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - sig
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-x86_64-pc-windows-msvc.zip
+      sha256: 7c9d78723cdb2013b7cf6a7a578e7ca1cf613ff852a6a7473dd32337209cd1f3
+      bin:
+        - sig.exe
+      strip: 1
+test: sig --version

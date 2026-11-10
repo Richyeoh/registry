@@ -1,0 +1,24 @@
+api: v1
+name: opa
+kind: app
+display: opa
+description: Policy-based control for cloud native environments
+homepage: https://www.openpolicyagent.org
+license: Apache-2.0
+version: 1.22.3
+channels:
+    stable: 1.22.3
+provides:
+    - opa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/open-policy-agent/opa/releases/download/v1.22.3/opa_windows_amd64.exe#/opa.exe
+      sha256: 01fb91eedf7cfd53ffc308d828af19c86dc1f3e4f0b86c69fe8f3ce2699a7d83
+      bin:
+        - opa.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall opa
+test: opa --version

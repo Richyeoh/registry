@@ -1,0 +1,36 @@
+api: v1
+name: tesseract
+kind: app
+display: tesseract
+description: Open Source OCR Engine
+homepage: https://tesseract-ocr.github.io
+license: Apache-2.0
+version: 5.5.3.20260724
+channels:
+    stable: 5.5.3.20260724
+provides:
+    - tesseract
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tesseract-ocr/tesseract/releases/download/5.5.3/tesseract-ocr-w64-setup-5.5.3.20260724.exe#/dl.7z
+      sha256: bee9e3434bd94fd65387d9be28cd467a41f61b1275383b55b0f59a1331270ae4
+      bin:
+        - ambiguous_words.exe
+        - classifier_tester.exe
+        - cntraining.exe
+        - combine_lang_model.exe
+        - combine_tessdata.exe
+        - dawg2wordlist.exe
+        - lstmeval.exe
+        - lstmtraining.exe
+        - merge_unicharsets.exe
+        - mftraining.exe
+        - set_unicharset_properties.exe
+        - shapeclustering.exe
+        - tesseract.exe
+        - text2image.exe
+        - unicharset_extractor.exe
+        - wordlist2dawg.exe
+      strip: 1
+test: ambiguous_words --version

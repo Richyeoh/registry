@@ -1,0 +1,21 @@
+api: v1
+name: sharex
+kind: app
+display: sharex
+description: Screen capture, file sharing and productivity tool.
+homepage: https://getsharex.com/
+license: GPL-3.0-only
+version: 22.4.0
+channels:
+    stable: 22.4.0
+provides:
+    - sharex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ShareX/ShareX/releases/download/v22.4.0/ShareX-22.4.0-portable-x64.zip
+      sha256: c321ed353a6c6ae32093927f97c22e0f0627628ce6fa47ed366bcefd05936c7b
+      bin:
+        - ShareX.exe
+      strip: 1
+test: ShareX --version

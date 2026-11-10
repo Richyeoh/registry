@@ -1,0 +1,21 @@
+api: v1
+name: quickjs
+kind: app
+display: quickjs
+description: A small and embeddable Javascript engine with ES2023 support.
+homepage: https://bellard.org/quickjs/
+license: MIT
+version: "2026-06-04"
+channels:
+    stable: "2026-06-04"
+provides:
+    - quickjs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bellard.org/quickjs/binary_releases/quickjs-win-x86_64-2026-06-04.zip
+      sha256: 8d10e75796656f49a3797e2c14465bd67c1f085dba505cf0c8d8a14bf5b19cb4
+      bin:
+        - qjs.exe
+      strip: 1
+test: qjs --version

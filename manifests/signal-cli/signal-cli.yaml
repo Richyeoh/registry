@@ -1,0 +1,21 @@
+api: v1
+name: signal-cli
+kind: app
+display: signal-cli
+description: A cross-platform encrypted messaging service (command line/dbus version).
+homepage: https://github.com/AsamK/signal-cli
+license: GPL-3.0-only
+version: 0.14.10
+channels:
+    stable: 0.14.10
+provides:
+    - signal-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AsamK/signal-cli/releases/download/v0.14.10/signal-cli-0.14.10.tar.gz
+      sha256: 706a57d9faae7525cf732936efdabf210146e3c83f9e8ae7e4e62f5946121c33
+      bin:
+        - bin\signal-cli.bat.exe
+      strip: 1
+test: bin\signal-cli.bat --version

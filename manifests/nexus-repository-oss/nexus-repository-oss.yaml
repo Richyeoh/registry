@@ -1,0 +1,21 @@
+api: v1
+name: nexus-repository-oss
+kind: app
+display: nexus-repository-oss
+description: The free artifact repository with universal format support
+homepage: https://www.sonatype.com/products/repository-oss
+license: Unknown
+version: 3.98.1-01
+channels:
+    stable: 3.98.1-01
+provides:
+    - nexus-repository-oss
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.sonatype.com/nexus/3/nexus-3.98.1-01-win-x86_64.zip
+      sha256: 1beef085ea2fe3f58747c27abefaa86f9d59dc24b93e593d2dea455b786e94d7
+      bin:
+        - nexus\bin\nexus.exe
+      strip: 1
+test: nexus\bin\nexus --version

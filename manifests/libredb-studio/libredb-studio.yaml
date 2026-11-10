@@ -1,0 +1,21 @@
+api: v1
+name: libredb-studio
+kind: app
+display: libredb-studio
+description: Self-hosted, browser-based SQL IDE for cloud-native teams, covering sixteen database engines with AI-assisted query writing and ER diagrams.
+homepage: https://libredb.org
+license: MIT
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - libredb-studio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libredb/libredb-studio/releases/download/1.2.0/libredb-studio-standalone-1.2.0-win32-x64.zip
+      sha256: 5a6bf5ed3d265dfbbad6d065d2727b0944949d36efbd6ba9b06e30baddd08a8c
+      bin:
+        - libredb-studio.exe
+      strip: 1
+test: libredb-studio --version

@@ -1,0 +1,24 @@
+api: v1
+name: jellyfin-media-player
+kind: app
+display: jellyfin-media-player
+description: 'Jellyfin Desktop Client based on Plex Media Player '
+homepage: https://jellyfin.org
+license: GPL-2.0
+version: 1.12.0
+channels:
+    stable: 1.12.0
+provides:
+    - jellyfin-media-player
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jellyfin/jellyfin-media-player/releases/download/v1.12.0/JellyfinMediaPlayer-1.12.0-windows-x64.exe
+      sha256: ad1e39a997bcaca481e54f026f04bca324aecf7a84d00da1e7c43d1eb5ee7014
+      bin:
+        - jellyfin-media-player.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jellyfin-media-player
+test: jellyfin-media-player --version

@@ -1,0 +1,21 @@
+api: v1
+name: editorconfig-checker
+kind: app
+display: editorconfig-checker
+description: A tool to verify that your files are in harmony with your .editorconfig
+homepage: https://editorconfig-checker.github.io
+license: MIT
+version: 4.0.2
+channels:
+    stable: 4.0.2
+provides:
+    - editorconfig-checker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.2/editorconfig-checker-windows-amd64.zip
+      sha256: 857f8f74dfc259d73dac93573e37cf3ce01150787d7b139bf839549cc6b5beb9
+      bin:
+        - editorconfig-checker.exe
+      strip: 1
+test: editorconfig-checker --version

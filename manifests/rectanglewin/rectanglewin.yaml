@@ -1,0 +1,24 @@
+api: v1
+name: rectanglewin
+kind: app
+display: rectanglewin
+description: 'Spectacle/Rectangle for Windows: Hotkey-driven window snapping for Windows 10/11.'
+homepage: https://github.com/ahmetb/RectangleWin
+license: Apache-2.0
+version: 0.2.1
+channels:
+    stable: 0.2.1
+provides:
+    - rectanglewin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ahmetb/RectangleWin/releases/download/v0.2.1/RectangleWin-x64-v0.2.1.exe#/RectangleWin.exe
+      sha256: 1168a7ca0fcbc399114fcdbf6beddaa1e71513e9746d08cf10324f90f3f9f480
+      bin:
+        - rectanglewin.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rectanglewin
+test: rectanglewin --version

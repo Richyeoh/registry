@@ -1,0 +1,25 @@
+api: v1
+name: 7zip-beta
+kind: app
+display: 7zip-beta
+description: Multi-format compression/decompression tool (beta version)
+homepage: https://www.7-zip.org/
+license: LGPL-2.1-or-later,BSD-3-Clause
+version: "26.06"
+channels:
+    stable: "26.06"
+provides:
+    - 7zip-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.7-zip.org/a/7z2606-x64.msi
+      sha256: 6dc822569e777d9a3ecd5ffcbc22b55600af87e6c5d9810a64e8566cf5a4af9f
+      bin:
+        - 7z.exe
+        - 7zG.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall 7zip-beta
+test: 7z --version

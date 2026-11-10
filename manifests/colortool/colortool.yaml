@@ -1,0 +1,21 @@
+api: v1
+name: colortool
+kind: app
+display: colortool
+description: Utility for helping to set the color palette of the Windows Console
+homepage: https://github.com/microsoft/terminal/tree/main/src/tools/ColorTool
+license: MIT
+version: "1904.29002"
+channels:
+    stable: "1904.29002"
+provides:
+    - colortool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/terminal/releases/download/1904.29002/colortool.zip
+      sha256: 2732e3e4e7bfdaa3230bae7a9a43744e01e6f3c8c4a9627e52b14ad460f1c000
+      bin:
+        - colortool.exe
+      strip: 1
+test: colortool --version

@@ -1,0 +1,21 @@
+api: v1
+name: better-joy
+kind: app
+display: better-joy
+description: Allows to use the Nintendo Switch Pro Controller, Joycons and SNES controller in various emulators or as generic XInput
+homepage: https://github.com/Davidobot/BetterJoy
+license: MIT
+version: "7.1"
+channels:
+    stable: "7.1"
+provides:
+    - better-joy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Davidobot/BetterJoy/releases/download/v7.1/BetterJoy_v7.1.zip
+      sha256: a9ffe5bb14b05e775f34f9eeff41fca89a350d49252eedae1e330e88952e7f36
+      bin:
+        - better-joy.exe
+      strip: 1
+test: better-joy --version

@@ -1,0 +1,32 @@
+api: v1
+name: activitywatchbeta
+kind: app
+display: ActivityWatch
+description: Time tracker
+homepage: https://activitywatch.net/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 0.14.2
+channels:
+    stable: 0.14.2
+provides:
+    - activitywatchbeta
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/ActivityWatch/activitywatch/releases/download/v0.14.2/activitywatch-v0.14.2-macos-arm64.dmg
+      sha256: 8341d56b5b43a60ca04ea2a3cc5ffbfb5e661cdb6430145d9ceb0f49dca63d65
+      bin:
+        - activitywatchbeta
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/ActivityWatch/activitywatch/releases/download/v0.14.2/activitywatch-v0.14.2-macos-arm64.dmg
+      sha256: 8341d56b5b43a60ca04ea2a3cc5ffbfb5e661cdb6430145d9ceb0f49dca63d65
+      bin:
+        - activitywatchbeta
+      strip: 1
+test: activitywatchbeta --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

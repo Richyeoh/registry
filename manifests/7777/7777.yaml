@@ -1,0 +1,32 @@
+api: v1
+name: "7777"
+kind: app
+display: "7777"
+description: Remote AWS database on local port 7777
+homepage: https://port7777.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.2.1
+channels:
+    stable: 1.2.1
+provides:
+    - "7777"
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://releases.port7777.com/1.2.1/macos/7777
+      sha256: 1aec08c7148f88b0ba3dac5451414f804d397de8f0c216e41d91d2034271eac9
+      bin:
+        - "7777"
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://releases.port7777.com/1.2.1/macos/7777
+      sha256: 1aec08c7148f88b0ba3dac5451414f804d397de8f0c216e41d91d2034271eac9
+      bin:
+        - "7777"
+      strip: 1
+test: 7777 --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

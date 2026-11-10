@@ -1,0 +1,21 @@
+api: v1
+name: servy
+kind: app
+display: servy
+description: Servy lets you run any app as a native Windows service with full control over the working directory, startup type, process priority, CPU affinity, logging, health checks, environment variables with expansion, dependencies, pre-launch and post-launch hooks, pre-stop and post-stop hooks, and parameters. Services can run as Local System, a local or domain account, or a Group Managed Service Account (gMSA).
+homepage: https://servy-win.github.io
+license: MIT
+version: "10.8"
+channels:
+    stable: "10.8"
+provides:
+    - servy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aelassas/servy/releases/download/v10.8/servy-10.8-x64-portable.7z
+      sha256: 41244bd690021f3ae0bf66cd56f82161ba75ec22fc2dff43078eec1d4f45938a
+      bin:
+        - servy-cli.exe
+      strip: 1
+test: servy-cli --version

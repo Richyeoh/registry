@@ -1,0 +1,21 @@
+api: v1
+name: git-town
+kind: app
+display: git-town
+description: Git plugin that adds Git commands that make collaborative software development more efficient and safe.
+homepage: https://www.git-town.com
+license: MIT
+version: 24.1.1
+channels:
+    stable: 24.1.1
+provides:
+    - git-town
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-town/git-town/releases/download/v24.1.1/git-town_windows_intel_64.zip
+      sha256: 4048bb7e8b1bf8298e15713d1834ebad11c484191e37b57f0f5178a9e022b685
+      bin:
+        - git-town.exe
+      strip: 1
+test: git-town --version

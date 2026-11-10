@@ -1,0 +1,21 @@
+api: v1
+name: artcraft
+kind: app
+display: artcraft
+description: IDE for interactive AI image and video creation
+homepage: https://getartcraft.com/
+license: Unknown
+version: 0.41.1
+channels:
+    stable: 0.41.1
+provides:
+    - artcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/artcraft/releases/download/artcraft-v0.41.1/ArtCraft_0.41.1_x64-setup.exe#/dl.7z
+      sha256: fb80cad705a182fdd7bbc17bb2bd34f1bd74561c539d97e69ba6143b616ab038
+      bin:
+        - artcraft.exe
+      strip: 1
+test: artcraft --version

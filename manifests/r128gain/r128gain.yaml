@@ -1,0 +1,21 @@
+api: v1
+name: r128gain
+kind: app
+display: r128gain
+description: Fast audio loudness scanner & tagger (ReplayGain v2 / R128)
+homepage: https://github.com/desbma/r128gain
+license: LGPL-2.1-only
+version: 1.0.7
+channels:
+    stable: 1.0.7
+provides:
+    - r128gain
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/desbma/r128gain/releases/download/1.0.7/r128gain_win64.7z
+      sha256: eb032bd4aff4fea0987c99f3e91239359c887648bb2429935ae944d01a3dda88
+      bin:
+        - r128gain.exe
+      strip: 1
+test: r128gain --version

@@ -1,0 +1,39 @@
+api: v1
+name: ansifilter
+kind: app
+display: ansifilter
+description: Strip or convert ANSI codes into HTML, (La)Tex, RTF, or BBCode
+homepage: http://andre-simon.de/doku/ansifilter/en/ansifilter.php
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "2.24"
+channels:
+    stable: "2.24"
+provides:
+    - ansifilter
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansifilter/blobs/sha256:ce2d3b8f8b9daf5eb918fc434b3b463f535e831baa3019a29bcc29342e979de6
+      sha256: ce2d3b8f8b9daf5eb918fc434b3b463f535e831baa3019a29bcc29342e979de6
+      bin:
+        - ansifilter
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/ansifilter/blobs/sha256:cf3d002314bd6fa6f9ca475909141cfcc3b2bbbbf5b6b6055525a7879e0e4a50
+      sha256: cf3d002314bd6fa6f9ca475909141cfcc3b2bbbbf5b6b6055525a7879e0e4a50
+      bin:
+        - ansifilter
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/ansifilter/blobs/sha256:ee7a9eb4a413f662525810d547f672a6f57702bf58dfde372ec2193f60b8979b
+      sha256: ee7a9eb4a413f662525810d547f672a6f57702bf58dfde372ec2193f60b8979b
+      bin:
+        - ansifilter
+      strip: 1
+test: ansifilter --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

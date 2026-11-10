@@ -1,0 +1,21 @@
+api: v1
+name: istioctl
+kind: app
+display: istioctl
+description: Configuration command line utility for service operators to debug and diagnose their Istio mesh.
+homepage: https://istio.io/latest/docs/reference/commands/istioctl/
+license: Apache-2.0
+version: 1.32.0
+channels:
+    stable: 1.32.0
+provides:
+    - istioctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/istio/istio/releases/download/1.32.0/istioctl-1.32.0-win.zip
+      sha256: 5a72899c25aa74b03a2c82b1663b393cf47c282733aab58172f30c841699edb0
+      bin:
+        - istioctl.exe
+      strip: 1
+test: istioctl --version

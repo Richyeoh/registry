@@ -1,0 +1,21 @@
+api: v1
+name: gink
+kind: app
+display: gink
+description: On-screen annotation software inspired by Epic Pen
+homepage: https://github.com/geovens/gInk
+license: MIT
+version: 1.1.1
+channels:
+    stable: 1.1.1
+provides:
+    - gink
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/geovens/gInk/releases/download/v1.1.1/gInk_v1.1.1.zip
+      sha256: 59dc0b93d5cfafd627f15b54a5000034fa0ed16ff48b88e85aa63f1aa7fa1a36
+      bin:
+        - gInk.exe
+      strip: 1
+test: gInk --version

@@ -1,0 +1,24 @@
+api: v1
+name: cactusviewer
+kind: app
+display: cactusviewer
+description: A small single file image viewer written in C/C++.
+homepage: https://github.com/Wassimulator/CactusViewer
+license: BSD 2-Clause
+version: 2.3.0
+channels:
+    stable: 2.3.0
+provides:
+    - cactusviewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Wassimulator/CactusViewer/releases/download/v2.3.0/CactusViewer.exe
+      sha256: f9e4bea5427af9bf244ed57e67f1edc4fa20408bb64cc0f8b43ac030ae9cd234
+      bin:
+        - cactusviewer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cactusviewer
+test: cactusviewer --version

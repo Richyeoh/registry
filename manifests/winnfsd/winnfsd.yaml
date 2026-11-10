@@ -1,0 +1,24 @@
+api: v1
+name: winnfsd
+kind: app
+display: winnfsd
+description: Standalone, simple NFS Server for Windows
+homepage: https://github.com/winnfsd/winnfsd
+license: GPL-2.0-only
+version: 2.4.0
+channels:
+    stable: 2.4.0
+provides:
+    - winnfsd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/winnfsd/winnfsd/releases/download/2.4.0/WinNFSd.exe
+      sha256: 35cb5a74b2bf2aaa94302f5c9ed70786b61f245b96dc1f20214fe337c24af6b2
+      bin:
+        - WinNFSd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall winnfsd
+test: WinNFSd --version

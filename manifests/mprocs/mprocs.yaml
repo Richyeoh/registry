@@ -1,0 +1,21 @@
+api: v1
+name: mprocs
+kind: app
+display: mprocs
+description: Run multiple commands in parallel (Deprecated, please use `main/dekit` instead).
+homepage: https://dekit.run/
+license: MIT
+version: 0.9.6
+channels:
+    stable: 0.9.6
+provides:
+    - mprocs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pvolok/dekit/releases/download/v0.9.6/mprocs-0.9.6-windows-x86_64.zip
+      sha256: 9dc6e49ef47c7aa2e6a2844503d6cfa34e51a4d15dd78abef6e6de2fc10e5765
+      bin:
+        - mprocs.exe
+      strip: 1
+test: mprocs --version

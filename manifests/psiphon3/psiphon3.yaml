@@ -1,0 +1,24 @@
+api: v1
+name: psiphon3
+kind: app
+display: psiphon3
+description: A centrally managed, geographically diverse network of thousands of proxy servers, using a performance-oriented, single hop architecture, for Internet censorship circumvention
+homepage: https://psiphon.ca
+license: GPL-3.0-only
+version: "189"
+channels:
+    stable: "189"
+provides:
+    - psiphon3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://psiphon.ca/psiphon3.exe
+      sha256: 87dcd5d8787d719426c585020f06bee864abccb991f0bf79913c726fabc8ed2d
+      bin:
+        - psiphon3.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall psiphon3
+test: psiphon3 --version

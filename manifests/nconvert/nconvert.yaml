@@ -1,0 +1,21 @@
+api: v1
+name: nconvert
+kind: app
+display: nconvert
+description: A command line batch image processor that is compatible with several image formats.
+homepage: https://www.xnview.com/en/nconvert/
+license: Freeware
+version: "7.300"
+channels:
+    stable: "7.300"
+provides:
+    - nconvert
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.xnview.com/NConvert-win64.zip
+      sha256: 5eb578f57f03ed223c8b0a1dd39fd587a5090290db94d0d90e6f07f76fb16ff4
+      bin:
+        - nconvert.exe
+      strip: 1
+test: nconvert --version

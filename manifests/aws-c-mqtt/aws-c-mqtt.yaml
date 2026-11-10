@@ -1,0 +1,39 @@
+api: v1
+name: aws-c-mqtt
+kind: app
+display: aws-c-mqtt
+description: C99 implementation of the MQTT 3.1.1 specification
+homepage: https://github.com/awslabs/aws-c-mqtt
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.1.2
+channels:
+    stable: 1.1.2
+provides:
+    - aws-c-mqtt
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:5adbf3549a16bbdcd8575ebd38de7edbdd2ab4d4b63d35547f318b43ab5228e4
+      sha256: 5adbf3549a16bbdcd8575ebd38de7edbdd2ab4d4b63d35547f318b43ab5228e4
+      bin:
+        - aws-c-mqtt
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:dcb26e2faabe723ff5fe06753302211892849b9f3db673d55e012d4b08547542
+      sha256: dcb26e2faabe723ff5fe06753302211892849b9f3db673d55e012d4b08547542
+      bin:
+        - aws-c-mqtt
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-c-mqtt/blobs/sha256:ae5325e0e0d043ce431bc2b9b8bac1ab6bbfc9c46c66e56fa32b7d849d622006
+      sha256: ae5325e0e0d043ce431bc2b9b8bac1ab6bbfc9c46c66e56fa32b7d849d622006
+      bin:
+        - aws-c-mqtt
+      strip: 1
+test: aws-c-mqtt --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

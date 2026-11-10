@@ -1,0 +1,21 @@
+api: v1
+name: libreoffice
+kind: app
+display: libreoffice
+description: Powerful and free office suite, a successor to OpenOffice(.org).
+homepage: https://libreoffice.org/
+license: MPL-2.0
+version: 26.8.2
+channels:
+    stable: 26.8.2
+provides:
+    - libreoffice
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.documentfoundation.org/libreoffice/stable/26.8.2/win/x86_64/LibreOffice_26.8.2_Win_x86-64.msi#/dl.msi_
+      sha256: ff4b911403b67ee9e6249f820f9782c44bb32c94fdaa45b0da53a8e419e5307a
+      bin:
+        - libreoffice.exe
+      strip: 1
+test: libreoffice --version

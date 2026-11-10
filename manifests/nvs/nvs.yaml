@@ -1,0 +1,24 @@
+api: v1
+name: nvs
+kind: app
+display: nvs
+description: Node Version Switcher - A cross-platform tool for switching between versions and forks of Node.js
+homepage: https://github.com/jasongin/nvs
+license: MIT
+version: 1.7.1
+channels:
+    stable: 1.7.1
+provides:
+    - nvs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jasongin/nvs/releases/download/v1.7.1/nvs-1.7.1.msi
+      sha256: 0769f6e8154c30be7fcaff2cd185fe278219f93b3cb4e6f86be869761e9bd5d1
+      bin:
+        - nvs.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall nvs
+test: nvs --version

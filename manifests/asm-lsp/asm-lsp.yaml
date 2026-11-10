@@ -1,0 +1,39 @@
+api: v1
+name: asm-lsp
+kind: app
+display: asm-lsp
+description: Language server for NASM/GAS/GO Assembly
+homepage: https://github.com/bergercookie/asm-lsp
+license: BSD-2-Clause
+keywords:
+    - brew
+    - homebrew
+version: 0.10.1
+channels:
+    stable: 0.10.1
+provides:
+    - asm-lsp
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asm-lsp/blobs/sha256:4c2955de377dd27c4226e64d2701f0e14086a85dce4d43635dbcbc84ac4e4f35
+      sha256: 4c2955de377dd27c4226e64d2701f0e14086a85dce4d43635dbcbc84ac4e4f35
+      bin:
+        - asm-lsp
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asm-lsp/blobs/sha256:a89c93ae414c3f676164659e470b5c750850b570ac540e7899075dd6a02899b3
+      sha256: a89c93ae414c3f676164659e470b5c750850b570ac540e7899075dd6a02899b3
+      bin:
+        - asm-lsp
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asm-lsp/blobs/sha256:c51bd28c18b4202f1090fb19001f73eee16696fd957944001fc021edfaeb0735
+      sha256: c51bd28c18b4202f1090fb19001f73eee16696fd957944001fc021edfaeb0735
+      bin:
+        - asm-lsp
+      strip: 1
+test: asm-lsp --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,29 @@
+api: v1
+name: puttie
+kind: app
+display: puttie
+description: A fork of the SSH/Telnet client PuTTY with new features such as background images, transparent window, clickable URLs and zooming.
+homepage: https://github.com/lalbornoz/PuTTie
+license: MIT
+version: 20240523-7604753a
+channels:
+    stable: 20240523-7604753a
+provides:
+    - puttie
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lalbornoz/PuTTie/releases/download/PuTTie-file-Release-7604753a/PuTTie-file-Release-7604753a.zip
+      sha256: 935ae1c900b9ab9cf4cb3dedb85a641c27747b1170599e02c6846e6d0b927199
+      bin:
+        - pageant.exe
+        - plink.exe
+        - pscp.exe
+        - psftp.exe
+        - psocks.exe
+        - puttie.exe
+        - puttie-portable.exe
+        - puttygen.exe
+        - puttytel.exe
+      strip: 1
+test: pageant --version

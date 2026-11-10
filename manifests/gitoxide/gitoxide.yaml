@@ -1,0 +1,22 @@
+api: v1
+name: gitoxide
+kind: app
+display: gitoxide
+description: An idiomatic, lean, fast & safe pure Rust implementation of Git
+homepage: https://github.com/GitoxideLabs/gitoxide
+license: Apache-2.0|MIT
+version: 0.61.0
+channels:
+    stable: 0.61.0
+provides:
+    - gitoxide
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GitoxideLabs/gitoxide/releases/download/v0.61.0/gitoxide-max-v0.61.0-x86_64-pc-windows-msvc.zip
+      sha256: b1fcc4209c590eb390b5190eb3555312d584ec6d6e5145dc3454f77de10b04ef
+      bin:
+        - gix.exe
+        - ein.exe
+      strip: 1
+test: gix --version

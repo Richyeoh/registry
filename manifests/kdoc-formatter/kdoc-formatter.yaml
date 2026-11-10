@@ -1,0 +1,21 @@
+api: v1
+name: kdoc-formatter
+kind: app
+display: kdoc-formatter
+description: Reformats Kotlin KDoc comments, reflowing text and other cleanup
+homepage: https://github.com/tnorbye/kdoc-formatter
+license: Apache-2.0
+version: 1.6.9
+channels:
+    stable: 1.6.9
+provides:
+    - kdoc-formatter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tnorbye/kdoc-formatter/releases/download/v1.6.9/kdoc-formatter-1.6.9.zip
+      sha256: 4bf484b32b6432d06c60b7d7bda8c5fc93197177e48af3a5052f71a86ed53fcf
+      bin:
+        - bin\kdoc-formatter.bat.exe
+      strip: 1
+test: bin\kdoc-formatter.bat --version

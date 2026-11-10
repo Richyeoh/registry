@@ -1,0 +1,21 @@
+api: v1
+name: dark
+kind: app
+display: dark
+description: WiX (Windows Installer XML) Toolset Decompiler
+homepage: https://wixtoolset.org/
+license: MS-RL
+version: 3.14.1
+channels:
+    stable: 3.14.1
+provides:
+    - dark
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/dark/dark-3.14.1.zip
+      sha256: cad986d43d59ed27c711b15113ea118c3a600c7e625130201ba946bcc70f5905
+      bin:
+        - dark.exe
+      strip: 1
+test: dark --version

@@ -1,0 +1,21 @@
+api: v1
+name: picotorrent
+kind: app
+display: picotorrent
+description: A tiny, hackable BitTorrent client with low memory usage, high performance and a native user interface.
+homepage: https://picotorrent.org
+license: Unknown
+version: 0.25.0
+channels:
+    stable: 0.25.0
+provides:
+    - picotorrent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/picotorrent/picotorrent/releases/download/v0.25.0/PicoTorrent-0.25.0-x64.zip
+      sha256: 375c2445db76b7d51b7cd351b1c5b40f895fb15b502da6073e19aaf6cb08cd76
+      bin:
+        - PicoTorrent.exe
+      strip: 1
+test: PicoTorrent --version

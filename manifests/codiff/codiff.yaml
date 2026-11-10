@@ -1,0 +1,21 @@
+api: v1
+name: codiff
+kind: app
+display: codiff
+description: A fast local diff viewer.
+homepage: https://github.com/nkzw-tech/codiff
+license: MIT
+version: 1.19.1
+channels:
+    stable: 1.19.1
+provides:
+    - codiff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nkzw-tech/codiff/releases/download/v1.19.1/Codiff-win32-x64-1.19.1.zip
+      sha256: 27f717eac523570ca07e9babc9370371fde791adbda2206fa20609467a805df9
+      bin:
+        - codiff.exe
+      strip: 1
+test: codiff --version

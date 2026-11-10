@@ -1,0 +1,22 @@
+api: v1
+name: tftpd
+kind: app
+display: tftpd
+description: Lightweight multi-threaded TFTP, DNS, SNTP, SYSLOG and DHCP server
+homepage: https://pjo2.github.io/tftpd64/
+license: GPL-2.0-only
+version: "4.74"
+channels:
+    stable: "4.74"
+provides:
+    - tftpd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PJO2/tftpd64/releases/download/v4.74/tftpd64_portable_v4.74.zip
+      sha256: 3ad38a71c0d7d42915429f8f02945e27bcf88161ad1028980d1364af8f76bf22
+      bin:
+        - tftpd64.exe
+        - tftpd64.exe
+      strip: 1
+test: tftpd64 --version

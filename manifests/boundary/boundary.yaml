@@ -1,0 +1,21 @@
+api: v1
+name: boundary
+kind: app
+display: boundary
+description: Simple and secure remote access for any system from anywhere based on user identity
+homepage: https://www.boundaryproject.io
+license: MPL-2.0
+version: 0.21.3
+channels:
+    stable: 0.21.3
+provides:
+    - boundary
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.hashicorp.com/boundary/0.21.3/boundary_0.21.3_windows_amd64.zip
+      sha256: 34a143a6796d3c6cfb10d6858dd25ccfadf0008eec06a074315c8e2e65eb03a3
+      bin:
+        - boundary.exe
+      strip: 1
+test: boundary --version

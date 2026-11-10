@@ -1,0 +1,21 @@
+api: v1
+name: inky
+kind: app
+display: inky
+description: 'An editor for ink: inkle''s narrative scripting language'
+homepage: https://www.inklestudios.com/ink/
+license: MIT
+version: 0.15.2
+channels:
+    stable: 0.15.2
+provides:
+    - inky
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/inkle/inky/releases/download/0.15.2/Inky_windows_64.zip
+      sha256: c6cf8cf567d63ff322e8a41dfda453200b02d94403ef403cbd43778147f8411c
+      bin:
+        - Inky.exe
+      strip: 1
+test: Inky --version

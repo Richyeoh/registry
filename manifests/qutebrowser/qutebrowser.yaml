@@ -1,0 +1,21 @@
+api: v1
+name: qutebrowser
+kind: app
+display: qutebrowser
+description: A keyboard-focused browser with a minimal GUI
+homepage: https://www.qutebrowser.org
+license: GPL-3.0-only
+version: 3.7.0
+channels:
+    stable: 3.7.0
+provides:
+    - qutebrowser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/qutebrowser/qutebrowser/releases/download/v3.7.0/qutebrowser-3.7.0-windows-standalone.zip
+      sha256: 6620e84015b5948b8e1016b1a29f4822044bf36fd2eff5f763692aee2668a8a0
+      bin:
+        - qutebrowser.exe
+      strip: 1
+test: qutebrowser --version

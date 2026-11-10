@@ -1,0 +1,55 @@
+api: v1
+name: agg
+kind: app
+display: agg
+description: Asciinema GIF generator
+homepage: https://docs.asciinema.org/manual/agg/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.9.0
+channels:
+    stable: 1.9.0
+provides:
+    - agg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/asciinema/agg/releases/download/v1.9.0/agg-x86_64-pc-windows-msvc.exe#/agg.exe
+      sha256: 810baf5506e74ca65d8ed85be3db58791086c8b7b0a17c9018d7fede473f0055
+      bin:
+        - agg.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/agg/blobs/sha256:bf1c490d4e4868923ca57e97b9399f88f17660c78a529781f89d6a3617c76f3c
+      sha256: bf1c490d4e4868923ca57e97b9399f88f17660c78a529781f89d6a3617c76f3c
+      bin:
+        - agg
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agg/blobs/sha256:4e7bcecd09646382d434b18ddc3a180b3a2938ca889975bf6b46b2dad4d064ae
+      sha256: 4e7bcecd09646382d434b18ddc3a180b3a2938ca889975bf6b46b2dad4d064ae
+      bin:
+        - agg
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/agg/blobs/sha256:b6049f4fad97d2d198709c7426b57f27d8ec4cd242a45ab4a8d2c0b0e4110d89
+      sha256: b6049f4fad97d2d198709c7426b57f27d8ec4cd242a45ab4a8d2c0b0e4110d89
+      bin:
+        - agg
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agg/blobs/sha256:774515c24c73c13d3b43f51741c0eb909fc89ce517a41d97ce8dfb6211f7c147
+      sha256: 774515c24c73c13d3b43f51741c0eb909fc89ce517a41d97ce8dfb6211f7c147
+      bin:
+        - agg
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall agg
+test: agg --version

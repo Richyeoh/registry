@@ -1,0 +1,39 @@
+api: v1
+name: akamai
+kind: app
+display: akamai
+description: CLI toolkit for working with Akamai's APIs
+homepage: https://github.com/akamai/cli
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.0.6
+channels:
+    stable: 2.0.6
+provides:
+    - akamai
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/akamai/blobs/sha256:c359067b64ff126a1d8b136f6f348d53857c42e3570c972be87e5cd08b155af9
+      sha256: c359067b64ff126a1d8b136f6f348d53857c42e3570c972be87e5cd08b155af9
+      bin:
+        - akamai
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/akamai/blobs/sha256:6c999d303372298ae485fff5c56d4b2e0bf4f196f44e98652a68da4f68f33715
+      sha256: 6c999d303372298ae485fff5c56d4b2e0bf4f196f44e98652a68da4f68f33715
+      bin:
+        - akamai
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/akamai/blobs/sha256:383615d46ec13498b0732dd513b412121983bbd677ecc565740c3b1a3b4598d3
+      sha256: 383615d46ec13498b0732dd513b412121983bbd677ecc565740c3b1a3b4598d3
+      bin:
+        - akamai
+      strip: 1
+test: akamai --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

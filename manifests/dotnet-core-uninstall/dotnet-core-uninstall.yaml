@@ -1,0 +1,24 @@
+api: v1
+name: dotnet-core-uninstall
+kind: app
+display: dotnet-core-uninstall
+description: The .NET uninstall tool (dotnet-core-uninstall) lets you remove .NET SDKs and runtimes from a system.
+homepage: https://learn.microsoft.com/en-us/dotnet/core/additional-tools/uninstall-tool
+license: MIT
+version: 1.7.661902
+channels:
+    stable: 1.7.661902
+provides:
+    - dotnet-core-uninstall
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dotnet/cli-lab/releases/download/1.7.661902/dotnet-core-uninstall.msi
+      sha256: 10f6bbacfaae062dcfcde8311cf8aaa3f8b6523e724e9bbc221c17adb59de65c
+      bin:
+        - dotnet-core-uninstall.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall dotnet-core-uninstall
+test: dotnet-core-uninstall --version

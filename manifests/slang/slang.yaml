@@ -1,0 +1,22 @@
+api: v1
+name: slang
+kind: app
+display: slang
+description: A new language and compiler for shader development.
+homepage: https://shader-slang.com/
+license: MIT
+version: "2026.21"
+channels:
+    stable: "2026.21"
+provides:
+    - slang
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shader-slang/slang/releases/download/v2026.21/slang-2026.21-windows-x86_64.zip
+      sha256: 4b6f509e73397175ed36a341beb7ad15f4fff5feaf5f6d95fecf896c0d86b8de
+      bin:
+        - slangc.exe
+        - slangd.exe
+      strip: 1
+test: slangc --version

@@ -1,0 +1,21 @@
+api: v1
+name: gdu
+kind: app
+display: gdu
+description: A Fast Console Disk Usage Analyzer
+homepage: https://github.com/dundee/gdu
+license: MIT
+version: 5.39.0
+channels:
+    stable: 5.39.0
+provides:
+    - gdu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dundee/gdu/releases/download/v5.39.0/gdu_windows_amd64.exe.zip
+      sha256: 2c2c28a4edeb1a2742076ede3a0fc7851589d482c8cf679f293faa17ed9888b9
+      bin:
+        - gdu.exe
+      strip: 1
+test: gdu --version

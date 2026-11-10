@@ -1,0 +1,21 @@
+api: v1
+name: glow
+kind: app
+display: glow
+description: Markdown reader for the terminal with a TUI and encrypted cloud stash
+homepage: https://github.com/charmbracelet/glow
+license: MIT
+version: 3.0.0
+channels:
+    stable: 3.0.0
+provides:
+    - glow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/charmbracelet/glow/releases/download/v3.0.0/glow_3.0.0_Windows_x86_64.zip
+      sha256: d8907e07436ecbb6738bc0e3bbf8aa6159e351f95082e9db3c3fc4200086f809
+      bin:
+        - glow.exe
+      strip: 1
+test: glow --version

@@ -1,0 +1,22 @@
+api: v1
+name: codewhale
+kind: app
+display: codewhale
+description: Open-source coding agent for your terminal (Formerly known as DeepSeek-TUI).
+homepage: https://codewhale.net
+license: MIT
+version: 0.10.2
+channels:
+    stable: 0.10.2
+provides:
+    - codewhale
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/codewhale-hq/Codewhale/releases/download/v0.10.2/codewhale-windows-x64-portable.zip
+      sha256: 5c2e07b8887d9aa4f344ccd47677ba215fd9f8a67c4ec347096fc7e1cd6c7410
+      bin:
+        - codew.exe
+        - codewhale.exe
+      strip: 1
+test: codew --version

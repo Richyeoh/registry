@@ -1,0 +1,21 @@
+api: v1
+name: ollydbg
+kind: app
+display: ollydbg
+description: Assembler-level analysing debugger for Windows binaries
+homepage: https://www.ollydbg.de/
+license: Unknown
+version: "1.10"
+channels:
+    stable: "1.10"
+provides:
+    - ollydbg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.ollydbg.de/odbg110.zip
+      sha256: 73b1770f28893dab22196eb58d45ede8ddf5444009960ccc0107d09881a7cd1e
+      bin:
+        - ollydbg.exe
+      strip: 1
+test: ollydbg --version

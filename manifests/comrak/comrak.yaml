@@ -1,0 +1,24 @@
+api: v1
+name: comrak
+kind: app
+display: comrak
+description: A Rust-based CommonMark + GFM compatible Markdown parser and renderer.
+homepage: https://comrak.ee
+license: Unknown
+version: 0.59.0
+channels:
+    stable: 0.59.0
+provides:
+    - comrak
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kivikakk/comrak/releases/download/v0.59.0/comrak-0.59.0-x86_64-pc-windows-msvc.exe#/comrak.exe
+      sha256: ac62328adb9344a11e19f7a5d641361bb29118fea56233f83acddd7eb4d0bb2c
+      bin:
+        - comrak.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall comrak
+test: comrak --version

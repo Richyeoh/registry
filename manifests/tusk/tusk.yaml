@@ -1,0 +1,21 @@
+api: v1
+name: tusk
+kind: app
+display: tusk
+description: Refined Evernote desktop app
+homepage: https://klaussinani.tech/tusk/
+license: MIT
+version: 0.23.0
+channels:
+    stable: 0.23.0
+provides:
+    - tusk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/klaussinani/tusk/releases/download/v0.23.0/tusk-0.23.0.exe#/dl.7z
+      sha256: 838b087669b43c54220436e7007035a8c90b4bc94543e9bd9eb5de2961644b05
+      bin:
+        - Tusk.exe
+      strip: 1
+test: Tusk --version

@@ -1,0 +1,21 @@
+api: v1
+name: fnox
+kind: app
+display: fnox
+description: Encrypted/remote secret manager.
+homepage: https://fnox.jdx.dev
+license: MIT
+version: 1.48.0
+channels:
+    stable: 1.48.0
+provides:
+    - fnox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jdx/fnox/releases/download/v1.48.0/fnox-x86_64-pc-windows-msvc.zip
+      sha256: 49b4024d758630f86bc6f47716088bbebc7e372ae59bc4384b57ba5b9ca41be6
+      bin:
+        - fnox.exe
+      strip: 1
+test: fnox --version

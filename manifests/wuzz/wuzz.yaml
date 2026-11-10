@@ -1,0 +1,24 @@
+api: v1
+name: wuzz
+kind: app
+display: wuzz
+description: Interactive cli tool for HTTP inspection
+homepage: https://github.com/asciimoo/wuzz
+license: AGPL-3.0-only
+version: 0.5.0
+channels:
+    stable: 0.5.0
+provides:
+    - wuzz
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_windows_amd64.exe#/wuzz.exe
+      sha256: c23d9fa911eef513d7cdda239f3c79bed0a263d4c206250786aa8e00983691bd
+      bin:
+        - wuzz.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall wuzz
+test: wuzz --version

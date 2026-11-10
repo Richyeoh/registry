@@ -1,0 +1,32 @@
+api: v1
+name: poppler
+kind: app
+display: poppler
+description: PDF rendering library
+homepage: https://github.com/oschwartz10612/poppler-windows
+license: MIT
+version: 26.09.0-0
+channels:
+    stable: 26.09.0-0
+provides:
+    - poppler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oschwartz10612/poppler-windows/releases/download/v26.09.0-0/Release-26.09.0-0.zip
+      sha256: 7a6f256a0ddf7536182246a5733331bf4677cbcc34f4663774947ad34556c8d0
+      bin:
+        - bin\pdfattach.exe
+        - bin\pdfdetach.exe
+        - bin\pdffonts.exe
+        - bin\pdfimages.exe
+        - bin\pdfinfo.exe
+        - bin\pdfseparate.exe
+        - bin\pdftocairo.exe
+        - bin\pdftohtml.exe
+        - bin\pdftoppm.exe
+        - bin\pdftops.exe
+        - bin\pdftotext.exe
+        - bin\pdfunite.exe
+      strip: 1
+test: bin\pdfattach --version

@@ -1,0 +1,21 @@
+api: v1
+name: colorcontrol
+kind: app
+display: colorcontrol
+description: Easily change NVIDIA display settings and/or control LG TV's
+homepage: https://github.com/Maassoft/ColorControl
+license: Freeware
+version: 11.0.0.0
+channels:
+    stable: 11.0.0.0
+provides:
+    - colorcontrol
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Maassoft/ColorControl/releases/download/v11.0.0.0/ColorControl.zip
+      sha256: d72ef678f524f3438531353923d33e80b6b52f16b3cb6d73481b4079e21c7474
+      bin:
+        - colorcontrol.exe
+      strip: 1
+test: colorcontrol --version

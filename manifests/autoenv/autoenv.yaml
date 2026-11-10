@@ -1,0 +1,25 @@
+api: v1
+name: autoenv
+kind: app
+display: autoenv
+description: Per-project, per-directory shell environments
+homepage: https://github.com/hyperupcall/autoenv
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.4.0
+channels:
+    stable: 0.4.0
+provides:
+    - autoenv
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autoenv/blobs/sha256:7d291627ba82fc28ef378728ea6969eb3cebed1e8b2c17b9655cf05745102362
+      sha256: 7d291627ba82fc28ef378728ea6969eb3cebed1e8b2c17b9655cf05745102362
+      bin:
+        - autoenv
+      strip: 1
+test: autoenv --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: qq-nt
+kind: app
+display: qq-nt
+description: An instant messaging software service developed by Tencent
+homepage: https://im.qq.com/pcqq/index.shtml
+license: Unknown
+version: 9.9.33.260813
+channels:
+    stable: 9.9.33.260813
+provides:
+    - qq-nt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://qqdl.gtimg.cn/qqfile/QQNT/9.9.33/release/497e2f1f/QQ_9.9.33_260813_x64_01.exe#/dl.7z
+      sha256: b25c0d3ce9df764074a9118d0ded927e1b2d7ebf60e306112e8df18a040ec492
+      bin:
+        - qq-nt.exe
+      strip: 1
+test: qq-nt --version

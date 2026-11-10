@@ -1,0 +1,22 @@
+api: v1
+name: chkcpu
+kind: app
+display: chkcpu
+description: Checks CPU Vendor, Model, Internal speed, and L1 cache mode settings.
+homepage: http://www.steunebrink.info/chkcpu.htm
+license: Unknown
+version: "2.15"
+channels:
+    stable: "2.15"
+provides:
+    - chkcpu
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.steunebrink.info/ckcpu215.zip
+      sha256: f896e42cfef67bbac90c4c51eb9791401455ad9b02edbf65de05f84a96d88897
+      bin:
+        - chkcpu32.exe
+        - chkcpu32.exe
+      strip: 1
+test: chkcpu32 --version

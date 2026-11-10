@@ -1,0 +1,24 @@
+api: v1
+name: rye
+kind: app
+display: rye
+description: A comprehensive project and package management solution for Python
+homepage: https://rye.astral.sh/
+license: MIT
+version: 0.44.0
+channels:
+    stable: 0.44.0
+provides:
+    - rye
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/astral-sh/rye/releases/download/0.44.0/rye-x86_64-windows.exe#/rye.exe
+      sha256: f48d3f3e4eddcaf39c4665e7953e177589006e8ed86772ce782f2b1c4ffb4c0f
+      bin:
+        - rye.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rye
+test: rye --version

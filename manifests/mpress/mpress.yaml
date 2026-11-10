@@ -1,0 +1,21 @@
+api: v1
+name: mpress
+kind: app
+display: mpress
+description: High-performance executable packer for PE32+ and .NET
+homepage: https://www.matcode.com/mpress.htm
+license: BSD-3-Clause
+version: "2.19"
+channels:
+    stable: "2.19"
+provides:
+    - mpress
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/mpress/mpress-2.19.zip
+      sha256: 19ffee93706dff67f83d9ef48c0c794dea761d4459b11c37f9bc65b04af736c5
+      bin:
+        - mpress.exe
+      strip: 1
+test: mpress --version

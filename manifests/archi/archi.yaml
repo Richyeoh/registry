@@ -1,0 +1,21 @@
+api: v1
+name: archi
+kind: app
+display: archi
+description: A tool and editor to create ArchiMate models
+homepage: https://www.archimatetool.com
+license: MIT
+version: 5.11.0
+channels:
+    stable: 5.11.0
+provides:
+    - archi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/archimatetool/archi.io/releases/download/5_11/Archi-Win64-5.11.0.zip
+      sha256: f2af825759f5c4d81953fe2084a19cafdb770d3d45e2f1b88071dcb7317b8988
+      bin:
+        - archi.exe
+      strip: 1
+test: archi --version

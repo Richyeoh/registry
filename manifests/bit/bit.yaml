@@ -1,0 +1,21 @@
+api: v1
+name: bit
+kind: app
+display: bit
+description: Modernized git CLI
+homepage: https://github.com/chriswalz/bit
+license: Apache-2.0
+version: 1.1.2
+channels:
+    stable: 1.1.2
+provides:
+    - bit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/chriswalz/bit/releases/download/v1.1.2/bit_1.1.2_Windows_amd64.tar.gz
+      sha256: d9203188a9564c04c1cfc4f2985ca36124bcf2f4ab993a93fe05d6ee96e948f4
+      bin:
+        - bit.exe
+      strip: 1
+test: bit --version

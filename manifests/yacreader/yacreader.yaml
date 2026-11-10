@@ -1,0 +1,26 @@
+api: v1
+name: yacreader
+kind: app
+display: yacreader
+description: A comic reader and manager
+homepage: https://www.yacreader.com
+license: GPL-3.0-only
+version: 10.5.0.261109511
+channels:
+    stable: 10.5.0.261109511
+provides:
+    - yacreader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/YACReader/yacreader/releases/download/10.5.0/YACReader-v10.5.0.261109511-winx64-7z-qt6.exe
+      sha256: af58472dfa2849ff55956b83f75ed03214dcda4ddd2f928500aa95df7096aac4
+      bin:
+        - YACReader.exe
+        - YACReaderLibrary.exe
+        - YACReaderLibraryServer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall yacreader
+test: YACReader --version

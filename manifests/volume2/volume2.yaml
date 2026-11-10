@@ -1,0 +1,21 @@
+api: v1
+name: volume2
+kind: app
+display: volume2
+description: An advanced Windows volume control, which can be used as a complete replacement for the standard Windows volume control.
+homepage: https://irzyxa.blogspot.com/
+license: Unknown
+version: 26.1.0.471
+channels:
+    stable: 26.1.0.471
+provides:
+    - volume2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/irzyxa/Volume2/releases/download/26.1.0.471/Volume2_26_1_0_471_x64.zip
+      sha256: be37c031c248d7e75df52b4f6f13877df2ef1df5a5750df21284aa720ba7519f
+      bin:
+        - Volume2.exe
+      strip: 1
+test: Volume2 --version

@@ -1,0 +1,21 @@
+api: v1
+name: wstunnel
+kind: app
+display: wstunnel
+description: Tunneling over websocket protocol
+homepage: https://wstunnel.erebe.dev
+license: BSD-3-Clause
+version: 11.1.0
+channels:
+    stable: 11.1.0
+provides:
+    - wstunnel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/erebe/wstunnel/releases/download/v11.1.0/wstunnel_11.1.0_windows_amd64.tar.gz
+      sha256: b271d076fbba92fe3d8c9b7612bf17f4ac905d68614a6c40debd73107883d75e
+      bin:
+        - wstunnel.exe
+      strip: 1
+test: wstunnel --version

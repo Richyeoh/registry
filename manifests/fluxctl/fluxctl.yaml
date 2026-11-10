@@ -1,0 +1,24 @@
+api: v1
+name: fluxctl
+kind: app
+display: fluxctl
+description: Manage Flux (v1) from the Command Line.
+homepage: https://fluxcd.io/legacy/flux
+license: Apache-2.0
+version: 1.25.4
+channels:
+    stable: 1.25.4
+provides:
+    - fluxctl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fluxcd/flux/releases/download/1.25.4/fluxctl_windows_amd64#/fluxctl.exe
+      sha256: 10519d15910a053485eeb7e4aa896837b642b366e54be6719fcb3942f69ef649
+      bin:
+        - fluxctl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fluxctl
+test: fluxctl --version

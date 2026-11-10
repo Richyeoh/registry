@@ -1,0 +1,21 @@
+api: v1
+name: unrar
+kind: app
+display: unrar
+description: Decompress RAR files.
+homepage: https://www.rarlab.com/
+license: Unknown
+version: "7.23"
+channels:
+    stable: "7.23"
+provides:
+    - unrar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.rarlab.com/rar/unrarw64.exe#/dl.zip
+      sha256: fecc0aa6d3f5434113bc32d4d151c2e9e0938155f71c356ed150bcecf3770f21
+      bin:
+        - UnRAR.exe
+      strip: 1
+test: UnRAR --version

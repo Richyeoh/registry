@@ -1,0 +1,21 @@
+api: v1
+name: clangd
+kind: app
+display: clangd
+description: Language server for C/C++, by the LLVM project
+homepage: https://clangd.llvm.org/
+license: Apache-2.0
+version: 23.1.0
+channels:
+    stable: 23.1.0
+provides:
+    - clangd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/clangd/clangd/releases/download/23.1.0/clangd-windows-23.1.0.zip
+      sha256: 23412a240756a162e7b98a282f36aa2a23a88db5ce16a0cbc4fef7253768c810
+      bin:
+        - bin\clangd.exe
+      strip: 1
+test: bin\clangd --version

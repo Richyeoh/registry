@@ -1,0 +1,21 @@
+api: v1
+name: vidi
+kind: app
+display: vidi
+description: A tool for static analysis of PE files, based on bearparser & capstone
+homepage: https://hshrzd.wordpress.com/vidi-visual-disassembler/
+license: BSD-2-Clause
+version: 0.2.5.5
+channels:
+    stable: 0.2.5.5
+provides:
+    - vidi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hasherezade/ViDi/releases/download/0.2.5.5/vidi_0.2.5.5_x64_win.zip
+      sha256: 487f27e9df14c4da167caab3556a45cc0900028adde3100433be9cf0a64439d9
+      bin:
+        - vidi.exe
+      strip: 1
+test: vidi --version

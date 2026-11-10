@@ -1,0 +1,25 @@
+api: v1
+name: faas-cli
+kind: app
+display: faas-cli
+description: A framework for building serverless functions with Docker and Kubernetes which has first class support for metrics. (CLI)
+homepage: https://www.openfaas.com/
+license: MIT
+version: 0.18.18
+channels:
+    stable: 0.18.18
+provides:
+    - faas-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/openfaas/faas-cli/releases/download/0.18.18/faas-cli.exe
+      sha256: 9a6d2a53425cae961868e31cda98a1c1e9c7bd9637c7e7538b1b49d23b5c9451
+      bin:
+        - faas-cli.exe
+        - faas-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall faas-cli
+test: faas-cli --version

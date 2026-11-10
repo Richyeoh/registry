@@ -1,0 +1,46 @@
+api: v1
+name: apparix
+kind: app
+display: apparix
+description: File system navigation via bookmarking directories
+homepage: https://micans.org/apparix/
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 11-062
+channels:
+    stable: 11-062
+provides:
+    - apparix
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apparix/blobs/sha256:f8146185bc73258782bfed5b8155d7f20bcaf74cbc14de2ecb94316247e397be
+      sha256: f8146185bc73258782bfed5b8155d7f20bcaf74cbc14de2ecb94316247e397be
+      bin:
+        - apparix
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apparix/blobs/sha256:402831f924ef605dea0d6cd8bec8f6f54b05d66e0d98eb0e93a1489450a85f36
+      sha256: 402831f924ef605dea0d6cd8bec8f6f54b05d66e0d98eb0e93a1489450a85f36
+      bin:
+        - apparix
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apparix/blobs/sha256:0597c7147ee8a66fe491ccb3e8c386e1580953cc1eedbc9ddbb0349037f312d7
+      sha256: 0597c7147ee8a66fe491ccb3e8c386e1580953cc1eedbc9ddbb0349037f312d7
+      bin:
+        - apparix
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apparix/blobs/sha256:b30647a456f6b9b5d8990f73fc9cf1ef2f4456a666123f396914fb56a136af18
+      sha256: b30647a456f6b9b5d8990f73fc9cf1ef2f4456a666123f396914fb56a136af18
+      bin:
+        - apparix
+      strip: 1
+test: apparix --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

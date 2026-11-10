@@ -1,0 +1,39 @@
+api: v1
+name: alejandra
+kind: app
+display: alejandra
+description: Command-line tool for formatting Nix Code
+homepage: https://alejandra.kamadorueda.com/
+license: Unlicense
+keywords:
+    - brew
+    - homebrew
+version: 4.1.0
+channels:
+    stable: 4.1.0
+provides:
+    - alejandra
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alejandra/blobs/sha256:9f1336b2e798effd955c56b803afdb22fccbd436c462fc9869142cc600965600
+      sha256: 9f1336b2e798effd955c56b803afdb22fccbd436c462fc9869142cc600965600
+      bin:
+        - alejandra
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alejandra/blobs/sha256:cd793c00b7dbe1d1d24c99eb35dc649b2f61e3780cf2975376072ba2843050a1
+      sha256: cd793c00b7dbe1d1d24c99eb35dc649b2f61e3780cf2975376072ba2843050a1
+      bin:
+        - alejandra
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alejandra/blobs/sha256:cd6f46c33bc6811f44a321737104c06716787b265f206cdbb199215081d19b14
+      sha256: cd6f46c33bc6811f44a321737104c06716787b265f206cdbb199215081d19b14
+      bin:
+        - alejandra
+      strip: 1
+test: alejandra --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

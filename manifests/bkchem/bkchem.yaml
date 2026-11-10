@@ -1,0 +1,24 @@
+api: v1
+name: bkchem
+kind: app
+display: bkchem
+description: Free chemical drawing software with IUPAC InChI support
+homepage: https://bkchem.zirael.org/
+license: GPL-2.0-or-later
+version: 0.13.0
+channels:
+    stable: 0.13.0
+provides:
+    - bkchem
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bkchem.zirael.org/download/bkchem-0.13.0.exe
+      sha256: 1b90a4c21462ac11014c3470e793f5f90ae393fac9a7d3927865ec0ecd5a34ce
+      bin:
+        - bkchem.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bkchem
+test: bkchem --version

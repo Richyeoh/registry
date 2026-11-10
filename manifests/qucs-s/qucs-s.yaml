@@ -1,0 +1,21 @@
+api: v1
+name: qucs-s
+kind: app
+display: qucs-s
+description: A circuit simulation program with Qt-based GUI
+homepage: https://ra3xdh.github.io/
+license: GPL-2.0-only
+version: 26.1.1
+channels:
+    stable: 26.1.1
+provides:
+    - qucs-s
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ra3xdh/qucs_s/releases/download/26.1.1/Qucs-S-26.1.1-win64.zip
+      sha256: 80025a24128df6652e9c6349b4aa9b6771ababd4a0fbfd939349cc4dcfb3ef1c
+      bin:
+        - bin\qucs-s.exe
+      strip: 1
+test: bin\qucs-s --version

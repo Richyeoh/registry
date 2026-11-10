@@ -1,0 +1,21 @@
+api: v1
+name: sonarqube
+kind: app
+display: sonarqube
+description: Platform for continuous inspection of code quality and security using static analysis for 20+ programming languages.
+homepage: https://www.sonarsource.com/products/sonarqube/
+license: LGPL-3.0-only
+version: 26.11.0.134175
+channels:
+    stable: 26.11.0.134175
+provides:
+    - sonarqube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-26.11.0.134175.zip
+      sha256: bc18bf0f9faed6d27c9668a89ab86c84b22edeccb1050fbebb9d323bd506e7dc
+      bin:
+        - bin\windows-x86-64\StartSonar.bat.exe
+      strip: 1
+test: bin\windows-x86-64\StartSonar.bat --version

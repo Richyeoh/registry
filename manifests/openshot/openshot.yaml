@@ -1,0 +1,24 @@
+api: v1
+name: openshot
+kind: app
+display: openshot
+description: Easy to use video editor
+homepage: https://www.openshot.org/
+license: GPL-3.0-or-later
+version: 4.1.1
+channels:
+    stable: 4.1.1
+provides:
+    - openshot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/OpenShot/openshot-qt/releases/download/v4.1.1/OpenShot-v4.1.1-x86_64.exe
+      sha256: 6c18abf951a798b536b07aa88f78d62eb55345903699b429b08322323c049690
+      bin:
+        - openshot.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall openshot
+test: openshot --version

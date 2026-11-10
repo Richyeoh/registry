@@ -1,0 +1,25 @@
+api: v1
+name: aria2-next
+kind: app
+display: aria2-next
+description: Maintained aria2 fork with extensive bug fixes and modernized architecture.
+homepage: https://github.com/AnInsomniacy/aria2-next
+license: GPL-2.0-or-later
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - aria2-next
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AnInsomniacy/aria2-next/releases/download/v3.1.0/aria2-next-3.1.0-windows-x86_64.exe#/aria2-next.exe
+      sha256: 12bbd48dfd2c86f55419bf92b196dd3aedd6983116b5ce10c85d27a5a76c2baa
+      bin:
+        - aria2-next.exe
+        - aria2-next.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall aria2-next
+test: aria2-next --version

@@ -1,0 +1,46 @@
+api: v1
+name: actions-batch
+kind: app
+display: actions-batch
+description: Time-sharing supercomputer built on GitHub Actions
+homepage: https://blog.alexellis.io/github-actions-timesharing-supercomputer/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.0.3
+channels:
+    stable: 0.0.3
+provides:
+    - actions-batch
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/actions-batch/blobs/sha256:20bb3b2e0c456933a1af59fc18ea0b528de5cae7e9206a1f65b8cac0ae49a7cb
+      sha256: 20bb3b2e0c456933a1af59fc18ea0b528de5cae7e9206a1f65b8cac0ae49a7cb
+      bin:
+        - actions-batch
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/actions-batch/blobs/sha256:75798a96bdaf14e0d4735fddefcbc98867cc1ca382fc637726886a35a95d70b8
+      sha256: 75798a96bdaf14e0d4735fddefcbc98867cc1ca382fc637726886a35a95d70b8
+      bin:
+        - actions-batch
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/actions-batch/blobs/sha256:a8dfaef2b9edcf0f025dafa223cecbdd96bfeebcc01feac706576d0fae729ef2
+      sha256: a8dfaef2b9edcf0f025dafa223cecbdd96bfeebcc01feac706576d0fae729ef2
+      bin:
+        - actions-batch
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/actions-batch/blobs/sha256:4013124489ea2fb57e41de5bac37a514888b6d38adb121c6d6ebd3ec993520cd
+      sha256: 4013124489ea2fb57e41de5bac37a514888b6d38adb121c6d6ebd3ec993520cd
+      bin:
+        - actions-batch
+      strip: 1
+test: actions-batch --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

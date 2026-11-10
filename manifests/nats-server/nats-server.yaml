@@ -1,0 +1,21 @@
+api: v1
+name: nats-server
+kind: app
+display: nats-server
+description: High-Performance server for NATS.io, the cloud and edge native messaging system
+homepage: https://nats.io
+license: Apache-2.0
+version: 2.15.2
+channels:
+    stable: 2.15.2
+provides:
+    - nats-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nats-io/nats-server/releases/download/v2.15.2/nats-server-v2.15.2-windows-amd64.zip
+      sha256: f6398d5d11093778f870db70242cb50d20a58134c937c805ba8d114e7e398766
+      bin:
+        - nats-server.exe
+      strip: 1
+test: nats-server --version

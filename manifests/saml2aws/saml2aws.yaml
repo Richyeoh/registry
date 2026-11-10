@@ -1,0 +1,21 @@
+api: v1
+name: saml2aws
+kind: app
+display: saml2aws
+description: Login and retrieve Amazon Web Services / AWS temporary credentials using a SAML IDP.
+homepage: https://github.com/Versent/saml2aws
+license: MIT
+version: 2.36.19
+channels:
+    stable: 2.36.19
+provides:
+    - saml2aws
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Versent/saml2aws/releases/download/v2.36.19/saml2aws_2.36.19_windows_amd64.zip
+      sha256: 739bd99db011825521cf7adb15c205e7aac6570f8b74cd0afc5bedbb0804a0eb
+      bin:
+        - saml2aws.exe
+      strip: 1
+test: saml2aws --version

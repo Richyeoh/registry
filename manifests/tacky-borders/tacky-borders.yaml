@@ -1,0 +1,21 @@
+api: v1
+name: tacky-borders
+kind: app
+display: tacky-borders
+description: Customizable borders for Windows 11 and 10
+homepage: https://github.com/lukeyou05/tacky-borders
+license: MIT
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - tacky-borders
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lukeyou05/tacky-borders/releases/download/v1.6.0/tacky-borders-v1.6.0.zip
+      sha256: eb75ad4b6b22935f6ceb2e12e36c55bcdf907176953eb47ec7038e4b60a48f23
+      bin:
+        - tacky-borders.exe
+      strip: 1
+test: tacky-borders --version

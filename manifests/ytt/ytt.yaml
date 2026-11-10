@@ -1,0 +1,24 @@
+api: v1
+name: ytt
+kind: app
+display: ytt
+description: YAML templating tool that works on YAML structure instead of text
+homepage: https://carvel.dev/ytt
+license: Apache-2.0
+version: 0.55.4
+channels:
+    stable: 0.55.4
+provides:
+    - ytt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/carvel-dev/ytt/releases/download/v0.55.4/ytt-windows-amd64.exe#/ytt.exe
+      sha256: 468167c3784590d230121669ff093b14ff00e4e9e8a539ea835dd7b23d910918
+      bin:
+        - ytt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ytt
+test: ytt --version

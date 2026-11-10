@@ -1,0 +1,32 @@
+api: v1
+name: algodoo
+kind: app
+display: Algodoo
+description: Draw and interact with physical systems
+homepage: https://www.algodoo.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 2.2.4
+channels:
+    stable: 2.2.4
+provides:
+    - algodoo
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://www.algodoo.com/download/Algodoo_2_2_4-macOS.dmg
+      sha256: 02bb64abdff9cfd486bdc970fab692a8dd6312dbea78e3b6d31933b5c473916b
+      bin:
+        - algodoo
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://www.algodoo.com/download/Algodoo_2_2_4-macOS.dmg
+      sha256: 02bb64abdff9cfd486bdc970fab692a8dd6312dbea78e3b6d31933b5c473916b
+      bin:
+        - algodoo
+      strip: 1
+test: algodoo --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

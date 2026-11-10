@@ -1,0 +1,24 @@
+api: v1
+name: docker-compose
+kind: app
+display: docker-compose
+description: Define and run multi-container applications with Docker
+homepage: https://docs.docker.com/compose/
+license: Apache-2.0
+version: 5.7.0
+channels:
+    stable: 5.7.0
+provides:
+    - docker-compose
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/docker/compose/releases/download/v5.7.0/docker-compose-windows-x86_64.exe#/docker-compose.exe
+      sha256: f5dc759702aec5c0602e247aa861d14853216e3f481c4eaaf83621a035ecf92f
+      bin:
+        - docker-compose.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall docker-compose
+test: docker-compose --version

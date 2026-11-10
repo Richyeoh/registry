@@ -1,0 +1,22 @@
+api: v1
+name: go-cli
+kind: app
+display: go
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://go.dev
+license: BSD-3-Clause
+version: 1.27.3
+channels:
+    stable: 1.27.3
+provides:
+    - go-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.27.3.windows-amd64.zip
+      sha256: f26081f438319757f8a1b46d7d0b2c5ec7583d4038e485e0aa725cfde7885fff
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

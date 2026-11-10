@@ -1,0 +1,24 @@
+api: v1
+name: jellyfin-mpv-shim
+kind: app
+display: jellyfin-mpv-shim
+description: A fully featured, cross-platform desktop and cast client for Jellyfin
+homepage: https://github.com/jellyfin/jellyfin-mpv-shim
+license: MIT
+version: 3.3.0
+channels:
+    stable: 3.3.0
+provides:
+    - jellyfin-mpv-shim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jellyfin/jellyfin-mpv-shim/releases/download/v3.3.0/jellyfin-mpv-shim_3.3.0_installer.exe
+      sha256: f0530120004468b45668cd226e4ae254348f496046be2f7b84829f4877bfa014
+      bin:
+        - jellyfin-mpv-shim.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jellyfin-mpv-shim
+test: jellyfin-mpv-shim --version

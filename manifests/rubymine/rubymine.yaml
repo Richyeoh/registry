@@ -1,0 +1,21 @@
+api: v1
+name: rubymine
+kind: app
+display: rubymine
+description: Cross-Platform IDE for Ruby on Rails by JetBrains.
+homepage: https://www.jetbrains.com/ruby/
+license: Unknown
+version: 2026.3-263.7307.205
+channels:
+    stable: 2026.3-263.7307.205
+provides:
+    - rubymine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/ruby/RubyMine-2026.3.win.zip
+      sha256: 88b8f2f92ea77ccb9b77c7260026d90780c3eacdf88725cce5c5fdaeaa711ec7
+      bin:
+        - IDE\bin\rubymine64.exe
+      strip: 1
+test: IDE\bin\rubymine64 --version

@@ -1,0 +1,21 @@
+api: v1
+name: obsidian
+kind: app
+display: obsidian
+description: Powerful knowledge base that works on top of a local folder of plain text Markdown files.
+homepage: https://obsidian.md
+license: Unknown
+version: 1.15.0
+channels:
+    stable: 1.15.0
+provides:
+    - obsidian
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/obsidianmd/obsidian-releases/releases/download/v1.15.0/Obsidian-1.15.0.exe#/dl.7z
+      sha256: b0f60c75a12f96d54cb16b9fc32919966f2ebf029d9af75d67a19ba6555e1da0
+      bin:
+        - obsidian.com.exe
+      strip: 1
+test: obsidian.com --version

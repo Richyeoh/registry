@@ -1,0 +1,21 @@
+api: v1
+name: stirling-pdf
+kind: app
+display: stirling-pdf
+description: '#1 Locally hosted web application that allows you to perform various operations on PDF files'
+homepage: https://stirlingpdf.com
+license: MIT
+version: 3.3.0
+channels:
+    stable: 3.3.0
+provides:
+    - stirling-pdf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.3.0/Stirling-PDF.jar
+      sha256: ad45fac71595624fe6c212083ab9cbbb59477c71db156ecae2da30ffdaa870c5
+      bin:
+        - Stirling-PDF.jar.exe
+      strip: 1
+test: Stirling-PDF.jar --version

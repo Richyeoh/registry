@@ -1,0 +1,24 @@
+api: v1
+name: kapp
+kind: app
+display: kapp
+description: A simple deployment tool focused on the concept of Kubernetes application
+homepage: https://carvel.dev/kapp/
+license: Apache-2.0
+version: 0.66.1
+channels:
+    stable: 0.66.1
+provides:
+    - kapp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/carvel-dev/kapp/releases/download/v0.66.1/kapp-windows-amd64.exe#/kapp.exe
+      sha256: c7d7f99ed4691996a73e08fd803bd4626ca3d1bb6623fe4971e9964aa75ae4c9
+      bin:
+        - kapp.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kapp
+test: kapp --version

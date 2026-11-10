@@ -1,0 +1,21 @@
+api: v1
+name: git-sizer
+kind: app
+display: git-sizer
+description: Compute various size metrics for a Git repository, flagging those that might cause problems.
+homepage: https://github.com/github/git-sizer
+license: MIT
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - git-sizer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/github/git-sizer/releases/download/v1.5.0/git-sizer-1.5.0-windows-amd64.zip
+      sha256: 52093c1cba0bb8e00da14c9eef678eb052fc729c32419415817076f06b5c85d8
+      bin:
+        - git-sizer.exe
+      strip: 1
+test: git-sizer --version

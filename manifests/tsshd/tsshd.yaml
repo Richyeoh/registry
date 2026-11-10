@@ -1,0 +1,21 @@
+api: v1
+name: tsshd
+kind: app
+display: tsshd
+description: A UDP-based SSH server with roaming support.
+homepage: https://trzsz.github.io/tsshd
+license: MIT
+version: 0.1.10
+channels:
+    stable: 0.1.10
+provides:
+    - tsshd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trzsz/tsshd/releases/download/v0.1.10/tsshd_0.1.10_windows_x86_64.zip
+      sha256: 5e666b209226d77fc7d02ea0a9dc6131c62dda5fc5947f05d138f0eddd626ec6
+      bin:
+        - tsshd.exe
+      strip: 1
+test: tsshd --version

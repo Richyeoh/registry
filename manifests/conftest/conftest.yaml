@@ -1,0 +1,21 @@
+api: v1
+name: conftest
+kind: app
+display: conftest
+description: Test utility for structured configuration files
+homepage: https://www.conftest.dev
+license: Apache-2.0
+version: 0.71.1
+channels:
+    stable: 0.71.1
+provides:
+    - conftest
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/open-policy-agent/conftest/releases/download/v0.71.1/conftest_0.71.1_Windows_x86_64.zip
+      sha256: 34d623334b5e7ed4465bf62a4cb3b092684859cd3d224bbd390925a0852b922a
+      bin:
+        - conftest.exe
+      strip: 1
+test: conftest --version

@@ -1,0 +1,21 @@
+api: v1
+name: koffee
+kind: app
+display: koffee
+description: Fast, keyboard-driven file explorer.
+homepage: https://github.com/mattstermiller/koffee/
+license: MIT
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - koffee
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mattstermiller/koffee/releases/download/v0.8.0/Koffee-0.8.0.zip
+      sha256: ecd67f3eec943078e09a97be2642e977dfecc144c4945f5e93c77a9e514bd3f5
+      bin:
+        - Koffee.exe
+      strip: 1
+test: Koffee --version

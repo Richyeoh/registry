@@ -1,0 +1,21 @@
+api: v1
+name: sendmail
+kind: app
+display: sendmail
+description: Fake sendmail wrapper.
+homepage: https://www.glob.com.au/sendmail/
+license: BSD-3-Clause
+version: "32"
+channels:
+    stable: "32"
+provides:
+    - sendmail
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.glob.com.au/sendmail/sendmail.zip
+      sha256: 5ad276d066ceeaeaf0352c5b36076638474e94035d27705b48dacf358c595ce0
+      bin:
+        - sendmail.exe
+      strip: 1
+test: sendmail --version

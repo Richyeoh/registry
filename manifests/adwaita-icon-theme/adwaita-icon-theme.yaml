@@ -1,0 +1,25 @@
+api: v1
+name: adwaita-icon-theme
+kind: app
+display: adwaita-icon-theme
+description: Icons for the GNOME project
+homepage: https://developer.gnome.org
+license: LGPL-3.0-or-later OR CC-BY-SA-3.0
+keywords:
+    - brew
+    - homebrew
+version: "51.0"
+channels:
+    stable: "51.0"
+provides:
+    - adwaita-icon-theme
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adwaita-icon-theme/blobs/sha256:f40942bda19569a8dfc6b9c89c2fc7b7e1d89231fa2f0e0478166b08a91b23fa
+      sha256: f40942bda19569a8dfc6b9c89c2fc7b7e1d89231fa2f0e0478166b08a91b23fa
+      bin:
+        - adwaita-icon-theme
+      strip: 1
+test: adwaita-icon-theme --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

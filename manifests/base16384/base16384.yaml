@@ -1,0 +1,46 @@
+api: v1
+name: base16384
+kind: app
+display: base16384
+description: Encode binary files to printable utf16be
+homepage: https://github.com/fumiama/base16384
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 2.3.2
+channels:
+    stable: 2.3.2
+provides:
+    - base16384
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/base16384/blobs/sha256:b9c40a9eeae7fb639505085bf436817583a4bef68ab415966a232facbb1634b8
+      sha256: b9c40a9eeae7fb639505085bf436817583a4bef68ab415966a232facbb1634b8
+      bin:
+        - base16384
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/base16384/blobs/sha256:98f9aee8f1e4bfb899e773100ad4f11f5ac64218751c8894dfe356287cefc025
+      sha256: 98f9aee8f1e4bfb899e773100ad4f11f5ac64218751c8894dfe356287cefc025
+      bin:
+        - base16384
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/base16384/blobs/sha256:3010ed072ea82794a4f40a0ec7a11e2bc51a6f0a8d25aa18483be84976b9a2b3
+      sha256: 3010ed072ea82794a4f40a0ec7a11e2bc51a6f0a8d25aa18483be84976b9a2b3
+      bin:
+        - base16384
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/base16384/blobs/sha256:292b2d8e8b87a90ee2dbb426a69ed69f8c58945cda95c879478eeab33d38c818
+      sha256: 292b2d8e8b87a90ee2dbb426a69ed69f8c58945cda95c879478eeab33d38c818
+      bin:
+        - base16384
+      strip: 1
+test: base16384 --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

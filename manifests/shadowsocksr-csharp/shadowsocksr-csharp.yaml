@@ -1,0 +1,23 @@
+api: v1
+name: shadowsocksr-csharp
+kind: app
+display: shadowsocksr-csharp
+description: An Internet censorship circumventing tunnel tool, forked by Breakwa11 from shadowsocks, maintained now by Akariiin
+homepage: https://github.com/shadowsocksrr/shadowsocksr-csharp
+license: GPL-3.0-only
+version: 4.9.2
+channels:
+    stable: 4.9.2
+provides:
+    - shadowsocksr-csharp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.2/ShadowsocksR-win-4.9.2.zip#/dl.7z
+      sha256: e3f6860aeff0f45db52f74c0060a657d59c2436ccfcba3ed534e1e01ad5212d3
+      bin:
+        - ShadowsocksR-dotnet4.0.exe
+        - ShadowsocksR-dotnet2.0.exe
+        - ShadowsocksR-dotnet4.0.exe
+      strip: 1
+test: ShadowsocksR-dotnet4.0 --version

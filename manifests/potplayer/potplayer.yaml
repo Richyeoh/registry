@@ -1,0 +1,21 @@
+api: v1
+name: potplayer
+kind: app
+display: potplayer
+description: Highly customizable media player
+homepage: https://potplayer.daum.net
+license: Unknown
+version: 261021-1.7.23159.0
+channels:
+    stable: 261021-1.7.23159.0
+provides:
+    - potplayer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://t1.daumcdn.net/potplayer/PotPlayer/Version/261021/PotPlayerSetup64.exe#/dl.7z
+      sha256: 71374ce7f60136b8e8dd1618f736d37ccbefcc5875feb33650f9f8de0bba87e8
+      bin:
+        - potplayer.exe
+      strip: 1
+test: potplayer --version

@@ -1,0 +1,21 @@
+api: v1
+name: chromedriver-beta
+kind: app
+display: chromedriver-beta
+description: An open source tool for automated testing of webapps across many browsers
+homepage: https://chromedriver.chromium.org/
+license: BSD-3-Clause
+version: 158.0.8127.18
+channels:
+    stable: 158.0.8127.18
+provides:
+    - chromedriver-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/158.0.8127.18/win64/chromedriver-win64.zip
+      sha256: 5463ec52e18185251650fbe478acd8f20e796888a4867230ea1bbb2b25a2ebc1
+      bin:
+        - chromedriver.exe
+      strip: 1
+test: chromedriver --version

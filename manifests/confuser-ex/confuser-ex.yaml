@@ -1,0 +1,22 @@
+api: v1
+name: confuser-ex
+kind: app
+display: confuser-ex
+description: Protector for .NET applications
+homepage: https://mkaring.github.io/ConfuserEx/
+license: MIT
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - confuser-ex
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mkaring/ConfuserEx/releases/download/v1.6.0/ConfuserEx.zip
+      sha256: 91c7a4387c3fc3d05aebd7da7235e5e0f12a628b88fcdf87c2af12c40f96ec79
+      bin:
+        - Confuser.CLI.exe
+        - Confuser.CLI.exe
+      strip: 1
+test: Confuser.CLI --version

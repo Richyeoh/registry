@@ -1,0 +1,24 @@
+api: v1
+name: magpie-ai
+kind: app
+display: magpie-ai
+description: Unified model, provider, and gateway manager for AI coding agents.
+homepage: https://usemagpie.ai
+license: MIT
+version: 0.1.3078
+channels:
+    stable: 0.1.3078
+provides:
+    - magpie-ai
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yetone/magpie-releases/releases/download/v0.1.3078/magpie-windows-amd64.exe#/magpie.exe
+      sha256: 1ab596daddefca72b74c79782e2dcbba8de2e2cb81ea33fa21d5449b6e223791
+      bin:
+        - magpie-ai.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall magpie-ai
+test: magpie-ai --version

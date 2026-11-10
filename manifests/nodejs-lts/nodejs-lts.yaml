@@ -1,0 +1,21 @@
+api: v1
+name: nodejs-lts
+kind: app
+display: nodejs-lts
+description: As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. (Long Term Support)
+homepage: https://nodejs.org
+license: MIT
+version: 26.13.0
+channels:
+    stable: 26.13.0
+provides:
+    - nodejs-lts
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://nodejs.org/dist/v26.13.0/node-v26.13.0-win-x64.7z
+      sha256: f305a9b96344a0f83a9e5fabe107f703148af5d73d958b18b65db5b0760d2c53
+      bin:
+        - nodejs-lts.exe
+      strip: 1
+test: nodejs-lts --version

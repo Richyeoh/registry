@@ -1,0 +1,21 @@
+api: v1
+name: rust-analyzer
+kind: app
+display: rust-analyzer
+description: A Rust compiler front-end for IDEs
+homepage: https://rust-analyzer.github.io/
+license: Apache-2.0|MIT
+version: "2026-11-09"
+channels:
+    stable: "2026-11-09"
+provides:
+    - rust-analyzer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rust-lang/rust-analyzer/releases/download/2026-11-09/rust-analyzer-x86_64-pc-windows-msvc.zip
+      sha256: 973ab11e84955a7f8e3cf01ccd98a33f3ecbd6d4a14bf59bb164aa9e831c6fef
+      bin:
+        - rust-analyzer.exe
+      strip: 1
+test: rust-analyzer --version

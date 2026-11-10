@@ -1,0 +1,21 @@
+api: v1
+name: grok-bot
+kind: app
+display: grok-bot
+description: Always-on AI agents from xAI and Cursor that work autonomously across your tools and apps.
+homepage: https://x.ai/bot
+license: Unknown
+version: 0.79.3
+channels:
+    stable: 0.79.3
+provides:
+    - grok-bot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.cursor.com/grokbot/stable/win32-x64/0.79.3/Grok_Bot_0.79.3_Setup.exe#/dl.7z
+      sha256: 5dede0efa229dfb7d1b6c251edf4a7a19225df6837bccc7e09d1193de5766846
+      bin:
+        - grok-bot.exe
+      strip: 1
+test: grok-bot --version

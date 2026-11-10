@@ -1,0 +1,21 @@
+api: v1
+name: video-thumbnails-maker
+kind: app
+display: video-thumbnails-maker
+description: Video thumbnails creator
+homepage: http://www.suu-design.com/projects_vtm.html
+license: Proprietary
+version: 28.0.0.0
+channels:
+    stable: 28.0.0.0
+provides:
+    - video-thumbnails-maker
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.suu-design.com/Files/VTM/3563398284/VideoThumbnailsMaker_64bit_Setup.zip
+      sha256: 86c63d48a986005f1f280d7d03424b63cd775b3af93f5f79f228cd7c3371bd0c
+      bin:
+        - VideoThumbnailsMaker.exe
+      strip: 1
+test: VideoThumbnailsMaker --version

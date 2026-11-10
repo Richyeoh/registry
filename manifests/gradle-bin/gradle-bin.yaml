@@ -1,0 +1,21 @@
+api: v1
+name: gradle-bin
+kind: app
+display: gradle-bin
+description: An open-source build automation tool focused on flexibility and performance. (Binaries only without documentation)
+homepage: https://gradle.org
+license: Apache-2.0
+version: 9.9.0
+channels:
+    stable: 9.9.0
+provides:
+    - gradle-bin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://services.gradle.org/distributions/gradle-9.9.0-bin.zip
+      sha256: 0b00b0ffe07c4d4789c12d4935a44a7057d55774b7540bd4a3f76f336deb177a
+      bin:
+        - bin\gradle.bat.exe
+      strip: 1
+test: bin\gradle.bat --version

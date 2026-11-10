@@ -1,0 +1,32 @@
+api: v1
+name: helix
+kind: app
+display: helix
+description: A post-modern modal text editor
+homepage: https://helix-editor.com
+license: MPL-2.0
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 25.07.1
+channels:
+    stable: 25.07.1
+provides:
+    - helix
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-windows.zip
+      sha256: 5c8325ced8bacd8418d62706f669e96d9c3578a9237526e34d546900cbc049b6
+      bin:
+        - hx.exe
+        - hx.exe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/helix/download/
+      sha256: 7ed41ecd878198f77def6c34a17b24f0df3fb6c80714d3646ffbb3a6afb9351d
+      bin:
+        - helix
+test: hx --version

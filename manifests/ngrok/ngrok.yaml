@@ -1,0 +1,21 @@
+api: v1
+name: ngrok
+kind: app
+display: ngrok
+description: ngrok is your app's front door. ngrok is a globally distributed reverse proxy that secures, protects and accelerates your applications and network services, no matter where you run them. ngrok supports delivering HTTP, TLS or TCP-based applications.
+homepage: https://ngrok.com/
+license: Unknown
+version: 3.39.13
+channels:
+    stable: 3.39.13
+provides:
+    - ngrok
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bin.ngrok.com/a/VUnfuMhAnU/ngrok-v3-3.39.13-windows-amd64.zip
+      sha256: 438bad3dbefd7e244be9dfae3889dcf99073b515845b66ab5617e4887bc24636
+      bin:
+        - ngrok.exe
+      strip: 1
+test: ngrok --version

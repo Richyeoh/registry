@@ -1,0 +1,48 @@
+api: v1
+name: aws-vault
+kind: app
+display: aws-vault
+description: Securely store and access AWS credentials in development environments (Maintained fork)
+homepage: https://byteness.github.io/aws-vault/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 7.17.7
+channels:
+    stable: 7.17.7
+provides:
+    - aws-vault
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ByteNess/aws-vault/releases/download/v7.17.7/aws-vault-windows-amd64.exe#/aws-vault.exe
+      sha256: 1b0c6b40d6dbc9270141066439820b9b74ce5d0a8a59e62ec442da0943ca680a
+      bin:
+        - aws-vault.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-vault/blobs/sha256:5b0be54f140096041ed275c8334bae018031798911450372e65a9634aa8c0a43
+      sha256: 5b0be54f140096041ed275c8334bae018031798911450372e65a9634aa8c0a43
+      bin:
+        - aws-vault
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-vault/blobs/sha256:ff0359ad351520a6e5310b0740f40758d8b042335946ba6d8d3c116c1642f90a
+      sha256: ff0359ad351520a6e5310b0740f40758d8b042335946ba6d8d3c116c1642f90a
+      bin:
+        - aws-vault
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-vault/blobs/sha256:96bc545d999f564c33dc159e5463be0f950a06226558fb8f9606cdd3afb5c6a3
+      sha256: 96bc545d999f564c33dc159e5463be0f950a06226558fb8f9606cdd3afb5c6a3
+      bin:
+        - aws-vault
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall aws-vault
+test: aws-vault --version

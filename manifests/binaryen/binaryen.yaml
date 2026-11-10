@@ -1,0 +1,31 @@
+api: v1
+name: binaryen
+kind: app
+display: binaryen
+description: Compiler infrastructure and toolchain library for WebAssembly
+homepage: https://github.com/WebAssembly/binaryen
+license: Apache-2.0
+version: "133"
+channels:
+    stable: "133"
+provides:
+    - binaryen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WebAssembly/binaryen/releases/download/version_133/binaryen-version_133-x86_64-windows.tar.gz
+      sha256: 17a2cbeac6b5693c5fbafab3838d3c65fd9c1eb38b05f5baec6c657e8c84995b
+      bin:
+        - bin\wasm2js.exe
+        - bin\wasm-as.exe
+        - bin\wasm-ctor-eval.exe
+        - bin\wasm-dis.exe
+        - bin\wasm-emscripten-finalize.exe
+        - bin\wasm-metadce.exe
+        - bin\wasm-opt.exe
+        - bin\wasm-reduce.exe
+        - bin\wasm-shell.exe
+        - bin\wasm-split.exe
+        - bin\wasm-merge.exe
+      strip: 1
+test: bin\wasm2js --version

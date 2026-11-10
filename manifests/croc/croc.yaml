@@ -1,0 +1,21 @@
+api: v1
+name: croc
+kind: app
+display: croc
+description: Easily and securely send things from one computer to another.
+homepage: https://schollz.com/software/croc6
+license: MIT
+version: 11.6.5
+channels:
+    stable: 11.6.5
+provides:
+    - croc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/schollz/croc/releases/download/v11.6.5/croc_v11.6.5_Windows-64bit.zip
+      sha256: ae5b9d249099ff159f6a4b91824a2bf7d2b32f0dd77342aef51b34154aa4fffb
+      bin:
+        - croc.exe
+      strip: 1
+test: croc --version

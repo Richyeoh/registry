@@ -1,0 +1,22 @@
+api: v1
+name: foto-mosaik-edda
+kind: app
+display: foto-mosaik-edda
+description: Photo mosaic picture maker
+homepage: https://fmedda.com/en/home
+license: Unknown
+version: 7.8.23025.1
+channels:
+    stable: 7.8.23025.1
+provides:
+    - foto-mosaik-edda
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fmedda.com/ext/download/Foto-Mosaik-Edda-Portable.zip
+      sha256: da6d00e0c1848a4f8bcb6e1a3cfe266b1c7789b6e69a3a06df566b23248b1eb6
+      bin:
+        - Foto-Mosaik-Edda.exe
+        - Rapid-Mosaic.exe
+      strip: 1
+test: Foto-Mosaik-Edda --version

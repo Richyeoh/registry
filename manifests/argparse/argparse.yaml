@@ -1,0 +1,25 @@
+api: v1
+name: argparse
+kind: app
+display: argparse
+description: Argument Parser for Modern C++
+homepage: https://github.com/p-ranav/argparse
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: "3.2"
+channels:
+    stable: "3.2"
+provides:
+    - argparse
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/argparse/blobs/sha256:92d7cc74e452d6e188643d82ee165ebae9a929a87f4608b50595b8daea7e91d4
+      sha256: 92d7cc74e452d6e188643d82ee165ebae9a929a87f4608b50595b8daea7e91d4
+      bin:
+        - argparse
+      strip: 1
+test: argparse --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

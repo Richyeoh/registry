@@ -1,0 +1,24 @@
+api: v1
+name: anki
+kind: app
+display: anki
+description: Powerful and intelligent flash cards
+homepage: https://apps.ankiweb.net
+license: AGPL-3.0-only
+version: 26.09.4
+channels:
+    stable: 26.09.4
+provides:
+    - anki
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ankitects/anki/releases/download/26.09.4/anki-26.09.4-win-x64.msi
+      sha256: c35e7b90acf2929a71d70ac755a3dd0685f9fbe1a89d2f9edabb6fe7c0d91cba
+      bin:
+        - anki.cmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall anki
+test: anki.cmd --version

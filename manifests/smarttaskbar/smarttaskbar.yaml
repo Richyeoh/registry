@@ -1,0 +1,26 @@
+api: v1
+name: smarttaskbar
+kind: app
+display: smarttaskbar
+description: A lightweight utility which can automatically switch the display state of the Windows Taskbar.
+homepage: https://github.com/Oliviaophia/SmartTaskbar
+license: Unknown
+version: 1.4.5
+channels:
+    stable: 1.4.5
+provides:
+    - smarttaskbar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Oliviaophia/SmartTaskbar/releases/download/v1.4.5/SmartTaskbar_Setup.exe
+      sha256: a7b08377906a3d41bfd54141f8bba8bd5c81cc07e157d7cdb63b23f71fde9a98
+      bin:
+        - SmartTaskbar.exe
+        - add-smarttaskbar-startup.ps1.exe
+        - remove-smarttaskbar-startup.ps1.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall smarttaskbar
+test: SmartTaskbar --version

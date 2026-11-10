@@ -1,0 +1,21 @@
+api: v1
+name: wxdfast
+kind: app
+display: wxdfast
+description: Multithreaded download manager
+homepage: https://wxdfast.dxsolutions.org
+license: GPL-2.0-or-later
+version: 0.70.4
+channels:
+    stable: 0.70.4
+provides:
+    - wxdfast
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/archdvx/wxdfast/releases/download/v0.70.4/wxDownloadFast-0.70.4-win.zip
+      sha256: c964701335b592828a79782682c783260a60c023d01af33d6971ea70e7e1adcd
+      bin:
+        - wxdfast.exe
+      strip: 1
+test: wxdfast --version

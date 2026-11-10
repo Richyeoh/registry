@@ -1,0 +1,21 @@
+api: v1
+name: hugo-extended
+kind: app
+display: hugo-extended
+description: Speedy and flexible static site generator. (with Sass/SCSS support)
+homepage: https://gohugo.io
+license: Apache-2.0
+version: 0.169.0
+channels:
+    stable: 0.169.0
+provides:
+    - hugo-extended
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gohugoio/hugo/releases/download/v0.169.0/hugo_extended_0.169.0_windows-amd64.zip
+      sha256: 396b4c8326dc2dd61c2618f825042781c5ea43e1ac1375a2204a9fde4e98b84c
+      bin:
+        - hugo.exe
+      strip: 1
+test: hugo --version

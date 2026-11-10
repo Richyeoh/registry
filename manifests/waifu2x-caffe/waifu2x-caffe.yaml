@@ -1,0 +1,21 @@
+api: v1
+name: waifu2x-caffe
+kind: app
+display: waifu2x-caffe
+description: AI-powered image upscaler.
+homepage: https://github.com/lltcggie/waifu2x-caffe
+license: MIT
+version: 1.2.0.4
+channels:
+    stable: 1.2.0.4
+provides:
+    - waifu2x-caffe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lltcggie/waifu2x-caffe/releases/download/1.2.0.4/waifu2x-caffe.zip
+      sha256: 6d3ead88280fb43226b856b9b33b79696b5da4f9baf42591f0a9abc58c2a488c
+      bin:
+        - waifu2x-caffe-cui.exe
+      strip: 1
+test: waifu2x-caffe-cui --version

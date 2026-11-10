@@ -1,0 +1,21 @@
+api: v1
+name: nunit-console
+kind: app
+display: nunit-console
+description: NUnit Console runner for NUnit, the most popular and widely used unit testing framework for .NET
+homepage: https://nunit.org/
+license: MIT
+version: 3.22.0
+channels:
+    stable: 3.22.0
+provides:
+    - nunit-console
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nunit/nunit-console/releases/download/3.22.0/nunit-console-runner.3.22.0.nupkg
+      sha256: d338f464ce56d99d02eec21359334729750fab47f5b4b91435ffad5a0151484c
+      bin:
+        - nunit3-console.exe
+      strip: 1
+test: nunit3-console --version

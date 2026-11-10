@@ -1,0 +1,21 @@
+api: v1
+name: docear
+kind: app
+display: docear
+description: Academic literature suite
+homepage: https://www.docear.org
+license: Unknown
+version: "1.2"
+channels:
+    stable: "1.2"
+provides:
+    - docear
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://docear.org/downloads/docear_windows.zip
+      sha256: 3c26e43f1c60b0a983cd3c9ba621d1c8d9fa7fdc59203978a086465cfff6f613
+      bin:
+        - docear.exe
+      strip: 1
+test: docear --version

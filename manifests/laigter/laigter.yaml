@@ -1,0 +1,21 @@
+api: v1
+name: laigter
+kind: app
+display: laigter
+description: Automatic normal map generator for sprites
+homepage: https://azagaya.itch.io/laigter
+license: GPL-3.0-only
+version: 1.14.0
+channels:
+    stable: 1.14.0
+provides:
+    - laigter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/azagaya/laigter/releases/download/1.14.0/laigter-windows.zip
+      sha256: aac2e346476365d0448bed65d5cce13abeeffc60d82ed052dfe8849914c8339c
+      bin:
+        - laigter.exe
+      strip: 1
+test: laigter --version

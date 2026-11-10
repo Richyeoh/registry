@@ -1,0 +1,21 @@
+api: v1
+name: glab
+kind: app
+display: glab
+description: GitLab CLI
+homepage: https://gitlab.com/gitlab-org/cli
+license: MIT
+version: 1.130.0
+channels:
+    stable: 1.130.0
+provides:
+    - glab
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitlab.com/gitlab-org/cli/-/releases/v1.130.0/downloads/glab_1.130.0_windows_amd64.zip
+      sha256: 583e51e052d09960b8f1b33a787c50dab8498fb0529d22046c4a2fd94c22e4c8
+      bin:
+        - bin\glab.exe
+      strip: 1
+test: bin\glab --version

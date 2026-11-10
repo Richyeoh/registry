@@ -1,0 +1,25 @@
+api: v1
+name: tightvnc
+kind: app
+display: tightvnc
+description: VNC-Compatible Remote Control / Remote Desktop
+homepage: https://tightvnc.com
+license: GPL-2.0-or-later
+version: 2.8.90
+channels:
+    stable: 2.8.90
+provides:
+    - tightvnc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.tightvnc.com/download/2.8.90/tightvnc-2.8.90-gpl-setup-64bit.msi
+      sha256: 9693cb4cdc2e7e482e8e3f5890415b57ef87de3369fa5c337db516218a1170ce
+      bin:
+        - tvnviewer.exe
+        - tvnserver.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tightvnc
+test: tvnviewer --version

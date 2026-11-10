@@ -1,0 +1,21 @@
+api: v1
+name: dum
+kind: app
+display: dum
+description: An npm scripts runner written in Rust.
+homepage: https://github.com/egoist/dum
+license: MIT
+version: 0.1.20
+channels:
+    stable: 0.1.20
+provides:
+    - dum
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/egoist/dum/releases/download/v0.1.20/dum-x86_64-pc-windows-msvc.zip
+      sha256: 3759d385ca4559ac62f63542aa6955a16c9fd9b8978e7854925a7bea5d5bf32c
+      bin:
+        - dum.exe
+      strip: 1
+test: dum --version

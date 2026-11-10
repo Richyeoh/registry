@@ -1,0 +1,21 @@
+api: v1
+name: syncthingtray
+kind: app
+display: syncthingtray
+description: Tray application for Syncthing
+homepage: https://github.com/Martchus/syncthingtray
+license: Unknown
+version: 2.1.9
+channels:
+    stable: 2.1.9
+provides:
+    - syncthingtray
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Martchus/syncthingtray/releases/download/v2.1.9/syncthingtray-2.1.9-x86_64-w64-mingw32.exe.zip
+      sha256: c20d74998cb84980b07cb00eca4c38d26643eaa69b8bef94f6841ded6c752cc5
+      bin:
+        - syncthingtray-cli.exe
+      strip: 1
+test: syncthingtray-cli --version

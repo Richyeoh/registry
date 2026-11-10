@@ -1,0 +1,21 @@
+api: v1
+name: acr-cli
+kind: app
+display: acr-cli
+description: Command Line Tool for interacting with Azure Container Registry Images
+homepage: https://github.com/Azure/acr-cli
+license: MIT
+version: "0.21"
+channels:
+    stable: "0.21"
+provides:
+    - acr-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/acr-cli/releases/download/v0.21/acr-cli_0.21_Windows_x86_64.zip
+      sha256: 6466abb4423a96d28fda3fd94d88ac8d234bf46682f11794fbf825318c96a400
+      bin:
+        - acr.exe
+      strip: 1
+test: acr --version

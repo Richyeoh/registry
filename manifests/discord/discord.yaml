@@ -1,0 +1,21 @@
+api: v1
+name: discord
+kind: app
+display: discord
+description: Free Voice and Text Chat
+homepage: https://discord.com
+license: Unknown
+version: 1.0.9259-28
+channels:
+    stable: 1.0.9259-28
+provides:
+    - discord
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/portapps/discord-portable/releases/download/1.0.9259-28/discord-portable-win64-1.0.9259-28.7z
+      sha256: b6dd79ea0a99c87366e43bbef73eb139eae36459ade233288404fa8e0488cd84
+      bin:
+        - discord.exe
+      strip: 1
+test: discord --version

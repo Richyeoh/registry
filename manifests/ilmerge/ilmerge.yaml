@@ -1,0 +1,21 @@
+api: v1
+name: ilmerge
+kind: app
+display: ilmerge
+description: A static linker for .NET assemblies developed by Microsoft .NET team.
+homepage: https://github.com/dotnet/ILMerge
+license: MIT
+version: 3.0.41
+channels:
+    stable: 3.0.41
+provides:
+    - ilmerge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://globalcdn.nuget.org/packages/ilmerge.3.0.41.nupkg
+      sha256: 9121fe69cbde20180aff5f7ff0ca18c857c6b6de375ae3fbe48ff189b51f1637
+      bin:
+        - ILMerge.exe
+      strip: 1
+test: ILMerge --version

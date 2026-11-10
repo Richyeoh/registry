@@ -1,0 +1,21 @@
+api: v1
+name: gitea-runner
+kind: app
+display: gitea-runner
+description: Official runner for Gitea Actions
+homepage: https://gitea.com/gitea/runner
+license: MIT
+version: 5.4.1
+channels:
+    stable: 5.4.1
+provides:
+    - gitea-runner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://gitea.com/gitea/runner/releases/download/v5.4.1/gitea-runner-5.4.1-windows-amd64.exe.xz
+      sha256: c886b68e75cb35a1edeeb86dcb6dc1712e365c2eec8285efb190d893231872f3
+      bin:
+        - gitea-runner.exe
+      strip: 1
+test: gitea-runner --version

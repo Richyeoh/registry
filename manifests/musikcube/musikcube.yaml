@@ -1,0 +1,21 @@
+api: v1
+name: musikcube
+kind: app
+display: musikcube
+description: Terminal-based music player, audio engine, metadata indexer, and server.
+homepage: https://musikcube.com
+license: BSD-3-Clause
+version: 3.0.5
+channels:
+    stable: 3.0.5
+provides:
+    - musikcube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/clangen/musikcube/releases/download/3.0.5/musikcube_3.0.5_win64.zip
+      sha256: 9c908eacc4b3d0bf494bc0a72048a9f3bb59ed6471c4571da8f5441e277fc883
+      bin:
+        - musikcube-cmd.exe
+      strip: 1
+test: musikcube-cmd --version

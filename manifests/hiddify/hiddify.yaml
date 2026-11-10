@@ -1,0 +1,21 @@
+api: v1
+name: hiddify
+kind: app
+display: hiddify
+description: A cross-platform auto-proxy client based on the Sing-box universal proxy toolchain, supporting protocols such as Sing-box, Xray, TUIC, Hysteria, Reality, Trojan, SSH, etc., and providing secure and flexible network access.
+homepage: https://hiddify.com
+license: Unknown
+version: 5.5.5
+channels:
+    stable: 5.5.5
+provides:
+    - hiddify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hiddify/hiddify-app/releases/download/v5.5.5/Hiddify-Windows-Portable-x64.zip
+      sha256: b4579d6a9a7b0bb0dedfd2e462ab4cfefc53ec25b56f287cca5edb435f01f627
+      bin:
+        - HiddifyCli.exe
+      strip: 1
+test: HiddifyCli --version

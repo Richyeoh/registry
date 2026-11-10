@@ -1,0 +1,21 @@
+api: v1
+name: jpegoptim
+kind: app
+display: jpegoptim
+description: Utility to optimize/compress JPEG files
+homepage: https://www.iki.fi/tjko/projects.html
+license: GPL-3.0-only
+version: 1.5.6
+channels:
+    stable: 1.5.6
+provides:
+    - jpegoptim
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tjko/jpegoptim/releases/download/v1.5.6/jpegoptim-1.5.6-x64-windows.zip
+      sha256: db2d8caee88f2665b772c4591cba223b8b729500b88266dc06d4bf79d28fe11a
+      bin:
+        - jpegoptim.exe
+      strip: 1
+test: jpegoptim --version

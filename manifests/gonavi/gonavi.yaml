@@ -1,0 +1,21 @@
+api: v1
+name: gonavi
+kind: app
+display: gonavi
+description: A modern lightweight database client built with Wails and React.
+homepage: https://gonavi.org
+license: Apache-2.0
+version: 1.2.2
+channels:
+    stable: 1.2.2
+provides:
+    - gonavi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Syngnat/GoNavi/releases/download/v1.2.2/GoNavi-1.2.2-Windows-Amd64-Portable.zip
+      sha256: 61904985fb29b5c0ee469f7efbdd02233213b7c679467df5e5d47d9ee769f964
+      bin:
+        - gonavi.exe
+      strip: 1
+test: gonavi --version

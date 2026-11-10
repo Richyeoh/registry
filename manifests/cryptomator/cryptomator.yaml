@@ -1,0 +1,24 @@
+api: v1
+name: cryptomator
+kind: app
+display: cryptomator
+description: Multi-platform transparent client-side encryption of files in the cloud
+homepage: https://cryptomator.org
+license: GPL-3.0-only
+version: 1.19.6
+channels:
+    stable: 1.19.6
+provides:
+    - cryptomator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cryptomator/cryptomator/releases/download/1.19.6/Cryptomator-1.19.6-x64.msi
+      sha256: ad416a6dff6ad969c2c346a9050b650e49fe5da9ac30c948148ae6b8412ebbce
+      bin:
+        - Cryptomator.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall cryptomator
+test: Cryptomator --version

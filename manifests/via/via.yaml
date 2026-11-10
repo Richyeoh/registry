@@ -1,0 +1,21 @@
+api: v1
+name: via
+kind: app
+display: via
+description: Graphical keyboard configuration manager.
+homepage: https://www.caniusevia.com/
+license: GPL-3.0-only
+version: 3.0.0
+channels:
+    stable: 3.0.0
+provides:
+    - via
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-win.exe#/dl.7z
+      sha256: 64cdd88d1685ee002435c12e57903f2321ff4dc54e66f7de3e5e3ec795a0036f
+      bin:
+        - via.exe
+      strip: 1
+test: via --version

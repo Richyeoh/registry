@@ -1,0 +1,21 @@
+api: v1
+name: hk-cli
+kind: app
+display: hk
+description: A git hook manager and project linting tool with an emphasis on performance.
+homepage: https://hk.jdx.dev
+license: MIT
+version: 2.12.0
+channels:
+    stable: 2.12.0
+provides:
+    - hk-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jdx/hk/releases/download/v2.12.0/hk-x86_64-pc-windows-msvc.zip
+      sha256: 052f2ea36dc679cae7fbbd57f75c2b4e5c4cd7bb6711f7bf6b9a147524ffe9f9
+      bin:
+        - hk.exe
+      strip: 1
+test: hk --version

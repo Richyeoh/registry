@@ -1,0 +1,32 @@
+api: v1
+name: amical
+kind: app
+display: Amical
+description: AI dictation app
+homepage: https://amical.ai/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.13.0
+channels:
+    stable: 1.13.0
+provides:
+    - amical
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/amicalhq/amical/releases/download/v1.13.0/Amical-macos-arm64.dmg
+      sha256: 7395ff948f315a621c7893162f5331062672c065561a737131ce4c30e97baa69
+      bin:
+        - amical
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/amicalhq/amical/releases/download/v1.13.0/Amical-macos-arm64.dmg
+      sha256: 7395ff948f315a621c7893162f5331062672c065561a737131ce4c30e97baa69
+      bin:
+        - amical
+      strip: 1
+test: amical --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

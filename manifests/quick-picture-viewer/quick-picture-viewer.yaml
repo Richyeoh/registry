@@ -1,0 +1,24 @@
+api: v1
+name: quick-picture-viewer
+kind: app
+display: quick-picture-viewer
+description: A lightweight, versatile desktop photo viewer
+homepage: https://moduleart.github.io/
+license: GPL-3.0-only
+version: 3.1.4
+channels:
+    stable: 3.1.4
+provides:
+    - quick-picture-viewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.4/QuickPictureViewer-Setup.exe
+      sha256: 688c505fa05ef2cd8dbbd5f0f105fb5205c131f75f38a4119268da7239cc5033
+      bin:
+        - quick-picture-viewer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall quick-picture-viewer
+test: quick-picture-viewer --version

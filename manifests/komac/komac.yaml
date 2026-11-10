@@ -1,0 +1,24 @@
+api: v1
+name: komac
+kind: app
+display: komac
+description: The Community Manifest Creator for WinGet
+homepage: https://github.com/russellbanks/Komac
+license: GPL-3.0-only
+version: 2.17.2
+channels:
+    stable: 2.17.2
+provides:
+    - komac
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/russellbanks/Komac/releases/download/v2.17.2/komac-2.17.2-x86_64-pc-windows-msvc.exe#/Komac.exe
+      sha256: 38a5a53b2291e959157a46a9ed2f20c1c66e9e238666780519650fcc8d37ad58
+      bin:
+        - Komac.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall komac
+test: Komac --version

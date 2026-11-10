@@ -1,0 +1,21 @@
+api: v1
+name: longbridge
+kind: app
+display: longbridge
+description: An AI-native command-line tool with 130+ commands covering every Longbridge OpenAPI endpoint, including real-time market data, fundamentals, account management, and trading.
+homepage: https://open.longbridge.com/docs/cli
+license: Apache-2.0
+version: 0.31.1
+channels:
+    stable: 0.31.1
+provides:
+    - longbridge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/longbridge/longbridge-terminal/releases/download/v0.31.1/longbridge-terminal-windows-amd64.zip
+      sha256: 0d22199fa02bac0f6c5731be2748510d260d4320f03cbf622fd048822777c597
+      bin:
+        - longbridge.exe
+      strip: 1
+test: longbridge --version

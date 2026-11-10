@@ -1,0 +1,21 @@
+api: v1
+name: pixitracker
+kind: app
+display: pixitracker
+description: A simple tool to quickly create musical sketches, chiptunes and sound experiments, without requiring a lot of musical knowledge.
+homepage: https://warmplace.ru/soft/pixitracker/
+license: Freeware
+version: 1.6.8
+channels:
+    stable: 1.6.8
+provides:
+    - pixitracker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://warmplace.ru/soft/pixitracker/pixitracker-1.6.8.zip
+      sha256: 601634ed416897b06b1d79bcdd5d54f145f2b528c3602389fb5616b239f80eb5
+      bin:
+        - pixitracker.exe
+      strip: 1
+test: pixitracker --version

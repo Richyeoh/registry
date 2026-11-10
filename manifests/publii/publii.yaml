@@ -1,0 +1,21 @@
+api: v1
+name: publii
+kind: app
+display: publii
+description: Static Site CMS with GUI to build a safe, fast and SEO-friendly website
+homepage: https://getpublii.com
+license: GPL-3.0
+version: 0.48.3
+channels:
+    stable: 0.48.3
+provides:
+    - publii
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://getpublii.com/download/Publii-0.48.3.exe#/dl.7z
+      sha256: 03788bdac95f16a05fb4baff59713202abbee32d70726caf252726e70c4618f6
+      bin:
+        - publii.exe
+      strip: 1
+test: publii --version

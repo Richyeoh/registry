@@ -1,0 +1,21 @@
+api: v1
+name: ptags
+kind: app
+display: ptags
+description: A parallel universal-ctags wrapper for git repositories.
+homepage: https://github.com/dalance/ptags
+license: MIT
+version: 0.3.5
+channels:
+    stable: 0.3.5
+provides:
+    - ptags
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dalance/ptags/releases/download/v0.3.5/ptags-v0.3.5-x86_64-win.zip
+      sha256: 0259df12c4f7a9d55e5f0b1817da166306f3e4407fa5721d757255a535453d30
+      bin:
+        - ptags.exe
+      strip: 1
+test: ptags --version

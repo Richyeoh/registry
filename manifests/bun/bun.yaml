@@ -1,0 +1,22 @@
+api: v1
+name: bun
+kind: app
+display: bun
+description: Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+homepage: https://bun.sh/
+license: MIT
+version: 1.4.4
+channels:
+    stable: 1.4.4
+provides:
+    - bun
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64.zip
+      sha256: cd2c0fccc78f3ede1f50ca827a15f063eda13d4d150a3d0674f4f6e323d864a5
+      bin:
+        - bun.exe
+        - bun.exe
+      strip: 1
+test: bun --version

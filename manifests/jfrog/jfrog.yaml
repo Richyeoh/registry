@@ -1,0 +1,25 @@
+api: v1
+name: jfrog
+kind: app
+display: jfrog
+description: Command line interface for Artifactory and Bintray
+homepage: https://jfrog.com/getcli/
+license: Apache-2.0
+version: 2.131.0
+channels:
+    stable: 2.131.0
+provides:
+    - jfrog
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.131.0/jfrog-cli-windows-amd64/jfrog.exe
+      sha256: 451cabac860e8c37d28cc320b55f342bae8c2ded5865dd94d25b36e1fd55df50
+      bin:
+        - jfrog.exe
+        - jfrog.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jfrog
+test: jfrog --version

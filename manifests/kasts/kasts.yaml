@@ -1,0 +1,21 @@
+api: v1
+name: kasts
+kind: app
+display: kasts
+description: Convergent podcast application
+homepage: https://apps.kde.org/kasts/
+license: LGPL-2.0-only
+version: 26.08-4942
+channels:
+    stable: 26.08-4942
+provides:
+    - kasts
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.kde.org/ci-builds/multimedia/kasts/release-26.08/windows/kasts-release_26.08-4942-windows-cl-msvc2022-x86_64.7z
+      sha256: f32aa038c8fd1d519f5aa6a29f85289e671339ba1575ab81b9e81db5f41cc9d2
+      bin:
+        - bin\kasts.exe
+      strip: 1
+test: bin\kasts --version

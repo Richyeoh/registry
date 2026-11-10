@@ -1,0 +1,25 @@
+api: v1
+name: rainmeter
+kind: app
+display: rainmeter
+description: A desktop customization tool
+homepage: https://www.rainmeter.net
+license: GPL-2.0-only
+version: 4.5.28.3936
+channels:
+    stable: 4.5.28.3936
+provides:
+    - rainmeter
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rainmeter/rainmeter/releases/download/v4.5.28.3936/Rainmeter-4.5.28.exe
+      sha256: de6e010f8c28882bc28dcd8f319c899f34dfddec51e1e4dd4e7a23f68ebfe14d
+      bin:
+        - Rainmeter.exe
+        - SkinInstaller.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rainmeter
+test: Rainmeter --version

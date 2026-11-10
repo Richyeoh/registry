@@ -1,0 +1,55 @@
+api: v1
+name: autossh
+kind: app
+display: autossh
+description: Automatically restart SSH sessions and tunnels, in case they drop.
+homepage: https://www.harding.motd.ca/autossh/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.4g
+channels:
+    stable: 1.4g
+provides:
+    - autossh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jazzl0ver/autossh/releases/download/1.4g/autossh.exe
+      sha256: b05e9599fa6e9ff9d2a57e141bdca0eb7f5829e8fd67e37e878863a4fd46469f
+      bin:
+        - autossh.exe
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autossh/blobs/sha256:d1712ac93597119c8ba5cf1f945243b52ef382241e868920753e0d18b8a3944d
+      sha256: d1712ac93597119c8ba5cf1f945243b52ef382241e868920753e0d18b8a3944d
+      bin:
+        - autossh
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/autossh/blobs/sha256:b23212c6cac25e973c0d1384d776a60a1eca96e336ef342a83d8e599a24e4c1a
+      sha256: b23212c6cac25e973c0d1384d776a60a1eca96e336ef342a83d8e599a24e4c1a
+      bin:
+        - autossh
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/autossh/blobs/sha256:382150d095c1ca848c38eabfd93635ecf9868291ec5cb85bdae6a16a53dc7ea9
+      sha256: 382150d095c1ca848c38eabfd93635ecf9868291ec5cb85bdae6a16a53dc7ea9
+      bin:
+        - autossh
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/autossh/blobs/sha256:d60fa3c4409563c4ee150db9420c1690afd67a5ddc4b275164a388543b2d6e54
+      sha256: d60fa3c4409563c4ee150db9420c1690afd67a5ddc4b275164a388543b2d6e54
+      bin:
+        - autossh
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall autossh
+test: autossh --version

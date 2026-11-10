@@ -1,0 +1,24 @@
+api: v1
+name: winmemorycleaner
+kind: app
+display: winmemorycleaner
+description: Portable RAM cleaner using native Windows APIs to release memory.
+homepage: https://github.com/IgorMundstein/WinMemoryCleaner
+license: Unknown
+version: 3.0.8
+channels:
+    stable: 3.0.8
+provides:
+    - winmemorycleaner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/IgorMundstein/WinMemoryCleaner/releases/download/3.0.8/WinMemoryCleaner.exe
+      sha256: 8b68d56c6ee28740f76513f21b21f5a1018f0ef291467b3f3d39d43daf0c0f2f
+      bin:
+        - WinMemoryCleaner.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall winmemorycleaner
+test: WinMemoryCleaner --version

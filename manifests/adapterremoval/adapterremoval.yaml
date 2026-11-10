@@ -1,0 +1,46 @@
+api: v1
+name: adapterremoval
+kind: app
+display: adapterremoval
+description: Rapid adapter trimming, identification, and read merging
+homepage: https://github.com/MikkelSchubert/adapterremoval
+license: GPL-3.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 3.0.2
+channels:
+    stable: 3.0.2
+provides:
+    - adapterremoval
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adapterremoval/blobs/sha256:06ca0d1c4b56b3a8f5ee607926a151e261f0e92bb77265640bb5bf4e8fec5d1b
+      sha256: 06ca0d1c4b56b3a8f5ee607926a151e261f0e92bb77265640bb5bf4e8fec5d1b
+      bin:
+        - adapterremoval
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adapterremoval/blobs/sha256:0808fd52d51e7b1ef9664120fbdf203f7910de67279b1c7c45e50c4a49e0aa2d
+      sha256: 0808fd52d51e7b1ef9664120fbdf203f7910de67279b1c7c45e50c4a49e0aa2d
+      bin:
+        - adapterremoval
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/adapterremoval/blobs/sha256:9457322cda074f23c4965f72e6f3d51ab42767c47df8fa35d4bdf62b2de955df
+      sha256: 9457322cda074f23c4965f72e6f3d51ab42767c47df8fa35d4bdf62b2de955df
+      bin:
+        - adapterremoval
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/adapterremoval/blobs/sha256:c9d06e27db10962db51126eddcd4254d40181564f6cda562cf1196ac4f6a881f
+      sha256: c9d06e27db10962db51126eddcd4254d40181564f6cda562cf1196ac4f6a881f
+      bin:
+        - adapterremoval
+      strip: 1
+test: adapterremoval --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: msrt
+kind: app
+display: msrt
+description: Microsoft Windows Malicious Software Removal Tool (MSRT) helps keep Windows computers free from prevalent malware. MSRT finds and removes threats and reverses the changes made by these threats.
+homepage: http://support.microsoft.com/kb/KB890830
+license: Freeware
+version: "5.137"
+channels:
+    stable: "5.137"
+provides:
+    - msrt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/2/C/5/2C563B99-54D9-4D85-A82B-45D3CD2F53CE/Windows-KB890830-x64-V5.137.exe#/msrt.exe
+      sha256: d60998891cf8722ee6cb229f98dfa4b2d40fe7336f400cf938ec3e765bd4944d
+      bin:
+        - msrt.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall msrt
+test: msrt --version

@@ -1,0 +1,21 @@
+api: v1
+name: tssh
+kind: app
+display: tssh
+description: A highly OpenSSH-compatible client with extended features.
+homepage: https://trzsz.github.io/tssh
+license: MIT
+version: 0.1.27
+channels:
+    stable: 0.1.27
+provides:
+    - tssh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trzsz/trzsz-ssh/releases/download/v0.1.27/tssh_0.1.27_windows_x86_64.zip
+      sha256: 7d71f7103f0c9575ed4be259f6c22528dd0eaed20a72560173ccc4f4b8ba8a52
+      bin:
+        - tssh.exe
+      strip: 1
+test: tssh --version

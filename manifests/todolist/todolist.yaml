@@ -1,0 +1,22 @@
+api: v1
+name: todolist
+kind: app
+display: todolist
+description: This free (for life) Windows desktop application offers an effective and flexible way to stay on top of your daily tasks.
+homepage: https://www.abstractspoon.com
+license: Unknown
+version: 9.2.13
+channels:
+    stable: 9.2.13
+provides:
+    - todolist
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/abstractspoon/ToDoList_Downloads/master/Latest/todolist_exe.zip
+      sha256: f97fd40852b02a80aa40e7016768d0214f0924105696f1246963f8b2514b0628
+      bin:
+        - ToDoList.exe
+        - TDLTransEdit.exe
+      strip: 1
+test: ToDoList --version

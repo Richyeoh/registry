@@ -1,0 +1,25 @@
+api: v1
+name: n-m3u8dl-cli
+kind: app
+display: n-m3u8dl-cli
+description: A m3u8 downloader
+homepage: https://nilaoda.github.io/N_m3u8DL-CLI/
+license: MIT
+version: 3.0.2
+channels:
+    stable: 3.0.2
+provides:
+    - n-m3u8dl-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nilaoda/N_m3u8DL-CLI/releases/download/3.0.2/N_m3u8DL-CLI_v3.0.2.exe#/N_m3u8DL-CLI.exe
+      sha256: b9e50e69e722b427d8bcafd1ecaa355d3ae79d9dae6b5fd87095fdb01bef8195
+      bin:
+        - N_m3u8DL-CLI.exe
+        - N_m3u8DL-CLI.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall n-m3u8dl-cli
+test: N_m3u8DL-CLI --version

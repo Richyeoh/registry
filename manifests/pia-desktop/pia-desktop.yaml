@@ -1,0 +1,29 @@
+api: v1
+name: pia-desktop
+kind: app
+display: pia-desktop
+description: Private Internet Access - Desktop VPN Client for Windows/macOS/Linux
+homepage: https://github.com/pia-foss/desktop
+license: Freeware
+version: 3.8-08539
+channels:
+    stable: 3.8-08539
+provides:
+    - pia-desktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://privateinternetaccess-storage.s3.amazonaws.com/pub/pia_desktop/builds/pia-windows-x64-3.8-08539.exe#/dl.7z
+      sha256: 30448eee4f7e5c093d770bfbda822bb1e5f896468778358a8f4b7db63616213f
+      bin:
+        - openvpn_updown.bat.exe
+        - pia-hnsd.exe
+        - pia-openvpn.exe
+        - pia-service.exe
+        - pia-ss-local.exe
+        - pia-unbound.exe
+        - pia-wgservice.exe
+        - pia-winsvcstub.exe
+        - piactl.exe
+      strip: 1
+test: openvpn_updown.bat --version

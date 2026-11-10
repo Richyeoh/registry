@@ -1,0 +1,21 @@
+api: v1
+name: recycle-bin
+kind: app
+display: recycle-bin
+description: Move files and folders to the Windows recycle bin within command line.
+homepage: https://github.com/sindresorhus/recycle-bin
+license: MIT
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - recycle-bin
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sindresorhus/recycle-bin/releases/download/v2.1.1/recycle-bin-v2.1.1-x86_64.zip
+      sha256: 317cbd146f8db5475b06045896d2db7a90c6377903970a8882c6d2f8f969c339
+      bin:
+        - recycle-bin.exe
+      strip: 1
+test: recycle-bin --version

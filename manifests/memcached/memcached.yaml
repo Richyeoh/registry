@@ -1,0 +1,21 @@
+api: v1
+name: memcached
+kind: app
+display: memcached
+description: Distributed memory object caching system
+homepage: https://memcached.org
+license: BSD-3-Clause
+version: 1.6.45
+channels:
+    stable: 1.6.45
+provides:
+    - memcached
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nono303/memcached/archive/1.6.45.zip
+      sha256: b15c03ad74dd13cae869f4abf3fe5ea3038deb8b5a7f8592622773fff0193926
+      bin:
+        - memcached.exe
+      strip: 1
+test: memcached --version

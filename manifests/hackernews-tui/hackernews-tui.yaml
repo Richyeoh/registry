@@ -1,0 +1,21 @@
+api: v1
+name: hackernews-tui
+kind: app
+display: hackernews-tui
+description: A Terminal UI to browse Hacker News
+homepage: https://github.com/aome510/hackernews-TUI
+license: MIT
+version: 0.13.5
+channels:
+    stable: 0.13.5
+provides:
+    - hackernews-tui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aome510/hackernews-TUI/releases/download/v0.13.5/hackernews_tui-x86_64-pc-windows-msvc.zip
+      sha256: 06374a8d7951c250a95fe35528c95fbb53003588a399b334261a2aeaa2707fac
+      bin:
+        - hackernews_tui.exe
+      strip: 1
+test: hackernews_tui --version

@@ -1,0 +1,21 @@
+api: v1
+name: todotxt-net
+kind: app
+display: todotxt-net
+description: Implementation of todo.txt for Windows using the .NET framework
+homepage: https://benrhughes.github.io/todotxt.net/
+license: BSD-2-Clause-FreeBSD
+version: 3.3.1
+channels:
+    stable: 3.3.1
+provides:
+    - todotxt-net
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/benrhughes/todotxt.net/releases/download/v3.3.1/todotxt-portable-3.3.1.zip
+      sha256: 1b85b951595ec1416b5a63553685f3d2a6a25dfea34128c58e93ee184729187c
+      bin:
+        - todotxt.exe
+      strip: 1
+test: todotxt --version

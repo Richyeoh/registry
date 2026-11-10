@@ -1,0 +1,21 @@
+api: v1
+name: nunit-extension-nunit-v2-driver
+kind: app
+display: nunit-extension-nunit-v2-driver
+description: NUnit V2 Framework Driver Extension
+homepage: https://nunit.org/
+license: MIT
+version: 3.9.0
+channels:
+    stable: 3.9.0
+provides:
+    - nunit-extension-nunit-v2-driver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://packages.chocolatey.org/nunit-extension-nunit-v2-driver.3.9.0.nupkg
+      sha256: 90a14371bbf5a21dc44d1913bb76c8765719f373fb4b171d75bc63b92ba6b43d
+      bin:
+        - nunit-extension-nunit-v2-driver.exe
+      strip: 1
+test: nunit-extension-nunit-v2-driver --version

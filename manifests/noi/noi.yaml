@@ -1,0 +1,21 @@
+api: v1
+name: noi
+kind: app
+display: noi
+description: Noi, a platform solution integrating AI with operating systems (AI + tools + plugins + community)
+homepage: https://noib.app
+license: Unknown
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - noi
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lencx/Noi/releases/download/v1.1.0/noi-1.1.0-full.nupkg
+      sha256: 4929ed8096b7509cfdfcbd0424110ee4eb301ba903e7e8e02dec5b5ac84bd99b
+      bin:
+        - noi.exe
+      strip: 1
+test: noi --version

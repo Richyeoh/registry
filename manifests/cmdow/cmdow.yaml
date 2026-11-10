@@ -1,0 +1,21 @@
+api: v1
+name: cmdow
+kind: app
+display: cmdow
+description: Win32 console application for manipulating program windows.
+homepage: https://ritchielawrence.github.io/cmdow/
+license: MIT
+version: 1.4.8
+channels:
+    stable: 1.4.8
+provides:
+    - cmdow
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ritchielawrence/cmdow/archive/v1.4.8.zip
+      sha256: f5c5289a6c26aff63dd27af321ba0392ce3f5c2ed0e6bfcd07d8c7952c468ac9
+      bin:
+        - bin\Release\cmdow.exe
+      strip: 1
+test: bin\Release\cmdow --version

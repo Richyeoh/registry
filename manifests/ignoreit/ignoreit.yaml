@@ -1,0 +1,24 @@
+api: v1
+name: ignoreit
+kind: app
+display: ignoreit
+description: Quickly load .gitignore templates
+homepage: https://github.com/jewlexx/ignoreit
+license: MIT
+version: 3.0.0
+channels:
+    stable: 3.0.0
+provides:
+    - ignoreit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jewlexx/ignoreit/releases/download/v3.0.0/ignoreit-x86_64.exe#/ignoreit.exe
+      sha256: 5f857be222e5bb0e2aa1fc7d47d90d83450dfc0d55dd8edb1261243ede6298ee
+      bin:
+        - ignoreit.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ignoreit
+test: ignoreit --version

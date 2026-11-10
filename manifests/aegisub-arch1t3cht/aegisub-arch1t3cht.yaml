@@ -1,0 +1,21 @@
+api: v1
+name: aegisub-arch1t3cht
+kind: app
+display: aegisub-arch1t3cht
+description: Cross-platform advanced subtitle editor, with new feature branches. Read the README on the feature branch.
+homepage: https://github.com/arch1t3cht/Aegisub
+license: Unknown
+version: 06-01
+channels:
+    stable: 06-01
+provides:
+    - aegisub-arch1t3cht
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/arch1t3cht/Aegisub/releases/download/migration06-01/Windows.MSVC.Release.-.portable.zip
+      sha256: a0417ee80c286531f368be7f708770e4ee74c4657b329e62a59c2ea7e3e10d1c
+      bin:
+        - aegisub-arch1t3cht.exe
+      strip: 1
+test: aegisub-arch1t3cht --version

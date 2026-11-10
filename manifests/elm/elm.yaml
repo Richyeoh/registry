@@ -1,0 +1,21 @@
+api: v1
+name: elm
+kind: app
+display: elm
+description: Elm language compiler.
+homepage: https://elm-lang.org
+license: BSD-3-Clause
+version: 0.19.3
+channels:
+    stable: 0.19.3
+provides:
+    - elm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/elm/compiler/releases/download/0.19.3/installer-for-windows.exe#/dl.7z
+      sha256: 964dbef5f34a500bfaead2ea1238d7c3c94d7e69416012ce02a012995240c982
+      bin:
+        - elm.exe
+      strip: 1
+test: elm --version

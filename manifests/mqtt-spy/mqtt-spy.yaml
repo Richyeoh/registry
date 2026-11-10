@@ -1,0 +1,21 @@
+api: v1
+name: mqtt-spy
+kind: app
+display: mqtt-spy
+description: An open source desktop & command line utility intended to help you with monitoring activity on MQTT topics.
+homepage: https://github.com/eclipse/paho.mqtt-spy
+license: EPL-1.0
+version: 1.0.0
+channels:
+    stable: 1.0.0
+provides:
+    - mqtt-spy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/eclipse/paho.mqtt-spy/releases/download/1.0.0/mqtt-spy-1.0.0.jar#/mqtt-spy.jar
+      sha256: 4333402f4c2e5212361bc83e0801fccda1cc40acd080c64b656f089122cbc2d0
+      bin:
+        - mqtt-spy.jar.exe
+      strip: 1
+test: mqtt-spy.jar --version

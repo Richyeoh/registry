@@ -1,0 +1,24 @@
+api: v1
+name: bitwarden
+kind: app
+display: bitwarden
+description: Password management solutions for individuals, teams, and business organizations
+homepage: https://bitwarden.com
+license: GPL-3.0-or-later
+version: 2026.10.4
+channels:
+    stable: 2026.10.4
+provides:
+    - bitwarden
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/bitwarden/clients/releases/download/desktop-v2026.10.4/Bitwarden-Portable-2026.10.4.exe
+      sha256: ebd32ccd6bf0a0131bc9ad791fdcd6cc5f0052762cc7c905f240186aafa7126d
+      bin:
+        - Bitwarden.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bitwarden
+test: Bitwarden --version

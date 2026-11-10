@@ -1,0 +1,21 @@
+api: v1
+name: championify
+kind: app
+display: championify
+description: A little program that downloads all the recent item sets and imports them in to your League of Legends to use within game.
+homepage: https://github.com/dustinblackman/Championify
+license: MIT
+version: 2.1.5
+channels:
+    stable: 2.1.5
+provides:
+    - championify
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dustinblackman/Championify/releases/download/2.1.5/Championify-WIN-2.1.5.zip
+      sha256: d97344ddcf1e3116c754a86fe68bfb606b7d9021ce23c8931a57100050ba400f
+      bin:
+        - championify.exe
+      strip: 1
+test: championify --version

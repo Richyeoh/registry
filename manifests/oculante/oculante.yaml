@@ -1,0 +1,24 @@
+api: v1
+name: oculante
+kind: app
+display: oculante
+description: A minimalistic crossplatform image viewer written in Rust
+homepage: https://github.com/woelper/oculante
+license: MIT
+version: 0.9.6
+channels:
+    stable: 0.9.6
+provides:
+    - oculante
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/woelper/oculante/releases/download/0.9.6/oculante.exe
+      sha256: 85bf65b56faa3f353384a9cafbca83e969d73cf7d6d0e0c10e5cd85c0070a6d9
+      bin:
+        - oculante.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall oculante
+test: oculante --version

@@ -1,0 +1,21 @@
+api: v1
+name: weasyprint
+kind: app
+display: weasyprint
+description: The awesome document factory
+homepage: https://weasyprint.org
+license: BSD-3-Clause
+version: "70.0"
+channels:
+    stable: "70.0"
+provides:
+    - weasyprint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Kozea/WeasyPrint/releases/download/v70.0/weasyprint-windows-onedir.zip
+      sha256: ab1151f210b4e6bb7aa7a79e91a67e8ddb760094c107bfda55241b6aaefe7d53
+      bin:
+        - weasyprint.exe
+      strip: 1
+test: weasyprint --version

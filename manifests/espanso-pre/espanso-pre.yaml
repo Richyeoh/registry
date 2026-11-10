@@ -1,0 +1,22 @@
+api: v1
+name: espanso-pre
+kind: app
+display: espanso-pre
+description: Text expander
+homepage: https://espanso.org
+license: GPL-3.0-only
+version: 2.1.7-beta
+channels:
+    stable: 2.1.7-beta
+provides:
+    - espanso-pre
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/espanso/espanso/releases/download/v2.1.7-beta/Espanso-Win-Portable-x86_64.zip
+      sha256: d5c06af09615e989cdc917ce8373f32a33969b5fce41352a91a2a38aa8846ca8
+      bin:
+        - espansod.exe
+        - espanso.cmd.exe
+      strip: 1
+test: espansod --version

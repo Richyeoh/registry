@@ -1,0 +1,21 @@
+api: v1
+name: git-bug
+kind: app
+display: git-bug
+description: Distributed, offline-first bug tracker embedded in git, with bridges
+homepage: https://github.com/git-bug/git-bug
+license: GPL-3.0-or-later
+version: 0.12.0
+channels:
+    stable: 0.12.0
+provides:
+    - git-bug
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-bug/git-bug/releases/download/v0.12.0/git-bug_windows_amd64.zip
+      sha256: 97e4740c3a845d78683625a4c52dc7ee3d2cb63853f3ec489be5c03343a559c3
+      bin:
+        - git-bug.exe
+      strip: 1
+test: git-bug --version

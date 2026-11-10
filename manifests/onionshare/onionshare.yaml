@@ -1,0 +1,24 @@
+api: v1
+name: onionshare
+kind: app
+display: onionshare
+description: Securely and anonymously send and receive files.
+homepage: https://onionshare.org/
+license: GPL-3.0-only
+version: 2.7.2
+channels:
+    stable: 2.7.2
+provides:
+    - onionshare
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/onionshare/onionshare/releases/download/v2.7.2/OnionShare-win64-2.7.2.msi
+      sha256: 4844b23ab16e7f78954f185b3fd164aed6c53b81574e05206d6e7278f2acd54d
+      bin:
+        - onionshare-cli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall onionshare
+test: onionshare-cli --version

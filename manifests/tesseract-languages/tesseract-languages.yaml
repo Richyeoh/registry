@@ -1,0 +1,21 @@
+api: v1
+name: tesseract-languages
+kind: app
+display: tesseract-languages
+description: Fast integer versions of trained models for the Tesseract Open Source OCR Engine
+homepage: https://github.com/tesseract-ocr/tessdata_fast
+license: Apache-2.0
+version: 4.1.0
+channels:
+    stable: 4.1.0
+provides:
+    - tesseract-languages
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.1.0.zip#/dl.7z_
+      sha256: 46ae18d17bd9583392ae7c047b751846233d4e030264a551e71ff4f25e035548
+      bin:
+        - tesseract-languages.exe
+      strip: 1
+test: tesseract-languages --version

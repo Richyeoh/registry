@@ -1,0 +1,21 @@
+api: v1
+name: pyoxidizer
+kind: app
+display: pyoxidizer
+description: A modern Python application packaging and distribution tool
+homepage: https://github.com/indygreg/PyOxidizer
+license: MPL-2.0
+version: 0.24.0
+channels:
+    stable: 0.24.0
+provides:
+    - pyoxidizer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/indygreg/PyOxidizer/releases/download/pyoxidizer%2F0.24.0/pyoxidizer-0.24.0-x86_64-pc-windows-msvc.zip
+      sha256: c1b757bc7c64921b38bf5fd70d2a2e2f591d36fe1cae3b5722822c08f651ba7b
+      bin:
+        - pyoxidizer.exe
+      strip: 1
+test: pyoxidizer --version

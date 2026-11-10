@@ -1,0 +1,24 @@
+api: v1
+name: bita
+kind: app
+display: bita
+description: An HTTP-based file synchronization tool optimized to minimize bandwidth by reusing existing data without requiring pre-built patches or specialized servers.
+homepage: https://github.com/oll3/bita
+license: MIT
+version: 0.15.0
+channels:
+    stable: 0.15.0
+provides:
+    - bita
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oll3/bita/releases/download/v0.15.0/bita-v0.15.0-x86_64-pc-windows-msvc.exe#/bita.exe
+      sha256: d818027d7050917992db97b654288ad97b841062493f61a5705d5dee5fec0f29
+      bin:
+        - bita.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bita
+test: bita --version

@@ -1,0 +1,25 @@
+api: v1
+name: postgres-language-server
+kind: app
+display: postgres-language-server
+description: A collection of language tools and a Language Server Protocol (LSP) implementation for Postgres.
+homepage: https://pg-language-server.com/latest/
+license: MIT
+version: 0.28.2
+channels:
+    stable: 0.28.2
+provides:
+    - postgres-language-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/supabase-community/postgres-language-server/releases/download/0.28.2/postgres-language-server_x86_64-pc-windows-msvc.exe#/postgres-language-server.exe
+      sha256: 585e028278d37f373510129f216a7163afd7e340127334aa6da6ca711a446060
+      bin:
+        - postgres-language-server.exe
+        - postgrestools.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall postgres-language-server
+test: postgres-language-server --version

@@ -1,0 +1,23 @@
+api: v1
+name: aimp
+kind: app
+display: aimp
+description: Audio player
+homepage: https://www.aimp.ru
+license: Unknown
+version: 5.40.2730
+channels:
+    stable: 5.40.2730
+provides:
+    - aimp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.aimp.ru/?do=download.file&id=31#/dl.zip
+      sha256: 543b87461741e774e6f56f0b20c8056943243917f09070dd621fc218b667decf
+      bin:
+        - AIMP.exe
+        - AIMPac.exe
+        - AIMPate.exe
+      strip: 1
+test: AIMP --version

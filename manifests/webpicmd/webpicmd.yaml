@@ -1,0 +1,24 @@
+api: v1
+name: webpicmd
+kind: app
+display: webpicmd
+description: A little tool for deploying your favorite open-source web applications and all the necessary platform components required to get you up and running quickly and seamlessly.
+homepage: https://docs.microsoft.com/en-us/iis/install/web-platform-installer
+license: Unknown
+version: "4.5"
+channels:
+    stable: "4.5"
+provides:
+    - webpicmd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.microsoft.com/download/7/0/4/704CEB4C-9F42-4962-A2B0-5C84B0682C7A/WebPlatformInstaller_amd64_en-US.msi
+      sha256: 63eb18348d9299a575124b55cb86b748abeb971b869d8ce14b7c4bec4b76c5f6
+      bin:
+        - Microsoft\Web Platform Installer\WebpiCmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall webpicmd
+test: Microsoft\Web Platform Installer\WebpiCmd.exe --version

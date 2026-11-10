@@ -1,0 +1,21 @@
+api: v1
+name: proxelar
+kind: app
+display: proxelar
+description: Scriptable local traffic workbench (MITM proxy) to inspect, intercept, replay, and rewrite HTTP/HTTPS and WebSocket traffic.
+homepage: https://github.com/emanuele-em/proxelar
+license: MIT
+version: 0.6.1
+channels:
+    stable: 0.6.1
+provides:
+    - proxelar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/emanuele-em/proxelar/releases/download/v0.6.1/proxelar-v0.6.1-x86_64-pc-windows-msvc.zip
+      sha256: 7614d89b08e38fae95f2ee1d5961f13dcaadbdc678aa9d6d67c4f3f29770d135
+      bin:
+        - proxelar.exe
+      strip: 1
+test: proxelar --version

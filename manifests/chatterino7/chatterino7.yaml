@@ -1,0 +1,21 @@
+api: v1
+name: chatterino7
+kind: app
+display: chatterino7
+description: A fork of Chatterino 2 with 7TV subscriber features.
+homepage: https://github.com/SevenTV/chatterino7
+license: MIT
+version: 7.5.5
+channels:
+    stable: 7.5.5
+provides:
+    - chatterino7
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SevenTV/chatterino7/releases/download/v7.5.5/Chatterino7.Portable.zip
+      sha256: 665e7e3d61bf40c2cea0397e54f42c9c2d9ae3ef4c1252148f407a3258b90aa9
+      bin:
+        - chatterino.exe
+      strip: 1
+test: chatterino --version

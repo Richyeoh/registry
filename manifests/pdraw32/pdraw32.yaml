@@ -1,0 +1,21 @@
+api: v1
+name: pdraw32
+kind: app
+display: pdraw32
+description: Tool for DNA cloning, sequence analysis and plasmid/DNA plotting
+homepage: http://www.acaclone.com/
+license: Unknown
+version: 1.1.154
+channels:
+    stable: 1.1.154
+provides:
+    - pdraw32
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.acaclone.com/download/pDRAW32setup154.zip
+      sha256: 3160b550cbd7bc49d5fa1e716db7d32325afd7b3f444c012401b853d8424f13c
+      bin:
+        - pdraw32.exe
+      strip: 1
+test: pdraw32 --version

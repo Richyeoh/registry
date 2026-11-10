@@ -1,0 +1,21 @@
+api: v1
+name: furnace
+kind: app
+display: furnace
+description: A multi-system chiptune tracker compatible with DefleMask modules
+homepage: https://github.com/tildearrow/furnace
+license: GPL-2.0-only
+version: 0.6.8.3
+channels:
+    stable: 0.6.8.3
+provides:
+    - furnace
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tildearrow/furnace/releases/download/v0.6.8.3/furnace-0.6.8.3-win64.zip
+      sha256: 040c30cb522c9446d76bf2f17995c8ad3f21b34e4984b4cca6db8e2a9bf0fd87
+      bin:
+        - furnace.exe
+      strip: 1
+test: furnace --version

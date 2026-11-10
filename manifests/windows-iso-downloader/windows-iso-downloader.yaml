@@ -1,0 +1,24 @@
+api: v1
+name: windows-iso-downloader
+kind: app
+display: windows-iso-downloader
+description: Easy and comfortable way to download genuine Windows 7, Windows 8.1 and Windows 10 disk images (ISO) directly from Microsoft's servers, as well as Office.
+homepage: https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool
+license: Unknown
+version: "8.46"
+channels:
+    stable: "8.46"
+provides:
+    - windows-iso-downloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.heidoc.net/php/Windows%20ISO%20Downloader.exe#/WinISODl.exe
+      sha256: d9e52b0dbb5d3540016497c913e4186433c2ecd14e359eb841d5d93c8b021aef
+      bin:
+        - windows-iso-downloader.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall windows-iso-downloader
+test: windows-iso-downloader --version

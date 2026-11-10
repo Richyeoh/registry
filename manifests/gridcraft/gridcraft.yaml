@@ -1,0 +1,21 @@
+api: v1
+name: gridcraft
+kind: app
+display: gridcraft
+description: Spreadsheets and data; an open-source, clean-room reimplementation of Microsoft Excel, rebuilt in pure Rust
+homepage: https://github.com/storytold/gridcraft
+license: MIT|Apache-2.0
+version: 0.17.0
+channels:
+    stable: 0.17.0
+provides:
+    - gridcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/gridcraft/releases/download/v0.17.0/gridcraft-0.17.0-windows-x64-portable.zip
+      sha256: fa7fc18e89f6b621f0f75ecf562ca2287a1d9d5eae5c63626d9fe01b035e38c8
+      bin:
+        - gridcraft-cli.exe
+      strip: 1
+test: gridcraft-cli --version

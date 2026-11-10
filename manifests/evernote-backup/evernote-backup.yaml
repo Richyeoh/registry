@@ -1,0 +1,21 @@
+api: v1
+name: evernote-backup
+kind: app
+display: evernote-backup
+description: Backup & export all Evernote notes and notebooks
+homepage: https://github.com/vzhd1701/evernote-backup
+license: MIT
+version: 1.14.0
+channels:
+    stable: 1.14.0
+provides:
+    - evernote-backup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/vzhd1701/evernote-backup/releases/download/1.14.0/bin_evernote_backup_1.14.0_win_x64.zip
+      sha256: b22dec0277496a89e254775b4583b40f695c6ed2c947f722199819bf68c48832
+      bin:
+        - evernote-backup.exe
+      strip: 1
+test: evernote-backup --version

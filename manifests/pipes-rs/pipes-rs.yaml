@@ -1,0 +1,21 @@
+api: v1
+name: pipes-rs
+kind: app
+display: pipes-rs
+description: Animated pipes terminal screensaver
+homepage: https://github.com/lhvy/pipes-rs
+license: Apache-2.0
+version: 1.6.4
+channels:
+    stable: 1.6.4
+provides:
+    - pipes-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lhvy/pipes-rs/releases/download/v1.6.4/pipes-rs-windows-x86_64.zip
+      sha256: c47ac69ee970f11806f956261dd1b35af5156ccd66b77ea21f62ad5242768e73
+      bin:
+        - pipes-rs.exe
+      strip: 1
+test: pipes-rs --version

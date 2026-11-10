@@ -1,0 +1,24 @@
+api: v1
+name: ntop
+kind: app
+display: ntop
+description: htop-like system-monitor with Vi-emulation for Windows
+homepage: https://github.com/gsass1/NTop
+license: GPL-3.0-only
+version: 0.3.21
+channels:
+    stable: 0.3.21
+provides:
+    - ntop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/gsass1/NTop/releases/download/v0.3.21/ntop.exe
+      sha256: a6a36e1c2e9d1a1b1252fd39d57a7d77485aacbce1d55dd9649e7d4d92aac12b
+      bin:
+        - ntop.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ntop
+test: ntop --version

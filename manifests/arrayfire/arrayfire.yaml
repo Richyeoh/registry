@@ -1,0 +1,57 @@
+api: v1
+name: arrayfire
+kind: lib
+display: arrayfire
+description: General purpose GPU library
+homepage: https://arrayfire.com
+license: BSD-3-Clause
+keywords:
+    - vcpkg
+    - brew
+    - homebrew
+version: 3.10.0
+channels:
+    stable: 3.10.0
+provides:
+    - arrayfire
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/arrayfire/arrayfire/pull/3552/commits/674e7bec90b90467139d32bf633467fe60824617.diff?full_index=1
+      sha256: 32b63107d36979e8c963f5e4c630186aec9c19bb9d90be8a4f5d3f28d2431b37
+      strip: 1
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arrayfire/blobs/sha256:2dcd335dff6f106f88134c5a78c3a4b270a41655c388a7b02e02bb288bf21411
+      sha256: 2dcd335dff6f106f88134c5a78c3a4b270a41655c388a7b02e02bb288bf21411
+      bin:
+        - arrayfire
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arrayfire/blobs/sha256:491e0b57991801e4470cb389008aa512ba573f3a16414f941acbb84ddadbccd2
+      sha256: 491e0b57991801e4470cb389008aa512ba573f3a16414f941acbb84ddadbccd2
+      bin:
+        - arrayfire
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/arrayfire/blobs/sha256:9b171c8bcf60aafee70410fe13bb3968092b4010373958d533d57f071d6478bb
+      sha256: 9b171c8bcf60aafee70410fe13bb3968092b4010373958d533d57f071d6478bb
+      bin:
+        - arrayfire
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/arrayfire/blobs/sha256:06de859182ea4dfb7fae6c1857db3f79e583868d00408eb49e504e58bf9cf268
+      sha256: 06de859182ea4dfb7fae6c1857db3f79e583868d00408eb49e504e58bf9cf268
+      bin:
+        - arrayfire
+      strip: 1
+test: arrayfire --version
+caveats: 由 VCPKG ports/arrayfire 自动转制（源码包，需构建）
+exports:
+    include:
+        - include
+    lib:
+        - arrayfire

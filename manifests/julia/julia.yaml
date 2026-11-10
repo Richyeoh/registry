@@ -1,0 +1,21 @@
+api: v1
+name: julia
+kind: app
+display: julia
+description: The Julia programming language
+homepage: https://julialang.org/
+license: MIT
+version: 1.13.3
+channels:
+    stable: 1.13.3
+provides:
+    - julia
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://julialang-s3.julialang.org/bin/winnt/x64/1.13/julia-1.13.3-win64.zip
+      sha256: 1fae8fc95e6199b3d8f6d7a3791810e45e1b3c480eb4b9f5bb211789badfc729
+      bin:
+        - bin\julia.exe
+      strip: 1
+test: bin\julia --version

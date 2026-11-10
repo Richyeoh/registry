@@ -1,0 +1,22 @@
+api: v1
+name: go122
+kind: app
+display: go122
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.22.12
+channels:
+    stable: 1.22.12
+provides:
+    - go122
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.22.12.windows-amd64.zip
+      sha256: 2ceda04074eac51f4b0b85a9fcca38bcd49daee24bed9ea1f29958a8e22673a6
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

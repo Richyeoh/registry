@@ -1,0 +1,21 @@
+api: v1
+name: cdialog
+kind: app
+display: cdialog
+description: Windows port of dialog, a script-interpreter which provides a set of curses widgets.
+homepage: https://andrear.altervista.org/home/cdialog.php
+license: LGPL-2.1-only
+version: 1.1-20100119
+channels:
+    stable: 1.1-20100119
+provides:
+    - cdialog
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://andrear.altervista.org/contents/pc/dialog/dialog-exe-mingw.zip
+      sha256: 7baa9825f48ed760d8010e704a33964e98f8bf58e6773e43df280cde5eea247a
+      bin:
+        - dialog.exe
+      strip: 1
+test: dialog --version

@@ -1,0 +1,22 @@
+api: v1
+name: localsend
+kind: app
+display: localsend
+description: Share files to nearby devices. An open source cross-platform alternative to AirDrop.
+homepage: https://localsend.org/
+license: Apache-2.0
+version: 1.18.2
+channels:
+    stable: 1.18.2
+provides:
+    - localsend
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-windows-x86-64.zip
+      sha256: 737aab1829d901e1d798cddd1e5fdc06ba9dfcc9ea50cfe3805e047005d5e71a
+      bin:
+        - localsend_app.exe
+        - localsend_app.exe
+      strip: 1
+test: localsend_app --version

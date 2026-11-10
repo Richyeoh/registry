@@ -1,0 +1,21 @@
+api: v1
+name: compactor
+kind: app
+display: compactor
+description: A user interface for Windows 10 filesystem compression
+homepage: https://github.com/Freaky/Compactor
+license: MIT
+version: 0.10.1
+channels:
+    stable: 0.10.1
+provides:
+    - compactor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Freaky/Compactor/releases/download/v0.10.1/Compactor-0.10.1.7z
+      sha256: 1dc75fd5dad212e0cbf29a363632e0299945183d722b2c00e527e54ed86de379
+      bin:
+        - compactor.exe
+      strip: 1
+test: compactor --version

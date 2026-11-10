@@ -1,0 +1,24 @@
+api: v1
+name: freedownloadmanager
+kind: app
+display: freedownloadmanager
+description: A powerful download manager
+homepage: https://www.freedownloadmanager.org
+license: Freeware
+version: 6.35.2.7075
+channels:
+    stable: 6.35.2.7075
+provides:
+    - freedownloadmanager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe
+      sha256: 6a3c5beacaa9dce8c70967e4cbf541533ce9438722028b605f7b05c3d1c1fbbb
+      bin:
+        - freedownloadmanager.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall freedownloadmanager
+test: freedownloadmanager --version

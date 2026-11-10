@@ -1,0 +1,24 @@
+api: v1
+name: kubebox
+kind: app
+display: kubebox
+description: Terminal and Web console for Kubernetes.
+homepage: https://github.com/astefanutti/kubebox
+license: MIT
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - kubebox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/astefanutti/kubebox/releases/download/v0.10.0/kubebox-windows.exe#/kubebox.exe
+      sha256: 190c9ce81d4c8d66673ed4cdc9e47dbc553249dcf5072199c6afcd170fe39dcb
+      bin:
+        - kubebox.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kubebox
+test: kubebox --version

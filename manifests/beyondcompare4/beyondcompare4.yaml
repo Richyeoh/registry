@@ -1,0 +1,25 @@
+api: v1
+name: beyondcompare4
+kind: app
+display: beyondcompare4
+description: Directory and file compare functions in one package
+homepage: https://www.scootersoftware.com
+license: Unknown
+version: 4.4.7.28397
+channels:
+    stable: 4.4.7.28397
+provides:
+    - beyondcompare4
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.scootersoftware.com/files/BCompare-4.4.7.28397_x64.msi
+      sha256: 089b8acbe228e876f4847132ec71fe256b134703e2e6205619b28905cb69f881
+      bin:
+        - Bcomp.exe
+        - BCompare.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall beyondcompare4
+test: Bcomp --version

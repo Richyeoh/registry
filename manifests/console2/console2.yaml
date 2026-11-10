@@ -1,0 +1,21 @@
+api: v1
+name: console2
+kind: app
+display: console2
+description: A Windows console window enhancement.
+homepage: https://sourceforge.net/projects/console/
+license: GPL-2.0-only
+version: 2.0.0.148
+channels:
+    stable: 2.0.0.148
+provides:
+    - console2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.sourceforge.net/project/console/console-devel/2.00/Console-2.00b148-Beta_64bit.zip
+      sha256: 675c3c82695a97dafe164960a50dfbe6c13d0a900b382efb7090090138d22933
+      bin:
+        - Console.exe
+      strip: 1
+test: Console --version

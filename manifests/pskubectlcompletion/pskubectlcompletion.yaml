@@ -1,0 +1,21 @@
+api: v1
+name: pskubectlcompletion
+kind: app
+display: pskubectlcompletion
+description: kubectl auto-completion for PowerShell
+homepage: https://github.com/mziyabo/PSKubectlCompletion
+license: Apache-2.0
+version: 1.0.4
+channels:
+    stable: 1.0.4
+provides:
+    - pskubectlcompletion
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/pskubectlcompletion.1.0.4.nupkg
+      sha256: 497d7c0724b5946176d8a6a250e074d1bf3848e9e75adaf2d73d623f57d1716e
+      bin:
+        - pskubectlcompletion.exe
+      strip: 1
+test: pskubectlcompletion --version

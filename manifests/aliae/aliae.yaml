@@ -1,0 +1,39 @@
+api: v1
+name: aliae
+kind: app
+display: aliae
+description: Cross shell and platform alias management
+homepage: https://aliae.dev
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - aliae
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aliae/blobs/sha256:2151cf96b88e3573d4b519647dc91c8c92f61d613bddf91f6cbe4392bc590296
+      sha256: 2151cf96b88e3573d4b519647dc91c8c92f61d613bddf91f6cbe4392bc590296
+      bin:
+        - aliae
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aliae/blobs/sha256:0a0fca71e39d64424db47794642194964c1a3ff010c3ab917555d885da024b0c
+      sha256: 0a0fca71e39d64424db47794642194964c1a3ff010c3ab917555d885da024b0c
+      bin:
+        - aliae
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aliae/blobs/sha256:005430bade50ff99499a91d05f89b188b2f3df6a8af75c4fe637a119e6649064
+      sha256: 005430bade50ff99499a91d05f89b188b2f3df6a8af75c4fe637a119e6649064
+      bin:
+        - aliae
+      strip: 1
+test: aliae --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: anytype
+kind: app
+display: anytype
+description: Local-first, E2E encrypted software for creating and storing tasks, notes, ideas, documents, workflows, and more.
+homepage: https://anytype.io/
+license: Unknown
+version: 0.57.7
+channels:
+    stable: 0.57.7
+provides:
+    - anytype
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/anyproto/anytype-ts/releases/download/v0.57.7/Anytype.Setup.0.57.7.exe#/dl.7z
+      sha256: eb77ad0e98fc46f50d5d121c6e49b5ab0f65da10134e93e973f89dbd7e972d6c
+      bin:
+        - anytype.exe
+      strip: 1
+test: anytype --version

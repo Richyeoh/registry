@@ -1,0 +1,21 @@
+api: v1
+name: markeron
+kind: app
+display: markeron
+description: Lightweight open-source screen annotation tool with click-through mode.
+homepage: https://markeron.cn
+license: MIT
+version: 2.13.4
+channels:
+    stable: 2.13.4
+provides:
+    - markeron
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ifer47/markeron/releases/download/v2.13.4/MarkerOn_2.13.4_x64-setup.exe#/dl.7z
+      sha256: 3320e11923b5bb73e793c98ad99e1ec9787bb124bc2cdc275fcfeca434a42efd
+      bin:
+        - markeron.exe
+      strip: 1
+test: markeron --version

@@ -1,0 +1,21 @@
+api: v1
+name: terraform-switcher
+kind: app
+display: terraform-switcher
+description: A command line tool to switch between different versions of terraform
+homepage: https://tfswitch.warrensbox.com
+license: MIT
+version: 1.20.0
+channels:
+    stable: 1.20.0
+provides:
+    - terraform-switcher
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/warrensbox/terraform-switcher/releases/download/v1.20.0/terraform-switcher_v1.20.0_windows_amd64.zip
+      sha256: 93c096b0653435de0ca2df670684e8451d8641ee79c2182629e89c69ac403cde
+      bin:
+        - tfswitch.exe
+      strip: 1
+test: tfswitch --version

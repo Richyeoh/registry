@@ -1,0 +1,21 @@
+api: v1
+name: 86box-roms
+kind: app
+display: 86box-roms
+description: ROMs for the 86Box emulator.
+homepage: https://github.com/86Box/roms
+license: Unknown
+version: "6.0"
+channels:
+    stable: "6.0"
+provides:
+    - 86box-roms
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/86Box/roms/archive/refs/tags/v6.0.zip
+      sha256: c0236ab19216d2cc8126222f4ba0cf3cfadd5161e56a38a43387a56f909463d4
+      bin:
+        - 86box-roms.exe
+      strip: 1
+test: 86box-roms --version

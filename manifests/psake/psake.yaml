@@ -1,0 +1,21 @@
+api: v1
+name: psake
+kind: app
+display: psake
+description: A build automation tool, now with less XML.
+homepage: https://psake.dev
+license: MIT
+version: 5.0.4
+channels:
+    stable: 5.0.4
+provides:
+    - psake
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/psake.5.0.4.nupkg
+      sha256: 729b6161fa19e62ac0154c777eae76098ceb0b69292aedb3ce70e2e283ea319e
+      bin:
+        - psake.exe
+      strip: 1
+test: psake --version

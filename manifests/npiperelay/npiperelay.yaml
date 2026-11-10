@@ -1,0 +1,21 @@
+api: v1
+name: npiperelay
+kind: app
+display: npiperelay
+description: npiperelay allows you to access Windows named pipes from WSL
+homepage: https://github.com/jstarks/npiperelay
+license: MIT
+version: 0.1.0
+channels:
+    stable: 0.1.0
+provides:
+    - npiperelay
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jstarks/npiperelay/releases/download/v0.1.0/npiperelay_windows_amd64.zip
+      sha256: 6b9ef61ffd17c03507a9a3d54d815dceb3dae669ac67fc3bf4225d1e764ce5f6
+      bin:
+        - npiperelay.exe
+      strip: 1
+test: npiperelay --version

@@ -1,0 +1,24 @@
+api: v1
+name: resource-tuner
+kind: app
+display: resource-tuner
+description: Visual resource editor for EXE/DLL files. View and edit strings, bitmaps, dialogs and icons.
+homepage: https://www.restuner.com/
+license: Unknown
+version: "2.31"
+channels:
+    stable: "2.31"
+provides:
+    - resource-tuner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.heaventools.com/download/restuner_setup.exe
+      sha256: 14a8ec9e3ed57bfeea8c40779cdc3e16d10fe1df401f5ce4deca1d13c6f2c580
+      bin:
+        - resource-tuner.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall resource-tuner
+test: resource-tuner --version

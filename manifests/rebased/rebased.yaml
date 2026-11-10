@@ -1,0 +1,21 @@
+api: v1
+name: rebased
+kind: app
+display: rebased
+description: An open-source remake of the short-lived JetBrains git client.
+homepage: https://github.com/DetachHead/rebased
+license: Unknown
+version: 1.1.24
+channels:
+    stable: 1.1.24
+provides:
+    - rebased
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DetachHead/rebased/releases/download/1.1.24/rebased.win.zip
+      sha256: 3e480626c34745f9ade7cc43614f4e2357ae8980fb5cc6d2abf96af3c1460dfc
+      bin:
+        - IDE\bin\rebased64.exe
+      strip: 1
+test: IDE\bin\rebased64 --version

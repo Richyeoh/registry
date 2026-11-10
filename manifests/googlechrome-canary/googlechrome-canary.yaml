@@ -1,0 +1,21 @@
+api: v1
+name: googlechrome-canary
+kind: app
+display: googlechrome-canary
+description: Fast, secure, and free web browser, built for the modern web.
+homepage: https://www.google.com/chrome/canary
+license: Unknown
+version: 159.0.8154.0
+channels:
+    stable: 159.0.8154.0
+provides:
+    - googlechrome-canary
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/release2/chrome/acaivv52fx3yw3jepjffuyymh3wq_159.0.8154.0/159.0.8154.0_chrome_installer_uncompressed.exe#/dl.7z
+      sha256: 5c237541b97dba0fb6fc0363afceff86819c02fddf9e993f7c07843e675dd0c5
+      bin:
+        - chrome.exe
+      strip: 1
+test: chrome --version

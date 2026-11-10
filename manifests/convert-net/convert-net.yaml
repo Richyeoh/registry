@@ -1,0 +1,21 @@
+api: v1
+name: convert-net
+kind: app
+display: convert.net
+description: An integrated, powerful, multi-purpose conversion and developer tool.
+homepage: https://fishcodelib.com/Convert.htm
+license: Unknown
+version: 10.6.9103
+channels:
+    stable: 10.6.9103
+provides:
+    - convert-net
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fishcodelib.com/files/ConvertNet2.zip
+      sha256: b42b96b0458b73f8d99ebc2f91d5f7d2ed1d6abaf85887df297b0291ad5d5a5d
+      bin:
+        - convert-net.exe
+      strip: 1
+test: convert-net --version

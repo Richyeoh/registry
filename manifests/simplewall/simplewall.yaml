@@ -1,0 +1,21 @@
+api: v1
+name: simplewall
+kind: app
+display: simplewall
+description: Simple tool to configure Windows Filtering Platform (WFP) which can configure network activity on your computer.
+homepage: https://github.com/henrypp/simplewall
+license: GPL-3.0-only
+version: 3.8.7
+channels:
+    stable: 3.8.7
+provides:
+    - simplewall
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/henrypp/simplewall/releases/download/v.3.8.7/simplewall-3.8.7-bin.7z
+      sha256: 9f5bd16936decf1ace052a0120452cdeef004d5f6563f99bef180e7ae874e2a3
+      bin:
+        - simplewall.exe
+      strip: 1
+test: simplewall --version

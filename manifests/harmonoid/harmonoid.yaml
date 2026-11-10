@@ -1,0 +1,21 @@
+api: v1
+name: harmonoid
+kind: app
+display: harmonoid
+description: Plays & manages your music library. Looks beautiful & juicy. Playlists, visuals, synced lyrics, pitch shift, volume boost & more.
+homepage: https://harmonoid.com/
+license: Unknown
+version: 0.3.37
+channels:
+    stable: 0.3.37
+provides:
+    - harmonoid
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/alexmercerind2/harmonoid-releases/releases/download/v0.3.37/harmonoid-windows-x64-exe.zip
+      sha256: 947b384b59346a4957bff9c6f6d7aebc764df629014afc2fdc3346fabc918073
+      bin:
+        - harmonoid.exe
+      strip: 1
+test: harmonoid --version

@@ -1,0 +1,21 @@
+api: v1
+name: plakar
+kind: app
+display: plakar
+description: Backup solution powered by Kloset and ptar
+homepage: https://github.com/PlakarKorp/plakar
+license: ISC
+version: 1.1.8
+channels:
+    stable: 1.1.8
+provides:
+    - plakar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/PlakarKorp/plakar/releases/download/v1.1.8/plakar_1.1.8_windows_amd64.tar.gz
+      sha256: 6eb003ac1d89c09fe14c000d415a353a79c56243723da35f4f9431fdc37b5409
+      bin:
+        - plakar.exe
+      strip: 1
+test: plakar --version

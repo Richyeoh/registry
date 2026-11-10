@@ -1,0 +1,21 @@
+api: v1
+name: sqruff
+kind: app
+display: sqruff
+description: Fast SQL formatter/linter
+homepage: https://playground.quary.dev/docs
+license: Apache-2.0
+version: 0.44.0
+channels:
+    stable: 0.44.0
+provides:
+    - sqruff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/quarylabs/sqruff/releases/download/v0.44.0/sqruff-windows-x86_64.zip
+      sha256: cc560417978ef4f170a84449b68b92f9bdfc990041728c8d724bf98ecce8725d
+      bin:
+        - sqruff.exe
+      strip: 1
+test: sqruff --version

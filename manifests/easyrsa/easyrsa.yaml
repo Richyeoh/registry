@@ -1,0 +1,21 @@
+api: v1
+name: easyrsa
+kind: app
+display: easyrsa
+description: A CLI utility to build and manage a PKI CA
+homepage: https://openvpn.net/easyrsa.html
+license: GPL-2.0-only
+version: 3.2.7
+channels:
+    stable: 3.2.7
+provides:
+    - easyrsa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/OpenVPN/easy-rsa/releases/download/v3.2.7/EasyRSA-3.2.7-win64.zip
+      sha256: 2f20c7523fe37df91c578c35e7fe83301f3687792bb9bd1000d0e407ef70d368
+      bin:
+        - bin\sh.exe
+      strip: 1
+test: bin\sh --version

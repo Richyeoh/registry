@@ -1,0 +1,46 @@
+api: v1
+name: aws-console
+kind: app
+display: aws-console
+description: Command-line to use AWS CLI credentials to launch the AWS console in a browser
+homepage: https://github.com/aws-cloudformation/rain
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.24.4
+channels:
+    stable: 1.24.4
+provides:
+    - aws-console
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-console/blobs/sha256:956810bf81fb976de92e1c9d5fe7c2718b27208138d7b410fdd66e10c1f6e497
+      sha256: 956810bf81fb976de92e1c9d5fe7c2718b27208138d7b410fdd66e10c1f6e497
+      bin:
+        - aws-console
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-console/blobs/sha256:3437c5a6b2336d47ac4ffd754eed55389a3935374cae9e68393d2b1f2d4c5375
+      sha256: 3437c5a6b2336d47ac4ffd754eed55389a3935374cae9e68393d2b1f2d4c5375
+      bin:
+        - aws-console
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aws-console/blobs/sha256:893f775b8331703fa7e40f540e39bc066be95dc7790b6a5e5abd44b085600417
+      sha256: 893f775b8331703fa7e40f540e39bc066be95dc7790b6a5e5abd44b085600417
+      bin:
+        - aws-console
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aws-console/blobs/sha256:3c66dc436e48b3ba01a87fd7ebab6630d55731442ee25a135d3313a21912a4d7
+      sha256: 3c66dc436e48b3ba01a87fd7ebab6630d55731442ee25a135d3313a21912a4d7
+      bin:
+        - aws-console
+      strip: 1
+test: aws-console --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

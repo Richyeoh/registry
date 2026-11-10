@@ -1,0 +1,22 @@
+api: v1
+name: hydrus-network
+kind: app
+display: hydrus-network
+description: A personal booru-style media tagger
+homepage: https://hydrusnetwork.github.io/hydrus/
+license: WTFPL
+version: 694a
+channels:
+    stable: 694a
+provides:
+    - hydrus-network
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hydrusnetwork/hydrus/releases/download/v694a/Hydrus.Network.694a.-.Windows.-.Extract.only.zip
+      sha256: b534cb3705f47d32c86245fa8a2c21ba7c69342a8e8dc819e64a7e487acab442
+      bin:
+        - hydrus_client.exe
+        - hydrus_server.exe
+      strip: 1
+test: hydrus_client --version

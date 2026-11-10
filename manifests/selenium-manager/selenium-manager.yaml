@@ -1,0 +1,24 @@
+api: v1
+name: selenium-manager
+kind: app
+display: selenium-manager
+description: Selenium Manager is a command-line tool developed in Rust to allow cross platform execution.
+homepage: https://www.selenium.dev/documentation/selenium_manager/
+license: Apache-2.0
+version: 4.52.0
+channels:
+    stable: 4.52.0
+provides:
+    - selenium-manager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SeleniumHQ/selenium_manager_artifacts/releases/download/selenium-manager-98c43a2/selenium-manager-windows.exe#/selenium-manager.exe
+      sha256: e6d1702bbcefab848913b0ef73bfae69a510e75ffbc970ae5ba49000c9c6778f
+      bin:
+        - selenium-manager.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall selenium-manager
+test: selenium-manager --version

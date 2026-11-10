@@ -1,0 +1,21 @@
+api: v1
+name: synfig-studio
+kind: app
+display: synfig-studio
+description: 2D Animation Software
+homepage: https://www.synfig.org
+license: GPL-3.0-or-later
+version: 1.5.5
+channels:
+    stable: 1.5.5
+provides:
+    - synfig-studio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/synfig/synfig/releases/download/v1.5.5/SynfigStudio-1.5.5-2026.03.15-win64-79bf7.zip
+      sha256: f8e62c860216ed733be092147779df2aa5afdeee34ad9da5736f99ed96550fe0
+      bin:
+        - bin\synfig.exe
+      strip: 1
+test: bin\synfig --version

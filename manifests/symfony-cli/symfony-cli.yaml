@@ -1,0 +1,21 @@
+api: v1
+name: symfony-cli
+kind: app
+display: symfony-cli
+description: Helps Symfony developers manage projects, from local code to remote infrastructure
+homepage: https://symfony.com
+license: AGPL-3.0
+version: 5.22.2
+channels:
+    stable: 5.22.2
+provides:
+    - symfony-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/symfony-cli/symfony-cli/releases/download/v5.22.2/symfony-cli_windows_amd64.zip
+      sha256: f56952ffce06cfc2e0db5ca182d53ed9dde5d39f144f6ee2bec2ec7fa71dfdcb
+      bin:
+        - symfony.exe
+      strip: 1
+test: symfony --version

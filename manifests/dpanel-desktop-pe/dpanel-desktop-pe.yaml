@@ -1,0 +1,21 @@
+api: v1
+name: dpanel-desktop-pe
+kind: app
+display: dpanel-desktop-pe
+description: DPanel Pro Edition desktop app for managing Docker and Podman containers.
+homepage: https://dpanel.cc/
+license: Unknown
+version: 1.11.2-117
+channels:
+    stable: 1.11.2-117
+provides:
+    - dpanel-desktop-pe
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DPanel-dev/gui/releases/download/v1.11.2-117/dpanel-desktop-pe-amd64-portable.zip
+      sha256: 7859f52a9d44dac37906bc6cfb8f9d385df41c477db0c1137834c74db9505a02
+      bin:
+        - dpanel-desktop-pe.exe
+      strip: 1
+test: dpanel-desktop-pe --version

@@ -1,0 +1,24 @@
+api: v1
+name: kubeadm
+kind: app
+display: kubeadm
+description: Kubernetes node provisioning tool
+homepage: https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/
+license: Apache-2.0
+version: 1.37.2
+channels:
+    stable: 1.37.2
+provides:
+    - kubeadm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.k8s.io/v1.37.2/bin/windows/amd64/kubeadm.exe
+      sha256: e2beae898f14519a1b37bf5d07eafe7f5da9f705558fcce48be5fd8056b4bc86
+      bin:
+        - kubeadm.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kubeadm
+test: kubeadm --version

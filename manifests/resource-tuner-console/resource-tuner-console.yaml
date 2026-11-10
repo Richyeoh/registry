@@ -1,0 +1,25 @@
+api: v1
+name: resource-tuner-console
+kind: app
+display: resource-tuner-console
+description: Console version of Resource Tuner, a resource editor for EXE/DLL files.
+homepage: https://www.restuner.com/
+license: Unknown
+version: "2.31"
+channels:
+    stable: "2.31"
+provides:
+    - resource-tuner-console
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.heaventools.com/download/rtconsole_setup.exe
+      sha256: 2402bf51584a17f4cdd22a92a6ecacb982de37051e3ea040042de76af405c118
+      bin:
+        - rtc.exe
+        - rtc.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall resource-tuner-console
+test: rtc --version

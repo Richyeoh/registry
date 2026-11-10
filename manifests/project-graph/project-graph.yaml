@@ -1,0 +1,21 @@
+api: v1
+name: project-graph
+kind: app
+display: project-graph
+description: A node-based visual tool for organizing thoughts and notes in a non-linear way.
+homepage: https://graphif.dev
+license: Unknown
+version: 4.3.6
+channels:
+    stable: 4.3.6
+provides:
+    - project-graph
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/graphif/project-graph/releases/download/v4.3.6/Project.Graph_4.3.6_x64-setup.exe#/dl.7z
+      sha256: 6892a38619cac2a2d79b01ca94edee94fe9969d1f60f2fac3ac48efb36c39d3a
+      bin:
+        - project-graph.exe
+      strip: 1
+test: project-graph --version

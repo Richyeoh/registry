@@ -1,0 +1,21 @@
+api: v1
+name: neovim-qt
+kind: app
+display: neovim-qt
+description: Neovim client library and GUI, in Qt5
+homepage: https://github.com/equalsraf/neovim-qt
+license: ISC
+version: 0.2.20
+channels:
+    stable: 0.2.20
+provides:
+    - neovim-qt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/equalsraf/neovim-qt/releases/download/v0.2.20/neovim-qt.zip
+      sha256: 3fc2da4306b6292141a808e3a716f5975ad9a767d220afc19c3176e311cbef0d
+      bin:
+        - bin\nvim-qt.exe
+      strip: 1
+test: bin\nvim-qt --version

@@ -1,0 +1,21 @@
+api: v1
+name: visual-arm-emulator
+kind: app
+display: visual-arm-emulator
+description: A highly visual ARM emulator
+homepage: https://salmanarif.bitbucket.io/visual/index.html
+license: Apache-2.0
+version: "1.27"
+channels:
+    stable: "1.27"
+provides:
+    - visual-arm-emulator
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bit.ly/visualwin_127#/dl.7z
+      sha256: e8e823b9a1a7db6441ad4c905b7940879e6bfb9276c433e8833658904917d66b
+      bin:
+        - visual-arm-emulator.exe
+      strip: 1
+test: visual-arm-emulator --version

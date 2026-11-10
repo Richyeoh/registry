@@ -1,0 +1,21 @@
+api: v1
+name: ect
+kind: app
+display: ect
+description: Fast and effective C++ file optimizer.
+homepage: https://github.com/fhanau/Efficient-Compression-Tool
+license: Apache-2.0
+version: 0.9.5
+channels:
+    stable: 0.9.5
+provides:
+    - ect
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fhanau/Efficient-Compression-Tool/releases/download/v0.9.5/ect-0.9.5-win64.zip
+      sha256: 9218661a91fd939668e2033f77eddb7db513286e1c91e6fe62013a40c27c21ba
+      bin:
+        - ect.exe
+      strip: 1
+test: ect --version

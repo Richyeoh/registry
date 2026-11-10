@@ -1,0 +1,21 @@
+api: v1
+name: lego
+kind: app
+display: lego
+description: Let's Encrypt/ACME client and library written in Go
+homepage: https://go-acme.github.io/lego/
+license: MIT
+version: 5.6.0
+channels:
+    stable: 5.6.0
+provides:
+    - lego
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/go-acme/lego/releases/download/v5.6.0/lego_v5.6.0_windows_amd64.zip
+      sha256: 9c4e5f77996ef2ebbcb1ea270fa7e94190b531057e02a645b124b38f66c12755
+      bin:
+        - lego.exe
+      strip: 1
+test: lego --version

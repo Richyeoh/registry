@@ -1,0 +1,21 @@
+api: v1
+name: amp-winoff
+kind: app
+display: amp-winoff
+description: Fully configurable utility for scheduling the shutdown of Windows computers
+homepage: https://www.ampsoft.net/utilities/WinOFF.php
+license: Freeware
+version: 5.0.1
+channels:
+    stable: 5.0.1
+provides:
+    - amp-winoff
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.ampsoft.net/files/WinOFF.zip
+      sha256: af0637ebc5122a93c4da49efb2e29caf999ebbe0c4352a7628732f612893f43d
+      bin:
+        - WinOFF.exe
+      strip: 1
+test: WinOFF --version

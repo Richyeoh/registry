@@ -1,0 +1,39 @@
+api: v1
+name: alp
+kind: app
+display: alp
+description: Access Log Profiler
+homepage: https://github.com/tkuchiki/alp
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.0.22
+channels:
+    stable: 1.0.22
+provides:
+    - alp
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alp/blobs/sha256:5dd2399b07dc202117fbe7e93a5a6ca80a8527c6d3b75807539e67c6cd225e7d
+      sha256: 5dd2399b07dc202117fbe7e93a5a6ca80a8527c6d3b75807539e67c6cd225e7d
+      bin:
+        - alp
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alp/blobs/sha256:40fe8cd31f8b8c4a493325769a1518f814b6e4653fcc9bc1badc1fb43b1bd943
+      sha256: 40fe8cd31f8b8c4a493325769a1518f814b6e4653fcc9bc1badc1fb43b1bd943
+      bin:
+        - alp
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alp/blobs/sha256:2f7fc9892141caea3d9612bfbff6542a1cf368ffe63c7506247e41b9a295f0b7
+      sha256: 2f7fc9892141caea3d9612bfbff6542a1cf368ffe63c7506247e41b9a295f0b7
+      bin:
+        - alp
+      strip: 1
+test: alp --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

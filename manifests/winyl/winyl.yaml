@@ -1,0 +1,21 @@
+api: v1
+name: winyl
+kind: app
+display: winyl
+description: A FOS digital audio player and music library application for organizing and playing audio on Windows.
+homepage: https://winyl-player.github.io
+license: GPL-3.0-only
+version: 3.3.1
+channels:
+    stable: 3.3.1
+provides:
+    - winyl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/winyl-player/winyl/releases/download/v3.3.1/winyl_portable_x64.zip
+      sha256: 7057713873e2e7a1a62775359afc4102c891f312ec885bfcb4673e3f8eec3fae
+      bin:
+        - Winyl.exe
+      strip: 1
+test: Winyl --version

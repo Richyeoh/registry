@@ -1,0 +1,21 @@
+api: v1
+name: ds4windows-circumspector-pre
+kind: app
+display: ds4windows-circumspector-pre
+description: The battle-tested industry-standard gamepad remapping tool for Windows.
+homepage: https://github.com/CircumSpector/DS4Windows
+license: MIT
+version: 3.1.908
+channels:
+    stable: 3.1.908
+provides:
+    - ds4windows-circumspector-pre
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/CircumSpector/DS4Windows/releases/download/v3.1.908/DS4Windows.v3.1.908.x64.7z
+      sha256: 292c59eecca5c570eb486b0d3cab224f1b173a48ccc4d9aa157178de2025508b
+      bin:
+        - ds4windows-circumspector-pre.exe
+      strip: 1
+test: ds4windows-circumspector-pre --version

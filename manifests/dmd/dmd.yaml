@@ -1,0 +1,25 @@
+api: v1
+name: dmd
+kind: app
+display: dmd
+description: D is a general-purpose programming language with static typing, systems-level access, and C-like syntax
+homepage: https://dlang.org/
+license: BSL-1.0
+version: 2.114.0
+channels:
+    stable: 2.114.0
+provides:
+    - dmd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.dlang.org/releases/2.x/2.114.0/dmd.2.114.0.windows.7z
+      sha256: e9f3664d070e2465e09e8e00979c9c4c136c7fff7ca94d73f6768aec50e7b4c1
+      bin:
+        - windows\bin\ddemangle.exe
+        - windows\bin64\dmd.exe
+        - windows\bin64\dub.exe
+        - windows\bin\dustmite.exe
+        - windows\bin\rdmd.exe
+      strip: 1
+test: windows\bin\ddemangle --version

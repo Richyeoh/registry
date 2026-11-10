@@ -1,0 +1,21 @@
+api: v1
+name: adwcleaner
+kind: app
+display: adwcleaner
+description: Free Adware Cleaner & Removal tool
+homepage: https://www.malwarebytes.com/adwcleaner
+license: Unknown
+version: 8.8.1
+channels:
+    stable: 8.8.1
+provides:
+    - adwcleaner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://adwcleaner.malwarebytes.com/adwcleaner?channel=release
+      sha256: 7108ed065682eaa24b007c54fd994648c868bfe86a0a61648319e9707da73965
+      bin:
+        - adwcleaner.exe
+      strip: 1
+test: adwcleaner --version

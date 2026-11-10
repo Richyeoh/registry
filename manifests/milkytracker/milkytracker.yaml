@@ -1,0 +1,21 @@
+api: v1
+name: milkytracker
+kind: app
+display: milkytracker
+description: An FT2 compatible music tracker.
+homepage: http://milkytracker.github.io/
+license: GPL-3.0-only
+version: 1.05.01
+channels:
+    stable: 1.05.01
+provides:
+    - milkytracker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/milkytracker/MilkyTracker/releases/download/v1.05.01/milkytracker-1.05.01-win64.zip
+      sha256: d2af55f26fe51ae411fd30890d7840d8327c78307b602b335b94fac5af6d3844
+      bin:
+        - milkytracker.exe
+      strip: 1
+test: milkytracker --version

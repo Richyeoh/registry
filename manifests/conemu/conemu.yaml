@@ -1,0 +1,21 @@
+api: v1
+name: conemu
+kind: app
+display: conemu
+description: Customizable Windows terminal with tabs, splits, quake-style, hotkeys and more.
+homepage: https://conemu.github.io
+license: Unknown
+version: 23.07.24
+channels:
+    stable: 23.07.24
+provides:
+    - conemu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ConEmu/ConEmu/releases/download/v23.07.24/ConEmuPack.230724.7z
+      sha256: 2a9b98ebecaede62665ef427b05b3a5ccdac7bd3202414fc0f4c10825b4f4ea2
+      bin:
+        - ConEmu64.exe
+      strip: 1
+test: ConEmu64 --version

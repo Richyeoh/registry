@@ -1,0 +1,46 @@
+api: v1
+name: aespipe
+kind: app
+display: aespipe
+description: AES encryption or decryption for pipes
+homepage: https://loop-aes.sourceforge.net/
+license: GPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: 2.4j
+channels:
+    stable: 2.4j
+provides:
+    - aespipe
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aespipe/blobs/sha256:0839eb2b3920448d08700403bde7c9ce6c7e6f1c01f0082763e1aa0513c00c34
+      sha256: 0839eb2b3920448d08700403bde7c9ce6c7e6f1c01f0082763e1aa0513c00c34
+      bin:
+        - aespipe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aespipe/blobs/sha256:5fc60a58b6bd7edc3b66eb41f00db8c6b5cd875ba16451ea1d17cb760e3f9240
+      sha256: 5fc60a58b6bd7edc3b66eb41f00db8c6b5cd875ba16451ea1d17cb760e3f9240
+      bin:
+        - aespipe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aespipe/blobs/sha256:b78adabc6a957ed1ff8947cda33e32704dcc0104149a0347fcfd735d7ff91b78
+      sha256: b78adabc6a957ed1ff8947cda33e32704dcc0104149a0347fcfd735d7ff91b78
+      bin:
+        - aespipe
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aespipe/blobs/sha256:0fa15737620b958cfcd6333d49e868b26d72e4cf6f7908b7129bfcb2b5c5c3cb
+      sha256: 0fa15737620b958cfcd6333d49e868b26d72e4cf6f7908b7129bfcb2b5c5c3cb
+      bin:
+        - aespipe
+      strip: 1
+test: aespipe --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

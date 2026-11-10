@@ -1,0 +1,21 @@
+api: v1
+name: superhtml
+kind: app
+display: superhtml
+description: HTML Language Server & Templating Language Library
+homepage: https://github.com/kristoff-it/superhtml
+license: MIT
+version: 0.7.1
+channels:
+    stable: 0.7.1
+provides:
+    - superhtml
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/kristoff-it/superhtml/releases/download/v0.7.1/x86_64-windows.zip
+      sha256: c4b7aa3540a6000deed2659abeda6ce32142f150d33cbf229978d7faf3a130a1
+      bin:
+        - superhtml.exe
+      strip: 1
+test: superhtml --version

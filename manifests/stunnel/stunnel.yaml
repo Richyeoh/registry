@@ -1,0 +1,21 @@
+api: v1
+name: stunnel
+kind: app
+display: stunnel
+description: A multiplatform GNU/GPL-licensed proxy encrypting arbitrary TCP connections with SSL/TLS
+homepage: https://www.stunnel.org
+license: GPL-2.0-or-later
+version: "5.82"
+channels:
+    stable: "5.82"
+provides:
+    - stunnel
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.stunnel.org/downloads/archive/5.x/stunnel-5.82-win64-installer.exe#/dl.7z
+      sha256: 722c1ad626919af2b0034666b4d19cc4795e925c32f60e8f3c59af4fb3ad2dfc
+      bin:
+        - bin\stunnel.exe
+      strip: 1
+test: bin\stunnel --version

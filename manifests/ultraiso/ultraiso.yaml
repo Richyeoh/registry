@@ -1,0 +1,24 @@
+api: v1
+name: ultraiso
+kind: app
+display: ultraiso
+description: CD/DVD image file editing tool
+homepage: https://www.ezbsystems.com/ultraiso/
+license: Unknown
+version: 9.7.6.3860
+channels:
+    stable: 9.7.6.3860
+provides:
+    - ultraiso
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://www.ezbsystems.com/dl1.php?file=uiso9_pe.exe#/dl.exe
+      sha256: 5564abf832bcb92cefe7209cb8a583c462dbf8ab3652697634cd178324352616
+      bin:
+        - UltraISO.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall ultraiso
+test: UltraISO --version

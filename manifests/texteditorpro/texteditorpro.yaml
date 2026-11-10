@@ -1,0 +1,21 @@
+api: v1
+name: texteditorpro
+kind: app
+display: texteditorpro
+description: Powerful text editor with syntax highlighting for multiple languages and scripts. Formerly known as EditBone
+homepage: https://texteditor.pro/
+license: Unknown
+version: 37.4.0
+channels:
+    stable: 37.4.0
+provides:
+    - texteditorpro
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.texteditor.pro/downloads/TextEditorPro64.7z
+      sha256: 2c7b92a3f1d11e9a84654e19e8e5a99ab22596bc1590cba4956b5b9c66c653e3
+      bin:
+        - TextEditorPro.exe
+      strip: 1
+test: TextEditorPro --version

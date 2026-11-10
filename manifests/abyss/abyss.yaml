@@ -1,0 +1,46 @@
+api: v1
+name: abyss
+kind: app
+display: abyss
+description: Genome sequence assembler for short reads
+homepage: https://www.bcgsc.ca/resources/software/abyss
+license: GPL-3.0-only AND LGPL-2.1-or-later AND MIT AND BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 2.3.10
+channels:
+    stable: 2.3.10
+provides:
+    - abyss
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
+      sha256: cd3d743d197a92d98b4cd43a45615de53d5cc403a36ac9e41cdf6e47ce7aee44
+      bin:
+        - abyss
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:274f0f758f4cc8852779e2a55f8900ea34ccf7dd0e784396752f03c7e6c56767
+      sha256: 274f0f758f4cc8852779e2a55f8900ea34ccf7dd0e784396752f03c7e6c56767
+      bin:
+        - abyss
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:e7b36e68d3d7b88d89656707fd50185e8649d31bac5359575f160dc875c1d28f
+      sha256: e7b36e68d3d7b88d89656707fd50185e8649d31bac5359575f160dc875c1d28f
+      bin:
+        - abyss
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/abyss/blobs/sha256:57e42e8b368589c943fa3bd23e3c8f8a5af03b307530c445309dc45a72e2d2d8
+      sha256: 57e42e8b368589c943fa3bd23e3c8f8a5af03b307530c445309dc45a72e2d2d8
+      bin:
+        - abyss
+      strip: 1
+test: abyss --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: andcli
+kind: app
+display: andcli
+description: A 2FA TUI for your shell
+homepage: https://github.com/tjblackheart/andcli
+license: MIT
+version: 2.9.1
+channels:
+    stable: 2.9.1
+provides:
+    - andcli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tjblackheart/andcli/releases/download/v2.9.1/andcli_v2.9.1_windows_amd64.exe#/andcli.exe
+      sha256: f06afa872faf642f8a4881b44d668b59df0b9c785f45160652af87d335d21b3a
+      bin:
+        - andcli.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall andcli
+test: andcli --version

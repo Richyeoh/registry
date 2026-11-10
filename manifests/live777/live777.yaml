@@ -1,0 +1,21 @@
+api: v1
+name: live777
+kind: app
+display: live777
+description: A very simple, high performance, edge WebRTC SFU.
+homepage: https://live777.pages.dev
+license: Unknown
+version: 0.10.2
+channels:
+    stable: 0.10.2
+provides:
+    - live777
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/binbat/live777/releases/download/v0.10.2/live777-v0.10.2-x86_64-pc-windows-msvc.zip
+      sha256: 32da1ed456b132d2e10d284f8d7cf05123d84d7b124759a38bf9c19e04fd378d
+      bin:
+        - live777.exe
+      strip: 1
+test: live777 --version

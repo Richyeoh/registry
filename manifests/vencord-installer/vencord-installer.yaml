@@ -1,0 +1,24 @@
+api: v1
+name: vencord-installer
+kind: app
+display: vencord-installer
+description: A GUI app for installing Vencord, a Discord client mod
+homepage: https://vencord.dev/
+license: GPL-3.0-only
+version: 1.4.2
+channels:
+    stable: 1.4.2
+provides:
+    - vencord-installer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Vencord/Installer/releases/download/v1.4.2/VencordInstaller.exe
+      sha256: 1cb4115a99a8b7a0b0371dddb2ac7dde38b9acc23f53a69540319b4b7ca6c2da
+      bin:
+        - vencord-installer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall vencord-installer
+test: vencord-installer --version

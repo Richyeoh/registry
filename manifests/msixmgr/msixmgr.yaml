@@ -1,0 +1,21 @@
+api: v1
+name: msixmgr
+kind: app
+display: msixmgr
+description: Command-line tool for installing, managing and unpacking MSIX packages.
+homepage: https://github.com/microsoft/msix-packaging
+license: MIT
+version: "1.2"
+channels:
+    stable: "1.2"
+provides:
+    - msixmgr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/msix-packaging/releases/download/MSIX-Core-1.2-release/msixmgr.zip
+      sha256: a10ae68673c5d6ebb0973905585f0d248765782f64c1b90b08da2ec42a496e19
+      bin:
+        - msixmgr.exe
+      strip: 1
+test: msixmgr --version

@@ -1,0 +1,29 @@
+api: v1
+name: openliberty
+kind: app
+display: openliberty
+description: Server runtime available to JavaTM developers
+homepage: https://openliberty.io/
+license: EPL-1.0
+version: 26.0.0.11
+channels:
+    stable: 26.0.0.11
+provides:
+    - openliberty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/26.0.0.11/openliberty-26.0.0.11.zip
+      sha256: dba6f751e7875646ea103484d84194b6ace2dc66d01feb15db1a48aa66887766
+      bin:
+        - bin\binaryLog.bat.exe
+        - bin\client.bat.exe
+        - bin\ddlGen.bat.exe
+        - bin\pluginUtility.bat.exe
+        - bin\productInfo.bat.exe
+        - bin\securityUtility.bat.exe
+        - bin\server.bat.exe
+        - bin\serverSchemaGen.bat.exe
+        - bin\springBootUtility.bat.exe
+      strip: 1
+test: bin\binaryLog.bat --version

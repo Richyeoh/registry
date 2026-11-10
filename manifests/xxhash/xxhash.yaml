@@ -1,0 +1,21 @@
+api: v1
+name: xxhash
+kind: app
+display: xxhash
+description: An extremely fast non-cryptographic hash algorithm, working at RAM speed limit.
+homepage: https://xxhash.com
+license: BSD-2-Clause
+version: 0.8.4
+channels:
+    stable: 0.8.4
+provides:
+    - xxhash
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Cyan4973/xxHash/releases/download/v0.8.4/xxhsum_win64_v0_8_4.zip
+      sha256: 58e3dcb7063eb3829418453702556cdb2b52e7c9082215fcd4e9135fabbd4ed9
+      bin:
+        - xxhsum.exe
+      strip: 1
+test: xxhsum --version

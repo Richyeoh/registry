@@ -1,0 +1,21 @@
+api: v1
+name: gmkvextractgui
+kind: app
+display: gmkvextractgui
+description: A GUI for mkvextract utility (part of MKVToolNix) which incorporates most (if not all) functionality of mkvextract and mkvinfo utilities.
+homepage: https://github.com/Gpower2/gMKVExtractGUI
+license: Unlicense
+version: 2.15.0
+channels:
+    stable: 2.15.0
+provides:
+    - gmkvextractgui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Gpower2/gMKVExtractGUI/releases/download/v2.15.0/gMKVExtractGUI.v2.15.0.7z
+      sha256: 00da9bf0c40e0afab111680288bd868917aa26462063bc4d5fde75b915ad6e24
+      bin:
+        - gMKVExtractGUI.exe
+      strip: 1
+test: gMKVExtractGUI --version

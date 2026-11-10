@@ -1,0 +1,24 @@
+api: v1
+name: jprq
+kind: app
+display: jprq
+description: join public router. quickly.
+homepage: https://jprq.io
+license: Shareware
+version: "2.4"
+channels:
+    stable: "2.4"
+provides:
+    - jprq
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/azimjohn/jprq/releases/download/2.4/jprq-windows-amd64.exe#/jprq.exe
+      sha256: 4baf20eb564946af3ce0d6a33bda1a08036728e24e8024388b5595af6859bcc1
+      bin:
+        - jprq.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall jprq
+test: jprq --version

@@ -1,0 +1,21 @@
+api: v1
+name: lean-ctx
+kind: app
+display: lean-ctx
+description: Context intelligence layer for AI agents.
+homepage: https://leanctx.com
+license: Apache-2.0
+version: 3.12.2
+channels:
+    stable: 3.12.2
+provides:
+    - lean-ctx
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yvgude/lean-ctx/releases/download/v3.12.2/lean-ctx-x86_64-pc-windows-msvc.zip
+      sha256: 2152a6de384ad302a28fbd478d01f14d00e51dbfeb920a0f5d46b102561a5f73
+      bin:
+        - lean-ctx.exe
+      strip: 1
+test: lean-ctx --version

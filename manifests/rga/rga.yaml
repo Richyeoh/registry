@@ -1,0 +1,24 @@
+api: v1
+name: rga
+kind: app
+display: rga
+description: 'ripgrep-all: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.'
+homepage: https://github.com/phiresky/ripgrep-all
+license: AGPL-3.0-or-later
+version: 0.10.9
+channels:
+    stable: 0.10.9
+provides:
+    - rga
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/phiresky/ripgrep-all/releases/download/v0.10.9/ripgrep_all-v0.10.9-x86_64-pc-windows-msvc.zip
+      sha256: da03e969ac01839443739c547ca8eb521e648e712251d61a98d34a1521b9f43b
+      bin:
+        - rga.exe
+        - rga.exe
+        - rga-fzf.exe
+        - rga-preproc.exe
+      strip: 1
+test: rga --version

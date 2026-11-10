@@ -1,0 +1,24 @@
+api: v1
+name: hexed
+kind: app
+display: hexed
+description: Console-based hex editor
+homepage: https://github.com/samizzo/hexed
+license: BSD-2-Clause
+version: "1.1"
+channels:
+    stable: "1.1"
+provides:
+    - hexed
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/samizzo/hexed/releases/download/v1.1/hexed.exe
+      sha256: ff6532f73248f4b0a0e6240c0b9dbf4ccfc1144006cba7c3f76be3f3ad71daff
+      bin:
+        - hexed.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall hexed
+test: hexed --version

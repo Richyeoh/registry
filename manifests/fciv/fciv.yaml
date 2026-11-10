@@ -1,0 +1,21 @@
+api: v1
+name: fciv
+kind: app
+display: fciv
+description: A command-prompt utility that computes and verifies cryptographic hash values of files.
+homepage: https://github.com/MicrosoftDocs/SupportArticles-docs/blob/0b440c8923f67a4ca27eb93baab75c79cb5a03f4/support/windows-server/windows-security/fciv-availability-and-description.md
+license: Unknown
+version: 6.0.2800.1106
+channels:
+    stable: 6.0.2800.1106
+provides:
+    - fciv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/fciv/Windows-KB841290-x86-ENU.exe#/dl.7z
+      sha256: 4b1feea09f35f30943220e8c493a7e590739607a2315559f26b84b3586a5dd54
+      bin:
+        - fciv.exe
+      strip: 1
+test: fciv --version

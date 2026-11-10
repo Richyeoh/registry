@@ -1,0 +1,21 @@
+api: v1
+name: waifu2x-snowshell
+kind: app
+display: waifu2x-snowshell
+description: GUI Shell for waifu2x-caffe, waifu2x-converter-cpp and waifu2x-ncnn-vulkan.
+homepage: https://github.com/YukihoAA/waifu2x_snowshell
+license: MIT
+version: 2.6.1
+channels:
+    stable: 2.6.1
+provides:
+    - waifu2x-snowshell
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/YukihoAA/waifu2x_snowshell/releases/download/v2.6.1/waifu2x-snowshell_v2.6.1.zip
+      sha256: b2a33d542cbd9ac49ed7445a51043ab959bd935a78106294bff45595ea5ba346
+      bin:
+        - waifu2x-snowshell.exe
+      strip: 1
+test: waifu2x-snowshell --version

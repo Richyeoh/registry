@@ -1,0 +1,24 @@
+api: v1
+name: keynavish
+kind: app
+display: keynavish
+description: Control the mouse with the keyboard (rewrite of keynav for Windows).
+homepage: https://github.com/lesderid/keynavish
+license: GPL-2.0-only
+version: 1.8.0
+channels:
+    stable: 1.8.0
+provides:
+    - keynavish
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/lesderid/keynavish/releases/download/v1.8.0/keynavish-v1.8.0-x86_64.exe#/keynavish.exe
+      sha256: 2ac1cc1b844d2fb2c59b9b149a1e78327894d9f10b58feed761ed064f9c18026
+      bin:
+        - keynavish.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall keynavish
+test: keynavish --version

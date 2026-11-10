@@ -1,0 +1,21 @@
+api: v1
+name: stretchly
+kind: app
+display: stretchly
+description: Break time reminder
+homepage: https://hovancik.net/stretchly/
+license: BSD-2-Clause
+version: 1.22.1
+channels:
+    stable: 1.22.1
+provides:
+    - stretchly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/hovancik/stretchly/releases/download/v1.22.1/stretchly-1.22.1-win.7z
+      sha256: 7c2d76cc446c7f1f0991e263ff1a6901da37eeb2eec52bc99b4d4486e0c5bc34
+      bin:
+        - stretchly.exe
+      strip: 1
+test: stretchly --version

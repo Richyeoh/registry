@@ -1,0 +1,24 @@
+api: v1
+name: magic-wormhole
+kind: app
+display: magic-wormhole
+description: Securely transfer data between computers.
+homepage: https://magic-wormhole.readthedocs.io/en/latest/
+license: MIT
+version: 0.24.0
+channels:
+    stable: 0.24.0
+provides:
+    - magic-wormhole
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aquacash5/magic-wormhole-exe/releases/download/0.24.0/wormhole.exe
+      sha256: a17f8e37362ee192dfa7d346f916e4dbdb6e9752ff9459109669e0914bac85f4
+      bin:
+        - wormhole.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall magic-wormhole
+test: wormhole --version

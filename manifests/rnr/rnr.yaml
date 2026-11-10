@@ -1,0 +1,21 @@
+api: v1
+name: rnr
+kind: app
+display: rnr
+description: A command-line tool to batch rename files and directories
+homepage: https://github.com/ismaelgv/rnr
+license: MIT
+version: 0.5.1
+channels:
+    stable: 0.5.1
+provides:
+    - rnr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ismaelgv/rnr/releases/download/v0.5.1/rnr-v0.5.1-x86_64-pc-windows-msvc.zip
+      sha256: 667c5082a041d85a6b80b68473c7eb8cffe18a37224a79efc53fda7276302b0e
+      bin:
+        - rnr.exe
+      strip: 1
+test: rnr --version

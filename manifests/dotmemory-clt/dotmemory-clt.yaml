@@ -1,0 +1,21 @@
+api: v1
+name: dotmemory-clt
+kind: app
+display: dotmemory-clt
+description: JetBrains dotMemory Command Line Tools for profiling .NET memory usage from the command line.
+homepage: https://www.jetbrains.com/dotmemory/download/#section=commandline
+license: Unknown
+version: "2026.3"
+channels:
+    stable: "2026.3"
+provides:
+    - dotmemory-clt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/resharper/dotUltimate.2026.3/JetBrains.dotMemory.Console.windows-x64.2026.3.zip
+      sha256: ec74fde99ecc61a22c0bc00239902995685cf52d47e9e9c7b75313d1e96d5779
+      bin:
+        - dotMemory.exe
+      strip: 1
+test: dotMemory --version

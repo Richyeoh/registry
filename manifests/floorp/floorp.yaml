@@ -1,0 +1,22 @@
+api: v1
+name: floorp
+kind: app
+display: floorp
+description: A Browser build for keeping the Open, Private and Sustainable Web alive. Based on Mozilla Firefox.
+homepage: https://github.com/Floorp-Projects
+license: MPL-2.0
+version: 12.21.1
+channels:
+    stable: 12.21.1
+provides:
+    - floorp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Floorp-Projects/Floorp-Portable-v2/releases/download/v12.21.1/floorp-windows-x86_64.portable.7z
+      sha256: 886f81aebb631be15e16ae355c55b5f3730dcd900d490aa1602a373c6cbfa013
+      bin:
+        - floorp-portable.exe
+        - app\floorp.exe
+      strip: 1
+test: floorp-portable --version

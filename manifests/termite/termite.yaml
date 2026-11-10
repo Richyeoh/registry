@@ -1,0 +1,21 @@
+api: v1
+name: termite
+kind: app
+display: termite
+description: An easy to use and easy to configure RS232 terminal
+homepage: https://www.compuphase.com/software_termite.htm
+license: Zlib
+version: "3.4"
+channels:
+    stable: "3.4"
+provides:
+    - termite
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.compuphase.com/software/termite-3.4.exe#/dl.7z
+      sha256: ca440b6c7f6eaa812ba5f8bf42aed86e02022ca50a1c72585168c9b671d0fe19
+      bin:
+        - termite.exe
+      strip: 1
+test: termite --version

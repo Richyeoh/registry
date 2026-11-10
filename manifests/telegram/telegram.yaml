@@ -1,0 +1,21 @@
+api: v1
+name: telegram
+kind: app
+display: telegram
+description: A messaging app with a focus on speed and security
+homepage: https://telegram.org
+license: GPL-3.0-only
+version: 7.4.1
+channels:
+    stable: 7.4.1
+provides:
+    - telegram
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.1/td-portable-win-x64-7.4.1.zip
+      sha256: 6c1191b770d49a2b8f6b0d78fd8d4402e6d7098513e7213a2649990471238392
+      bin:
+        - telegram.cmd.exe
+      strip: 1
+test: telegram.cmd --version

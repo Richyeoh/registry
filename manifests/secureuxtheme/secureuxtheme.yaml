@@ -1,0 +1,21 @@
+api: v1
+name: secureuxtheme
+kind: app
+display: secureuxtheme
+description: A secure boot compatible in-memory UxTheme patcher
+homepage: https://github.com/namazso/SecureUxTheme
+license: GPL-3.0-only
+version: 3.0.0
+channels:
+    stable: 3.0.0
+provides:
+    - secureuxtheme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/namazso/SecureUxTheme/releases/download/v3.0.0/SecureUxTheme-amd64.zip
+      sha256: 9b170fc59d6efc3097a165735aa2641564c2445805a9e534e4c887b00a1d85d7
+      bin:
+        - secureuxtheme.exe
+      strip: 1
+test: secureuxtheme --version

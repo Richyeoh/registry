@@ -1,0 +1,24 @@
+api: v1
+name: keyguard
+kind: app
+display: keyguard
+description: Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible
+homepage: https://keyguard.dev
+license: Unknown
+version: 3.8.0-20261109
+channels:
+    stable: 3.8.0-20261109
+provides:
+    - keyguard
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/AChep/keyguard-app/releases/download/r20261109/Keyguard-3.8.0.msi
+      sha256: 528f5e9d3fae7b8d43c479530ee7271f5132eed2a292900c95c6edcfad3f9535
+      bin:
+        - Keyguard\Keyguard.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall keyguard
+test: Keyguard\Keyguard --version

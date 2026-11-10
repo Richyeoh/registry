@@ -1,0 +1,21 @@
+api: v1
+name: dpanel-desktop-ce
+kind: app
+display: dpanel-desktop-ce
+description: DPanel Community Edition desktop app for managing Docker and Podman containers.
+homepage: https://dpanel.cc/
+license: Unknown
+version: 1.11.2-117
+channels:
+    stable: 1.11.2-117
+provides:
+    - dpanel-desktop-ce
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DPanel-dev/gui/releases/download/v1.11.2-117/dpanel-desktop-ce-amd64-portable.zip
+      sha256: 60d5242e303569b359c88fc8a12d3cacac6e650736dd1316e3962bdb8a711876
+      bin:
+        - dpanel-desktop-ce.exe
+      strip: 1
+test: dpanel-desktop-ce --version

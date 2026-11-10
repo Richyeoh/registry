@@ -1,0 +1,24 @@
+api: v1
+name: moosync
+kind: app
+display: moosync
+description: A customizable desktop music player with a clean interface.
+homepage: https://moosync.app
+license: Unknown
+version: 11.0.2
+channels:
+    stable: 11.0.2
+provides:
+    - moosync
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Moosync/Moosync/releases/download/Moosync-v11.0.2/Moosync_11.0.2_x64-setup.exe
+      sha256: 3798b8f46332bef419695044d2a34166d5402fde4289961a265b82d44214a4d3
+      bin:
+        - Moosync.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall moosync
+test: Moosync --version

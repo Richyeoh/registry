@@ -1,0 +1,24 @@
+api: v1
+name: rtlutility
+kind: app
+display: rtlutility
+description: Tool for measuring the Round Trip Latency of your Digital Audio Workstation (DAW) and audio interface
+homepage: https://oblique-audio.com/rtl-utility.php
+license: Freeware
+version: 1.0.13
+channels:
+    stable: 1.0.13
+provides:
+    - rtlutility
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://oblique-audio.com/downloads/RTL_Utility_1_0_13_x64.exe#/RTL_Utility.exe
+      sha256: 0cab329b126adf9dfa2e5c026f844d2e7a0b98a77d61ed42a423cf36e7682808
+      bin:
+        - rtlutility.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rtlutility
+test: rtlutility --version

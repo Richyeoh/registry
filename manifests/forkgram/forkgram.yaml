@@ -1,0 +1,22 @@
+api: v1
+name: forkgram
+kind: app
+display: forkgram
+description: Fork of Telegram Desktop with quality-of-life enhancements.
+homepage: https://t.me/forkgram
+license: Unknown
+version: 7.4.1
+channels:
+    stable: 7.4.1
+provides:
+    - forkgram
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/forkgram/tdesktop/releases/download/v7.4.1/Telegram.zip
+      sha256: 4ea308478c0e7354333bad64e5d5d2ff0de18828f24e545752569042d8d67e89
+      bin:
+        - Telegram.exe
+        - Telegram.exe
+      strip: 1
+test: Telegram --version

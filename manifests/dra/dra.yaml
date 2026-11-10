@@ -1,0 +1,21 @@
+api: v1
+name: dra
+kind: app
+display: dra
+description: A command line tool to download release assets from GitHub
+homepage: https://github.com/devmatteini/dra
+license: MIT
+version: 0.10.3
+channels:
+    stable: 0.10.3
+provides:
+    - dra
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/devmatteini/dra/releases/download/0.10.3/dra-0.10.3-x86_64-pc-windows-msvc.zip
+      sha256: 396c44d18a92fe5584e42417f218a312cf6df856a9d966c162466c85de4b1359
+      bin:
+        - dra.exe
+      strip: 1
+test: dra --version

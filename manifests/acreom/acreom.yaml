@@ -1,0 +1,32 @@
+api: v1
+name: acreom
+kind: app
+display: acreom
+description: Personal knowledge base for developers
+homepage: https://acreom.com/
+license: Unknown
+keywords:
+    - brew
+    - cask
+version: 1.20.4
+channels:
+    stable: 1.20.4
+provides:
+    - acreom
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://github.com/Acreom/app/releases/download/v1.20.4/acreom-1.20.4-arm64.dmg
+      sha256: 91b673c58c1c531f3dd7c16d7a2c2f4a4bc7e5cde04e04fa54f54e50214e1233
+      bin:
+        - acreom
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://github.com/Acreom/app/releases/download/v1.20.4/acreom-1.20.4-arm64.dmg
+      sha256: 91b673c58c1c531f3dd7c16d7a2c2f4a4bc7e5cde04e04fa54f54e50214e1233
+      bin:
+        - acreom
+      strip: 1
+test: acreom --version
+caveats: 由 Homebrew cask 自动转制（mac 专属，版本由 cask 更新驱动）

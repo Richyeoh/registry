@@ -1,0 +1,21 @@
+api: v1
+name: proton-pass
+kind: app
+display: proton-pass
+description: Free password manager with identity protection by Proton.
+homepage: https://proton.me/pass
+license: GPL-3.0-only
+version: 1.43.0
+channels:
+    stable: 1.43.0
+provides:
+    - proton-pass
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://proton.me/download/pass/windows/ProtonPass_1.43.0.msix#/dl.zip
+      sha256: 461695c552da38b43eae8d6f7d7f141b7f1a58095b324ae8104fa3b0056e5390
+      bin:
+        - proton-pass.exe
+      strip: 1
+test: proton-pass --version

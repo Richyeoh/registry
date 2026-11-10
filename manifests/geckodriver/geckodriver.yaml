@@ -1,0 +1,21 @@
+api: v1
+name: geckodriver
+kind: app
+display: geckodriver
+description: WebDriver for the Firefox web browser.
+homepage: https://firefox-source-docs.mozilla.org/testing/geckodriver/
+license: MPL-2.0
+version: 0.37.1
+channels:
+    stable: 0.37.1
+provides:
+    - geckodriver
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mozilla/geckodriver/releases/download/v0.37.1/geckodriver-v0.37.1-win64.zip
+      sha256: dfed9315abe8d2fbc1b6161a2ee8002452e79cf05ee92fdc653a4e26bc35edd8
+      bin:
+        - geckodriver.exe
+      strip: 1
+test: geckodriver --version

@@ -1,0 +1,24 @@
+api: v1
+name: webcopy
+kind: app
+display: webcopy
+description: Copy websites locally for offline browsing.
+homepage: https://www.cyotek.com/cyotek-webcopy
+license: Unknown
+version: 1.9.1.872
+channels:
+    stable: 1.9.1.872
+provides:
+    - webcopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.cyotek.com/downloads/get/setup-cyowcopy-1.9.1.872-x64.exe
+      sha256: 8b5dfdce50f95a26dea849aacc355efae459cbb2360de19fcf1a33b266f8cce0
+      bin:
+        - wcopycmd.cmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall webcopy
+test: wcopycmd.cmd --version

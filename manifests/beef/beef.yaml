@@ -1,0 +1,22 @@
+api: v1
+name: beef
+kind: app
+display: beef
+description: Performance-oriented compiled programming language which has been built hand-in-hand with its IDE environment.
+homepage: https://www.beeflang.org
+license: MIT
+version: 0.43.5
+channels:
+    stable: 0.43.5
+provides:
+    - beef
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/beefytech/Beef/releases/download/0.43.5/BeefSetup_0_43_5.exe#/dl.7z
+      sha256: fcce6aa255d5872f668afe40b21b8633ca972ccf34edf9421896d8beda612cc4
+      bin:
+        - bin\BeefBuild.exe
+        - bin\BeefIDE.exe
+      strip: 1
+test: bin\BeefBuild --version

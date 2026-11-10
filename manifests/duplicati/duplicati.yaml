@@ -1,0 +1,23 @@
+api: v1
+name: duplicati
+kind: app
+display: duplicati
+description: A free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers.
+homepage: https://www.duplicati.com/
+license: MIT
+version: 2.4.1.0_stable_2026-10-29
+channels:
+    stable: 2.4.1.0_stable_2026-10-29
+provides:
+    - duplicati
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/duplicati/duplicati/releases/download/v2.4.1.0_stable_2026-10-29/duplicati-2.4.1.0_stable_2026-10-29-win-x64-gui.zip
+      sha256: 34f3c38466ccc738470da4f31b35effda4eef91f1314d4ea90e21362f93388c3
+      bin:
+        - Duplicati.CommandLine.exe
+        - Duplicati.CommandLine.exe
+        - Duplicati.GUI.TrayIcon.exe
+      strip: 1
+test: Duplicati.CommandLine --version

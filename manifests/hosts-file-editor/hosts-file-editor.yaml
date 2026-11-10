@@ -1,0 +1,21 @@
+api: v1
+name: hosts-file-editor
+kind: app
+display: hosts-file-editor
+description: Easily edit and manage the hosts file
+homepage: https://hostsfileeditor.com
+license: GPL-3.0-or-later
+version: 1.5.2
+channels:
+    stable: 1.5.2
+provides:
+    - hosts-file-editor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/scottlerch/HostsFileEditor/releases/download/v1.5.2/HostsFileEditor-1.5.2-x64.zip
+      sha256: b06a0a11dbc6fefde08589b535e5dc3527480a6633aa3f09e759cefc1fd050eb
+      bin:
+        - hfe.exe
+      strip: 1
+test: hfe --version

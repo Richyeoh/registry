@@ -1,0 +1,24 @@
+api: v1
+name: uncap
+kind: app
+display: uncap
+description: Map Caps Lock to Escape, or any key to any key.
+homepage: https://github.com/susam/uncap
+license: MIT
+version: 0.3.0
+channels:
+    stable: 0.3.0
+provides:
+    - uncap
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/susam/uncap/releases/download/0.3.0/uncap.exe
+      sha256: 4b815b0f6d7369bdb3e943ad2be13bdc002c6916ac7425f69c3f1681c3f31a47
+      bin:
+        - uncap.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall uncap
+test: uncap --version

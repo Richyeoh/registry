@@ -1,0 +1,24 @@
+api: v1
+name: x265
+kind: app
+display: x265
+description: Encodes video or images into an H.265 / HEVC bitstream.
+homepage: https://www.x265.org
+license: Unknown
+version: 4.3+96-1836f70
+channels:
+    stable: 4.3+96-1836f70
+provides:
+    - x265
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://msystem.waw.pl/x265/x265-4.3+96-1836f70_vs2022-AVX2.7z
+      sha256: 81102a8708ecb38d02ab44147f8b014b3efdc64ff6857c7d21cec65d93c91572
+      bin:
+        - x265.exe
+        - x265-8b.exe
+        - x265-10b.exe
+        - x265-12b.exe
+      strip: 1
+test: x265 --version

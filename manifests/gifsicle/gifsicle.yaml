@@ -1,0 +1,22 @@
+api: v1
+name: gifsicle
+kind: app
+display: gifsicle
+description: Command-line tool for creating, editing, and getting information about GIF images and animations
+homepage: https://www.lcdf.org/gifsicle/
+license: LGPL-2.0-only
+version: "1.97"
+channels:
+    stable: "1.97"
+provides:
+    - gifsicle
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://eternallybored.org/misc/gifsicle/releases/gifsicle-1.97-win64.zip
+      sha256: bb3ad4e1521a3953152f406eaafabda153fb5986938405860a7e7f12a3d13227
+      bin:
+        - gifsicle.exe
+        - gifdiff.exe
+      strip: 1
+test: gifsicle --version

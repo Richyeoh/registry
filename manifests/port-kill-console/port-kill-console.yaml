@@ -1,0 +1,24 @@
+api: v1
+name: port-kill-console
+kind: app
+display: port-kill-console
+description: Port Kill helps you find and free ports and caches blocking your dev work.
+homepage: https://portkill.com
+license: FSL-1.1-MIT
+version: 0.5.41
+channels:
+    stable: 0.5.41
+provides:
+    - port-kill-console
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/treadiehq/port-kill/releases/download/v0.5.41/port-kill-console-windows.exe#/port-kill-console.exe
+      sha256: 2f08959852cfc972625ce0be782c6e7cb16ea93e3fb135d364cbf6d61eebdd8f
+      bin:
+        - port-kill-console.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall port-kill-console
+test: port-kill-console --version

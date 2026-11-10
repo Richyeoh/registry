@@ -1,0 +1,24 @@
+api: v1
+name: fat32format-gui
+kind: app
+display: fat32format-gui
+description: A GUI FAT32 format tool that supports volumes greater than 32 GB.
+homepage: http://ridgecrop.co.uk
+license: Unknown
+version: "1.01"
+channels:
+    stable: "1.01"
+provides:
+    - fat32format-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: http://ridgecrop.co.uk/guiformat-x64.Exe#/guiformat.exe
+      sha256: 13d045f582d559c830f2e30f835ac56803844825fe6152d2d5f78367b19edb9a
+      bin:
+        - fat32format-gui.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fat32format-gui
+test: fat32format-gui --version

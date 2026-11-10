@@ -1,0 +1,24 @@
+api: v1
+name: windynamicdesktop
+kind: app
+display: windynamicdesktop
+description: Cycle through multiple wallpapers based on the times of sunrise and sunset.
+homepage: https://github.com/t1m0thyj/WinDynamicDesktop
+license: MPL-2.0
+version: 5.7.0
+channels:
+    stable: 5.7.0
+provides:
+    - windynamicdesktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/t1m0thyj/WinDynamicDesktop/releases/download/v5.7.0/WinDynamicDesktop_5.7.0_x64_Portable.exe#/WinDynamicDesktop.exe
+      sha256: 01e4ff14c8bd31839f70be21444b6d84c4502f8cef24be9a345ed1f891348898
+      bin:
+        - windynamicdesktop.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall windynamicdesktop
+test: windynamicdesktop --version

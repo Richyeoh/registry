@@ -1,0 +1,24 @@
+api: v1
+name: matlab-mcp-server
+kind: app
+display: matlab-mcp-server
+description: MCP (Model Context Protocol) server for MATLAB that enables AI-driven workflows.
+homepage: https://www.mathworks.com/products/matlab-mcp-server.html
+license: Unknown
+version: 0.16.0
+channels:
+    stable: 0.16.0
+provides:
+    - matlab-mcp-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/matlab/matlab-mcp-server/releases/download/v0.16.0/matlab-mcp-server-windows-x64.exe#/matlab-mcp-server.exe
+      sha256: 7c70fdc69e7e7d4762732fede64f348b18ecbc89c3de705f9dde89a86d1883ea
+      bin:
+        - matlab-mcp-server.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall matlab-mcp-server
+test: matlab-mcp-server --version

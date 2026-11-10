@@ -1,0 +1,22 @@
+api: v1
+name: go117
+kind: app
+display: go117
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.17.13
+channels:
+    stable: 1.17.13
+provides:
+    - go117
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.17.13.windows-amd64.zip
+      sha256: 6cea8e199c8034995f3a691ef4564e0cc6645ee1649d7ef268a836387f1a5dfa
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

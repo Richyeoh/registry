@@ -1,0 +1,21 @@
+api: v1
+name: ffmpegthumbnailer
+kind: app
+display: ffmpegthumbnailer
+description: Lightweight video thumbnailer that can be used by file managers to create thumbnails for video files.
+homepage: https://github.com/dirkvdb/ffmpegthumbnailer
+license: GPL-2.0-or-later
+version: 2.4.1
+channels:
+    stable: 2.4.1
+provides:
+    - ffmpegthumbnailer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dirkvdb/ffmpegthumbnailer/releases/download/v2.4.1/ffmpegthumbnailer-windows-mingw64.zip
+      sha256: 579929192636caf5093f1f756a3c749285768e5b1fbf35a2c7cfa89b10a60a82
+      bin:
+        - ffmpegthumbnailer.exe
+      strip: 1
+test: ffmpegthumbnailer --version

@@ -1,0 +1,24 @@
+api: v1
+name: zebar
+kind: app
+display: zebar
+description: Zebar is a tool for creating customizable and cross-platform taskbars, desktop widgets, and popups.
+homepage: https://github.com/glzr-io/zebar
+license: GPL-3.0
+version: 3.3.1
+channels:
+    stable: 3.3.1
+provides:
+    - zebar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/glzr-io/zebar/releases/download/v3.3.1/zebar-v3.3.1-opt1-x64.msi
+      sha256: 1d5584be8def58f828d55ed09cee52fe80fdd60ea118141f37963aa80e902c28
+      bin:
+        - zebar.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall zebar
+test: zebar --version

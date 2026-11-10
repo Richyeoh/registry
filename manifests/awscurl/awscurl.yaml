@@ -1,0 +1,39 @@
+api: v1
+name: awscurl
+kind: app
+display: awscurl
+description: Curl like simplicity to access AWS resources
+homepage: https://github.com/okigan/awscurl
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: "0.45"
+channels:
+    stable: "0.45"
+provides:
+    - awscurl
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:da2cf39169205f2442422f2067ac8c5c3a1aeebe59239437506a567126d8e28e
+      sha256: da2cf39169205f2442422f2067ac8c5c3a1aeebe59239437506a567126d8e28e
+      bin:
+        - awscurl
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:e17b43956b363bf3f6394e90e072ac11fce92fa2bf591a3a1933460bed01133e
+      sha256: e17b43956b363bf3f6394e90e072ac11fce92fa2bf591a3a1933460bed01133e
+      bin:
+        - awscurl
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/awscurl/blobs/sha256:a179d6889c0cb10449094f931c5d1c5b8717f9684a59e17a41c2db2b06bb08da
+      sha256: a179d6889c0cb10449094f931c5d1c5b8717f9684a59e17a41c2db2b06bb08da
+      bin:
+        - awscurl
+      strip: 1
+test: awscurl --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

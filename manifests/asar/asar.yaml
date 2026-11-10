@@ -1,0 +1,46 @@
+api: v1
+name: asar
+kind: app
+display: asar
+description: SNES assembler for applying patches to ROM images or building ROMs
+homepage: https://github.com/RPGHacker/asar
+license: LGPL-2.0-or-later
+keywords:
+    - brew
+    - homebrew
+version: "1.91"
+channels:
+    stable: "1.91"
+provides:
+    - asar
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asar/blobs/sha256:5c59a24a6f350057fc37b962d80a055d943c752ac96914a334921da82da1b17f
+      sha256: 5c59a24a6f350057fc37b962d80a055d943c752ac96914a334921da82da1b17f
+      bin:
+        - asar
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asar/blobs/sha256:dd07f32a111c15b3ced7e634f4a0b33635fa502f6272428ddda03f829a7b5f07
+      sha256: dd07f32a111c15b3ced7e634f4a0b33635fa502f6272428ddda03f829a7b5f07
+      bin:
+        - asar
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/asar/blobs/sha256:17570103fe26f36e0b49df22899599e8e1d85e14094c4f40e5d550c4bbde5c5e
+      sha256: 17570103fe26f36e0b49df22899599e8e1d85e14094c4f40e5d550c4bbde5c5e
+      bin:
+        - asar
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asar/blobs/sha256:1c441c673941b08e274e7dc1e5c0d644e580d0e724a55ec3faa42c0838b9d4f1
+      sha256: 1c441c673941b08e274e7dc1e5c0d644e580d0e724a55ec3faa42c0838b9d4f1
+      bin:
+        - asar
+      strip: 1
+test: asar --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

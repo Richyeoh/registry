@@ -1,0 +1,21 @@
+api: v1
+name: ratty
+kind: app
+display: ratty
+description: GPU-rendered terminal emulator with inline 3D graphics
+homepage: https://ratty-term.org/
+license: MIT
+version: 0.6.0
+channels:
+    stable: 0.6.0
+provides:
+    - ratty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/orhun/ratty/releases/download/v0.6.0/ratty-x86_64-pc-windows-msvc.zip
+      sha256: d881d8dcbf8a758ba85f38bc600c7b3911d491e69d4b3e49843ed1536aeb45ed
+      bin:
+        - ratty.exe
+      strip: 1
+test: ratty --version

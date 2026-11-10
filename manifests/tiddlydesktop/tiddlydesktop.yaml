@@ -1,0 +1,21 @@
+api: v1
+name: tiddlydesktop
+kind: app
+display: tiddlydesktop
+description: ' A custom desktop browser for TiddlyWiki 5 and TiddlyWiki Classic, based on nw.js'
+homepage: https://tiddlywiki.com/#TiddlyDesktop
+license: Unknown
+version: 0.0.22
+channels:
+    stable: 0.0.22
+provides:
+    - tiddlydesktop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TiddlyWiki/TiddlyDesktop/releases/download/v0.0.22/tiddlydesktop-win64-v0.0.22.zip
+      sha256: 99f8dd3dbb9206d54a76c99d088937ac5763d7de4d690c34a9a221007eca0572
+      bin:
+        - tiddlydesktop.exe
+      strip: 1
+test: tiddlydesktop --version

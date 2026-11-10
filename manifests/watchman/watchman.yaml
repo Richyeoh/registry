@@ -1,0 +1,24 @@
+api: v1
+name: watchman
+kind: app
+display: watchman
+description: A file watching service by Facebook
+homepage: https://facebook.github.io/watchman/
+license: MIT
+version: 2025.02.24.00
+channels:
+    stable: 2025.02.24.00
+provides:
+    - watchman
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/facebook/watchman/releases/download/v2025.02.24.00/watchman-v2025.02.24.00-windows.zip
+      sha256: 8550b79b3620f6eabc81544ab767cc94883750efbb3a4127423f52fc420bfbed
+      bin:
+        - watchman-make.exe
+        - watchman-replicate-subscription.exe
+        - watchman-wait.exe
+        - watchman.exe
+      strip: 1
+test: watchman-make --version

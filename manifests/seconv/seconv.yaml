@@ -1,0 +1,21 @@
+api: v1
+name: seconv
+kind: app
+display: seconv
+description: Subtitle Edit's headless command-line converter
+homepage: https://www.nikse.dk/subtitleedit/
+license: GPL-3.0-only
+version: 5.4.0
+channels:
+    stable: 5.4.0
+provides:
+    - seconv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.4.0/SeConv-Windows-x64.zip
+      sha256: aea19664f460fcfb84e8ba8eca72419091818c6005d4e063d9950c41ea81062d
+      bin:
+        - seconv.exe
+      strip: 1
+test: seconv --version

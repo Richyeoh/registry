@@ -1,0 +1,21 @@
+api: v1
+name: deckcraft
+kind: app
+display: deckcraft
+description: Presentations and slide shows; an open-source, clean-room reimplementation of Microsoft PowerPoint, rebuilt in pure Rust
+homepage: https://github.com/storytold/deckcraft
+license: MIT|Apache-2.0
+version: 0.16.0
+channels:
+    stable: 0.16.0
+provides:
+    - deckcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/deckcraft/releases/download/v0.16.0/deckcraft-0.16.0-windows-x64-portable.zip
+      sha256: a752454417aa5b06bb4fc541d1085543ff619a848888c3032ead2eb88b834ba3
+      bin:
+        - deckcraft-cli.exe
+      strip: 1
+test: deckcraft-cli --version

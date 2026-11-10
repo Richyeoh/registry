@@ -1,0 +1,22 @@
+api: v1
+name: kapacitor
+kind: app
+display: kapacitor
+description: Open source framework for processing, monitoring, and alerting on time series data.
+homepage: https://www.influxdata.com/time-series-platform/kapacitor/
+license: MIT
+version: 1.8.9
+channels:
+    stable: 1.8.9
+provides:
+    - kapacitor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.influxdata.com/kapacitor/releases/kapacitor-1.8.9_windows_amd64.zip
+      sha256: ec97d93907f6bd056c2b5eae4d872ab5b598f49898195573e2f730210eabc7ef
+      bin:
+        - kapacitor.exe
+        - kapacitord.exe
+      strip: 1
+test: kapacitor --version

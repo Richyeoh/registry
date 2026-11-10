@@ -1,0 +1,22 @@
+api: v1
+name: cosmopolitan
+kind: app
+display: cosmopolitan
+description: Cosmopolitan C/C++ toolchain + Cosmos POSIX userland
+homepage: https://github.com/jart/cosmopolitan
+license: ISC
+version: 4.0.2
+channels:
+    stable: 4.0.2
+provides:
+    - cosmopolitan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jart/cosmopolitan/releases/download/4.0.2/cosmocc-4.0.2.zip#/cosmocc.zip_
+      sha256: 85b8c37a406d862e656ad4ec14be9f6ce474c1b436b9615e91a55208aced3f44
+      bin:
+        - bin\dash.com.exe
+        - bin\dash.com.exe
+      strip: 1
+test: bin\dash.com --version

@@ -1,0 +1,21 @@
+api: v1
+name: android-clt
+kind: app
+display: android-clt
+description: The official Android command line tools
+homepage: https://developer.android.com/studio#command-line-tools-only
+license: Unknown
+version: "15859902"
+channels:
+    stable: "15859902"
+provides:
+    - android-clt
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/android/repository/commandlinetools-win-15859902_latest.zip
+      sha256: 90ae805d20434428bffcb699c290860f19bb5f66a67e6b330067e3de801fb04a
+      bin:
+        - android-clt.exe
+      strip: 1
+test: android-clt --version

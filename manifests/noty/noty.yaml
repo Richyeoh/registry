@@ -1,0 +1,21 @@
+api: v1
+name: noty
+kind: app
+display: noty
+description: Autosaving sticky note with support for multiple notes without needing multiple windows.
+homepage: https://github.com/fabiospampinato/noty
+license: MIT
+version: 2.2.0
+channels:
+    stable: 2.2.0
+provides:
+    - noty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fabiospampinato/noty/releases/download/v2.2.0/Noty-2.2.0-win.zip
+      sha256: 166d125e409a3d4f0f92a2f583df3997cdabbaf0aa8803cdbbac4460ce8eee30
+      bin:
+        - noty.exe
+      strip: 1
+test: noty --version

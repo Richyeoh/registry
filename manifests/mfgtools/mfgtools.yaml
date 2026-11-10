@@ -1,0 +1,24 @@
+api: v1
+name: mfgtools
+kind: app
+display: mfgtools
+description: Freescale/NXP I.MX Chip image deploy tools.
+homepage: https://github.com/nxp-imx/mfgtools
+license: BSD-3-Clause
+version: 1.5.243
+channels:
+    stable: 1.5.243
+provides:
+    - mfgtools
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.243/uuu.exe
+      sha256: f6b76a6246befabeadfebdc1cbfe58f35939596caf7b78717ceab599b0c85027
+      bin:
+        - uuu.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall mfgtools
+test: uuu --version

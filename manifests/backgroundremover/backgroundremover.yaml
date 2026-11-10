@@ -1,0 +1,39 @@
+api: v1
+name: backgroundremover
+kind: app
+display: backgroundremover
+description: Remove background from images and video using AI
+homepage: https://backgroundremoverai.com
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.4.5
+channels:
+    stable: 0.4.5
+provides:
+    - backgroundremover
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/backgroundremover/blobs/sha256:569b20528f93a651d066ad2e1ea2b40891bf9ef08ec1637b5ea52ee8de2392cd
+      sha256: 569b20528f93a651d066ad2e1ea2b40891bf9ef08ec1637b5ea52ee8de2392cd
+      bin:
+        - backgroundremover
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/backgroundremover/blobs/sha256:ac02020d59db0ad0e5d25cc8329e9c0a4dde766850f8fedc050681194ffc2f2b
+      sha256: ac02020d59db0ad0e5d25cc8329e9c0a4dde766850f8fedc050681194ffc2f2b
+      bin:
+        - backgroundremover
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/backgroundremover/blobs/sha256:348fa66d4dd9c27ca2e0be759bdc768d63dfd662968dbcf96bb7f1a6de860326
+      sha256: 348fa66d4dd9c27ca2e0be759bdc768d63dfd662968dbcf96bb7f1a6de860326
+      bin:
+        - backgroundremover
+      strip: 1
+test: backgroundremover --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

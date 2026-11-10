@@ -1,0 +1,21 @@
+api: v1
+name: zizmor
+kind: app
+display: zizmor
+description: A static analysis tool for GitHub Actions that finds common security issues such as template injection, credential leakage, excessive permissions, and impostor commits.
+homepage: https://docs.zizmor.sh/
+license: MIT
+version: 1.32.0
+channels:
+    stable: 1.32.0
+provides:
+    - zizmor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zizmorcore/zizmor/releases/download/v1.32.0/zizmor-x86_64-pc-windows-msvc.zip
+      sha256: d284a16e09d9df4ce2c000357e7b59bd531be093bea5718a1ce225b449b59d49
+      bin:
+        - zizmor.exe
+      strip: 1
+test: zizmor --version

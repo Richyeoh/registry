@@ -1,0 +1,21 @@
+api: v1
+name: chromedriver-dev
+kind: app
+display: chromedriver-dev
+description: An open source tool for automated testing of webapps across many browsers
+homepage: https://chromedriver.chromium.org/
+license: BSD-3-Clause
+version: 159.0.8144.0
+channels:
+    stable: 159.0.8144.0
+provides:
+    - chromedriver-dev
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/159.0.8144.0/win64/chromedriver-win64.zip
+      sha256: 6e73e972492fda2fe5c875839e45961f36325214915c94c388c71e53d204d16d
+      bin:
+        - chromedriver.exe
+      strip: 1
+test: chromedriver --version

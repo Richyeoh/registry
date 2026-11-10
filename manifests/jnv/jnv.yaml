@@ -1,0 +1,21 @@
+api: v1
+name: jnv
+kind: app
+display: jnv
+description: Interactive JSON filter using jq
+homepage: https://github.com/ynqa/jnv
+license: MIT
+version: 0.7.1
+channels:
+    stable: 0.7.1
+provides:
+    - jnv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ynqa/jnv/releases/download/v0.7.1/jnv-x86_64-pc-windows-msvc.zip
+      sha256: f76a635add18586c9473329fb37d2dca831b80d8062dccb4683f69a3bb3de5e6
+      bin:
+        - jnv.exe
+      strip: 1
+test: jnv --version

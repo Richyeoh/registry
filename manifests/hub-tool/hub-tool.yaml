@@ -1,0 +1,21 @@
+api: v1
+name: hub-tool
+kind: app
+display: hub-tool
+description: The Docker Hub Tool is a CLI tool for interacting with the Docker Hub.
+homepage: https://github.com/docker/hub-tool
+license: Apache-2.0
+version: 0.4.6
+channels:
+    stable: 0.4.6
+provides:
+    - hub-tool
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/docker/hub-tool/releases/download/v0.4.6/hub-tool-windows-amd64.zip
+      sha256: 024c17cfd92981153828cba70942e5cbe90e9560a428372e940f7b9c56be1916
+      bin:
+        - hub-tool.exe
+      strip: 1
+test: hub-tool --version

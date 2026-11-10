@@ -1,0 +1,22 @@
+api: v1
+name: qaac
+kind: app
+display: qaac
+description: A command line AAC/ALAC encoder frontend based on Apple encoder.
+homepage: https://sites.google.com/site/qaacpage/
+license: Unknown
+version: "3.07"
+channels:
+    stable: "3.07"
+provides:
+    - qaac
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nu774/qaac/releases/download/v3.07/qaac_3.07.zip
+      sha256: 1fb3ab4aa81725e2607ac1b31afa0e13d2617ee6eb5900f5070c092f5271cbb3
+      bin:
+        - qaac64.exe
+        - refalac64.exe
+      strip: 1
+test: qaac64 --version

@@ -1,0 +1,24 @@
+api: v1
+name: macast-debug
+kind: app
+display: macast-debug
+description: Debug version for Macast
+homepage: https://github.com/xfangfang/Macast
+license: GPL-3.0-only
+version: "0.7"
+channels:
+    stable: "0.7"
+provides:
+    - macast-debug
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xfangfang/Macast/releases/download/v0.7/Macast-Windows-v0.7-debug.exe#/macast-debug.exe
+      sha256: 4bb587a2b1e58da98b0ff857cc775bc318f3da40778f10b5066fc6e866f153b6
+      bin:
+        - macast-debug.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall macast-debug
+test: macast-debug --version

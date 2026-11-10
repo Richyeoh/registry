@@ -1,0 +1,21 @@
+api: v1
+name: webcord
+kind: app
+display: webcord
+description: A Discord and Fosscord web-based client.
+homepage: https://github.com/SpacingBat3/WebCord
+license: MIT
+version: 4.14.0
+channels:
+    stable: 4.14.0
+provides:
+    - webcord
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SpacingBat3/WebCord/releases/download/v4.14.0/WebCord-win32-x64-4.14.0.zip
+      sha256: 552cfdd2974c9817a0b22f088a097dbfbc2b10c312e8ac064ee8ad06a5ceeb1b
+      bin:
+        - webcord.exe
+      strip: 1
+test: webcord --version

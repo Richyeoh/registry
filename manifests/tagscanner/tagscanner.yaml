@@ -1,0 +1,21 @@
+api: v1
+name: tagscanner
+kind: app
+display: tagscanner
+description: TagScanner is a powerful tool for organizing and managing your music collection.
+homepage: https://www.xdlab.ru/en/
+license: Unknown
+version: 6.1.21
+channels:
+    stable: 6.1.21
+provides:
+    - tagscanner
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.xdlab.ru/files/tagscan-6.1.21_x64.zip
+      sha256: b35f6a0f09a9706457d5320d44e9989039eba3d73e106fd457389a4e1d41fea9
+      bin:
+        - Tagscan.exe
+      strip: 1
+test: Tagscan --version

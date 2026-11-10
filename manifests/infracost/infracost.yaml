@@ -1,0 +1,21 @@
+api: v1
+name: infracost
+kind: app
+display: infracost
+description: A CLI tool that estimates cloud costs from infrastructure as code such as Terraform, Terragrunt, and CloudFormation.
+homepage: https://www.infracost.io
+license: Apache-2.0
+version: 2.18.3
+channels:
+    stable: 2.18.3
+provides:
+    - infracost
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/infracost/cli/releases/download/v2.18.3/infracost-windows-amd64.zip
+      sha256: 90de94e13292c402e7f7a2ef4cbc26f45e87f75524b21649602b795d44b3c939
+      bin:
+        - infracost.exe
+      strip: 1
+test: infracost --version

@@ -1,0 +1,34 @@
+api: v1
+name: sliksvn
+kind: app
+display: sliksvn
+description: A software versioning and revision control system.
+homepage: https://sliksvn.com/
+license: Apache-2.0
+version: 1.14.5
+channels:
+    stable: 1.14.5
+provides:
+    - sliksvn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://sliksvn.com/pub/Slik-Subversion-1.14.5-x64.zip
+      sha256: 77d4fe02999dda3bdc3a20e86243ae6ede99aaf072b4c12b0cdedb54d88e954a
+      bin:
+        - bin\svn.exe
+        - bin\svnadmin.exe
+        - bin\svnauthz.exe
+        - bin\svnauthz-validate.exe
+        - bin\svnbench.exe
+        - bin\svndumpfilter.exe
+        - bin\svnfsfs.exe
+        - bin\svnlook.exe
+        - bin\svnmucc.exe
+        - bin\svn-populate-node-origins-index.exe
+        - bin\svnrdump.exe
+        - bin\svnserve.exe
+        - bin\svnsync.exe
+        - bin\svnversion.exe
+      strip: 1
+test: bin\svn --version

@@ -1,0 +1,21 @@
+api: v1
+name: nomacs
+kind: app
+display: nomacs
+description: Image viewer to view all common image formats including RAW and psd images
+homepage: https://nomacs.org
+license: GPL-3.0-only
+version: 3.22.5
+channels:
+    stable: 3.22.5
+provides:
+    - nomacs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nomacs/nomacs/releases/download/3.22.5/nomacs-portable-win.zip
+      sha256: 608e7222d838286227746d121e5a8b7b19711cf67959fb13dfe65c4a5bde64e9
+      bin:
+        - nomacs.exe
+      strip: 1
+test: nomacs --version

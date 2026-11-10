@@ -1,0 +1,24 @@
+api: v1
+name: flut-renamer
+kind: app
+display: flut-renamer
+description: A bulk file renamer written in flutter (dart).
+homepage: https://github.com/sun-jiao/flut-renamer
+license: GPL-3.0-only
+version: 1.6.3
+channels:
+    stable: 1.6.3
+provides:
+    - flut-renamer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sun-jiao/flut-renamer/releases/download/v1.6.3/flut-renamer.exe
+      sha256: 2a23e66a6abc6d90bb23a7df32be6a261d04148ef306e761c7fa4b135dfd3867
+      bin:
+        - flut-renamer.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall flut-renamer
+test: flut-renamer --version

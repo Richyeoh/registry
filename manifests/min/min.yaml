@@ -1,0 +1,21 @@
+api: v1
+name: min
+kind: app
+display: min
+description: A fast, minimal browser that protects your privacy
+homepage: https://minbrowser.org/
+license: Apache-2.0
+version: 1.35.7
+channels:
+    stable: 1.35.7
+provides:
+    - min
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/minbrowser/min/releases/download/v1.35.7/Min-v1.35.7-windows.zip
+      sha256: 6659766134e4d45bd75ac385390b02cea8284a58b37a9f60af2e193a9e04b3d5
+      bin:
+        - Min.exe
+      strip: 1
+test: Min --version

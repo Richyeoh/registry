@@ -1,0 +1,21 @@
+api: v1
+name: tre-command
+kind: app
+display: tre-command
+description: Improved Tree command
+homepage: https://github.com/dduan/tre
+license: MIT
+version: 0.4.0
+channels:
+    stable: 0.4.0
+provides:
+    - tre-command
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-pc-windows-msvc.zip
+      sha256: 9dfbf8c33038e6b31fb359d7f8e7661e46f015067f5cc2f378c93d8bbd1a432a
+      bin:
+        - tre.exe
+      strip: 1
+test: tre --version

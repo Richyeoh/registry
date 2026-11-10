@@ -1,0 +1,21 @@
+api: v1
+name: consolez
+kind: app
+display: consolez
+description: A modified version of Console 2 for a better experience under Windows Vista/7/8/10 and a better visual rendering.
+homepage: https://github.com/cbucher/console
+license: GPL-2.0-only
+version: 1.19.0.19104
+channels:
+    stable: 1.19.0.19104
+provides:
+    - consolez
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cbucher/console/releases/download/1.19.0/ConsoleZ.x64.1.19.0.19104.zip
+      sha256: 671566592f1e8b0b71a5e8a5bce3a5437a2f65c1e251715b0155774ec1be669f
+      bin:
+        - console.exe
+      strip: 1
+test: console --version

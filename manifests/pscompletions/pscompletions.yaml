@@ -1,0 +1,21 @@
+api: v1
+name: pscompletions
+kind: app
+display: pscompletions
+description: Powerful Shell Completions for PowerShell and other shells, powered by Rust and Lua
+homepage: https://pscompletions.abgox.com
+license: MIT
+version: 8.0.6
+channels:
+    stable: 8.0.6
+provides:
+    - pscompletions
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cdn.powershellgallery.com/packages/pscompletions.8.0.6.nupkg
+      sha256: 2b5d1fc3c12c0951917a01082a8860adb79f2cf9534e7bf7acab26b0d9dc8858
+      bin:
+        - pscompletions.exe
+      strip: 1
+test: pscompletions --version

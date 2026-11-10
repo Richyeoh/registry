@@ -1,0 +1,46 @@
+api: v1
+name: alembic
+kind: app
+display: alembic
+description: Open computer graphics interchange framework
+homepage: http://www.alembic.io/
+license: BSD-3-Clause
+keywords:
+    - brew
+    - homebrew
+version: 1.8.12
+channels:
+    stable: 1.8.12
+provides:
+    - alembic
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:4020585258e85ebfdfa504d0dda096267a905cde59542c66563d3784dda11161
+      sha256: 4020585258e85ebfdfa504d0dda096267a905cde59542c66563d3784dda11161
+      bin:
+        - alembic
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:475655b088a913e34b1febc61cc910ccc272bc226350e386d9d6647ab5bb4671
+      sha256: 475655b088a913e34b1febc61cc910ccc272bc226350e386d9d6647ab5bb4671
+      bin:
+        - alembic
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:a5ad262b2967ec1aae15475918d316d6e88825f69f8e579499ca6d2b6083e180
+      sha256: a5ad262b2967ec1aae15475918d316d6e88825f69f8e579499ca6d2b6083e180
+      bin:
+        - alembic
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alembic/blobs/sha256:337be169d245808a04ecb62213a65c69bff77d30028288bbad9a7ae73b410ce5
+      sha256: 337be169d245808a04ecb62213a65c69bff77d30028288bbad9a7ae73b410ce5
+      bin:
+        - alembic
+      strip: 1
+test: alembic --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

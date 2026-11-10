@@ -1,0 +1,39 @@
+api: v1
+name: agent-desktop
+kind: app
+display: agent-desktop
+description: Native desktop automation CLI for AI agents
+homepage: https://agent-browser.dev/desktop
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.2.0
+channels:
+    stable: 1.2.0
+provides:
+    - agent-desktop
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agent-desktop/blobs/sha256:ffb3aaa08de557d63ede80a310289ed26c1174f2e69853ad05c366983ad60fdf
+      sha256: ffb3aaa08de557d63ede80a310289ed26c1174f2e69853ad05c366983ad60fdf
+      bin:
+        - agent-desktop
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/agent-desktop/blobs/sha256:8117c126e258365695f60a1b25f19b0996207ee366e8ce01133c7bc1e3f5217c
+      sha256: 8117c126e258365695f60a1b25f19b0996207ee366e8ce01133c7bc1e3f5217c
+      bin:
+        - agent-desktop
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agent-desktop/blobs/sha256:1cbf8a974a60e79b9c9f8a3abb0c2816afa616bc00895e4d2f3d88dfb3b19fa8
+      sha256: 1cbf8a974a60e79b9c9f8a3abb0c2816afa616bc00895e4d2f3d88dfb3b19fa8
+      bin:
+        - agent-desktop
+      strip: 1
+test: agent-desktop --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,22 @@
+api: v1
+name: docker
+kind: app
+display: docker
+description: Docker CLI & Docker Engine for Windows containers. Docker is an open platform for developing, shipping, and running applications.
+homepage: https://docs.docker.com/engine
+license: Apache-2.0
+version: 29.9.3
+channels:
+    stable: 29.9.3
+provides:
+    - docker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.docker.com/win/static/stable/x86_64/docker-29.9.3.zip
+      sha256: 7c4ff7bbb31579046cd34dd8b91f7cbd3ab3482a1a85330170be726ef792d751
+      bin:
+        - docker.exe
+        - dockerd.exe
+      strip: 1
+test: docker --version

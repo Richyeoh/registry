@@ -1,0 +1,46 @@
+api: v1
+name: artillery
+kind: app
+display: artillery
+description: Cloud-native performance & reliability testing for developers and SREs
+homepage: https://www.artillery.io/
+license: MPL-2.0
+keywords:
+    - brew
+    - homebrew
+version: 2.0.34
+channels:
+    stable: 2.0.34
+provides:
+    - artillery
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/artillery/blobs/sha256:fb32c6a0705abf30488f61646f9175ac9ed5b71df90f0896b65b0aa4ea3f4b9b
+      sha256: fb32c6a0705abf30488f61646f9175ac9ed5b71df90f0896b65b0aa4ea3f4b9b
+      bin:
+        - artillery
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/artillery/blobs/sha256:47aa9a02ff78497faf2021ee9356d68a50e44fadfda1f1fff2d5aca2d5f60f99
+      sha256: 47aa9a02ff78497faf2021ee9356d68a50e44fadfda1f1fff2d5aca2d5f60f99
+      bin:
+        - artillery
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/artillery/blobs/sha256:28f9632feafec5a9f0afd58f8584f54b0cee8019d7b6066b729de37f324d6b96
+      sha256: 28f9632feafec5a9f0afd58f8584f54b0cee8019d7b6066b729de37f324d6b96
+      bin:
+        - artillery
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/artillery/blobs/sha256:117937619256373c888b6a8438c77ed67f3fba0cea02faff2f51dfd7847a981e
+      sha256: 117937619256373c888b6a8438c77ed67f3fba0cea02faff2f51dfd7847a981e
+      bin:
+        - artillery
+      strip: 1
+test: artillery --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

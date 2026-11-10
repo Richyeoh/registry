@@ -1,0 +1,28 @@
+api: v1
+name: puppet-agent
+kind: app
+display: puppet-agent
+description: An open-core software configuration management tool.
+homepage: https://puppetlabs.com
+license: Apache-2.0
+version: 7.34.0
+channels:
+    stable: 7.34.0
+provides:
+    - puppet-agent
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloads.puppetlabs.com/windows/puppet/puppet-agent-7.34.0-x64.msi
+      sha256: c7725c18c5054e79494a64452aed444cf1dae86f9864b863544f6c98c4b23302
+      bin:
+        - Puppet Labs\Puppet\bin\facter.bat.exe
+        - Puppet Labs\Puppet\bin\facter_interactive.bat.exe
+        - Puppet Labs\Puppet\bin\hiera.bat.exe
+        - Puppet Labs\Puppet\bin\puppet.bat.exe
+        - Puppet Labs\Puppet\bin\puppet_interactive.bat.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall puppet-agent
+test: Puppet Labs\Puppet\bin\facter.bat.exe --version

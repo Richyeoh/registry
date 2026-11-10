@@ -1,0 +1,46 @@
+api: v1
+name: aces-container
+kind: app
+display: aces_container
+description: Reference implementation of SMPTE ST2065-4
+homepage: https://github.com/aces-aswf/aces_container
+license: AMPAS
+keywords:
+    - brew
+    - homebrew
+version: 1.0.2
+channels:
+    stable: 1.0.2
+provides:
+    - aces-container
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aces_container/blobs/sha256:6a201930c698e76ae0ee1d705d4de5504a524770999dbc6044a0dc093f819e92
+      sha256: 6a201930c698e76ae0ee1d705d4de5504a524770999dbc6044a0dc093f819e92
+      bin:
+        - aces-container
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aces_container/blobs/sha256:02f53e45013bb26f36ad14e6c881e4a07a3add40b391fecae8ee74000d76fb1a
+      sha256: 02f53e45013bb26f36ad14e6c881e4a07a3add40b391fecae8ee74000d76fb1a
+      bin:
+        - aces-container
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/aces_container/blobs/sha256:b73f4e399a8e1e405f0f0fc0c3e514e52a22abe17b8e518868074c118cd1116a
+      sha256: b73f4e399a8e1e405f0f0fc0c3e514e52a22abe17b8e518868074c118cd1116a
+      bin:
+        - aces-container
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/aces_container/blobs/sha256:2db09e9407396d6028ca3f4d5753568fddf26fb066608453da5ccbc09fcf1763
+      sha256: 2db09e9407396d6028ca3f4d5753568fddf26fb066608453da5ccbc09fcf1763
+      bin:
+        - aces-container
+      strip: 1
+test: aces-container --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

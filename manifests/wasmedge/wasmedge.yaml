@@ -1,0 +1,22 @@
+api: v1
+name: wasmedge
+kind: app
+display: wasmedge
+description: A lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.
+homepage: https://wasmedge.org/
+license: Apache-2.0
+version: 0.18.1
+channels:
+    stable: 0.18.1
+provides:
+    - wasmedge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/WasmEdge/WasmEdge/releases/download/0.18.1/WasmEdge-0.18.1-windows-msvc.zip
+      sha256: 1e298a142a00a079ca2f3e0f036a8ddf7eafef92c12c992accf74eda619fd983
+      bin:
+        - bin\wasmedge.exe
+        - bin\wasmedgec.exe
+      strip: 1
+test: bin\wasmedge --version

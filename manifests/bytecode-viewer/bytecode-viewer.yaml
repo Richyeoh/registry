@@ -1,0 +1,21 @@
+api: v1
+name: bytecode-viewer
+kind: app
+display: bytecode-viewer
+description: A Java 8+ Jar & Android APK Reverse Engineering Suite (Decompiler, Editor, Debugger & More).
+homepage: https://bytecodeviewer.com/
+license: GPL-3.0
+version: 2.13.2
+channels:
+    stable: 2.13.2
+provides:
+    - bytecode-viewer
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Konloch/bytecode-viewer/releases/download/v2.13.2/Bytecode-Viewer-2.13.2.jar#/bytecode-viewer.jar
+      sha256: 2e23ead17825711bfbf25ffbc6c6af32ca89b057a8e7ccb856cc096ed7f83516
+      bin:
+        - bytecode-viewer.jar.exe
+      strip: 1
+test: bytecode-viewer.jar --version

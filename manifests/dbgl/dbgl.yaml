@@ -1,0 +1,21 @@
+api: v1
+name: dbgl
+kind: app
+display: dbgl
+description: Open-source, free, multi-platform frontend for DOSBox
+homepage: https://dbgl.org/
+license: GPL-2.0-or-later
+version: "0.99"
+channels:
+    stable: "0.99"
+provides:
+    - dbgl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dbgl.org/download/dbgl099.zip
+      sha256: 6f07502545cd0480e1b139647e3d483a17407d45b163089b9a48a6df3f11fb63
+      bin:
+        - launch.exe
+      strip: 1
+test: launch --version

@@ -1,0 +1,24 @@
+api: v1
+name: gitsign
+kind: app
+display: gitsign
+description: Keyless Git signing with Sigstore!
+homepage: https://github.com/sigstore/gitsign
+license: Apache-2.0
+version: 0.18.0
+channels:
+    stable: 0.18.0
+provides:
+    - gitsign
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sigstore/gitsign/releases/download/v0.18.0/gitsign_0.18.0_windows_amd64.exe#/gitsign.exe
+      sha256: e94d5e98377397253470b51810e75e1ac2fe1ce6d980848b55efbc393ec91cff
+      bin:
+        - gitsign.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gitsign
+test: gitsign --version

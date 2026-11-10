@@ -1,0 +1,21 @@
+api: v1
+name: k6-cli
+kind: app
+display: k6
+description: Load and performance regression testing tool for cloud native backend infrastructure
+homepage: https://k6.io
+license: AGPL-3.0
+version: 2.3.0
+channels:
+    stable: 2.3.0
+provides:
+    - k6-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/grafana/k6/releases/download/v2.3.0/k6-v2.3.0-windows-amd64.zip
+      sha256: 112276d495e5741c968e2bc09ea6196099c1275bd6db9ee0875d173c7148ce43
+      bin:
+        - k6.exe
+      strip: 1
+test: k6 --version

@@ -1,0 +1,31 @@
+api: v1
+name: btop
+kind: app
+display: btop
+description: btop
+homepage: https://github.com/aristocratos/btop
+license: Apache-2.0
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 1.4.7
+channels:
+    stable: 1.4.7
+provides:
+    - btop
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/aristocratos/btop4win/releases/download/v1.0.5/btop4win-x64.zip
+      sha256: 8275899f02ddc82523f23356836a427c9bba996ca17ef24057a1020dbcd3e951
+      bin:
+        - btop.exe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/btop/download/
+      sha256: 45ec50d17caebffad33ed482db6770682c35b2b3d89ef55c5f0b6a068c816fb7
+      bin:
+        - btop
+test: btop --version

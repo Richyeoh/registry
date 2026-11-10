@@ -1,0 +1,21 @@
+api: v1
+name: openvpn
+kind: app
+display: openvpn
+description: A flexible virtual private network (VPN) solution to secure data communications.
+homepage: https://openvpn.net
+license: GPL-2.0-only
+version: 2.7.9-I001
+channels:
+    stable: 2.7.9-I001
+provides:
+    - openvpn
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://swupdate.openvpn.org/community/releases/OpenVPN-2.7.9-I001-amd64.msi#/setup.msi_
+      sha256: 47abc38a15c217b848fe099332a8523500fcbf2ebf8a1eaa7d5648c6e75079aa
+      bin:
+        - bin\openvpn.exe
+      strip: 1
+test: bin\openvpn --version

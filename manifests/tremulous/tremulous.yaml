@@ -1,0 +1,21 @@
+api: v1
+name: tremulous
+kind: app
+display: tremulous
+description: Asymmetric team-based first-person shooter with real-time strategy elements
+homepage: http://tremulous.net/
+license: GPL-2.0-only
+version: 1.3.0-alpha.0.14
+channels:
+    stable: 1.3.0-alpha.0.14
+provides:
+    - tremulous
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GrangerHub/tremulous/releases/download/v1.3.0-alpha.0.14/release-mingw32-x86_64.zip
+      sha256: 1baafdc4298a8ce38405b4465ec883fd1e7c3eda4b91869b7c1e32436a1c5d0e
+      bin:
+        - tremulous.exe
+      strip: 1
+test: tremulous --version

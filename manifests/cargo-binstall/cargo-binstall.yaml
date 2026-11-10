@@ -1,0 +1,21 @@
+api: v1
+name: cargo-binstall
+kind: app
+display: cargo-binstall
+description: Binary installation for rust projects
+homepage: https://github.com/cargo-bins/cargo-binstall
+license: GPL-3.0-only
+version: 1.26.2
+channels:
+    stable: 1.26.2
+provides:
+    - cargo-binstall
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/cargo-bins/cargo-binstall/releases/download/v1.26.2/cargo-binstall-x86_64-pc-windows-msvc.zip
+      sha256: c377a4977ffdbdcbf58dd263055b2f1d56ba873c69fbd6bfc60bef98256183a3
+      bin:
+        - cargo-binstall.exe
+      strip: 1
+test: cargo-binstall --version

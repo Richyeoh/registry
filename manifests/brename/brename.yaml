@@ -1,0 +1,21 @@
+api: v1
+name: brename
+kind: app
+display: brename
+description: A practical cross-platform command-line tool for safely batch renaming files/directories via regular expression
+homepage: https://github.com/shenwei356/brename
+license: MIT
+version: 2.15.0
+channels:
+    stable: 2.15.0
+provides:
+    - brename
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/shenwei356/brename/releases/download/v2.15.0/brename_windows_amd64.exe.tar.gz
+      sha256: 6fc5dd10bf9f1f67072e4b0dd577ff56a643c95f45692a70d1f638bcd09f7e6e
+      bin:
+        - brename.exe
+      strip: 1
+test: brename --version

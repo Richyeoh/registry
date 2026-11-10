@@ -1,0 +1,22 @@
+api: v1
+name: granted
+kind: app
+display: granted
+description: Granted is a command line interface (CLI) application which simplifies access to cloud roles and allows multiple cloud accounts to be opened in your web browser simultaneously.
+homepage: https://granted.dev
+license: MIT
+version: 0.40.0
+channels:
+    stable: 0.40.0
+provides:
+    - granted
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fwdcloudsec/granted/releases/download/v0.40.0/granted_0.40.0_windows_x86_64.zip
+      sha256: bc156d2923ac83f15f708e89324da043a74e45d7768882ba12acc14c7209d822
+      bin:
+        - assume.ps1.exe
+        - granted.exe
+      strip: 1
+test: assume.ps1 --version

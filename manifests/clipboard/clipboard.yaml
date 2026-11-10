@@ -1,0 +1,21 @@
+api: v1
+name: clipboard
+kind: app
+display: clipboard
+description: Cut, copy, and paste anything, anywhere in the terminal
+homepage: https://getclipboard.app
+license: GPL-3.0-or-later
+version: 0.10.0
+channels:
+    stable: 0.10.0
+provides:
+    - clipboard
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Slackadays/Clipboard/releases/download/0.10.0/clipboard-windows-amd64.zip
+      sha256: ec40414e692b4ee69a98f7ee89d5ce5ca4bbbf44211823726531da82815fa2ab
+      bin:
+        - cb.exe
+      strip: 1
+test: cb --version

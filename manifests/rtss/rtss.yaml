@@ -1,0 +1,21 @@
+api: v1
+name: rtss
+kind: app
+display: rtss
+description: Framerate monitoring, On-Screen Display and high-performance video capture service provider for other graphics card utilities.
+homepage: https://www.guru3d.com/page/rivatuner-rtss-homepage/
+license: Freeware
+version: 7.3.7
+channels:
+    stable: 7.3.7
+provides:
+    - rtss
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/%5BGuru3D%5D-RTSSSetup737Build28314.zip
+      sha256: 9b084a8cb3e53ec1a673894d0b66e22b16c9fd8785636b020b2d422f3f2a820e
+      bin:
+        - RTSS.exe
+      strip: 1
+test: RTSS --version

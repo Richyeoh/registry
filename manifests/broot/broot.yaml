@@ -1,0 +1,31 @@
+api: v1
+name: broot
+kind: app
+display: broot
+description: A new way to see and navigate directory trees
+homepage: https://dystroy.org/broot/
+license: MIT
+keywords:
+    - arch
+    - pacman
+    - extra
+version: 1.62.0
+channels:
+    stable: 1.62.0
+provides:
+    - broot
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Canop/broot/releases/download/v1.62.0/broot_1.62.0.zip
+      sha256: 13630ae5d3b011ddc81fca05cb80dbee6189dad3ba393dd477f5f687c7b5106d
+      bin:
+        - broot.exe
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://archlinux.org/packages/extra/x86_64/broot/download/
+      sha256: 67be70e1b699ca675a8b8ee738daec6574bc2b108df6916a9413665b7543a107
+      bin:
+        - broot
+test: broot --version

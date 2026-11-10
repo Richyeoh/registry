@@ -1,0 +1,21 @@
+api: v1
+name: youtrack
+kind: app
+display: youtrack
+description: Web-based issue tracking and agile project management tool by JetBrains.
+homepage: https://jetbrains.com/youtrack/
+license: Unknown
+version: 2025.1.82518
+channels:
+    stable: 2025.1.82518
+provides:
+    - youtrack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/charisma/youtrack-2025.1.82518.zip
+      sha256: 26639a4cfa42c23228f60ca332c6366b05864fcf649cae0cc31e05b231745f74
+      bin:
+        - youtrack.ps1.exe
+      strip: 1
+test: youtrack.ps1 --version

@@ -1,0 +1,21 @@
+api: v1
+name: madamiru
+kind: app
+display: madamiru
+description: A cross-platform media player that can automatically shuffle multiple videos, images, and songs at once in a grid layout.
+homepage: https://github.com/mtkennerly/madamiru
+license: MIT
+version: 0.5.0
+channels:
+    stable: 0.5.0
+provides:
+    - madamiru
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mtkennerly/madamiru/releases/download/v0.5.0/madamiru-v0.5.0-win64.zip
+      sha256: 873962f372faa82b0ed68b1304fb5415ed694b46caf3b82eadcc3bde005f01d0
+      bin:
+        - madamiru.exe
+      strip: 1
+test: madamiru --version

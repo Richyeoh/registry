@@ -1,0 +1,48 @@
+api: v1
+name: apkeep
+kind: app
+display: apkeep
+description: Command-line tool for downloading APK files from various sources
+homepage: https://github.com/EFForg/apkeep
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - apkeep
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/EFForg/apkeep/releases/download/1.1.0/apkeep-x86_64-pc-windows-msvc.exe#/apkeep.exe
+      sha256: fb61e52fa48c321bbbb6d899dd06abf1705e3dbd74f07813bd2784279766ff6f
+      bin:
+        - apkeep.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apkeep/blobs/sha256:301d1aebc359ffb42f003690fe42eb7e93406c8a0d922df177bee496da40d4ef
+      sha256: 301d1aebc359ffb42f003690fe42eb7e93406c8a0d922df177bee496da40d4ef
+      bin:
+        - apkeep
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apkeep/blobs/sha256:a83b06e6c76217d2fb782910123235986a3cf89f5fe625f659f99b41b9f36a55
+      sha256: a83b06e6c76217d2fb782910123235986a3cf89f5fe625f659f99b41b9f36a55
+      bin:
+        - apkeep
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apkeep/blobs/sha256:37938e8da3d68a42277fc77f07251570a9121a87dd998b6f897c3107de425445
+      sha256: 37938e8da3d68a42277fc77f07251570a9121a87dd998b6f897c3107de425445
+      bin:
+        - apkeep
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall apkeep
+test: apkeep --version

@@ -1,0 +1,21 @@
+api: v1
+name: keepass-plugin-yafd
+kind: app
+display: keepass-plugin-yafd
+description: Yet Another Favicon Downloader (YAFD for short) is a plugin for KeePass 2.x that allows you to quickly download favicons for your password entries.
+homepage: https://github.com/navossoc/KeePass-Yet-Another-Favicon-Downloader
+license: MIT
+version: 1.2.5.0
+channels:
+    stable: 1.2.5.0
+provides:
+    - keepass-plugin-yafd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/navossoc/KeePass-Yet-Another-Favicon-Downloader/releases/download/v1.2.5.0/YetAnotherFaviconDownloader.plgx
+      sha256: 79a0fac0569aa2ec3d40e5678d8e6c6f17a5b98b481f9c8545216599921f55ee
+      bin:
+        - keepass-plugin-yafd.exe
+      strip: 1
+test: keepass-plugin-yafd --version

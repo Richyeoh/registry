@@ -1,0 +1,21 @@
+api: v1
+name: static-web-server
+kind: app
+display: static-web-server
+description: A cross-platform, high-performance and asynchronous web server for static files-serving
+homepage: https://static-web-server.net/
+license: MIT|Apache-2.0
+version: 2.44.1
+channels:
+    stable: 2.44.1
+provides:
+    - static-web-server
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/static-web-server/static-web-server/releases/download/v2.44.1/static-web-server-v2.44.1-x86_64-pc-windows-msvc.zip
+      sha256: 0ac7ecb75baa1b367b5d9acac36535906d37383a99be1fb64dce8d2f07a2ab8c
+      bin:
+        - static-web-server.exe
+      strip: 1
+test: static-web-server --version

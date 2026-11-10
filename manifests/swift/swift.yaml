@@ -1,0 +1,24 @@
+api: v1
+name: swift
+kind: app
+display: swift
+description: A general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
+homepage: https://www.swift.org/
+license: Apache-2.0
+version: 6.4.2
+channels:
+    stable: 6.4.2
+provides:
+    - swift
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.swift.org/swift-6.4.2-release/windows10/swift-6.4.2-RELEASE/swift-6.4.2-RELEASE-windows10.exe
+      sha256: 8fe5d31ca1153dfe6be3a76de0b93347fd42a27599671e9f9ade23a3648e7184
+      bin:
+        - swift.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall swift
+test: swift --version

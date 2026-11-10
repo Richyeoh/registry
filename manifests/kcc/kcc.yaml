@@ -1,0 +1,25 @@
+api: v1
+name: kcc
+kind: app
+display: kcc
+description: Comic and manga converter for ebook readers.
+homepage: https://github.com/ciromattia/kcc
+license: ISC
+version: 12.1.5
+channels:
+    stable: 12.1.5
+provides:
+    - kcc
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ciromattia/kcc/releases/download/v12.1.5/KCC_12.1.5.exe#/KCC.exe
+      sha256: 2539ab5d0ff2fb6a5875031356b06812dbff891694a863b09f36e10f9993ab57
+      bin:
+        - kcc-c2e.exe
+        - kcc-c2p.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall kcc
+test: kcc-c2e --version

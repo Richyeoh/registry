@@ -1,0 +1,21 @@
+api: v1
+name: protobuf
+kind: app
+display: protobuf
+description: Protocol compiler used to compile .proto files.
+homepage: https://github.com/protocolbuffers/protobuf
+license: BSD-3-Clause
+version: "36.2"
+channels:
+    stable: "36.2"
+provides:
+    - protobuf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/protocolbuffers/protobuf/releases/download/v36.2/protoc-36.2-win64.zip
+      sha256: f0c128dc0d8492eceece83bb459a4c0e316764b929ffbf1aa416357fd644edd3
+      bin:
+        - bin\protoc.exe
+      strip: 1
+test: bin\protoc --version

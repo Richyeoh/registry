@@ -1,0 +1,21 @@
+api: v1
+name: ipscan
+kind: app
+display: ipscan
+description: Angry IP Scanner - fast and friendly network scanner.
+homepage: https://angryip.org
+license: Unknown
+version: 3.12.1
+channels:
+    stable: 3.12.1
+provides:
+    - ipscan
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/angryip/ipscan/releases/download/3.12.1/ipscan-3.12.1-setup.exe#/dl.7z
+      sha256: b4dadf7e008012b78ae2ed545eb7965776b0eb05f8b7a1c5158a4e2726b7d872
+      bin:
+        - ipscan.exe
+      strip: 1
+test: ipscan --version

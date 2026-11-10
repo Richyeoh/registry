@@ -1,0 +1,24 @@
+api: v1
+name: equilotl
+kind: app
+display: equilotl
+description: A GUI app for installing Equicord, a Discord client mod forked from Vencord
+homepage: https://equicord.org/
+license: GPL-3.0-only
+version: 2.3.1
+channels:
+    stable: 2.3.1
+provides:
+    - equilotl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Equicord/Equilotl/releases/download/v2.3.1/Equilotl.exe
+      sha256: da184da71a8d8686074c2ff2d3142934142d06a4ce9c5ecbdfe146d1d81047bc
+      bin:
+        - equilotl.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall equilotl
+test: equilotl --version

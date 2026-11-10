@@ -1,0 +1,21 @@
+api: v1
+name: iii-console
+kind: app
+display: iii-console
+description: Effortlessly compose, extend, and observe every service in real-time. (Console)
+homepage: https://iii.dev
+license: Apache-2.0
+version: 0.24.6
+channels:
+    stable: 0.24.6
+provides:
+    - iii-console
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/iii-hq/iii/releases/download/iii/v0.24.6/iii-console-x86_64-pc-windows-msvc.zip
+      sha256: c5679f4b1e749d2b0691c02c02cfb83e0bed397dd99fbfd2db0e52040143d189
+      bin:
+        - iii-console.exe
+      strip: 1
+test: iii-console --version

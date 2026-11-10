@@ -1,0 +1,21 @@
+api: v1
+name: win-portacle
+kind: app
+display: win-portacle
+description: A Multi-platform Portable CLE (Common Lisp Environment), made up of Emacs, SBCL, QuickLisp, Git and more
+homepage: https://portacle.github.io/
+license: GPL-3.0-or-later,GPL-2.0-or-later,GPL-3.0-only,GPL-2.0-only,Apache-2.0,MIT,Artistic-2.0,BSD-3-Clause,BSD-2-Clause-FreeBSD,Xerox,OFL-1.1,Public Domain
+version: "1.4"
+channels:
+    stable: "1.4"
+provides:
+    - win-portacle
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/portacle/portacle/releases/download/1.4/win-portacle.exe#/dl.7z
+      sha256: b35b844426fbed61da296e8df4b8856d17d279c9591aa7ccf7f888a1d5b6e1ed
+      bin:
+        - portacle.exe
+      strip: 1
+test: portacle --version

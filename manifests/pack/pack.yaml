@@ -1,0 +1,21 @@
+api: v1
+name: pack
+kind: app
+display: pack
+description: Buildpack CLI
+homepage: https://buildpacks.io
+license: Apache-2.0
+version: 0.40.10
+channels:
+    stable: 0.40.10
+provides:
+    - pack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/buildpacks/pack/releases/download/v0.40.10/pack-v0.40.10-windows.zip
+      sha256: d30e591cbcc45f11738da5032c7617c773a2a520476c15f1adf63f3f2d9f8d11
+      bin:
+        - pack.exe
+      strip: 1
+test: pack --version

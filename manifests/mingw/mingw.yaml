@@ -1,0 +1,21 @@
+api: v1
+name: mingw
+kind: app
+display: mingw
+description: Minimalistic GNU for Windows is a runtime environment for GCC, GDB, make and related binutils.
+homepage: https://www.mingw-w64.org
+license: ZPL-2.1
+version: 16.2.0-rt_v14-rev1
+channels:
+    stable: 16.2.0-rt_v14-rev1
+provides:
+    - mingw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/niXman/mingw-builds-binaries/releases/download/16.2.0-rt_v14-rev1/x86_64-16.2.0-release-posix-seh-ucrt-rt_v14-rev1.7z
+      sha256: 26788998d615856a915e1eeacb0854fce87bc608fa9a0c16f96bcbfdcf3415c0
+      bin:
+        - mingw.exe
+      strip: 1
+test: mingw --version

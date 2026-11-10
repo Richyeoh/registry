@@ -1,0 +1,21 @@
+api: v1
+name: w64devkit
+kind: app
+display: w64devkit
+description: Portable C and C++ Development Kit for x64 Windows
+homepage: https://github.com/skeeto/w64devkit
+license: Unlicense
+version: 2.11.0
+channels:
+    stable: 2.11.0
+provides:
+    - w64devkit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/skeeto/w64devkit/releases/download/v2.11.0/w64devkit-x64-2.11.0.7z.exe#/dl.7z
+      sha256: 54c2bb9962e8a30c8270e34c5efc3d5fee579f53087fa7d435b95fbba2af7b2b
+      bin:
+        - w64devkit.exe
+      strip: 1
+test: w64devkit --version

@@ -1,0 +1,22 @@
+api: v1
+name: xxcopy
+kind: app
+display: xxcopy
+description: A versatile file management tool for Microsoft Windows®.
+homepage: https://web.archive.org/web/20220619093459/http://www.xxcopy.com/
+license: Unknown
+version: 3.33.3
+channels:
+    stable: 3.33.3
+provides:
+    - xxcopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/xxcopy/xxfw3333.zip
+      sha256: d5fd9d2446a0d54b564c864310b481c9e160ee487f305af67f584eff5b6bd767
+      bin:
+        - xxcopysu.exe
+        - xxconsole.exe
+      strip: 1
+test: xxcopysu --version

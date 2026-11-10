@@ -1,0 +1,21 @@
+api: v1
+name: rssguard
+kind: app
+display: rssguard
+description: A simple, light and easy-to-use RSS/ATOM feed aggregator (WebEngine-based viewer variant).
+homepage: https://github.com/martinrotter/rssguard
+license: GPL-3.0-only
+version: 5.2.5
+channels:
+    stable: 5.2.5
+provides:
+    - rssguard
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/martinrotter/rssguard/releases/download/5.2.5/rssguard-5.2.5-web-qt6-win10.7z
+      sha256: d66e715282c8ba69c498d1c4ca8e6990271c531d3ee6fabef401b3238983d6e9
+      bin:
+        - rssguard.exe
+      strip: 1
+test: rssguard --version

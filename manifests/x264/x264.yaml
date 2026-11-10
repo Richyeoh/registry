@@ -1,0 +1,24 @@
+api: v1
+name: x264
+kind: app
+display: x264
+description: H.264/MPEG-4 AVC video encoder
+homepage: https://www.videolan.org/developers/x264.html
+license: GPL-2.0-or-later
+version: "3222"
+channels:
+    stable: "3222"
+provides:
+    - x264
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://artifacts.videolan.org/x264/release-win64/x264-r3222-b35605a.exe#/x264.exe
+      sha256: ca622e7a1ed7efd0953d8dbb9eb08672ca45d80ce962d63d637b79462a7de3ed
+      bin:
+        - x264.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall x264
+test: x264 --version

@@ -1,0 +1,21 @@
+api: v1
+name: kubeconform
+kind: app
+display: kubeconform
+description: A Kubernetes manifest validation tool. Incorporate it into your CI, or use it locally to validate your Kubernetes configuration!
+homepage: https://github.com/yannh/kubeconform
+license: Apache-2.0
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - kubeconform
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yannh/kubeconform/releases/download/v0.8.0/kubeconform-windows-amd64.zip
+      sha256: e3f56102bcf4f50b034a567e2482a1c5330799983ddd655952310211aef73d93
+      bin:
+        - kubeconform.exe
+      strip: 1
+test: kubeconform --version

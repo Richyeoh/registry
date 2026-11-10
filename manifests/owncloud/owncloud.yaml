@@ -1,0 +1,25 @@
+api: v1
+name: owncloud
+kind: app
+display: owncloud
+description: The ownCloud Desktop Client is a tool to synchronize files from ownCloud Server with your computer.
+homepage: https://owncloud.com/
+license: GPL-2.0
+version: 7.1.1.19543
+channels:
+    stable: 7.1.1.19543
+provides:
+    - owncloud
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.owncloud.com/desktop/ownCloud/stable/7.1.1.19543/win/ownCloud-7.1.1.19543.x64.msi
+      sha256: 91520fe07de44348f5df258863c3b1d57686c451ee40341cd02504768e2b235a
+      bin:
+        - owncloudcmd.exe
+        - owncloudcmd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall owncloud
+test: owncloudcmd --version

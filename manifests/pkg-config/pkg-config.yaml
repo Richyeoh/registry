@@ -1,0 +1,21 @@
+api: v1
+name: pkg-config
+kind: app
+display: pkg-config
+description: A helper tool used when compiling applications and libraries.
+homepage: https://www.freedesktop.org/wiki/Software/pkg-config/
+license: GPL-2.0-only
+version: 0.26-1
+channels:
+    stable: 0.26-1
+provides:
+    - pkg-config
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/pkg-config_0.26-1_win32.zip
+      sha256: e919821da1a61af45ac9d924914bb72d92ba9ead956c82b9d89128b1b90d37c3
+      bin:
+        - pkg-config.exe
+      strip: 1
+test: pkg-config --version

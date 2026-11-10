@@ -1,0 +1,24 @@
+api: v1
+name: fwup
+kind: app
+display: fwup
+description: Configurable embedded Linux firmware update creator and runner
+homepage: https://github.com/fwup-home/fwup
+license: Apache-2.0
+version: 1.16.0
+channels:
+    stable: 1.16.0
+provides:
+    - fwup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/fwup-home/fwup/releases/download/v1.16.0/fwup.exe
+      sha256: 8b639ae0e871727124de48beab9d8f847375b0c02b762c81f9e0e4bff489ce1f
+      bin:
+        - fwup.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall fwup
+test: fwup --version

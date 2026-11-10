@@ -1,0 +1,24 @@
+api: v1
+name: earthly
+kind: app
+display: earthly
+description: Super simple build framework with fast, repeatable builds and an instantly familiar syntax - like Dockerfile and Makefile had a baby.
+homepage: https://earthly.dev
+license: MIT
+version: 0.8.16
+channels:
+    stable: 0.8.16
+provides:
+    - earthly
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/earthly/earthly/releases/download/v0.8.16/earthly-windows-amd64.exe#/earthly.exe
+      sha256: 30672f3a3ce73893b30fe47e6e9b0aeed67bd596a156c10762ea7fce3db5d934
+      bin:
+        - earthly.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall earthly
+test: earthly --version

@@ -1,0 +1,21 @@
+api: v1
+name: logexpert
+kind: app
+display: logexpert
+description: Windows tail program and log file analyzer.
+homepage: https://github.com/LogExperts/LogExpert
+license: MIT
+version: 1.50.0
+channels:
+    stable: 1.50.0
+provides:
+    - logexpert
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/LogExperts/LogExpert/releases/download/v1.50.0/LogExpert.1.50.0.zip
+      sha256: b21ef5e61a53b250456536bab32f3ab833332c99bb99f73fa2647ccd825f8d01
+      bin:
+        - LogExpert.exe
+      strip: 1
+test: LogExpert --version

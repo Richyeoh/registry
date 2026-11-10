@@ -1,0 +1,24 @@
+api: v1
+name: connect
+kind: app
+display: connect
+description: Simple relaying command to make network connection via SOCKS and https proxy.
+homepage: https://web.archive.org/web/20080516100455/http://www.meadowy.org/~gotoh/projects/connect
+license: GPL-2.0-or-later
+version: "1.100"
+channels:
+    stable: "1.100"
+provides:
+    - connect
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/connect/connect-1.100.exe#/connect.exe
+      sha256: 1220ee6a028c7c7506a2c0c7dfe107b9c97025e1a5080cebb57144eb018d03a0
+      bin:
+        - connect.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall connect
+test: connect --version

@@ -1,0 +1,24 @@
+api: v1
+name: libxml2
+kind: app
+display: libxml2
+description: XML processor developed by The GNOME Project
+homepage: https://www.zlatkovic.com/libxml.en.html
+license: MIT
+version: 2.9.3
+channels:
+    stable: 2.9.3
+provides:
+    - libxml2
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.zlatkovic.com/pub/libxml/64bit/xmlsec1-1.2.20-win32-x86_64.7z
+      sha256: 0721e2284508d9b2d35bfd521b82499fb89a9594d54e1a9e100bed2db8d39fa6
+      bin:
+        - bin\xmlcatalog.exe
+        - bin\xmllint.exe
+        - bin\xmlsec1.exe
+        - bin\xsltproc.exe
+      strip: 1
+test: bin\xmlcatalog --version

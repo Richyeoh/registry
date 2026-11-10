@@ -1,0 +1,36 @@
+api: v1
+name: dynamorio
+kind: app
+display: dynamorio
+description: DynamoRIO is a runtime code manipulation system that supports code transformations on any part of a program, while it executes.
+homepage: https://dynamorio.org
+license: BSD-3-Clause-Clear
+version: 11.91.20763
+channels:
+    stable: 11.91.20763
+provides:
+    - dynamorio
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/DynamoRIO/dynamorio/releases/download/cronbuild-11.91.20763/DynamoRIO-Windows-11.91.20763.zip
+      sha256: ea3dad4ae6e39228fe87b5d4d7bc3a53fafdb6161ee5ba6a2e98fb64f8a7e0d4
+      bin:
+        - bin64\closewnd.exe
+        - bin64\create_process.exe
+        - bin64\drconfig.exe
+        - bin64\DRcontrol.exe
+        - bin64\drdisas.exe
+        - bin64\drinject.exe
+        - bin64\DRkill.exe
+        - bin64\DRload.exe
+        - bin64\drrun.exe
+        - bin64\DRstats.exe
+        - bin64\DRview.exe
+        - bin64\dummy.exe
+        - bin32\ldmp.exe
+        - bin64\svccntrl.exe
+        - bin64\winstats.exe
+        - bin64\balloon.exe
+      strip: 1
+test: bin64\closewnd --version

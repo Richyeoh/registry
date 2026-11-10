@@ -1,0 +1,21 @@
+api: v1
+name: opencv
+kind: app
+display: opencv
+description: Open Source Computer Vision Library
+homepage: https://opencv.org/
+license: Apache-2.0
+version: 5.1.0
+channels:
+    stable: 5.1.0
+provides:
+    - opencv
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/opencv/opencv/releases/download/5.1.0/opencv-5.1.0-windows.exe#/dl.7z
+      sha256: 7f3365154dcc3543eb75855e9dd1e144e94c7f666be16ed2e563faa5d93b0b7b
+      bin:
+        - opencv.exe
+      strip: 1
+test: opencv --version

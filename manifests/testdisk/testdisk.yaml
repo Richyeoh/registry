@@ -1,0 +1,25 @@
+api: v1
+name: testdisk
+kind: app
+display: testdisk
+description: TestDisk & PhotoRec. Data and digital picture recovery
+homepage: https://www.cgsecurity.org/wiki/TestDisk
+license: GPL-2.0-or-later
+version: "7.2"
+channels:
+    stable: "7.2"
+provides:
+    - testdisk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.cgsecurity.org/testdisk-7.2.win.zip
+      sha256: 0718a4529611e5f8b6d5fcb873279d23a0b212b18bcf72291f3b47351bfc7126
+      bin:
+        - photorec_win.exe
+        - photorec_win.exe
+        - qphotorec_win.exe
+        - testdisk_win.exe
+        - testdisk_win.exe
+      strip: 1
+test: photorec_win --version

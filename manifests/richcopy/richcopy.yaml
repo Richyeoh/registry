@@ -1,0 +1,21 @@
+api: v1
+name: richcopy
+kind: app
+display: richcopy
+description: High performance and optimized file copy
+homepage: https://docs.microsoft.com/en-us/previous-versions/technet-magazine/dd547088(v=msdn.10)
+license: Unknown
+version: 4.0.217.0
+channels:
+    stable: 4.0.217.0
+provides:
+    - richcopy
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/ScoopInstaller/Binary/master/richcopy/hoffmanutilityspotlight2009_04.exe#/dl.7z
+      sha256: e4c1b4ff3e92cb502f8f05cd233425208dfbf186aadb06b8ea2ff59bc08b0a24
+      bin:
+        - richcopy.exe
+      strip: 1
+test: richcopy --version

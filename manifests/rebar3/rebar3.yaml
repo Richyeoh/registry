@@ -1,0 +1,21 @@
+api: v1
+name: rebar3
+kind: app
+display: rebar3
+description: An Erlang tool that makes it easy to create, develop, and release Erlang libraries, applications, and systems in a repeatable manner.
+homepage: https://rebar3.org/
+license: Apache-2.0
+version: 3.28.0
+channels:
+    stable: 3.28.0
+provides:
+    - rebar3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/erlang/rebar3/releases/download/3.28.0/rebar3
+      sha256: 5a28b1cca082d3b023ec0f5df9d9f9d52557036c6f2a21c1ffa11b93a984dd42
+      bin:
+        - rebar3.cmd.exe
+      strip: 1
+test: rebar3.cmd --version

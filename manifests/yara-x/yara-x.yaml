@@ -1,0 +1,21 @@
+api: v1
+name: yara-x
+kind: app
+display: yara-x
+description: A malware samples pattern matching tool, re-incarnation of YARA.
+homepage: https://virustotal.github.io/yara-x/
+license: Unknown
+version: 1.23.0
+channels:
+    stable: 1.23.0
+provides:
+    - yara-x
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/VirusTotal/yara-x/releases/download/v1.23.0/yara-x-v1.23.0-x86_64-pc-windows-msvc.zip
+      sha256: b72fd2001c0902981afe9b86ffb152412d904db94e2da9fa626f622b8c5b6a79
+      bin:
+        - yr.exe
+      strip: 1
+test: yr --version

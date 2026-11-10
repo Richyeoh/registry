@@ -1,0 +1,21 @@
+api: v1
+name: file
+kind: app
+display: file
+description: Determine file type.
+homepage: https://www.darwinsys.com/file
+license: MIT
+version: "5.45"
+channels:
+    stable: "5.45"
+provides:
+    - file
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rkitover/file-windows/releases/download/v5.45/file_5.45-x86_64.7z
+      sha256: 00f4f15e393382de741e934f34acbcdb10936a9a850aaa1e06ac75401d7b5340
+      bin:
+        - file.exe
+      strip: 1
+test: file --version

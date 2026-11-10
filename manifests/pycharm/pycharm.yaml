@@ -1,0 +1,21 @@
+api: v1
+name: pycharm
+kind: app
+display: pycharm
+description: Cross-Platform IDE for Python by JetBrains.
+homepage: https://www.jetbrains.com/pycharm/
+license: Unknown
+version: 2026.3-263.7307.206
+channels:
+    stable: 2026.3-263.7307.206
+provides:
+    - pycharm
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.jetbrains.com/python/pycharm-2026.3.win.zip
+      sha256: f2611657f0703fc2748081afab7f98871003b6d60dad23fcc81e3ca1eef99e15
+      bin:
+        - IDE\bin\pycharm64.exe
+      strip: 1
+test: IDE\bin\pycharm64 --version

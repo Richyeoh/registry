@@ -1,0 +1,21 @@
+api: v1
+name: alpinewsl
+kind: app
+display: alpinewsl
+description: Install AlpineWSL as a WSL Instance
+homepage: https://github.com/yuk7/AlpineWSL
+license: MIT
+version: 3.23.3-0
+channels:
+    stable: 3.23.3-0
+provides:
+    - alpinewsl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/yuk7/AlpineWSL/releases/download/3.23.3-0/Alpine.zip
+      sha256: d9f8683602c8698955d1bf51c30d50be52b4f979e4cb63f6188adc28e7cf900f
+      bin:
+        - Alpine.exe
+      strip: 1
+test: Alpine --version

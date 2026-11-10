@@ -1,0 +1,21 @@
+api: v1
+name: infoqube
+kind: app
+display: infoqube
+description: information management system
+homepage: http://www.infoqube.biz/
+license: Unknown
+version: "128.15"
+channels:
+    stable: "128.15"
+provides:
+    - infoqube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://infoqubeim.com/downloadarea/InfoQubeV128.15Portable.zip
+      sha256: b82670854cc2d53235faedcdfb33201f83089d5b0eb76bd757aa91c3740e42f4
+      bin:
+        - infoqube.exe
+      strip: 1
+test: infoqube --version

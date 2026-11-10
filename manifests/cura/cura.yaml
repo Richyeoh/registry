@@ -1,0 +1,21 @@
+api: v1
+name: cura
+kind: app
+display: cura
+description: Model editing tools for 3D printing
+homepage: https://ultimaker.com/software/ultimaker-cura
+license: LGPL-3.0-only
+version: 5.14.0
+channels:
+    stable: 5.14.0
+provides:
+    - cura
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Ultimaker/Cura/releases/download/5.14.0/Ultimaker-Cura-5.14.0-win64-X64.exe#/dl.7z
+      sha256: d7dc8f59bb3d428d057d19ba0700eceabce1e0f3a78736572a47d06381db7753
+      bin:
+        - CuraEngine.exe
+      strip: 1
+test: CuraEngine --version

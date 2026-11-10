@@ -1,0 +1,24 @@
+api: v1
+name: qtifw
+kind: app
+display: qtifw
+description: A set of tools and utilities to create installers.
+homepage: https://doc.qt.io/qtinstallerframework/ifw-overview.html
+license: Unknown
+version: 4.8.1
+channels:
+    stable: 4.8.1
+provides:
+    - qtifw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.qt.io/official_releases/qt-installer-framework/4.8.1/QtInstallerFramework-windows-x64-4.8.1.exe#/dl.7z
+      sha256: b0a7c6816dfaff7d571c9e5350fc08952f12022be87a28f6d8d36a78428c6210
+      bin:
+        - bin\archivegen.exe
+        - bin\binarycreator.exe
+        - bin\devtool.exe
+        - bin\repogen.exe
+      strip: 1
+test: bin\archivegen --version

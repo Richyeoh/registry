@@ -1,0 +1,21 @@
+api: v1
+name: icecast
+kind: app
+display: icecast
+description: A streaming media (audio/video) server which supports Ogg (Vorbis and Theora), Opus, WebM and MP3 streams.
+homepage: https://icecast.org/
+license: GPL-2.0-only
+version: 2.5.0
+channels:
+    stable: 2.5.0
+provides:
+    - icecast
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://ftp.osuosl.org/pub/xiph/releases/icecast/icecast_win32_2.5.0.exe#/dl.7z
+      sha256: 087cba22a168bebda46b909b0f2b9e3a78b5cbe4eddb7f5d2f37af6025e4f39b
+      bin:
+        - icecast-scoop-start.bat.exe
+      strip: 1
+test: icecast-scoop-start.bat --version

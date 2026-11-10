@@ -1,0 +1,24 @@
+api: v1
+name: openresty
+kind: app
+display: openresty
+description: Dynamic web platform based on NGINX and LuaJIT.
+homepage: https://openresty.org
+license: BSD-2-Clause
+version: 1.29.2.1
+channels:
+    stable: 1.29.2.1
+provides:
+    - openresty
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://openresty.org/download/openresty-1.29.2.1-win64.zip
+      sha256: 44586213135d21aa2c48eec533b4c207bdfecda53bd9b6d5563f1aac544aca4b
+      bin:
+        - nginx.exe
+        - resty.bat.exe
+        - restydoc.bat.exe
+        - restydoc-index.bat.exe
+      strip: 1
+test: nginx --version

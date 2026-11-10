@@ -1,0 +1,24 @@
+api: v1
+name: minikube
+kind: app
+display: minikube
+description: Runs a single-node Kubernetes cluster inside a Virtual Machine to try out Kubernetes.
+homepage: https://minikube.sigs.k8s.io/docs/
+license: Apache-2.0
+version: 1.39.0
+channels:
+    stable: 1.39.0
+provides:
+    - minikube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/minikube/releases/v1.39.0/minikube-windows-amd64.exe#/minikube.exe
+      sha256: 776386465ded2cf610ae397fe302de32c44d12134b5ce7ce98ab05bd7713b360
+      bin:
+        - minikube.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall minikube
+test: minikube --version

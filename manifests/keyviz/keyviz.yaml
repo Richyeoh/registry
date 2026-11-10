@@ -1,0 +1,24 @@
+api: v1
+name: keyviz
+kind: app
+display: keyviz
+description: A free and open-source tool to visualize your keystrokes in real-time.
+homepage: https://keyviz.org
+license: GPL-3.0-only
+version: 2.1.1
+channels:
+    stable: 2.1.1
+provides:
+    - keyviz
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/mulaRahul/keyviz/releases/download/v2.1.1/keyviz_2.1.1_windows.msi
+      sha256: b58263eb3be44cbba6c5f7518a63bcf7ae31396493dfc1ff143677e7ab710b3a
+      bin:
+        - keyviz.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall keyviz
+test: keyviz --version

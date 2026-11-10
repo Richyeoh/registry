@@ -1,0 +1,46 @@
+api: v1
+name: apache-brooklyn-cli
+kind: app
+display: apache-brooklyn-cli
+description: Apache Brooklyn command-line interface
+homepage: https://brooklyn.apache.org
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - apache-brooklyn-cli
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-brooklyn-cli/blobs/sha256:93b0fa4d3664559fd801cd65d4834352cffb39b5328ae8ee8b983aa379926add
+      sha256: 93b0fa4d3664559fd801cd65d4834352cffb39b5328ae8ee8b983aa379926add
+      bin:
+        - apache-brooklyn-cli
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apache-brooklyn-cli/blobs/sha256:2557bfe77cb966210a875c23e034f9f18b8d5cb5bfe3064cf22d2d1974f8770f
+      sha256: 2557bfe77cb966210a875c23e034f9f18b8d5cb5bfe3064cf22d2d1974f8770f
+      bin:
+        - apache-brooklyn-cli
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/apache-brooklyn-cli/blobs/sha256:a7c85e245c2a3ba2ed68c1e2a64d9b6bbb7e1b0dbd5f1a4f3d941d0e0f19a25e
+      sha256: a7c85e245c2a3ba2ed68c1e2a64d9b6bbb7e1b0dbd5f1a4f3d941d0e0f19a25e
+      bin:
+        - apache-brooklyn-cli
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/apache-brooklyn-cli/blobs/sha256:2ad44e932f78810e55add04db3a881b3ed6f0f90b9869ec404f37c17e690331a
+      sha256: 2ad44e932f78810e55add04db3a881b3ed6f0f90b9869ec404f37c17e690331a
+      bin:
+        - apache-brooklyn-cli
+      strip: 1
+test: apache-brooklyn-cli --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,21 @@
+api: v1
+name: buttercup
+kind: app
+display: buttercup
+description: Cross-Platform passwords & secrets vault
+homepage: https://buttercup.pw/
+license: GPL-3.0-or-later
+version: 2.28.1
+channels:
+    stable: 2.28.1
+provides:
+    - buttercup
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/buttercup/buttercup-desktop/releases/download/v2.28.1/Buttercup-win-x64-2.28.1.7z
+      sha256: 00725c3fe000691bd69e2f675ba8312428b6751ff7a4a43224c6468f818e375a
+      bin:
+        - buttercup.exe
+      strip: 1
+test: buttercup --version

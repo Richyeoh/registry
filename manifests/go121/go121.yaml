@@ -1,0 +1,22 @@
+api: v1
+name: go121
+kind: app
+display: go121
+description: An open source programming language that makes it easy to build simple, reliable, and efficient software.
+homepage: https://golang.org
+license: BSD-3-Clause
+version: 1.21.13
+channels:
+    stable: 1.21.13
+provides:
+    - go121
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://dl.google.com/go/go1.21.13.windows-amd64.zip
+      sha256: 924655193634bfcdf7ec7a34589e0d73458741998a59e4155a929ce85f81af2d
+      bin:
+        - bin\go.exe
+        - bin\gofmt.exe
+      strip: 1
+test: bin\go --version

@@ -1,0 +1,45 @@
+api: v1
+name: act
+kind: app
+display: act
+description: Local Github actions runner.
+homepage: https://nektosact.com
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.2.97
+channels:
+    stable: 0.2.97
+provides:
+    - act
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/nektos/act/releases/download/v0.2.97/act_Windows_x86_64.zip
+      sha256: 07cb9bbecc5604452dc50e2a485e17e02e38c3735c47ce8adc8ac550ab968a8a
+      bin:
+        - act.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/act/blobs/sha256:7c2f8710328c6fa2dd9b9fbf593f620b7115a9a4d1303659c1a354c87cc5625e
+      sha256: 7c2f8710328c6fa2dd9b9fbf593f620b7115a9a4d1303659c1a354c87cc5625e
+      bin:
+        - act
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/act/blobs/sha256:01a6f9f0e640d390c9be9c54229c9414d98c9989996dbaf03352dd10e08b2f9a
+      sha256: 01a6f9f0e640d390c9be9c54229c9414d98c9989996dbaf03352dd10e08b2f9a
+      bin:
+        - act
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/act/blobs/sha256:7729a87eb93a429df486a105e5e5c83b9862722d8138713af095176f94daab76
+      sha256: 7729a87eb93a429df486a105e5e5c83b9862722d8138713af095176f94daab76
+      bin:
+        - act
+      strip: 1
+test: act --version

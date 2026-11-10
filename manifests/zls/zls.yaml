@@ -1,0 +1,21 @@
+api: v1
+name: zls
+kind: app
+display: zls
+description: Zig language LSP server
+homepage: https://zigtools.org/zls/install/
+license: MIT
+version: 0.17.0
+channels:
+    stable: 0.17.0
+provides:
+    - zls
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zigtools/zls/releases/download/0.17.0/zls-x86_64-windows.zip
+      sha256: b0e557b13032322f530a818ea4eb899a51a2e738808397a8cf3868fd56b73972
+      bin:
+        - zls.exe
+      strip: 1
+test: zls --version

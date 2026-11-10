@@ -1,0 +1,21 @@
+api: v1
+name: bandcamp-downloader
+kind: app
+display: bandcamp-downloader
+description: A Windows app used to download albums from Bandcamp.
+homepage: https://github.com/Otiel/BandcampDownloader
+license: MIT
+version: 1.5.2
+channels:
+    stable: 1.5.2
+provides:
+    - bandcamp-downloader
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Otiel/BandcampDownloader/releases/download/v1.5.2/BandcampDownloader.zip
+      sha256: c7a1711fc1041d07e5b8bd8367a23bf23220e7a10d6439d4233817794c3682ac
+      bin:
+        - bandcamp-downloader.exe
+      strip: 1
+test: bandcamp-downloader --version

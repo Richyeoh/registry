@@ -1,0 +1,21 @@
+api: v1
+name: ripcord
+kind: app
+display: ripcord
+description: Desktop chat client for group-centric services like Slack and Discord.
+homepage: https://cancel.fm/ripcord/
+license: Shareware
+version: 0.4.29
+channels:
+    stable: 0.4.29
+provides:
+    - ripcord
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cancel.fm/dl/Ripcord_Win_0.4.29.zip
+      sha256: c7a393ac669d02c16828706521833df06b690554368049545e47a1420fa8f04f
+      bin:
+        - ripcord.exe
+      strip: 1
+test: ripcord --version

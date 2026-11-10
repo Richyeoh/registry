@@ -1,0 +1,21 @@
+api: v1
+name: spicetify-themes
+kind: app
+display: spicetify-themes
+description: Community-created themes for Spicetify.
+homepage: https://github.com/spicetify/spicetify-themes
+license: MIT
+version: 2026-11-09T01.48.08
+channels:
+    stable: 2026-11-09T01.48.08
+provides:
+    - spicetify-themes
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/spicetify/spicetify-themes/archive/master.zip
+      sha256: 732339d81b5028404e545551a6f29d21f97755dbe3c12cf6e6c1655a21f6eede
+      bin:
+        - spicetify-themes.exe
+      strip: 1
+test: spicetify-themes --version

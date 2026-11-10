@@ -1,0 +1,21 @@
+api: v1
+name: winchecksec
+kind: app
+display: winchecksec
+description: A static detector of security mitigations in executables
+homepage: https://trailofbits.github.io/winchecksec/
+license: Apache-2.0
+version: 3.1.0
+channels:
+    stable: 3.1.0
+provides:
+    - winchecksec
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/trailofbits/winchecksec/releases/download/v3.1.0/windows.x64.Release.zip
+      sha256: 487c14d941f94d8c1098f0da85144f1ecb40fc3e7f39dbaad16c8eab909fff25
+      bin:
+        - winchecksec.exe
+      strip: 1
+test: winchecksec --version

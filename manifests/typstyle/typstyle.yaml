@@ -1,0 +1,24 @@
+api: v1
+name: typstyle
+kind: app
+display: typstyle
+description: Beautiful and reliable typst code formatter.
+homepage: https://typstyle-rs.github.io/typstyle/
+license: Apache-2.0
+version: 0.15.2
+channels:
+    stable: 0.15.2
+provides:
+    - typstyle
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/typstyle-rs/typstyle/releases/download/v0.15.2/typstyle-x86_64-pc-windows-msvc.exe#/typstyle.exe
+      sha256: ec620da653e620968020768443bbe51acc96c65aa3fc15cd9f3a7610f2fbf782
+      bin:
+        - typstyle.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall typstyle
+test: typstyle --version

@@ -1,0 +1,30 @@
+api: v1
+name: tortoisehg
+kind: app
+display: tortoisehg
+description: TortoiseHg. A set of graphical tools and a shell extension for the Mercurial distributed revision control system.
+homepage: https://tortoisehg.bitbucket.io/
+license: Unknown
+version: 7.0.1
+channels:
+    stable: 7.0.1
+provides:
+    - tortoisehg
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.mercurial-scm.org/release/tortoisehg/windows/tortoisehg-7.0.1-x64.msi
+      sha256: 39697eab1e17684737bdd36d840eabf71a63aa2d75c2b3edbbfcdf536731d4f9
+      bin:
+        - thg.exe
+        - thgw.exe
+        - hg.exe
+        - Pageant.exe
+        - TortoiseHgOverlayServer.exe
+        - lib\kdiff3.exe
+        - lib\TortoisePlink.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tortoisehg
+test: thg --version

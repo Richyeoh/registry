@@ -1,0 +1,45 @@
+api: v1
+name: algol68g
+kind: app
+display: algol68g
+description: Algol 68 compiler-interpreter
+homepage: https://algol68genie.nl/en/algol-68-genie/
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 3.14.0
+channels:
+    stable: 3.14.0
+provides:
+    - algol68g
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://algol68genie.nl/algol68g-3.14.0.win64.zip
+      sha256: dd3e283d963cac05f9920ff4ed78ad119786ae0d6cd26e587c037b3982bb2852
+      bin:
+        - a68g.exe
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/algol68g/blobs/sha256:e8c4f631637031c10947d6e9ad2f4f78415a7ec3f0c83b7e2667c6e8483cc3a7
+      sha256: e8c4f631637031c10947d6e9ad2f4f78415a7ec3f0c83b7e2667c6e8483cc3a7
+      bin:
+        - algol68g
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/algol68g/blobs/sha256:d419d2d2ba6147ff7c0096d0be10f3ccce85a4b5847ec6ac291ec2718ed707bf
+      sha256: d419d2d2ba6147ff7c0096d0be10f3ccce85a4b5847ec6ac291ec2718ed707bf
+      bin:
+        - algol68g
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/algol68g/blobs/sha256:125ec12f604b8026bc231ed72247b2ca31a2db989a194d6a86bc189ef09cd44f
+      sha256: 125ec12f604b8026bc231ed72247b2ca31a2db989a194d6a86bc189ef09cd44f
+      bin:
+        - algol68g
+      strip: 1
+test: a68g --version

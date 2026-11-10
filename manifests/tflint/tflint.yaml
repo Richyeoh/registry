@@ -1,0 +1,21 @@
+api: v1
+name: tflint
+kind: app
+display: tflint
+description: A Terraform linter focused on possible errors, best practices, etc.
+homepage: https://github.com/terraform-linters/tflint
+license: MPL-2.0
+version: 0.66.0
+channels:
+    stable: 0.66.0
+provides:
+    - tflint
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/terraform-linters/tflint/releases/download/v0.66.0/tflint_windows_amd64.zip
+      sha256: e3acd1d89c735ce6e09108c9277f26076ebeb385c1f77a73c1cbf1826ed626a7
+      bin:
+        - tflint.exe
+      strip: 1
+test: tflint --version

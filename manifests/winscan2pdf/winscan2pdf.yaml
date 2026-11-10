@@ -1,0 +1,21 @@
+api: v1
+name: winscan2pdf
+kind: app
+display: winscan2pdf
+description: Documents to PDF scanner
+homepage: https://www.softwareok.com/?seite=Microsoft/WinScan2PDF
+license: Unknown
+version: "9.79"
+channels:
+    stable: "9.79"
+provides:
+    - winscan2pdf
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.softwareok.com/Download/WinScan2PDF_Portable.zip
+      sha256: fc90aadc403a7a496607d21a233b5bcad2e359e17c1f46e1914e0ca9c16ed6be
+      bin:
+        - WinScan2PDF_p.exe
+      strip: 1
+test: WinScan2PDF_p --version

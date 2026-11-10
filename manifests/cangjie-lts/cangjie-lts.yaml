@@ -1,0 +1,21 @@
+api: v1
+name: cangjie-lts
+kind: app
+display: cangjie-lts
+description: A general-purpose programming language designed for all-scenario application development. (Long Term Support)
+homepage: https://cangjie-lang.cn/en
+license: Apache-2.0
+version: 1.0.5
+channels:
+    stable: 1.0.5
+provides:
+    - cangjie-lts
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=cangjie-sdk-windows-x64-1.0.5.zip&objectKey=698acebfbd66ae22b62330af#/cangjie-sdk-windows-x64-1.0.5.zip
+      sha256: 08c6c1dd0de73396f63ac85085d635e79ce84fef98d330cb00869b4fc8f1cb2e
+      bin:
+        - cangjie-lts.exe
+      strip: 1
+test: cangjie-lts --version

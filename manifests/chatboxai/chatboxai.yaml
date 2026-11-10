@@ -1,0 +1,21 @@
+api: v1
+name: chatboxai
+kind: app
+display: chatboxai
+description: Powerful AI desktop client with support for ChatGPT, Claude and other LLMs.
+homepage: https://chatboxai.app/
+license: Unknown
+version: 1.24.3
+channels:
+    stable: 1.24.3
+provides:
+    - chatboxai
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.chatboxai.app/releases/Chatbox-1.24.3-Setup.exe#/dl.7z
+      sha256: 13ad2f01e549188a9aa6a1534716d009614db992ab4890c22a6cd7afb25ccdda
+      bin:
+        - chatboxai.exe
+      strip: 1
+test: chatboxai --version

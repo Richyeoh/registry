@@ -1,0 +1,21 @@
+api: v1
+name: lefthook
+kind: app
+display: lefthook
+description: Fast and powerful Git hooks manager for any type of projects
+homepage: https://lefthook.dev/
+license: MIT
+version: 2.2.2
+channels:
+    stable: 2.2.2
+provides:
+    - lefthook
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/evilmartians/lefthook/releases/download/v2.2.2/lefthook_2.2.2_Windows_x86_64.gz
+      sha256: 980579c96db6df0064f7d831dd409cb9eac1c993a13bc936574507e9e075be52
+      bin:
+        - lefthook.exe
+      strip: 1
+test: lefthook --version

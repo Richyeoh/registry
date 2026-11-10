@@ -1,0 +1,24 @@
+api: v1
+name: sniffnet
+kind: app
+display: sniffnet
+description: An application that allows you to comfortably monitor your network traffic.
+homepage: https://www.sniffnet.net
+license: Apache-2.0|MIT
+version: 1.5.1
+channels:
+    stable: 1.5.1
+provides:
+    - sniffnet
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GyulyVGC/sniffnet/releases/download/v1.5.1/Sniffnet_Windows_x64.msi
+      sha256: 3f4dacf273b0e5270d4055a6561c5b0e1e0747ef6530f984cc42389ebc401700
+      bin:
+        - sniffnet.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sniffnet
+test: sniffnet --version

@@ -1,0 +1,21 @@
+api: v1
+name: pdfcpu
+kind: app
+display: pdfcpu
+description: A PDF processor written in Go, supporting encryption.
+homepage: https://pdfcpu.io
+license: Apache-2.0
+version: 0.16.4
+channels:
+    stable: 0.16.4
+provides:
+    - pdfcpu
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pdfcpu/pdfcpu/releases/download/v0.16.4/pdfcpu_0.16.4_Windows_x86_64.zip
+      sha256: faf6c51d6f54d96a8c1ad5beee02143460b8ae97bd9630cbab1a253adaa43558
+      bin:
+        - pdfcpu.exe
+      strip: 1
+test: pdfcpu --version

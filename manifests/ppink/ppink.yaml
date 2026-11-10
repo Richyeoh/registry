@@ -1,0 +1,21 @@
+api: v1
+name: ppink
+kind: app
+display: ppink
+description: An easy to use on-screen annotation software (fork of gInk).
+homepage: https://github.com/pubpub-zz/ppInk
+license: Unknown
+version: 1.9.100
+channels:
+    stable: 1.9.100
+provides:
+    - ppink
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/pubpub-zz/ppInk/releases/download/v1.9.100/ppInk.1.9.100.zip
+      sha256: 3d7317bee4dd396b3b088bd116008b605938902512d1246a5dcb9df7a735b2ff
+      bin:
+        - ppInk.exe
+      strip: 1
+test: ppInk --version

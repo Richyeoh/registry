@@ -1,0 +1,21 @@
+api: v1
+name: leiningen
+kind: app
+display: leiningen
+description: Simplify Clojure project automation and configuration.
+homepage: https://leiningen.org/
+license: EPL-1.0
+version: 2.13.0
+channels:
+    stable: 2.13.0
+provides:
+    - leiningen
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://codeberg.org/leiningen/leiningen/raw/tag/2.13.0/bin/lein.bat
+      sha256: 3375c96dc2fb24c1ff0533e6949510cae02c169dabaf0d4b3b585363d22020fe
+      bin:
+        - lein.bat.exe
+      strip: 1
+test: lein.bat --version

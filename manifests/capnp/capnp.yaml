@@ -1,0 +1,23 @@
+api: v1
+name: capnp
+kind: app
+display: capnp
+description: Cap'n Proto is an insanely fast data interchange format and capability-based RPC system
+homepage: https://capnproto.org
+license: MIT
+version: 1.5.0
+channels:
+    stable: 1.5.0
+provides:
+    - capnp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://capnproto.org/capnproto-c++-win32-1.5.0.zip
+      sha256: 21501909dc051347563d4e83394eb848204f558e959501c8061dbeaaf0651988
+      bin:
+        - capnp.exe
+        - capnpc-c++.exe
+        - capnpc-capnp.exe
+      strip: 1
+test: capnp --version

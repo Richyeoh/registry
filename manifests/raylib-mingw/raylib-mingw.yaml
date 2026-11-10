@@ -1,0 +1,21 @@
+api: v1
+name: raylib-mingw
+kind: app
+display: raylib-mingw
+description: A simple and easy-to-use library to enjoy videogames programming (this version is for the MinGW compiler)
+homepage: https://www.raylib.com/
+license: Zlib
+version: "6.2"
+channels:
+    stable: "6.2"
+provides:
+    - raylib-mingw
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/raysan5/raylib/releases/download/6.2/raylib-6.2_win64_mingw-w64.zip
+      sha256: 48ba378d100fe7e13fc2c35d708764b855b815596f3b0a31746e37259283961f
+      bin:
+        - raylib-mingw.exe
+      strip: 1
+test: raylib-mingw --version

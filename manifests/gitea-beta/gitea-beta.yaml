@@ -1,0 +1,24 @@
+api: v1
+name: gitea-beta
+kind: app
+display: gitea-beta
+description: Git with a cup of tea, painless self-hosted git service. (beta channel)
+homepage: https://gitea.io/
+license: MIT
+version: 28.3.0
+channels:
+    stable: 28.3.0
+provides:
+    - gitea-beta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/go-gitea/gitea/releases/download/v28.3.0/gitea-28.3.0-windows-amd64.exe#/gitea.exe
+      sha256: 4003c068ef0a7d8145ef8c85b8aab052bf1bbf9226f2d0058572f013e096ee06
+      bin:
+        - gitea.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gitea-beta
+test: gitea --version

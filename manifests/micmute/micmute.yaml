@@ -1,0 +1,24 @@
+api: v1
+name: micmute
+kind: app
+display: micmute
+description: Microphone controller using keyboard/mouse shortcuts
+homepage: https://github.com/SaifAqqad/AHK_MicMute
+license: Unlicense
+version: 1.3.4
+channels:
+    stable: 1.3.4
+provides:
+    - micmute
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/SaifAqqad/AHK_MicMute/releases/download/1.3.4/MicMute.exe
+      sha256: b375fbbacab18d8da715e8db7b8c75a515753663149b9b24dd873aa663328f9e
+      bin:
+        - micmute.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall micmute
+test: micmute --version

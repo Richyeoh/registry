@@ -1,0 +1,21 @@
+api: v1
+name: symlinker
+kind: app
+display: symlinker
+description: GUI for creating symbolic links, hard links, and directory junctions on Windows.
+homepage: https://amd989.github.io/Symlinker/
+license: MIT
+version: 4.3.0
+channels:
+    stable: 4.3.0
+provides:
+    - symlinker
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/amd989/Symlinker/releases/download/v4.3.0/symlinker-4.3.0-portable.zip
+      sha256: 88e13156019f06159f6d6bd91bb08a854a0b280e21bc9bd39a071ffe95994688
+      bin:
+        - symlinker.exe
+      strip: 1
+test: symlinker --version

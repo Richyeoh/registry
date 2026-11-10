@@ -2,10 +2,13 @@ api: v1
 name: ripgrep
 kind: app
 display: ripgrep
-description: 超快 grep 替代
+description: Recursively searches directories for a regex pattern.
 homepage: https://github.com/BurntSushi/ripgrep
 license: MIT
 keywords:
+    - arch
+    - pacman
+    - extra
     - github
     - burntsushi
 version: 15.2.0
@@ -50,4 +53,3 @@ platforms:
         - rg
       strip: 1
 test: rg --version
-caveats: 由 GitHub BurntSushi/ripgrep latest 自动转制

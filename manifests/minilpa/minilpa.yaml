@@ -1,0 +1,21 @@
+api: v1
+name: minilpa
+kind: app
+display: minilpa
+description: An elegant modern LPA (Licensed Profile Assistant) UI designed for managing eSIM profiles.
+homepage: https://github.com/EsimMoe/MiniLPA
+license: AGPL-3.0-only
+version: 1.1.1
+channels:
+    stable: 1.1.1
+provides:
+    - minilpa
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/EsimMoe/MiniLPA/releases/download/v1.1.1/MiniLPA-Windows-x86_64.zip
+      sha256: 19139adaae3428a25d84d94ea8723c7dd65bb880efcff1119a00f5bfa2f7b00b
+      bin:
+        - minilpa.exe
+      strip: 1
+test: minilpa --version

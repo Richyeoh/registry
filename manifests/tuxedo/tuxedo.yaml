@@ -1,0 +1,21 @@
+api: v1
+name: tuxedo
+kind: app
+display: tuxedo
+description: A fast, keyboard-driven terminal UI for todo.txt.
+homepage: https://github.com/webstonehq/tuxedo
+license: MIT
+version: 2026.8.1
+channels:
+    stable: 2026.8.1
+provides:
+    - tuxedo
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/webstonehq/tuxedo/releases/download/v2026.8.1/tuxedo-v2026.8.1-x86_64-pc-windows-msvc.zip
+      sha256: 30026d4ce96617bb54b9767bde6859e8fa4d79495c945dfff769dbbe7cab99c9
+      bin:
+        - tuxedo.exe
+      strip: 1
+test: tuxedo --version

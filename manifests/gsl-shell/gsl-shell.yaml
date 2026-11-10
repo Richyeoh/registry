@@ -1,0 +1,21 @@
+api: v1
+name: gsl-shell
+kind: app
+display: gsl-shell
+description: GSL library shell based on LuaJIT2
+homepage: https://www.nongnu.org/gsl-shell/
+license: GPL-3.0-or-later
+version: 2.3.6
+channels:
+    stable: 2.3.6
+provides:
+    - gsl-shell
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/franko/gsl-shell/releases/download/v2.3.6/gsl-shell-windows-x86-64.zip
+      sha256: 0775bb294c3d56fa5147414b146d03d15081a2db5f2bebd44eda3c0cabd5bde2
+      bin:
+        - gsl-shell.exe
+      strip: 1
+test: gsl-shell --version

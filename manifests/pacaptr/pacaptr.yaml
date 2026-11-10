@@ -1,0 +1,21 @@
+api: v1
+name: pacaptr
+kind: app
+display: pacaptr
+description: A wrapper for many package managers with pacman-style command syntax
+homepage: https://github.com/rami3l/pacaptr
+license: GPL-3.0-only
+version: 0.23.2
+channels:
+    stable: 0.23.2
+provides:
+    - pacaptr
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/rami3l/pacaptr/releases/download/v0.23.2/pacaptr-windows-amd64.zip
+      sha256: fc01bfb7b0c8a6de9f8f24fb61eb5b08de09c6c5ee5a5761e45b3a8ef28710b2
+      bin:
+        - pacaptr.exe
+      strip: 1
+test: pacaptr --version

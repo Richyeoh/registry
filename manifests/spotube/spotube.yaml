@@ -1,0 +1,24 @@
+api: v1
+name: spotube
+kind: app
+display: spotube
+description: A lightweight free Spotify client, which handles playback manually, streams music using Youtube & no Spotify premium account is needed.
+homepage: https://spotube.krtirtho.dev/
+license: BSD-4-Clause
+version: 6.0.0
+channels:
+    stable: 6.0.0
+provides:
+    - spotube
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/KRTirtho/spotube/releases/download/v6.0.0/Spotube-windows-x86_64-setup.exe
+      sha256: d7e073ead0707fcdfcc50074e88721b7df38dc10248eadafc346867e156c6e8d
+      bin:
+        - spotube.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall spotube
+test: spotube --version

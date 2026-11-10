@@ -1,0 +1,31 @@
+api: v1
+name: libwebp
+kind: app
+display: libwebp
+description: Encodes and decodes WebP image files.
+homepage: https://developers.google.com/speed/webp
+license: BSD-3-Clause
+version: 1.6.0
+channels:
+    stable: 1.6.0
+provides:
+    - libwebp
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0-windows-x64.zip
+      sha256: 48886f506b21f62e4661f0f4cbfca19800897c385128e8902542d29a950c93f1
+      bin:
+        - bin\anim_diff.exe
+        - bin\anim_dump.exe
+        - bin\cwebp.exe
+        - bin\dwebp.exe
+        - bin\get_disto.exe
+        - bin\gif2webp.exe
+        - bin\img2webp.exe
+        - bin\vwebp.exe
+        - bin\webp_quality.exe
+        - bin\webpinfo.exe
+        - bin\webpmux.exe
+      strip: 1
+test: bin\anim_diff --version

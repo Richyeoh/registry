@@ -1,0 +1,24 @@
+api: v1
+name: eva
+kind: app
+display: eva
+description: A calculator REPL, similar to bc(1)
+homepage: https://github.com/oppiliappan/eva
+license: MIT
+version: 0.3.1
+channels:
+    stable: 0.3.1
+provides:
+    - eva
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oppiliappan/eva/releases/download/v0.3.1/eva.exe
+      sha256: f320cd9b01fbb5098deaecb87cbdcbe109cb573cfbd6601798cc61f5d012fafb
+      bin:
+        - eva.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall eva
+test: eva --version

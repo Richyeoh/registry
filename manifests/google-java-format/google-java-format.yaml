@@ -1,0 +1,21 @@
+api: v1
+name: google-java-format
+kind: app
+display: google-java-format
+description: Reformats Java source code to comply with Google Java Style.
+homepage: https://github.com/google/google-java-format
+license: Apache-2.0
+version: 2.0.0
+channels:
+    stable: 2.0.0
+provides:
+    - google-java-format
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/google/google-java-format/releases/download/v2.0.0/google-java-format-2.0.0-all-deps.jar#/google-java-format.jar
+      sha256: c78feb48c549fa7114b7ea11db3b456808f7b371ffe84e6643a44dd2f9588639
+      bin:
+        - google-java-format.jar.exe
+      strip: 1
+test: google-java-format.jar --version

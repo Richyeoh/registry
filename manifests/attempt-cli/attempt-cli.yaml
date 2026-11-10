@@ -1,0 +1,46 @@
+api: v1
+name: attempt-cli
+kind: app
+display: attempt-cli
+description: CLI for retrying fallible commands
+homepage: https://github.com/MaxBondABE/attempt
+license: Unlicense
+keywords:
+    - brew
+    - homebrew
+version: 1.1.1
+channels:
+    stable: 1.1.1
+provides:
+    - attempt-cli
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/attempt-cli/blobs/sha256:33006a9c41e7804a56c6cba52cf4c05d665b1b0cd1c10546e408a4d898381bbd
+      sha256: 33006a9c41e7804a56c6cba52cf4c05d665b1b0cd1c10546e408a4d898381bbd
+      bin:
+        - attempt-cli
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/attempt-cli/blobs/sha256:543b5a378075c437c6de8e8cb46fa0ce429e37f99aaf0edf0f57bfa24205206a
+      sha256: 543b5a378075c437c6de8e8cb46fa0ce429e37f99aaf0edf0f57bfa24205206a
+      bin:
+        - attempt-cli
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/attempt-cli/blobs/sha256:3ab9bd07ecd55a0d594b9d94a4a037f5425a277dbd99572dba81eeedf51c4095
+      sha256: 3ab9bd07ecd55a0d594b9d94a4a037f5425a277dbd99572dba81eeedf51c4095
+      bin:
+        - attempt-cli
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/attempt-cli/blobs/sha256:0864b36766d2d2ea8917cc9abeb7e0f8eb421e0c40d4ff2ccf3de1048107dab5
+      sha256: 0864b36766d2d2ea8917cc9abeb7e0f8eb421e0c40d4ff2ccf3de1048107dab5
+      bin:
+        - attempt-cli
+      strip: 1
+test: attempt-cli --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

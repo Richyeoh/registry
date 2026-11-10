@@ -1,0 +1,21 @@
+api: v1
+name: pget
+kind: app
+display: pget
+description: A command-line downloader using parallel requests
+homepage: https://github.com/Code-Hex/pget
+license: MIT
+version: 0.2.1
+channels:
+    stable: 0.2.1
+provides:
+    - pget
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Code-Hex/pget/releases/download/v0.2.1/pget_.0.2.1_Windows_x86_64.zip
+      sha256: 574449f17888cdda03b9966aaef7b8da230a79387dbd7289e3d162872d6b4d85
+      bin:
+        - pget.exe
+      strip: 1
+test: pget --version

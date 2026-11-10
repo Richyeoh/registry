@@ -1,0 +1,21 @@
+api: v1
+name: gitas
+kind: app
+display: gitas
+description: A terminal UI to switch between multiple Git accounts and run git commands as any of them
+homepage: https://github.com/letmutex/gitas
+license: Apache-2.0
+version: 0.1.0
+channels:
+    stable: 0.1.0
+provides:
+    - gitas
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/letmutex/gitas/releases/download/v0.1.0/gitas-v0.1.0-windows-x64.zip
+      sha256: dd9e4a3b34b323234f4aeec2c6dc60494fb2344eab187e7747c74a308f427140
+      bin:
+        - gitas.exe
+      strip: 1
+test: gitas --version

@@ -1,0 +1,21 @@
+api: v1
+name: controlprinters
+kind: app
+display: controlprinters
+description: Classic 'Devices & Printers' control panel on Windows 11. To use, just run the 'controlprinters' command
+homepage: https://www.elevenforum.com/t/open-devices-and-printers-in-windows-11.11272/
+license: Proprietary
+version: "0.1"
+channels:
+    stable: "0.1"
+provides:
+    - controlprinters
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/MicrosoftDocs/win32/42328840c0fa8633847c909fb11176a98442f1c6/desktop-src/shell/executing-control-panel-items.md
+      sha256: dcc167f7a2ccf15317de2650aa5b7fb91ee2ca87a35bce198ac19bfd5cc43c94
+      bin:
+        - explorer.exe
+      strip: 1
+test: explorer --version

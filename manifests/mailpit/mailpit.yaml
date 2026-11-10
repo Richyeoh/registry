@@ -1,0 +1,21 @@
+api: v1
+name: mailpit
+kind: app
+display: mailpit
+description: An email and SMTP testing tool with API for developers
+homepage: https://mailpit.axllent.org
+license: MIT
+version: 1.33.1
+channels:
+    stable: 1.33.1
+provides:
+    - mailpit
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/axllent/mailpit/releases/download/v1.33.1/mailpit-windows-amd64.zip
+      sha256: 0bcf8f1e7c21005b30c206064ff2f37dac602ef66774e558379d326f5673d652
+      bin:
+        - mailpit.exe
+      strip: 1
+test: mailpit --version

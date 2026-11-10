@@ -1,0 +1,21 @@
+api: v1
+name: rsgain
+kind: app
+display: rsgain
+description: A simple, but powerful ReplayGain 2.0 tagging utility
+homepage: https://github.com/complexlogic/rsgain
+license: BSD-2-Clause
+version: "3.8"
+channels:
+    stable: "3.8"
+provides:
+    - rsgain
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/complexlogic/rsgain/releases/download/v3.8/rsgain-3.8-win64.zip
+      sha256: 8923cfe3ac930b7342ceae63839dcb65b450628aa452cb8b0047fd35cb86f640
+      bin:
+        - rsgain.exe
+      strip: 1
+test: rsgain --version

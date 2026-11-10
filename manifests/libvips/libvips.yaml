@@ -1,0 +1,21 @@
+api: v1
+name: libvips
+kind: app
+display: libvips
+description: A demand-driven, horizontally threaded image processing library
+homepage: https://www.libvips.org/
+license: LGPL-2.1-only
+version: 8.18.7
+channels:
+    stable: 8.18.7
+provides:
+    - libvips
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/libvips/build-win64-mxe/releases/download/v8.18.7/vips-dev-x64-all-8.18.7.zip
+      sha256: 78e56ba30c267ba32ff965200534bd5721364cadbead8c4d595e44b58dfeff15
+      bin:
+        - libvips.exe
+      strip: 1
+test: libvips --version

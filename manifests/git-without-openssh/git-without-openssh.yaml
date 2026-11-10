@@ -1,0 +1,25 @@
+api: v1
+name: git-without-openssh
+kind: app
+display: git-without-openssh
+description: A free and open source distributed version control system.
+homepage: https://gitforwindows.org
+license: Unknown
+version: 2.56.0.4
+channels:
+    stable: 2.56.0.4
+provides:
+    - git-without-openssh
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/PortableGit-2.56.0.4-64-bit.7z.exe#/dl.7z
+      sha256: b1f3e52216e2ed6882d1bebfd4d3fdf319bec40d2edbbf9fd26ec4fd3fce7ed1
+      bin:
+        - cmd\git.exe
+        - cmd\gitk.exe
+        - cmd\git-gui.exe
+        - usr\bin\tig.exe
+        - git-bash.exe
+      strip: 1
+test: cmd\git --version

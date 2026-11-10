@@ -1,0 +1,21 @@
+api: v1
+name: eac3to
+kind: app
+display: eac3to
+description: Audio conversion tool
+homepage: https://www.rationalqm.us/eac3to/
+license: Freeware
+version: "4.02"
+channels:
+    stable: "4.02"
+provides:
+    - eac3to
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.rationalqm.us/eac3to/eac3to_4.02.rar
+      sha256: 6f0d6c2f747751b96b7abad0e28b1bc9fd09d8b494e9c96bbb5f291534a2d416
+      bin:
+        - eac3to.exe
+      strip: 1
+test: eac3to --version

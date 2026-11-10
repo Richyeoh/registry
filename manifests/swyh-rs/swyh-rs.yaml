@@ -1,0 +1,21 @@
+api: v1
+name: swyh-rs
+kind: app
+display: swyh-rs
+description: DLNA/UPnP audio streaming software
+homepage: https://github.com/dheijl/swyh-rs
+license: MIT
+version: 1.21.1
+channels:
+    stable: 1.21.1
+provides:
+    - swyh-rs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/dheijl/swyh-rs/releases/download/1.21.1/swyh-rs-release.zip
+      sha256: 35bb84d2c61c818bf16b0644435c3cea3e0721b5099cf980c50320ba20044a19
+      bin:
+        - swyh-rs-cli.exe
+      strip: 1
+test: swyh-rs-cli --version

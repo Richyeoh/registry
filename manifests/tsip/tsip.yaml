@@ -1,0 +1,21 @@
+api: v1
+name: tsip
+kind: app
+display: tsip
+description: SIP softphone software
+homepage: http://tomeko.net/software/SIPclient/
+license: BSD-3-Clause
+version: "0.4"
+channels:
+    stable: "0.4"
+provides:
+    - tsip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tomek-o/tSIP/releases/download/v0.4/tSIP_0_4_bin.zip
+      sha256: 5507e44e03f9ac8d64dfa4e7e75e7ca6852c8dcc8d96582fe316bb32f83015c4
+      bin:
+        - tsip.exe
+      strip: 1
+test: tsip --version

@@ -1,0 +1,24 @@
+api: v1
+name: freemove
+kind: app
+display: freemove
+description: Moves directories freely without breaking installations or shortcuts.
+homepage: https://github.com/imDema/FreeMove
+license: GPL-3.0-only
+version: 2.1.0
+channels:
+    stable: 2.1.0
+provides:
+    - freemove
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/imDema/FreeMove/releases/download/2.1.0/FreeMove.exe
+      sha256: 3393141632520238f5cbb6bc188463124bc2e2d1bf23ddc9d6de69482695842b
+      bin:
+        - freemove.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall freemove
+test: freemove --version

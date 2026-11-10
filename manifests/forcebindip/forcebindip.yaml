@@ -1,0 +1,22 @@
+api: v1
+name: forcebindip
+kind: app
+display: forcebindip
+description: Bind any Windows application to a specific interface or IP address.
+homepage: https://r1ch.net/projects/forcebindip
+license: Unknown
+version: "1.32"
+channels:
+    stable: "1.32"
+provides:
+    - forcebindip
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://r1ch.net/assets/forcebindip/ForceBindIP-1.32.zip
+      sha256: 9e52a88262093d3a50c19a5b46ecc22d9f4a95bcc7c2e968fadd5c5942024b1a
+      bin:
+        - ForceBindIP.exe
+        - ForceBindIP64.exe
+      strip: 1
+test: ForceBindIP --version

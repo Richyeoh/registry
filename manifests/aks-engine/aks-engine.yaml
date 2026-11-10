@@ -1,0 +1,21 @@
+api: v1
+name: aks-engine
+kind: app
+display: aks-engine
+description: Self-managed Kubernetes cluster provisioning on Azure
+homepage: https://github.com/Azure/aks-engine
+license: MIT
+version: 0.79.0
+channels:
+    stable: 0.79.0
+provides:
+    - aks-engine
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Azure/aks-engine/releases/download/v0.79.0/aks-engine-v0.79.0-windows-amd64.zip
+      sha256: 5c35c3d2b2aaff2d0d1946ffe84c88e8f60aca5eadf3cec899df4a1b02186e28
+      bin:
+        - aks-engine.exe
+      strip: 1
+test: aks-engine --version

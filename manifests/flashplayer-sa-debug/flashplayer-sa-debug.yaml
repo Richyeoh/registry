@@ -1,0 +1,24 @@
+api: v1
+name: flashplayer-sa-debug
+kind: app
+display: flashplayer-sa-debug
+description: Standalone version of Adobe Flash Player for debugging
+homepage: https://get.adobe.com/flashplayer/
+license: Unknown
+version: 32.0.0.465
+channels:
+    stable: 32.0.0.465
+provides:
+    - flashplayer-sa-debug
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flashplayer_32_sa_debug.exe#/flashplayerdebug.exe
+      sha256: 9d51df0c26e9ec4717a3da2e184cde831ca139d49e4a7c2f9e26028f8c4dfa52
+      bin:
+        - flashplayerdebug.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall flashplayer-sa-debug
+test: flashplayerdebug --version

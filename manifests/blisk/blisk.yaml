@@ -1,0 +1,21 @@
+api: v1
+name: blisk
+kind: app
+display: blisk
+description: First developer-oriented browser.
+homepage: https://blisk.io/
+license: Unknown
+version: 25.0.115.28
+channels:
+    stable: 25.0.115.28
+provides:
+    - blisk
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://bliskcloudstorage.blob.core.windows.net/win-installers/BliskInstaller_25.0.115.28.exe#/cosi.7z
+      sha256: d0f8ad8f20e303f7b014f0d80a835ba5997e72da68e3726edca95b000d862dca
+      bin:
+        - blisk.exe
+      strip: 1
+test: blisk --version

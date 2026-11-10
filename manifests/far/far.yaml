@@ -1,0 +1,21 @@
+api: v1
+name: far
+kind: app
+display: far
+description: A text-mode files and archives manager
+homepage: https://farmanager.com/
+license: Unknown
+version: 3.0.6699
+channels:
+    stable: 3.0.6699
+provides:
+    - far
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://farmanager.com/files/Far30b6699.x64.20260614.7z
+      sha256: 0030e9bf36afded1fd0647fb105446a93c49ce15db32d554fad62146c0665063
+      bin:
+        - far.exe
+      strip: 1
+test: far --version

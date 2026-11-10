@@ -1,0 +1,21 @@
+api: v1
+name: microsandbox
+kind: app
+display: microsandbox
+description: Easy, fast, local microVMs for untrusted workloads.
+homepage: https://microsandbox.dev
+license: Apache-2.0
+version: 0.7.14
+channels:
+    stable: 0.7.14
+provides:
+    - microsandbox
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/superradcompany/microsandbox/releases/download/v0.7.14/microsandbox-windows-x86_64.zip
+      sha256: deb34a8e308b143c9387dca90f7b40a35a5dcb68948081a302ea3f3ca8282ef4
+      bin:
+        - msb.exe
+      strip: 1
+test: msb --version

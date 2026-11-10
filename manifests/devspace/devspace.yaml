@@ -1,0 +1,24 @@
+api: v1
+name: devspace
+kind: app
+display: devspace
+description: DevSpace is an open-source developer tool for Kubernetes that lets you develop and deploy cloud-native software faster
+homepage: https://devspace.sh
+license: Apache-2.0
+version: 6.3.21
+channels:
+    stable: 6.3.21
+provides:
+    - devspace
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/devspace-sh/devspace/releases/download/v6.3.21/devspace-windows-amd64.exe#/devspace.exe
+      sha256: 05c604fd02c2d9169659073bbef12f90da68d7211de743c7c93920f74d07f3a6
+      bin:
+        - devspace.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall devspace
+test: devspace --version

@@ -1,0 +1,24 @@
+api: v1
+name: bitsmanager
+kind: app
+display: bitsmanager
+description: Manager for BITS (Background Intelligent Transfer Service) for Windows.
+homepage: https://github.com/microsoft/BITS-Manager/
+license: MIT
+version: "1.12"
+channels:
+    stable: "1.12"
+provides:
+    - bitsmanager
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/microsoft/BITS-Manager/releases/download/v1.12/BITSManager.msi
+      sha256: ac3e204d782d54375080b22cf9f3517f8b107362173c84ab5b3dd58a10c50469
+      bin:
+        - bitsmanager.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall bitsmanager
+test: bitsmanager --version

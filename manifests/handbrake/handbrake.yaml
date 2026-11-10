@@ -1,0 +1,21 @@
+api: v1
+name: handbrake
+kind: app
+display: handbrake
+description: A tool for converting video from nearly any format to a selection of modern, widely supported codecs.
+homepage: https://handbrake.fr
+license: GPL-2.0-only
+version: 1.11.2
+channels:
+    stable: 1.11.2
+provides:
+    - handbrake
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-x86_64-Win_GUI.zip
+      sha256: a8b9e38b085da2ed7309868bdf8b49a900453946d25d58612071957f21eebd27
+      bin:
+        - handbrake.exe
+      strip: 1
+test: handbrake --version

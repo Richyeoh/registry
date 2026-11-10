@@ -1,0 +1,24 @@
+api: v1
+name: gpth
+kind: app
+display: gpth
+description: Script that organizes the Google Takeout archive into one big chronological folder
+homepage: https://aur.archlinux.org/packages/gpth-bin
+license: Apache-2.0
+version: 3.4.3
+channels:
+    stable: 3.4.3
+provides:
+    - gpth
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper/releases/download/v3.4.3/gpth-windoza.exe#/gpth.exe
+      sha256: a36ef8b546e381a05f47b2762bc17819148dbf9984e03ac979db3b2c4963d18d
+      bin:
+        - gpth.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall gpth
+test: gpth --version

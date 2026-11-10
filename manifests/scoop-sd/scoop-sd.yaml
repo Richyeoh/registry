@@ -1,0 +1,24 @@
+api: v1
+name: scoop-sd
+kind: app
+display: scoop-sd
+description: A program to search for scoop packages. Powered by https://scoopsearch.github.io/
+homepage: https://github.com/grisha765/scoop-search-directory
+license: Unknown
+version: "0.3"
+channels:
+    stable: "0.3"
+provides:
+    - scoop-sd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/grisha765/scoop-search-directory/releases/download/scoop-ds_v0.3/scoop-sd.exe
+      sha256: 50b58db02522383cb3a149716036738bc0cb626846a0c328f3009a544bd5c5ee
+      bin:
+        - scoop-sd.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall scoop-sd
+test: scoop-sd --version

@@ -1,0 +1,21 @@
+api: v1
+name: cadcraft
+kind: app
+display: cadcraft
+description: Computer-aided design and drafting; an open-source, clean-room reimplementation of Autodesk AutoCAD, rebuilt in pure Rust
+homepage: https://github.com/storytold/cadcraft
+license: MIT|Apache-2.0
+version: 0.18.0
+channels:
+    stable: 0.18.0
+provides:
+    - cadcraft
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/storytold/cadcraft/releases/download/v0.18.0/cadcraft-0.18.0-windows-x64-portable.zip
+      sha256: 6992945182b8c18853ee0f4eab28b4dec957a459bc23398c06b12925a218d169
+      bin:
+        - cadcraft-cli.exe
+      strip: 1
+test: cadcraft-cli --version

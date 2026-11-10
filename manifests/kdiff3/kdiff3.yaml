@@ -1,0 +1,21 @@
+api: v1
+name: kdiff3
+kind: app
+display: kdiff3
+description: Utility for comparing and merging files and directories
+homepage: https://apps.kde.org/kdiff3/
+license: GPL-2.0-only
+version: 1.12.6
+channels:
+    stable: 1.12.6
+provides:
+    - kdiff3
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.kde.org/stable/kdiff3/kdiff3-1.12.6-windows-x86_64.exe#/dl.7z
+      sha256: 7c575f1ee9500c1451f84b50febae220afef4c8b657b7ab36e7b5998cd30e229
+      bin:
+        - bin\kdiff3.exe
+      strip: 1
+test: bin\kdiff3 --version

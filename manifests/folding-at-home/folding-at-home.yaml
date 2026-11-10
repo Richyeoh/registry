@@ -1,0 +1,21 @@
+api: v1
+name: folding-at-home
+kind: app
+display: folding-at-home
+description: Distributed computing project focused on disease research
+homepage: https://foldingathome.org
+license: Unknown
+version: 8.5.6
+channels:
+    stable: 8.5.6
+provides:
+    - folding-at-home
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://download.foldingathome.org/releases/public/fah-client/windows-10-64bit/release/fah-client_8.5.6_AMD64.exe#/dl.7z
+      sha256: adeb038f1a888d76f0e9e82bf59297203de1ec4e61c21c5d8e74b622a6fb6b11
+      bin:
+        - FAHClient.exe
+      strip: 1
+test: FAHClient --version

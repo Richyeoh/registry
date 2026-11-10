@@ -1,0 +1,21 @@
+api: v1
+name: docto
+kind: app
+display: docto
+description: Simple command line utility for converting .doc & .xls files to any supported format.
+homepage: https://tobya.github.io/DocTo
+license: MIT
+version: "1.16"
+channels:
+    stable: "1.16"
+provides:
+    - docto
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/tobya/DocTo/releases/download/v1.16/docto_64.zip
+      sha256: 03f36e72a8d3de98dcdc031603fc5208a9887478b1fcbdb154dd7e632dda424f
+      bin:
+        - docto.exe
+      strip: 1
+test: docto --version

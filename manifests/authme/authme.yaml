@@ -1,0 +1,24 @@
+api: v1
+name: authme
+kind: app
+display: authme
+description: A 2FA desktop app that supports TOTP and Google Authenticator QR codes.
+homepage: https://authme.levminer.com/
+license: GPL-3.0
+version: 7.1.2
+channels:
+    stable: 7.1.2
+provides:
+    - authme
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Levminer/authme/releases/download/7.1.2/authme-7.1.2-windows-x64.msi
+      sha256: 85083b1e14fd9ada6cf7a023dd45fecfa015d4ce9044c5603c44db18ffe977f9
+      bin:
+        - authme.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall authme
+test: authme --version

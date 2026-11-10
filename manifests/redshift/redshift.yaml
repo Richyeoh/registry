@@ -1,0 +1,21 @@
+api: v1
+name: redshift
+kind: app
+display: redshift
+description: Adjusts the color temperature of screen according to surroundings.
+homepage: https://github.com/sharpbracket/redshift
+license: GPL-3.0-only
+version: "1.12"
+channels:
+    stable: "1.12"
+provides:
+    - redshift
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sharpbracket/redshift/releases/download/v1.12/redshift-windows-x86_64.zip
+      sha256: 9e56e2f88ad13e372ac815f37b6b7dbe0aeba4224a0a8441db9bdfe1ef3a8b8d
+      bin:
+        - redshift.exe
+      strip: 1
+test: redshift --version

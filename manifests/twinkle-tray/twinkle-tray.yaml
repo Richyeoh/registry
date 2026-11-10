@@ -1,0 +1,21 @@
+api: v1
+name: twinkle-tray
+kind: app
+display: twinkle-tray
+description: Easily manage the brightness of your monitors in Windows from the system tray
+homepage: https://twinkletray.com/
+license: MIT
+version: 1.17.2
+channels:
+    stable: 1.17.2
+provides:
+    - twinkle-tray
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/xanderfrangos/twinkle-tray/releases/download/v1.17.2/Twinkle.Tray.v1.17.2.exe#/dl.7z
+      sha256: 04714c95945304e2dbb92e587cf062667ef653efa19f9c28db2c80225aa08136
+      bin:
+        - Twinkle Tray.exe
+      strip: 1
+test: Twinkle Tray.exe --version

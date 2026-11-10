@@ -1,0 +1,26 @@
+api: v1
+name: pdfgear
+kind: app
+display: pdfgear
+description: A free, cross-platform PDF application that allows you to read, edit, convert, and merge documents across devices without requiring registration.
+homepage: https://www.pdfgear.com
+license: Unknown
+version: 3.0.1
+channels:
+    stable: 3.0.1
+provides:
+    - pdfgear
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://downloadfiles.pdfgear.com/releases/windows/pdfgear_setup_v3.0.1.exe
+      sha256: e55f80ac7a59c367ed1d18ff77441cd55d22a3b0f9fd3a3cfad42eed2466f684
+      bin:
+        - PDFgear.exe
+        - PDFLauncher.exe
+        - pdfconverter.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pdfgear
+test: PDFgear --version

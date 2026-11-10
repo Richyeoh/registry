@@ -1,0 +1,39 @@
+api: v1
+name: agent-manager
+kind: app
+display: agent-manager
+description: Run Claude Code, Codex, OpenCode and other AI coding agents in tmux
+homepage: https://agent-manager.dev/
+license: Apache-2.0
+keywords:
+    - brew
+    - homebrew
+version: 0.48.1
+channels:
+    stable: 0.48.1
+provides:
+    - agent-manager
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agent-manager/blobs/sha256:84c45fe8aa91e0706040a4a3b4faa6fc2032db4a69c066da454f7a0e11661c9f
+      sha256: 84c45fe8aa91e0706040a4a3b4faa6fc2032db4a69c066da454f7a0e11661c9f
+      bin:
+        - agent-manager
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/agent-manager/blobs/sha256:2bd66aa40e614fd3264bd67f7edade2ce3156f50876fb299d912a6f7d88b8548
+      sha256: 2bd66aa40e614fd3264bd67f7edade2ce3156f50876fb299d912a6f7d88b8548
+      bin:
+        - agent-manager
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/agent-manager/blobs/sha256:9f2719fe2924235ec317761c4f10f1eccddab963d2a126aeed0928fb73f978ef
+      sha256: 9f2719fe2924235ec317761c4f10f1eccddab963d2a126aeed0928fb73f978ef
+      bin:
+        - agent-manager
+      strip: 1
+test: agent-manager --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

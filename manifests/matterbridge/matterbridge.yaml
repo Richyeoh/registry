@@ -1,0 +1,24 @@
+api: v1
+name: matterbridge
+kind: app
+display: matterbridge
+description: Bridges between a growing number of protocols
+homepage: https://github.com/42wim/matterbridge
+license: Apache-2.0
+version: 1.26.0
+channels:
+    stable: 1.26.0
+provides:
+    - matterbridge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/42wim/matterbridge/releases/download/v1.26.0/matterbridge-1.26.0-windows-64bit.exe#/matterbridge.exe
+      sha256: 24e63cee2e59dec88a23f6905992e30526e25d2e65f0718ecd1f451571e34931
+      bin:
+        - matterbridge.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall matterbridge
+test: matterbridge --version

@@ -1,0 +1,22 @@
+api: v1
+name: moonscript
+kind: app
+display: moonscript
+description: A dynamic scripting language that compiles into Lua.
+homepage: https://moonscript.org/
+license: MIT
+version: 0.8.0
+channels:
+    stable: 0.8.0
+provides:
+    - moonscript
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/leafo/moonscript/releases/download/v0.8.0/moonscript-v0.8.0-windows-x86_64.zip
+      sha256: 987040155298fbfed67f21788d241f51bbe1f00a2616f1b96f918e68e8a85f5d
+      bin:
+        - moon.exe
+        - moonc.exe
+      strip: 1
+test: moon --version

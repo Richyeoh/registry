@@ -1,0 +1,24 @@
+api: v1
+name: reshade
+kind: app
+display: reshade
+description: A generic post-processing injector for games and video software
+homepage: https://reshade.me
+license: BSD-3-Clause
+version: 6.8.0
+channels:
+    stable: 6.8.0
+provides:
+    - reshade
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://reshade.me/downloads/ReShade_Setup_6.8.0.exe#/ReShade.exe
+      sha256: 207aea16205fbf952bc8fe1879966672454cf04002e7ad34237c7990a5b3c0b4
+      bin:
+        - ReShade.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall reshade
+test: ReShade --version

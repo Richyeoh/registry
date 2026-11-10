@@ -1,0 +1,21 @@
+api: v1
+name: notepad4
+kind: app
+display: notepad4
+description: Light-weight Scintilla based text editor for Windows
+homepage: https://github.com/zufuliu/notepad4
+license: BSD-3-Clause
+version: 26.10r6392
+channels:
+    stable: 26.10r6392
+provides:
+    - notepad4
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/zufuliu/notepad4/releases/download/v26.10r6392/Notepad4_HD_i18n_x64_v26.10r6392.zip
+      sha256: 2b3f94fdc749283795e07eac2eb72dc9971f5f4005cdb00df7fd509fa067e4c1
+      bin:
+        - notepad4.exe
+      strip: 1
+test: notepad4 --version

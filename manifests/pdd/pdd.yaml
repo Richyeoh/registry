@@ -1,0 +1,21 @@
+api: v1
+name: pdd
+kind: app
+display: pdd
+description: Date/time difference calculator and countdown timer. The name 'pdd' stands for Python Date Diff.
+homepage: https://github.com/jarun/pdd
+license: GPL-3.0-or-later
+version: "1.7"
+channels:
+    stable: "1.7"
+provides:
+    - pdd
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://raw.githubusercontent.com/jarun/pdd/v1.7/pdd#/pdd.py
+      sha256: fd80cfc5e9a4ca82a244829a7e9cd7f2942b802765134ccf322487dc3d79c280
+      bin:
+        - pdd.py.exe
+      strip: 1
+test: pdd.py --version

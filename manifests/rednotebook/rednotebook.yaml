@@ -1,0 +1,24 @@
+api: v1
+name: rednotebook
+kind: app
+display: rednotebook
+description: Graphical diary and journal
+homepage: https://rednotebook.sourceforge.io/
+license: GPL-3.0-or-later
+version: "2.43"
+channels:
+    stable: "2.43"
+provides:
+    - rednotebook
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/jendrikseipp/rednotebook/releases/download/v2.43/rednotebook-2.43.exe
+      sha256: 9b153c8a88db1743689672a488daa96cce817d97db18524db63e0e2c8248c43a
+      bin:
+        - rednotebook.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall rednotebook
+test: rednotebook --version

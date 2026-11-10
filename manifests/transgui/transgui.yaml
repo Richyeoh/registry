@@ -1,0 +1,21 @@
+api: v1
+name: transgui
+kind: app
+display: transgui
+description: A feature rich front-end to remotely control Transmission daemon via its RPC protocol.
+homepage: https://github.com/transmission-remote-gui/transgui
+license: GPL-2.0-or-later
+version: 5.18.0
+channels:
+    stable: 5.18.0
+provides:
+    - transgui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/transmission-remote-gui/transgui/releases/download/v5.18.0/transgui-5.18.0-x86_64-win64.zip
+      sha256: 3bef7b1ff5da7126559383e4627fd7ffec1df14f5db54eae6447cb0e4abd22ef
+      bin:
+        - transgui.exe
+      strip: 1
+test: transgui --version

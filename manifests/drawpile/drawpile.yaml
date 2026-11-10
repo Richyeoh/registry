@@ -1,0 +1,21 @@
+api: v1
+name: drawpile
+kind: app
+display: drawpile
+description: A drawing program that lets you draw, paint and animate together with others on the same canvas
+homepage: https://drawpile.net/
+license: GPL-3.0-or-later
+version: 2.3.1
+channels:
+    stable: 2.3.1
+provides:
+    - drawpile
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/drawpile/Drawpile/releases/download/2.3.1/Drawpile-2.3.1-x86_64.zip
+      sha256: 74a8f2974a6f0fa2aa370dd7237ef3fe4c877895446d253289edff0f455b4ea0
+      bin:
+        - drawpile.exe
+      strip: 1
+test: drawpile --version

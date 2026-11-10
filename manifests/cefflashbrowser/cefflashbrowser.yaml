@@ -1,0 +1,21 @@
+api: v1
+name: cefflashbrowser
+kind: app
+display: cefflashbrowser
+description: Flash Browser
+homepage: https://github.com/Mzying2001/CefFlashBrowser
+license: Unknown
+version: 1.1.7
+channels:
+    stable: 1.1.7
+provides:
+    - cefflashbrowser
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Mzying2001/CefFlashBrowser/releases/download/1.1.7/FlashBrowser_x64_v1.1.7.zip
+      sha256: b590beffbc6f7f6efe70c37143d99cdfb9716d3e19b5ce8364396a914a17f309
+      bin:
+        - CefFlashBrowser.exe
+      strip: 1
+test: CefFlashBrowser --version

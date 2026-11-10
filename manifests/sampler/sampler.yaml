@@ -1,0 +1,24 @@
+api: v1
+name: sampler
+kind: app
+display: sampler
+description: A tool for shell commands execution, visualization and alerting.
+homepage: https://sampler.dev
+license: GPL-3.0-or-later
+version: 1.1.0
+channels:
+    stable: 1.1.0
+provides:
+    - sampler
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/sqshq/sampler/releases/download/v1.1.0/sampler-1.1.0-windows-amd64.exe#/sampler.exe
+      sha256: d3a129deff0e7e1161b293b19130ef174469d1331acb5b0bc0e2513be5b3a51b
+      bin:
+        - sampler.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sampler
+test: sampler --version

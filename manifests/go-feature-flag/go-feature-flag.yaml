@@ -1,0 +1,22 @@
+api: v1
+name: go-feature-flag
+kind: app
+display: go-feature-flag
+description: Simple, complete, and lightweight feature flag solution
+homepage: https://gofeatureflag.org
+license: MIT
+version: 1.58.1
+channels:
+    stable: 1.58.1
+provides:
+    - go-feature-flag
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/thomaspoignant/go-feature-flag/releases/download/v1.58.1/go-feature-flag_1.58.1_Windows_x86_64.tar.gz
+      sha256: ffd269adc1fd8da8f0ccac8cfd10095262466ae69489983d9a96b39a1364ca0f
+      bin:
+        - go-feature-flag.exe
+        - go-feature-flag-cli.exe
+      strip: 1
+test: go-feature-flag --version

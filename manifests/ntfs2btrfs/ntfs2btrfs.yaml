@@ -1,0 +1,21 @@
+api: v1
+name: ntfs2btrfs
+kind: app
+display: ntfs2btrfs
+description: Conversion tool from NTFS to Btrfs
+homepage: https://github.com/maharmstone/ntfs2btrfs
+license: GPL-2.0-only
+version: "20260810"
+channels:
+    stable: "20260810"
+provides:
+    - ntfs2btrfs
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/maharmstone/ntfs2btrfs/releases/download/20260810/ntfs2btrfs-20260810.zip
+      sha256: 97663e3d4c84104d1b844b97b386149aa7b00ac6f500f4998fac09480ea5dfd2
+      bin:
+        - ntfs2btrfs.exe
+      strip: 1
+test: ntfs2btrfs --version

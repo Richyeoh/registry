@@ -1,0 +1,21 @@
+api: v1
+name: winutil
+kind: app
+display: winutil
+description: Chris Titus Tech's Windows Utility - Install Programs, Tweaks, Fixes, and Updates.
+homepage: https://github.com/ChrisTitusTech/winutil
+license: MIT
+version: 26.10.28
+channels:
+    stable: 26.10.28
+provides:
+    - winutil
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/ChrisTitusTech/winutil/releases/download/26.10.28/winutil.ps1
+      sha256: d0444cb266953d927e5cee71455f4f1a6da2d5b3cfd7e440dceb4e6b1cbf4f7f
+      bin:
+        - winutil.ps1.exe
+      strip: 1
+test: winutil.ps1 --version

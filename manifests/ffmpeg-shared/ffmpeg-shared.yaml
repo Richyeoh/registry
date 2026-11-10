@@ -1,0 +1,21 @@
+api: v1
+name: ffmpeg-shared
+kind: app
+display: ffmpeg-shared
+description: A complete, cross-platform solution to record, convert and stream audio and video.
+homepage: https://ffmpeg.org
+license: GPL-3.0-or-later
+version: 9.0.2
+channels:
+    stable: 9.0.2
+provides:
+    - ffmpeg-shared
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-full_build-shared.7z
+      sha256: 4d2060a8b34a940aa47d785142055bb92a63053781e55f2ace4546edd519a8f5
+      bin:
+        - ffmpeg-shared.exe
+      strip: 1
+test: ffmpeg-shared --version

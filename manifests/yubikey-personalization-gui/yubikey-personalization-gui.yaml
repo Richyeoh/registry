@@ -1,0 +1,21 @@
+api: v1
+name: yubikey-personalization-gui
+kind: app
+display: yubikey-personalization-gui
+description: A utility designed to facilitate re-configuration of YubiKeys.
+homepage: https://developers.yubico.com/yubikey-personalization-gui/
+license: BSD-2-Clause
+version: 3.1.25
+channels:
+    stable: 3.1.25
+provides:
+    - yubikey-personalization-gui
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://developers.yubico.com/yubikey-personalization-gui/Releases/yubikey-personalization-gui-3.1.25.exe#/dl.7z
+      sha256: 3debb239ff541ae6de058580cbecfc28137915f1118fd902de8e478c0d8168f2
+      bin:
+        - yubikey-personalization-gui.exe
+      strip: 1
+test: yubikey-personalization-gui --version

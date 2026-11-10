@@ -1,0 +1,25 @@
+api: v1
+name: asitop
+kind: app
+display: asitop
+description: Perf monitoring CLI tool for Apple Silicon
+homepage: https://tlkh.github.io/asitop/
+license: MIT
+keywords:
+    - brew
+    - homebrew
+version: 0.0.24
+channels:
+    stable: 0.0.24
+provides:
+    - asitop
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/asitop/blobs/sha256:463b3006025df943b94873d8f3c47886aa2c1ae30ecd52023e07ecb7826a953a
+      sha256: 463b3006025df943b94873d8f3c47886aa2c1ae30ecd52023e07ecb7826a953a
+      bin:
+        - asitop
+      strip: 1
+test: asitop --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

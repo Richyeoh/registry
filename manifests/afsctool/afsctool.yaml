@@ -1,0 +1,32 @@
+api: v1
+name: afsctool
+kind: app
+display: afsctool
+description: Utility for manipulating APFS and ZFS compressed files
+homepage: https://brkirch.wordpress.com/afsctool/
+license: GPL-3.0-only AND BSL-1.0
+keywords:
+    - brew
+    - homebrew
+version: 1.7.3
+channels:
+    stable: 1.7.3
+provides:
+    - afsctool
+platforms:
+    - os: darwin
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/afsctool/blobs/sha256:17a9351748475089c170985080188c640209eab140e959808979260d752c254e
+      sha256: 17a9351748475089c170985080188c640209eab140e959808979260d752c254e
+      bin:
+        - afsctool
+      strip: 1
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/afsctool/blobs/sha256:a1596705cff076205b68f6fa301394e2feb6bdfc071543679db46aa38eec7aae
+      sha256: a1596705cff076205b68f6fa301394e2feb6bdfc071543679db46aa38eec7aae
+      bin:
+        - afsctool
+      strip: 1
+test: afsctool --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

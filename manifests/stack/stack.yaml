@@ -1,0 +1,21 @@
+api: v1
+name: stack
+kind: app
+display: stack
+description: The Haskell Tool Stack
+homepage: https://www.haskellstack.org
+license: BSD-3-Clause
+version: 3.11.1
+channels:
+    stable: 3.11.1
+provides:
+    - stack
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/commercialhaskell/stack/releases/download/v3.11.1/stack-3.11.1-windows-x86_64.zip
+      sha256: 741acd147cfba542980f5f5377eab9ad31eb446c5bda195608dd276ad242be51
+      bin:
+        - stack.exe
+      strip: 1
+test: stack --version

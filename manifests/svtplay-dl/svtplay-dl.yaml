@@ -1,0 +1,21 @@
+api: v1
+name: svtplay-dl
+kind: app
+display: svtplay-dl
+description: Video downloader from various sites
+homepage: https://svtplay-dl.se
+license: MIT
+version: "4.211"
+channels:
+    stable: "4.211"
+provides:
+    - svtplay-dl
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://svtplay-dl.se/download/4.211/svtplay-dl-amd64.zip
+      sha256: 3ef97815f532ec6dc16cce4a7d02bf17d66918f4fe59e9bbfd712ff751614ce5
+      bin:
+        - svtplay-dl.exe
+      strip: 1
+test: svtplay-dl --version

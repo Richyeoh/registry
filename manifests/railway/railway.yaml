@@ -1,0 +1,21 @@
+api: v1
+name: railway
+kind: app
+display: railway
+description: The command line interface for Railway. Use it to connect your code to Railways infrastructure.
+homepage: https://railway.com
+license: MIT
+version: 5.71.0
+channels:
+    stable: 5.71.0
+provides:
+    - railway
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/railwayapp/cli/releases/download/v5.71.0/railway-v5.71.0-x86_64-pc-windows-msvc.zip
+      sha256: 1460c5d4616794558e21bdb1bf94ff2dc2fb9a48df647857642bbe1e714f81b6
+      bin:
+        - railway.exe
+      strip: 1
+test: railway --version

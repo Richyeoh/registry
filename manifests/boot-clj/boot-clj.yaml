@@ -1,0 +1,24 @@
+api: v1
+name: boot-clj
+kind: app
+display: boot-clj
+description: A Clojure build framework and ad-hoc Clojure script evaluator.
+homepage: https://github.com/boot-clj/boot
+license: EPL-1.0
+version: 2.7.2
+channels:
+    stable: 2.7.2
+provides:
+    - boot-clj
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/boot-clj/boot-bin/releases/download/latest/boot.exe
+      sha256: a059da037fd6f9d2282581ecceacc57a61d4f5a13d05316554c22cbb14528273
+      bin:
+        - boot.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall boot-clj
+test: boot --version

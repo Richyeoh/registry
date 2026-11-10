@@ -1,0 +1,24 @@
+api: v1
+name: tinta
+kind: app
+display: tinta
+description: Fast, lightweight Markdown and Mermaid viewer.
+homepage: https://tinta.cc
+license: MIT
+version: 4.0.3
+channels:
+    stable: 4.0.3
+provides:
+    - tinta
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/oipoistar/tinta/releases/download/v4.0.3/tinta.exe
+      sha256: 822da2bd53f800d5ac0f1be1b81a21ec2edf284182fb3eb1054c2c49bdfea1b0
+      bin:
+        - tinta.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall tinta
+test: tinta --version

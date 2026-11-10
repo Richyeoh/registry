@@ -1,0 +1,24 @@
+api: v1
+name: everythingtoolbar
+kind: app
+display: everythingtoolbar
+description: Everything integration for the Windows taskbar.
+homepage: https://github.com/srwi/EverythingToolbar
+license: Unknown
+version: 3.5.0
+channels:
+    stable: 3.5.0
+provides:
+    - everythingtoolbar
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/srwi/EverythingToolbar/releases/download/3.5.0/EverythingToolbar-3.5.0-x64.exe
+      sha256: 5443ed74370bc1c5c269f4dd1c6b15babdaf08bdc55514f47002c82f720fd6d5
+      bin:
+        - everythingtoolbar.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall everythingtoolbar
+test: everythingtoolbar --version

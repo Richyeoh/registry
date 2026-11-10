@@ -1,0 +1,21 @@
+api: v1
+name: sysgauge
+kind: app
+display: sysgauge
+description: A system and performance monitoring utility
+homepage: https://www.sysgauge.com
+license: Shareware
+version: 13.7.14
+channels:
+    stable: 13.7.14
+provides:
+    - sysgauge
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://www.sysgauge.com/setups_x64/sysgauge_setup_v13.7.14_x64.exe#/dl.7z
+      sha256: 487a8d32b00c36f92afc4ceec0ee6726e6951667461011f988c69cffc34b726f
+      bin:
+        - sysgauge.exe
+      strip: 1
+test: sysgauge --version

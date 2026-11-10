@@ -1,0 +1,21 @@
+api: v1
+name: openhardwaremonitor
+kind: app
+display: openhardwaremonitor
+description: Monitors temperature sensors, fan speeds, voltages, load and clock speeds of a computer.
+homepage: https://openhardwaremonitor.org/
+license: MPL-2.0
+version: 0.9.6
+channels:
+    stable: 0.9.6
+provides:
+    - openhardwaremonitor
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://openhardwaremonitor.org/files/openhardwaremonitor-v0.9.6.zip
+      sha256: 5e238c36ae5f8a8ab9aa5e6fa3c568967d61953393384c7c8fd6370f8bc86b85
+      bin:
+        - OpenHardwareMonitor.exe
+      strip: 1
+test: OpenHardwareMonitor --version

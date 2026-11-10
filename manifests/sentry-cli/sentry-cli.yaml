@@ -1,0 +1,25 @@
+api: v1
+name: sentry-cli
+kind: app
+display: sentry-cli
+description: Connect to the Sentry API and manage projects related data.
+homepage: https://docs.sentry.io/cli/
+license: BSD-3-Clause
+version: 3.8.2
+channels:
+    stable: 3.8.2
+provides:
+    - sentry-cli
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/getsentry/sentry-cli/releases/download/3.8.2/sentry-cli-Windows-x86_64.exe#/sentry.exe
+      sha256: 50009f23c49d6e9ff7624204c7035855303b49c5e326708ee783c1fdf783ac83
+      bin:
+        - sentry.exe
+        - sentry.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall sentry-cli
+test: sentry --version

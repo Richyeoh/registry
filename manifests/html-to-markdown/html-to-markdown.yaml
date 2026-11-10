@@ -1,0 +1,21 @@
+api: v1
+name: html-to-markdown
+kind: app
+display: html-to-markdown
+description: A robust html-to-markdown converter that transforms HTML (even entire websites) into clean, readable Markdown.
+homepage: https://html-to-markdown.com
+license: MIT
+version: 2.5.2
+channels:
+    stable: 2.5.2
+provides:
+    - html-to-markdown
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v2.5.2/html-to-markdown_Windows_x86_64.zip
+      sha256: 1edde415802a0e6a3bc6dcbf8bdcb6eddb792b1702b4f60cfa1a18ba07023aeb
+      bin:
+        - html2markdown.exe
+      strip: 1
+test: html2markdown --version

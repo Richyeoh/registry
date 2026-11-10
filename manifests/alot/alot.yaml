@@ -1,0 +1,39 @@
+api: v1
+name: alot
+kind: app
+display: alot
+description: Text mode MUA using notmuch mail
+homepage: https://github.com/pazz/alot
+license: GPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: "0.12"
+channels:
+    stable: "0.12"
+provides:
+    - alot
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:950e7bfd59a2336e80c88938d6391e907d36ada6fa70ba277fdab4115bfd16df
+      sha256: 950e7bfd59a2336e80c88938d6391e907d36ada6fa70ba277fdab4115bfd16df
+      bin:
+        - alot
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:b23d4a9fd081d19667aaabca7f3b6b5881ee0268428f2128e176e2db44de3c2a
+      sha256: b23d4a9fd081d19667aaabca7f3b6b5881ee0268428f2128e176e2db44de3c2a
+      bin:
+        - alot
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/alot/blobs/sha256:4f36986f60984088fce65e7c61be2f4419fc55059279d5f4118ed46854ad5bc9
+      sha256: 4f36986f60984088fce65e7c61be2f4419fc55059279d5f4118ed46854ad5bc9
+      bin:
+        - alot
+      strip: 1
+test: alot --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

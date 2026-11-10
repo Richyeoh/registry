@@ -1,0 +1,21 @@
+api: v1
+name: privatezilla
+kind: app
+display: privatezilla
+description: Security and privacy checker for Windows 10
+homepage: https://www.builtbybel.com/ms-apps/privatezilla
+license: MIT
+version: 0.60.0
+channels:
+    stable: 0.60.0
+provides:
+    - privatezilla
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/builtbybel/privatezilla/releases/download/0.60.0/privatezilla.zip
+      sha256: 541139164555109babee6d7349034c4722684fd4a7cd9050d82709a351a4f432
+      bin:
+        - privatezilla.exe
+      strip: 1
+test: privatezilla --version

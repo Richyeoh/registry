@@ -1,0 +1,39 @@
+api: v1
+name: anyquery
+kind: app
+display: anyquery
+description: Query anything with SQL
+homepage: https://anyquery.dev
+license: AGPL-3.0-only
+keywords:
+    - brew
+    - homebrew
+version: 0.5.1
+channels:
+    stable: 0.5.1
+provides:
+    - anyquery
+platforms:
+    - os: darwin
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/anyquery/blobs/sha256:eac4011032c61e1b1e2a63018e432cc363be06ecfa0d397a5f94145e0aa01af7
+      sha256: eac4011032c61e1b1e2a63018e432cc363be06ecfa0d397a5f94145e0aa01af7
+      bin:
+        - anyquery
+      strip: 1
+    - os: linux
+      arch: amd64
+      url: https://ghcr.io/v2/homebrew/core/anyquery/blobs/sha256:5ffba65a9f9f6d10464a2e566bc355b086714dc9cc7d221b3a52efd833900ab5
+      sha256: 5ffba65a9f9f6d10464a2e566bc355b086714dc9cc7d221b3a52efd833900ab5
+      bin:
+        - anyquery
+      strip: 1
+    - os: linux
+      arch: arm64
+      url: https://ghcr.io/v2/homebrew/core/anyquery/blobs/sha256:1714d4a06fd66e2258f835abde5b778fb7f20f865cd83176bdfa8daf25e63b43
+      sha256: 1714d4a06fd66e2258f835abde5b778fb7f20f865cd83176bdfa8daf25e63b43
+      bin:
+        - anyquery
+      strip: 1
+test: anyquery --version
+caveats: 由 Homebrew formula 自动转制（bottle 复用上游 hash）

@@ -1,0 +1,24 @@
+api: v1
+name: pineflash
+kind: app
+display: pineflash
+description: A tool to flash ironos to the pinecil soldering iron and possibly other pine64 devices in the future
+homepage: https://github.com/Spagett1/PineFlash
+license: GPL-2.0-only
+version: 0.5.5
+channels:
+    stable: 0.5.5
+provides:
+    - pineflash
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://github.com/Spagett1/PineFlash/releases/download/0.5.5/pineflash-0.5.5-win64.exe
+      sha256: 7fca98771e91998965df10cd1b2680ebb5317fcce13eaa46eb7573f6347eac8b
+      bin:
+        - pineflash.exe
+      strip: 1
+installer:
+    silent: /S
+    uninstall: scoop uninstall pineflash
+test: pineflash --version

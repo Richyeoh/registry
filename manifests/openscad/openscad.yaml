@@ -1,0 +1,21 @@
+api: v1
+name: openscad
+kind: app
+display: openscad
+description: The Programmers Solid 3D CAD Modeller
+homepage: https://www.openscad.org/
+license: GPL-2.0-or-later
+version: "2021.01"
+channels:
+    stable: "2021.01"
+provides:
+    - openscad
+platforms:
+    - os: windows
+      arch: amd64
+      url: https://files.openscad.org/OpenSCAD-2021.01-x86-64.zip
+      sha256: fb0caabf5bbc89f8f2f80c10b79ae64d697aaff6efd58b2756f5d6270edb7ba7
+      bin:
+        - openscad.exe
+      strip: 1
+test: openscad --version
