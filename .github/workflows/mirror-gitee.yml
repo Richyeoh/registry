@@ -15,10 +15,10 @@ jobs:
           fetch-depth: 0
       - name: push to gitee
         env:
-          GITEE_MIRROR_KEY: ${{ secrets.GITEE_MIRROR_KEY }}
+          VERX_GITEE_KEY: ${{ secrets.VERX_GITEE_KEY }}
         run: |
           mkdir -p ~/.ssh
-          echo "$GITEE_MIRROR_KEY" > ~/.ssh/id_ed25519
+          echo "$VERX_GITEE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan gitee.com >> ~/.ssh/known_hosts
           git remote add gitee git@gitee.com:verx/registry.git || true
