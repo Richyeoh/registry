@@ -1,0 +1,23 @@
+api: v1
+name: zlib
+kind: lib
+display: zlib
+description: 压缩库
+homepage: https://zlib.net
+license: Zlib
+keywords: [compress, lib]
+version: 1.3.1
+revision: 0
+channels: {stable: 1.3.1}
+provides: []
+conflicts: []
+replaces: []
+platforms:
+  - {os: windows, arch: amd64, url: https://zlib.net/fossils/zlib-1.3.1.tar.gz, sha256: "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23", strip: 1}
+  - {os: linux, arch: amd64, url: https://zlib.net/fossils/zlib-1.3.1.tar.gz, sha256: "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23", strip: 1}
+  - {os: darwin, arch: arm64, url: https://zlib.net/fossils/zlib-1.3.1.tar.gz, sha256: "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23", strip: 1}
+exports:
+  include: [include]
+  lib: [lib]
+  cmake: [lib/cmake/zlib]
+  pkgconfig: [lib/pkgconfig]

@@ -1,0 +1,7 @@
+name: official
+priority: 10
+maintainers: [verx]
+signing:
+  required: true
+policy: default
+mirrors: []
