@@ -5,9 +5,6 @@ display: austin
 description: Python frame stack sampler for CPython
 homepage: https://pypi.org/project/austin-dist/
 license: GPL-3.0-or-later
-keywords:
-    - brew
-    - homebrew
 version: 4.1.0
 channels:
     stable: 4.1.0
@@ -20,26 +17,5 @@ platforms:
       sha256: 6be050efc9ef0e0a7659da5752fc118449a81d95ee813e7a3366135d6b9efc34
       bin:
         - austin.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/austin/blobs/sha256:763a64952097fb53780d9b7daec7e389623d65cb7800217436cd4afe97357f25
-      sha256: 763a64952097fb53780d9b7daec7e389623d65cb7800217436cd4afe97357f25
-      bin:
-        - austin
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/austin/blobs/sha256:3b0ec667ba56f3593ef5bd32436fd358accd66db63bf3d5fd8bf7c212b08ea0f
-      sha256: 3b0ec667ba56f3593ef5bd32436fd358accd66db63bf3d5fd8bf7c212b08ea0f
-      bin:
-        - austin
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/austin/blobs/sha256:240cdd46555c72ec9d4ca3c24ee7c092dd6684c96e63b1844ca089cdf5975a75
-      sha256: 240cdd46555c72ec9d4ca3c24ee7c092dd6684c96e63b1844ca089cdf5975a75
-      bin:
-        - austin
       strip: 1
 test: austin --version

@@ -5,42 +5,18 @@ display: aws-sam-cli
 description: Build, test, debug, and deploy Serverless applications from CLI
 homepage: https://aws.amazon.com/serverless/sam/
 license: Apache-2.0
-keywords:
-    - brew
-    - homebrew
-version: 1.171.0
+version: 1.172.1
 channels:
-    stable: 1.171.0
+    stable: 1.172.1
 provides:
     - aws-sam-cli
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/aws/aws-sam-cli/releases/download/v1.171.0/AWS_SAM_CLI_64_PY3.msi#/dl.msi_
-      sha256: da18862262028e3aa88ce1518bd1a01c504146300ddc3faa2a3c59a0074f1715
+      url: https://github.com/aws/aws-sam-cli/releases/download/v1.172.1/AWS_SAM_CLI_64_PY3.msi#/dl.msi_
+      sha256: 3fffa130797f0317b7538dd8145be547513ced2ee2f537a4aa79576de8eb4360
       bin:
         - bin\sam.cmd.exe
         - bin\sam.cmd.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:a71a9f1048c7546515bebcb3bee7821180f678220ba812175c3ad43d3cb23a8d
-      sha256: a71a9f1048c7546515bebcb3bee7821180f678220ba812175c3ad43d3cb23a8d
-      bin:
-        - aws-sam-cli
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:90fa8d49b08048c2d9e8c624f4a58b11b242851f0486cf7b7b4ab2bdfe3ed704
-      sha256: 90fa8d49b08048c2d9e8c624f4a58b11b242851f0486cf7b7b4ab2bdfe3ed704
-      bin:
-        - aws-sam-cli
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aws-sam-cli/blobs/sha256:72dabb263c758f815d1ffbb6a51c67b0c3160c91544efa5fb853261794bbfe71
-      sha256: 72dabb263c758f815d1ffbb6a51c67b0c3160c91544efa5fb853261794bbfe71
-      bin:
-        - aws-sam-cli
       strip: 1
 test: bin\sam.cmd --version

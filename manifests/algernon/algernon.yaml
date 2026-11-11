@@ -5,9 +5,6 @@ display: algernon
 description: Small self-contained pure-Go web server with Lua, Markdown, HTTP/2, QUIC, Redis and PostgreSQL support
 homepage: https://algernon.roboticoverlords.org
 license: MIT
-keywords:
-    - brew
-    - homebrew
 version: 1.17.13
 channels:
     stable: 1.17.13
@@ -20,26 +17,5 @@ platforms:
       sha256: 0e2b5e8b98795917a78feaed4f84a83cc91e20f2de33eefdf777859cf7d863f8
       bin:
         - algernon.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/algernon/blobs/sha256:ed06775d160261a7421885cef30bf5790b06c9d3892b43e9785eaa48b1cbc689
-      sha256: ed06775d160261a7421885cef30bf5790b06c9d3892b43e9785eaa48b1cbc689
-      bin:
-        - algernon
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/algernon/blobs/sha256:098a2c9d07bcf8eb13621869fac2ddd95fd73630a06c8754f4a886f45ad6ad38
-      sha256: 098a2c9d07bcf8eb13621869fac2ddd95fd73630a06c8754f4a886f45ad6ad38
-      bin:
-        - algernon
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/algernon/blobs/sha256:c5084276860ef51214ab0c665860acdf55238c7b833332417a3e814173dec20e
-      sha256: c5084276860ef51214ab0c665860acdf55238c7b833332417a3e814173dec20e
-      bin:
-        - algernon
       strip: 1
 test: algernon --version

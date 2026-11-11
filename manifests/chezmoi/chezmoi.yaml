@@ -5,16 +5,16 @@ display: chezmoi
 description: Manage your dotfiles across multiple diverse machines, securely.
 homepage: https://chezmoi.io
 license: MIT
-version: 2.74.0
+version: 2.74.1
 channels:
-    stable: 2.74.0
+    stable: 2.74.1
 provides:
     - chezmoi
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/twpayne/chezmoi/releases/download/v2.74.0/chezmoi_2.74.0_windows_amd64.zip
-      sha256: 13dee2831d371c6ce2ac30fc9ae1aad4f70c68e7d44700f6129fe4b244ee7a95
+      url: https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_windows_amd64.zip
+      sha256: 208b393f9ad266fc10aab514a8adf87ac4dc5bdd968a54b7eb5b2764ca41eda4
       bin:
         - chezmoi.exe
       strip: 1

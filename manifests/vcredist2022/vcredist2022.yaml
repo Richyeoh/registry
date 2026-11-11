@@ -5,9 +5,9 @@ display: vcredist2022
 description: Microsoft Visual C++ Redistributable for Visual Studio 2015-2022
 homepage: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 license: Unknown
-version: 14.51.36247.0
+version: 14.52.37029.0
 channels:
-    stable: 14.51.36247.0
+    stable: 14.52.37029.0
 provides:
     - vcredist2022
 platforms:

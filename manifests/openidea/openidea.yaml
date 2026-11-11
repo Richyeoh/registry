@@ -5,16 +5,16 @@ display: openidea
 description: An open-source IDE inspired by IntelliJ IDEA.
 homepage: https://github.com/l0ng-ai/openidea
 license: Apache-2.0
-version: 0.1.40
+version: 0.1.42
 channels:
-    stable: 0.1.40
+    stable: 0.1.42
 provides:
     - openidea
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/l0ng-ai/openidea/releases/download/v0.1.40/OpenIDEA_0.1.40_x64-setup.exe#/dl.7z
-      sha256: 43840ef67f9ad3e958b0bd4e5aead453e08961f2ef9a5faae6db0ba61f2e6049
+      url: https://github.com/l0ng-ai/openidea/releases/download/v0.1.42/OpenIDEA_0.1.42_x64-setup.exe#/dl.7z
+      sha256: da65f0ee57418f985a68223d6363fb73bb99d6ebdeb57462d35b8f5e9d65e60b
       bin:
         - openidea.exe
       strip: 1

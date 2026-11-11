@@ -5,16 +5,16 @@ display: dolphin
 description: A file manager developed by KDE that lets you navigate and browse the contents of your hard drives, USB sticks, SD cards, and more.
 homepage: https://apps.kde.org/dolphin/
 license: GPL-2.0-or-later
-version: 26.08-8927
+version: 26.12-9001
 channels:
-    stable: 26.08-8927
+    stable: 26.12-9001
 provides:
     - dolphin
 platforms:
     - os: windows
       arch: amd64
-      url: https://cdn.kde.org/ci-builds/system/dolphin/release-26.08/windows/dolphin-release_26.08-8927-windows-cl-msvc2022-x86_64.7z
-      sha256: 02966617817e00054e51cf376becb9f32b1f86fd72193a28436442b221f7122f
+      url: https://cdn.kde.org/ci-builds/system/dolphin/release-26.12/windows/dolphin-release_26.12-9001-windows-cl-msvc2022-x86_64.7z
+      sha256: 7be7546cc7d6d329876d96aea6de44aebe7bb122dfbe19a45e4e231d22eed220
       bin:
         - bin\dolphin.exe
       strip: 1

@@ -2,15 +2,12 @@ api: v1
 name: b2sum
 kind: app
 display: b2sum
-description: BLAKE2 b2sum reference binary
-homepage: https://github.com/BLAKE2/BLAKE2
-license: CC0-1.0 OR OpenSSL OR Apache-2.0
-keywords:
-    - brew
-    - homebrew
-version: "20190724"
+description: Tool to create BLAKE2 hashes of files or streams
+homepage: https://blake2.net
+license: CC0-1.0
+version: "20130305"
 channels:
-    stable: "20190724"
+    stable: "20130305"
 provides:
     - b2sum
 platforms:
@@ -20,33 +17,5 @@ platforms:
       sha256: 160e8a1fe00131a415cdfc7e3d7f6c71a1fdd361cf0c14dcbe101fa56461b122
       bin:
         - b2sum-amd64-windows.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/b2sum/blobs/sha256:70a311dd99f685268a3bcef834c4373d8506fafcd17de9a15fbe9fb68f2fcaed
-      sha256: 70a311dd99f685268a3bcef834c4373d8506fafcd17de9a15fbe9fb68f2fcaed
-      bin:
-        - b2sum
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/b2sum/blobs/sha256:2c13b1572d5c05d0c824ffa7cc06a385d7a99c7e03ab695701a4a95964677abd
-      sha256: 2c13b1572d5c05d0c824ffa7cc06a385d7a99c7e03ab695701a4a95964677abd
-      bin:
-        - b2sum
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/b2sum/blobs/sha256:3de701be2858013ed380a477ce9b911db189812984990cd420b9f6d5df7a82bd
-      sha256: 3de701be2858013ed380a477ce9b911db189812984990cd420b9f6d5df7a82bd
-      bin:
-        - b2sum
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/b2sum/blobs/sha256:045bcf83cd9918310902dcf419763b59bfa86c1cce653d2469a760e3cff05219
-      sha256: 045bcf83cd9918310902dcf419763b59bfa86c1cce653d2469a760e3cff05219
-      bin:
-        - b2sum
       strip: 1
 test: b2sum-amd64-windows --version

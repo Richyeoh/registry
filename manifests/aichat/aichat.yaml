@@ -5,9 +5,6 @@ display: aichat
 description: A powerful chatgpt cli
 homepage: https://github.com/sigoden/aichat
 license: MIT|Apache
-keywords:
-    - brew
-    - homebrew
 version: 0.30.0
 channels:
     stable: 0.30.0
@@ -20,33 +17,5 @@ platforms:
       sha256: 89df8c4ccd6dad310ac713eb5d550494ae7fa14722cde346588fab38ff4afd8f
       bin:
         - aichat.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aichat/blobs/sha256:1a636cf9b9e2bb24f2ee609400f204e6086f573a42e0fdab7809e0f305016978
-      sha256: 1a636cf9b9e2bb24f2ee609400f204e6086f573a42e0fdab7809e0f305016978
-      bin:
-        - aichat
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aichat/blobs/sha256:da41c83eaba9327bf0ff11f2c7809905365e1d74743c9127cb2e6a3df86f660b
-      sha256: da41c83eaba9327bf0ff11f2c7809905365e1d74743c9127cb2e6a3df86f660b
-      bin:
-        - aichat
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aichat/blobs/sha256:dab29ef575f4af6926cba9b71dca94143c3363021c402262a1f1ad5a66af5dad
-      sha256: dab29ef575f4af6926cba9b71dca94143c3363021c402262a1f1ad5a66af5dad
-      bin:
-        - aichat
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aichat/blobs/sha256:2b3072ceed89d9206141fad174bdc04ca249f905917d2d6ddefd4fa00cc0d38e
-      sha256: 2b3072ceed89d9206141fad174bdc04ca249f905917d2d6ddefd4fa00cc0d38e
-      bin:
-        - aichat
       strip: 1
 test: aichat --version

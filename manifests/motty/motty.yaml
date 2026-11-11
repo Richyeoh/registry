@@ -5,16 +5,16 @@ display: motty
 description: SSH client with terminal, SFTP, port forwarding and an AI assistant
 homepage: https://motty.page
 license: Apache-2.0
-version: 0.3.9
+version: 0.4.0
 channels:
-    stable: 0.3.9
+    stable: 0.4.0
 provides:
     - motty
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/t8y2/motty/releases/download/v0.3.9/motty-0.3.9-windows-amd64.zip
-      sha256: 0f74486b309625981895e3c886ad7b0eae70ecfb3c5bf357a58e37b213e10815
+      url: https://github.com/t8y2/motty/releases/download/v0.4.0/motty-0.4.0-windows-amd64.zip
+      sha256: 33f319889175d56b0aabc1825ffdc5d107dea7be32dde481812494212f959f72
       bin:
         - motty.exe
       strip: 1

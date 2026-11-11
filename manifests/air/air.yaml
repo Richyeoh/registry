@@ -5,9 +5,6 @@ display: air
 description: A live-reloading command line utility for developing Go applications.
 homepage: https://github.com/air-verse/air
 license: GPL-3.0-or-later
-keywords:
-    - brew
-    - homebrew
 version: 1.67.4
 channels:
     stable: 1.67.4
@@ -20,26 +17,5 @@ platforms:
       sha256: c35dbd568cff98055cc382d003bfda06bcdae82389568fb5e60ce5da278fa79d
       bin:
         - air.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/air/blobs/sha256:bcecbad2270a620ae7f9c4e7828111eff44b23d3f8c185b8128e4c8da1008ebe
-      sha256: bcecbad2270a620ae7f9c4e7828111eff44b23d3f8c185b8128e4c8da1008ebe
-      bin:
-        - air
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/air/blobs/sha256:c6be0fe99691dfb5475a1f1a51ce1db7988785d70924a71a47bdef3bbd7ffbbb
-      sha256: c6be0fe99691dfb5475a1f1a51ce1db7988785d70924a71a47bdef3bbd7ffbbb
-      bin:
-        - air
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/air/blobs/sha256:1916044aed3b838fe99090df7220db08fd922f3ba5bca24e6a48aec703f6bd88
-      sha256: 1916044aed3b838fe99090df7220db08fd922f3ba5bca24e6a48aec703f6bd88
-      bin:
-        - air
       strip: 1
 test: air --version

@@ -5,16 +5,16 @@ display: apps2samsung
 description: A small cross-platform tool that side-loads any app onto Samsung devices running Tizen OS.
 homepage: https://apps2samsung.com
 license: MIT
-version: 3.2.1
+version: 3.3.0
 channels:
-    stable: 3.2.1
+    stable: 3.3.0
 provides:
     - apps2samsung
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/Apps2Samsung/Apps2Samsung/releases/download/v3.2.1/Apps2Samsung-v3.2.1-win-x64.zip
-      sha256: 3fccdc3515a3c93fd59c49f114e9a957b6ddbb1aa301185d8ed6de179dd4a1bc
+      url: https://github.com/Apps2Samsung/Apps2Samsung/releases/download/v3.3.0/Apps2Samsung-v3.3.0-win-x64.zip
+      sha256: 312f5a381582998995cecc8c7360861b526a2760697f6476a4b8169874fe2cf8
       bin:
         - apps2samsung.exe
       strip: 1

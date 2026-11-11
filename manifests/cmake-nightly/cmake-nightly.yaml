@@ -5,16 +5,16 @@ display: cmake-nightly
 description: Family of tools designed to build, test and package software
 homepage: https://cmake.org
 license: BSD-3-Clause
-version: 4.5.20261109
+version: 4.5.20261110
 channels:
-    stable: 4.5.20261109
+    stable: 4.5.20261110
 provides:
     - cmake-nightly
 platforms:
     - os: windows
       arch: amd64
-      url: https://cmake.org/files/dev/cmake-4.5.20261109-ga9558d3-windows-x86_64.zip
-      sha256: 0735491f598a10b166e8174d9272fa24e8a86cf5d215135a9dbdb77ea79405c8
+      url: https://cmake.org/files/dev/cmake-4.5.20261110-gd76c34e-windows-x86_64.zip
+      sha256: 44dd372d4ba689c04d7e0c68af2655358f237b93e270b60ade714447fdda512d
       bin:
         - bin\cmake.exe
         - bin\cmcldeps.exe

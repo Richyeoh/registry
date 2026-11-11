@@ -5,16 +5,16 @@ display: ucheck
 description: Update your software in 2 clicks. Stay away from malware.
 homepage: https://www.adlice.com/ucheck/
 license: Unknown
-version: 6.7.8
+version: 6.8.0
 channels:
-    stable: 6.7.8
+    stable: 6.8.0
 provides:
     - ucheck
 platforms:
     - os: windows
       arch: amd64
       url: https://download.adlice.com/api?action=download&app=ucheck&type=x64#/UCheck_portable64.exe
-      sha256: ba896f384ba1d297f4892cb018e8e7723240a4c6c0dcb6683afc461042d35a5b
+      sha256: e6325539d72f111665193df33551bdae5606ebf63ade1104d07b137082a8d920
       bin:
         - UCheck_portable64.exe
       strip: 1

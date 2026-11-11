@@ -5,16 +5,16 @@ display: googlechrome-canary
 description: Fast, secure, and free web browser, built for the modern web.
 homepage: https://www.google.com/chrome/canary
 license: Unknown
-version: 159.0.8154.0
+version: 160.0.8155.0
 channels:
-    stable: 159.0.8154.0
+    stable: 160.0.8155.0
 provides:
     - googlechrome-canary
 platforms:
     - os: windows
       arch: amd64
-      url: https://dl.google.com/release2/chrome/acaivv52fx3yw3jepjffuyymh3wq_159.0.8154.0/159.0.8154.0_chrome_installer_uncompressed.exe#/dl.7z
-      sha256: 5c237541b97dba0fb6fc0363afceff86819c02fddf9e993f7c07843e675dd0c5
+      url: https://dl.google.com/release2/chrome/gsduk4jzdiwbggeo5m73fuqedi_160.0.8155.0/160.0.8155.0_chrome_installer_uncompressed.exe#/dl.7z
+      sha256: 2862d675e1c237a48d848782fb10c59fabc86d15222e8674cbe56a85b3bb79d6
       bin:
         - chrome.exe
       strip: 1

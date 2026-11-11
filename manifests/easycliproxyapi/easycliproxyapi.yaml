@@ -5,16 +5,16 @@ display: easycliproxyapi
 description: Cross-platform GUI desktop management client for CLIProxyAPI
 homepage: https://github.com/router-for-me/EasyCLIProxyAPI
 license: MIT
-version: 0.3.97
+version: 0.3.98
 channels:
-    stable: 0.3.97
+    stable: 0.3.98
 provides:
     - easycliproxyapi
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v0.3.97/EasyCLIProxyAPI-v0.3.97-Windows-amd64.zip
-      sha256: c0b8741f4fd616b68d0684211d98fed5c4d0298cb805d76fe8697e5d168ce8bf
+      url: https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v0.3.98/EasyCLIProxyAPI-v0.3.98-Windows-amd64.zip
+      sha256: 81f93fd02de97511f988bbfb8f4cf154f978a3dafe62010dec04c4974aaebddc
       bin:
         - easycliproxyapi.exe
       strip: 1

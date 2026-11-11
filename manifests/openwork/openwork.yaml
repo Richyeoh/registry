@@ -5,16 +5,16 @@ display: openwork
 description: 'An open-source alternative to Claude Cowork, powered by opencode '
 homepage: https://openwork.software/
 license: MIT
-version: 0.18.65
+version: 0.18.66
 channels:
-    stable: 0.18.65
+    stable: 0.18.66
 provides:
     - openwork
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/different-ai/openwork/releases/download/v0.18.65/openwork-win-x64-0.18.65.exe#/dl.7z
-      sha256: a3e6823e9b54fcb8216b60202a9e4753e87dce1b41d5ba786e6d53babeecf749
+      url: https://github.com/different-ai/openwork/releases/download/v0.18.66/openwork-win-x64-0.18.66.exe#/dl.7z
+      sha256: ae7711f48fd433e239936d4e2ce6a93d22486e6be8e5ef65c6f6ad158b119dee
       bin:
         - openwork.exe
       strip: 1

@@ -2,19 +2,19 @@ api: v1
 name: flux
 kind: app
 display: flux
-description: Makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.
-homepage: https://justgetflux.com
+description: Open and extensible continuous delivery solution for Kubernetes.
+homepage: https://fluxcd.io
 license: Apache-2.0
-version: "4.148"
+version: 2.10.0
 channels:
-    stable: "4.148"
+    stable: 2.10.0
 provides:
     - flux
 platforms:
     - os: windows
       arch: amd64
-      url: https://justgetflux.com/flux-setup4-148.exe#/dl.7z
-      sha256: c5bfc86f82a4e47c41c0ff2ab70cd49c7365a496cb9079766e1d7ea40d65ea54
+      url: https://github.com/fluxcd/flux2/releases/download/v2.10.0/flux_2.10.0_windows_amd64.zip
+      sha256: 750250d4dcc828c395d7edaf72c1787d34af697fc3d7bc310d32955a5269823d
       bin:
         - flux.exe
       strip: 1

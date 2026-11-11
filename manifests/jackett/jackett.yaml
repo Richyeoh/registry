@@ -5,16 +5,16 @@ display: jackett
 description: API Support for your favorite torrent trackers
 homepage: https://github.com/Jackett/Jackett
 license: Unknown
-version: 0.24.3042
+version: 0.24.3047
 channels:
-    stable: 0.24.3042
+    stable: 0.24.3047
 provides:
     - jackett
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/Jackett/Jackett/releases/download/v0.24.3042/Jackett.Binaries.Windows.zip
-      sha256: 53f55d8ffaef63fdf0140d3097ed91340797656395c108087859f296a32855f7
+      url: https://github.com/Jackett/Jackett/releases/download/v0.24.3047/Jackett.Binaries.Windows.zip
+      sha256: 642375188746d2b72dabe00060573834cfbfd59feb5966513aac3fa4f5f02bd4
       bin:
         - jackett.exe
       strip: 1

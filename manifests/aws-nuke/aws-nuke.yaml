@@ -5,9 +5,6 @@ display: aws-nuke
 description: Allows deleting all resources of an AWS account.
 homepage: https://aws-nuke.ekristen.dev/
 license: MIT
-keywords:
-    - brew
-    - homebrew
 version: 3.69.1
 channels:
     stable: 3.69.1
@@ -20,26 +17,5 @@ platforms:
       sha256: a7d008ac1806661efd0c6159e0af94b2d70876e69a09e1a1249d496360d678b3
       bin:
         - aws-nuke.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aws-nuke/blobs/sha256:923dc2bec65ef0e2b026293f36cee27ca5135ce6b43cdaf4c31d81d565231743
-      sha256: 923dc2bec65ef0e2b026293f36cee27ca5135ce6b43cdaf4c31d81d565231743
-      bin:
-        - aws-nuke
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aws-nuke/blobs/sha256:5c643acf251c6e154327a802b489a23e0bab587a8d310e0d9c544a80bade1d8d
-      sha256: 5c643acf251c6e154327a802b489a23e0bab587a8d310e0d9c544a80bade1d8d
-      bin:
-        - aws-nuke
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aws-nuke/blobs/sha256:a6f45343b130e616e3753a8fa59247b77e0f0910a92da99e6de3211c2b93726f
-      sha256: a6f45343b130e616e3753a8fa59247b77e0f0910a92da99e6de3211c2b93726f
-      bin:
-        - aws-nuke
       strip: 1
 test: aws-nuke --version

@@ -5,16 +5,16 @@ display: sofka
 description: A Kubernetes TUI, reimagined in Rust - built on kube-rs and ratatui, async-first from the ground up.
 homepage: https://sofka.rs
 license: Apache-2.0|MIT
-version: 0.34.0
+version: 0.35.1
 channels:
-    stable: 0.34.0
+    stable: 0.35.1
 provides:
     - sofka
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/nklmilojevic/sofka/releases/download/v0.34.0/sofka-v0.34.0-x86_64-pc-windows-msvc.zip
-      sha256: b3684b0f17ff4a2d1494aafc0a3f5a29df78287fe1f9dd081c641adcc60393b1
+      url: https://github.com/nklmilojevic/sofka/releases/download/v0.35.1/sofka-v0.35.1-x86_64-pc-windows-msvc.zip
+      sha256: a40ccf799f1886851912c7b20394ad33d479e5f8ab27a0dd3f2e8db3aec09ee9
       bin:
         - sofka.exe
       strip: 1

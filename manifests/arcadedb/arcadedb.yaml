@@ -5,9 +5,6 @@ display: arcadedb
 description: Multi-model database, one DBMS that supports SQL, Cypher, Gremlin, HTTP/JSON, MongoDB and Redis
 homepage: https://arcadedb.com
 license: Apache-2.0
-keywords:
-    - brew
-    - homebrew
 version: 26.11.1
 channels:
     stable: 26.11.1
@@ -21,12 +18,5 @@ platforms:
       bin:
         - bin\console.bat.exe
         - bin\server.bat.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/arcadedb/blobs/sha256:7bc58c5b9be8de908be7d71b58e42a6f3024228d575cc9ad0e75795ca974d24d
-      sha256: 7bc58c5b9be8de908be7d71b58e42a6f3024228d575cc9ad0e75795ca974d24d
-      bin:
-        - arcadedb
       strip: 1
 test: bin\console.bat --version

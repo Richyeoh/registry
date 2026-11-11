@@ -5,27 +5,17 @@ display: zellij
 description: A terminal workspace with batteries included
 homepage: https://zellij.dev/
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
-version: 0.45.1
+version: 0.46.0
 channels:
-    stable: 0.45.1
+    stable: 0.46.0
 provides:
     - zellij
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-x86_64-pc-windows-msvc.zip
-      sha256: b854e7b223e67d0705c5f685ef50541c38a57981b13624d09c92bed419b6f80d
+      url: https://github.com/zellij-org/zellij/releases/download/v0.46.0/zellij-x86_64-pc-windows-msvc.zip
+      sha256: be19eed784ed3dd22a3b179b8b79086c0e3ee67ddc836092a1ea9d4306dfd934
       bin:
         - zellij.exe
       strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/zellij/download/
-      sha256: 579e82c2e4c68b0a1f4901265f89b5aeea7c676e039a9f50a37a05d4902a2b9b
-      bin:
-        - zellij
 test: zellij --version

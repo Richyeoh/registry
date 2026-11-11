@@ -5,9 +5,6 @@ display: agentsview
 description: Local-first session search, analytics, insights, and token use statistics for coding agents.
 homepage: https://agentsview.io
 license: MIT
-keywords:
-    - brew
-    - cask
 version: 0.47.0
 channels:
     stable: 0.47.0
@@ -20,19 +17,5 @@ platforms:
       sha256: b9b48fe60a9d58171e5d187b5a7ffaf632ee4c49c8440766716255662388d6fc
       bin:
         - agentsview.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://github.com/kenn-io/agentsview/releases/download/v0.47.0/AgentsView_0.47.0_aarch64.dmg
-      sha256: 680de73142294cbd796615a5b5c83509a81c5e490edc511cf136ab0c17577cca
-      bin:
-        - agentsview
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://github.com/kenn-io/agentsview/releases/download/v0.47.0/AgentsView_0.47.0_aarch64.dmg
-      sha256: 680de73142294cbd796615a5b5c83509a81c5e490edc511cf136ab0c17577cca
-      bin:
-        - agentsview
       strip: 1
 test: agentsview --version

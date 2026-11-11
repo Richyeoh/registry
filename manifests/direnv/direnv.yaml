@@ -5,10 +5,6 @@ display: direnv
 description: load or unload environment variables depending on the current directory
 homepage: https://direnv.net
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
 version: 2.38.2
 channels:
     stable: 2.38.2
@@ -22,12 +18,6 @@ platforms:
       bin:
         - direnv.exe
       strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/direnv/download/
-      sha256: 7bccf10692e0c678c02a5be8500e3872ec215c44eefed1537dc7118681834426
-      bin:
-        - direnv
 installer:
     silent: /S
     uninstall: scoop uninstall direnv

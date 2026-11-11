@@ -5,16 +5,16 @@ display: kcc
 description: Comic and manga converter for ebook readers.
 homepage: https://github.com/ciromattia/kcc
 license: ISC
-version: 12.1.5
+version: 13.0.1
 channels:
-    stable: 12.1.5
+    stable: 13.0.1
 provides:
     - kcc
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/ciromattia/kcc/releases/download/v12.1.5/KCC_12.1.5.exe#/KCC.exe
-      sha256: 2539ab5d0ff2fb6a5875031356b06812dbff891694a863b09f36e10f9993ab57
+      url: https://github.com/ciromattia/kcc/releases/download/v13.0.1/KCC_13.0.1.exe#/KCC.exe
+      sha256: 3360f4f290ffa2a04de557fe4048eef9b098f5b31030aa5ec8fe7a66d7174bf0
       bin:
         - kcc-c2e.exe
         - kcc-c2p.exe

@@ -5,12 +5,6 @@ display: zoxide
 description: A faster way to navigate your filesystem
 homepage: https://github.com/ajeetdsouza/zoxide
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
-    - github
-    - ajeetdsouza
 version: 0.10.0
 channels:
     stable: 0.10.0
@@ -23,26 +17,5 @@ platforms:
       sha256: f465ae548f8754c8e7edbc60b45fbf58c92bfe123db83d790252d6810fa5daf1
       bin:
         - zoxide.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-apple-darwin.tar.gz
-      sha256: 18ab7ae2633ad6e2ab79a4e665cbba1e95b7c872d44523326efb793202451dad
-      bin:
-        - zoxide
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-aarch64-apple-darwin.tar.gz
-      sha256: b55ae6f2f5f23d0a6ccb3bd4eeb2af9c7e0a6556e5255c82100e40305129bbb0
-      bin:
-        - zoxide
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-riscv64gc-unknown-linux-musl.tar.gz
-      sha256: fd297a392f0266850ea6fb0a4d0b0c041d568596cfd32f541b3b6444c296c0df
-      bin:
-        - zoxide
       strip: 1
 test: zoxide --version

@@ -5,16 +5,16 @@ display: twilio-cli
 description: Twilio CLI. Unleash the power of Twilio from your command prompt.
 homepage: https://github.com/twilio/twilio-cli
 license: MIT
-version: 7.2.0
+version: 7.3.0
 channels:
-    stable: 7.2.0
+    stable: 7.3.0
 provides:
     - twilio-cli
 platforms:
     - os: windows
       arch: amd64
-      url: https://twilio-cli-prod.s3.amazonaws.com/twilio-v7.2.0/twilio-v7.2.0-win32-x64.tar.xz
-      sha256: 313b99abd09e143f637c8a3c00363a5bdde2889520b1e007b62b3f07d299b07b
+      url: https://twilio-cli-prod.s3.amazonaws.com/twilio-v7.3.0/twilio-v7.3.0-win32-x64.tar.xz
+      sha256: 45d193ca0a81a0b5e0bde382600e1df2e2af6ab5923b7d11aced3398c4a7ab0f
       bin:
         - bin\twilio.cmd.exe
       strip: 1

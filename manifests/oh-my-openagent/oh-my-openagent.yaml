@@ -5,16 +5,16 @@ display: oh-my-openagent
 description: Your tool for real work. But it's an agent.
 homepage: https://omo.dev
 license: SUL-1.0
-version: 5.1.66
+version: 5.1.69
 channels:
-    stable: 5.1.66
+    stable: 5.1.69
 provides:
     - oh-my-openagent
 platforms:
     - os: windows
       arch: amd64
-      url: https://get.omo.dev/v/5.1.66/omo-windows-x64.exe#/omo.exe
-      sha256: 7f2c684398638608c0168c65fc1491f6893aba262519a0152772fae63ad65594
+      url: https://get.omo.dev/v/5.1.69/omo-windows-x64.exe#/omo.exe
+      sha256: 04338dd63b24c53156492e1a0777d996034416c4131a26e1ba48eb07b5429464
       bin:
         - omo.exe
       strip: 1

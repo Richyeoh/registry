@@ -5,9 +5,6 @@ display: aspell
 description: A spellchecker commonly used with emacs.
 homepage: http://aspell.net/
 license: LGPL-2.1-only
-keywords:
-    - brew
-    - homebrew
 version: 0.60.8.3-1
 channels:
     stable: 0.60.8.3-1
@@ -21,26 +18,5 @@ platforms:
       bin:
         - bin\aspell.exe
         - bin\word-list-compress.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aspell/blobs/sha256:08436da282a6673d81b2c905da102df730e1c4a86e409088ab0892557a378aee
-      sha256: 08436da282a6673d81b2c905da102df730e1c4a86e409088ab0892557a378aee
-      bin:
-        - aspell
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aspell/blobs/sha256:4588b75601d9c44d0dec206595808c6e6ecd013244b441fbe5e2682d5186a8a8
-      sha256: 4588b75601d9c44d0dec206595808c6e6ecd013244b441fbe5e2682d5186a8a8
-      bin:
-        - aspell
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aspell/blobs/sha256:710cab6fd71ed4e97fe14dd88f549ab84f5ce01a262caab36f1f5719b59223b4
-      sha256: 710cab6fd71ed4e97fe14dd88f549ab84f5ce01a262caab36f1f5719b59223b4
-      bin:
-        - aspell
       strip: 1
 test: bin\aspell --version

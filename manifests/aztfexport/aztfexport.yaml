@@ -5,9 +5,6 @@ display: aztfexport
 description: A tool to bring your existing Azure resources under the management of Terraform.
 homepage: https://azure.github.io/aztfexport/
 license: MIT
-keywords:
-    - brew
-    - homebrew
 version: 0.21.0
 channels:
     stable: 0.21.0
@@ -20,26 +17,5 @@ platforms:
       sha256: 81e08a53ca18a1e35a00da0e0209259cc2ad678bf61384e03dece7b908adc0e0
       bin:
         - aztfexport.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aztfexport/blobs/sha256:9abbe5c279bfd4a7e413de5d2137d1d7d3ce229e4386c518227e82ef916b3482
-      sha256: 9abbe5c279bfd4a7e413de5d2137d1d7d3ce229e4386c518227e82ef916b3482
-      bin:
-        - aztfexport
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aztfexport/blobs/sha256:61c57b219070a58188815db21fe3792f0351bb7008b5e9eec03a4f68258df5c1
-      sha256: 61c57b219070a58188815db21fe3792f0351bb7008b5e9eec03a4f68258df5c1
-      bin:
-        - aztfexport
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aztfexport/blobs/sha256:a7af68f8606ccf0e8bca9263953dd33ae11a8a9e60332c6ee0910049a9948602
-      sha256: a7af68f8606ccf0e8bca9263953dd33ae11a8a9e60332c6ee0910049a9948602
-      bin:
-        - aztfexport
       strip: 1
 test: aztfexport --version

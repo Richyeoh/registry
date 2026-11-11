@@ -5,16 +5,16 @@ display: dbx
 description: Lightweight, cross-platform database client
 homepage: https://dbxio.com
 license: Apache-2.0
-version: 0.6.68
+version: 0.6.69
 channels:
-    stable: 0.6.68
+    stable: 0.6.69
 provides:
     - dbx
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/t8y2/dbx/releases/download/v0.6.68/DBX_0.6.68_x64-portable.zip
-      sha256: 641245a7d5d3dd6885ae25a444d2c0a556242736d250b91bd4c93051e27c9eb5
+      url: https://github.com/t8y2/dbx/releases/download/v0.6.69/DBX_0.6.69_x64-portable.zip
+      sha256: 27ba470a238026b2f9cd8388a93e0cf0d363641ee5f3bdc0af1c6b2e99c98e8b
       bin:
         - dbx.exe
       strip: 1

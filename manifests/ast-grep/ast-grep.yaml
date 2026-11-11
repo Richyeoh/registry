@@ -5,42 +5,18 @@ display: ast-grep
 description: A fast and polyglot tool for code searching, linting, rewriting at large scale.
 homepage: https://ast-grep.github.io
 license: MIT
-keywords:
-    - brew
-    - homebrew
-version: 0.51.1
+version: 0.51.2
 channels:
-    stable: 0.51.1
+    stable: 0.51.2
 provides:
     - ast-grep
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-x86_64-pc-windows-msvc.zip
-      sha256: 12a0cefb77498820ef6fb302ed8758cbda39be87d4c15120dc74c1dea968a50d
+      url: https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-x86_64-pc-windows-msvc.zip
+      sha256: 7d5a83bf2f9a4020dc529df371537c860e7a665e52789ac67ef231123a6b4a7e
       bin:
         - ast-grep.exe
         - sg.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/ast-grep/blobs/sha256:00c63154bf8dc02af8ca993093619565a82182a2f205af34bf4ff3e621717a16
-      sha256: 00c63154bf8dc02af8ca993093619565a82182a2f205af34bf4ff3e621717a16
-      bin:
-        - ast-grep
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/ast-grep/blobs/sha256:9b18884f2ceea7c96e4d7426954f4d4e354ca03c4276e71aa873618e08339a25
-      sha256: 9b18884f2ceea7c96e4d7426954f4d4e354ca03c4276e71aa873618e08339a25
-      bin:
-        - ast-grep
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/ast-grep/blobs/sha256:acc4fa819eceae52f49fee4167fa141b8317e3e76af436cbc7e0dbb617f4a894
-      sha256: acc4fa819eceae52f49fee4167fa141b8317e3e76af436cbc7e0dbb617f4a894
-      bin:
-        - ast-grep
       strip: 1
 test: ast-grep --version

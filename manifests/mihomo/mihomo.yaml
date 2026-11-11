@@ -5,16 +5,16 @@ display: mihomo
 description: 'A simple Python Pydantic model for Honkai: Star Rail parsed data from the Mihomo API.'
 homepage: https://wiki.metacubex.one
 license: GPL-3.0-or-later
-version: 1.19.33
+version: 1.19.34
 channels:
-    stable: 1.19.33
+    stable: 1.19.34
 provides:
     - mihomo
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-windows-amd64-v1.19.33.zip
-      sha256: 6ab2180875f9f6fff8b19386d760daec257f66b45f72b3afc650634272fa837a
+      url: https://github.com/MetaCubeX/mihomo/releases/download/v1.19.34/mihomo-windows-amd64-v1.19.34.zip
+      sha256: f6b855de8722781caea62686f0301f89625fc558d48c1103ffdd98dad7f7f488
       bin:
         - mihomo.exe
         - mihomo.exe

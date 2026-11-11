@@ -5,16 +5,16 @@ display: vim
 description: A highly configurable text editor
 homepage: https://www.vim.org
 license: Vim
-version: 9.2.1316
+version: 9.2.1320
 channels:
-    stable: 9.2.1316
+    stable: 9.2.1320
 provides:
     - vim
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/vim/vim-win32-installer/releases/download/v9.2.1316/gvim_9.2.1316_x64_signed.zip
-      sha256: 56f5f0f3fcb2ecc6582ed8c62cb7f2305fc071bf843aed541836ffe4a3d6537f
+      url: https://github.com/vim/vim-win32-installer/releases/download/v9.2.1320/gvim_9.2.1320_x64_signed.zip
+      sha256: 8f821934503b9fd25313d95f489d9c5c15ceeb34a3cebfaa00734bbccb65851f
       bin:
         - vim.exe
         - vim.exe

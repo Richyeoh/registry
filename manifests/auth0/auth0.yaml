@@ -5,9 +5,6 @@ display: auth0
 description: Build, manage and test your Auth0 integrations from the command-line.
 homepage: https://auth0.github.io/auth0-cli
 license: MIT
-keywords:
-    - brew
-    - homebrew
 version: 1.39.0
 channels:
     stable: 1.39.0
@@ -20,26 +17,5 @@ platforms:
       sha256: 8f480bd1f9805bf66c61d2c6f7efdacee67fb27b5a5a03d053be1f2326f9612d
       bin:
         - auth0.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/auth0/blobs/sha256:a2e168b06068abe8902d68a6bb3d87f920d4d71b10ff921cd010c575731ba91a
-      sha256: a2e168b06068abe8902d68a6bb3d87f920d4d71b10ff921cd010c575731ba91a
-      bin:
-        - auth0
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/auth0/blobs/sha256:497d2bf9659cd2e9ce882ce99352619e8f4ddf1e8498765da8a9258d03521dfa
-      sha256: 497d2bf9659cd2e9ce882ce99352619e8f4ddf1e8498765da8a9258d03521dfa
-      bin:
-        - auth0
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/auth0/blobs/sha256:b23d55862d934f5a5cb720f4454c83840b8c33fac6996f0fffb55ebee3b76597
-      sha256: b23d55862d934f5a5cb720f4454c83840b8c33fac6996f0fffb55ebee3b76597
-      bin:
-        - auth0
       strip: 1
 test: auth0 --version

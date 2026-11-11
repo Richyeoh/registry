@@ -2,15 +2,12 @@ api: v1
 name: apngasm
 kind: app
 display: apngasm
-description: Next generation of apngasm, the APNG assembler
+description: The next generation of APNG Assembler.
 homepage: https://github.com/apngasm/apngasm
-license: Zlib
-keywords:
-    - brew
-    - homebrew
-version: 3.1.10
+license: zlib-acknowledgement
+version: 3.1.3
 channels:
-    stable: 3.1.10
+    stable: 3.1.3
 provides:
     - apngasm
 platforms:
@@ -21,26 +18,5 @@ platforms:
       bin:
         - bin\apngasm.exe
         - bin\apngasm.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:34eb99ef62534d8959ddee800747b4054f8c309b74f308c4f5392348b70b02f4
-      sha256: 34eb99ef62534d8959ddee800747b4054f8c309b74f308c4f5392348b70b02f4
-      bin:
-        - apngasm
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:738255c58d06c961675b647440bdee4ced5a4844dd197eedba3c8203ac4ea58a
-      sha256: 738255c58d06c961675b647440bdee4ced5a4844dd197eedba3c8203ac4ea58a
-      bin:
-        - apngasm
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/apngasm/blobs/sha256:6c16341e64e6f183ea9f4400003366858e0db45b5173e90f1ad9a104f58fc58b
-      sha256: 6c16341e64e6f183ea9f4400003366858e0db45b5173e90f1ad9a104f58fc58b
-      bin:
-        - apngasm
       strip: 1
 test: bin\apngasm --version
