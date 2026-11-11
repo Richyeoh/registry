@@ -5,16 +5,16 @@ display: mob
 description: Smooth git handover with mob
 homepage: https://mob.sh
 license: MIT
-version: 5.4.2
+version: 5.4.3
 channels:
-    stable: 5.4.2
+    stable: 5.4.3
 provides:
     - mob
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/remotemobprogramming/mob/releases/download/5.4.2/mob_5.4.2_windows_amd64.tar.gz
-      sha256: 5ba31bf1c0885cab5782d72d9fce1abf1190dc2048873c5c57fd4baf71bd576f
+      url: https://github.com/remotemobprogramming/mob/releases/download/5.4.3/mob_5.4.3_windows_amd64.tar.gz
+      sha256: 26899e6d6d2ed8a14f2b71ec259dbcb70ce568abbc092ac8f28c49629c78f7f2
       bin:
         - mob.exe
       strip: 1

@@ -2,16 +2,12 @@ api: v1
 name: wezterm
 kind: app
 display: wezterm
-description: wezterm
-homepage: https://github.com/wezterm/wezterm
+description: GPU-accelerated terminal emulator
+homepage: https://github.com/wez/wezterm
 license: Apache-2.0
-keywords:
-    - arch
-    - pacman
-    - extra
-version: 20240203.110809.5046fc22.r869.g76b606ec5
+version: 20240203-110809-5046fc22
 channels:
-    stable: 20240203.110809.5046fc22.r869.g76b606ec5
+    stable: 20240203-110809-5046fc22
 provides:
     - wezterm
 platforms:
@@ -23,10 +19,4 @@ platforms:
         - wezterm.exe
         - wezterm-gui.exe
       strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/wezterm/download/
-      sha256: 59738418069752b095d6f3c8aaa7b24883d69e8f587d2751678eaca28709ac07
-      bin:
-        - wezterm
 test: wezterm --version

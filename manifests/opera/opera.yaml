@@ -5,16 +5,16 @@ display: opera
 description: A fast, secure, easy-to-use browser.
 homepage: https://www.opera.com
 license: Unknown
-version: 140.0.6074.17
+version: 140.0.6074.18
 channels:
-    stable: 140.0.6074.17
+    stable: 140.0.6074.18
 provides:
     - opera
 platforms:
     - os: windows
       arch: amd64
-      url: https://get.geo.opera.com/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup_x64.exe
-      sha256: 68d8057091392ee1c9038dbc16298fe12f7b1f8d2019a6eccd205ed03cd0c298
+      url: https://get.geo.opera.com/pub/opera/desktop/140.0.6074.18/win/Opera_140.0.6074.18_Setup_x64.exe
+      sha256: 5e0df23f7888407b22cb8b533a4ca19100ffc8f606e01c9cdb463c184cf6a2f6
       bin:
         - opera.exe
       strip: 1

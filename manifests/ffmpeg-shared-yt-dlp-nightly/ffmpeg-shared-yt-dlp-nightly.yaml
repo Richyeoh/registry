@@ -5,16 +5,16 @@ display: ffmpeg-shared-yt-dlp-nightly
 description: FFmpeg nightly build (shared) for yt-dlp.
 homepage: https://github.com/yt-dlp/FFmpeg-Builds
 license: MIT
-version: 20261109-128718-gb2b543c079
+version: 20261110-128757-g4b42530309
 channels:
-    stable: 20261109-128718-gb2b543c079
+    stable: 20261110-128757-g4b42530309
 provides:
     - ffmpeg-shared-yt-dlp-nightly
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2026-11-09-23-32/ffmpeg-N-128718-gb2b543c079-win64-gpl-shared.zip
-      sha256: 5edf9851fcf92412dad01581c6c3978d1522a67deef330414af29b9af7154a6d
+      url: https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2026-11-10-20-59/ffmpeg-N-128757-g4b42530309-win64-gpl-shared.zip
+      sha256: c780c81afa60bd79545e6391d383ee5142806d754c96f487c4eeec344841eb48
       bin:
         - bin\ffmpeg.exe
         - bin\ffplay.exe

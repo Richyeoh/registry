@@ -5,41 +5,17 @@ display: aws-amplify
 description: A unified toolchain to create, integrate, and manage the AWS cloud services for your app.
 homepage: https://docs.amplify.aws/cli
 license: Apache-2.0
-keywords:
-    - brew
-    - homebrew
-version: 14.5.1
+version: 14.6.0
 channels:
-    stable: 14.5.1
+    stable: 14.6.0
 provides:
     - aws-amplify
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/aws-amplify/amplify-cli/releases/download/v14.5.1/amplify-pkg-win.exe.tgz
-      sha256: be4335b640d2b6468aeeaa184bf435d987e58e886e990f43a80199f350f08ce1
+      url: https://github.com/aws-amplify/amplify-cli/releases/download/v14.6.0/amplify-pkg-win.exe.tgz
+      sha256: 50dde47b0a10ba774ccded239d66eb27c4537585868fc9fb55e54a42ed612c65
       bin:
         - amplify.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aws-amplify/blobs/sha256:bc5bcecf4c47bcbe4a7cf2745a39c79c2c260aea2943688bf11f7fe2c2cee864
-      sha256: bc5bcecf4c47bcbe4a7cf2745a39c79c2c260aea2943688bf11f7fe2c2cee864
-      bin:
-        - aws-amplify
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/aws-amplify/blobs/sha256:0d6bfcd36d2e6f0407530539fc76e127e223ffe9481a2cc88ee95613f69c5cab
-      sha256: 0d6bfcd36d2e6f0407530539fc76e127e223ffe9481a2cc88ee95613f69c5cab
-      bin:
-        - aws-amplify
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/aws-amplify/blobs/sha256:aada36c4fe0c42400e0b888b6c6a3c39b42877156320afed4a4c7499bc7c253e
-      sha256: aada36c4fe0c42400e0b888b6c6a3c39b42877156320afed4a4c7499bc7c253e
-      bin:
-        - aws-amplify
       strip: 1
 test: amplify --version

@@ -2,19 +2,19 @@ api: v1
 name: opencode-desktop
 kind: app
 display: opencode-desktop
-description: The open source AI coding agent.
-homepage: https://opencode.ai/
+description: The open source AI coding agent
+homepage: https://opencode.ai
 license: MIT
-version: 1.19.5
+version: 2.2.7
 channels:
-    stable: 1.19.5
+    stable: 2.2.7
 provides:
     - opencode-desktop
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-desktop-win-x64.exe#/dl.7z
-      sha256: a14e77b5aa94a71de493d0fd4ac7a70031246ebb5cceb8ab847fc71d4a2fe62b
+      url: https://github.com/anomalyco/opencode/releases/download/v2.2.7/opencode-desktop-win-x64.exe#/dl.7z
+      sha256: 2ea501f83e627bf2b1ba2afb5124391ab27c86b9dd5071324ea5cf8b168b7d2a
       bin:
         - opencode-desktop.exe
       strip: 1

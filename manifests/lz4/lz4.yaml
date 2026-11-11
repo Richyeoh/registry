@@ -5,16 +5,16 @@ display: lz4
 description: Fast LZ compression algorithm library and tool
 homepage: https://www.lz4.org
 license: GPL-2.0-or-later
-version: 1.11.0
+version: 1.11.1
 channels:
-    stable: 1.11.0
+    stable: 1.11.1
 provides:
     - lz4
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/lz4/lz4/releases/download/v1.11.0/lz4_win64_v1_11_0.zip
-      sha256: 02969870683aff32a4eb0ce2d3d84fddcd590818378ccdf66a1c79e03118fbac
+      url: https://github.com/lz4/lz4/releases/download/v1.11.1/lz4_win64_v1_11_1.zip
+      sha256: 60eb63e00f83fc9613f16cc05cb198f91b41acf903e9092e98b4a7de9ac9783b
       bin:
         - lz4.exe
       strip: 1

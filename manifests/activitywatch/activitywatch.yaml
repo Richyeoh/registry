@@ -5,9 +5,6 @@ display: activitywatch
 description: Open-source automated time tracker
 homepage: https://activitywatch.net/
 license: MPL-2.0
-keywords:
-    - brew
-    - cask
 version: 0.14.2
 channels:
     stable: 0.14.2
@@ -20,19 +17,5 @@ platforms:
       sha256: 3065b3fbd4b03ff05c0775d976d02c50673daf61959f7d86b8a76c7277a85199
       bin:
         - aw-qt.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://github.com/ActivityWatch/activitywatch/releases/download/v0.14.2/activitywatch-v0.14.2-macos-arm64.dmg
-      sha256: 8341d56b5b43a60ca04ea2a3cc5ffbfb5e661cdb6430145d9ceb0f49dca63d65
-      bin:
-        - activitywatch
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://github.com/ActivityWatch/activitywatch/releases/download/v0.14.2/activitywatch-v0.14.2-macos-arm64.dmg
-      sha256: 8341d56b5b43a60ca04ea2a3cc5ffbfb5e661cdb6430145d9ceb0f49dca63d65
-      bin:
-        - activitywatch
       strip: 1
 test: aw-qt --version

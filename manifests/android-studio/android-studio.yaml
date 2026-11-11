@@ -1,16 +1,13 @@
 api: v1
 name: android-studio
 kind: app
-display: Android Studio
-description: Tools for building Android applications
-homepage: https://developer.android.com/studio/
+display: android-studio
+description: The official IDE for Android development, which includes everything you need to build Android apps.
+homepage: https://developer.android.com/studio
 license: Unknown
-keywords:
-    - brew
-    - cask
-version: 2026.2.2.9,rabbit2-patch1
+version: 2026.2.2.9
 channels:
-    stable: 2026.2.2.9,rabbit2-patch1
+    stable: 2026.2.2.9
 provides:
     - android-studio
 platforms:
@@ -20,19 +17,5 @@ platforms:
       sha256: 6813b0ce669844b87c5d56b9c5f661362bd3bebff55327415496bd7457a7b917
       bin:
         - android-studio.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.9/android-studio-rabbit2-patch1-mac_arm.dmg
-      sha256: 06b79fc8f18f80c93fea008d078ce13b7f0a5e978e3e615f6acaffa0af5c6a6d
-      bin:
-        - android-studio
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.9/android-studio-rabbit2-patch1-mac_arm.dmg
-      sha256: 06b79fc8f18f80c93fea008d078ce13b7f0a5e978e3e615f6acaffa0af5c6a6d
-      bin:
-        - android-studio
       strip: 1
 test: android-studio --version

@@ -5,9 +5,6 @@ display: amfora
 description: Terminal browser for the Gemini protocol
 homepage: https://github.com/makeworld-the-better-one/amfora
 license: GPL-3.0-only
-keywords:
-    - brew
-    - homebrew
 version: 1.11.0
 channels:
     stable: 1.11.0
@@ -20,34 +17,6 @@ platforms:
       sha256: 63132358baf2bfefdf0724681c7ca3c563e89ece944d982463a1ec1efb992d9b
       bin:
         - amfora.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/amfora/blobs/sha256:f50a1331ec6c174d16aabe9908dbe16ca7b840bf44c7e76b384de67b5e5f2f67
-      sha256: f50a1331ec6c174d16aabe9908dbe16ca7b840bf44c7e76b384de67b5e5f2f67
-      bin:
-        - amfora
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/amfora/blobs/sha256:00e4da529415b5a5b02c68c987828c996e1b044e8de4bdd3bd91aff35d472396
-      sha256: 00e4da529415b5a5b02c68c987828c996e1b044e8de4bdd3bd91aff35d472396
-      bin:
-        - amfora
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/amfora/blobs/sha256:4ccab595f65a7e440660a2981719199eef7e5cc82025a89f0cfa2936892fa57b
-      sha256: 4ccab595f65a7e440660a2981719199eef7e5cc82025a89f0cfa2936892fa57b
-      bin:
-        - amfora
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/amfora/blobs/sha256:6d9218f579fb7be31312ea53a6d59a7f6f63ea4a01216c64ab68b49c2899b34f
-      sha256: 6d9218f579fb7be31312ea53a6d59a7f6f63ea4a01216c64ab68b49c2899b34f
-      bin:
-        - amfora
       strip: 1
 installer:
     silent: /S

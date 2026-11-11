@@ -5,16 +5,16 @@ display: mujoco
 description: Multi-Joint dynamics with Contact. A general purpose physics simulator.
 homepage: https://mujoco.org/
 license: Apache-2.0
-version: 4.0.0
+version: 4.0.1
 channels:
-    stable: 4.0.0
+    stable: 4.0.1
 provides:
     - mujoco
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/google-deepmind/mujoco/releases/download/4.0.0/mujoco-4.0.0-windows-x86_64.zip
-      sha256: 13603076e1057ceca9663ea315b40fc0daf056eddbcd6892cb7273fa8a462aba
+      url: https://github.com/google-deepmind/mujoco/releases/download/4.0.1/mujoco-4.0.1-windows-x86_64.zip
+      sha256: abe3104a2ae0ca18a4b50fa1e79aaf57699496c7ee78ec7214104a0d1593fc75
       bin:
         - bin\simulate.exe
       strip: 1

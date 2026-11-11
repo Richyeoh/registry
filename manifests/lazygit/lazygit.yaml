@@ -5,12 +5,6 @@ display: lazygit
 description: A simple terminal UI for git commands
 homepage: https://github.com/jesseduffield/lazygit
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
-    - github
-    - jesseduffield
 version: 0.66.3
 channels:
     stable: 0.66.3
@@ -23,25 +17,5 @@ platforms:
       sha256: a76fe17339fd387c20addc09060f07c240e4b20a9f55fee4ad7c86a251c0741e
       bin:
         - lazygit.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_darwin_arm64.tar.gz
-      sha256: 6873e6b7a538b521c4d7ff3f76ec49e6dcafa41e6053a6aae33c12f62663e163
-      bin:
-        - lazygit
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/lazygit/download/
-      sha256: 1a36710a52d46d0c287cc565751237166af9ed8c522cd8f7f587d4e046547fc7
-      bin:
-        - lazygit
-    - os: linux
-      arch: arm64
-      url: https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_linux_arm64.tar.gz
-      sha256: ac0b48237f3d0283813e7154ec063237e519532feb0470c0881a1793ee78fd42
-      bin:
-        - lazygit
       strip: 1
 test: lazygit --version

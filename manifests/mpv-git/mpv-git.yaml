@@ -5,16 +5,16 @@ display: mpv-git
 description: A free, open source, and cross-platform media player
 homepage: https://mpv.io
 license: LGPL-2.1-or-later,GPL-2.0-or-later
-version: "202611101225"
+version: "202611111249"
 channels:
-    stable: "202611101225"
+    stable: "202611111249"
 provides:
     - mpv-git
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/zhongfly/mpv-winbuild/releases/download/2026-11-10-d075ec2a28/mpv-x86_64-20261110-git-d075ec2a28.7z
-      sha256: 3a8c6ce5a09cc3a31a81bed17f2057b4637f8f3df09cc01b2d7dfc8b1ca63154
+      url: https://github.com/zhongfly/mpv-winbuild/releases/download/2026-11-11-bcde6b93cc/mpv-x86_64-20261111-git-bcde6b93cc.7z
+      sha256: 2930bbbdbd63e8f533f0bd256e14106647cb788c98b6cb9987aabcac8292e013
       bin:
         - mpv-git.exe
       strip: 1

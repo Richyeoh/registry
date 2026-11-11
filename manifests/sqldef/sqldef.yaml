@@ -5,16 +5,16 @@ display: sqldef
 description: Idempotent schema management for MySQL, Microsoft SQL Server, and SQLite.
 homepage: https://sqldef.github.io
 license: MIT,Apache-2.0
-version: 3.11.29
+version: 3.11.30
 channels:
-    stable: 3.11.29
+    stable: 3.11.30
 provides:
     - sqldef
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/sqldef/sqldef/releases/download/v3.11.29/mssqldef_windows_amd64.zip
-      sha256: 5c0c38f2d8e54f7b349763f9166bb8334218644a68ce49772a893349181e323d
+      url: https://github.com/sqldef/sqldef/releases/download/v3.11.30/mssqldef_windows_amd64.zip
+      sha256: e20fb8a1943187fd60cd5cf80a0fef9700f7bfa0b140546643df027a5eb36097
       bin:
         - mssqldef.exe
         - mysqldef.exe

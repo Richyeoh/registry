@@ -5,16 +5,16 @@ display: vmr
 description: A general version manager for thousands of SDKs with TUI inspired by lazygit.
 homepage: https://vdocs.vmr.dpdns.org
 license: MIT
-version: 0.8.1
+version: 0.8.2
 channels:
-    stable: 0.8.1
+    stable: 0.8.2
 provides:
     - vmr
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/gvcgo/version-manager/releases/download/v0.8.1/vmr-x86_64-pc-windows-msvc.zip
-      sha256: 9137835bd9bb9c11d445a850242a266f28f4e6a065ad890cd5f1188e11c82d61
+      url: https://github.com/gvcgo/version-manager/releases/download/v0.8.2/vmr-x86_64-pc-windows-msvc.zip
+      sha256: 06e21a31cf6190c830a3f0a35d983839a45636fec1bbd9d4d0187d893c14b523
       bin:
         - vmr.exe
       strip: 1

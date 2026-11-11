@@ -5,20 +5,16 @@ display: git
 description: A free and open source distributed version control system.
 homepage: https://gitforwindows.org
 license: Unknown
-keywords:
-    - arch
-    - pacman
-    - extra
-version: 2.56.0.4
+version: 2.56.1
 channels:
-    stable: 2.56.0.4
+    stable: 2.56.1
 provides:
     - git
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/PortableGit-2.56.0.4-64-bit.7z.exe#/dl.7z
-      sha256: b1f3e52216e2ed6882d1bebfd4d3fdf319bec40d2edbbf9fd26ec4fd3fce7ed1
+      url: https://github.com/git-for-windows/git/releases/download/v2.56.1.windows.1/PortableGit-2.56.1-64-bit.7z.exe#/dl.7z
+      sha256: 9dd04a608ceb5f6ab32a73709e0ecb159d211da71b697c45ff81f6dd0c6b49c7
       bin:
         - bin\sh.exe
         - cmd\git.exe
@@ -32,10 +28,4 @@ platforms:
         - usr\bin\gpg-connect-agent.exe
         - usr\bin\pinentry.exe
       strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/git/download/
-      sha256: 084a0a28c237b96e4d36cb87f16643a705b0bbc6073fcfa547b531ef33846011
-      bin:
-        - git
 test: bin\sh --version

@@ -2,15 +2,12 @@ api: v1
 name: audacious
 kind: app
 display: audacious
-description: Lightweight and versatile audio player
+description: An open source audio player.
 homepage: https://audacious-media-player.org/
 license: BSD-2-Clause
-keywords:
-    - brew
-    - homebrew
-version: 4.6.2
+version: 4.6.1
 channels:
-    stable: 4.6.2
+    stable: 4.6.1
 provides:
     - audacious
 platforms:
@@ -21,26 +18,5 @@ platforms:
       bin:
         - bin\audacious.exe
         - bin\audtool.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:05e512a320c9de13f001842f19df6e52b94d12e08c1147196fd047992ae559a2
-      sha256: 05e512a320c9de13f001842f19df6e52b94d12e08c1147196fd047992ae559a2
-      bin:
-        - audacious
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:33a8e46706c5a857b3fcca15380a3442379a8509ead15b66e5fef3e83ce77189
-      sha256: 33a8e46706c5a857b3fcca15380a3442379a8509ead15b66e5fef3e83ce77189
-      bin:
-        - audacious
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/audacious/blobs/sha256:b71640033310b5500e39f9e20d553af74784665793ba0d192044b94885cd8c58
-      sha256: b71640033310b5500e39f9e20d553af74784665793ba0d192044b94885cd8c58
-      bin:
-        - audacious
       strip: 1
 test: bin\audacious --version

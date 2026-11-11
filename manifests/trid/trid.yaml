@@ -5,16 +5,16 @@ display: trid
 description: A utility designed to identify file types from their binary signatures.
 homepage: https://www.mark0.net/soft-trid-e.html
 license: Shareware
-version: 2.48-26.11.07
+version: 2.48-26.11.10
 channels:
-    stable: 2.48-26.11.07
+    stable: 2.48-26.11.10
 provides:
     - trid
 platforms:
     - os: windows
       arch: amd64
       url: https://www.mark0.net/download/triddefs.zip
-      sha256: f1e0d0d7bd6c42202ccbcf369209a6fec0c6dead8bf791bdbba941276d9b0ef0
+      sha256: 14f6777289b9fa741cced552c1f9c65802166bf71a630875f666f36a2835f61b
       bin:
         - trid.exe
       strip: 1

@@ -5,12 +5,6 @@ display: bottom
 description: Graphical process/system monitor
 homepage: https://clementtsang.github.io/bottom/
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
-    - github
-    - clementtsang
 version: 0.15.0
 channels:
     stable: 0.15.0
@@ -23,33 +17,5 @@ platforms:
       sha256: aeff72e355116516d2583f34348e31f60c5899e394a08eeda79a2bdb361e27bd
       bin:
         - btm.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://github.com/ClementTsang/bottom/releases/download/0.15.0/bottom_x86_64-apple-darwin.tar.gz
-      sha256: 6a7f5e32fc2c272256ad5c77aa8aaede02e1e86cf3ba4715acb894d3d6d5b361
-      bin:
-        - btm
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://github.com/ClementTsang/bottom/releases/download/0.15.0/bottom_aarch64-apple-darwin.tar.gz
-      sha256: 6d83c9eba811dd139392fa5b04baa75225c6aa120dad36a070e636660db023fd
-      bin:
-        - btm
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://github.com/ClementTsang/bottom/releases/download/0.15.0/bottom_x86_64-unknown-linux-musl.tar.gz
-      sha256: c66d6a0148102f107800919cd0ff6cce8767ae998f3c954b72e37a7f769e3ae2
-      bin:
-        - btm
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://github.com/ClementTsang/bottom/releases/download/0.15.0/bottom_aarch64-unknown-linux-gnu.tar.gz
-      sha256: 93221c07d549750e5cfac2a76f70e5d792c744958ecc466bbeb9d3bef34288b6
-      bin:
-        - btm
       strip: 1
 test: btm --version

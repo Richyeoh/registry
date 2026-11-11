@@ -5,16 +5,16 @@ display: herdr-app
 description: Desktop app for terminals and coding agents.
 homepage: https://herdr.dev
 license: Apache-2.0
-version: 0.1.14
+version: 0.1.15
 channels:
-    stable: 0.1.14
+    stable: 0.1.15
 provides:
     - herdr-app
 platforms:
     - os: windows
       arch: amd64
-      url: https://releases.herdr.dev/app/0.1.14/herdr-app-windows-x86_64.tar.gz
-      sha256: c8a9da0e1b7c8ec85e2e131006797ba0fe0fc7793f3ab80e482f7622a5516b01
+      url: https://releases.herdr.dev/app/0.1.15/herdr-app-windows-x86_64.tar.gz
+      sha256: 62ddf27ee9acc13d9b3421389817d1cabdc906c23f9ff1363f6cdbc8af3da39c
       bin:
         - herdr-app.exe
       strip: 1

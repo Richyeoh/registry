@@ -5,16 +5,16 @@ display: stack-wallet
 description: An open source, non-custodial, and private multi-currency crypto wallet.
 homepage: https://stackwallet.com/
 license: Unknown
-version: 2.7.1
+version: 2.7.5
 channels:
-    stable: 2.7.1
+    stable: 2.7.5
 provides:
     - stack-wallet
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/cypherstack/stack_wallet/releases/download/build_316/stack_wallet-v2.7.1-windows.zip
-      sha256: c8ac895610f7b27342058f1817120f1409132b329508e4dcc9faf85089b6c111
+      url: https://github.com/cypherstack/stack_wallet/releases/download/build_325/stack_wallet-v2.7.5-windows.zip
+      sha256: f0fec08a211424964e2cd8e497e0343204cc1aa123897eacd7ad215086dff4c8
       bin:
         - stack-wallet.exe
       strip: 1

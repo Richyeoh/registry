@@ -5,12 +5,6 @@ display: dust
 description: du(1) - File space usage analyzer
 homepage: https://github.com/bootandy/dust
 license: Apache-2.0
-keywords:
-    - arch
-    - pacman
-    - extra
-    - github
-    - bootandy
 version: 1.2.7
 channels:
     stable: 1.2.7
@@ -23,33 +17,5 @@ platforms:
       sha256: d07a41521958895e701ad55f342302b7362799d6a328c843e8e2208ba0564c30
       bin:
         - dust.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://github.com/bootandy/dust/releases/download/v1.2.7/dust-v1.2.7-x86_64-apple-darwin.tar.gz
-      sha256: 5eef77d18dfd2d1d56d1b3c415bc2d41b5b793bc63b5c7f706005d058a48a363
-      bin:
-        - dust
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://github.com/bootandy/dust/releases/download/v1.2.7/dust-v1.2.7-aarch64-apple-darwin.tar.gz
-      sha256: 38e1b3b4e5e6a5cdb044b5fdb32ea45f18dc78276711796214806f20f7705a99
-      bin:
-        - dust
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://github.com/bootandy/dust/releases/download/v1.2.7/dust-v1.2.7-x86_64-unknown-linux-musl.tar.gz
-      sha256: 2f1a1106f1f14c0b684b2f0a5f4482c6d53e07a871df4afc11e3b91ade300b55
-      bin:
-        - dust
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://github.com/bootandy/dust/releases/download/v1.2.7/dust-v1.2.7-aarch64-unknown-linux-gnu.tar.gz
-      sha256: 64496fe9e56dabb379308b3a079816818f6022d0b93638d06206a9144ca795d9
-      bin:
-        - dust
       strip: 1
 test: dust --version

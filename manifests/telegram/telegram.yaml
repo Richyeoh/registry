@@ -5,16 +5,16 @@ display: telegram
 description: A messaging app with a focus on speed and security
 homepage: https://telegram.org
 license: GPL-3.0-only
-version: 7.4.1
+version: 7.4.2
 channels:
-    stable: 7.4.1
+    stable: 7.4.2
 provides:
     - telegram
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.1/td-portable-win-x64-7.4.1.zip
-      sha256: 6c1191b770d49a2b8f6b0d78fd8d4402e6d7098513e7213a2649990471238392
+      url: https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.2/td-portable-win-x64-7.4.2.zip
+      sha256: 81b445bce390c8358a95b4a99a8dc2321941764ab9a02b4b4e33f327ff675c0e
       bin:
         - telegram.cmd.exe
       strip: 1

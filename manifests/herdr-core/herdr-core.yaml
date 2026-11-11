@@ -5,16 +5,16 @@ display: herdr-core
 description: Persistent terminal runtime for coding agents that powers the Herdr App.
 homepage: https://herdr.dev/core/
 license: Apache-2.0
-version: 0.1.19
+version: 0.1.20
 channels:
-    stable: 0.1.19
+    stable: 0.1.20
 provides:
     - herdr-core
 platforms:
     - os: windows
       arch: amd64
-      url: https://releases.herdr.dev/core/0.1.19/herdr-core-windows-x86_64.zip
-      sha256: 1cf7de14c862abc49b8eaeed32dc6a60d8146740edb2c244570d1a9f07cb813a
+      url: https://releases.herdr.dev/core/0.1.20/herdr-core-windows-x86_64.zip
+      sha256: 13b29c61a9932ea028c36ccc419bcf3ec679f2fd6c528f93c8fbd1d7331ee20b
       bin:
         - herdr-core.exe
       strip: 1

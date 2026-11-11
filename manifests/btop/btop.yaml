@@ -2,16 +2,12 @@ api: v1
 name: btop
 kind: app
 display: btop
-description: btop
-homepage: https://github.com/aristocratos/btop
+description: Resource monitor that shows usage and stats for processor, memory, disks, network, processes and services.
+homepage: https://github.com/aristocratos/btop4win
 license: Apache-2.0
-keywords:
-    - arch
-    - pacman
-    - extra
-version: 1.4.7
+version: 1.0.5
 channels:
-    stable: 1.4.7
+    stable: 1.0.5
 provides:
     - btop
 platforms:
@@ -22,10 +18,4 @@ platforms:
       bin:
         - btop.exe
       strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/btop/download/
-      sha256: 45ec50d17caebffad33ed482db6770682c35b2b3d89ef55c5f0b6a068c816fb7
-      bin:
-        - btop
 test: btop --version

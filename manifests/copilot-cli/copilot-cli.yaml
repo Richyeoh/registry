@@ -5,16 +5,16 @@ display: copilot-cli
 description: Brings the power of Copilot coding agent directly to your terminal
 homepage: https://github.com/features/copilot/cli
 license: Unknown
-version: 1.0.108
+version: 1.0.109
 channels:
-    stable: 1.0.108
+    stable: 1.0.109
 provides:
     - copilot-cli
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/github/copilot-cli/releases/download/v1.0.108/copilot-win32-x64.zip
-      sha256: 3b1fc7791c6c0d199d68b3469ee65fb2cedf46f06c13978109796742f2b86229
+      url: https://github.com/github/copilot-cli/releases/download/v1.0.109/copilot-win32-x64.zip
+      sha256: 794c16bcc5535cdf478598d6cf4af3228daec3b7801bfa3540c56b8d3524beee
       bin:
         - copilot.exe
       strip: 1

@@ -5,16 +5,16 @@ display: goreleaser
 description: Release automation tool for Go projects.
 homepage: https://goreleaser.com
 license: MIT
-version: 2.20.0
+version: 2.20.1
 channels:
-    stable: 2.20.0
+    stable: 2.20.1
 provides:
     - goreleaser
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/goreleaser/goreleaser/releases/download/v2.20.0/goreleaser_Windows_x86_64.zip
-      sha256: 3c6a58f6941224a25ec28de733554743e9b2517c40c76991eef5474f8c1c2c1a
+      url: https://github.com/goreleaser/goreleaser/releases/download/v2.20.1/goreleaser_Windows_x86_64.zip
+      sha256: b84ce9966dc8313edb935846431123b8a9d249eb7140a44783a1a45a5addcf5d
       bin:
         - goreleaser.exe
       strip: 1

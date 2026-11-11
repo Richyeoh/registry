@@ -5,9 +5,6 @@ display: bandwhich
 description: Terminal bandwidth utilization tool
 homepage: https://github.com/imsnif/bandwhich
 license: MIT
-keywords:
-    - brew
-    - homebrew
 version: 0.23.1
 channels:
     stable: 0.23.1
@@ -20,33 +17,5 @@ platforms:
       sha256: 684d87acfd0fa808700500c2d4ced2a60be222dd86adc671035ad7b84c42cda4
       bin:
         - bandwhich.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/bandwhich/blobs/sha256:e8ba6a626e25e7dc40eba76784b871db53461c8031b1e6a2426afab9d7de319a
-      sha256: e8ba6a626e25e7dc40eba76784b871db53461c8031b1e6a2426afab9d7de319a
-      bin:
-        - bandwhich
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/bandwhich/blobs/sha256:a8c9f9e2ce61c5637df54d5692a5fbb7a4228420f8a38d867bad172c5d54aef8
-      sha256: a8c9f9e2ce61c5637df54d5692a5fbb7a4228420f8a38d867bad172c5d54aef8
-      bin:
-        - bandwhich
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/bandwhich/blobs/sha256:8fb5abdfed0d43ec8a0e82b82eb0581f4f760ebbb56a2ac574e9cea5e0128455
-      sha256: 8fb5abdfed0d43ec8a0e82b82eb0581f4f760ebbb56a2ac574e9cea5e0128455
-      bin:
-        - bandwhich
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/bandwhich/blobs/sha256:1a9be322f6125f0cf6deea31fa59fc019a7861b3f80dd5abc297abf4602503d6
-      sha256: 1a9be322f6125f0cf6deea31fa59fc019a7861b3f80dd5abc297abf4602503d6
-      bin:
-        - bandwhich
       strip: 1
 test: bandwhich --version

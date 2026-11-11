@@ -5,9 +5,6 @@ display: agent-browser
 description: Browser automation CLI for AI agents.
 homepage: https://agent-browser.dev
 license: Apache-2.0
-keywords:
-    - brew
-    - homebrew
 version: 0.42.0
 channels:
     stable: 0.42.0
@@ -20,27 +17,6 @@ platforms:
       sha256: 8209f42e604d012f789caa14ae73a57200925608409fa09427b0fd6e4f3adf15
       bin:
         - agent-browser.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/agent-browser/blobs/sha256:5a2dce35c32c38775fa38d01daae7a5acae8e7841f502c68fdf45a3bc4e0ae15
-      sha256: 5a2dce35c32c38775fa38d01daae7a5acae8e7841f502c68fdf45a3bc4e0ae15
-      bin:
-        - agent-browser
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/agent-browser/blobs/sha256:73b6cebfe7cc81beea1a2357aa94122467b2e1ba222c91d58281464e025e2c5b
-      sha256: 73b6cebfe7cc81beea1a2357aa94122467b2e1ba222c91d58281464e025e2c5b
-      bin:
-        - agent-browser
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/agent-browser/blobs/sha256:04e9c96949d437bcb1bda9f3f0e9f0fabb32fcaf4d0ed3b140763cc3e4bc62f0
-      sha256: 04e9c96949d437bcb1bda9f3f0e9f0fabb32fcaf4d0ed3b140763cc3e4bc62f0
-      bin:
-        - agent-browser
       strip: 1
 installer:
     silent: /S

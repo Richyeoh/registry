@@ -5,10 +5,6 @@ display: procs
 description: A modern replacement for ps(1)
 homepage: https://github.com/dalance/procs
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
 version: 0.14.12
 channels:
     stable: 0.14.12
@@ -22,10 +18,4 @@ platforms:
       bin:
         - procs.exe
       strip: 1
-    - os: linux
-      arch: amd64
-      url: https://archlinux.org/packages/extra/x86_64/procs/download/
-      sha256: 514e3c32773cb95984a5ac29105392148adaf3dd6988e6b57432da7a70a3fb2e
-      bin:
-        - procs
 test: procs --version

@@ -5,16 +5,16 @@ display: ffmpeg-shared-nightly
 description: A complete, cross-platform solution to record, convert and stream audio and video.
 homepage: https://ffmpeg.org
 license: GPL-3.0-or-later
-version: 20261110-128728-g49a3b1f259
+version: 20261111-128790-g9bee1e603c
 channels:
-    stable: 20261110-128728-g49a3b1f259
+    stable: 20261111-128790-g9bee1e603c
 provides:
     - ffmpeg-shared-nightly
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-11-10-12-39/ffmpeg-N-128728-g49a3b1f259-win64-gpl-shared.zip
-      sha256: 779414bcaa2ca76d6ed5bb5bed7ca4b7a273a9702b4f6cee3870a982df84a3f3
+      url: https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-11-11-12-39/ffmpeg-N-128790-g9bee1e603c-win64-gpl-shared.zip
+      sha256: dff1124c6318a50fd154a9bccee3792cfe8762d324ac4bafb0fb08c15126f5b2
       bin:
         - bin\ffmpeg.exe
         - bin\ffplay.exe

@@ -5,9 +5,6 @@ display: ahoy
 description: Automate and organize your workflows, no matter what technology you use
 homepage: https://ahoy-cli.github.io
 license: MIT
-keywords:
-    - brew
-    - homebrew
 version: 3.0.2
 channels:
     stable: 3.0.2
@@ -20,27 +17,6 @@ platforms:
       sha256: 507fc33e081b5dfb8553d5bfec021b524f67331a31621004ff44fa717310d9e1
       bin:
         - ahoy.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/ahoy/blobs/sha256:b8b6fca45fdd1b82131871ecfa6e04945d56e199cf1ac9ae9731fed551105b81
-      sha256: b8b6fca45fdd1b82131871ecfa6e04945d56e199cf1ac9ae9731fed551105b81
-      bin:
-        - ahoy
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/ahoy/blobs/sha256:8f4e4a978352ee3a30e277a08b1dcd3a57cad76f7dab7e61c0b67dcefa926782
-      sha256: 8f4e4a978352ee3a30e277a08b1dcd3a57cad76f7dab7e61c0b67dcefa926782
-      bin:
-        - ahoy
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/ahoy/blobs/sha256:a1069158e83e29bcec1e8aa2d08c891bd1d3b338e25cf83e5bd9a107bcc4739a
-      sha256: a1069158e83e29bcec1e8aa2d08c891bd1d3b338e25cf83e5bd9a107bcc4739a
-      bin:
-        - ahoy
       strip: 1
 installer:
     silent: /S

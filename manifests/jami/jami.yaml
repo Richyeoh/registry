@@ -5,16 +5,16 @@ display: jami
 description: A free and universal communication platform which preserves the user's privacy and freedoms.
 homepage: https://jami.net/
 license: GPL-3.0-or-later
-version: "202611021539"
+version: "202611061701"
 channels:
-    stable: "202611021539"
+    stable: "202611061701"
 provides:
     - jami
 platforms:
     - os: windows
       arch: amd64
-      url: https://dl.jami.net/windows/archive/jami_x86_64-202611021539.msi
-      sha256: 7c61c90ab9d0bec758c6bf777a7f92bed789c69bba575f5a987ae4ac3915dc20
+      url: https://dl.jami.net/windows/archive/jami_x86_64-202611061701.msi
+      sha256: f50904b48fbd699d55900afeda6494edfd9af22d1220ef6c4e07446f1d48045b
       bin:
         - Jami.exe
       strip: 1

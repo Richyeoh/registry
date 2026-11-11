@@ -5,16 +5,16 @@ display: bun-canary
 description: Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 homepage: https://bun.sh/
 license: MIT
-version: 1.4.4-canary.1+98cda0d8b
+version: 1.4.4-canary.1+447ff870b
 channels:
-    stable: 1.4.4-canary.1+98cda0d8b
+    stable: 1.4.4-canary.1+447ff870b
 provides:
     - bun-canary
 platforms:
     - os: windows
       arch: amd64
       url: https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip
-      sha256: c78724378ea462f422478fc620bf19f97923ae502db97b6a9c370dd4b1e47f87
+      sha256: bef7a71a53e7955ba00866e12d9fb8a10cc2f51bfe8996fa66d12f5b5f397c74
       bin:
         - bun.exe
         - bun.exe

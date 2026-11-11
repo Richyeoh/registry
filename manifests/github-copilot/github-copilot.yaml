@@ -5,16 +5,16 @@ display: github-copilot
 description: GitHub Copilot, an agent-native desktop development environment.
 homepage: https://github.com/github/app
 license: Unknown
-version: 1.1.35
+version: 1.2.0
 channels:
-    stable: 1.1.35
+    stable: 1.2.0
 provides:
     - github-copilot
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/github/app/releases/download/v1.1.35/GitHub-Copilot-windows-x64.msi
-      sha256: c3826f88bc393fa99e74e69cdaecfa013dd7bbe9ac4883995a02401b41653def
+      url: https://github.com/github/app/releases/download/v1.2.0/GitHub-Copilot-windows-x64.msi
+      sha256: fe07bfe12d1bf47bac4ff5727bae57cbd9ba38b52c46c6353f400256503a2efc
       bin:
         - github-copilot.exe
       strip: 1

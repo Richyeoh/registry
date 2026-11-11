@@ -5,16 +5,16 @@ display: linqpad
 description: The .NET programmer's playground
 homepage: https://www.linqpad.net
 license: Unknown
-version: 9.11.10
+version: 9.12.5
 channels:
-    stable: 9.11.10
+    stable: 9.12.5
 provides:
     - linqpad
 platforms:
     - os: windows
       arch: amd64
-      url: https://cdn.linqpad.net/public/LINQPad9.zip?cache=9.11.10.4566546
-      sha256: 2cc8fba89336ceb31b9ebfdeeafc0a309b9a3af96f0ce94ada3bf6a71f975c81
+      url: https://cdn.linqpad.net/public/LINQPad9.zip?cache=9.12.5.315170
+      sha256: 3575f44830a03f418999c23fd5e54bbd859352c8f0e93766ccbb46e537e044d8
       bin:
         - LPRun9-x64.exe
         - LINQPad9-x64.exe

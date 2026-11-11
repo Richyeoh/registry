@@ -5,16 +5,16 @@ display: stripe-cli
 description: Officially command-line tool for Stripe.
 homepage: https://stripe.com/docs/stripe-cli
 license: Apache-2.0
-version: 1.55.9
+version: 1.55.10
 channels:
-    stable: 1.55.9
+    stable: 1.55.10
 provides:
     - stripe-cli
 platforms:
     - os: windows
       arch: amd64
-      url: https://github.com/stripe/stripe-cli/releases/download/v1.55.9/stripe_1.55.9_windows_x86_64.zip
-      sha256: b53a8e879a639ac968511879a43a073f2f7d2ea7686837345a8ed0975d4ffc85
+      url: https://github.com/stripe/stripe-cli/releases/download/v1.55.10/stripe_1.55.10_windows_x86_64.zip
+      sha256: ea273eaabe6641fc960c7b7fcdb1a7e6cb45ca47fe8202c91b2ef89458ccd937
       bin:
         - stripe.exe
       strip: 1

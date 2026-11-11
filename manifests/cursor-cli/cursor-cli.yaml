@@ -5,16 +5,16 @@ display: cursor-cli
 description: CLI for Cursor, allowing you to interact with AI agents directly from your terminal to write, review, and modify code.
 homepage: https://cursor.com/cli
 license: Unknown
-version: 2026.11.05-86047df
+version: 2026.11.11-043ef28
 channels:
-    stable: 2026.11.05-86047df
+    stable: 2026.11.11-043ef28
 provides:
     - cursor-cli
 platforms:
     - os: windows
       arch: amd64
-      url: https://downloads.cursor.com/lab/2026.11.05-86047df/windows/x64/agent-cli-package.zip
-      sha256: c886cf57681e596163318814d1ec559b10ce81ca2d050aab7a6ad12592840184
+      url: https://downloads.cursor.com/lab/2026.11.11-043ef28/windows/x64/agent-cli-package.zip
+      sha256: c66f24468b619c4c1906e14d343098d53b9c7ff9deeb1cf23007f35793fb34d7
       bin:
         - cursor-agent.cmd.exe
         - cursor-agent.cmd.exe

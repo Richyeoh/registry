@@ -5,12 +5,6 @@ display: atuin
 description: Shell history tool featuring advanced context-aware search, along with secure sync and backup.
 homepage: https://atuin.sh
 license: MIT
-keywords:
-    - arch
-    - pacman
-    - extra
-    - brew
-    - homebrew
 version: 18.24.6
 channels:
     stable: 18.24.6
@@ -23,26 +17,5 @@ platforms:
       sha256: d500e0dc85a85bb69513da6c9d933cf15dbeb2497ab404e0189ba47a5d829fe9
       bin:
         - atuin.exe
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:ddafcce5bef257cbb133eb21dd0ae14880b772ed4426d9d97ab5cff41b52cc88
-      sha256: ddafcce5bef257cbb133eb21dd0ae14880b772ed4426d9d97ab5cff41b52cc88
-      bin:
-        - atuin
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:03581238d3d0d1a0399c099ea6ce7eb05f5990527ae1e7a65abfa6d74103b51d
-      sha256: 03581238d3d0d1a0399c099ea6ce7eb05f5990527ae1e7a65abfa6d74103b51d
-      bin:
-        - atuin
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/atuin/blobs/sha256:20e7542f068ebf6a2cc266a01ca54293c4bfa1a170b2c1d5a49cb5d9e8ad77f5
-      sha256: 20e7542f068ebf6a2cc266a01ca54293c4bfa1a170b2c1d5a49cb5d9e8ad77f5
-      bin:
-        - atuin
       strip: 1
 test: atuin --version

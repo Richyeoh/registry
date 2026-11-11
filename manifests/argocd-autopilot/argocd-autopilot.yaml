@@ -5,9 +5,6 @@ display: argocd-autopilot
 description: A tool which offers an opinionated way of installing Argo-CD and managing GitOps repositories.
 homepage: https://argocd-autopilot.readthedocs.io/en/stable/
 license: Apache-2.0
-keywords:
-    - brew
-    - homebrew
 version: 0.4.20
 channels:
     stable: 0.4.20
@@ -20,33 +17,5 @@ platforms:
       sha256: 59a75a8932f8f0cc83d678742b86d2369a021e45e0a2967328ef625bed835ddc
       bin:
         - argocd-autopilot.exe
-      strip: 1
-    - os: darwin
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/argocd-autopilot/blobs/sha256:4c24727bb33f1b6b561a40e09f2d6f04adb3184a259622063033bf37c54eb271
-      sha256: 4c24727bb33f1b6b561a40e09f2d6f04adb3184a259622063033bf37c54eb271
-      bin:
-        - argocd-autopilot
-      strip: 1
-    - os: darwin
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/argocd-autopilot/blobs/sha256:8f1c519571751a60bcd2a218f333021abbde7703df7701f70e3f57aecf2a914e
-      sha256: 8f1c519571751a60bcd2a218f333021abbde7703df7701f70e3f57aecf2a914e
-      bin:
-        - argocd-autopilot
-      strip: 1
-    - os: linux
-      arch: amd64
-      url: https://ghcr.io/v2/homebrew/core/argocd-autopilot/blobs/sha256:0d92042a9cbae654c5abe3821ca44e8bb65405f27872c12055e2e7f40cc466ad
-      sha256: 0d92042a9cbae654c5abe3821ca44e8bb65405f27872c12055e2e7f40cc466ad
-      bin:
-        - argocd-autopilot
-      strip: 1
-    - os: linux
-      arch: arm64
-      url: https://ghcr.io/v2/homebrew/core/argocd-autopilot/blobs/sha256:43d271b59cee87bd956374bdecc77a94dfeaf834889193be442c5b5473ebc484
-      sha256: 43d271b59cee87bd956374bdecc77a94dfeaf834889193be442c5b5473ebc484
-      bin:
-        - argocd-autopilot
       strip: 1
 test: argocd-autopilot --version
